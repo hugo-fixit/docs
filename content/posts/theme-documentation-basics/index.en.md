@@ -519,8 +519,10 @@ Please open the code block below to view the complete sample configuration :(fa-
     # {{< version 0.2.14 >}} Post edit
     [params.page.edit]
       enable = false
-      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # Link for fork & edit
-      url = "" # Link for fork & edit
+      # {{< version 0.2.15 changed >}} Link for fork & edit
+      # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
+      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
+      url = ""
     # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS

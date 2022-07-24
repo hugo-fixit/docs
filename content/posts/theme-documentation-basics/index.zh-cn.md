@@ -508,8 +508,10 @@ hugo
     # {{< version 0.2.14 >}} 文章编辑
     [params.page.edit]
       enable = false
-      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # Link for fork & edit
-      url = "" # Link for fork & edit
+      # {{< version 0.2.15 changed >}} 编辑的基础链接
+      # url = "/edit/branch-name/subdirectory-name" # 相对于 `params.gitRepo`
+      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # 完整链接
+      url = ""
     # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} 数学公式 (https://katex.org)
     [params.page.math]
       enable = true
