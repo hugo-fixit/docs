@@ -12,12 +12,14 @@ math:
 ---
 
 {{< style "img { height: 1.25rem; }" >}}
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Lruihao/FixIt?style=flat-square)](https://github.com/Lruihao/FixIt/releases)
-[![GitHub commits since tagged version](https://img.shields.io/github/commits-since/Lruihao/FixIt/v0.2.10?style=flat-square)](https://github.com/Lruihao/FixIt/compare/v0.2.10...master)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.84.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/Lruihao/FixIt?style=flat-square)](https://github.com/Lruihao/FixIt/blob/master/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Lruihao/FixIt?style=flat)](https://github.com/Lruihao/FixIt/releases)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.84.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![License](https://img.shields.io/github/license/Lruihao/FixIt?style=flat)](https://github.com/Lruihao/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/Lruihao/FixIt?style=social)](https://github.com/Lruihao/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/Lruihao/FixIt?style=social)](https://github.com/Lruihao/FixIt/fork)
+
+[![Production environment](https://img.shields.io/github/deployments/Lruihao/FixIt/Production?style=flat&label=Production&logo=vercel)](https://fixit.lruihao.cn/)
+[![Preview environment](https://img.shields.io/github/deployments/Lruihao/FixIt/Preview?style=flat&label=Preview&logo=vercel)](https://pre.fixit.lruihao.cn/)
 {{< /style >}}
 
 > [<img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt](https://github.com/Lruihao/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://lruihao.cn).
