@@ -750,7 +750,7 @@ enableEmoji = true
     [params.page.edit]
       enable = true
       # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # Link for fork & edit
-      url = "https://github.com/Lruihao/FixIt/edit/master/exampleSite/content" # Link for fork & edit
+      url = "https://github.com/Lruihao/FixIt-Docs/edit/main/content" # Link for fork & edit
     # KaTeX mathematical formulas config (KaTeX https://katex.org/)
     # KaTeX 数学公式配置 (KaTeX https://katex.org/)
     [params.page.math]
