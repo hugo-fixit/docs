@@ -142,14 +142,14 @@ The rendered output looks like this (hover over the link, there should be a tool
 Example `link` input for card type:
 
 ```go-html-template
-{{</* link "https://github.com/Lruihao/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
+{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
 Or
-{{</* link href="https://github.com/Lruihao/FixIt" content="FixIt Theme" title="source of FixIt Theme" card=true */>}}
+{{</* link href="https://github.com/hugo-fixit/FixIt" content="FixIt Theme" title="source of FixIt Theme" card=true */>}}
 ```
 
 The rendered output looks like this:
 
-{{< link "https://github.com/Lruihao/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
 
 Example `link` input with download attribute:
 

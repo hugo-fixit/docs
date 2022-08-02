@@ -59,21 +59,21 @@ cd my_website
 
 ### 2.2 Install the Theme
 
-The **FixIt** theme’s repository is: <https://github.com/Lruihao/FixIt>.
+The **FixIt** theme’s repository is: <https://github.com/hugo-fixit/FixIt>.
 
-You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/Lruihao/FixIt/releases) of the theme and extract it in the `themes` directory.
+You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/hugo-fixit/FixIt/releases) of the theme and extract it in the `themes` directory.
 
 Alternatively, clone this repository to the `themes` directory:
 
 ```bash
-git clone https://github.com/Lruihao/FixIt.git themes/FixIt
+git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
 Or, create an empty git repository and make this repository a submodule of your site directory:
 
 ```bash
 git init
-git submodule add https://github.com/Lruihao/FixIt.git themes/FixIt
+git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
 ### 2.3 Basic Configuration {#basic-configuration}
@@ -128,7 +128,7 @@ theme = "FixIt"
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
-    # false is a necessary configuration (https://github.com/Lruihao/FixIt/issues/43)
+    # false is a necessary configuration (https://github.com/hugo-fixit/FixIt/issues/43)
     noClasses = false
 ```
 
@@ -833,7 +833,7 @@ Please open the code block below to view the complete sample configuration :(fa-
   # {{< version 0.2.14 >}} GitHub banner in the top-right or top-left corner
   [params.githubCorner]
     enable = false
-    permalink = "https://github.com/Lruihao/FixIt"
+    permalink = "https://github.com/hugo-fixit/FixIt"
     title = "View source on GitHub"
     position = "right" # left, right
   # {{< version 0.2.14 >}} Gravatar config
@@ -859,7 +859,7 @@ Please open the code block below to view the complete sample configuration :(fa-
   # {{< link "https://gohugo.io/content-management/syntax-highlighting" "Syntax Highlighting" >}} (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     ########## necessary configurations ##########
-    # {{< link "https://github.com/Lruihao/FixIt/issues/43" >}}
+    # {{< link "https://github.com/hugo-fixit/FixIt/issues/43" >}}
     codeFences = true
     lineNos = true
     lineNumbersInTable = true
@@ -1344,7 +1344,7 @@ Translations strings are used for common default values used in the theme. Trans
 
 To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/FixIt/i18n/en.toml`.
 
-By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):](https://github.com/Lruihao/FixIt/pulls) to the theme!
+By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
 
 ## 5 Search
 

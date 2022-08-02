@@ -58,21 +58,21 @@ cd my_website
 
 ### 2.2 安装主题
 
-**FixIt** 主题的仓库是：<https://github.com/Lruihao/FixIt>
+**FixIt** 主题的仓库是：<https://github.com/hugo-fixit/FixIt>
 
-你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件](https://github.com/Lruihao/FixIt/releases) 并且解压放到 `themes` 目录。
+你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件](https://github.com/hugo-fixit/FixIt/releases) 并且解压放到 `themes` 目录。
 
 另外，也可以直接把这个主题克隆到 `themes` 目录：
 
 ```bash
-git clone https://github.com/Lruihao/FixIt.git themes/FixIt
+git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
 或者，初始化你的项目目录为 git 仓库，并且把主题仓库作为你的网站目录的子模块：
 
 ```bash
 git init
-git submodule add https://github.com/Lruihao/FixIt.git themes/FixIt
+git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
 ### 2.3 基础配置 {#basic-configuration}
@@ -130,7 +130,7 @@ theme = "FixIt"
 [markup]
   # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
-    # false 是必要的设置 (https://github.com/Lruihao/FixIt/issues/43)
+    # false 是必要的设置 (https://github.com/hugo-fixit/FixIt/issues/43)
     noClasses = false
 ```
 
@@ -834,7 +834,7 @@ hugo
   # {{< version 0.2.14 >}} 在左上角或者右上角显示 GitHub 开源链接
   [params.githubCorner]
     enable = false
-    permalink = "https://github.com/Lruihao/FixIt"
+    permalink = "https://github.com/hugo-fixit/FixIt"
     title = "在 GitHub 上查看源代码"
     position = "right" # left, right
   # {{< version 0.2.14 >}} Gravatar 设置
@@ -860,7 +860,7 @@ hugo
   # {{< link "https://gohugo.io/content-management/syntax-highlighting" "语法高亮设置" >}} (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     ################## 必要的配置 ##################
-    # {{< link "https://github.com/Lruihao/FixIt/issues/43" >}}
+    # {{< link "https://github.com/hugo-fixit/FixIt/issues/43" >}}
     codeFences = true
     lineNos = true
     lineNumbersInTable = true
@@ -1346,7 +1346,7 @@ defaultContentLanguage = "zh-cn"
 
 要覆盖默认值，请在你项目的 i18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/FixIt/i18n/en.toml` 中获得提示。
 
-另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/Lruihao/FixIt/pulls) 来贡献主题翻译，谢谢！
+另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/FixIt/pulls) 来贡献主题翻译，谢谢！
 
 ## 5 搜索
 

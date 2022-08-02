@@ -116,7 +116,7 @@ enableEmoji = true
         pre = "<i class='fa-brands fa-github fa-fw'></i>"
         post = ""
         name = ""
-        url = "https://github.com/Lruihao/FixIt"
+        url = "https://github.com/hugo-fixit/FixIt"
         title = "GitHub"
         weight = 8
         [languages.en.menu.main.params]
@@ -350,7 +350,7 @@ enableEmoji = true
         pre = "<i class='fa-brands fa-github fa-fw'></i>"
         post = ""
         name = ""
-        url = "https://github.com/Lruihao/FixIt"
+        url = "https://github.com/hugo-fixit/FixIt"
         title = "GitHub"
         weight = 8
         [languages.zh-cn.menu.main.params]
@@ -516,7 +516,7 @@ enableEmoji = true
       # 在顶部右侧显示 GitHub 开源链接 since v0.2.14
       [languages.zh-cn.params.githubCorner]
         enable = true
-        permalink = "https://github.com/Lruihao/FixIt"
+        permalink = "https://github.com/hugo-fixit/FixIt"
         title = "在 GitHub 上查看源代码"
         position = "right" # left, right
       # Gravatar 设置 since v0.2.14
@@ -953,7 +953,7 @@ enableEmoji = true
       # Giscus 评论系统设置 (https://giscus.app/) since v0.2.14
       [params.page.comment.giscus]
         enable = true
-        repo = "Lruihao/FixIt"
+        repo = "hugo-fixit/FixIt"
         repoId = "R_kgDOGihPtQ"
         category = "General"
         categoryId = "DIC_kwDOGihPtc4CApHX"
@@ -1155,7 +1155,7 @@ enableEmoji = true
   # 在左上角或者右上角显示 GitHub 开源链接 since v0.2.14
   [params.githubCorner]
     enable = true
-    permalink = "https://github.com/Lruihao/FixIt"
+    permalink = "https://github.com/hugo-fixit/FixIt"
     title = "View source on GitHub"
     position = "right" # left, right
   # Gravatar config since v0.2.14
@@ -1191,7 +1191,7 @@ enableEmoji = true
   # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     ######## 必要配置 necessary configurations ########
-    # https://github.com/Lruihao/FixIt/issues/43
+    # https://github.com/hugo-fixit/FixIt/issues/43
     codeFences = true
     lineNos = true
     lineNumbersInTable = true

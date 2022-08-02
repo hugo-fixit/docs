@@ -119,7 +119,7 @@ hugo new offline/index.zh-tw.md
 {{< admonition type=tip title="Permalink" open=true >}}
 你需要确保离线页面的 [Permalink](https://gohugo.io/content-management/urls/#permalinks) 是 `/offline/`,  否则你需要手动更改 service worker 中 `OFFLINE_CACHE_FILES` 和 `OFFLINE_PAGE` 的值。
 
-目前，离线页面支持 i18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/Lruihao/FixIt/pulls)！
+目前，离线页面支持 i18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
 {{< /admonition >}}
 
 这是一个示例离线页面：
@@ -148,4 +148,4 @@ type: "offline"
 
 大功告成！你已成功将你的静态网站配置为了一个 PWA 🎉
 
-如果你在配置过程中有任何问题，你可以通过浏览器调试工具中的 `Console` 与 `Application` 面板来进行调试。你也可以用 [PWA Builder](https://www.pwabuilder.com/) 来检查你的网站以获得更多信息。你可以创建一个 [discussion](https://github.com/Lruihao/FixIt/discussions) 来获得社区帮助或者提交 [issue](https://github.com/Lruihao/FixIt/issues) 来报告你遇到的任何 bug。
+如果你在配置过程中有任何问题，你可以通过浏览器调试工具中的 `Console` 与 `Application` 面板来进行调试。你也可以用 [PWA Builder](https://www.pwabuilder.com/) 来检查你的网站以获得更多信息。你可以创建一个 [discussion](https://github.com/hugo-fixit/FixIt/discussions) 来获得社区帮助或者提交 [issue](https://github.com/hugo-fixit/FixIt/issues) 来报告你遇到的任何 bug。

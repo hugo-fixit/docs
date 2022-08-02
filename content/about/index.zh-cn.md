@@ -13,17 +13,17 @@ math:
 ---
 
 {{< style "img { height: 1.25rem; }" >}}
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Lruihao/FixIt?style=flat)](https://github.com/Lruihao/FixIt/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.84.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/Lruihao/FixIt?style=flat)](https://github.com/Lruihao/FixIt/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/Lruihao/FixIt?style=social)](https://github.com/Lruihao/FixIt)
-[![GitHub forks](https://img.shields.io/github/forks/Lruihao/FixIt?style=social)](https://github.com/Lruihao/FixIt/fork)
+[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
+[![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
 
-[![Production environment](https://img.shields.io/github/deployments/Lruihao/FixIt/Production?style=flat&label=生产环境&logo=vercel)](https://fixit.lruihao.cn/)
-[![Preview environment](https://img.shields.io/github/deployments/Lruihao/FixIt/Preview?style=flat&label=预览环境&logo=vercel)](https://pre.fixit.lruihao.cn/)
+[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=生产环境&logo=vercel)](https://fixit.lruihao.cn/)
+[![Preview environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Preview?style=flat&label=预览环境&logo=vercel)](https://pre.fixit.lruihao.cn/)
 {{< /style >}}
 
-> [<img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt](https://github.com/Lruihao/FixIt) 是一个由 [Lruihao](https://lruihao.cn) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
+> [<img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://lruihao.cn) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 >
 > 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[LeaveIt 主题](https://github.com/liuzc/LeaveIt) 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。
 
@@ -139,4 +139,4 @@ math:
 
 ### 许可协议
 
-FixIt 根据 **MIT** 许可协议授权。 更多信息请查看 [LICENSE 文件](https://github.com/Lruihao/FixIt/blob/master/LICENSE)。
+FixIt 根据 **MIT** 许可协议授权。 更多信息请查看 [LICENSE 文件](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)。

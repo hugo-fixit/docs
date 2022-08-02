@@ -120,7 +120,7 @@ hugo new offline/index.zh-tw.md
 {{< admonition type=tip title="Permalink" open=true >}}
 You need to make sure the [Permalink](https://gohugo.io/content-management/urls/#permalinks) to the offline page is `/offline/`, otherwise, you will need to modify the value of `OFFLINE_CACHE_FILES` and `OFFLINE_PAGE` in the service worker yourself.
 
-Currently, i18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/Lruihao/FixIt/pulls) to the theme!
+Currently, i18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
 {{< /admonition >}}
 
 Here is a sample offline page.
@@ -149,4 +149,4 @@ Now, an install button should show up when you visit your website and you will b
 
 Congratulation! You have successfully turned your static site into a PWA 🎉
 
-If you have any issues during the setup process, you can check the `Console` and `Application` panels in your browser's DevTools for debugging. Alternatively, you can check your site on [PWA Builder](https://www.pwabuilder.com/) for more information. You can also start a [discussion](https://github.com/Lruihao/FixIt/discussions) if you have any questions or propose an [issue](https://github.com/Lruihao/FixIt/issues) for any bugs you find. 
+If you have any issues during the setup process, you can check the `Console` and `Application` panels in your browser's DevTools for debugging. Alternatively, you can check your site on [PWA Builder](https://www.pwabuilder.com/) for more information. You can also start a [discussion](https://github.com/hugo-fixit/FixIt/discussions) if you have any questions or propose an [issue](https://github.com/hugo-fixit/FixIt/issues) for any bugs you find. 

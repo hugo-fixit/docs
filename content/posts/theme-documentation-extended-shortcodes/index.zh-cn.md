@@ -141,14 +141,14 @@ This is a **right-aligned** paragraph.
 一个卡片式 `link` 示例：
 
 ```go-html-template
-{{</* link "https://github.com/Lruihao/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
+{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
 或者
-{{</* link href="https://github.com/Lruihao/FixIt" content="FixIt Theme" title="source of FixIt Theme" card=true */>}}
+{{</* link href="https://github.com/hugo-fixit/FixIt" content="FixIt Theme" title="source of FixIt Theme" card=true */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< link "https://github.com/Lruihao/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
 
 一个可下载的 `link` 示例：
 

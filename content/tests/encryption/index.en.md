@@ -65,7 +65,7 @@ This is a **right-aligned** paragraph.
 
 {{< link "https://github.com/upstage/" Upstage "Visit Upstage!" >}}
 
-{{< link "https://github.com/Lruihao/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
 
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
 
