@@ -126,6 +126,7 @@ math:
 * [Valine](https://valine.js.org/)
 * [cookieconsent](https://github.com/osano/cookieconsent)
 * [cell-watermark](https://github.com/Lruihao/watermark)
+* [不蒜子](http://busuanzi.ibruce.info/)
 * [pangu.js](https://github.com/vinta/pangu.js)
 * [Artalk](https://artalk.js.org/)
 * [Waline](https://waline.js.org/)
@@ -135,6 +136,14 @@ math:
 * [crypto-js](https://github.com/brix/crypto-js)
 * [vConsole](https://github.com/Tencent/vConsole)
 * [eruda](https://github.com/liriliri/eruda)
+
+</details>
+
+<details>
+<summary>FixIt 主题还借鉴了以下项目的部分功能，同样感谢它们的作者：</summary>
+
+* [DoIt](https://github.com/HEIGE-PCloud/DoIt)
+
 </details>
 
 ### 许可协议

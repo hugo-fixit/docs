@@ -125,6 +125,7 @@ math:
 * [Valine](https://valine.js.org/)
 * [cookieconsent](https://github.com/osano/cookieconsent)
 * [cell-watermark](https://github.com/Lruihao/watermark)
+* [不蒜子](http://busuanzi.ibruce.info/)
 * [pangu.js](https://github.com/vinta/pangu.js)
 * [Artalk](https://artalk.js.org/)
 * [Waline](https://waline.js.org/)
@@ -134,6 +135,14 @@ math:
 * [crypto-js](https://github.com/brix/crypto-js)
 * [vConsole](https://github.com/Tencent/vConsole)
 * [eruda](https://github.com/liriliri/eruda)
+
+</details>
+
+<details>
+<summary>The FixIt also draws on some features of the following projects, and thanks to their authors as well:</summary>
+
+* [DoIt](https://github.com/HEIGE-PCloud/DoIt)
+
 </details>
 
 ### License
