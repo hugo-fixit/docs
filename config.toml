@@ -125,23 +125,7 @@ enableEmoji = true
       # site description
       description = "About FixIt Theme"
       # site keywords
-      keywords = ["Theme", "Hugo"]
-      # App icon config
-      [languages.en.params.app]
-        # optional site title override for the app when added to an iOS home screen or Android launcher
-        title = "FixIt"
-        # whether to omit favicon resource links
-        noFavicon = false
-        # modern SVG favicon to use in place of older style .png and .ico files
-        svgFavicon = ""
-        # Safari mask icon color
-        iconColor = "#5bbad5"
-        # Windows v8-10 tile color
-        tileColor = "#da532c"
-        # Android browser theme color
-        [languages.en.params.app.themeColor]
-          light = "#ffffff"
-          dark = "#252627"
+      keywords = ["FixIt", "Theme", "Hugo"]
       # Search config
       [languages.en.params.search]
         enable = true
@@ -359,23 +343,7 @@ enableEmoji = true
       # 网站描述
       description = "关于 FixIt 主题"
       # 网站关键词
-      keywords = ["Theme", "Hugo"]
-      # 应用图标配置
-      [languages.zh-cn.params.app]
-        # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-        title = "FixIt"
-        # 是否隐藏网站图标资源链接
-        noFavicon = false
-        # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-        svgFavicon = ""
-        # Safari 图标颜色
-        iconColor = "#5bbad5"
-        # Windows v8-10 磁贴颜色
-        tileColor = "#da532c"
-        # Android 浏览器主题色
-        [languages.zh-cn.params.app.themeColor]
-          light = "#ffffff"
-          dark = "#252627"
+      keywords = ["FixIt", "主题", "Hugo"]
       # 搜索配置
       [languages.zh-cn.params.search]
         enable = true
@@ -555,6 +523,30 @@ enableEmoji = true
   # 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。since v0.2.14
   # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
   disableThemeInject = false
+
+  # App icon config
+  # 应用图标配置
+  [params.app]
+    # optional site title override for the app when added to an iOS home screen or Android launcher
+    # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+    title = "FixIt"
+    # whether to omit favicon resource links
+    # 是否隐藏网站图标资源链接
+    noFavicon = false
+    # modern SVG favicon to use in place of older style .png and .ico files
+    # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+    svgFavicon = ""
+    # Safari mask icon color
+    # Safari 图标颜色
+    iconColor = "#5bbad5"
+    # Windows v8-10 tile color
+    # Windows v8-10 磁贴颜色
+    tileColor = "#da532c"
+    # Android browser theme color
+    # Android 浏览器主题色
+    [params.app.themeColor]
+      light = "#ffffff"
+      dark = "#252627"
 
   # Header config
   # 页面头部导航栏配置
