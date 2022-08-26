@@ -1054,7 +1054,7 @@ For example: `pageStyle="custom"`
 
 ```scss
 @media only screen and (min-width: 1441px) {
-  [page-style='custom'] {
+  [data-page-style='custom'] {
     .page {
       width: 70%;
     }
@@ -1066,7 +1066,7 @@ For example: `pageStyle="custom"`
 }
 
 @media only screen and (max-width: 1440px) {
-  [page-style='custom'] {
+  [data-page-style='custom'] {
     .page {
       width: 60%;
     }
@@ -1078,7 +1078,7 @@ For example: `pageStyle="custom"`
 }
 
 @media only screen and (max-width: 1200px) {
-  [page-style='custom'] {
+  [data-page-style='custom'] {
     .page {
       width: 56%;
     }

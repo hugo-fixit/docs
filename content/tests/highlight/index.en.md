@@ -79,7 +79,7 @@ pre {
 
   background: $code-background-color;
 
-  [theme=dark] & {
+  [data-theme=dark] & {
     background: $code-background-color-dark;
   }
 
