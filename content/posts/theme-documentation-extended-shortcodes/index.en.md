@@ -387,7 +387,7 @@ console.log('Hello FixIt!');
 
 The `details` shortcode has only one parameter:
 
-- **summary** *[optional]* (**first** positional parameter)
+* **summary** *[optional]* (**first** positional parameter)
 
     summary of details. (markdown support)
 
@@ -418,19 +418,18 @@ The rendered output looks like this:
 Example `center-quote` input:
 
 ```go-html-template
-{{%/* center-quote */%}}
+{{</* center-quote */>}}
 **hello** *world*  
 this is a center-quote shortcode example.
-{{%/* /center-quote */%}}
+{{</* /center-quote */>}}
 ```
 
 The rendered output looks like this:
 
-{{% center-quote %}}
+{{< center-quote >}}
 **hello** *world*  
 this is a center-quote shortcode example.
-{{% /center-quote %}}
-
+{{< /center-quote >}}
 
 ## 14 fixit-encryptor
 
@@ -443,5 +442,5 @@ The full documentation is provided in [Theme Documentation - Content Encryption]
 ---
 
 {{< admonition quote "Thanks" >}}
-_Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation._
+*Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation.*
 {{< /admonition >}}

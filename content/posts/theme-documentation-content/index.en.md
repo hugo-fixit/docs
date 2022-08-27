@@ -135,7 +135,7 @@ resources:
   src: featured-image-preview.jpg
 ```
 
-{{< version 0.2.12 >}} 
+{{< version 0.2.12 >}}
 
 Some [archetypes](https://gohugo.io/content-management/archetypes/) are embedded in the **FixIt** theme, which will take effect when creating new content with the following commands, and the front matter will be automatically brought in.
 
@@ -143,6 +143,7 @@ Some [archetypes](https://gohugo.io/content-management/archetypes/) are embedded
 hugo new posts/foo.md
 hugo new --kind post-bundle posts/bar/
 ```
+
 {{< /admonition >}}
 
 Here is a front matter example:
@@ -226,7 +227,7 @@ Generally, you don't need to set the **type** parameter, because Hugo and fixit 
 
 ### Friends
 
-{{< version 0.2.12 >}} 
+{{< version 0.2.12 >}}
 
 Set `type: "friends"` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows:
 
@@ -253,11 +254,13 @@ hugo new friends/index.md
 {{< version 0.2.12 >}} See [PWA Support](/pwa-support/) for details.
 
 Set `type: "offline"` in the front matter and set `enablePWA` in `config.toml`:
+
 ```toml
 [params]
   # enable PWA
   enablePWA = true
 ```
+
 {{< admonition tip >}}
 
 You can use the following command to quickly create a offline page:

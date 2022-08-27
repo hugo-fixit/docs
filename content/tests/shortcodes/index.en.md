@@ -33,10 +33,10 @@ this is a center-quote shortcode example.
 
 ## Shortcodes with Markdown
 
-{{% center-quote %}}
+{{< center-quote >}}
 **hello** *world*  
 this is a center-quote shortcode example.
-{{% /center-quote %}}
+{{< /center-quote >}}
 
 {{< details "**Copyright** 2022. [Lruihao](https://lruihao.cn/)" >}}
 *All pages and graphics on this web site are the property of [FixIt](/).*

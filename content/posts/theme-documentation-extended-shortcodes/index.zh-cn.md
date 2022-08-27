@@ -386,7 +386,8 @@ console.log('Hello FixIt!');
 `details` shortcode 用来在你的文章中插入 **:(fa-brands fa-html5 fa-fw): HTML5 标签** details 和 summary。
 
 `details` shortcode 只有一个参数：
-- **summary** *[可选]* (**第一个**位置参数）
+
+* **summary** *[可选]* (**第一个**位置参数）
 
     summary 标签的内容（支持 markdown）
 
@@ -417,18 +418,18 @@ console.log('Hello FixIt!');
 一个 `center-quote` 示例：
 
 ```go-html-template
-{{%/* center-quote */%}}
+{{</* center-quote */>}}
 **hello** *world*  
 this is a center-quote shortcode example.
-{{%/* /center-quote */%}}
+{{</* /center-quote */>}}
 ```
 
 呈现的输出效果如下：
 
-{{% center-quote %}}
+{{< center-quote >}}
 **hello** *world*  
 this is a center-quote shortcode example.
-{{% /center-quote %}}
+{{< /center-quote >}}
 
 ## 14 fixit-encryptor
 
@@ -441,5 +442,5 @@ this is a center-quote shortcode example.
 ---
 
 {{< admonition quote "感谢" >}}
-_本文档中 `v0.2.10` 版本之前的内容，感谢原作者 [Dillon](https://dillonzq.com) 编写修订。_
+*本文档中 `v0.2.10` 版本之前的内容，感谢原作者 [Dillon](https://dillonzq.com) 编写修订。*
 {{< /admonition >}}

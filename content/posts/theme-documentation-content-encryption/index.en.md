@@ -60,7 +60,6 @@ categories:
 ---
 ```
 
-
 {{< admonition info >}}
 
 1. After entering the correct password each time, the password hash value will be cached locally by the user, and the pages will be unlocked automatically when accessed again within one day
@@ -147,19 +146,19 @@ Compared with encrypting content through script batch processing such as golang/
 >
 > There is no trivial matter about privacy. Please do not upload important and private contents, and keep them properly!
 
+---
+
 ## Class FixItDecryptor API {#fixit-decryptor-api}
 
 FixIt decryptor for encrypted pages
 
 ### new FixItDecryptor(options)
 
-#### Parameters:
-
 | Name    | Type   | Description                                                  |
 | ------- | ------ | ------------------------------------------------------------ |
-| options | Object | The options of FixItDecryptor（[Properties](#properties)） |
+| options | Object | The options of FixItDecryptor（[Options](#options)） |
 
-##### Properties:
+#### Options
 
 | Name      | Type     | Attributes | Default | Description                                               |
 | --------- | -------- | ---------- | ------- | --------------------------------------------------------- |
@@ -185,8 +184,6 @@ validate the cached decryption statistics in localStorage
 
 add event listener for FixIt Decryptor
 
-##### Parameters:
-
 | Name     | Type     | Description   |
 | -------- | -------- | ------------- |
 | event    | String   | event name    |
@@ -195,8 +192,6 @@ add event listener for FixIt Decryptor
 #### removeEventListener(event, listener)
 
 remove event listener for FixIt Decryptor
-
-##### Parameters:
 
 | Name     | Type     | Description   |
 | -------- | -------- | ------------- |

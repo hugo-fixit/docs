@@ -133,7 +133,7 @@ resources:
   src: featured-image-preview.jpg
 ```
 
-{{< version 0.2.12 >}} 
+{{< version 0.2.12 >}}
 
 **FixIt** 主题内嵌了一些 [原型](https://gohugo.io/content-management/archetypes/)，在使用以下命令创建新内容时生效，会自动带入常用的前置参数：
 
@@ -141,6 +141,7 @@ resources:
 hugo new posts/foo.md
 hugo new --kind post-bundle posts/bar/
 ```
+
 {{< /admonition >}}
 
 这是一个前置参数例子：
@@ -224,7 +225,7 @@ seo:
 
 ### 友情链接
 
-{{< version 0.2.12 >}} 
+{{< version 0.2.12 >}}
 
 在前置参数中设置 `type: "friends"`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
 
@@ -251,12 +252,14 @@ hugo new friends/index.md
 {{< version 0.2.12 >}} 详见 [PWA 支持](/zh-cn/pwa-support/)
 
 在前置参数中设置 `type: "offline"`，并在 `config.toml` 中开启 `enablePWA`：
+
 ```toml
 [params]
   # enable PWA
   # 开启 PWA 支持
   enablePWA = true
 ```
+
 {{< admonition tip >}}
 
 你可以使用以下命令快速创建离线页面：
