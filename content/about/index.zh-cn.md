@@ -83,7 +83,7 @@ math:
 * :(fa-brands fa-font-awesome fa-fw): 支持 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
 * :(fa-regular fa-sticky-note fa-fw): 支持**上标注释**的扩展 Markdown 语法
 * :(fa-solid fa-percentage fa-fw): 支持**分数**的扩展 Markdown 语法
-* :(fa-solid fa-square-root-alt fa-fw): 支持基于 [$ \KaTeX $](https://katex.org/) 的**数学公式**
+* :(fa-solid fa-square-root-alt fa-fw): 支持基于 [$\KaTeX$](https://katex.org/) 的**数学公式**
 * :(fa-solid fa-project-diagram fa-fw): 支持基于 [mermaid](https://github.com/knsv/mermaid) 的**图表** shortcode
 * :(fa-solid fa-chart-pie fa-fw): 支持基于 [ECharts](https://echarts.apache.org/) 的**交互式数据可视化** shortcode
 * :(fa-solid fa-map-marked-alt fa-fw): 支持基于 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 的 **Mapbox** shortcode
@@ -116,7 +116,7 @@ math:
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
 * [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
-* [$ \KaTeX $](https://katex.org/)
+* [$\KaTeX$](https://katex.org/)
 * [mermaid](https://github.com/knsv/mermaid)
 * [ECharts](https://echarts.apache.org/)
 * [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js)

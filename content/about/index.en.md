@@ -82,7 +82,7 @@ math:
 * :(fa-brands fa-font-awesome fa-fw): Extended Markdown syntax for **[Font Awesome](https://fontawesome.com/) icons**
 * :(fa-regular fa-sticky-note fa-fw): Extended Markdown syntax for **ruby annotation**
 * :(fa-solid fa-percentage fa-fw): Extended Markdown syntax for **fraction**
-* :(fa-solid fa-square-root-alt fa-fw): **Mathematical formula** supported by [$ \KaTeX $](https://katex.org/)
+* :(fa-solid fa-square-root-alt fa-fw): **Mathematical formula** supported by [$\KaTeX$](https://katex.org/)
 * :(fa-solid fa-project-diagram fa-fw): **Diagrams** shortcode supported by [mermaid](https://github.com/knsv/mermaid)
 * :(fa-solid fa-chart-pie fa-fw): **Interactive data visualization** shortcode supported by [ECharts](https://echarts.apache.org/)
 * :(fa-solid fa-map-marked-alt fa-fw): **Mapbox** shortcode supported by [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js)
@@ -115,7 +115,7 @@ math:
 * [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
 * [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
-* [$ \KaTeX $](https://katex.org/)
+* [$\KaTeX$](https://katex.org/)
 * [mermaid](https://github.com/knsv/mermaid)
 * [ECharts](https://echarts.apache.org/)
 * [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js)

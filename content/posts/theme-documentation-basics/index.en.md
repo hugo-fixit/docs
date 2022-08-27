@@ -495,15 +495,15 @@ Please open the code block below to view the complete sample configuration :(fa-
       warning = 180
       # If the article expires, close the comment or not
       closeComment = false
-    # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
+    # {{< version 0.2.16 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
     [params.page.math]
       enable = true
-      # default block delimiter is $$ ... $$ and \\[ ... \\]
-      blockLeftDelimiter = ""
-      blockRightDelimiter = ""
-      # default inline delimiter is $ ... $ and \\( ... \\)
+      # default inline delimiter is $ ... $ and \( ... \)
       inlineLeftDelimiter = ""
       inlineRightDelimiter = ""
+      # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
       # KaTeX extension copy_tex
       copyTex = true
       # KaTeX extension mhchem
