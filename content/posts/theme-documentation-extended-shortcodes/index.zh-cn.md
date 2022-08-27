@@ -16,6 +16,8 @@ tags: ["shortcodes"]
 categories: ["documentation"]
 
 lightgallery: true
+math:
+  enable: true
 
 menu:
   main:
@@ -411,7 +413,7 @@ console.log('Hello FixIt!');
 
 ## 13 center-quote
 
-{{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
+{{< version 0.2.13 >}}
 
 `center-quote` shortcode 用来在你的文章中插入文本居中的 blockquote 标签。
 
@@ -438,6 +440,42 @@ this is a center-quote shortcode example.
 您可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 
 完整文档请查看页面 [主题文档 - 内容加密](../theme-documentation-content-encryption/#partial-encryption)。
+
+## 15 raw
+
+{{< version 0.2.16 >}}
+
+`raw` shortcode 用来在你的文章中插入原始 **:(fab fa-html5 fa-fw): HTML** 内容。
+
+`raw` shortcode 只有一个参数：
+
+* **tag** *[可选]* (**第一个**位置参数）
+
+    原始内容的父级元素 HTML 标签，默认值是 `div`。
+
+一个 `raw` 示例:
+
+```markdown
+{{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
+
+{{</* raw */>}}
+公式块：
+\[ a=b+c \\ d+e=f \]
+{{</* /raw */>}}
+
+原始的带有 Markdown 和 HTML 语法的内容：{{</* raw "span" */>}}**Hello** <strong>FixIt</strong>{{</* /raw */>}}
+```
+
+呈现的输出效果如下:
+
+{{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+
+{{< raw >}}
+公式块：
+\[ a=b+c \\ d+e=f \]
+{{< /raw >}}
+
+原始的带有 Markdown 和 HTML 语法的内容：{{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
 ---
 

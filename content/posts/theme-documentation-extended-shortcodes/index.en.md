@@ -16,6 +16,8 @@ tags: ["shortcodes"]
 categories: ["documentation"]
 
 lightgallery: true
+math:
+  enable: true
 
 menu:
   main:
@@ -87,7 +89,7 @@ The `link` shortcode has the following named parameters:
 
 * **card** *[optional]* (**fourth** positional parameter) {{< version 0.2.12 >}}
 
-    是否显示为卡片式链接，默认值 `false`。
+    Whether to display as a card link, whose default value is `false`.
 
 * **download** *[optional]* {{< version 0.2.12 >}}
 
@@ -103,7 +105,7 @@ The `link` shortcode has the following named parameters:
 
 * **external-icon** *[optional]* {{< version 0.2.14 >}}
 
-    whether to add external Icon for external links automatically
+    Whether to add external Icon for external links automatically
 
 Example `link` input:
 
@@ -411,7 +413,7 @@ The rendered output looks like this:
 
 ## 13 center-quote
 
-{{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
+{{< version 0.2.13 >}}
 
 `center-quote` is a shortcode to insert centered text blockquote tag in your post.
 
@@ -438,6 +440,43 @@ this is a center-quote shortcode example.
 You can use `fixit-encryptor` shortcode to encrypt partial content.
 
 The full documentation is provided in [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/#partial-encryption).
+
+## 15 raw
+
+{{< version 0.2.16 >}}
+
+`raw` is a shortcode to insert raw **:(fab fa-html5 fa-fw): HTML** content in your post.
+This is useful when you want to include some Markdown content to **avoid being rendered or escaped** by Hugo.
+
+The `raw` shortcode has only one parameter:
+
+* **tag** *[optional]* (**first** positional parameter)
+
+    The tag name of the wrapper HTML element, whose default value is `div`.
+
+Example `raw` input:
+
+```markdown
+{{</* raw */>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
+
+{{</* raw */>}}
+Block Formula:
+\[ a=b+c \\ d+e=f \]
+{{</* /raw */>}}
+
+Raw content using Markdown and HTML syntax: {{</* raw "span" */>}}**Hello** <strong>FixIt</strong>{{</* /raw */>}}
+```
+
+The rendered output looks like this:
+
+ {{< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+
+{{< raw >}}
+Block Formula:
+\[ a=b+c \\ d+e=f \]
+{{< /raw >}}
+
+Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
 ---
 

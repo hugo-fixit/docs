@@ -27,8 +27,10 @@ normal content
 ## Shortcodes without Markdown
 
 {{< center-quote >}}
+{{< raw >}}
 **hello** *world*  
 this is a center-quote shortcode example.
+{{< /raw >}}
 {{< /center-quote >}}
 
 ## Shortcodes with Markdown
@@ -56,6 +58,30 @@ A **tip** banner
 
 {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
 
-```
+```code
 {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
 ```
+
+## Raw
+
+```markdown
+{{</* raw */>}}
+render **raw** *markdown*
+{{</* /raw */>}}
+
+{{</* raw */>}}
+render
+<strong>raw</strong>
+<em>html</em>
+{{</* /raw */>}}
+```
+
+{{< raw >}}
+render **raw** *markdown*
+{{< /raw >}}
+
+{{< raw >}}
+render
+<strong>raw</strong>
+<em>html</em>
+{{< /raw >}}
