@@ -355,6 +355,29 @@ therefore, additional escape character expressions are required for these places
 * `\[` -> `\\[`
 * `\]` -> `\\]`
 * `\\` -> `\\\\`
+
+**FixIt** theme supports [`raw` shortcode](../theme-documentation-extended-shortcodes#15-raw) to avoid these escape characters,
+which helps you write raw mathematical formula content.
+
+Example `raw` input:
+
+```markdown
+{{</* raw */>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
+
+{{</* raw */>}}
+Block Formula:
+\[ a=b+c \\ d+e=f \]
+{{</* /raw */>}}
+```
+
+The rendered output looks like this:
+
+{{< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+
+{{< raw>}}
+Block Formula:
+\[ a=b+c \\ d+e=f \]
+{{< /raw >}}
 {{< /admonition >}}
 
 #### Inline Formula

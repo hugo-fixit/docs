@@ -353,6 +353,29 @@ hugo new offline/index.md
 * `\[` -> `\\[`
 * `\]` -> `\\]`
 * `\\` -> `\\\\`
+
+**FixIt** 主题支持 [`raw` shortcode](../theme-documentation-extended-shortcodes#15-raw) 以避免这些转义字符，
+它可以帮助您编写原始数学公式内容。
+
+一个 `raw` 示例：
+
+```markdown
+{{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
+
+{{</* raw */>}}
+公式块：
+\[ a=b+c \\ d+e=f \]
+{{</* /raw */>}}
+```
+
+呈现的输出效果如下：
+
+{{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+
+{{< raw >}}
+公式块：
+\[ a=b+c \\ d+e=f \]
+{{< /raw >}}
 {{< /admonition >}}
 
 #### 行内公式
