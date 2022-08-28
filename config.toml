@@ -133,7 +133,8 @@ enableEmoji = true
         title = "GitHub"
         weight = 8
         [languages.en.menu.main.params]
-          class = "d-none-desktop text-center"
+          class = "text-center"
+          type = "mobile"
     [languages.en.params]
       # site description
       description = "About FixIt Theme"

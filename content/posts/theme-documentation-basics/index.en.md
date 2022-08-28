@@ -1145,6 +1145,8 @@ The following is a complete menu item configuration:
       draft = false
       # {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
       icon = "fa-solid fa-archive"
+      # {{< version 0.2.16 >}} set menu item type, optional value: ["mobile", "desktop"]
+      type = ""
 ```
 
 #### 3.4.1 Sub Menu
@@ -1163,7 +1165,8 @@ You can also add user-defined content to menu items via the `params` field. The 
 
 - **class** *{String}* add css class to a specific menu item
 - **draft** *{Boolean}* whether set as a draft menu item whose function is similar to a draft post/page
-- **icon** *{String}* add fontawesome icon to a specificmenu item
+- **icon** *{String}* {{< version 0.2.16 >}} add fontawesome icon to a specificmenu item
+- **type** *{String}* {{< version 0.2.16 >}} set menu item type, optional value: ["mobile", "desktop"]
 
 {{< admonition >}}
 The draft menu items and posts/pages can be rendered by starting the `Hugo server` command or adding the `-D`/`--buildDrafts` parameter to `hugo` command.

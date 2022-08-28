@@ -1148,6 +1148,8 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
       draft = false
       # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
       icon = "fa-solid fa-archive"
+      # {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
+      type = ""
 ```
 
 #### 3.4.1 子菜单
@@ -1166,7 +1168,8 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
 
 - **class** *{String}* 添加 CSS 类到菜单项
 - **draft** *{Boolean}* 是否为草稿菜单，类似草稿页面
-- **icon** *{String}* 添加 fontawesome 图标到菜单项
+- **icon** *{String}* {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
+- **type** *{String}* {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
 
 {{< admonition >}}
 `hugo server` 命令启动或者为 `hugo` 添加 `-D`/`--buildDrafts` 参数，都能渲染草稿菜单和页面。
