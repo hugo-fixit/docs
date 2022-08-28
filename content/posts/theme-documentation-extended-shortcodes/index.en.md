@@ -24,7 +24,8 @@ menu:
     name: "Extended Shortcodes"
     title: "FixIt theme provides multiple shortcodes on top of built-in ones in Hugo."
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.

@@ -18,7 +18,8 @@ menu:
   main:
     title: "Test for rendering Font Awesome icons"
     parent: "tests"
-    pre: "<i class='fa-solid fa-vial fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-solid fa-vial"
 ---
 
 ## Size

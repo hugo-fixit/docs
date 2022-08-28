@@ -19,7 +19,8 @@ menu:
   main:
     title: "在 FixIt 中设置 PWA 的指南。"
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 
 repost:
   enable: true

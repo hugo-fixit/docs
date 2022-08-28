@@ -22,7 +22,8 @@ menu:
   main:
     title: "探索 Hugo - FixIt 主题的全部内容和背后的核心概念。"
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 
 探索 Hugo - **FixIt** 主题的全部内容和背后的核心概念。
@@ -135,8 +136,10 @@ theme = "FixIt"
 ```
 
 {{< admonition >}}
+
 - 在构建网站时，你可以使用 `--theme` 选项设置主题。但是，我建议你修改配置文件 (**config.toml**) 将本主题设置为默认主题。
 - {{< version 0.2.14 >}} FixIt 主题提供了子菜单的支持，请详见 [菜单进阶配置](#menu-advanced-configuration)
+
 {{< /admonition >}}
 
 ### 2.4 创建你的第一篇文章
@@ -167,6 +170,7 @@ hugo server
 ![基本配置下的预览](basic-configuration-preview.zh-cn.png "基本配置下的预览")
 
 {{< admonition tip >}}
+
 当你运行 `hugo server` 时，当文件内容更改时，页面会随着更改自动刷新。
 {{< /admonition >}}
 
@@ -177,6 +181,7 @@ hugo server
 ```bash
 hugo server --disableFastRender
 ```
+
 {{< /admonition >}}
 
 ### 2.6 构建网站
@@ -1006,12 +1011,12 @@ hugo
 
 强烈建议你把：
 
-* apple-touch-icon.png (180x180)
-* favicon-32x32.png (32x32)
-* favicon-16x16.png (16x16)
-* mstile-150x150.png (150x150)
-* android-chrome-192x192.png (192x192)
-* android-chrome-512x512.png (512x512)
+- apple-touch-icon.png (180x180)
+- favicon-32x32.png (32x32)
+- favicon-16x16.png (16x16)
+- mstile-150x150.png (150x150)
+- android-chrome-192x192.png (192x192)
+- android-chrome-512x512.png (512x512)
 
 放在 `/static` 目录。利用 [https://realfavicongenerator.net/](https://realfavicongenerator.net/) 可以很容易地生成这些文件。
 
@@ -1046,9 +1051,9 @@ $code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospac
 
 FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项。
 
-* **narrow** 保留 `<v0.2.13` 页面目录宽度比
-* **normal** 新的默认页面目录宽度比
-* **wide** 较大的页面目录宽度比
+- **narrow** 保留 `<v0.2.13` 页面目录宽度比
+- **normal** 新的默认页面目录宽度比
+- **wide** 较大的页面目录宽度比
 
 另外，你还可以在 `assets/css/_custom.scss` 中，自定义 `pageStyle` 值
 
@@ -1098,9 +1103,9 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 
 在 FixIt 主题中，提供有三个打印视图相关的 CSS 类
 
-* `page-break-before` 在元素之前插入分页符
-* `page-break-after` 在元素之后插入分页符
-* `print-d-none` 在打印视图中隐藏元素
+- `page-break-before` 在元素之前插入分页符
+- `page-break-after` 在元素之后插入分页符
+- `print-d-none` 在打印视图中隐藏元素
 
 下面是一个简单的例子：
 
@@ -1137,10 +1142,12 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
     weight = 1
     # {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
     [menu.main.params]
-      # 添加 CSS 类到特定的菜单项
+      # 添加 CSS 类到菜单项
       class = 'text-center'
       # 是否为草稿菜单，类似草稿页面
       draft = false
+      # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
+      icon = "fa-solid fa-archive"
 ```
 
 #### 3.4.1 子菜单
@@ -1157,8 +1164,9 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
 
 您还可以通过 `params` 字段将自定义的内容添加到菜单项。 FixIt 主题目前提供了两个参数的配置：
 
-* **class** *{String}* 添加 CSS 类到特定的菜单项
-* **draft** *{Boolean}* 是否为草稿菜单，类似草稿页面
+- **class** *{String}* 添加 CSS 类到菜单项
+- **draft** *{Boolean}* 是否为草稿菜单，类似草稿页面
+- **icon** *{String}* 添加 fontawesome 图标到菜单项
 
 {{< admonition >}}
 `hugo server` 命令启动或者为 `hugo` 添加 `-D`/`--buildDrafts` 参数，都能渲染草稿菜单和页面。
@@ -1169,13 +1177,13 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
 
 例如：
 
--  [有草稿菜单的预览环境](https://pre.fixit.lruihao.cn/zh-cn/)
--  [没有草稿菜单的生产环境](https://fixit.lruihao.cn/zh-cn/)
+- [有草稿菜单的预览环境](https://pre.fixit.lruihao.cn/zh-cn/)
+- [没有草稿菜单的生产环境](https://fixit.lruihao.cn/zh-cn/)
 {{< /admonition >}}
 
 #### 3.4.3 添加内容到菜单 {#content-to-menu}
 
-也可以通过配置 `front matter` 从页面创建菜单项（即 `.md` 文件）。 
+也可以通过配置 `front matter` 从页面创建菜单项（即 `.md` 文件）。
 
 这是一个 `yaml` 示例：
 
@@ -1187,7 +1195,8 @@ menu:
   main:
     title: "探索 Hugo - FixIt 主题的全部内容和背后的核心概念。"
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 ...
 ```
@@ -1327,9 +1336,9 @@ defaultContentLanguage = "zh-cn"
 
 单个文件 `my-page.md` 需要分为三个文件：
 
-* 英语：`my-page.en.md`
-* 中文：`my-page.zh-cn.md`
-* 法语：`my-page.fr.md`
+- 英语：`my-page.en.md`
+- 中文：`my-page.zh-cn.md`
+- 法语：`my-page.fr.md`
 
 {{< admonition >}}
 请注意，菜单中仅显示翻译的页面。它不会替换为默认语言内容。
@@ -1395,8 +1404,8 @@ defaultContentLanguage = "zh-cn"
 {{< admonition note "怎样选择搜索引擎？" >}}
 以下是两种搜索引擎的对比：
 
-* `lunr`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，但占用带宽大且性能低（特别是中文需要一个较大的分词依赖库）
-* `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
+- `lunr`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，但占用带宽大且性能低（特别是中文需要一个较大的分词依赖库）
+- `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
 
 {{< version 0.2.3 >}} 文章内容被 `h2` 和 `h3` HTML 标签切分来提高查询效果并且基本实现全文搜索。
 `contentLength` 用来限制 `h2` 和 `h3` HTML 标签开头的内容部分的最大长度。
@@ -1411,5 +1420,5 @@ defaultContentLanguage = "zh-cn"
 ---
 
 {{< admonition quote "感谢" >}}
-_本文档中 `v0.2.10` 版本之前的内容，感谢原作者 [Dillon](https://dillonzq.com) 编写修订。_
+*本文档中 `v0.2.10` 版本之前的内容，感谢原作者 [Dillon](https://dillonzq.com) 编写修订。*
 {{< /admonition >}}

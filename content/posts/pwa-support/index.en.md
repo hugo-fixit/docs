@@ -20,7 +20,8 @@ menu:
     name: "PWA Support"
     title: "Guide to setup PWA in FixIt."
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 
 repost:
   enable: true

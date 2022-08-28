@@ -24,7 +24,8 @@ menu:
   main:
     title: "了解如何在 FixIt 主题中快速，直观地创建和组织内容。"
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 
 了解如何在 **FixIt** 主题中快速，直观地创建和组织内容。

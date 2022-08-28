@@ -21,7 +21,8 @@ menu:
     name: "Content Encryption"
     title: "Find out how to encrypt content in FixIt theme."
     parent: "documentation"
-    pre: "<i class='fa-solid fa-lock fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-solid fa-lock"
 ---
 
 Find out how to encrypt content in FixIt theme.

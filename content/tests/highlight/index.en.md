@@ -18,7 +18,8 @@ menu:
   main:
     title: "Test for code highlight feature"
     parent: "tests"
-    pre: "<i class='fa-solid fa-vial fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-solid fa-vial"
 ---
 
 `inline code`

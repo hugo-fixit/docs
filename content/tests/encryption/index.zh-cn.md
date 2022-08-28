@@ -24,7 +24,8 @@ menu:
   main:
     title: "文章加密测试"
     parent: "tests"
-    pre: "<i class='fa-solid fa-vial fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-solid fa-vial"
 ---
 
 我很害羞，所以我藏起来了哈哈。

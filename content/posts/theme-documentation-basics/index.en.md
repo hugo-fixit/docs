@@ -23,7 +23,8 @@ menu:
     name: "Basics"
     title: "Discover what the Hugo - FixIt theme is all about and the core-concepts behind it."
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 
 Discover what the Hugo - **FixIt** theme is all about and the core-concepts behind it.
@@ -133,8 +134,10 @@ theme = "FixIt"
 ```
 
 {{< admonition >}}
+
 - When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (**config.toml**) and set the theme as the default.
 - {{< version 0.2.14 >}} The FixIt theme provides sub menu support. Please refer to [Menu Advanced Configuration](#menu-advanced-configuration) for details.
+
 {{< /admonition >}}
 
 ### 2.4 Create Your First Post
@@ -175,6 +178,7 @@ it is highly recommended that you add `--disableFastRender` parameter to `hugo s
 ```bash
 hugo server --disableFastRender
 ```
+
 {{< /admonition >}}
 
 ### 2.6 Build the Website
@@ -1004,12 +1008,12 @@ which is you can refer to.
 
 It is recommended to put your own favicons:
 
-* apple-touch-icon.png (180x180)
-* favicon-32x32.png (32x32)
-* favicon-16x16.png (16x16)
-* mstile-150x150.png (150x150)
-* android-chrome-192x192.png (192x192)
-* android-chrome-512x512.png (512x512)
+- apple-touch-icon.png (180x180)
+- favicon-32x32.png (32x32)
+- favicon-16x16.png (16x16)
+- mstile-150x150.png (150x150)
+- android-chrome-192x192.png (192x192)
+- android-chrome-512x512.png (512x512)
 
 into `/static`. They’re easily created via [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
 
@@ -1044,9 +1048,9 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 
 The FixIt theme provides a page width configuration option `pageStyle` and three values.
 
-* **narrow** Keep `<v0.2.13` page/toc width ratio
-* **normal** New default page/toc width ratio
-* **wide** Larger page/toc width ratio
+- **narrow** Keep `<v0.2.13` page/toc width ratio
+- **normal** New default page/toc width ratio
+- **wide** Larger page/toc width ratio
 
 In addition, you can also customize the `pageStyle` value in `assets/css/_custom.scss`
 
@@ -1096,9 +1100,9 @@ For example: `pageStyle="custom"`
 
 There are three css common class for print view in FixIt Theme.
 
-* `page-break-before` Insert page break before element
-* `page-break-after` Insert page break after element
-* `print-d-none` Hide elements in print view
+- `page-break-before` Insert page break before element
+- `page-break-after` Insert page break after element
+- `print-d-none` Hide elements in print view
 
 Here is a simple exmple:
 
@@ -1139,6 +1143,8 @@ The following is a complete menu item configuration:
       class = 'text-center'
       # whether set as a draft menu item whose function is similar to a draft post/page
       draft = false
+      # {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
+      icon = "fa-solid fa-archive"
 ```
 
 #### 3.4.1 Sub Menu
@@ -1155,8 +1161,9 @@ The parent item of a menu item should be the `identifier` of another menu item, 
 
 You can also add user-defined content to menu items via the `params` field. The FixIt theme currently provides two parameters:
 
-* **class** *{String}* add css class to a specific menu item
-* **draft** *{Boolean}* whether set as a draft menu item whose function is similar to a draft post/page
+- **class** *{String}* add css class to a specific menu item
+- **draft** *{Boolean}* whether set as a draft menu item whose function is similar to a draft post/page
+- **icon** *{String}* add fontawesome icon to a specificmenu item
 
 {{< admonition >}}
 The draft menu items and posts/pages can be rendered by starting the `Hugo server` command or adding the `-D`/`--buildDrafts` parameter to `hugo` command.
@@ -1167,8 +1174,8 @@ This helps to distinguish the different contents of preview environment and prod
 
 For example:
 
--  [preview environment with draft menu items](https://pre.fixit.lruihao.cn)
--  [production environment without draft menu items](https://fixit.lruihao.cn)
+- [preview environment with draft menu items](https://pre.fixit.lruihao.cn)
+- [production environment without draft menu items](https://fixit.lruihao.cn)
 {{< /admonition >}}
 
 #### 3.4.3 Add content to Menu {#content-to-menu}
@@ -1186,7 +1193,8 @@ menu:
     name: "Basics"
     title: "Discover what the Hugo - FixIt theme is all about and the core-concepts behind it."
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 ...
 ```
@@ -1326,9 +1334,9 @@ Then, for each new page, append the language code to the file name.
 
 Single file `my-page.md` is split in three files:
 
-* in English: `my-page.en.md`
-* in Chinese: `my-page.zh-cn.md`
-* in French: `my-page.fr.md`
+- in English: `my-page.en.md`
+- in Chinese: `my-page.zh-cn.md`
+- in French: `my-page.fr.md`
 
 {{< admonition >}}
 Be aware that only translated pages are displayed in menu. It’s not replaced with default language content.
@@ -1393,9 +1401,9 @@ Here is the search configuration in your [site configuration](#site-configuratio
 {{< admonition note "How to choose search engine?" >}}
 The following is a comparison of two search engines:
 
-* `lunr`: simple, no need to synchronize `index.json`, no limit for `contentLength`,
+- `lunr`: simple, no need to synchronize `index.json`, no limit for `contentLength`,
   but high bandwidth and low performance (Especially for Chinese which needs a large segmentit library)
-* `algolia`: high performance and low bandwidth, but need to synchronize `index.json` and limit for `contentLength`
+- `algolia`: high performance and low bandwidth, but need to synchronize `index.json` and limit for `contentLength`
 
 {{< version 0.2.3 >}} The content of the post is separated by `h2` and `h3` HTML tag to improve query performance and basically implement full-text search.
 `contentLength` is used to limit the max index length of the part starting with `h2` and `h3` HTML tag.
@@ -1412,5 +1420,5 @@ you need to upload different `index.json` for each language to the different ind
 ---
 
 {{< admonition quote "Thanks" >}}
-_Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation._
+*Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation.*
 {{< /admonition >}}

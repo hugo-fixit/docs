@@ -25,7 +25,8 @@ menu:
     name: "Content"
     title: "Find out how to create and organize your content quickly and intuitively in FixIt theme."
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 
 Find out how to create and organize your content quickly and intuitively in **FixIt** theme.

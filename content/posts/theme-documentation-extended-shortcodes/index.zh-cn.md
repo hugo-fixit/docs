@@ -23,7 +23,8 @@ menu:
   main:
     title: "FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode"
     parent: "documentation"
-    pre: "<i class='fa-brands fa-readme fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-brands fa-readme"
 ---
 
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.

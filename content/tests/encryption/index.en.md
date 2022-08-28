@@ -26,7 +26,8 @@ menu:
   main:
     title: "Test for encrypting content"
     parent: "tests"
-    pre: "<i class='fa-solid fa-vial fa-fw fa-sm'></i>"
+    params:
+      icon: "fa-solid fa-vial"
 ---
 
 I was shy, so I hid.
