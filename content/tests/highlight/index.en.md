@@ -22,7 +22,10 @@ menu:
       icon: "fa-solid fa-vial"
 ---
 
+> [List of Chroma Highlighting Languages](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
+
 `inline code`
+
 ```markdown
 1. first
 2. second
@@ -178,3 +181,111 @@ var _str2Array = (str) => {
 ---
 
 {{< gist spf13 7896402 >}}
+
+```text
+hello world
+```
+
+```asm
+.text
+
+.global connect
+connect:
+    mov     r3, #2              ; s->sin_family = AF_INET
+    strh    r3, [sp]
+    ldr     r3, =server_port    ; s->sin_port = server_port
+    ldr     r3, [r3]
+    strh    r3, [sp, #2]
+    ldr     r3, =server_addr    ; s->sin_addr = server_addr
+    ldr     r3, [r3]
+    str     r3, [sp, #4]
+    mov     r3, #0              ; bzero(&s->sin_zero)
+    str     r3, [sp, #8]
+    str     r3, [sp, #12]
+    mov     r1, sp      ; const struct sockaddr *addr = sp
+
+    ldr     r7, =connect_call
+    ldr     r7, [r7]
+    swi     #0
+
+    add     sp, sp, #16
+    pop     {r0}        ; pop sockfd
+
+    pop     {r7}
+    pop     {fp, ip, lr}
+    mov     sp, ip
+    bx      lr
+
+.data
+socket_call:   .long 281
+connect_call:  .long 283
+
+/* all addresses are network byte-order (big-endian) */
+server_addr:            .long 0x0100007f ; localhost
+server_port:            .hword 0x0b1a
+```
+
+```c#
+using System.IO.Compression;
+
+#pragma warning disable 414, 3021
+
+namespace MyApplication
+{
+    [Obsolete("...")]
+    class Program : IInterface
+    {
+        public static List<int> JustDoIt(int count)
+        {
+            Span<int> numbers = stackalloc int[length];
+            Console.WriteLine($"Hello {Name}!");
+            return new List<int>(new int[] { 1, 2, 3 })
+        }
+    }
+}
+```
+
+```vb.net
+Imports System
+Imports System.IO
+#Const DEBUG = True
+
+Namespace Highlighter.Test
+  ''' <summary>This is an example class.</summary>
+  Public Class Program
+    Protected Shared hello As Integer = 3
+    Private Const ABC As Boolean = False
+
+#Region "Code"
+    ' Cheers!
+    <STAThread()> _
+    Public Shared Sub Main(ByVal args() As String, ParamArray arr As Object) Handles Form1.Click
+      On Error Resume Next
+      If ABC Then
+        While ABC : Console.WriteLine() : End While
+        For i As Long = 0 To 1000 Step 123
+          Try
+            System.Windows.Forms.MessageBox.Show(CInt("1").ToString())
+          Catch ex As Exception       ' What are you doing? Well...
+            Dim exp = CType(ex, IOException)
+            REM ORZ
+            Return
+          End Try
+        Next
+      Else
+        Dim l As New System.Collections.List<String>()
+        SyncLock l
+          If TypeOf l Is Decimal And l IsNot Nothing Then
+            RemoveHandler button1.Paint, delegate
+          End If
+          Dim d = New System.Threading.Thread(AddressOf ThreadProc)
+          Dim a = New Action(Sub(x, y) x + y)
+          Static u = From x As String In l Select x.Substring(2, 4) Where x.Length > 0
+        End SyncLock
+        Do : Laugh() : Loop Until hello = 4
+      End If
+    End Sub
+#End Region
+  End Class
+End Namespace
+```
