@@ -178,10 +178,6 @@ var _str2Array = (str) => {
 };
 {{< /highlight >}}
 
----
-
-{{< gist spf13 7896402 >}}
-
 ```text
 hello world
 ```
@@ -289,3 +285,5 @@ Namespace Highlighter.Test
   End Class
 End Namespace
 ```
+
+{{< gist spf13 7896402 >}}

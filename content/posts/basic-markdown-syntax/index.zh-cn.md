@@ -506,6 +506,9 @@ Sample text here...
 
 ### 语法高亮
 
+* [Chroma 语言高亮列表 - Hugo](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
+* [Chroma 支持语言 - Chroma](https://github.com/alecthomas/chroma#supported-languages)
+
 [GFM]^(GitHub Flavored Markdown) 也支持语法高亮。
 
 要激活它，只需在第一个代码 "围栏" 之后直接添加你要使用的语言的文件扩展名，

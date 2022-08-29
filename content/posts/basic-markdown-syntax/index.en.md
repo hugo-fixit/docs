@@ -505,6 +505,9 @@ The HTML looks like this:
 
 ### Syntax Highlighting
 
+* [List of Chroma Highlighting Languages  - Hugo](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
+* [Chroma supported languages - Chroma](https://github.com/alecthomas/chroma#supported-languages)
+
 [GFM]^(GitHub Flavored Markdown) also supports syntax highlighting.
 
 To activate it, simply add the file extension of the language you want to use directly after the first code "fence",
