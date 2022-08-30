@@ -3,7 +3,6 @@ title: "Font Awesome Test"
 date: 2022-04-19T10:15:22+08:00
 description: "Test for rendering Font Awesome icons"
 type: 'posts'
-draft: true
 
 tags:
 - Test

@@ -3,7 +3,6 @@ title: "Markdown 测试"
 date: 2022-04-20T17:50:22+08:00
 description: "Test for Markdown rendering"
 type: 'posts'
-draft: true
 
 tags:
 - Test

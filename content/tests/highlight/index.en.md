@@ -3,7 +3,6 @@ title: "Highlight Test"
 date: 2022-02-27T18:45:22+08:00
 description: "Test for code highlight feature"
 type: 'posts'
-draft: true
 
 tags:
 - Test

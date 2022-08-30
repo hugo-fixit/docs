@@ -4,7 +4,6 @@ subtitle: "学习 JavaScript 新特性"
 date: 2022-05-01T10:59:36+08:00
 description: "这是一篇测试 FixIt 主题在打印视图表现的测试文章"
 type: 'posts'
-draft: true
 
 tags:
 - Test

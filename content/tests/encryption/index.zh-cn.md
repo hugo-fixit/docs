@@ -3,7 +3,6 @@ title: "文章加密测试"
 date: 2022-05-28T00:24:22+08:00
 description: "文章加密测试"
 type: 'posts'
-draft: true
 password: 1212
 message: 密码是 1212
 

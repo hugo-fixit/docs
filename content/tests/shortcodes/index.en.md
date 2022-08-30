@@ -3,7 +3,6 @@ title: "Shortcodes Test"
 date: 2022-03-07T22:31:22+08:00
 description: "Test for shortcodes usages"
 type: 'posts'
-draft: true
 
 tags:
 - Test
