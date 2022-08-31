@@ -106,7 +106,11 @@ The `link` shortcode has the following named parameters:
 
 * **external-icon** *[optional]* {{< version 0.2.14 >}}
 
-    Whether to add external Icon for external links automatically
+    Whether to automatically display the external link icon.
+
+* **noreferrer** *[optional]* {{< version 0.2.16 >}}
+
+    Whether to add `noreferrer` to the `rel` attribute, default: `true`.
 
 Example `link` input:
 

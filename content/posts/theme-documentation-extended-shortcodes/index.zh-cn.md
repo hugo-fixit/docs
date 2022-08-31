@@ -105,7 +105,11 @@ This is a **right-aligned** paragraph.
 
 * **external-icon** *[可选]* {{< version 0.2.14 >}}
 
-    是否自动显示外链图标
+    是否自动显示外链图标。
+
+* **noreferrer** *[可选]* {{< version 0.2.16 >}}
+
+    `rel` 属性是否添加 `noreferrer`, 默认：`true`。
 
 一个 `link` 示例：
 
