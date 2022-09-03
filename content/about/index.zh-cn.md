@@ -79,7 +79,7 @@ math:
 * :(fa-regular fa-grin-tongue-wink fa-fw): 支持 **Twemoji**
 * :(fa-solid fa-code fa-fw): 支持**代码高亮**
 * :(fa-regular fa-copy fa-fw): 一键**复制代码**到剪贴板
-* :(fa-regular fa-images fa-fw): 支持基于 [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js) 的**图片画廊**
+* :(fa-regular fa-images fa-fw): 支持基于 [lightgallery](https://github.com/sachinchoolur/lightgallery) 的**图片画廊**
 * :(fa-brands fa-font-awesome fa-fw): 支持 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
 * :(fa-regular fa-sticky-note fa-fw): 支持**上标注释**的扩展 Markdown 语法
 * :(fa-solid fa-percentage fa-fw): 支持**分数**的扩展 Markdown 语法
@@ -114,7 +114,7 @@ math:
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
 * [emoji-data](https://github.com/iamcal/emoji-data)
-* [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* [lightgallery](https://github.com/sachinchoolur/lightgallery)
 * [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
 * [$\KaTeX$](https://katex.org/)

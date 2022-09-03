@@ -78,7 +78,7 @@ math:
 * :(fa-regular fa-grin-tongue-wink fa-fw): **Twemoji** supported
 * :(fa-solid fa-code fa-fw): Automatically **highlighting** code
 * :(fa-regular fa-copy fa-fw): **Copy code** to clipboard with one click
-* :(fa-regular fa-images fa-fw): **Images gallery** supported by [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* :(fa-regular fa-images fa-fw): **Images gallery** supported by [lightgallery](https://github.com/sachinchoolur/lightgallery)
 * :(fa-brands fa-font-awesome fa-fw): Extended Markdown syntax for **[Font Awesome](https://fontawesome.com/) icons**
 * :(fa-regular fa-sticky-note fa-fw): Extended Markdown syntax for **ruby annotation**
 * :(fa-solid fa-percentage fa-fw): Extended Markdown syntax for **fraction**
@@ -113,7 +113,7 @@ math:
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
 * [emoji-data](https://github.com/iamcal/emoji-data)
-* [lightgallery.js](https://github.com/sachinchoolur/lightgallery.js)
+* [lightgallery](https://github.com/sachinchoolur/lightgallery)
 * [Sharer.js](https://github.com/ellisonleao/sharer.js)
 * [TypeIt](https://typeitjs.com/)
 * [$\KaTeX$](https://katex.org/)
