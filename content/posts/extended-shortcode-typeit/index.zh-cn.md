@@ -6,7 +6,7 @@ authorLink: "https://lruihao.cn"
 description: "typeit shortcode 基于 TypeIt 提供了打字动画。"
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.png"
 
 tags: ["shortcodes"]
 categories: ["documentation"]

@@ -6,7 +6,7 @@ authorLink: "https://lruihao.cn"
 description: "The typeit shortcode provides typing animation based on TypeIt library."
 resources:
 - name: "featured-image"
-  src: "featured-image.jpg"
+  src: "featured-image.png"
 
 tags: ["shortcodes"]
 categories: ["documentation"]
