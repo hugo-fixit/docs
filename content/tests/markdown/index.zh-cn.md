@@ -11,6 +11,7 @@ tags:
 categories:
 - Test
 
+lightgallery: true
 hiddenFromHomePage: true
 
 menu:
@@ -49,3 +50,15 @@ menu:
 | `0 15 10 ? * 6L`     | 每月最后一个星期六上午 10:15 执行任务                          |
 | `0 15 10 ? * 6#3`    | 每月第三个星期六上午 10:15 执行任务                            |
 | `0 10,44 14 ? 3 WED` | 每年 3 月的每个星期三下午 14:10 和 14:44 执行任务                  |
+
+## code
+
+~~deleted line~~
+
+:truck: Feat: *migrate ~~`ibruce.siteTime`~~ to `footer.siteTime`*
+
+## image
+
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.png)
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
+![](/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
