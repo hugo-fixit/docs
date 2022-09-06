@@ -26,7 +26,7 @@ math:
 >
 > It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt) and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).
 
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
+![Hugo Theme FixIt](https://pre.fixit.lruihao.cn/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
 
 ### Features
 
@@ -36,7 +36,7 @@ math:
 * :(fa-brands fa-searchengin fa-fw): Optimized SEO performance with a correct **SEO SCHEMA** based on JSON-LD
 * :(fa-brands fa-google fa-fw): **[Google Analytics](https://analytics.google.com/analytics)** supported
 * :(fa-regular fa-chart-bar fa-fw): **[Fathom Analytics](https://usefathom.com/)** supported
-* :(fa-solid fa-search fa-fw): Search engine **verification** supported (Google, Bind, Yandex, Baidu, 360 and Sogou)
+* :(fa-solid fa-search fa-fw): Search engine **verification** supported (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 * :(fa-solid fa-tachometer-alt fa-fw): **CDN** for third-party libraries supported
 * :(fa-solid fa-cloud-download-alt fa-fw): Automatically converted images with **Lazy Load** by [lazysizes](https://github.com/aFarkas/lazysizes)
 
