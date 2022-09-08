@@ -827,13 +827,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     polyfill = false
     # whether to use object-fit-images to be compatible with older browsers
     objectFit = false
-  
-  # {{< version 0.2.12 >}} Custom JS at last
-  # "_custom.js" located in "themes/FixIt/assets/js/"
-  # you can store your custom JS file in the same path under your project:
-  # "assets/js/_custom.js"
-  [params.customJS]
-    enable = true
+
   # {{< version 0.2.14 >}} GitHub banner in the top-right or top-left corner
   [params.githubCorner]
     enable = false
@@ -1114,7 +1108,15 @@ Here is a simple exmple:
 </div>
 ```
 
-### 3.4 Menu Advanced Configuration {#menu-advanced-configuration}
+### 3.4 Script Customization
+
+{{< version 0.2.16 >}}
+
+The directory including the custom script file named `custom.js` is `assets/js` relative to **your project root directory**.
+
+If the script file `assets/js/custom.js` exists, it will be executed at the end of each post and page.
+
+### 3.5 Menu Advanced Configuration {#menu-advanced-configuration}
 
 Hugo has a simple yet powerful [menu system](https://gohugo.io/content-management/menus/).
 
@@ -1149,7 +1151,7 @@ The following is a complete menu item configuration:
       type = ""
 ```
 
-#### 3.4.1 Sub Menu
+#### 3.5.1 Sub Menu
 
 {{< version 0.2.14 >}}
 
@@ -1157,7 +1159,7 @@ In consideration of practicability and typesetting, the FixIt theme only support
 
 The parent item of a menu item should be the `identifier` of another menu item, and the identifier should be unique in the menu.
 
-#### 3.4.2 Menu Params
+#### 3.5.2 Menu Params
 
 {{< version 0.2.14 >}}
 
@@ -1181,7 +1183,7 @@ For example:
 - [production environment without draft menu items](https://fixit.lruihao.cn)
 {{< /admonition >}}
 
-#### 3.4.3 Add content to Menu {#content-to-menu}
+#### 3.5.3 Add content to Menu {#content-to-menu}
 
 It’s also possible to create menu entries from the page by configuring `front matter` (i.e. the `.md`-file).
 

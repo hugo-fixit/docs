@@ -1160,16 +1160,6 @@ enableEmoji = true
     # 是否使用 object-fit-images 来兼容旧式浏览器
     objectFit = false
 
-  # Custom JS at last. since v0.2.12
-  # "_custom.js" located in "themes/FixIt/assets/js/"
-  # you can store your custom JS file in the same path under your project:
-  # "assets/js/_custom.js"
-  # 页面最后添加自定义 JS since v0.2.12
-  # "_custom.js" 位于 "themes/FixIt/assets/js" 目录
-  # 可以在你的项目下相同路径存放你自己的自定义 JS 文件:
-  # "assets/js/_custom.js"
-  [params.customJS]
-    enable = true
   # GitHub banner in the top-right or top-left corner since v0.2.14
   # 在左上角或者右上角显示 GitHub 开源链接 since v0.2.14
   [params.githubCorner]

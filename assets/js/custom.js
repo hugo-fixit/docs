@@ -1,12 +1,12 @@
 /**
+ * Custom javascript for FixIt site.
  * @author @Lruihao https://lruihao.cn
- * @description Custom javascript for the hugo theme FixIt.
  */
-const CustomJS = new (function () {
+const Docs = new (function () {
   /**
    * Rest in Peace. R.I.P 🕯️
    * @2022-3-28 [3.21-mu5735] 沉痛哀悼 132 名遇难同胞：东航航班失事，遇难者含旅客 123 人，机组 9 人
-   * @returns {CustomJS}
+   * @returns {Docs}
    */
   this.RIP = () => {
     if (new Date() < new Date('2022-03-31')) {
@@ -16,7 +16,7 @@ const CustomJS = new (function () {
   };
   /**
    * Initialize.
-   * @returns {CustomJS}
+   * @returns {Docs}
    */
   this.init = () => {
     this.RIP();
@@ -28,9 +28,9 @@ const CustomJS = new (function () {
  * Immediate.
  */
 (() => {
-  // CustomJS.init();
+  // Docs.init();
   // It will be executed when the DOM tree is built.
   document.addEventListener('DOMContentLoaded', () => {
-    // console.log('DOM content loaded!')
+    // Docs.init();
   });
 })();
