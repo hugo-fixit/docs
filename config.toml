@@ -1174,6 +1174,17 @@ enableEmoji = true
     # Gravatar 主机，默认：“www.gravatar.com”
     host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
     style = "mp" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  # Reading progress bar
+  [params.readingProgress]
+    enable = true
+    # Available values: ["left", "right"]
+    start = "left"
+    # Available values: ["top", "bottom"]
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
   # Developer options since v0.2.15
   # 开发者选项 since v0.2.15
   [params.dev]

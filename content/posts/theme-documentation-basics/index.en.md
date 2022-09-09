@@ -839,6 +839,17 @@ Please open the code block below to view the complete sample configuration :(fa-
     # Gravatar host, default: "www.gravatar.com"
     host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
     style = "" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  # {{< version 0.2.16 >}} Reading progress bar
+  [params.readingProgress]
+    enable = false
+    # Available values: ["left", "right"]
+    start = "left"
+    # Available values: ["top", "bottom"]
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
   # {{< version 0.2.15 >}} Developer options
   [params.dev]
     enable = false

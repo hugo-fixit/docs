@@ -841,6 +841,17 @@ hugo
     # Gravatar 主机，默认：“www.gravatar.com”
     host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
     style = "" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  # {{< version 0.2.16 >}} 阅读进度条
+  [params.readingProgress]
+    enable = false
+    # 可用值：["left", "right"]
+    start = "left"
+    # 可用值：["top", "bottom"]
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
   # {{< version 0.2.15 >}} 开发者选项
   [params.dev]
     enable = false
