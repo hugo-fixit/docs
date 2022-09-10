@@ -1174,6 +1174,11 @@ enableEmoji = true
     # Gravatar 主机，默认：“www.gravatar.com”
     host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
     style = "mp" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  # Back to top
+  [params.backToTop]
+    enable = true
+    # Scroll percent label in b2t button
+    scrollpercent = true
   # Reading progress bar
   [params.readingProgress]
     enable = true

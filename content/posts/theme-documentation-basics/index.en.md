@@ -839,6 +839,11 @@ Please open the code block below to view the complete sample configuration :(fa-
     # Gravatar host, default: "www.gravatar.com"
     host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
     style = "" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  # {{< version 0.2.16 >}} Back to top
+  [params.backToTop]
+    enable = true
+    # Scroll percent label in b2t button
+    scrollpercent = false
   # {{< version 0.2.16 >}} Reading progress bar
   [params.readingProgress]
     enable = false

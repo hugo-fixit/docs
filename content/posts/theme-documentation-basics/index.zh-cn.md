@@ -841,6 +841,11 @@ hugo
     # Gravatar 主机，默认：“www.gravatar.com”
     host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
     style = "" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+  # {{< version 0.2.16 >}} 返回顶部
+  [params.backToTop]
+    enable = true
+    # 在 b2t 按钮中显示滚动百分比
+    scrollpercent = false
   # {{< version 0.2.16 >}} 阅读进度条
   [params.readingProgress]
     enable = false
