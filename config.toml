@@ -250,7 +250,6 @@ enableEmoji = true
         XMPP = ""
         Matrix = ""
         Bilibili = ""
-        # ORCID, ... , CSDN since v0.2.13
         ORCID = ""
         Liberapay = ""
         Ko-Fi = ""
@@ -260,8 +259,19 @@ enableEmoji = true
         QQGroup = "" # https://qun.qq.com/join.html
         Diaspora = ""
         CSDN = ""
+        Discord = ""
+        DiscordInvite = ""
+        Lichess = ""
+        Pleroma = ""
+        Kaggle = ""
+        MediaWiki= ""
+        Plume = ""
+        HackTheBox = ""
+        RootMe= ""
+        Feishu = ""
+        Phone = ""
         Email = "xxxx@xxxx.com"
-        RSS = true # since v0.2.0
+        RSS = true
         [languages.en.params.social.Mastodon]
           id = "@xxxx"
           prefix = "https://mastodon.technology/"
@@ -482,7 +492,6 @@ enableEmoji = true
         XMPP = ""
         Matrix = ""
         Bilibili = "xxxx"
-        # ORCID, ... , CSDN since v0.2.13
         ORCID = ""
         Liberapay = ""
         Ko-Fi = ""
@@ -493,7 +502,17 @@ enableEmoji = true
         Diaspora = ""
         CSDN = ""
         Email = "xxxx@xxxx.com"
-        RSS = true # since v0.2.0
+        Discord = ""
+        DiscordInvite = ""
+        Lichess = ""
+        Pleroma = ""
+        Kaggle = ""
+        MediaWiki= ""
+        Plume = ""
+        HackTheBox = ""
+        RootMe= ""
+        Phone = ""
+        RSS = true
       # 盘古之白配置 since v0.2.12
       [languages.zh-cn.params.pangu]
         # 适用于中文写作用户

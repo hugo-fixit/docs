@@ -376,7 +376,7 @@ hugo
       # 主页每页显示文章数量
       paginate = 6
 
-  # 作者的社交信息设置
+  # {{< version 0.2.16 changed >}} 作者的社交信息设置
   [params.social]
     GitHub = "Lruihao"
     Linkedin = ""
@@ -440,7 +440,6 @@ hugo
     XMPP = ""
     Matrix = ""
     Bilibili = ""
-    # ORCID, ... , CSDN {{< version 0.2.13 >}}
     ORCID = ""
     Liberapay = ""
     Ko-Fi = ""
@@ -450,8 +449,19 @@ hugo
     QQGroup = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM" # https://qun.qq.com/join.html
     Diaspora = ""
     CSDN = ""
+    Discord = ""
+    DiscordInvite = ""
+    Lichess = ""
+    Pleroma = ""
+    Kaggle = ""
+    MediaWiki= ""
+    Plume = ""
+    HackTheBox = ""
+    RootMe= ""
+    Feishu = ""
+    Phone = ""
     Email = ""
-    RSS = true # {{< version 0.2.0 >}}
+    RSS = true
 
   # {{< version 0.2.0 changed >}} 文章页面配置
   [params.page]

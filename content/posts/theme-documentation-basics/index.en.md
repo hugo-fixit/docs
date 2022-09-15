@@ -373,7 +373,7 @@ Please open the code block below to view the complete sample configuration :(fa-
       # special amount of posts in each home posts page
       paginate = 6
 
-  # Social config about the author
+  # {{< version 0.2.16 changed >}} Social config about the author
   [params.social]
     GitHub = "Lruihao"
     Linkedin = ""
@@ -437,7 +437,6 @@ Please open the code block below to view the complete sample configuration :(fa-
     XMPP = ""
     Matrix = ""
     Bilibili = ""
-    # ORCID, ... , CSDN {{< version 0.2.13 >}}
     ORCID = ""
     Liberapay = ""
     Ko-Fi = ""
@@ -447,8 +446,19 @@ Please open the code block below to view the complete sample configuration :(fa-
     QQGroup = "" # https://qun.qq.com/join.html
     Diaspora = ""
     CSDN = ""
+    Discord = ""
+    DiscordInvite = ""
+    Lichess = ""
+    Pleroma = ""
+    Kaggle = ""
+    MediaWiki= ""
+    Plume = ""
+    HackTheBox = ""
+    RootMe= ""
+    Feishu = ""
+    Phone = ""
     Email = ""
-    RSS = true # {{< version 0.2.0 >}}
+    RSS = true
 
   # {{< version 0.2.0 changed >}} Page config
   [params.page]
