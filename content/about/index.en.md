@@ -22,7 +22,7 @@ math:
 [![Preview environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Preview?style=flat&label=Preview&logo=vercel)](https://pre.fixit.lruihao.cn/)
 {{< /style >}}
 
-> [<img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://lruihao.cn).
+> [<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://lruihao.cn).
 >
 > It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt) and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).
 

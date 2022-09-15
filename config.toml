@@ -522,7 +522,7 @@ enableEmoji = true
       [languages.zh-cn.params.watermark]
         enable = true
         # 水印内容 (允许 HTML 格式)
-        content = '<img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt 主题'
+        content = '<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'
         # 水印透明度
         opacity = 0.0125
         # 单水印高度 单位：px
@@ -608,7 +608,7 @@ enableEmoji = true
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "/images/fixit.svg"
+      logo = "/fixit.min.svg"
       # title name
       # 标题名称
       name = "FixIt"
@@ -1068,7 +1068,7 @@ enableEmoji = true
     enable = true
     # watermark's text (HTML format is supported)
     # 水印内容 (允许 HTML 格式)
-    content = '<img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt Theme'
+    content = ''
     # watermark's transparency
     # 水印透明度
     opacity = 0.0125

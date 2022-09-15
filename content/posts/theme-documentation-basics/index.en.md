@@ -279,7 +279,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     # {{< version 0.2.0 >}} Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/images/fixit.svg"
+      logo = "/fixit.min.svg"
       # title name
       name = ""
       # you can add extra information before the name (HTML format is supported), such as icons

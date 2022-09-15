@@ -282,7 +282,7 @@ hugo
     # {{< version 0.2.0 >}} 页面头部导航栏标题配置
     [params.header.title]
       # LOGO 的 URL
-      logo = "/images/fixit.svg"
+      logo = "/fixit.min.svg"
       # 标题名称
       name = ""
       # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
