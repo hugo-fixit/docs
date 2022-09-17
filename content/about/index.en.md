@@ -24,7 +24,7 @@ math:
 
 > [<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://lruihao.cn).
 >
-> It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [LeaveIt Theme](https://github.com/liuzc/LeaveIt) and [KeepIt Theme](https://github.com/Fastbyte01/KeepIt).
+> It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).
 
 ![Hugo Theme FixIt](https://pre.fixit.lruihao.cn/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
 

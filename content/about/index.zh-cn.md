@@ -25,7 +25,7 @@ math:
 
 > [<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://lruihao.cn) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 >
-> 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[LeaveIt 主题](https://github.com/liuzc/LeaveIt) 和 [KeepIt 主题](https://github.com/Fastbyte01/KeepIt)。
+> 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[KeepIt 主题](https://github.com/Fastbyte01/KeepIt) 和 [LeaveIt 主题](https://github.com/liuzc/LeaveIt)。
 
 ![Hugo 主题 FixIt](/images/Apple-Devices-Preview.png "一个简洁、优雅且高效的 Hugo 主题")
 
