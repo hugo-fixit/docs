@@ -569,6 +569,9 @@ enableEmoji = true
   # 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。since v0.2.14
   # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
   disableThemeInject = false
+  # FixIt 0.2.16 | NEW Auto Bookmark Support
+  # If true, save the reading progress when closing the page.
+  autoBookmark = true
 
   # App icon config
   # 应用图标配置

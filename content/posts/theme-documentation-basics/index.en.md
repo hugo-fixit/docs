@@ -230,6 +230,9 @@ Please open the code block below to view the complete sample configuration :(fa-
   # {{< version 0.2.14 >}} FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false
+  # {{< version 0.2.16 >}} Auto Bookmark Support
+  # If true, save the reading progress when closing the page.
+  autoBookmark = false
 
   # {{< version 0.2.0 >}} App icon config
   [params.app]
