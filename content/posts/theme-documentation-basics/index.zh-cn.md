@@ -460,8 +460,9 @@ hugo
     MediaWiki= ""
     Plume = ""
     HackTheBox = ""
-    RootMe= ""
+    RootMe = ""
     Feishu = ""
+    TryHackMe = ""
     Phone = ""
     Email = ""
     RSS = true

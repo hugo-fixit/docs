@@ -54,7 +54,7 @@ math:
 
 * :(fa-regular fa-user fa-fw): **Gravatar** supported by [Gravatar](https://gravatar.com)
 * :(fa-solid fa-user-circle fa-fw): Local **Avatar** supported
-* :(fa-regular fa-id-card fa-fw): Up to **73** social links supported
+* :(fa-regular fa-id-card fa-fw): Up to **85** social links supported
 * :(fa-solid fa-share-square fa-fw): Up to **28** share sites supported
 * :(fa-regular fa-comment fa-fw): **Disqus** comment system supported by [Disqus](https://disqus.com)
 * :(fa-regular fa-comment-dots fa-fw): **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)

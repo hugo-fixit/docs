@@ -457,8 +457,9 @@ Please open the code block below to view the complete sample configuration :(fa-
     MediaWiki= ""
     Plume = ""
     HackTheBox = ""
-    RootMe= ""
+    RootMe = ""
     Feishu = ""
+    TryHackMe = ""
     Phone = ""
     Email = ""
     RSS = true
