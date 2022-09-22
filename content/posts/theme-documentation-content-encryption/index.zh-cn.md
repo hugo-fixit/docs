@@ -4,6 +4,10 @@ date: 2022-05-28T11:51:41+08:00
 author: "Lruihao"
 authorLink: "https://lruihao.cn"
 description: "了解如何在 FixIt 主题中加密内容。"
+keywords:
+- Hugo 加密
+- 内容加密
+- FixIt
 password: 1212
 message: "密码是 1212"
 

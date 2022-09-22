@@ -138,7 +138,7 @@ theme = "FixIt"
 {{< admonition >}}
 
 - 在构建网站时，你可以使用 `--theme` 选项设置主题。但是，我建议你修改配置文件 (**config.toml**) 将本主题设置为默认主题。
-- {{< version 0.2.14 >}} FixIt 主题提供了子菜单的支持，请详见 [菜单进阶配置](#menu-advanced-configuration)
+- {{< version 0.2.14 >}} FixIt 主题提供了子菜单的支持，请详见 [菜单进阶配置](#menu-advanced-configuration)。
 
 {{< /admonition >}}
 
@@ -994,7 +994,7 @@ hugo
 ````
 
 默认的 CDN 数据文件位于 `themes/FixIt/assets/data/cdn/` 目录。
-可以在你的项目下相同路径存放你自己的数据文件：`assets/data/cdn/`.
+可以在你的项目下相同路径存放你自己的数据文件：`assets/data/cdn/`。
 {{< /admonition >}}
 
 {{< admonition tip "关于社交链接配置的技巧" >}}
