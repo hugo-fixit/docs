@@ -195,7 +195,7 @@ hugo
 会生成一个 `public` 目录，其中包含你网站的所有静态内容和资源。现在可以将其部署在任何 Web 服务器上。
 
 {{< admonition tip >}}
-网站内容可以通过 [Netlify](https://www.netlify.com/) 自动发布和托管（了解有关 [通过 Netlify 进行 HUGO 自动化部署](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/) 的更多信息）.
+网站内容可以通过 [Netlify](https://www.netlify.com/) 自动发布和托管（了解有关 [通过 Netlify 进行 HUGO 自动化部署](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/) 的更多信息）。
 或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及更多 ...
 {{< /admonition >}}
 
@@ -203,9 +203,9 @@ hugo
 
 ### 3.1 网站配置 {#site-configuration}
 
-除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#basic-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数（这是一个示例 `config.toml`, 其内容为默认值）。
+除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#basic-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数（默认值见 [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml)）。
 
-请打开下面的代码块查看完整的示例配置 :(fa-regular fa-hand-point-down fa-fw)::
+请打开下面的代码块查看完整的 `config.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
 ```toml
 [params]

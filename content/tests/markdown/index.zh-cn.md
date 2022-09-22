@@ -23,9 +23,10 @@ menu:
 ---
 
 ## line break
-`FixIt is a clean, elegant but advanced blog theme for Hugo developed by Lruihao. It is based on the original LoveIt Theme, LeaveIt Theme and KeepIt Theme.`
 
-`FixIt 是一个由 Lruihao 开发的简洁、优雅且高效的 Hugo 博客主题。它的原型基于 LoveIt 主题，LeaveIt 主题 和 KeepIt 主题。`
+`FixIt is a clean, elegant but advanced blog theme for Hugo developed by Lruihao. It is based on the original LoveIt Theme, KeepIt Theme and LeaveIt Theme.`
+
+`FixIt 是一个由 Lruihao 开发的简洁、优雅且高效的 Hugo 博客主题。它的原型基于 LoveIt 主题，KeepIt 主题 和 LeaveIt 主题。`
 
 ## table
 

@@ -200,9 +200,9 @@ Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deploymen
 
 ### 3.1 Site Configuration {#site-configuration}
 
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration (here is a `config.toml`, whose values are default).
+In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration (see [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) for default values).
 
-Please open the code block below to view the complete sample configuration :(fa-regular fa-hand-point-down fa-fw)::
+Please open the code block below to view the complete `config.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
 ```toml
 [params]
