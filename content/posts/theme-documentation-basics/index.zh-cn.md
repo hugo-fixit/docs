@@ -89,7 +89,7 @@ languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 # 网站标题
-title = "我的全新 Hugo 网站"
+title = "我的全新 Hugo FixIt 网站"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "FixIt"
@@ -212,15 +212,15 @@ hugo
   # {{< version 0.2.15 changed >}} FixIt 主题版本
   version = "0.2.X" # 例如："0.2.X", "0.2.15", "v0.2.15" 等
   # 网站描述
-  description = "这是我的全新 Hugo 网站"
+  description = "这是我的全新 Hugo FixIt 网站"
   # 网站关键词
-  keywords = ["Theme", "Hugo"]
-  # 网站默认主题样式 ("light", "dark", "auto")
+  keywords = ["Hugo", "FixIt"]
+  # 网站默认主题样式 ["light", "dark", "auto"]
   defaultTheme = "auto"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
   # {{< version 0.1.1 >}} 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
-  # ("sha256", "sha384", "sha512", "md5")
+  # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
   # {{< version 0.2.0 >}} 日期格式
   dateFormat = "2006-01-02"
@@ -251,13 +251,13 @@ hugo
     tileColor = "#da532c"
     # {{< version 0.2.12 changed >}} Android 浏览器主题色
     [params.app.themeColor]
-      light = "#ffffff"
+      light = "#f8f8f8"
       dark = "#252627"
 
   # {{< version 0.2.0 >}} 搜索配置
   [params.search]
     enable = true
-    # 搜索引擎的类型 ("lunr", "algolia")
+    # 搜索引擎的类型 ["lunr", "algolia"]
     type = "lunr"
     # 文章内容最长索引长度
     contentLength = 4000
@@ -278,9 +278,9 @@ hugo
 
   # 页面头部导航栏配置
   [params.header]
-    # {{< version 0.2.13 changed >}} 桌面端导航栏模式 ("sticky", "normal", "auto")
+    # {{< version 0.2.13 changed >}} 桌面端导航栏模式 ["sticky", "normal", "auto"]
     desktopMode = "sticky"
-    # {{< version 0.2.13 changed >}} 移动端导航栏模式 ("sticky", "normal", "auto")
+    # {{< version 0.2.13 changed >}} 移动端导航栏模式 ["sticky", "normal", "auto"]
     mobileMode = "auto"
     # {{< version 0.2.0 >}} 页面头部导航栏标题配置
     [params.header.title]
@@ -305,7 +305,7 @@ hugo
   [params.footer]
     enable = true
     # {{< version 0.2.0 >}} 自定义内容（支持 HTML 格式）
-    custom = ''
+    custom = ""
     # {{< version 0.2.0 >}} 是否显示 Hugo 和主题信息
     hugo = true
     # {{< version 0.2.0 >}} 是否显示版权信息
@@ -313,9 +313,9 @@ hugo
     # {{< version 0.2.0 >}} 是否显示作者
     author = true
     # 网站创立年份
-    since = 2019
+    since = 2021
     # {{< version 0.2.14 >}} 网站创立时间
-    siteTime = '' # 例：'2019-02-03T19:30:34+08:00'
+    siteTime = "" # 例："2021-12-18T16:15:22+08:00"
     # {{< version 0.2.14 >}} 是否显示网站内容总字数
     wordCount = true
     # {{< version 0.2.12 >}} 公网安备信息，仅在中国使用（支持 HTML 格式）
@@ -356,9 +356,6 @@ hugo
     # 主页个人信息
     [params.home.profile]
       enable = true
-      # {{< version 0.2.13 >}} 选择使用 Gravatar 源站或其他镜像站，若留空则为默认的 "www.gravatar.com"
-      # {{< version 0.2.14 changed >}} {{< version 0.2.15 deleted >}} 参数 `home.profile.gravatarSite` 自 v0.2.14 起已弃用，请改用 `gravatar.host`
-      # gravatarSite = ""
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # 主页显示头像的 URL
@@ -366,7 +363,7 @@ hugo
       # {{< version 0.2.7 changed >}} 主页显示的网站标题（支持 HTML 格式）
       title = ""
       # 主页显示的网站副标题
-      subtitle = "这是我的全新 Hugo 网站"
+      subtitle = "这是我的全新 Hugo FixIt 网站"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
@@ -489,7 +486,7 @@ hugo
     linkToMarkdown = true
     # {{< version 0.2.4 >}} 是否在 RSS 中显示全文内容
     rssFullText = false
-    # {{< version 0.2.13 >}} 页面样式 ("narrow", "normal", "wide", ...)
+    # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.14 >}} 强制使用 Gravatar 作为作者头像
     gravatarForce = true
@@ -505,7 +502,7 @@ hugo
       keepStatic = false
       # 是否使侧边目录自动折叠展开
       auto = true
-      # {{< version 0.2.13 >}} 目录位置 ("left", "right")
+      # {{< version 0.2.13 >}} 目录位置 ["left", "right"]
       position = "right"
     # {{< version 0.2.13 >}} 在文章开头显示提示信息，提醒读者文章内容可能过时
     [params.page.expirationReminder]
@@ -602,7 +599,7 @@ hugo
         noComment = ""
         sendBtn = ""
         editorTravel = true
-        flatMode = 'auto'
+        flatMode = "auto"
         maxNesting = 3
         # 当 `params.page.lightgallery` 启用时生效
         lightgallery = false
@@ -635,7 +632,7 @@ hugo
         enableQQ = false
         serverURLs = ""
         # {{< version 0.2.6 >}} emoji 数据文件名称，默认是 "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
         # 位于 "themes/FixIt/assets/data/emoji/" 目录
         # 可以在你的项目下相同路径存放你自己的数据文件：
         # "assets/data/emoji/"
@@ -646,10 +643,10 @@ hugo
         enable = false
         serverURL = ""
         pageview = false # {{< version 0.2.15 >}}
-        emoji = ['//unpkg.com/@waline/emojis@1.0.1/weibo']
-        meta = ['nick', 'mail', 'link']
+        emoji = ["//unpkg.com/@waline/emojis@1.0.1/weibo"]
+        meta = ["nick", "mail", "link"]
         requiredMeta = []
-        login = 'enable'
+        login = "enable"
         wordLimit = 0
         pageSize = 10
         imageUploader = false # {{< version 0.2.15 >}}
@@ -748,7 +745,7 @@ hugo
   # {{< version 0.2.15 >}} Mermaid 配置
   [params.mermaid]
     # 取值详见 https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-    themes = ['neutral', 'dark']
+    themes = ["neutral", "dark"]
   
   # {{< version 0.2.12 >}} 盘古之白配置
   [params.pangu]
@@ -760,11 +757,11 @@ hugo
   [params.watermark]
     enable = false
     # 水印内容（允许 HTML 格式）
-    content = ''
+    content = ""
     # 水印透明度
     opacity = 0.1
     # 水印父节点
-    appendTo = '.wrapper>main'
+    appendTo = ".wrapper>main"
     # 单水印宽度 单位：px
     width = 150
     # 单水印高度 单位：px
@@ -778,7 +775,7 @@ hugo
     # 水印字体大小，单位：rem
     fontSize = 0.85
     # {{< version 0.2.13 >}} 水印字体
-    fontFamily = 'inherit'
+    fontFamily = "inherit"
 
   # {{< version 0.2.12 >}} 不蒜子统计
   [params.ibruce]
@@ -787,7 +784,8 @@ hugo
     enablePost = false
     # {{< version 0.2.14 changed >}} {{< version 0.2.15 deleted >}} 网站创立时间
     # 参数 `ibruce.siteTime` 自 v0.2.14 起已弃用，请改用 `footer.siteTime`
-    # siteTime = '' # 例：'2019-02-03T19:30:34+08:00'
+    # siteTime = "" # 例："2021-12-18T16:15:22+08:00"
+
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
     google = ""
@@ -830,11 +828,9 @@ hugo
 
   # {{< version 0.2.7 changed >}} 第三方库文件的 CDN 设置
   [params.cdn]
-    # CDN 数据文件名称，默认不启用
-    # ("jsdelivr.yml", "unpkg.yml")
+    # CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
     # 位于 "themes/FixIt/assets/data/cdn/" 目录
-    # 可以在你的项目下相同路径存放你自己的数据文件：
-    # "assets/data/cdn/"
+    # 可以在你的项目下相同路径存放你自己的数据文件："assets/data/cdn/"
     # data = "unpkg.yml"
 
   # {{< version 0.2.8 >}} 兼容性设置
@@ -849,17 +845,20 @@ hugo
     enable = false
     permalink = "https://github.com/hugo-fixit/FixIt"
     title = "在 GitHub 上查看源代码"
-    position = "right" # left, right
+    position = "right" # ["left", "right"]
+
   # {{< version 0.2.14 >}} Gravatar 设置
   [params.gravatar]
     # Gravatar 主机，默认：“www.gravatar.com”
-    host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
-    style = "" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+    host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+    style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
+
   # {{< version 0.2.16 >}} 返回顶部
   [params.backToTop]
     enable = true
     # 在 b2t 按钮中显示滚动百分比
     scrollpercent = false
+
   # {{< version 0.2.16 >}} 阅读进度条
   [params.readingProgress]
     enable = false
@@ -871,6 +870,7 @@ hugo
     light = ""
     dark = ""
     height = "2px"
+
   # {{< version 0.2.15 >}} 开发者选项
   [params.dev]
     enable = false
@@ -989,8 +989,7 @@ hugo
 
 ```toml
 [params.cdn]
-  # CDN 数据文件名称，默认不启用
-  # ("jsdelivr.yml")
+  # CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
   data = ""
 ````
 
@@ -1275,7 +1274,7 @@ defaultContentLanguage = "zh-cn"
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo Site"
+    title = "My New Hugo FixIt Site"
     languageCode = "en"
     languageName = "English"
     [[languages.en.menu.main]]
@@ -1305,7 +1304,7 @@ defaultContentLanguage = "zh-cn"
 
   [languages.zh-cn]
     weight = 2
-    title = "我的全新 Hugo 网站"
+    title = "我的全新 Hugo FixIt 网站"
     # 网站语言，仅在这里 CN 大写
     languageCode = "zh-CN"
     languageName = "简体中文"
@@ -1338,7 +1337,7 @@ defaultContentLanguage = "zh-cn"
 
   [languages.fr]
     weight = 3
-    title = "Mon nouveau site Hugo"
+    title = "Mon nouveau site Hugo FixIt"
     languageCode = "fr"
     languageName = "Français"
     [[languages.fr.menu.main]]
@@ -1416,7 +1415,7 @@ defaultContentLanguage = "zh-cn"
 ```toml
 [params.search]
   enable = true
-  # 搜索引擎的类型 ("lunr", "algolia")
+  # 搜索引擎的类型 ["lunr", "algolia"]
   type = "lunr"
   # 文章内容最长索引长度
   contentLength = 4000

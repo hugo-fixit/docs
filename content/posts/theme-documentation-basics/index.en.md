@@ -87,7 +87,7 @@ baseURL = "http://example.org/"
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
-title = "My New Hugo Site"
+title = "My New Hugo FixIt Site"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "FixIt"
@@ -209,15 +209,15 @@ Please open the code block below to view the complete sample configuration :(fa-
   # {{< version 0.2.15 changed >}} FixIt theme version
   version = "0.2.X" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
   # site description
-  description = "This is My New Hugo Site"
+  description = "This is my new Hugo FixIt site"
   # site keywords
-  keywords = ["Theme", "Hugo"]
-  # site default theme ("light", "dark", "auto")
+  keywords = ["Hugo", "FixIt"]
+  # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   gitRepo = ""
   # {{< version 0.1.1 >}} which hash function used for SRI, when empty, no SRI is used
-  # ("sha256", "sha384", "sha512", "md5")
+  # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
   # {{< version 0.2.0 >}} date format
   dateFormat = "2006-01-02"
@@ -248,13 +248,13 @@ Please open the code block below to view the complete sample configuration :(fa-
     tileColor = "#da532c"
     # {{< version 0.2.12 changed >}} Android browser theme color
     [params.app.themeColor]
-      light = "#ffffff"
+      light = "#f8f8f8"
       dark = "#252627"
 
   # {{< version 0.2.0 >}} Search config
   [params.search]
     enable = true
-    # type of search engine ("lunr", "algolia")
+    # type of search engine ["lunr", "algolia"]
     type = "lunr"
     # max index length of the chunked content
     contentLength = 4000
@@ -275,9 +275,9 @@ Please open the code block below to view the complete sample configuration :(fa-
 
   # Header config
   [params.header]
-    # {{< version 0.2.13 changed >}} desktop header mode ("sticky", "normal", "auto")
+    # {{< version 0.2.13 changed >}} desktop header mode ["sticky", "normal", "auto"]
     desktopMode = "sticky"
-    # {{< version 0.2.13 changed >}} mobile header mode ("sticky", "normal", "auto")
+    # {{< version 0.2.13 changed >}} mobile header mode ["sticky", "normal", "auto"]
     mobileMode = "auto"
     # {{< version 0.2.0 >}} Header title config
     [params.header.title]
@@ -302,7 +302,7 @@ Please open the code block below to view the complete sample configuration :(fa-
   [params.footer]
     enable = true
     # {{< version 0.2.0 >}} Custom content (HTML format is supported)
-    custom = ''
+    custom = ""
     # {{< version 0.2.0 >}} whether to show Hugo and theme info
     hugo = true
     # {{< version 0.2.0 >}} whether to show copyright info
@@ -310,9 +310,9 @@ Please open the code block below to view the complete sample configuration :(fa-
     # {{< version 0.2.0 >}} whether to show the author
     author = true
     # Site creation year
-    since = 2019
+    since = 2021
     # {{< version 0.2.14 >}} Site creation time
-    siteTime = '' # e.g. '2019-02-03T19:30:34+08:00'
+    siteTime = "" # e.g. "2021-12-18T16:15:22+08:00"
     # {{< version 0.2.14 >}} whether to show total word count of site content
     wordCount = true
     # {{< version 0.2.12 >}} Public network security only in China (HTML format is supported)
@@ -353,9 +353,6 @@ Please open the code block below to view the complete sample configuration :(fa-
     # Home page profile
     [params.home.profile]
       enable = true
-      # {{< version 0.2.13 >}} Gravatar mirror site domain, default: "www.gravatar.com"
-      # {{< version 0.2.14 changed >}} {{< version 0.2.15 deleted >}} The parameter `home.profile.gravatarSite` is deprecated since v0.2.14, use `gravatar.host` instead
-      # gravatarSite = ""
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
@@ -363,7 +360,7 @@ Please open the code block below to view the complete sample configuration :(fa-
       # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page
-      subtitle = "This is My New Hugo Site"
+      subtitle = "This is my new Hugo FixIt site"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -486,7 +483,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     linkToMarkdown = true
     # {{< version 0.2.4 >}} whether to show the full text content in RSS
     rssFullText = false
-    # {{< version 0.2.13 >}} Page style ("narrow", "normal", "wide", ...)
+    # {{< version 0.2.13 >}} Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.14 >}} Gravatar is force-used as the author's avatar
     gravatarForce = false
@@ -502,7 +499,7 @@ Please open the code block below to view the complete sample configuration :(fa-
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
       auto = true
-      # {{< version 0.2.13 >}} position of TOC ("left", "right")
+      # {{< version 0.2.13 >}} position of TOC ["left", "right"]
       position = "right"
     # {{< version 0.2.13 >}} Display a message at the beginning of an article to warn the reader that its content might be expired
     [params.page.expirationReminder]
@@ -599,7 +596,7 @@ Please open the code block below to view the complete sample configuration :(fa-
         noComment = ""
         sendBtn = ""
         editorTravel = true
-        flatMode = 'auto'
+        flatMode = "auto"
         maxNesting = 3
         # It take effect when `params.page.lightgallery` is enabled
         lightgallery = false
@@ -632,7 +629,7 @@ Please open the code block below to view the complete sample configuration :(fa-
         enableQQ = false
         serverURLs = ""
         # {{< version 0.2.6 >}} emoji data file name, default is "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
         # located in "themes/FixIt/assets/data/emoji/" directory
         # you can store your own data files in the same path under your project:
         # "assets/data/emoji/"
@@ -643,10 +640,10 @@ Please open the code block below to view the complete sample configuration :(fa-
         enable = false
         serverURL = ""
         pageview = false # {{< version 0.2.15 >}}
-        emoji = ['//unpkg.com/@waline/emojis@1.0.1/weibo']
-        meta = ['nick', 'mail', 'link']
+        emoji = ["//unpkg.com/@waline/emojis@1.0.1/weibo"]
+        meta = ["nick", "mail", "link"]
         requiredMeta = []
-        login = 'enable'
+        login = "enable"
         wordLimit = 0
         pageSize = 10
         imageUploader = false # {{< version 0.2.15 >}}
@@ -745,7 +742,7 @@ Please open the code block below to view the complete sample configuration :(fa-
   # {{< version 0.2.15 >}} Mermaid config
   [params.mermaid]
     # For values, see https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-    themes = ['neutral', 'dark']
+    themes = ["neutral", "dark"]
 
   # {{< version 0.2.12 >}} PanguJS config
   [params.pangu]
@@ -757,11 +754,11 @@ Please open the code block below to view the complete sample configuration :(fa-
   [params.watermark]
     enable = false
     # watermark's text (HTML format is supported)
-    content = ''
+    content = ""
     # watermark's transparency
     opacity = 0.1
     # parent of watermark's container
-    appendTo = '.wrapper>main'
+    appendTo = ".wrapper>main"
     # watermark's width. unit: px
     width = 150
     # watermark's height. unit: px
@@ -775,7 +772,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     # watermark's fontSize. unit: rem
     fontSize = 0.85
     # {{< version 0.2.13 >}} watermark's fontFamily
-    fontFamily = 'inherit'
+    fontFamily = "inherit"
 
   # {{< version 0.2.12 >}} Busuanzi count
   [params.ibruce]
@@ -784,7 +781,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     enablePost = false
     # {{< version 0.2.14 changed >}} {{< version 0.2.15 deleted >}} Site creation time
     # The parameter `ibruce.siteTime` is deprecated since v0.2.14, use `footer.siteTime` instead
-    # siteTime = '' # e.g. '2019-02-03T19:30:34+08:00'
+    # siteTime = "" # e.g. "2021-12-18T16:15:22+08:00"
 
   # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
@@ -828,12 +825,10 @@ Please open the code block below to view the complete sample configuration :(fa-
 
   # {{< version 0.2.7 changed >}} CDN config for third-party library files
   [params.cdn]
-    # CDN data file name, disabled by default
-    # ("jsdelivr.yml", "unpkg.yml")
+    # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
     # located in "themes/FixIt/assets/data/cdn/" directory
-    # you can store your own data files in the same path under your project:
-    # "assets/data/cdn/"
-    # data = "unpkg"
+    # you can store your own data files in the same path under your project: "assets/data/cdn/"
+    # data = "unpkg.yml"
 
   # {{< version 0.2.8 >}} Compatibility config
   [params.compatibility]
@@ -847,17 +842,20 @@ Please open the code block below to view the complete sample configuration :(fa-
     enable = false
     permalink = "https://github.com/hugo-fixit/FixIt"
     title = "View source on GitHub"
-    position = "right" # left, right
+    position = "right" # ["left", "right"]
+
   # {{< version 0.2.14 >}} Gravatar config
   [params.gravatar]
     # Gravatar host, default: "www.gravatar.com"
-    host = "www.gravatar.com" # "cn.gravatar.com", "gravatar.loli.net"
-    style = "" # "", mp, identicon, monsterid, wavatar, retro, blank, robohash
+    host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+    style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
+
   # {{< version 0.2.16 >}} Back to top
   [params.backToTop]
     enable = true
     # Scroll percent label in b2t button
     scrollpercent = false
+
   # {{< version 0.2.16 >}} Reading progress bar
   [params.readingProgress]
     enable = false
@@ -869,6 +867,7 @@ Please open the code block below to view the complete sample configuration :(fa-
     light = ""
     dark = ""
     height = "2px"
+
   # {{< version 0.2.15 >}} Developer options
   [params.dev]
     enable = false
@@ -986,8 +985,7 @@ You could enable these features with `hugo server -e production`.
 
 ```toml
 [params.cdn]
-  # CDN data file name, disabled by default
-  # ("jsdelivr.yml")
+  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
   data = ""
 ````
 
@@ -1172,7 +1170,7 @@ The following is a complete menu item configuration:
     # {{< version 0.2.14 >}} add user-defined content to menu items
     [menu.main.params]
       # add css class to a specific menu item
-      class = 'text-center'
+      class = "text-center"
       # whether set as a draft menu item whose function is similar to a draft post/page
       draft = false
       # {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
@@ -1273,7 +1271,7 @@ defaultContentLanguage = "en"
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo Site"
+    title = "My New Hugo FixIt Site"
     languageCode = "en"
     languageName = "English"
     [[languages.en.menu.main]]
@@ -1303,7 +1301,7 @@ defaultContentLanguage = "en"
 
   [languages.zh-cn]
     weight = 2
-    title = "我的全新 Hugo 网站"
+    title = "我的全新 Hugo FixIt 网站"
     # language code, CN only here
     languageCode = "zh-CN"
     languageName = "简体中文"
@@ -1336,7 +1334,7 @@ defaultContentLanguage = "en"
 
   [languages.fr]
     weight = 3
-    title = "Mon nouveau site Hugo"
+    title = "Mon nouveau site Hugo FixIt"
     languageCode = "fr"
     languageName = "Français"
     [[languages.fr.menu.main]]
@@ -1413,7 +1411,7 @@ Here is the search configuration in your [site configuration](#site-configuratio
 ```toml
 [params.search]
   enable = true
-  # type of search engine ("lunr", "algolia")
+  # type of search engine ["lunr", "algolia"]
   type = "lunr"
   # max index length of the chunked content
   contentLength = 4000
