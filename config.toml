@@ -1067,28 +1067,28 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.en.menu.main]]
         identifier = "posts"
         name = "Posts"
-        url = "/posts/"
+        url = "posts/"
         weight = 1
         [languages.en.menu.main.params]
           icon = "fa-solid fa-archive"
       [[languages.en.menu.main]]
         identifier = "categories"
         name = "Categories"
-        url = "/categories/"
+        url = "categories/"
         weight = 2
         [languages.en.menu.main.params]
           icon = "fa-solid fa-th"
       [[languages.en.menu.main]]
         identifier = "tags"
         name = "Tags"
-        url = "/tags/"
+        url = "tags/"
         weight = 3
         [languages.en.menu.main.params]
           icon = "fa-solid fa-tags"
       [[languages.en.menu.main]]
         identifier = "documentation"
         name = "Docs"
-        url = "/categories/documentation/"
+        url = "categories/documentation/"
         title = "Theme Documentation"
         weight = 4
         [languages.en.menu.main.params]
@@ -1096,7 +1096,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.en.menu.main]]
         identifier = "tests"
         name = "Tests"
-        url = "/tests/"
+        url = "tests/"
         title = "Test for FixIt"
         weight = 5
         [languages.en.menu.main.params]
@@ -1105,14 +1105,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.en.menu.main]]
         identifier = "friends"
         name = "Friends"
-        url = "/friends/"
+        url = "friends/"
         weight = 6
         [languages.en.menu.main.params]
           icon = "fa-solid fa-users"
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
-        url = "/about/"
+        url = "about/"
         weight = 7
         [languages.en.menu.main.params]
           icon = "fa-solid fa-info-circle"
@@ -1176,28 +1176,28 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.zh-cn.menu.main]]
         identifier = "posts"
         name = "所有文章"
-        url = "/posts/"
+        url = "posts/"
         weight = 1
         [languages.zh-cn.menu.main.params]
           icon = "fa-solid fa-archive"
       [[languages.zh-cn.menu.main]]
         identifier = "categories"
         name = "分类"
-        url = "/categories/"
+        url = "categories/"
         weight = 2
         [languages.zh-cn.menu.main.params]
           icon = "fa-solid fa-th"
       [[languages.zh-cn.menu.main]]
         identifier = "tags"
         name = "标签"
-        url = "/tags/"
+        url = "tags/"
         weight = 3
         [languages.zh-cn.menu.main.params]
           icon = "fa-solid fa-tags"
       [[languages.zh-cn.menu.main]]
         identifier = "documentation"
         name = "文档"
-        url = "/categories/documentation/"
+        url = "categories/documentation/"
         title = "主题文档"
         weight = 4
         [languages.zh-cn.menu.main.params]
@@ -1205,7 +1205,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.zh-cn.menu.main]]
         identifier = "tests"
         name = "测试"
-        url = "/tests/"
+        url = "tests/"
         title = "FixIt 测试"
         weight = 5
         [languages.zh-cn.menu.main.params]
@@ -1214,7 +1214,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.zh-cn.menu.main]]
         identifier = "friends"
         name = "友链"
-        url = "/friends/"
+        url = "friends/"
         title = "友情链接"
         weight = 6
         [languages.zh-cn.menu.main.params]
@@ -1222,7 +1222,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       [[languages.zh-cn.menu.main]]
         identifier = "about"
         name = "关于"
-        url = "/about/"
+        url = "about/"
         weight = 7
         [languages.zh-cn.menu.main.params]
           icon = "fa-solid fa-info-circle"
