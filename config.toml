@@ -653,7 +653,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         enable = false
         serverURL = ""
         pageview = false
-        emoji = ['//unpkg.com/@waline/emojis@1.0.1/weibo']
+        emoji = ['//unpkg.com/@waline/emojis@1.1.0/weibo']
         meta = ['nick', 'mail', 'link']
         requiredMeta = []
         login = 'enable'
@@ -662,6 +662,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         imageUploader = false
         highlighter = false
         comment = false
+        texRenderer = false
+        search = false
+        recaptchaV3Key = ""
       # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
       # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]

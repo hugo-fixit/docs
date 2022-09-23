@@ -635,12 +635,12 @@ Please open the code block below to view the complete `config.toml` sample confi
         # "assets/data/emoji/"
         emoji = ""
         commentCount = true # {{< version 0.2.13 >}}
-      # {{< version 0.2.13 >}} {{< link "https://waline.js.org" Waline >}} comment config (https://waline.js.org)
+      # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} comment config (https://waline.js.org)
       [params.page.comment.waline]
         enable = false
         serverURL = ""
         pageview = false # {{< version 0.2.15 >}}
-        emoji = ["//unpkg.com/@waline/emojis@1.0.1/weibo"]
+        emoji = ["//unpkg.com/@waline/emojis@1.1.0/weibo"]
         meta = ["nick", "mail", "link"]
         requiredMeta = []
         login = "enable"
@@ -649,11 +649,9 @@ Please open the code block below to view the complete `config.toml` sample confi
         imageUploader = false # {{< version 0.2.15 >}}
         highlighter = false # {{< version 0.2.15 >}}
         comment = false # {{< version 0.2.15 >}}
-        # visitor = false # {{< version 0.2.15 deleted >}} renamed to pageview
-        # uploadImage = false # {{< version 0.2.15 deleted >}} renamed to imageUploader
-        # highlight = true # {{< version 0.2.15 deleted >}} renamed to highlighter
-        # mathTagSupport = false {{< version 0.2.15 deleted >}}
-        # commentCount = false {{< version 0.2.15 deleted >}} renamed to comment
+        texRenderer = false # {{< version 0.2.16 >}}
+        search = false # {{< version 0.2.16 >}}
+        recaptchaV3Key = "" # {{< version 0.2.16 >}}
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook comment" >}} config (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
         enable = false

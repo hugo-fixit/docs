@@ -638,12 +638,12 @@ hugo
         # "assets/data/emoji/"
         emoji = ""
         commentCount = true # {{< version 0.2.13 >}}
-      # {{< version 0.2.13 >}} {{< link "https://waline.js.org" Waline >}} 评论系统设置 (https://waline.js.org)
+      # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} 评论系统设置 (https://waline.js.org)
       [params.page.comment.waline]
         enable = false
         serverURL = ""
         pageview = false # {{< version 0.2.15 >}}
-        emoji = ["//unpkg.com/@waline/emojis@1.0.1/weibo"]
+        emoji = ["//unpkg.com/@waline/emojis@1.1.0/weibo"]
         meta = ["nick", "mail", "link"]
         requiredMeta = []
         login = "enable"
@@ -652,11 +652,9 @@ hugo
         imageUploader = false # {{< version 0.2.15 >}}
         highlighter = false # {{< version 0.2.15 >}}
         comment = false # {{< version 0.2.15 >}}
-        # visitor = false # {{< version 0.2.15 deleted >}} 更名为 pageview
-        # uploadImage = false # {{< version 0.2.15 deleted >}} 更名为 imageUploader
-        # highlight = true # {{< version 0.2.15 deleted >}} 更名为 highlighter
-        # mathTagSupport = false {{< version 0.2.15 deleted >}}
-        # commentCount = false {{< version 0.2.15 deleted >}} 更名为 comment
+        texRenderer = false # {{< version 0.2.16 >}}
+        search = false # {{< version 0.2.16 >}}
+        recaptchaV3Key = "" # {{< version 0.2.16 >}}
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置 (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
         enable = false
