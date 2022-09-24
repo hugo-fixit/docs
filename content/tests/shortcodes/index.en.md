@@ -11,6 +11,7 @@ categories:
 - Test
 
 hiddenFromHomePage: true
+lightgallery: true
 
 menu:
   main:
@@ -62,7 +63,7 @@ A **tip** banner
 {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
 ```
 
-## Raw
+## raw
 
 ```markdown
 {{</* raw */>}}
@@ -85,3 +86,29 @@ render
 <strong>raw</strong>
 <em>html</em>
 {{< /raw >}}
+
+## image
+
+![language-switch](/theme-documentation-basics/language-switch.gif)
+
+```go-html-template
+<!-- ![Lighthouse](/images/lighthouse.jpg "Lighthouse title") -->
+
+{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" title="Lighthouse title" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
+
+{{</* image src="/images/lighthouse.jpg" width="50%" caption="Lighthouse (width=50%)" title="width=\"50%\"" */>}}
+
+{{</* image src="/images/lighthouse.jpg" width="50%" height="200px" title="Lighthouse title" */>}}
+
+{{</* image src="/images/lighthouse.jpg" width="25%" height="100px" */>}}
+```
+
+<!-- ![Lighthouse](/images/lighthouse.jpg "Lighthouse title") -->
+
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" title="Lighthouse title" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
+
+{{< image src="/images/lighthouse.jpg" width="50%" caption="Lighthouse (width=50%)" title="width=\"50%\"" >}}
+
+{{< image src="/images/lighthouse.jpg" width="50%" height="200px" title="Lighthouse title" >}}
+
+{{< image src="/images/lighthouse.jpg" width="25%" height="100px" >}}
