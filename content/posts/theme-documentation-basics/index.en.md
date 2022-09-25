@@ -873,7 +873,7 @@ Please open the code block below to view the complete `config.toml` sample confi
     c4u = false
     # Please do not expose to public!
     githubToken = ""
-    # Mobile Devtools confi
+    # Mobile Devtools config
     [params.dev.mDevtools]
       enable = false
       # "vConsole", "eruda" supported
