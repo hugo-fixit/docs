@@ -60,6 +60,6 @@ menu:
 
 ## image
 
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.png)
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
-![](/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg)
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
+![](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")

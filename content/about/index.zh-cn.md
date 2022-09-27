@@ -27,7 +27,7 @@ math:
 >
 > 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[KeepIt 主题](https://github.com/Fastbyte01/KeepIt) 和 [LeaveIt 主题](https://github.com/liuzc/LeaveIt)。
 
-![Hugo 主题 FixIt](/images/Apple-Devices-Preview.png "一个简洁、优雅且高效的 Hugo 主题")
+![Hugo 主题 FixIt](/images/Apple-Devices-Preview.jpg "一个简洁、优雅且高效的 Hugo 主题")
 
 ### 特性
 

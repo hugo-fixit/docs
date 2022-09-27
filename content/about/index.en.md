@@ -26,7 +26,7 @@ math:
 >
 > It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).
 
-![Hugo Theme FixIt](https://pre.fixit.lruihao.cn/images/Apple-Devices-Preview.png "A Clean, Elegant but Advanced Hugo Theme")
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
 
 ### Features
 

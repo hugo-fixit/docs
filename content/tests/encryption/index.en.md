@@ -33,7 +33,7 @@ I was shy, so I hid.
 
 <!--more-->
 
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.png "Hugo Theme FixIt")
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "Hugo Theme FixIt")
 
 ## Encrypted Content
 
