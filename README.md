@@ -9,7 +9,7 @@ FixIt is a clean, elegant but advanced blog theme for Hugo developed by [Lruihao
 To run [Documentation Site](https://fixit.lruihao.cn/) locally:
 
 ```bash
-git clone --recursive https://github.com/hugo-fixit/FixIt.git FixIt
-cd FixIt
+git clone --recursive https://github.com/hugo-fixit/FixIt.git && cd FixIt
+
 hugo server --source=docs
 ```
