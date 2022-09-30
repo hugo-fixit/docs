@@ -4,15 +4,25 @@
 #   url: site link 站点链接
 #   description: description of friend/site 对朋友或其站点的说明
 
+- nickname: FixIt+Git
+  avatar: /fixit.min.svg
+  url: https://demo.fixit.lruihao.cn
+  description: A quickstart template to create a Hugo blog base on theme FixIt using Git submodule.
+
+- nickname: FixI+Go
+  avatar: /fixit.min.svg
+  url: https://demo1.fixit.lruihao.cn
+  description: A quickstart template to create a Hugo blog base on theme FixIt using Hugo Modules.
+
 - nickname: Lruihao
   avatar: https://lruihao.cn/images/avatar.jpg
   url: https://lruihao.cn
   description: Share programming experience and learning experience.
 
 - nickname: hiifong
-  avatar: https://52at.ml/images/avatar.jpg
+  avatar: https://www.gravatar.com/avatar/ba22db80ba3c392985cff46ec8c80332?s=150
   url: https://52at.ml
-  description: hiifong's blog,share anything!!!
+  description: hiifong's blog, share anything!!!
 
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
