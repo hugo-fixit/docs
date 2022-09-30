@@ -354,9 +354,9 @@ Please open the code block below to view the complete `config.toml` sample confi
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = ""
+      gravatarEmail = "xx@xx.com"
       # URL of avatar shown in home page
-      avatarURL = "/images/avatar.png"
+      avatarURL = ""
       # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page

@@ -357,9 +357,9 @@ hugo
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = ""
+      gravatarEmail = "xx@xx.com"
       # 主页显示头像的 URL
-      avatarURL = "/images/avatar.png"
+      avatarURL = ""
       # {{< version 0.2.7 changed >}} 主页显示的网站标题（支持 HTML 格式）
       title = ""
       # 主页显示的网站副标题

@@ -303,10 +303,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       enable = true
       # Gravatar Email for preferred avatar in home page
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = ""
+      gravatarEmail = "xx@xx.com"
       # URL of avatar shown in home page
       # 主页显示头像的 URL
-      avatarURL = "/fixit.min.svg"
+      avatarURL = ""
       # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
       # FixIt 0.2.7 | 更改 主页显示的网站标题（支持 HTML 格式）
       title = ""
