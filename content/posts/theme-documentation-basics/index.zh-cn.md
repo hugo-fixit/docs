@@ -81,15 +81,14 @@ git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 以下是 FixIt 主题的基本配置：
 
 ```toml
+title = "我的全新 Hugo FixIt 网站"
 baseURL = "http://example.org/"
-# [en, zh-cn, fr, ...] 设置默认的语言
+# 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
-# 网站语言，仅在这里 CN 大写
+# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
-# 网站标题
-title = "我的全新 Hugo FixIt 网站"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "FixIt"
@@ -110,6 +109,16 @@ theme = "FixIt"
     # 当你将鼠标悬停在此菜单链接上时，将显示的标题
     title = ""
     weight = 1
+    # 向菜单项添加用户定义的内容
+    [menu.main.params]
+      # 添加 CSS 类到菜单项
+      class = ""
+      # 是否为草稿菜单，类似草稿页面
+      draft = false
+      # 添加 fontawesome 图标到菜单项
+      icon = "fa-solid fa-archive"
+      # 设置菜单项类型，可选值：["mobile", "desktop"]
+      type = ""
   [[menu.main]]
     identifier = "categories"
     pre = ""
@@ -118,6 +127,8 @@ theme = "FixIt"
     url = "/categories/"
     title = ""
     weight = 2
+    [menu.main.params]
+      icon = "fa-solid fa-th"
   [[menu.main]]
     identifier = "tags"
     pre = ""
@@ -126,6 +137,8 @@ theme = "FixIt"
     url = "/tags/"
     title = ""
     weight = 3
+    [menu.main.params]
+      icon = "fa-solid fa-tags"
 
 # Hugo 解析文档的配置
 [markup]
@@ -1172,7 +1185,7 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
     # {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
     [menu.main.params]
       # 添加 CSS 类到菜单项
-      class = 'text-center'
+      class = "text-center"
       # 是否为草稿菜单，类似草稿页面
       draft = false
       # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项

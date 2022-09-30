@@ -82,12 +82,12 @@ git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 The following is a basic configuration for the FixIt theme:
 
 ```toml
-baseURL = "http://example.org/"
-# [en, zh-cn, fr, ...] determines default content language
-defaultContentLanguage = "en"
-# language code
-languageCode = "en"
 title = "My New Hugo FixIt Site"
+baseURL = "http://example.org/"
+# determines default content language ["en", "zh-cn", "fr", "pl", ...]
+defaultContentLanguage = "en"
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "FixIt"
@@ -108,6 +108,16 @@ theme = "FixIt"
     # title will be shown when you hover on this menu link
     title = ""
     weight = 1
+    # add user-defined content to menu items
+    [menu.main.params]
+      # add css class to a specific menu item
+      class = ""
+      # whether set as a draft menu item whose function is similar to a draft post/page
+      draft = false
+      # add fontawesome icon to a specific menu item
+      icon = "fa-solid fa-archive"
+      # set menu item type, optional value: ["mobile", "desktop"]
+      type = ""
   [[menu.main]]
     identifier = "categories"
     pre = ""
@@ -116,6 +126,8 @@ theme = "FixIt"
     url = "/categories/"
     title = ""
     weight = 2
+    [menu.main.params]
+      icon = "fa-solid fa-th"
   [[menu.main]]
     identifier = "tags"
     pre = ""
@@ -124,6 +136,8 @@ theme = "FixIt"
     url = "/tags/"
     title = ""
     weight = 3
+    [menu.main.params]
+      icon = "fa-solid fa-tags"
 
 # Markup related configuration in Hugo
 [markup]
