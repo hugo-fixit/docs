@@ -76,6 +76,12 @@ git init
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+如果你想获得较快的更新，可设置主题分支为 `dev`。
+
+```bash
+git submodule set-branch -b dev themes/FixIt
+```
+
 ### 2.3 基础配置 {#basic-configuration}
 
 以下是 FixIt 主题的基本配置：

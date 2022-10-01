@@ -77,6 +77,12 @@ git init
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+If you want to get faster updates, you can set the theme branch to `dev`.
+
+```bash
+git submodule set-branch -b dev themes/FixIt
+```
+
 ### 2.3 Basic Configuration {#basic-configuration}
 
 The following is a basic configuration for the FixIt theme:
