@@ -128,9 +128,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。since v0.2.14
   # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
   disableThemeInject = false
-  # FixIt 0.2.16 | NEW Auto Bookmark Support
-  # If true, save the reading progress when closing the page.
-  autoBookmark = true
 
   # App icon config
   # 应用图标配置
@@ -458,6 +455,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # Gravatar is force-used as the author's avatar since v0.2.14
     # 强制使用 Gravatar 作为作者头像 since v0.2.14
     gravatarForce = true
+    # FixIt 0.2.17 | CHANGED Auto Bookmark Support
+    # If true, save the reading progress when closing the page.
+    autoBookmark = true
+
     # Repost config since v0.2.15
     # 转载配置 since v0.2.15
     [params.page.repost]

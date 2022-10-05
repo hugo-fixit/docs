@@ -252,9 +252,6 @@ hugo
   # {{< version 0.2.14 >}} 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记
   # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法
   disableThemeInject = false
-  # {{< version 0.2.16 >}} 开启自动书签支持
-  # 如果为 true，则在关闭页面时保存阅读进度
-  autoBookmark = false
 
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
@@ -509,6 +506,9 @@ hugo
     pageStyle = "normal"
     # {{< version 0.2.14 >}} 强制使用 Gravatar 作为作者头像
     gravatarForce = true
+    # {{< version 0.2.17 changed >}} 开启自动书签支持
+    # 如果为 true，则在关闭页面时保存阅读进度
+    autoBookmark = false
     # {{< version 0.2.15 >}} 转载配置
     [params.page.repost]
       enable = false
