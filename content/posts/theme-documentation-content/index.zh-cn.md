@@ -117,6 +117,8 @@ menu:
 * **message**: {{< version 0.2.15 >}} 加密提示信息，详见 [主题文档 - 内容加密](../theme-documentation-content-encryption/)
 
 * **repost**: {{< version 0.2.15 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.repost` 部分相同
+* **wordCount**: {{< version 0.2.17 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.wordCount` 部分相同
+* **readingTime**: {{< version 0.2.17 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.readingTime` 部分相同
 
 {{< admonition tip >}}
 {{< version 0.2.10 >}}

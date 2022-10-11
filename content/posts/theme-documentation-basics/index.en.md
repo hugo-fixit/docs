@@ -507,6 +507,11 @@ Please open the code block below to view the complete `config.toml` sample confi
     # {{< version 0.2.17 changed >}} Auto Bookmark Support
     # If true, save the reading progress when closing the page.
     autoBookmark = false
+    # {{< version 0.2.17 >}} whether to enable wordCount
+    wordCount = true
+    # {{< version 0.2.17 >}} whether to enable readingTime
+    readingTime = true
+
     # {{< version 0.2.15 >}} Repost config
     [params.page.repost]
       enable = false

@@ -9,7 +9,7 @@
   url: https://demo.fixit.lruihao.cn
   description: A quickstart template to create a Hugo blog base on theme FixIt using Git submodule.
 
-- nickname: FixI+Go
+- nickname: FixIt+Go
   avatar: /fixit.min.svg
   url: https://demo1.fixit.lruihao.cn
   description: A quickstart template to create a Hugo blog base on theme FixIt using Hugo Modules.

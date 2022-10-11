@@ -99,7 +99,7 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax](#fontawesome).
 * **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
 * **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
-* **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style](../theme-documentation-basics#page-style)
+* **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style](../theme-documentation-basics#page-style).
 * **gravatarForce**: {{< version 0.2.14 >}} Gravatar is force-used as the author's avatar.
 
 * **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [site configuration](../theme-documentation-basics#site-configuration).
@@ -113,12 +113,14 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **type**: the rendering template of page, see [templates](#tamplates) for details.
-* **menu**: see [Add content to Menu](../theme-documentation-basics#content-to-menu)
+* **menu**: see [Add content to Menu](../theme-documentation-basics#content-to-menu).
 
-* **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/)
-* **message**: {{< version 0.2.15 >}} encryption prompt, see [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/)
+* **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/).
+* **message**: {{< version 0.2.15 >}} encryption prompt, see [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/).
 
 * **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [site configuration](../theme-documentation-basics#site-configuration).
+* **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [site configuration](../theme-documentation-basics#site-configuration).
+* **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [site configuration](../theme-documentation-basics#site-configuration).
 
 {{< admonition tip >}}
 {{< version 0.2.10 >}}
