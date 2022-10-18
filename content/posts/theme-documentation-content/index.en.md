@@ -79,7 +79,7 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
 * **author**: the author for the content.
 * **authorLink**: the link of the author.
-* **authorEmail**: {{< version 0.2.14 >}} the  of the author.
+* **authorEmail**: {{< version 0.2.14 >}} the email of the author.
 * **description**: the description for the content.
 * **keywords**: the keywords for the content.
 * **license**: the special lisence for this content.
