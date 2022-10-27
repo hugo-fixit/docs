@@ -19,6 +19,7 @@ lightgallery: true
 math:
   enable: true
 
+reward: true
 menu:
   main:
     title: "FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode"

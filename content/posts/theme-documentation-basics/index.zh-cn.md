@@ -14,7 +14,7 @@ tags: ["installation", "configuration"]
 categories: ["documentation"]
 
 lightgallery: true
-
+reward: true
 toc:
   auto: false
 
@@ -581,6 +581,16 @@ hugo
       scale = true
       # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
       fullscreen = true
+    # {{< version 0.2.17 >}} 赞赏设置
+    [params.page.reward]
+      enable = false
+      animation = false
+      # comment = "Buy me a coffee"
+      [params.page.reward.way]
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        # paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
     # {{< version 0.2.0 changed >}} 文章页面的分享信息设置
     [params.page.share]
       enable = true

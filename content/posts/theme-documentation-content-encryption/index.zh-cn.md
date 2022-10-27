@@ -20,6 +20,7 @@ tags:
 categories:
 - documentation
 
+reward: true
 menu:
   main:
     name: "主题文档 - 内容加密"

@@ -19,6 +19,7 @@ lightgallery: true
 math:
   enable: true
 
+reward: true
 menu:
   main:
     name: "Extended Shortcodes"

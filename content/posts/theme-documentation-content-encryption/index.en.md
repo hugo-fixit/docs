@@ -20,6 +20,7 @@ tags:
 categories:
 - documentation
 
+reward: true
 menu:
   main:
     name: "Content Encryption"

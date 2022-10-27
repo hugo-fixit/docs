@@ -14,7 +14,8 @@ tags: ["installation", "configuration"]
 categories: ["documentation"]
 
 lightgallery: true
-
+reward:
+  enable: true
 toc:
   auto: false
 
@@ -579,6 +580,16 @@ Please open the code block below to view the complete `config.toml` sample confi
       scale = true
       # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
       fullscreen = true
+    # {{< version 0.2.17 >}} Donate (Sponsor) settings
+    [params.page.reward]
+      enable = false
+      animation = false
+      # comment = "Buy me a coffee"
+      [params.page.reward.way]
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        # paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
     # {{< version 0.2.0 changed >}} social share links in post page
     [params.page.share]
       enable = true
