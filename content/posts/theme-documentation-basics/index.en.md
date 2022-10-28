@@ -512,6 +512,8 @@ Please open the code block below to view the complete `config.toml` sample confi
     wordCount = true
     # {{< version 0.2.17 >}} whether to enable readingTime
     readingTime = true
+    # {{< version 0.2.17 >}} end of post flag
+    endFlag = ""
 
     # {{< version 0.2.15 >}} Repost config
     [params.page.repost]

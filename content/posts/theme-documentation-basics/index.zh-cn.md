@@ -513,6 +513,8 @@ hugo
     wordCount = true
     # {{< version 0.2.17 >}} 是否使用 预计阅读
     readingTime = true
+    # {{< version 0.2.17 >}} 文章结束标志
+    endFlag = ""
 
     # {{< version 0.2.15 >}} 转载配置
     [params.page.repost]

@@ -462,6 +462,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     wordCount = true
     # FixIt 0.2.17 | NEW whether to enable readingTime
     readingTime = true
+    # end of post flag
+    # 文章结束标志
+    endFlag = ""
 
     # Repost config since v0.2.15
     # 转载配置 since v0.2.15
