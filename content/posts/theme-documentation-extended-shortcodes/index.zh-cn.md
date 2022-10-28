@@ -499,12 +499,12 @@ this is a center-quote shortcode example.
 一个 `reward` 示例:
 
 ```go-html-template
-{{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="给作者买杯卡布奇诺～" */>}}
+{{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="给作者买杯卡布奇诺～" >}}
+{{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
 
 ---
 
