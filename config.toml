@@ -563,6 +563,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.page.reward]
       enable = false
       animation = true
+      # position relative to post footer, optional value: ["before", "after"]
+      # 相对于页脚的位置，可选值：["before", "after"]
+      position = "after"
       comment = "Buy me a coffee"
       [params.page.reward.way]
         wechatpay = "/images/wechatpay.gif"

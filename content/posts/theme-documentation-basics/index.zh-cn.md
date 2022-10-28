@@ -585,6 +585,8 @@ hugo
     [params.page.reward]
       enable = false
       animation = false
+      # 相对于页脚的位置，可选值：["before", "after"]
+      position = "after"
       # comment = "Buy me a coffee"
       [params.page.reward.way]
         # wechatpay = "/images/wechatpay.png"

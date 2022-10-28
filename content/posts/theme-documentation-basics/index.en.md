@@ -584,6 +584,8 @@ Please open the code block below to view the complete `config.toml` sample confi
     [params.page.reward]
       enable = false
       animation = false
+      # position relative to post footer, optional value: ["before", "after"]
+      position = "after"
       # comment = "Buy me a coffee"
       [params.page.reward.way]
         # wechatpay = "/images/wechatpay.png"
