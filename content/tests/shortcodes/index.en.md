@@ -112,3 +112,8 @@ render
 {{< image src="/images/lighthouse.jpg" width="50%" height="200px" title="Lighthouse title" >}}
 
 {{< image src="/images/lighthouse.jpg" width="25%" height="100px" >}}
+
+## reward
+
+{{< reward >}}
+{{< reward "/images/wechatpay.gif" >}}

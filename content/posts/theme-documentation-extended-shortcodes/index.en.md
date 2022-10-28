@@ -462,7 +462,7 @@ The `raw` shortcode has only one parameter:
 
 Example `raw` input:
 
-```markdown
+```go-html-template
 {{</* raw */>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
 
 {{</* raw */>}}
@@ -483,6 +483,31 @@ Block Formula:
 {{< /raw >}}
 
 Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
+
+## 16 reward
+
+{{< version 0.2.17 >}}
+
+The `reward` shortcode has the following named parameters:
+
+* **wechatpay** *[optional]* (**first** positional parameter)
+* **alipay** *[optional]* (**second** positional parameter)
+* **paypal** *[optional]* (**third** positional parameter)
+* **bitcoin** *[optional]* (**fourth** positional parameter)
+* **author** *[optional]* (**fifth** positional parameter)
+* **comment** *[optional]* (**sixth** positional parameter)
+
+Example `reward` input:
+
+```go-html-template
+{{</* reward */>}}
+Or
+{{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" */>}}
+```
+
+The rendered output looks like this:
+
+{{< reward >}}
 
 ---
 

@@ -184,7 +184,7 @@ This is a **right-aligned** paragraph.
 
 * **src** *[必需]*（**第一个**位置参数）
 
-    图片的 URL.
+    图片的 URL。
 
 * **alt** *[可选]*（**第二个**位置参数）
 
@@ -461,7 +461,7 @@ this is a center-quote shortcode example.
 
 一个 `raw` 示例:
 
-```markdown
+```go-html-template
 {{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
 
 {{</* raw */>}}
@@ -472,7 +472,7 @@ this is a center-quote shortcode example.
 原始的带有 Markdown 和 HTML 语法的内容：{{</* raw "span" */>}}**Hello** <strong>FixIt</strong>{{</* /raw */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
 
@@ -482,6 +482,29 @@ this is a center-quote shortcode example.
 {{< /raw >}}
 
 原始的带有 Markdown 和 HTML 语法的内容：{{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
+
+## 16 reward
+
+{{< version 0.2.17 >}}
+
+`reward` shortcode 有以下命名参数：
+
+* **wechatpay** *[可选]*（**第一个**位置参数）
+* **alipay** *[可选]*（**第二个**位置参数）
+* **paypal** *[可选]*（**第三个**位置参数）
+* **bitcoin** *[可选]*（**第四个**位置参数）
+* **author** *[可选]*（**第五个**位置参数）
+* **comment** *[可选]*（**第六个**位置参数）
+
+一个 `reward` 示例:
+
+```go-html-template
+{{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="给作者买杯卡布奇诺～" */>}}
+```
+
+呈现的输出效果如下：
+
+{{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="给作者买杯卡布奇诺～" >}}
 
 ---
 

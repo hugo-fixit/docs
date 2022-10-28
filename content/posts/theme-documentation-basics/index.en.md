@@ -589,7 +589,7 @@ Please open the code block below to view the complete `config.toml` sample confi
       # position relative to post footer, optional value: ["before", "after"]
       position = "after"
       # comment = "Buy me a coffee"
-      [params.page.reward.way]
+      [params.page.reward.ways]
         # wechatpay = "/images/wechatpay.png"
         # alipay = "/images/alipay.png"
         # paypal = "/images/paypal.png"

@@ -590,7 +590,7 @@ hugo
       # 相对于页脚的位置，可选值：["before", "after"]
       position = "after"
       # comment = "Buy me a coffee"
-      [params.page.reward.way]
+      [params.page.reward.ways]
         # wechatpay = "/images/wechatpay.png"
         # alipay = "/images/alipay.png"
         # paypal = "/images/paypal.png"
