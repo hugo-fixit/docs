@@ -375,6 +375,8 @@ Please open the code block below to view the complete `config.toml` sample confi
       gravatarEmail = "xx@xx.com"
       # URL of avatar shown in home page
       avatarURL = ""
+      # {{< version 0.2.17 >}} identifier of avatar menu link
+      avatarMenu = ""
       # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page

@@ -376,6 +376,8 @@ hugo
       gravatarEmail = "xx@xx.com"
       # 主页显示头像的 URL
       avatarURL = ""
+      # {{< version 0.2.17 >}} 头像菜单链接的 identifier
+      avatarMenu = ""
       # {{< version 0.2.7 changed >}} 主页显示的网站标题（支持 HTML 格式）
       title = ""
       # 主页显示的网站副标题
