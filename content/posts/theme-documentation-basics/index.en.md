@@ -319,8 +319,8 @@ Please open the code block below to view the complete `config.toml` sample confi
   # Footer config
   [params.footer]
     enable = true
-    # {{< version 0.2.0 >}} Custom content (HTML format is supported)
-    custom = ""
+    # {{< version 0.2.0 >}} {{< version 0.2.17 deleted >}} Custom content (HTML format is supported)
+    # custom = ""
     # {{< version 0.2.0 >}} whether to show Hugo and theme info
     hugo = true
     # {{< version 0.2.0 >}} whether to show copyright info
@@ -905,6 +905,13 @@ Please open the code block below to view the complete `config.toml` sample confi
     light = ""
     dark = ""
     height = "2px"
+
+  # {{< version 0.2.17 >}} Define custom file paths
+  # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
+  [params.customFilePath]
+    # aside = "custom/aside.html"
+    # profile = "custom/profile.html"
+    # footer = "custom/footer.html"
 
   # {{< version 0.2.15 >}} Developer options
   [params.dev]

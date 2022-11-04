@@ -320,8 +320,8 @@ hugo
   # 页面底部信息配置
   [params.footer]
     enable = true
-    # {{< version 0.2.0 >}} 自定义内容（支持 HTML 格式）
-    custom = ""
+    # {{< version 0.2.0 >}} {{< version 0.2.17 deleted >}} 自定义内容（支持 HTML 格式）
+    # custom = ""
     # {{< version 0.2.0 >}} 是否显示 Hugo 和主题信息
     hugo = true
     # {{< version 0.2.0 >}} 是否显示版权信息
@@ -906,6 +906,13 @@ hugo
     light = ""
     dark = ""
     height = "2px"
+
+  # {{< version 0.2.17 >}} 定义自定义文件路径
+  # 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件
+  [params.customFilePath]
+    # aside = "custom/aside.html"
+    # profile = "custom/profile.html"
+    # footer = "custom/footer.html"
 
   # {{< version 0.2.15 >}} 开发者选项
   [params.dev]
