@@ -285,6 +285,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # RSS 文章数目
     rss = 10
 
+  # TagCloud config for tags page
+  # 标签云配置
+  [params.tagcloud]
+    enable = true
+    min = 14 # Minimum font size in px
+    max = 32 # Maximum font size in px
+    peakCount = 10 # Maximum count of posts per tag
+    orderby = "name" # Order of tags, optional values: ['name', 'count']
+
   # Home page config
   # 主页配置
   [params.home]
@@ -563,7 +572,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.page.reward]
       enable = false
       animation = true
-      # position relative to post footer, optional value: ["before", "after"]
+      # position relative to post footer, optional values: ["before", "after"]
       # 相对于页脚的位置，可选值：["before", "after"]
       position = "after"
       comment = "Buy me a coffee"
