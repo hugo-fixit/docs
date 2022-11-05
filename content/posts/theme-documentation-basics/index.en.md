@@ -370,7 +370,7 @@ Please open the code block below to view the complete `config.toml` sample confi
     min = 14 # Minimum font size in px
     max = 32 # Maximum font size in px
     peakCount = 10 # Maximum count of posts per tag
-    orderby = "name" # Order of tags, optional values: ['name', 'count']
+    orderby = "name" # Order of tags, optional values: ["name", "count"]
 
   # Home page config
   [params.home]

@@ -371,7 +371,7 @@ hugo
     min = 14 # 最小字体大小，单位：px
     max = 32 # 最大字体大小，单位：px
     peakCount = 10 # 每个标签的最大文章数
-    orderby = "name" # 标签排序方式，可选值：['name', 'count']
+    orderby = "name" # 标签排序方式，可选值：["name", "count"]
 
   # 主页配置
   [params.home]
