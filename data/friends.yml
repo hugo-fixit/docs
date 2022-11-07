@@ -29,6 +29,11 @@
   url: https://wlanxww.com
   description: wlanxww's blog
 
+- nickname: Ayang
+  avatar: https://ayang.ink/images/avatar.jpg
+  url: https://ayang.ink
+  description: Ayang's blog
+
 - nickname: ADD
   avatar: /fixit.min.svg
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
