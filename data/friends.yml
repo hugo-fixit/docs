@@ -1,18 +1,26 @@
-# Friend/Site info of one 朋友/站点信息例子
-# - nickname: friend's name 朋友名字
-#   avatar: friend's avatar 朋友头像
-#   url: site link 站点链接
-#   description: description of friend/site 对朋友或其站点的说明
-
+# 📌 Sticky author site in https://fixit.lruihao.cn
 - nickname: Lruihao
   avatar: https://lruihao.cn/images/avatar.jpg
   url: https://lruihao.cn
   description: Share programming experience and learning experience.
-
+# -------------------------------------------------------------------------------------
+# Single Friend Link Information
+# 单个友情链接信息
+# -------------------------------------------------------------------------------------
+# - nickname: friend's name 朋友名字
+#   avatar: friend's avatar 朋友头像
+#   url: site link 站点链接
+#   description: description of friend/site 对朋友或其站点的说明
+# -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
 # Add your FixIt site to the list by `nickname` in lexicographical order
 # 按 `nickname` 以字典顺序将您的 FixIt 网站添加到列表中
 # -------------------------------------------------------------------------------------
+
+- nickname: Ayang
+  avatar: https://ayang.ink/images/avatar.jpg
+  url: https://ayang.ink
+  description: Ayang's blog
 
 - nickname: hiifong
   avatar: https://i.hiifong.cc/images/avatar.png
@@ -24,15 +32,15 @@
   url: https://www.nikunokoya.com
   description: Niku's blog
 
+- nickname: Wake Huang
+  avatar: https://www.wakehuang.com/images/avatar.png
+  url: https://www.wakehuang.com
+  description: Wake Huang's blog
+
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
   url: https://wlanxww.com
   description: wlanxww's blog
-
-- nickname: Ayang
-  avatar: https://ayang.ink/images/avatar.jpg
-  url: https://ayang.ink
-  description: Ayang's blog
 
 - nickname: ADD
   avatar: /fixit.min.svg
