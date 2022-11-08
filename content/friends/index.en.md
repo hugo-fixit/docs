@@ -19,9 +19,9 @@ You could add your FixIt site to this page in **nickname** lexicographical order
 
 ```yml
 - nickname: <your nickname>
-   avatar: <your avatar>
-   url: <your site link>
-   description: <description of your site>
+  avatar: <your avatar>
+  url: <your site link>
+  description: <description of your site>
 ```
 
 > :(fa-solid fa-exclamation-triangle): *Website failure, stop maintenance and improper content may be unlinked!*

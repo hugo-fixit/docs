@@ -19,9 +19,9 @@ comment:
 
 ```yml
 - nickname: <your nickname>
-   avatar: <your avatar>
-   url: <your site link>
-   description: <description of your site>
+  avatar: <your avatar>
+  url: <your site link>
+  description: <description of your site>
 ```
 
 > :(fa-solid fa-exclamation-triangle): *网站失效、停止维护、不当内容都可能被取消链接！*

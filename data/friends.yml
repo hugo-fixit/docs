@@ -13,7 +13,7 @@
 #   description: description of friend/site 对朋友或其站点的说明
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
-# Add your FixIt site to the list by `nickname` in lexicographical order
+# Add your FixIt site to the list in `nickname` lexicographical order
 # 按 `nickname` 以字典顺序将您的 FixIt 网站添加到列表中
 # -------------------------------------------------------------------------------------
 
