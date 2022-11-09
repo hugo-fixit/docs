@@ -112,7 +112,7 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **comment**: {{< version 0.2.0 changed >}} the same as the `params.page.comment` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [site configuration](../theme-documentation-basics#site-configuration).
-* **type**: the rendering template of page, see [templates](#tamplates) for details.
+* **type**: the rendering template of page, see [templates](#templates) for details.
 * **menu**: see [Add content to Menu](../theme-documentation-basics#content-to-menu).
 
 * **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/).
@@ -225,7 +225,7 @@ seo:
 ---
 ```
 
-## 3 Tamplates {#tamplates}
+## 3 Templates {#templates}
 
 Generally, you don't need to set the **type** parameter, because Hugo and fixit will help you choose. However, the **FixIt** theme provides some special templates for users to use.
 
