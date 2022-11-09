@@ -110,7 +110,7 @@ menu:
 * **comment**: {{< version 0.2.0 changed >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.comment` 部分相同
 * **library**: {{< version 0.2.7 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.library` 部分相同
 * **seo**: {{< version 0.2.10 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.seo` 部分相同
-* **type**: 页面渲染模板，详见 [页面模板](#tamplates)
+* **type**: 页面渲染模板，详见 [页面模板](#templates)
 * **menu**: 详见 [添加内容到菜单](../theme-documentation-basics#content-to-menu)
 
 * **password**: {{< version 0.2.15 >}} 加密页面内容的密码，详见 [主题文档 - 内容加密](../theme-documentation-content-encryption/)
@@ -223,7 +223,7 @@ seo:
 ---
 ```
 
-## 3 页面模板 {#tamplates}
+## 3 页面模板 {#templates}
 
 一般情况，你不需要设置 **type** 参数，因为 **Hugo** 和 **FixIt** 会帮你选择。但是 **FixIt** 主题提供了一些特殊的模板给用户使用。
 
