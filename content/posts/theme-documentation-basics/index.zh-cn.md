@@ -681,9 +681,9 @@ hugo
         serverURLs = ""
         # {{< version 0.2.6 >}} emoji 数据文件名称，默认是 "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # 位于 "themes/FixIt/assets/data/emoji/" 目录
+        # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
         # 可以在你的项目下相同路径存放你自己的数据文件：
-        # "assets/data/emoji/"
+        # "assets/lib/valine/emoji/"
         emoji = ""
         commentCount = true # {{< version 0.2.13 >}}
       # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} 评论系统设置 (https://waline.js.org)

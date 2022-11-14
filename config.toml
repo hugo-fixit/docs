@@ -665,14 +665,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         serverURLs = ""
         # emoji data file name, default is "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # located in "themes/FixIt/assets/data/emoji/" directory
+        # located in "themes/FixIt/assets/lib/valine/emoji/" directory
         # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
+        # "assets/lib/valine/emoji/"
         # emoji 数据文件名称, 默认是 "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # 位于 "themes/FixIt/assets/data/emoji/" 目录
+        # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
         # 可以在你的项目下相同路径存放你自己的数据文件:
-        # "assets/data/emoji/"
+        # "assets/lib/valine/emoji/"
         emoji = ""
         commentCount = true # since v0.2.13
       # Waline comment config (https://waline.js.org) since v0.2.13

@@ -2,10 +2,10 @@
 title: "Friends"
 subtitle: Recording some friends who use FixIt theme
 type: "friends"
-description: "Friends tempalate demo of FixIt theme"
+description: "Friends template demo of FixIt theme"
 keywords: 
   - Hugo
-  - friends tempalate
+  - friends template
 comment:
   giscus:
     mapping: "number"

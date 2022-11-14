@@ -680,9 +680,9 @@ Please open the code block below to view the complete `config.toml` sample confi
         serverURLs = ""
         # {{< version 0.2.6 >}} emoji data file name, default is "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # located in "themes/FixIt/assets/data/emoji/" directory
+        # located in "themes/FixIt/assets/lib/valine/emoji/" directory
         # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
+        # "assets/lib/valine/emoji/"
         emoji = ""
         commentCount = true # {{< version 0.2.13 >}}
       # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} comment config (https://waline.js.org)
