@@ -17,9 +17,6 @@ math:
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
-
-[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=Production&logo=vercel)](https://fixit.lruihao.cn/)
-[![Preview environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Preview?style=flat&label=Preview&logo=vercel)](https://pre.fixit.lruihao.cn/)
 {{< /style >}}
 
 > [<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://lruihao.cn).

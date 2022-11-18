@@ -18,9 +18,6 @@ math:
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
-
-[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=生产环境&logo=vercel)](https://fixit.lruihao.cn/)
-[![Preview environment](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Preview?style=flat&label=预览环境&logo=vercel)](https://pre.fixit.lruihao.cn/)
 {{< /style >}}
 
 > [<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://lruihao.cn) 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
