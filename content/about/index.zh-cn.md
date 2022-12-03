@@ -72,7 +72,7 @@ math:
 * :(fa-solid fa-bars fa-fw): 支持**二级菜单**
 * :(fa-solid fa-lock fa-fw): 支持**内容加密**（页面、局部）
 * :(fa-solid fa-users fa-fw): 支持**友情链接**的页面模板
-* :(fa-solid fa-search fa-fw): 支持基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 的**搜索**
+* :(fa-solid fa-search fa-fw): 支持基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 或 [Fuse.js](https://fusejs.io/) 的**搜索**
 * :(fa-regular fa-grin-tongue-wink fa-fw): 支持 **Twemoji**
 * :(fa-solid fa-code fa-fw): 支持**代码高亮**
 * :(fa-regular fa-copy fa-fw): 一键**复制代码**到剪贴板
@@ -107,6 +107,7 @@ math:
 * [autocomplete-js](https://github.com/algolia/autocomplete)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
+* [Fuse.js](https://fusejs.io/)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
@@ -141,6 +142,7 @@ math:
 <summary>FixIt 主题还借鉴了以下项目的部分功能，同样感谢它们的作者：</summary>
 
 * [DoIt](https://github.com/HEIGE-PCloud/DoIt)
+* [NexT](https://github.com/next-theme/hexo-theme-next)
 
 </details>
 

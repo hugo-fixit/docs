@@ -71,7 +71,7 @@ math:
 * :(fa-solid fa-bars fa-fw): **Sub Menu** supported
 * :(fa-solid fa-lock fa-fw): **Content Encryption** supported (Pages, Partial)
 * :(fa-solid fa-users fa-fw): **Friends** page embedded template
-* :(fa-solid fa-search fa-fw): **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/)
+* :(fa-solid fa-search fa-fw): **Search** supported by [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/) or [Fuse.js](https://fusejs.io/)
 * :(fa-regular fa-grin-tongue-wink fa-fw): **Twemoji** supported
 * :(fa-solid fa-code fa-fw): Automatically **highlighting** code
 * :(fa-regular fa-copy fa-fw): **Copy code** to clipboard with one click
@@ -106,6 +106,7 @@ math:
 * [autocomplete-js](https://github.com/algolia/autocomplete)
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
+* [Fuse.js](https://fusejs.io/)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
@@ -140,6 +141,7 @@ math:
 <summary>The FixIt also draws on some features of the following projects, and thanks to their authors as well:</summary>
 
 * [DoIt](https://github.com/HEIGE-PCloud/DoIt)
+* [NexT](https://github.com/next-theme/hexo-theme-next)
 
 </details>
 

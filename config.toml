@@ -119,7 +119,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   images = ["/logo.png"]
   # enable PWA since v0.2.12
   # 开启 PWA 支持 since v0.2.12
-  enablePWA = true
+  enablePWA = false
   # whether to add external Icon for external links automatically since v0.2.14
   # 是否自动显示外链图标 since v0.2.14
   externalIcon = true
@@ -157,8 +157,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # 搜索配置
   [params.search]
     enable = true
-    # type of search engine ["lunr", "algolia"]
-    # 搜索引擎的类型 ["lunr", "algolia"]
+    # type of search engine ["lunr", "algolia", "fuse"]
+    # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
     type = "lunr"
     # max index length of the chunked content
     # 文章内容最长索引长度
@@ -182,6 +182,17 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       index = ""
       appID = ""
       searchKey = ""
+    [params.search.fuse]
+      # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
 
   # Header config
   # 页面头部导航栏配置
