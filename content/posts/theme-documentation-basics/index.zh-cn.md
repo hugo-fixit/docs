@@ -273,7 +273,7 @@ hugo
   # {{< version 0.2.0 >}} 搜索配置
   [params.search]
     enable = true
-    # 搜索引擎的类型 ["lunr", "algolia"]
+    # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
     type = "lunr"
     # 文章内容最长索引长度
     contentLength = 4000
@@ -291,6 +291,17 @@ hugo
       index = ""
       appID = ""
       searchKey = ""
+    [params.search.fuse]
+      # {{< version 0.2.17 >}} https://fusejs.io/api/options.html
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
 
   # 页面头部导航栏配置
   [params.header]
@@ -797,6 +808,7 @@ hugo
   [params.pangu]
     # 适用于中文写作用户
     enable = false
+    selector = "article" # {{< version 0.2.17 >}}
   
   # {{< version 0.2.12 >}} 水印配置
   # 详细参数见 https://github.com/Lruihao/watermark#readme
@@ -1468,7 +1480,7 @@ defaultContentLanguage = "zh-cn"
 ```toml
 [params.search]
   enable = true
-  # 搜索引擎的类型 ["lunr", "algolia"]
+  # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
   type = "lunr"
   # 文章内容最长索引长度
   contentLength = 4000
@@ -1486,11 +1498,23 @@ defaultContentLanguage = "zh-cn"
     index = ""
     appID = ""
     searchKey = ""
+  [params.search.fuse]
+    # {{< version 0.2.17 >}} https://fusejs.io/api/options.html
+    isCaseSensitive = false
+    minMatchCharLength = 2
+    findAllMatches = false
+    location = 0
+    threshold = 0.3
+    distance = 100
+    ignoreLocation = false
+    useExtendedSearch = false
+    ignoreFieldNorm = false
 ```
 
 {{< admonition note "怎样选择搜索引擎？" >}}
 以下是两种搜索引擎的对比：
 
+- `fuse`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制, 性能高
 - `lunr`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，但占用带宽大且性能低（特别是中文需要一个较大的分词依赖库）
 - `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
 

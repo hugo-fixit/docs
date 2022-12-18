@@ -819,8 +819,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # For Chinese writing
     # 适用于中文写作用户
     enable = false
-    # TODO 为空则全局生效
-    selector = ''
+    selector = "article" # FixIt 0.2.17 | NEW
 
   # Watermark config since v0.2.12
   # Detail config see https://github.com/Lruihao/watermark#readme
@@ -1324,6 +1323,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         RSS = true
       [languages.zh-cn.params.pangu]
         enable = true
+        selector = "article"
       [languages.zh-cn.params.watermark]
         enable = true
         content = '<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'

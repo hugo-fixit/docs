@@ -807,6 +807,7 @@ Please open the code block below to view the complete `config.toml` sample confi
   [params.pangu]
     # For Chinese writing
     enable = false
+    selector = "article" # {{< version 0.2.17 >}}
 
   # {{< version 0.2.12 >}} Watermark config
   # Detail config see https://github.com/Lruihao/watermark#readme
