@@ -354,6 +354,13 @@ Please open the code block below to view the complete `config.toml` sample confi
       icon = "fa-solid fa-heartbeat"
       pre = ""
       value = "" # e.g. "2021-12-18T16:15:22+08:00"
+    # {{< version 0.2.17 >}} footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
+    [params.footer.order]
+      powered = 0
+      copyright = 0
+      statistics = 0
+      visitor = 0
+      beian = 0
 
   # {{< version 0.2.0 >}} Section (all posts) page config
   [params.section]

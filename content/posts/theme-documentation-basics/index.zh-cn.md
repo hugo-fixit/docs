@@ -355,6 +355,13 @@ hugo
       icon = "fa-solid fa-heartbeat"
       pre = ""
       value = "" # e.g. "2021-12-18T16:15:22+08:00"
+    # {{< version 0.2.17 >}} 页面底部行排序，可选值：["first", 0, 1, 2, 3, 4, 5, "last"]
+    [params.footer.order]
+      powered = 0
+      copyright = 0
+      statistics = 0
+      visitor = 0
+      beian = 0
 
   # {{< version 0.2.0 >}} Section（所有文章）页面配置
   [params.section]
