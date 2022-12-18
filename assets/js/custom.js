@@ -32,6 +32,6 @@ const Docs = new (function () {
   // Docs.init();
   // It will be executed when the DOM tree is built.
   document.addEventListener('DOMContentLoaded', () => {
-    Docs.init();
+    // Docs.init();
   });
 })();
