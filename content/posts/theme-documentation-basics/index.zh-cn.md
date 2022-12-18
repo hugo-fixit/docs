@@ -341,8 +341,6 @@ hugo
     author = true
     # 网站创立年份
     since = 2021
-    # {{< version 0.2.14 >}} 网站创立时间
-    siteTime = "" # 例："2021-12-18T16:15:22+08:00"
     # {{< version 0.2.14 >}} 是否显示网站内容总字数
     wordCount = true
     # {{< version 0.2.12 >}} 公网安备信息，仅在中国使用（支持 HTML 格式）
@@ -351,6 +349,12 @@ hugo
     icp = ""
     # 许可协议信息（支持 HTML 格式）
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    # {{< version 0.2.17 changed >}} 网站创立时间
+    [params.footer.siteTime]
+      animate = true
+      icon = "fa-solid fa-heartbeat"
+      pre = ""
+      value = "" # e.g. "2021-12-18T16:15:22+08:00"
 
   # {{< version 0.2.0 >}} Section（所有文章）页面配置
   [params.section]
@@ -840,9 +844,6 @@ hugo
     enable = true
     # 在文章中开启
     enablePost = false
-    # {{< version 0.2.14 changed >}} {{< version 0.2.15 deleted >}} 网站创立时间
-    # 参数 `ibruce.siteTime` 自 v0.2.14 起已弃用，请改用 `footer.siteTime`
-    # siteTime = "" # 例："2021-12-18T16:15:22+08:00"
 
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]

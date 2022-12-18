@@ -340,8 +340,6 @@ Please open the code block below to view the complete `config.toml` sample confi
     author = true
     # Site creation year
     since = 2021
-    # {{< version 0.2.14 >}} Site creation time
-    siteTime = "" # e.g. "2021-12-18T16:15:22+08:00"
     # {{< version 0.2.14 >}} whether to show total word count of site content
     wordCount = true
     # {{< version 0.2.12 >}} Public network security only in China (HTML format is supported)
@@ -350,6 +348,12 @@ Please open the code block below to view the complete `config.toml` sample confi
     icp = ""
     # license info (HTML format is supported)
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    # {{< version 0.2.17 changed >}} Site creation time
+    [params.footer.siteTime]
+      animate = true
+      icon = "fa-solid fa-heartbeat"
+      pre = ""
+      value = "" # e.g. "2021-12-18T16:15:22+08:00"
 
   # {{< version 0.2.0 >}} Section (all posts) page config
   [params.section]
@@ -839,9 +843,6 @@ Please open the code block below to view the complete `config.toml` sample confi
     enable = true
     # Enable in post meta
     enablePost = false
-    # {{< version 0.2.14 changed >}} {{< version 0.2.15 deleted >}} Site creation time
-    # The parameter `ibruce.siteTime` is deprecated since v0.2.14, use `footer.siteTime` instead
-    # siteTime = "" # e.g. "2021-12-18T16:15:22+08:00"
 
   # Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
