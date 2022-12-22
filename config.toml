@@ -119,7 +119,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   images = ["/logo.png"]
   # enable PWA since v0.2.12
   # 开启 PWA 支持 since v0.2.12
-  enablePWA = false
+  enablePWA = true
   # whether to add external Icon for external links automatically since v0.2.14
   # 是否自动显示外链图标 since v0.2.14
   externalIcon = true
