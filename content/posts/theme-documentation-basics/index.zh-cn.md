@@ -937,6 +937,18 @@ hugo
     dark = ""
     height = "2px"
 
+  # {{< version 0.2.17 >}} 页面加载期间顶部的进度条
+  # 有关详细信息：https://github.com/CodeByZach/pace
+  [params.pace]
+    enable = false
+    # 所有可用颜色：
+    # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
+    color = "blue"
+    # 所有可用主题：
+    # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
+    # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
+    theme = "minimal"
+
   # {{< version 0.2.17 >}} 定义自定义文件路径
   # 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件
   [params.customFilePath]

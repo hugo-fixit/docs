@@ -267,7 +267,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       pre = ""
       value = "2021-12-18T16:15:22+08:00"
     # FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
-    # FixIt 0.2.17 | NEW 页面底部行排序，可选值：["first", 0, 1, 2, 3, 4, 5, "last"]
+    # FixIt 0.2.17 | 新增 页面底部行排序，可选值：["first", 0, 1, 2, 3, 4, 5, "last"]
     [params.footer.order]
       powered = 0
       copyright = 0
@@ -986,6 +986,22 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     light = "#000"
     dark = "#fff"
     height = "2px"
+
+  # FixIt 0.2.17 | NEW Progress bar in the top during page loading
+  # For more information: https://github.com/CodeByZach/pace
+  # FixIt 0.2.17 | 新增 页面加载期间顶部的进度条
+  # 有关详细信息：https://github.com/CodeByZach/pace
+  [params.pace]
+    enable = true
+    # All available colors:
+    # 所有可用颜色：
+    # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
+    color = "blue"
+    # All available themes:
+    # 所有可用主题：
+    # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
+    # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
+    theme = "minimal"
 
   # Define custom file paths
   # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below

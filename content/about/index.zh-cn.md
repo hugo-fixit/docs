@@ -135,6 +135,7 @@ math:
 * [crypto-js](https://github.com/brix/crypto-js)
 * [vConsole](https://github.com/Tencent/vConsole)
 * [eruda](https://github.com/liriliri/eruda)
+* [pace](https://github.com/CodeByZach/pace)
 
 </details>
 
