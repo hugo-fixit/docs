@@ -267,6 +267,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # FixIt 0.2.17 | CHANGED Site creation time
     # FixIt 0.2.17 | 更改 网站创立时间
     [params.footer.siteTime]
+      enable = true
       animate = true
       icon = "fa-solid fa-heartbeat"
       pre = ""

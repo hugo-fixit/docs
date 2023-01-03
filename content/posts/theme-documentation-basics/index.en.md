@@ -351,6 +351,7 @@ Please open the code block below to view the complete `config.toml` sample confi
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
     # {{< version 0.2.17 changed >}} Site creation time
     [params.footer.siteTime]
+      enable = false
       animate = true
       icon = "fa-solid fa-heartbeat"
       pre = ""

@@ -352,6 +352,7 @@ hugo
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
     # {{< version 0.2.17 changed >}} 网站创立时间
     [params.footer.siteTime]
+      enable = false
       animate = true
       icon = "fa-solid fa-heartbeat"
       pre = ""
