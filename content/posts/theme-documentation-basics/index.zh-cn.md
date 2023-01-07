@@ -673,7 +673,7 @@ hugo
         editorTravel = true
         flatMode = "auto"
         maxNesting = 3
-        # 当 `params.page.lightgallery` 启用时生效
+        # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
         lightgallery = false
         locale = "" # {{< version 0.2.15 >}}
       # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} 评论系统设置 (https://disqus.com)
@@ -764,8 +764,10 @@ hugo
         path = ""
         visitor = true
         commentCount = true
-        # 当 `params.page.lightgallery` 启用时生效
+        # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
         lightgallery = false
+        # {{< version 0.2.17 >}} 启用 Katex 支持
+        katex = false
       # {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} 评论系统设置
       [params.page.comment.giscus]
         enable = false

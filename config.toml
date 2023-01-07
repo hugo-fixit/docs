@@ -657,8 +657,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         editorTravel = true
         flatMode = 'auto'
         maxNesting = 3
-        # It take effect when `params.page.lightgallery` is enabled
-        # 当 `params.page.lightgallery` 启用时生效
+        # FixIt 0.2.17 | CHANGED enable lightgallery support
+        # FixIt 0.2.17 | 更改 启用 lightgallery 支持
         lightgallery = false
         locale = "" # since v0.2.15
       # Disqus comment config (https://disqus.com/)
@@ -764,9 +764,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         path = ""
         visitor = true
         commentCount = true
-        # It take effect when `params.page.lightgallery` is enabled
-        # 当 `params.page.lightgallery` 启用时生效
+        # FixIt 0.2.17 | CHANGED enable lightgallery support
+        # FixIt 0.2.17 | 更改 启用 lightgallery 支持
         lightgallery = false
+        # FixIt 0.2.17 | NEW enable Katex support
+        # FixIt 0.2.17 | 新增 启用 Katex 支持
+        katex = false
       # Giscus comments config (https://giscus.app/) since v0.2.14
       # Giscus 评论系统设置 (https://giscus.app/) since v0.2.14
       [params.page.comment.giscus]

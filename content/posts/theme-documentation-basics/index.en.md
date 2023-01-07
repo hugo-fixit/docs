@@ -672,7 +672,7 @@ Please open the code block below to view the complete `config.toml` sample confi
         editorTravel = true
         flatMode = "auto"
         maxNesting = 3
-        # It take effect when `params.page.lightgallery` is enabled
+        # {{< version 0.2.17 changed >}} enable lightgallery support
         lightgallery = false
         locale = "" # {{< version 0.2.15 >}}
       # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} comment config (https://disqus.com)
@@ -763,8 +763,10 @@ Please open the code block below to view the complete `config.toml` sample confi
         path = ""
         visitor = true
         commentCount = true
-        # It take effect when `params.page.lightgallery` is enabled
+        # {{< version 0.2.17 changed >}} enable lightgallery support
         lightgallery = false
+        # {{< version 0.2.17 >}} enable Katex support
+        katex = false
       # {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} comments config
       [params.page.comment.giscus]
         enable = false
