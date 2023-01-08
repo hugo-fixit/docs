@@ -778,7 +778,7 @@ hugo
         mapping = ""
         reactionsEnabled = "1"
         emitMetadata = "0"
-        inputPosition = "bottom" # top, bottom
+        inputPosition = "bottom" # ["top", "bottom"]
         lightTheme = "light"
         darkTheme = "dark"
         lazyLoad = true

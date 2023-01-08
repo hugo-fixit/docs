@@ -1,0 +1,18 @@
+# -------------------------------------------------------------------------------------
+# Output Format Definitions | 输出格式定义
+# See: https://gohugo.io/templates/output-formats/#output-format-definitions
+# -------------------------------------------------------------------------------------
+
+# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
+[MarkDown]
+  mediaType = "text/markdown"
+  isPlainText = true
+  isHTML = false
+# Options to make output baidu_urls.txt file
+# 用于输出 baidu_urls.txt 文件的设置
+[BaiduUrls]
+  baseName = "baidu_urls"
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false

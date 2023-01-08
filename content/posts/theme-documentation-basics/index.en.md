@@ -777,7 +777,7 @@ Please open the code block below to view the complete `config.toml` sample confi
         mapping = ""
         reactionsEnabled = "1"
         emitMetadata = "0"
-        inputPosition = "bottom" # top, bottom
+        inputPosition = "bottom" # ["top", "bottom"]
         lightTheme = "light"
         darkTheme = "dark"
         lazyLoad = true

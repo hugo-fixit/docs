@@ -1,0 +1,238 @@
+# -------------------------------------------------------------------------------------
+# Multilingual and i18n | 多语言 i18n
+# See: https://gohugo.io/content-management/multilingual/#configure-languages
+# -------------------------------------------------------------------------------------
+
+[en]
+  weight = 1
+  languageCode = "en"
+  languageName = "English"
+  hasCJKLanguage = false
+  copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+  [en.menu]
+    [[en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "posts/"
+      weight = 1
+      [en.menu.main.params]
+        icon = "fa-solid fa-archive"
+    [[en.menu.main]]
+      identifier = "categories"
+      name = "Categories"
+      url = "categories/"
+      weight = 2
+      [en.menu.main.params]
+        icon = "fa-solid fa-th"
+    [[en.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "tags/"
+      weight = 3
+      [en.menu.main.params]
+        icon = "fa-solid fa-tags"
+    [[en.menu.main]]
+      identifier = "documentation"
+      name = "Docs"
+      url = "categories/documentation/"
+      title = "Theme Documentation"
+      weight = 4
+      [en.menu.main.params]
+        icon = "fa-solid fa-book"
+    [[en.menu.main]]
+      identifier = "tests"
+      name = "Tests"
+      url = "tests/"
+      title = "Test for FixIt"
+      weight = 5
+      [en.menu.main.params]
+        draft = true
+        icon = "fa-solid fa-flask"
+    [[en.menu.main]]
+      identifier = "friends"
+      name = "Friends"
+      url = "friends/"
+      weight = 6
+      [en.menu.main.params]
+        icon = "fa-solid fa-users"
+    [[en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "about/"
+      weight = 7
+      [en.menu.main.params]
+        icon = "fa-solid fa-info-circle"
+    [[en.menu.main]]
+      identifier = "github"
+      pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
+      url = "https://github.com/hugo-fixit/FixIt"
+      title = "GitHub"
+      weight = 8
+      [en.menu.main.params]
+        class = "text-center"
+        type = "mobile"
+  [en.params]
+    [en.params.search]
+      enable = true
+      type = "algolia"
+      contentLength = 4000
+      placeholder = ""
+      maxResultLength = 10
+      snippetLength = 30
+      highlightTag = "em"
+      absoluteURL = false
+      [en.params.search.algolia]
+        index = "index.en"
+        appID = "YKOM6PKLUY"
+        searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
+    [en.params.home]
+      rss = 10
+      [en.params.home.profile]
+        enable = true
+        gravatarEmail = ""
+        avatarURL = "/images/avatar.png"
+        title = ""
+        subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+        typeit = true
+        social = true
+        disclaimer = ""
+      [en.params.home.posts]
+        enable = true
+        paginate = 6
+    [en.params.social]
+      GitHub = "xxxx"
+      Twitter = "xxxx"
+      Instagram = "xxxx"
+      Facebook = "xxxx"
+      Telegram = "xxxx"
+      Youtubelegacy = "xxxx"
+      Email = "xxxx@xxxx.com"
+      RSS = true
+      [en.params.social.Mastodon]
+        id = "@xxxx"
+        prefix = "https://mastodon.technology/"
+
+[zh-cn]
+  weight = 2
+  languageCode = "zh-CN"
+  languageName = "简体中文"
+  hasCJKLanguage = true
+  copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+  [zh-cn.menu]
+    [[zh-cn.menu.main]]
+      identifier = "posts"
+      name = "所有文章"
+      url = "posts/"
+      weight = 1
+      [zh-cn.menu.main.params]
+        icon = "fa-solid fa-archive"
+    [[zh-cn.menu.main]]
+      identifier = "categories"
+      name = "分类"
+      url = "categories/"
+      weight = 2
+      [zh-cn.menu.main.params]
+        icon = "fa-solid fa-th"
+    [[zh-cn.menu.main]]
+      identifier = "tags"
+      name = "标签"
+      url = "tags/"
+      weight = 3
+      [zh-cn.menu.main.params]
+        icon = "fa-solid fa-tags"
+    [[zh-cn.menu.main]]
+      identifier = "documentation"
+      name = "文档"
+      url = "categories/documentation/"
+      title = "主题文档"
+      weight = 4
+      [zh-cn.menu.main.params]
+        icon = "fa-solid fa-book"
+    [[zh-cn.menu.main]]
+      identifier = "tests"
+      name = "测试"
+      url = "tests/"
+      title = "FixIt 测试"
+      weight = 5
+      [zh-cn.menu.main.params]
+        draft = true
+        icon = "fa-solid fa-flask"
+    [[zh-cn.menu.main]]
+      identifier = "friends"
+      name = "友链"
+      url = "friends/"
+      title = "友情链接"
+      weight = 6
+      [zh-cn.menu.main.params]
+        icon = "fa-solid fa-users"
+    [[zh-cn.menu.main]]
+      identifier = "about"
+      name = "关于"
+      url = "about/"
+      weight = 7
+      [zh-cn.menu.main.params]
+        icon = "fa-solid fa-info-circle"
+    [[zh-cn.menu.main]]
+      identifier = "github"
+      pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
+      url = "https://github.com/hugo-fixit/FixIt"
+      title = "GitHub"
+      weight = 8
+      [zh-cn.menu.main.params]
+        class = "text-center"
+        type = "mobile"
+  [zh-cn.params]
+    description = "Hugo 主题 - FixIt"
+    [zh-cn.params.search]
+      enable = true
+      type = "algolia"
+      contentLength = 4000
+      placeholder = ""
+      maxResultLength = 10
+      snippetLength = 50
+      highlightTag = "em"
+      absoluteURL = false
+      [zh-cn.params.search.algolia]
+        index = "index.zh-cn"
+        appID = "YKOM6PKLUY"
+        searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
+    [zh-cn.params.home]
+      rss = 10
+      [zh-cn.params.home.profile]
+        enable = true
+        gravatarEmail = ""
+        avatarURL = "/images/avatar.png"
+        title = ""
+        subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+        typeit = true
+        social = true
+        disclaimer = ""
+      [zh-cn.params.home.posts]
+        enable = true
+        paginate = 6
+    [zh-cn.params.social]
+      GitHub = "xxxx"
+      Steam = "xxxx"
+      Zhihu = "xxxx"
+      Douban = "xxxx"
+      Devto = "xxxx"
+      Bilibili = "xxxx"
+      QQGroup = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM" # https://qun.qq.com/join.html
+      Email = "xxxx@xxxx.com"
+      RSS = true
+    [zh-cn.params.pangu]
+      enable = true
+      selector = "article"
+    [zh-cn.params.watermark]
+      enable = true
+      content = '<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'
+      opacity = 0.0125
+      height = 21
+    [zh-cn.params.githubCorner]
+      enable = true
+      permalink = "https://github.com/hugo-fixit/FixIt"
+      title = "在 GitHub 上查看源代码"
+      position = "right"
+    [zh-cn.params.gravatar]
+      host = "gravatar.loli.net"
+      style = "mp"

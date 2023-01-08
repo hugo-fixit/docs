@@ -1,0 +1,12 @@
+# -------------------------------------------------------------------------------------
+# Customizing Output Formats | 自定义输出格式
+# See: https://gohugo.io/templates/output-formats/#customizing-output-formats
+# -------------------------------------------------------------------------------------
+
+# Options to make hugo output files
+# 用于 Hugo 输出文档的设置
+home = ["HTML", "RSS", "JSON", "BaiduUrls"]
+page = ["HTML", "MarkDown"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+taxonomyTerm = ["HTML"]
