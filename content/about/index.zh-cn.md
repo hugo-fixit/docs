@@ -5,9 +5,7 @@ draft: false
 comment: false
 comment: false
 pageStyle: "wide"
-
 lightgallery: true
-
 math:
   enable: true
 ---
@@ -47,24 +45,25 @@ math:
 * :(fa-regular fa-list-alt fa-fw): 易用和自动展开的**文章目录**
 * :(fa-solid fa-language fa-fw): 支持**多语言**和国际化
 * :(fa-brands fa-css3-alt fa-fw): 美观的 **CSS 动画**
+* :(fa-solid fa-text-width fa-fw): 灵活的 **页面宽度**
 
 #### 社交和评论系统
 
 * :(fa-regular fa-user fa-fw): 支持 **[Gravatar](https://gravatar.com)** 头像
 * :(fa-solid fa-user-circle fa-fw): 支持本地**头像**
-* :(fa-regular fa-id-card fa-fw): 支持多达 **85** 种社交链接
+* :(fa-regular fa-id-card fa-fw): 支持多达 **87** 种社交链接
 * :(fa-solid fa-share-square fa-fw): 支持多达 **28** 种网站分享
-* :(fa-regular fa-comment fa-fw): 支持 **[Disqus](https://disqus.com)** 评论系统
-* :(fa-regular fa-comment-dots fa-fw): 支持 **[Gitalk](https://github.com/gitalk/gitalk)** 评论系统
-* :(fa-regular fa-comment-alt fa-fw): 支持 **[Valine](https://valine.js.org/)** 评论系统
-* :(fa-regular fa-comment-alt fa-fw): 支持 **[Waline](https://waline.js.org/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Disqus](https://disqus.com)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Gitalk](https://github.com/gitalk/gitalk)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Valine](https://valine.js.org/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Waline](https://waline.js.org/)** 评论系统
 * :(fa-regular fa-comments fa-fw): 支持 **[Facebook](https://developers.facebook.com/docs/plugins/comments/) 评论**系统
-* :(fa-solid fa-comment fa-fw): 支持 **[Telegram comments](https://comments.app/) 评论**系统
-* :(fa-solid fa-comment-dots fa-fw): 支持 **[Commento](https://commento.io/)** 评论系统
-* :(fa-regular fa-comment-alt fa-fw): 支持 **[Utterances](https://utteranc.es/)** 评论系统
-* :(fa-regular fa-comment-alt fa-fw): 支持 **[Artalk](https://artalk.js.org/)** 评论系统
-* :(fa-regular fa-comment-alt fa-fw): 支持 **[Twikoo](https://twikoo.js.org/)** 评论系统
-* :(fa-regular fa-comment-alt fa-fw): 支持 **[giscus](https://giscus.app/zh-CN/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Telegram comments](https://comments.app/) 评论**系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Commento](https://commento.io/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Utterances](https://utteranc.es/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Artalk](https://artalk.js.org/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[Twikoo](https://twikoo.js.org/)** 评论系统
+* :(fa-regular fa-comments fa-fw): 支持 **[giscus](https://giscus.app/zh-CN/)** 评论系统
 
 #### 扩展功能
 
@@ -78,16 +77,16 @@ math:
 * :(fa-regular fa-copy fa-fw): 一键**复制代码**到剪贴板
 * :(fa-regular fa-images fa-fw): 支持基于 [lightgallery](https://github.com/sachinchoolur/lightgallery) 的**图片画廊**
 * :(fa-brands fa-font-awesome fa-fw): 支持 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
-* :(fa-regular fa-sticky-note fa-fw): 支持**上标注释**的扩展 Markdown 语法
+* :(fa-solid fa-superscript fa-fw): 支持**上标注释**的扩展 Markdown 语法
 * :(fa-solid fa-percentage fa-fw): 支持**分数**的扩展 Markdown 语法
 * :(fa-solid fa-square-root-alt fa-fw): 支持基于 [$\KaTeX$](https://katex.org/) 的**数学公式**
 * :(fa-solid fa-project-diagram fa-fw): 支持基于 [mermaid](https://github.com/knsv/mermaid) 的**图表** shortcode
 * :(fa-solid fa-chart-pie fa-fw): 支持基于 [ECharts](https://echarts.apache.org/) 的**交互式数据可视化** shortcode
 * :(fa-solid fa-map-marked-alt fa-fw): 支持基于 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 的 **Mapbox** shortcode
 * :(fa-solid fa-music fa-fw): 支持基于 [APlayer](https://github.com/MoePlayer/APlayer) 和 [MetingJS](https://github.com/metowolf/MetingJS) 的**音乐播放器** shortcode
-* :(fa-solid fa-video fa-fw): 支持 **Bilibili 视频** shortcode
-* :(fa-regular fa-bell fa-fw): 支持多种**注释**的 shortcode
-* :(fa-solid fa-align-left fa-fw): 支持**自定义样式**的 shortcode
+* :(fa-brands fa-bilibili fa-fw): 支持 **Bilibili 视频** shortcode
+* :(fa-regular fa-note-sticky fa-fw): 支持多种**注释**的 shortcode
+* :(fa-brands fa-css3 fa-fw): 支持**自定义样式**的 shortcode
 * :(fa-brands fa-js-square fa-fw): 支持**自定义脚本**的 shortcode
 * :(fa-solid fa-i-cursor fa-fw): 支持基于 [TypeIt](https://typeitjs.com/) 的**打字动画** shortcode
 * :(fa-solid fa-cookie-bite fa-fw): 支持基于 [cookieconsent](https://github.com/osano/cookieconsent) 的 **Cookie 许可横幅**

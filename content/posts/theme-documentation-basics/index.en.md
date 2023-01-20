@@ -36,10 +36,10 @@ Discover what the Hugo - **FixIt** theme is all about and the core-concepts behi
 
 Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
 
-Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo (> 0.84.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo (>= 0.84.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
 
 {{< admonition note "Why not support earlier versions of Hugo?" >}}
-Since [HTTP header support in getJSON](https://gohugo.io/templates/data-templates/#add-http-headers) was introduced in the [Config Revamp](https://gohugo.io/news/0.84.0-relnotes/), this theme only supports Hugo versions above **0.84.0**.
+Since [HTTP header support in getJSON](https://gohugo.io/templates/data-templates/#add-http-headers) was introduced in the [Config Revamp](https://gohugo.io/news/0.84.0-relnotes/), this theme only supports Hugo versions not lower than **0.84.0**.
 {{< /admonition >}}
 
 {{< admonition tip "Hugo extended version is recommended" >}}
@@ -61,9 +61,17 @@ cd my_website
 
 ### 2.2 Install the Theme
 
+{{< link "https://github.com/hugo-fixit/FixIt" "source of FixIt theme" "" true >}}
+
 The **FixIt** theme’s repository is: <https://github.com/hugo-fixit/FixIt>.
 
+There are many ways to quickly install themes, just choose **one** of them.
+
+#### 2.2.1 Manual
+
 You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/hugo-fixit/FixIt/releases) of the theme and extract it in the `themes` directory.
+
+#### 2.2.2 Git Clone
 
 Alternatively, clone this repository to the `themes` directory:
 
@@ -71,18 +79,23 @@ Alternatively, clone this repository to the `themes` directory:
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+#### 2.2.3 Git Submodule (Recommend)
+
 Or, create an empty git repository and make this repository a submodule of your site directory:
 
 ```bash
 git init
+# Stable version
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
-```
-
-If you want to get faster updates, you can set the theme branch to `dev`.
-
-```bash
+# ⚠️ Dev version
+git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
+# switch version
 git submodule set-branch -b dev themes/FixIt
 ```
+
+#### 2.2.4 Hugo Module (Recommend)
+
+TODO ...
 
 ### 2.3 Basic Configuration {#basic-configuration}
 
@@ -214,7 +227,7 @@ A `public` folder will be generated, containing all static content and assets fo
 
 {{< admonition tip >}}
 The website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)).
-Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and more...
+Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and [more](https://gohugo.io/hosting-and-deployment/) ...
 {{< /admonition >}}
 
 ## 3 Configuration
@@ -222,6 +235,8 @@ Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deploymen
 ### 3.1 Site Configuration {#site-configuration}
 
 In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration (see [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) for default values).
+
+> Note that some of these parameters are explained in details in other sections of this documentation.
 
 Please open the code block below to view the complete `config.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -1058,19 +1073,6 @@ Please open the code block below to view the complete `config.toml` sample confi
   taxonomyTerm = ["HTML"]
 ```
 
-{{< admonition >}}
-Note that some of these parameters are explained in details in other sections of this documentation.
-{{< /admonition >}}
-
-{{< admonition note "Hugo environments" >}}
-Default environments are `development` with `hugo server` and `production` with `hugo`.
-
-Due to limitations in the local `development` environment,
-the **comment system**, **CDN** and **fingerprint** will not be enabled in the `development` environment.
-
-You could enable these features with `hugo server -e production`.
-{{< /admonition >}}
-
 {{< admonition tip "Tips about CDN Configuration" >}}
 {{< version 0.2.7 changed >}}
 
@@ -1282,7 +1284,7 @@ The parent item of a menu item should be the `identifier` of another menu item, 
 
 {{< version 0.2.14 >}}
 
-You can also add user-defined content to menu items via the `params` field. The FixIt theme currently provides two parameters:
+You can also add user-defined content to menu items via the `params` field. The FixIt theme currently provides four parameters:
 
 - **class** *{String}* add css class to a specific menu item
 - **draft** *{Boolean}* whether set as a draft menu item whose function is similar to a draft post/page
@@ -1482,7 +1484,7 @@ By the way, as these translations could be used by other people, please take the
 
 {{< version 0.2.0 >}}
 
-Based on [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/), searching is supported in **FixIt** theme.
+Based on [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/) or [Fuse.js](https://fusejs.io/), searching is supported in **FixIt** theme.
 
 ### 5.1 Output Configuration
 

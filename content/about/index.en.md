@@ -4,9 +4,7 @@ date: 2019-08-02T11:04:49+08:00
 draft: false
 comment: false
 pageStyle: "wide"
-
 lightgallery: true
-
 math:
   enable: true
 ---
@@ -46,24 +44,25 @@ math:
 * :(fa-regular fa-list-alt fa-fw): Easy-to-use and self-expanding **table of contents**
 * :(fa-solid fa-language fa-fw): **Multilanguage** supported and i18n ready
 * :(fa-brands fa-css3-alt fa-fw): Beautiful **CSS animation**
+* :(fa-solid fa-text-width fa-fw): Flexible **page width**
 
 #### Social and Comment Systems
 
 * :(fa-regular fa-user fa-fw): **Gravatar** supported by [Gravatar](https://gravatar.com)
 * :(fa-solid fa-user-circle fa-fw): Local **Avatar** supported
-* :(fa-regular fa-id-card fa-fw): Up to **85** social links supported
+* :(fa-regular fa-id-card fa-fw): Up to **87** social links supported
 * :(fa-solid fa-share-square fa-fw): Up to **28** share sites supported
-* :(fa-regular fa-comment fa-fw): **Disqus** comment system supported by [Disqus](https://disqus.com)
-* :(fa-regular fa-comment-dots fa-fw): **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
-* :(fa-regular fa-comment-alt fa-fw): **Valine** comment system supported by [Valine](https://valine.js.org/)
-* :(fa-regular fa-comment-alt fa-fw): **Waline** comment system supported by [Waline](https://waline.js.org/)
+* :(fa-regular fa-comments fa-fw): **Disqus** comment system supported by [Disqus](https://disqus.com)
+* :(fa-regular fa-comments fa-fw): **Gitalk** comment system supported by [Gitalk](https://github.com/gitalk/gitalk)
+* :(fa-regular fa-comments fa-fw): **Valine** comment system supported by [Valine](https://valine.js.org/)
+* :(fa-regular fa-comments fa-fw): **Waline** comment system supported by [Waline](https://waline.js.org/)
 * :(fa-regular fa-comments fa-fw): **Facebook comments** system supported by [Facebook](https://developers.facebook.com/docs/plugins/comments/)
-* :(fa-solid fa-comment fa-fw): **Telegram comments** system supported by [Comments](https://comments.app/)
-* :(fa-solid fa-comment-dots fa-fw): **Commento** comment system supported by [Commento](https://commento.io/)
-* :(fa-regular fa-comment-alt fa-fw): **Utterances** comment system supported by [Utterances](https://utteranc.es/)
-* :(fa-regular fa-comment-alt fa-fw): **Artalk** comment system supported by [Artalk](https://artalk.js.org/)
-* :(fa-solid fa-comment-alt fa-fw): **Twikoo** comment system supported by [Twikoo](https://twikoo.js.org/)
-* :(fa-solid fa-comment-alt fa-fw): **giscus** comment system supported by [giscus](https://giscus.app/)
+* :(fa-regular fa-comments fa-fw): **Telegram comments** system supported by [Comments](https://comments.app/)
+* :(fa-regular fa-comments fa-fw): **Commento** comment system supported by [Commento](https://commento.io/)
+* :(fa-regular fa-comments fa-fw): **Utterances** comment system supported by [Utterances](https://utteranc.es/)
+* :(fa-regular fa-comments fa-fw): **Artalk** comment system supported by [Artalk](https://artalk.js.org/)
+* :(fa-regular fa-comments fa-fw): **Twikoo** comment system supported by [Twikoo](https://twikoo.js.org/)
+* :(fa-regular fa-comments fa-fw): **giscus** comment system supported by [giscus](https://giscus.app/)
 
 #### Extended Features
 
@@ -77,16 +76,16 @@ math:
 * :(fa-regular fa-copy fa-fw): **Copy code** to clipboard with one click
 * :(fa-regular fa-images fa-fw): **Images gallery** supported by [lightgallery](https://github.com/sachinchoolur/lightgallery)
 * :(fa-brands fa-font-awesome fa-fw): Extended Markdown syntax for **[Font Awesome](https://fontawesome.com/) icons**
-* :(fa-regular fa-sticky-note fa-fw): Extended Markdown syntax for **ruby annotation**
+* :(fa-solid fa-superscript fa-fw): Extended Markdown syntax for **ruby annotation**
 * :(fa-solid fa-percentage fa-fw): Extended Markdown syntax for **fraction**
 * :(fa-solid fa-square-root-alt fa-fw): **Mathematical formula** supported by [$\KaTeX$](https://katex.org/)
 * :(fa-solid fa-project-diagram fa-fw): **Diagrams** shortcode supported by [mermaid](https://github.com/knsv/mermaid)
 * :(fa-solid fa-chart-pie fa-fw): **Interactive data visualization** shortcode supported by [ECharts](https://echarts.apache.org/)
 * :(fa-solid fa-map-marked-alt fa-fw): **Mapbox** shortcode supported by [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js)
 * :(fa-solid fa-music fa-fw): **Music player** shortcode supported by [APlayer](https://github.com/MoePlayer/APlayer) and [MetingJS](https://github.com/metowolf/MetingJS)
-* :(fa-solid fa-video fa-fw): **Bilibili player** shortcode
-* :(fa-regular fa-bell fa-fw): Kinds of **admonitions** shortcode
-* :(fa-solid fa-align-left fa-fw): **Custom style** shortcode
+* :(fa-brands fa-bilibili fa-fw): **Bilibili player** shortcode
+* :(fa-regular fa-note-sticky fa-fw): Kinds of **admonitions** shortcode
+* :(fa-brands fa-css3 fa-fw): **Custom style** shortcode
 * :(fa-brands fa-js-square fa-fw): **Custom script** shortcode
 * :(fa-solid fa-i-cursor fa-fw): **Animated typing** supported by [TypeIt](https://typeitjs.com/)
 * :(fa-solid fa-cookie-bite fa-fw): **Cookie consent banner** supported by [cookieconsent](https://github.com/osano/cookieconsent)

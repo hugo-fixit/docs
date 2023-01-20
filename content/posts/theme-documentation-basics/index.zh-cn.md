@@ -34,10 +34,10 @@ menu:
 
 由于 Hugo 提供的便利性，[Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖。
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (> 0.84.0)](https://gohugo.io/getting-started/installing/).
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (>= 0.84.0)](https://gohugo.io/getting-started/installing/).
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
-由于 [getJSON 支持添加 HTTP header](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) 在 [配置改造](https://gohugo.io/news/0.84.0-relnotes/) 中被引入，本主题只支持高于 **0.84.0** 的 Hugo 版本。
+由于 [getJSON 支持添加 HTTP header](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) 在 [配置改造](https://gohugo.io/news/0.84.0-relnotes/) 中被引入，本主题只支持不低于 **0.84.0** 的 Hugo 版本。
 {{< /admonition >}}
 
 {{< admonition tip "推荐使用 Hugo extended 版本" >}}
@@ -59,9 +59,17 @@ cd my_website
 
 ### 2.2 安装主题
 
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true >}}
+
 **FixIt** 主题的仓库是：<https://github.com/hugo-fixit/FixIt>
 
+有多种方式可以快速安装主题，请选择其中 **一种** 即可。
+
+#### 2.2.1 手动下载
+
 你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件](https://github.com/hugo-fixit/FixIt/releases) 并且解压放到 `themes` 目录。
+
+#### 2.2.2 Git 克隆
 
 另外，也可以直接把这个主题克隆到 `themes` 目录：
 
@@ -69,18 +77,23 @@ cd my_website
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+#### 2.2.3 Git 子模块（推荐）
+
 或者，初始化你的项目目录为 git 仓库，并且把主题仓库作为你的网站目录的子模块：
 
 ```bash
 git init
+# 稳定版
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
-```
-
-如果你想获得较快的更新，可设置主题分支为 `dev`。
-
-```bash
+# ⚠️ 开发版
+git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
+# 切换版本
 git submodule set-branch -b dev themes/FixIt
 ```
+
+#### 2.2.4 Hugo 模块（推荐）
+
+TODO ...
 
 ### 2.3 基础配置 {#basic-configuration}
 
@@ -215,14 +228,18 @@ hugo
 
 {{< admonition tip >}}
 网站内容可以通过 [Netlify](https://www.netlify.com/) 自动发布和托管（了解有关 [通过 Netlify 进行 HUGO 自动化部署](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/) 的更多信息）。
-或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及更多 ...
+或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及 [更多](https://gohugo.io/hosting-and-deployment/) ...
 {{< /admonition >}}
+
+<!-- TODO 补充快捷模板 -->
 
 ## 3 配置
 
 ### 3.1 网站配置 {#site-configuration}
 
 除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#basic-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数（默认值见 [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml)）。
+
+> 请注意，本文档其他部分将详细解释其中一些参数。
 
 请打开下面的代码块查看完整的 `config.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -1059,20 +1076,6 @@ hugo
   taxonomyTerm = ["HTML"]
 ```
 
-{{< admonition >}}
-请注意，本文档其他部分将详细解释其中一些参数。
-{{< /admonition >}}
-
-{{< admonition note "Hugo 的运行环境" >}}
-`hugo server` 的默认运行环境是 `development`,
-而 `hugo` 的默认运行环境是 `production`.
-
-由于本地 `development` 环境的限制，
-**评论系统**, **CDN** 和 **fingerprint** 不会在 `development` 环境下启用。
-
-你可以使用 `hugo server -e production` 命令来开启这些特性。
-{{< /admonition >}}
-
 {{< admonition tip "关于 CDN 配置的技巧" >}}
 {{< version 0.2.7 changed >}}
 
@@ -1284,7 +1287,7 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
 
 {{< version 0.2.14 >}}
 
-您还可以通过 `params` 字段将自定义的内容添加到菜单项。 FixIt 主题目前提供了两个参数的配置：
+您还可以通过 `params` 字段将自定义的内容添加到菜单项。 FixIt 主题目前提供了四个参数的配置：
 
 - **class** *{String}* 添加 CSS 类到菜单项
 - **draft** *{Boolean}* 是否为草稿菜单，类似草稿页面
@@ -1484,7 +1487,7 @@ defaultContentLanguage = "zh-cn"
 
 {{< version 0.2.0 >}}
 
-基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/), **FixIt** 主题支持搜索功能。
+基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 或 [Fuse.js](https://fusejs.io/)，**FixIt** 主题支持搜索功能。
 
 ### 5.1 输出配置
 
