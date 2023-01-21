@@ -59,7 +59,7 @@ hugo new site my_website
 cd my_website
 ```
 
-### 2.2 Install the Theme
+### 2.2 Install the Theme {#install-theme}
 
 {{< link "https://github.com/hugo-fixit/FixIt" "source of FixIt theme" "" true >}}
 

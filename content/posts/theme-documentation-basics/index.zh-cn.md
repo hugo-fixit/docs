@@ -57,7 +57,7 @@ hugo new site my_website
 cd my_website
 ```
 
-### 2.2 安装主题
+### 2.2 安装主题 {#install-theme}
 
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true >}}
 
