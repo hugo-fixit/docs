@@ -1,0 +1,92 @@
+# -------------------------------------------------------------------------------------
+# Menu Configuration | 菜单配置
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#menu-advanced-configuration
+# -------------------------------------------------------------------------------------
+
+[[main]]
+  identifier = "posts"
+  # you can add extra information before the name (HTML format is supported), such as icons
+  # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+  pre = ""
+  # you can add extra information after the name (HTML format is supported), such as icons
+  # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+  post = ""
+  name = "所有文章"
+  url = "posts/"
+  # title will be shown when you hover on this menu link
+  # 当您将鼠标悬停在此菜单链接上时, 将显示标题
+  title = ""
+  weight = 1
+  # FixIt 0.2.14 | NEW parent menu, a menu item's parent should be another menu item's identifier, which should be unique within the menu.
+  # FixIt 0.2.14 | 新增 父级菜单，一个菜单项的父项应该是另一个菜单项的标识符 (identifier)，在菜单中标识符应该是唯一的。
+  parent = ""
+  # FixIt 0.2.14 | NEW add user-defined content to menu items
+  # FixIt 0.2.14 | 新增 向菜单项添加用户定义的内容
+  [main.params]
+    # add CSS class to menu item
+    # 添加 CSS 类到菜单项
+    class = "text-center"
+    # whether it is a draft menu, similar to a draft page
+    # 是否为草稿菜单，类似草稿页面
+    draft = false
+    # FixIt 0.2.16 | NEW add fontawesome icons to menu items
+    # FixIt 0.2.16 | 新增 添加 fontawesome 图标到菜单项
+    icon = "fa-solid fa-archive"
+    # FixIt 0.2.16 | NEW set the menu item type, optional values: ["mobile", "desktop"]
+    # FixIt 0.2.16 | 新增 设置菜单项类型，可选值：["mobile", "desktop"]
+    type = ""
+[[main]]
+  identifier = "categories"
+  name = "分类"
+  url = "categories/"
+  weight = 2
+  [main.params]
+    icon = "fa-solid fa-th"
+[[main]]
+  identifier = "tags"
+  name = "标签"
+  url = "tags/"
+  weight = 3
+  [main.params]
+    icon = "fa-solid fa-tags"
+[[main]]
+  identifier = "documentation"
+  name = "文档"
+  url = "categories/documentation/"
+  title = "主题文档"
+  weight = 4
+  [main.params]
+    icon = "fa-solid fa-book"
+[[main]]
+  identifier = "tests"
+  name = "测试"
+  url = "tests/"
+  title = "FixIt 测试"
+  weight = 5
+  [main.params]
+    draft = true
+    icon = "fa-solid fa-flask"
+[[main]]
+  identifier = "friends"
+  name = "友链"
+  url = "friends/"
+  title = "友情链接"
+  weight = 6
+  [main.params]
+    icon = "fa-solid fa-users"
+[[main]]
+  identifier = "about"
+  name = "关于"
+  url = "about/"
+  weight = 7
+  [main.params]
+    icon = "fa-solid fa-info-circle"
+[[main]]
+  identifier = "github"
+  pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
+  url = "https://github.com/hugo-fixit/FixIt"
+  title = "GitHub"
+  weight = 8
+  [main.params]
+    class = "text-center"
+    type = "mobile"
