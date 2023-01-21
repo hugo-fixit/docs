@@ -7,6 +7,7 @@
 # 用于输出 Markdown 格式文档的设置
 ["text/markdown"]
   suffixes = ["md"]
+
 # Options to make output .txt files
 # 用于输出 txt 文件的设置
 ["text/plain"]

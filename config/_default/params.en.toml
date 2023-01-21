@@ -1,0 +1,46 @@
+# -------------------------------------------------------------------------------------
+# Theme Core Configuration | 主题核心配置
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#site-configuration
+# -------------------------------------------------------------------------------------
+
+[search]
+  enable = true
+  type = "algolia"
+  contentLength = 4000
+  placeholder = ""
+  maxResultLength = 10
+  snippetLength = 30
+  highlightTag = "em"
+  absoluteURL = false
+  [search.algolia]
+    index = "index.en"
+    appID = "YKOM6PKLUY"
+    searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
+
+[home]
+  rss = 10
+  [home.profile]
+    enable = true
+    gravatarEmail = ""
+    avatarURL = "/images/avatar.png"
+    title = ""
+    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+    typeit = true
+    social = true
+    disclaimer = ""
+  [home.posts]
+    enable = true
+    paginate = 6
+
+[social]
+  GitHub = "xxxx"
+  Twitter = "xxxx"
+  Instagram = "xxxx"
+  Facebook = "xxxx"
+  Telegram = "xxxx"
+  Youtubelegacy = "xxxx"
+  Email = "xxxx@xxxx.com"
+  RSS = true
+  [social.Mastodon]
+    id = "@xxxx"
+    prefix = "https://mastodon.technology/"

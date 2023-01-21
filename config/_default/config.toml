@@ -3,7 +3,12 @@
 # See: https://gohugo.io/getting-started/configuration/
 # -------------------------------------------------------------------------------------
 
+# website title
+# 网站标题
 title = "FixIt"
+
+# Hostname (and path) to the root
+# 根目录的主机名（和路径）
 baseURL = "http://localhost:1313"
 
 # theme

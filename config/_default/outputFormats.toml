@@ -9,6 +9,7 @@
   mediaType = "text/markdown"
   isPlainText = true
   isHTML = false
+
 # Options to make output baidu_urls.txt file
 # 用于输出 baidu_urls.txt 文件的设置
 [BaiduUrls]

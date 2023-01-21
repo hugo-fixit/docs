@@ -1,0 +1,66 @@
+# -------------------------------------------------------------------------------------
+# Theme Core Configuration | 主题核心配置
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#site-configuration
+# -------------------------------------------------------------------------------------
+
+description = "Hugo 主题 - FixIt"
+
+[search]
+  enable = true
+  type = "algolia"
+  contentLength = 4000
+  placeholder = ""
+  maxResultLength = 10
+  snippetLength = 50
+  highlightTag = "em"
+  absoluteURL = false
+  [search.algolia]
+    index = "index.zh-cn"
+    appID = "YKOM6PKLUY"
+    searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
+
+[home]
+  rss = 10
+  [home.profile]
+    enable = true
+    gravatarEmail = ""
+    avatarURL = "/images/avatar.png"
+    title = ""
+    subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+    typeit = true
+    social = true
+    disclaimer = ""
+  [home.posts]
+    enable = true
+    paginate = 6
+
+[social]
+  GitHub = "xxxx"
+  Steam = "xxxx"
+  Zhihu = "xxxx"
+  Douban = "xxxx"
+  Devto = "xxxx"
+  Bilibili = "xxxx"
+  QQGroup = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM" # https://qun.qq.com/join.html
+  Email = "xxxx@xxxx.com"
+  RSS = true
+
+[pangu]
+  enable = true
+  selector = "article"
+
+[watermark]
+  enable = true
+  content = '<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'
+  opacity = 0.0125
+  height = 21
+
+[githubCorner]
+  enable = true
+  permalink = "https://github.com/hugo-fixit/FixIt"
+  title = "在 GitHub 上查看源代码"
+  position = "right"
+
+[gravatar]
+  host = "gravatar.loli.net"
+  style = "mp"

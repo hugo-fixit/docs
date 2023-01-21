@@ -5,5 +5,6 @@
 
 [twitter]
   enableDNT = true
+
 [youtube]
   privacyEnhanced = true
