@@ -228,10 +228,18 @@ disableThemeInject = false
 # 标签云配置
 [tagcloud]
   enable = true
-  min = 14 # Minimum font size in px
-  max = 32 # Maximum font size in px
-  peakCount = 10 # Maximum count of posts per tag
-  orderby = "name" # Order of tags, optional values: ["name", "count"]
+  # Minimum font size in px
+  # 以 px 为单位的最小字体大小
+  min = 14
+  # Maximum font size in px
+  # 以 px 为单位的最大字体大小
+  max = 32
+  # Maximum count of posts per tag
+  # 每个标签的最大帖子数
+  peakCount = 10
+  # Order of tags, optional values: ["name", "count"]
+  # 标签顺序，可选值：["name", "count"]
+  orderby = "name"
 
 # Home page config
 # 主页配置
@@ -402,10 +410,14 @@ disableThemeInject = false
   gravatarForce = true
   # FixIt 0.2.17 | CHANGED Auto Bookmark Support
   # If true, save the reading progress when closing the page.
+  # FixIt 0.2.17 | 更改 自动书签支持
+  # 如果为true，关闭页面时保存阅读进度。
   autoBookmark = true
   # FixIt 0.2.17 | NEW whether to enable wordCount
+  # FixIt 0.2.17 | 新增 是否启用字数显示
   wordCount = true
   # FixIt 0.2.17 | NEW whether to enable readingTime
+  # FixIt 0.2.17 | 新增 是否开启预计阅读时间显示
   readingTime = true
   # end of post flag
   # 文章结束标志
@@ -495,16 +507,16 @@ disableThemeInject = false
     # 深色主题的地图样式
     darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
     # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-    # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+    # 是否添加 导航控制 (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
     navigation = true
     # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-    # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+    # 是否添加 地理定位控制 (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
     geolocate = true
     # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-    # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+    # 是否添加 规模控制 (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
     scale = true
     # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-    # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+    # 是否添加 全屏控制 (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
     fullscreen = true
   # Donate (Sponsor) settings
   # 赞赏设置
