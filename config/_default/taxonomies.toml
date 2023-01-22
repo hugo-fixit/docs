@@ -1,0 +1,8 @@
+# -------------------------------------------------------------------------------------
+# Taxonomies Configuration | 分类法配置
+# See: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
+# -------------------------------------------------------------------------------------
+
+category = "categories"
+tag = "tags"
+# series = "series"
