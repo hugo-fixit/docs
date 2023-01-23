@@ -27,6 +27,9 @@
     taskList = true
     typographer = true
   [goldmark.renderer]
+    # By default, Goldmark ignores newlines within a paragraph. Set to true to render newlines as <br> elements.
+    # 默认情况下，Goldmark 会忽略段落中的换行符。设置为true将换行符呈现为<br>元素。
+    hardWraps = true
     # whether to use HTML tags directly in the document
     # 是否在文档中直接使用 HTML 标签
     unsafe = true
