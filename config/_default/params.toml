@@ -422,6 +422,9 @@ disableThemeInject = false
   # end of post flag
   # 文章结束标志
   endFlag = ""
+  # FixIt 0.2.18 | NEW whether to enable instant.page
+  # FixIt 0.2.18 | 新增 是否开启即时页面
+  instantPage = false
 
   # Repost config since v0.2.15
   # 转载配置 since v0.2.15
@@ -644,6 +647,7 @@ disableThemeInject = false
       texRenderer = false
       search = false
       recaptchaV3Key = ""
+      reaction = false
     # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
     # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
     [page.comment.facebook]
@@ -701,6 +705,7 @@ disableThemeInject = false
       category = ""
       categoryId = ""
       mapping = ""
+      term = ""
       reactionsEnabled = "1"
       emitMetadata = "0"
       inputPosition = "bottom" # ["top", "bottom"]

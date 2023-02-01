@@ -119,9 +119,12 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **message**: {{< version 0.2.15 >}} encryption prompt, see [Theme Documentation - Content Encryption](../theme-documentation-content-encryption/).
 
 * **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [site configuration](../theme-documentation-basics#site-configuration).
+* **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [site configuration](../theme-documentation-basics#site-configuration).
+* **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [site configuration](../theme-documentation-basics#site-configuration).
+* **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [site configuration](../theme-documentation-basics#site-configuration).
 
 {{< admonition tip >}}
 {{< version 0.2.10 >}}

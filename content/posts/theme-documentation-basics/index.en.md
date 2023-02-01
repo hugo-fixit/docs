@@ -563,6 +563,8 @@ Please open the code block below to view the complete `config.toml` sample confi
     readingTime = true
     # {{< version 0.2.17 >}} end of post flag
     endFlag = ""
+    # {{< version 0.2.18 >}} whether to enable instant.page
+    instantPage = false
 
     # {{< version 0.2.15 >}} Repost config
     [params.page.repost]
@@ -741,6 +743,7 @@ Please open the code block below to view the complete `config.toml` sample confi
         texRenderer = false # {{< version 0.2.16 >}}
         search = false # {{< version 0.2.16 >}}
         recaptchaV3Key = "" # {{< version 0.2.16 >}}
+        reaction = false # {{< version 0.2.18 >}}
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook comment" >}} config (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
         enable = false
@@ -790,6 +793,7 @@ Please open the code block below to view the complete `config.toml` sample confi
         category = ""
         categoryId = ""
         mapping = ""
+        term = ""
         reactionsEnabled = "1"
         emitMetadata = "0"
         inputPosition = "bottom" # ["top", "bottom"]

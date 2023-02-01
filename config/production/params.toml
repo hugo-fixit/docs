@@ -65,7 +65,7 @@
     # 可以在你的项目下相同路径存放你自己的数据文件:
     # "assets/lib/valine/emoji/"
     emoji = ""
-    commentCount = true # since v0.2.13
+    commentCount = true # FixIt 0.2.13 | NEW
   # # FixIt 0.2.13 | NEW Waline comment config (https://waline.js.org)
   # # FixIt 0.2.13 | 新增 Waline 评论系统设置 (https://waline.js.org)
   [page.comment.waline]
@@ -84,6 +84,7 @@
     texRenderer = false
     search = false
     recaptchaV3Key = ""
+    reaction = false
   # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
   # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
   [page.comment.facebook]

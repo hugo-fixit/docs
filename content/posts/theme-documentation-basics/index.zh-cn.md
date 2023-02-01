@@ -566,6 +566,8 @@ hugo
     readingTime = true
     # {{< version 0.2.17 >}} 文章结束标志
     endFlag = ""
+    # {{< version 0.2.18 >}} 是否开启即时页面
+    instantPage = false
 
     # {{< version 0.2.15 >}} 转载配置
     [params.page.repost]
@@ -744,6 +746,7 @@ hugo
         texRenderer = false # {{< version 0.2.16 >}}
         search = false # {{< version 0.2.16 >}}
         recaptchaV3Key = "" # {{< version 0.2.16 >}}
+        reaction = false # {{< version 0.2.18 >}}
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置 (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
         enable = false
@@ -793,6 +796,7 @@ hugo
         category = ""
         categoryId = ""
         mapping = ""
+        term = ""
         reactionsEnabled = "1"
         emitMetadata = "0"
         inputPosition = "bottom" # ["top", "bottom"]
