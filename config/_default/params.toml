@@ -382,7 +382,9 @@ disableThemeInject = false
   # 是否使用 twemoji
   twemoji = false
   # whether to enable lightgallery
+  # FixIt 0.2.18 | CHANGED if set to "force", images in the content will be forced to shown as the gallery.
   # 是否使用 lightgallery
+  # FixIt 0.2.18 | 更改 如果设为 "force", 文章中的图片将强制按照画廊形式呈现
   lightgallery = false
   # whether to enable the ruby extended syntax
   # 是否使用 ruby 扩展语法

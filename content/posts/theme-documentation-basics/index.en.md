@@ -537,6 +537,7 @@ Please open the code block below to view the complete `config.toml` sample confi
     # {{< version 0.2.0 >}} whether to enable twemoji
     twemoji = false
     # whether to enable lightgallery
+    # {{< version 0.2.18 changed >}} if set to "force", images in the content will be forced to shown as the gallery.
     lightgallery = false
     # {{< version 0.2.0 >}} whether to enable the ruby extended syntax
     ruby = true

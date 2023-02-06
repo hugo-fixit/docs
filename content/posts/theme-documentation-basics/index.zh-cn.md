@@ -540,6 +540,7 @@ hugo
     # {{< version 0.2.0 >}} 是否使用 twemoji
     twemoji = false
     # 是否使用 lightgallery
+    # {{< version 0.2.18 changed >}} 如果设为 "force", 文章中的图片将强制按照画廊形式呈现
     lightgallery = false
     # {{< version 0.2.0 >}} 是否使用 ruby 扩展语法
     ruby = true
