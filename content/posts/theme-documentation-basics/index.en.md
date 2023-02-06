@@ -1234,6 +1234,16 @@ Here is a simple exmple:
 </div>
 ```
 
+If you set `goldmark.parser.attribute.block` to `true`, you can also use:
+
+```markdown
+{.page-break-before}
+{.page-break-after}
+
+Something you want to hide in the print view is written here.
+{.print-d-none}
+```
+
 ### 3.4 Script Customization
 
 {{< version 0.2.16 >}}

@@ -63,3 +63,29 @@ menu:
 ![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg)
 ![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
 ![](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
+
+## custom attribute
+
+Enable custom attribute support for titles and blocks by adding attribute lists inside single curly brackets (`{.myclass class="class1 class2" }`) and placing it after the Markdown element it decorates, on the same line for titles and on a new line directly below for blocks.
+
+hello world
+{.text-center}
+
+> foo  
+> bar
+{.text-danger title="这是红色字体"}
+
+* Fruit
+  * Apple
+  * Orange
+  * Banana
+  {.text-success}
+* Dairy
+  * Milk
+  * Cheese
+  {.text-warning}
+{.text-primary}
+
+```go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
+// ... code
+```

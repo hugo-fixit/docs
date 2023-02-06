@@ -73,12 +73,12 @@ menu:
 :(fa-solid fa-cog fa-spin):
 :(fa-solid fa-cog fa-pulse):
 
-
 ## Float
 
 :(fa-solid fa-quote-left fa-pull-left):
 
-<div class="text-center">hey guys!</div>
+hey guys!
+{.text-center}
 
 :(fa-solid fa-quote-right fa-pull-right):
 

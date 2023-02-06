@@ -27,23 +27,17 @@ menu:
       icon: "fa-solid fa-vial"
 ---
 
-<div class="print-d-none">
-
 > **这是一篇测试 FixIt 主题在打印视图表现的测试文章。所有居中的说明文字将不会出现在打印视图。**
-> 
+>
 > 按 <kbd>ctrl</kbd> + <kbd>P</kbd> 或者 <kbd>⌘</kbd> + <kbd>P</kbd> 可以打印此页面。
 >
 > FR: <https://lruihao.cn/posts/js-rediscover/>
-
-
-</div>
+{.print-d-none}
 
 {{< admonition tip "前言" >}}
-
 前端框架轮替变化越来越快，JavaScript 也在不断地升级迭代，越来越多的新特性让我们的代码写起来变得简洁有趣。
 
 每隔一段时间就该重新认识一下 JS，这篇文章会介绍 6 种新特性，一起研究一下吧。
-
 {{< /admonition >}}
 
 <!--more-->
@@ -79,14 +73,11 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 
 `every()` 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试，它返回一个布尔值。
 
-<small class="text-center print-d-none">
-
 *在这个位置使用 `page-break-before` 进行了强制分页*
-
-</small>
-<div class="page-break-before"></div>
+{.text-danger .text-center .print-d-none}
 
 如果回调函数的每一次返回都为 [truthy](https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy) 值，返回 `true` ，否则返回 `false`。
+{.page-break-before}
 
 ```
 arr.every(callback(element[, index[, array]])[, thisArg])
@@ -135,13 +126,11 @@ console.log(found);
 > 助记：如字面意思，它是一个筛子，会筛选出满足条件的元素
 
 `filter()` 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。
-
-<small class="text-center print-d-none">
+{.page-break-after}
 
 *在这个位置使用 `page-break-after` 进行了强制分页*
+{.text-danger .text-center .print-d-none}
 
-</small>
-<div class="page-break-after"></div>
 
 返回值是一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
 
@@ -181,7 +170,7 @@ console.log('name' in p1) // true  注意这里
 
 `hasOwnProperty` 方法会返回一个布尔值，表示对象**自身属性**中是否具有对应的值（原型链上的属性不会读取）。
 
-```javascript
+```javascript {.page-break-after}
 const Person = function (age) {
   this.age = age
 }
@@ -192,12 +181,8 @@ console.log(p1.hasOwnProperty('age')) // true
 console.log(p1.hasOwnProperty('name')) // fasle  注意这里
 ```
 
-<small class="text-center print-d-none">
-
 *在这个位置使用 `page-break-after` 进行了强制分页*
-
-</small>
-<div class="page-break-after"></div>
+{.text-danger .text-center .print-d-none}
 
 `obj.hasOwnProperty` 已经可以过滤掉原型链上的属性，但在某些情况下，它还是不安全。
 
@@ -222,7 +207,7 @@ Object.hasOwn(object3, 'age') // false
 
 以前，我们一般用 `_` 表示私有属性，但它并不靠谱，还是会被外部修改。
 
-```javascript
+```javascript {.page-break-after}
 class Person {
   constructor (name) {
     this._money = 1
@@ -246,12 +231,8 @@ console.log(p1.money) // 2
 console.log(p1._money) // 2
 ```
 
-<small class="text-center print-d-none">
-
 *在这个位置使用 `page-break-after` 进行了强制分页*
-
-</small>
-<div class="page-break-after"></div>
+{.text-danger .text-center .print-d-none}
 
 **使用 `#` 实现真正私有属性**
 
@@ -299,17 +280,12 @@ const sum = 1000 + 6000_000_000
 ```
 
 {{< admonition tip >}}
-
 另外，我们写时间时，`24*60*60*1000` 的可读性也是远大于 `86400000` 的。
-
 {{< /admonition >}}
-
-<small class="text-center print-d-none">
+{.page-break-after}
 
 *在这个位置使用 `page-break-after` 进行了强制分页*
-
-</small>
-<div class="page-break-after"></div>
+{.text-danger .text-center .print-d-none}
 
 ## "?.", "??", "??=" 的使用
 
@@ -351,18 +327,14 @@ console.log(bar) // 2 注意这里
 
 所以，`||` 有时候并不是很安全，所以我们不得不加判断
 
-```js
+```js {.page-break-after}
 let foo = 0
 let bar = foo !== undefined ? foo : 2
 console.log(bar) // 0
 ```
 
-<small class="text-center print-d-none">
-
 *在这个位置使用 `page-break-after` 进行了强制分页*
-
-</small>
-<div class="page-break-after"></div>
+{.text-danger .text-center .print-d-none}
 
 现在使用 `??` 可以使代码更加优雅
 
@@ -389,13 +361,10 @@ console.log(foo) // 1
 ```
 
 很好理解，这里的 `foo ??= 2` 等价于 `foo = foo ?? 2`
-
-<small class="text-center print-d-none">
+{.page-break-after}
 
 *在这个位置使用 `page-break-after` 进行了强制分页*
-
-</small>
-<div class="page-break-after"></div>
+{.text-danger .text-center .print-d-none}
 
 ## 使用 BigInt 支持大数计算
 

@@ -540,7 +540,7 @@ hugo
     # {{< version 0.2.0 >}} 是否使用 twemoji
     twemoji = false
     # 是否使用 lightgallery
-    # {{< version 0.2.18 changed >}} 如果设为 "force", 文章中的图片将强制按照画廊形式呈现
+    # {{< version 0.2.18 changed >}} 如果设为 "force"，文章中的图片将强制按照画廊形式呈现
     lightgallery = false
     # {{< version 0.2.0 >}} 是否使用 ruby 扩展语法
     ruby = true
@@ -1235,6 +1235,16 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 <div class="print-d-none">
   您希望在打印视图中隐藏的某些内容写在此处。
 </div>
+```
+
+如果设置 `goldmark.parser.attribute.block` 为 `true`，你也可以这样用：
+
+```markdown
+{.page-break-before}
+{.page-break-after}
+
+您希望在打印视图中隐藏的某些内容写在此处。
+{.print-d-none}
 ```
 
 ### 3.4 自定义脚本
