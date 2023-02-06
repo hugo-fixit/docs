@@ -161,7 +161,27 @@ export  $initHighlight;
 
     <p>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.</p>
 
-{{< highlight javascript "linenos=table,hl_lines=6-9,linenostart=287" >}}
+Highlighting in code fences is enabled by default.
+
+```js {linenos=table,linenostart=287,hl_lines=[11,"6-9"]}
+/**
+ * 把字符串的文件後綴轉成數組
+ * @param {String} str 待轉化字符串
+ * @returns {Array|null} 轉化后的數組
+ */
+var _str2Array = (str) => {
+  if (typeof (str) !== String && !Array.isArray(str)) {
+    return null;
+  }
+  if (!Array.isArray(str)) {
+    return str.split(',');
+  }
+};
+```
+
+Highlighting in shortcode highlight.
+
+{{< highlight javascript "linenos=table,hl_lines=11 6-9,linenostart=287" >}}
 /**
  * 把字符串的文件後綴轉成數組
  * @param {String} str 待轉化字符串

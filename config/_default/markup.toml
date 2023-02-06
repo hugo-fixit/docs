@@ -11,7 +11,7 @@
   codeFences = true
   lineNos = true
   lineNumbersInTable = true
-  noClasses = false 
+  noClasses = false
   ######## 必要配置 necessary configurations ########
   guessSyntax = true
 
