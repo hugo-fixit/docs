@@ -416,6 +416,10 @@ $c = \pm\sqrt{a^2 + b^2}$ 和 \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 
 * `\begin{gather} ... \end{gather}` (不编号的：`\begin{gather*} ... \end{gather*}`)
 * `\begin{CD} ... \end{CD}`
 
+{{< admonition warning >}}
+当公式块中存在换行时，请谨慎开启 `goldmark.renderer.hardWraps`，设置为 true，Goldmark 会将换行符呈现为 `<br>` 元素。
+{{< /admonition >}}
+
 例如：
 
 ```tex

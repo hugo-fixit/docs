@@ -418,6 +418,10 @@ The default block delimiters are:
 * `\begin{gather} ... \end{gather}` (unnumbered: `\begin{gather*} ... \end{gather*}`)
 * `\begin{CD} ... \end{CD}`
 
+{{< admonition warning >}}
+When there are newlines in the block formula, please turn on `goldmark.renderer.hardWraps` carefully, set it to true, Goldmark will render the newlines as `<br>` elements.
+{{< /admonition >}}
+
 For example:
 
 ```tex
