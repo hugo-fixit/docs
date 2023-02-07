@@ -141,7 +141,7 @@ soluta officiis concludaturque ei qui, vide sensibus vim ad.
 <p>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.</p>
 ```
 
-可以使用一个空白行进行**换行**.
+可以使用一个空白行进行**换行**。
 
 ## 5 内联 HTML 元素
 
@@ -163,7 +163,7 @@ Markdown 格式的段落。
 
 用于强调带有较粗字体的文本片段。
 
-以下文本片段会被 **渲染为粗体**.
+以下文本片段会被 **渲染为粗体**。
 
 ```markdown
 **渲染为粗体**

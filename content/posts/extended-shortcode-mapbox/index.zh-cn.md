@@ -20,7 +20,7 @@ mapbox:
 
 {{< version 0.2.0 >}}
 
-`mapbox` shortcode 使用 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 库提供互动式地图的功能.
+`mapbox` shortcode 使用 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 库提供互动式地图的功能。
 
 <!--more-->
 

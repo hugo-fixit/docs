@@ -34,7 +34,7 @@ menu:
 
 由于 Hugo 提供的便利性，[Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖。
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (>= 0.89.0)](https://gohugo.io/getting-started/installing/).
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (>= 0.89.0)](https://gohugo.io/getting-started/installing/)。
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
 由于 [函数 `path.Clean`](https://gohugo.io/functions/path.clean/) 在 [Hugo 发行版 v0.89.0](https://github.com/gohugoio/hugo/releases/tag/v0.89.0) 中被引入的，因此本主题只支持不低于 **0.89.0** 的 Hugo 版本。
@@ -197,7 +197,7 @@ hugo new posts/first_post.md
 hugo server
 ```
 
-去查看 `http://localhost:1313`.
+去查看 `http://localhost:1313`。
 
 ![基本配置下的预览](basic-configuration-preview.zh-cn.png "基本配置下的预览")
 
@@ -228,7 +228,7 @@ hugo
 
 {{< admonition tip >}}
 网站内容可以通过 [Netlify](https://www.netlify.com/) 自动发布和托管（了解有关 [通过 Netlify 进行 HUGO 自动化部署](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/) 的更多信息）。
-或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及 [更多](https://gohugo.io/hosting-and-deployment/) ...
+或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及 [更多](https://gohugo.io/hosting-and-dep……loyment/)……
 {{< /admonition >}}
 
 <!-- TODO 补充快捷模板 -->
@@ -1104,7 +1104,7 @@ hugo
   Mastodon = "@xxxx"
 ```
 
-生成的社交链接是 `https://mastodon.technology/@xxxx`.
+生成的社交链接是 `https://mastodon.technology/@xxxx`。
 
 或者你可以通过一个字典来设置更多的选项：
 
@@ -1121,7 +1121,7 @@ hugo
     title = "Mastodon"
 ```
 
-所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`.
+所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`。
 你可以参考它来配置你的社交链接。
 {{< /admonition >}}
 
@@ -1140,7 +1140,7 @@ hugo
 
 放在 `/static` 目录。利用 [https://realfavicongenerator.net/](https://realfavicongenerator.net/) 可以很容易地生成这些文件。
 
-可以自定义 `browserconfig.xml` 和 `site.webmanifest` 文件来设置 theme-color 和 background-color.
+可以自定义 `browserconfig.xml` 和 `site.webmanifest` 文件来设置 theme-color 和 background-color。
 
 ### 3.3 自定义样式
 
@@ -1567,7 +1567,7 @@ defaultContentLanguage = "zh-cn"
 {{< admonition tip "关于 algolia 的使用技巧" >}}
 你需要上传 `index.json` 到 algolia 来激活搜索功能。你可以使用浏览器来上传 `index.json` 文件但是一个自动化的脚本可能效果更好。
 [Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) 是一个不错的选择。
-为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `index.json` 文件到对应的 algolia index, 例如 `zh-cn/index.json` 或 `fr/index.json`...
+为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `index.json` 文件到对应的 algolia index, 例如 `zh-cn/index.json` 或 `fr/index.json`……
 {{< /admonition >}}
 
 ---

@@ -43,11 +43,11 @@ menu:
 
 有三种方法来引用**图片**和**音乐**等本地资源：
 
-1. 使用 [页面包](https://gohugo.io/content-management/page-bundles/) 中的 [页面资源](https://gohugo.io/content-management/page-resources/).
+1. 使用 [页面包](https://gohugo.io/content-management/page-bundles/) 中的 [页面资源](https://gohugo.io/content-management/page-resources/)。
    你可以使用适用于 `Resources.GetMatch` 的值或者直接使用相对于当前页面目录的文件路径来引用页面资源。
-2. 将本地资源放在 **assets** 目录中，默认路径是 `/assets`.
+2. 将本地资源放在 **assets** 目录中，默认路径是 `/assets`。
    引用资源的文件路径是相对于 assets 目录的。
-3. 将本地资源放在 **static** 目录中，默认路径是 `/static`.
+3. 将本地资源放在 **static** 目录中，默认路径是 `/static`。
    引用资源的文件路径是相对于 static 目录的。
 
 引用的**优先级**符合以上的顺序。
@@ -79,7 +79,7 @@ menu:
 * **description**: 文章内容的描述
 * **keywords**: 文章内容的关键词
 * **license**: 这篇文章特殊的许可
-* **images**: 页面图片，用于 Open Graph 和 Twitter Cards.
+* **images**: 页面图片，用于 Open Graph 和 Twitter Cards
 
 * **tags**: 文章的标签
 * **categories**: 文章所属的类别
@@ -287,7 +287,7 @@ hugo new offline/index.md
 
 你可以通过在 [网站配置](../theme-documentation-basics#site-configuration) 中设置 `summaryLength` 来自定义摘要长度。
 
-如果您要使用 [CJK]^(中文/日语/韩语) 语言创建内容，并且想使用 Hugo 的自动摘要拆分功能，请在 [网站配置](../theme-documentation-basics#site-configuration) 中将 `hasCJKLanguage` 设置为 `true`.
+如果您要使用 [CJK]^(中文/日语/韩语) 语言创建内容，并且想使用 Hugo 的自动摘要拆分功能，请在 [网站配置](../theme-documentation-basics#site-configuration) 中将 `hasCJKLanguage` 设置为 `true`。
 
 ### 手动摘要拆分
 
@@ -500,7 +500,7 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 
 通过这个扩展，在选择并复制 $\KaTeX$ 渲染的公式时，会将其 $\LaTeX$ 源代码复制到剪贴板。
 
-在你的 [网站配置](../theme-documentation-basics#site-configuration) 中的 `[params.math]` 下面设置属性 `copyTex = true` 来启用 Copy-tex.
+在你的 [网站配置](../theme-documentation-basics#site-configuration) 中的 `[params.math]` 下面设置属性 `copyTex = true` 来启用 Copy-tex。
 
 选择并复制上一节中渲染的公式，可以发现复制的内容为 LaTeX 源代码。
 
@@ -510,7 +510,7 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 
 通过这个扩展，你可以在文章中轻松编写漂亮的化学方程式。
 
-在你的 [网站配置](../theme-documentation-basics#site-configuration) 中的 `[params.math]` 下面设置属性 `mhchem = true` 来启用 mhchem.
+在你的 [网站配置](../theme-documentation-basics#site-configuration) 中的 `[params.math]` 下面设置属性 `mhchem = true` 来启用 mhchem。
 
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
@@ -559,7 +559,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 **FixIt** 主题使用 [Font Awesome](https://fontawesome.com/) 作为图标库。
 你同样可以在文章中轻松使用这些图标。
 
-从 [Font Awesome 网站](https://fontawesome.com/icons?d=gallery) 上获取所需的图标 `class`.
+从 [Font Awesome 网站](https://fontawesome.com/icons?d=gallery) 上获取所需的图标 `class`。
 
 ```markdown
 去露营啦！{?:}(fa-solid fa-campground fa-fw): 很快就回来。
@@ -595,7 +595,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 **{?:}joy{?:}** 而不是 **:joy:**
 
 {{< admonition tip >}}
-这个方法可以间接解决一个还未解决的 **[Hugo 的 issue](https://github.com/gohugoio/hugo/issues/4978)**.
+这个方法可以间接解决一个还未解决的 **[Hugo 的 issue](https://github.com/gohugoio/hugo/issues/4978)**。
 {{< /admonition >}}
 
 另一个例子是：
@@ -606,7 +606,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 呈现的输出效果如下：
 
-**[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**.
+**[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**。
 
 ### 自定义属性
 

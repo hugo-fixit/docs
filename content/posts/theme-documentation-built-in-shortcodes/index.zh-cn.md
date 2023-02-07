@@ -31,7 +31,7 @@ Hugo 使用 Markdown 为其简单的内容格式。但是，Markdown 在很多�
 
 但这恰好是一个坏主意。大家使用 Markdown, 正是因为它即使不经过渲染也可以轻松阅读。应该尽可能避免使用 HTML 以保持内容简洁。
 
-为了避免这种限制，Hugo 创建了 [shortcodes](https://gohugo.io/extras/shortcodes/).
+为了避免这种限制，Hugo 创建了 [shortcodes](https://gohugo.io/extras/shortcodes/)。
 shortcode 是一个简单代码段，可以生成合理的 HTML 代码，并且符合 Markdown 的设计哲学。
 
 Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见的用法。

@@ -10,7 +10,7 @@ lightgallery: true
 
 {{< admonition question "如何切换 Hugo 的运行环境？" false >}}
 `hugo server` 的默认运行环境是 `development`,
-而 `hugo` 的默认运行环境是 `production`.
+而 `hugo` 的默认运行环境是 `production`。
 
 由于本地 `development` 环境的限制，
 **评论系统**, **CDN** 和 **fingerprint** 不会在 `development` 环境下启用。

@@ -22,20 +22,20 @@ hiddenFromHomePage: true
 
 ## 1 简单内容 {#simple-content}
 
-允许使用 `Markdown` 格式的简单内容，并且 **不包含** 富文本的块内容，例如图像等等 ...
+允许使用 `Markdown` 格式的简单内容，并且 **不包含** 富文本的块内容，例如图像等等……
 
 一个 `typeit` 示例：
 
 ```go-html-template
 {{</* typeit */>}}
-这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落* ...
+这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{</* /typeit */>}}
 ```
 
 呈现的输出效果如下：
 
 {{< typeit >}}
-这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落* ...
+这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{< /typeit >}}
 
 另外，你也可以自定义 **HTML 标签**.
@@ -44,14 +44,14 @@ hiddenFromHomePage: true
 
 ```go-html-template
 {{</* typeit tag=h4 */>}}
-这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落* ...
+这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{</* /typeit */>}}
 ```
 
 呈现的输出效果如下：
 
 {{< typeit tag=h4 >}}
-这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落* ...
+这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{< /typeit >}}
 
 ## 2 代码内容 {#code-content}

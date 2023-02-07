@@ -16,13 +16,13 @@ hiddenFromHomePage: true
 
 {{< version 0.2.15 changed >}}
 
-`mermaid` shortcode 使用 [Mermaid](https://mermaidjs.github.io/) 库提供绘制图表和流程图的功能.
+`mermaid` shortcode 使用 [Mermaid](https://mermaidjs.github.io/) 库提供绘制图表和流程图的功能。
 
 <!--more-->
 
-[mermaid](https://mermaidjs.github.io/) 是一个可以帮助你在文章中绘制图表和流程图的库, 类似 Markdown 的语法.
+[mermaid](https://mermaidjs.github.io/) 是一个可以帮助你在文章中绘制图表和流程图的库, 类似 Markdown 的语法。
 
-只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可.
+只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可。
 
 {{< admonition tip >}}
 你可以在 `config.toml` 中通过 `params.mermaid` 参数全局配置 mermaid 的主题

@@ -28,7 +28,7 @@ menu:
       icon: "fa-brands fa-readme"
 ---
 
-**FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.
+**FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
 
 <!--more-->
 
