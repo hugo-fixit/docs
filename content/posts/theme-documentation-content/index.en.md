@@ -15,8 +15,6 @@ categories: ["documentation"]
 
 lightgallery: true
 reward: true
-toc:
-  auto: false
 math:
   enable: true
 
@@ -611,6 +609,64 @@ Another example is:
 The rendered output looks like this:
 
 **[link{?]}(#escape-character)** instead of **[link](#escape-character)**.
+
+### Custom attribute
+
+> The premise is that you set `goldmark.parser.attribute.block` to `true`.
+
+Enable custom attribute support for titles and blocks by adding attribute lists inside single curly brackets (`{.myclass class="class1 class2"}`) and placing it after the Markdown element it decorates, on the same line for titles and on a new line directly below for blocks.
+
+Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tables, lists, paragraphs etc.
+
+A blockquote with a CSS class:
+
+```md
+> foo  
+> bar
+{.text-danger}
+```
+
+The rendered output looks like this:
+
+> foo  
+> bar
+{.text-danger}
+
+There are some current limitations: For tables you can currently only apply it to the full table, and for lists the `ul`/`ol`-nodes only, e.g.:
+
+```md
+* Fruit
+  * Apple
+  * Orange
+  * Banana
+  {.text-success}
+* Dairy
+  * Milk
+  * Cheese
+  {.text-warning}
+{.text-primary}
+```
+
+The rendered output looks like this:
+
+* Fruit
+  * Apple
+  * Orange
+  * Banana
+  {.text-success}
+* Dairy
+  * Milk
+  * Cheese
+  {.text-warning}
+{.text-primary}
+
+Note that attributes in [code fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences) must come after the opening tag, with any other highlighting processing instruction, e.g.:
+
+```md
+{?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
+// ... code
+{?`}{?`}{?`}
+```
 
 ---
 

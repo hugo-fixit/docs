@@ -15,8 +15,6 @@ categories: ["documentation"]
 
 lightgallery: true
 reward: true
-toc:
-  auto: false
 math:
   enable: true
 
@@ -609,6 +607,64 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 呈现的输出效果如下：
 
 **[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**.
+
+### 自定义属性
+
+> 前提是你设置了 `goldmark.parser.attribute.block` 为 `true`。
+
+通过在一对花括号 (`{.myclass class="class1 class2"}`) 内添加属性列表并将其放在它装饰的 Markdown 元素之后，标题元素，在同一行其后添加即可，对于块语法，在其后新一行添加。
+
+Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、列表、段落等。
+
+带有 CSS 类的块引用：
+
+```md
+> foo  
+> bar
+{#test-id .text-danger}
+```
+
+呈现的输出如下所示：
+
+> foo  
+> bar
+{#test-id .text-danger}
+
+目前有一些限制：对于表格，您目前只能将其应用于完整表格，而对于列表，仅适用于 `ul`/`ol` 节点，例如：
+
+```md
+* 水果
+  * 苹果
+  * 橙子
+  * 香蕉
+  {.text-success}
+* 乳制品
+  * 牛奶
+  * 奶酪
+  {.text-warning}
+{.text-primary}
+```
+
+呈现的输出如下所示：
+
+* 水果
+  * 苹果
+  * 橙子
+  * 香蕉
+  {.text-success}
+* 乳制品
+  * 牛奶
+  * 奶酪
+  {.text-warning}
+{.text-primary}
+
+请注意，[code fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences) 中的属性必须位于开始标记之后，以及任何其他突出显示处理指令，例如：
+
+```md
+{?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
+// ... 代码
+{?`}{?`}{?`}
+```
 
 ---
 
