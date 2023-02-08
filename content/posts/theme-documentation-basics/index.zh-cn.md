@@ -34,7 +34,7 @@ menu:
 
 由于 Hugo 提供的便利性，[Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖。
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo (>= 0.89.0)](https://gohugo.io/getting-started/installing/)。
+直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo(>= 0.89.0)](https://gohugo.io/getting-started/installing/)。
 
 {{< admonition note "为什么不支持早期版本的 Hugo?" >}}
 由于 [函数 `path.Clean`](https://gohugo.io/functions/path.clean/) 在 [Hugo 发行版 v0.89.0](https://github.com/gohugoio/hugo/releases/tag/v0.89.0) 中被引入的，因此本主题只支持不低于 **0.89.0** 的 Hugo 版本。
