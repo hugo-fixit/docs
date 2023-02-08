@@ -25,7 +25,7 @@
   [main.params]
     # add CSS class to menu item
     # 添加 CSS 类到菜单项
-    class = "text-center"
+    class = ""
     # whether it is a draft menu, similar to a draft page
     # 是否为草稿菜单，类似草稿页面
     draft = false
