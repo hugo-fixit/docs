@@ -91,9 +91,22 @@ git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 git submodule set-branch -b dev themes/FixIt
 ```
 
+> 使用基于 Git 子模块的模板：[hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git)
+
 #### 2.2.4 Hugo 模块（推荐）
 
-TODO ...
+将 [Hugo 模块](https://gohugo.io/hugo-modules/) 用于主题的最简单方法是将其导入配置中。请参阅 [使用 Hugo 模块](https://gohugo.io/hugo-modules/use-modules/)。
+
+1. 初始化 Hugo 模块系统：`hugo mod init github.com/<your_user>/<your_project>`
+2. 导入主题：
+
+    ```toml
+    [module]
+      [[module.imports]]
+        path = "github.com/hugo-fixit/FixIt"
+    ```
+
+> 使用基于 Hugo 模块的模板：[hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
 
 ### 2.3 基础配置 {#basic-configuration}
 
@@ -110,6 +123,7 @@ languageCode = "zh-CN"
 hasCJKLanguage = true
 
 # 更改使用 Hugo 构建网站时使用的默认主题
+# 如果使用 Hugo Module 加载主题，则不需要配置该参数
 theme = "FixIt"
 
 [params]

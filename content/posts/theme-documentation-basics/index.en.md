@@ -63,7 +63,7 @@ cd my_website
 
 {{< link "https://github.com/hugo-fixit/FixIt" "source of FixIt theme" "" true >}}
 
-The **FixIt** theme’s repository is: <https://github.com/hugo-fixit/FixIt>.
+The repository of **FixIt** theme is: <https://github.com/hugo-fixit/FixIt>.
 
 There are many ways to quickly install themes, just choose **one** of them.
 
@@ -79,7 +79,7 @@ Alternatively, clone this repository to the `themes` directory:
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
-#### 2.2.3 Git Submodule (Recommend)
+#### 2.2.3 Git Submodule (Recommended)
 
 Or, create an empty git repository and make this repository a submodule of your site directory:
 
@@ -93,10 +93,22 @@ git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 git submodule set-branch -b dev themes/FixIt
 ```
 
-#### 2.2.4 Hugo Module (Recommend)
+> Use this template based on Git Submodule: [hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git)
 
-TODO ...
+#### 2.2.4 Hugo Module (Recommended)
 
+The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme is to import it in the config. See [Use Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
+
+1. Initialize the hugo module system: `hugo mod init github.com/<your_user>/<your_project>`
+2. Import the theme:
+
+    ```toml
+    [module]
+      [[module.imports]]
+        path = "github.com/hugo-fixit/FixIt"
+    ```
+
+> Use this template based on Hugo Modules: [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
 ### 2.3 Basic Configuration {#basic-configuration}
 
 The following is a basic configuration for the FixIt theme:
@@ -110,6 +122,7 @@ defaultContentLanguage = "en"
 languageCode = "en"
 
 # Change the default theme to be use when building the site with Hugo
+# If you use the Hugo Module to load the theme, you don't need to configure this parameter
 theme = "FixIt"
 
 [params]
