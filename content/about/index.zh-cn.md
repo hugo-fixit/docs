@@ -34,7 +34,6 @@ math:
 * :(fa-regular fa-chart-bar fa-fw): 支持 **[Fathom Analytics](https://usefathom.com/)**
 * :(fa-solid fa-search fa-fw): 支持搜索引擎的**网站验证** (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 * :(fa-solid fa-tachometer-alt fa-fw): 支持所有第三方库的 **CDN**
-* :(fa-solid fa-cloud-download-alt fa-fw): 基于 [lazysizes](https://github.com/aFarkas/lazysizes) 自动转换图片为**懒加载**
 
 #### 外观和布局
 
@@ -107,7 +106,6 @@ math:
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
 * [Fuse.js](https://fusejs.io/)
-* [lazysizes](https://github.com/aFarkas/lazysizes)
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
 * [emoji-data](https://github.com/iamcal/emoji-data)

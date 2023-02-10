@@ -33,7 +33,6 @@ math:
 * :(fa-regular fa-chart-bar fa-fw): **[Fathom Analytics](https://usefathom.com/)** supported
 * :(fa-solid fa-search fa-fw): Search engine **verification** supported (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 * :(fa-solid fa-tachometer-alt fa-fw): **CDN** for third-party libraries supported
-* :(fa-solid fa-cloud-download-alt fa-fw): Automatically converted images with **Lazy Load** by [lazysizes](https://github.com/aFarkas/lazysizes)
 
 #### Appearance and Layout
 
@@ -106,7 +105,6 @@ math:
 * [Lunr.js](https://lunrjs.com/)
 * [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
 * [Fuse.js](https://fusejs.io/)
-* [lazysizes](https://github.com/aFarkas/lazysizes)
 * [object-fit-images](https://github.com/fregante/object-fit-images)
 * [Twemoji](https://github.com/twitter/twemoji)
 * [emoji-data](https://github.com/iamcal/emoji-data)

@@ -175,9 +175,9 @@ The rendered output looks like this:
 
 ## 3 image {#image}
 
-{{< version 0.2.0 changed >}}
+{{< version 0.2.18 changed >}}
 
-`image` shortcode is an alternative to [`figure` shortcode](../theme-documentation-built-in-shortcodes#figure). `image` shortcode can take full advantage of the dependent libraries of [lazysizes](https://github.com/aFarkas/lazysizes) and [lightgallery](https://github.com/sachinchoolur/lightgallery).
+`image` shortcode is an alternative to [`figure` shortcode](../theme-documentation-built-in-shortcodes#figure). `image` shortcode can take full advantage of the dependent library of [lightgallery](https://github.com/sachinchoolur/lightgallery).
 
 {{< version 0.2.10 >}} The complete usage of [local resource references](../theme-documentation-content#contents-organization) is supported.
 
@@ -230,6 +230,10 @@ The `image` shortcode has the following named parameters:
 * **rel** *[optional]*
 
     Additional `rel` attributes of the HTML `a` tag, if **linked** parameter is set to `true`.
+
+* **loading** *[optional]* {{< version 0.2.18 >}}
+
+    Additional `loading` attribute of the HTML `a` tag, optional values: `eager`, `lazy`, default value is `lazy`.
 
 Example `image` input:
 

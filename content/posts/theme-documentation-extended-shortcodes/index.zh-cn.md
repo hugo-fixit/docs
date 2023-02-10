@@ -174,9 +174,9 @@ This is a **right-aligned** paragraph.
 
 ## 3 image {#image}
 
-{{< version 0.2.0 changed >}}
+{{< version 0.2.18 changed >}}
 
-`image` shortcode 是 [`figure` shortcode](../theme-documentation-built-in-shortcodes#figure) 的替代。`image` shortcode 可以充分利用 [lazysizes](https://github.com/aFarkas/lazysizes) 和 [lightgallery](https://github.com/sachinchoolur/lightgallery) 两个依赖库。
+`image` shortcode 是 [`figure` shortcode](../theme-documentation-built-in-shortcodes#figure) 的替代。`image` shortcode 可以充分利用 [lightgallery](https://github.com/sachinchoolur/lightgallery)。
 
 {{< version 0.2.10 >}} 支持 [本地资源引用](../theme-documentation-content#contents-organization) 的完整用法。
 
@@ -229,6 +229,10 @@ This is a **right-aligned** paragraph.
 * **rel** *[可选]*
 
     HTML `a` 标签 的 `rel` 补充属性，仅在 **linked** 属性设置成 `true` 时有效。
+
+* **loading** *[可选]* {{< version 0.2.18 >}}
+
+    HTML `a` 标签 的 `loading` 补充属性，可选值：`eager`、`lazy`，默认值是 `lazy`。
 
 一个 `image` 示例：
 

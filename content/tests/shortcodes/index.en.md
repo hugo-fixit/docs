@@ -100,7 +100,9 @@ render
 
 {{</* image src="/images/lighthouse.jpg" width="50%" height="200px" title="Lighthouse title" */>}}
 
-{{</* image src="/images/lighthouse.jpg" width="25%" height="100px" */>}}
+{{</* image src="/images/lighthouse.jpg" height="200px" */>}}
+
+{{</* image src="/images/lighthouse.jpg" height="100px" loading="eager" */>}}
 ```
 
 <!-- ![Lighthouse](/images/lighthouse.jpg "Lighthouse title") -->
@@ -111,7 +113,9 @@ render
 
 {{< image src="/images/lighthouse.jpg" width="50%" height="200px" title="Lighthouse title" >}}
 
-{{< image src="/images/lighthouse.jpg" width="25%" height="100px" >}}
+{{< image src="/images/lighthouse.jpg" height="200px" >}}
+
+{{< image src="/images/lighthouse.jpg" height="100px" loading="eager" >}}
 
 ## reward
 
