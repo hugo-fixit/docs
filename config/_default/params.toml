@@ -426,7 +426,7 @@ disableThemeInject = false
   endFlag = ""
   # FixIt 0.2.18 | NEW whether to enable instant.page
   # FixIt 0.2.18 | 新增 是否开启即时页面
-  instantPage = false
+  instantPage = true
 
   # Repost config since v0.2.15
   # 转载配置 since v0.2.15
