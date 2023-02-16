@@ -727,7 +727,8 @@ Please open the code block below to view the complete `config.toml` sample confi
         appKey = ""
         placeholder = ""
         avatar = "mp"
-        meta= ""
+        meta = ""
+        requiredFields = ""
         pageSize = 10
         lang = ""
         visitor = true

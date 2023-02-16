@@ -732,7 +732,8 @@ hugo
         appKey = ""
         placeholder = ""
         avatar = "mp"
-        meta= ""
+        meta = ""
+        requiredFields = ""
         pageSize = 10
         lang = ""
         visitor = true
