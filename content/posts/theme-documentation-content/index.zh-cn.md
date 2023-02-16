@@ -3,8 +3,9 @@ weight: 2
 title: "主题文档 - 内容"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "了解如何在 FixIt 主题中快速，直观地创建和组织内容。"
 resources:
 - name: "featured-image"
@@ -73,9 +74,10 @@ menu:
 * **date**: 这篇文章创建的日期时间它通常是从文章的前置参数中的 `date` 字段获取的，但是也可以在 [网站配置](../theme-documentation-basics#site-configuration) 中设置
 * **lastmod**: 上次修改内容的日期时间
 * **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
-* **author**: 文章作者
-* **authorLink**: 文章作者的链接
-* **authorEmail**: {{< version 0.2.14 >}} 文章作者的邮箱
+* **authorAvatar**: {{< version 0.2.18 >}} 是否启用文章作者头像
+* **author**: {{< version 0.2.18 changed >}} 文章作者
+* **authorLink**: {{< version 0.2.18 deleted >}} 文章作者的链接
+* **authorEmail**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 文章作者的邮箱
 * **description**: 文章内容的描述
 * **keywords**: 文章内容的关键词
 * **license**: 这篇文章特殊的许可
@@ -96,7 +98,7 @@ menu:
 * **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接
 * **rssFullText**: {{< version 0.2.4 >}} 如果设为 `true`, 在 RSS 中将会显示全文内容
 * **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度](../theme-documentation-basics#page-style)
-* **gravatarForce**: {{< version 0.2.14 >}} 强制使用 Gravatar 作为作者头像
+* **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
 
 * **toc**: {{< version 0.2.9 changed >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.toc` 部分相同
 * **expirationReminder**: {{< version 0.2.13 >}} 和 [网站配置](../theme-documentation-basics#site-configuration) 中的 `params.page.expirationReminder` 部分相同
@@ -181,7 +183,6 @@ fontawesome: true
 linkToMarkdown: true
 rssFullText: false
 pageStyle: "normal"
-gravatarForce: false
 
 toc:
   enable: true

@@ -3,8 +3,8 @@ weight: 1
 title: "Theme Documentation - Basics"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  link: "https://lruihao.cn"
 description: "Discover what the Hugo - FixIt theme is all about and the core-concepts behind it."
 resources:
 - name: "featured-image"
@@ -543,6 +543,8 @@ Please open the code block below to view the complete `config.toml` sample confi
 
   # {{< version 0.2.0 changed >}} Page config
   [params.page]
+    # {{< version 0.2.18 >}} whether to enable the author's avatar of the post
+    authorAvatar = true
     # {{< version 0.2.0 >}} whether to hide a page from home page
     hiddenFromHomePage = false
     # {{< version 0.2.0 >}} whether to hide a page from search results
@@ -566,8 +568,8 @@ Please open the code block below to view the complete `config.toml` sample confi
     rssFullText = false
     # {{< version 0.2.13 >}} Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
-    # {{< version 0.2.14 >}} Gravatar is force-used as the author's avatar
-    gravatarForce = false
+    # {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} Gravatar is force-used as the author's avatar
+    # gravatarForce = false
     # {{< version 0.2.17 changed >}} Auto Bookmark Support
     # If true, save the reading progress when closing the page.
     autoBookmark = false
@@ -951,6 +953,8 @@ Please open the code block below to view the complete `config.toml` sample confi
 
   # {{< version 0.2.14 >}} Gravatar config
   [params.gravatar]
+    # {{< version 0.2.18 >}} Depends on the author's email, if the author's email is not set, the local avatar will be used
+    enable = false
     # Gravatar host, default: "www.gravatar.com"
     host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
     style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
@@ -1040,6 +1044,7 @@ Please open the code block below to view the complete `config.toml` sample confi
   name = "xxxx"
   email = ""
   link = ""
+  avatar = "" # {{< version 0.2.18 >}}
 
 # Sitemap config
 [sitemap]

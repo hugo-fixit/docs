@@ -3,8 +3,9 @@ weight: 4
 title: "主题文档 - 扩展 Shortcodes"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode"
 resources:
 - name: "featured-image"

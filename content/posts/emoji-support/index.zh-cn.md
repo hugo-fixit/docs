@@ -2,19 +2,17 @@
 title: "Emoji 支持"
 date: 2019-10-01T17:55:28+08:00
 lastmod: 2022-01-19T19:48:28+08:00
-draft: false
-author: "Dillon"
-authorLink: "https://dillonzq.com"
+author:
+  name: "Dillon"
+  link: "https://dillonzq.com"
 description: "Hugo 和 FixIt 中的 Emoji 的用法指南。"
+tags: ["emoji"]
+categories: ["Markdown"]
+twemoji: false
+lightgallery: true
 resources:
 - name: "featured-image"
   src: "featured-image.jpg"
-
-tags: ["emoji"]
-categories: ["Markdown"]
-
-twemoji: false
-lightgallery: true
 ---
 
 Emoji 可以通过多种方式在 Hugo 项目中启用。

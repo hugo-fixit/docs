@@ -3,8 +3,9 @@ weight: 2
 title: "Theme Documentation - Content"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "Find out how to create and organize your content quickly and intuitively in FixIt theme."
 resources:
 - name: "featured-image"
@@ -75,9 +76,10 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [site configuration](../theme-documentation-basics#site-configuration).
 * **lastmod**: the datetime at which the content was last modified.
 * **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
-* **author**: the author for the content.
-* **authorLink**: the link of the author.
-* **authorEmail**: {{< version 0.2.14 >}} the email of the author.
+* **author**: {{< version 0.2.18 changed >}} the author for the content.
+* **authorAvatar**: {{< version 0.2.18 >}} whether to enable the author's avatar of the post.
+* **authorLink**: {{< version 0.2.18 deleted >}} the link of the author.
+* **authorEmail**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} the email of the author.
 * **description**: the description for the content.
 * **keywords**: the keywords for the content.
 * **license**: the special lisence for this content.
@@ -98,7 +100,7 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
 * **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
 * **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style](../theme-documentation-basics#page-style).
-* **gravatarForce**: {{< version 0.2.14 >}} Gravatar is force-used as the author's avatar.
+* **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} Gravatar is force-used as the author's avatar.
 
 * **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [site configuration](../theme-documentation-basics#site-configuration).
 * **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [site configuration](../theme-documentation-basics#site-configuration).

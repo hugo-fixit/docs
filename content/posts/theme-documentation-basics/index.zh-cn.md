@@ -3,8 +3,9 @@ weight: 1
 title: "主题文档 - 基本概念"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "探索 Hugo - FixIt 主题的全部内容和背后的核心概念。"
 resources:
 - name: "featured-image"
@@ -547,6 +548,8 @@ hugo
 
   # {{< version 0.2.0 changed >}} 文章页面配置
   [params.page]
+    # {{< version 0.2.18 >}} 是否启用文章作者头像
+    authorAvatar = true
     # {{< version 0.2.0 >}} 是否在主页隐藏一篇文章
     hiddenFromHomePage = false
     # {{< version 0.2.0 >}} 是否在搜索结果中隐藏一篇文章
@@ -570,8 +573,8 @@ hugo
     rssFullText = false
     # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
-    # {{< version 0.2.14 >}} 强制使用 Gravatar 作为作者头像
-    gravatarForce = true
+    # {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
+    # gravatarForce = true
     # {{< version 0.2.17 changed >}} 开启自动书签支持
     # 如果为 true，则在关闭页面时保存阅读进度
     autoBookmark = false
@@ -955,6 +958,8 @@ hugo
 
   # {{< version 0.2.14 >}} Gravatar 设置
   [params.gravatar]
+    # {{< version 0.2.18 >}} 取决于作者邮箱，作者邮箱未设置则使用本地头像
+    enable = false
     # Gravatar 主机，默认：“www.gravatar.com”
     host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
     style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
@@ -1044,6 +1049,7 @@ hugo
   name = "xxxx"
   email = ""
   link = ""
+  avatar = "" # {{< version 0.2.18 >}}
 
 # 网站地图配置
 [sitemap]

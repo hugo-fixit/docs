@@ -1,8 +1,9 @@
 ---
 title: "扩展 Shortcode - mermaid"
 date: 2022-07-09T17:20:15+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "mermaid shortcode 使用 Mermaid 库提供绘制图表和流程图的功能。"
 resources:
 - name: "featured-image"

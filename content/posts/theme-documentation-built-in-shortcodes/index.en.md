@@ -3,8 +3,9 @@ weight: 3
 title: "Theme Documentation - Built-in Shortcodes"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."
 resources:
 - name: "featured-image"

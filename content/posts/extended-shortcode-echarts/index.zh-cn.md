@@ -1,8 +1,9 @@
 ---
 title: "扩展 Shortcode - echarts"
 date: 2022-07-20T11:44:15+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "echarts shortcode 使用 ECharts 库提供数据可视化的功能。"
 resources:
 - name: "featured-image"

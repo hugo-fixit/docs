@@ -1,8 +1,9 @@
 ---
 title: "扩展 Shortcode - music"
 date: 2022-07-20T13:01:03+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "music shortcode 基于 APlayer 和 MetingJS 库提供了一个内嵌的响应式音乐播放器。"
 resources:
 - name: "featured-image"

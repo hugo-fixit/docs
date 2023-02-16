@@ -372,6 +372,9 @@ disableThemeInject = false
 # Page config
 # 文章页面配置
 [page]
+  # FixIt 0.2.18 | NEW whether to enable the author's avatar of the post
+  # FixIt 0.2.18 | 新增 是否启用文章作者头像
+  authorAvatar = true
   # whether to hide a page from home page
   # 是否在主页隐藏一篇文章
   hiddenFromHomePage = false
@@ -407,9 +410,6 @@ disableThemeInject = false
   # Page style ["narrow", "normal", "wide", ...) since v0.2.13
   # 页面样式 ["narrow", "normal", "wide", ...) since v0.2.13
   pageStyle = "normal"
-  # Gravatar is force-used as the author's avatar since v0.2.14
-  # 强制使用 Gravatar 作为作者头像 since v0.2.14
-  gravatarForce = true
   # FixIt 0.2.17 | CHANGED Auto Bookmark Support
   # If true, save the reading progress when closing the page.
   # FixIt 0.2.17 | 更改 自动书签支持
@@ -893,9 +893,12 @@ disableThemeInject = false
   title = "View source on GitHub"
   position = "right" # ["left", "right"]
 
-# Gravatar config since v0.2.14
-# Gravatar 设置 since v0.2.14
+# FixIt 0.2.14 | NEW Gravatar config
+# FixIt 0.2.14 | 新增 Gravatar 设置
 [gravatar]
+  # FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
+  # FixIt 0.2.18 | 新增 取决于作者邮箱，作者邮箱未设置则使用本地头像
+  enable = true
   # Gravatar host, default: "www.gravatar.com"
   # Gravatar 主机，默认：“www.gravatar.com”
   host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]

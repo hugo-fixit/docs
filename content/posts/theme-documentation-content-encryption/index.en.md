@@ -1,8 +1,9 @@
 ---
 title: "Theme Documentation - Content Encryption"
 date: 2022-05-28T11:51:41+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "Find out how to encrypt content in FixIt theme."
 keywords:
 - Hugo Encryption
@@ -49,8 +50,9 @@ For example, the frontmatters in this article are as follows:
 ---
 title: "Theme Documentation - Content Encryption"
 date: 2022-05-28T11:51:41+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "Find out how to encrypt content in FixIt theme."
 password: 1212
 message: "Password is 1212"

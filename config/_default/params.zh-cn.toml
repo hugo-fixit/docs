@@ -62,5 +62,6 @@ description = "Hugo 主题 - FixIt"
   position = "right"
 
 [gravatar]
+  enable = true
   host = "gravatar.loli.net"
   style = "mp"

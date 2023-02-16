@@ -1,8 +1,9 @@
 ---
 title: "Extended Shortcode - bilibili"
 date: 2022-07-20T13:55:03+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "The bilibili shortcode embeds a responsive video player for bilibili videos."
 resources:
 - name: "featured-image"

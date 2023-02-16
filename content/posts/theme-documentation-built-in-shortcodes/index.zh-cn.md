@@ -3,8 +3,9 @@ weight: 3
 title: "主题文档 - 内置 Shortcodes"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。"
 resources:
 - name: "featured-image"

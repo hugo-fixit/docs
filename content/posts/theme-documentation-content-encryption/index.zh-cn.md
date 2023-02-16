@@ -1,8 +1,9 @@
 ---
 title: "主题文档 - 内容加密"
 date: 2022-05-28T11:51:41+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "了解如何在 FixIt 主题中加密内容。"
 keywords:
 - Hugo 加密
@@ -48,8 +49,9 @@ FixIt 主题提供了两个前置参数用于全文加密。
 ```yaml
 title: "主题文档 - 内容加密"
 date: 2022-05-28T11:51:41+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "了解如何在 FixIt 主题中加密内容。"
 password: 1212
 message: "密码是 1212"

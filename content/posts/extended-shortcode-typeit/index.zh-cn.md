@@ -1,8 +1,9 @@
 ---
 title: "扩展 Shortcode - typeit"
 date: 2022-07-20T13:56:03+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "typeit shortcode 基于 TypeIt 提供了打字动画。"
 resources:
 - name: "featured-image"

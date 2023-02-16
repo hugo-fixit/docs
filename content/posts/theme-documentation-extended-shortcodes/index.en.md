@@ -3,8 +3,9 @@ weight: 4
 title: "Theme Documentation - Extended Shortcodes"
 date: 2021-12-19T16:15:22+08:00
 draft: false
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "FixIt theme provides multiple shortcodes on top of built-in ones in Hugo."
 resources:
 - name: "featured-image"

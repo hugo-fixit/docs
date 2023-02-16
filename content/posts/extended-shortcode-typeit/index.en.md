@@ -1,8 +1,9 @@
 ---
 title: "Extended Shortcode - typeit"
 date: 2022-07-20T13:56:03+08:00
-author: "Lruihao"
-authorLink: "https://lruihao.cn"
+author:
+  name: "Lruihao"
+  link: "https://lruihao.cn"
 description: "The typeit shortcode provides typing animation based on TypeIt library."
 resources:
 - name: "featured-image"
