@@ -1,20 +1,20 @@
 ---
-title: "Basic Markdown Syntax"
+title: Basic Markdown Syntax
 date: 2021-12-18T16:15:22+08:00
 draft: false
-description: "This article shows the basic Markdown syntax and format."
+description: This article shows the basic Markdown syntax and format.
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
-tags: ["Markdown", "HTML"]
-categories: ["Markdown"]
-
+  - name: featured-image
+    src: featured-image.png
+tags:
+  - Markdown
+  - HTML
+categories:
+  - Markdown
 lightgallery: true
-
 repost:
   enable: true
-  url: "https://hugoloveit.com/basic-markdown-syntax/"
+  url: https://hugoloveit.com/basic-markdown-syntax/
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files.

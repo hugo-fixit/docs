@@ -1,31 +1,33 @@
 ---
 weight: 1
-title: "Theme Documentation - Basics"
+title: Theme Documentation - Basics
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  link: "https://lruihao.cn"
-description: "Discover what the Hugo - FixIt theme is all about and the core-concepts behind it."
+  name: Lruihao
+  link: https://lruihao.cn
+description: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["installation", "configuration"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - installation
+  - configuration
+categories:
+  - documentation
 lightgallery: true
 reward:
   enable: true
 toc:
   auto: false
-
 menu:
   main:
-    name: "Basics"
-    title: "Discover what the Hugo - FixIt theme is all about and the core-concepts behind it."
-    parent: "documentation"
+    name: Basics
+    title: Discover what the Hugo - FixIt theme is all about and the core-concepts
+      behind it.
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 Discover what the Hugo - **FixIt** theme is all about and the core-concepts behind it.
@@ -102,13 +104,14 @@ The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme i
 1. Initialize the hugo module system: `hugo mod init github.com/<your_user>/<your_project>`
 2. Import the theme:
 
-    ```toml
-    [module]
-      [[module.imports]]
-        path = "github.com/hugo-fixit/FixIt"
-    ```
+   ```toml
+   [module]
+     [[module.imports]]
+       path = "github.com/hugo-fixit/FixIt"
+   ```
 
 > Use this template based on Hugo Modules: [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+
 ### 2.3 Basic Configuration {#basic-configuration}
 
 The following is a basic configuration for the FixIt theme:
@@ -848,7 +851,7 @@ Please open the code block below to view the complete `config.toml` sample confi
     cursorChar = "|"
     # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
     duration = -1
-  
+
   # {{< version 0.2.15 >}} Mermaid config
   [params.mermaid]
     # For values, see https://mermaid-js.github.io/mermaid/#/Setup?id=theme
@@ -1019,7 +1022,7 @@ Please open the code block below to view the complete `config.toml` sample confi
     codeFences = true
     lineNos = true
     lineNumbersInTable = true
-    noClasses = false 
+    noClasses = false
     ########## necessary configurations ##########
     guessSyntax = true
   # Goldmark is from Hugo 0.60 the default library used for Markdown
@@ -1104,7 +1107,7 @@ Please open the code block below to view the complete `config.toml` sample confi
 [params.cdn]
   # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
   data = ""
-````
+```
 
 The default CDN data file is located in `themes/FixIt/assets/data/cdn/` directory.
 You can store your own data file in the same path under your project: `assets/data/cdn/`.
@@ -1346,44 +1349,44 @@ Here is a `yaml` example:
 
 ```yaml
 ---
-title: "Theme Documentation - Basics"
-author: "Lruihao"
+title: Theme Documentation - Basics
+author: Lruihao
 menu:
   main:
-    name: "Basics"
-    title: "Discover what the Hugo - FixIt theme is all about and the core-concepts behind it."
-    parent: "documentation"
+    name: Basics
+    title: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
+# ...
 ---
-...
 ```
 
 ## 4 Multilingual and i18n
 
 **FixIt** theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.
 
-![Language Switch](language-switch.gif "Language Switch")
+![Language Switch](language-switch.gif 'Language Switch')
 
 ### 4.1 Compatibility {#language-compatibility}
 
 {{< version 0.2.10 changed >}}
 
-| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                    | Lunr.js Support               |
-|:-------------------- |:---------:|:---------------------:|:-----------------------------:|:-----------------------------:|
-| English              | `en`      | `en`                  | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| Traditional Chinese  | `zh-tw`   | `zh-TW`               | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| French               | `fr`      | `fr`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| Polish               | `pl`      | `pl`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
-| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| Italian              | `it`      | `it`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| Spanish              | `es`      | `es`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| German               | `de`      | `de`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| Serbian              | `sr`      | `sr`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
-| Russian              | `ru`      | `ru`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| Romanian             | `ro`      | `ro`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| Vietnamese           | `vi`      | `vi`                  | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| Language             | Hugo Code | HTML `lang` Attribute |              Theme Docs              |           Lunr.js Support            |
+| :------------------- | :-------: | :-------------------: | :----------------------------------: | :----------------------------------: |
+| English              |   `en`    |         `en`          | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| Simplified Chinese   |  `zh-cn`  |        `zh-CN`        | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| Traditional Chinese  |  `zh-tw`  |        `zh-TW`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| French               |   `fr`    |         `fr`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Polish               |   `pl`    |         `pl`          |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
+| Brazilian Portuguese |  `pt-br`  |        `pt-BR`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Italian              |   `it`    |         `it`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Spanish              |   `es`    |         `es`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| German               |   `de`    |         `de`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Serbian              |   `sr`    |         `sr`          |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
+| Russian              |   `ru`    |         `ru`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Romanian             |   `ro`    |         `ro`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Vietnamese           |   `vi`    |         `vi`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 
 ### 4.2 Basic Configuration
 

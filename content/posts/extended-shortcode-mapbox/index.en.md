@@ -1,17 +1,18 @@
 ---
-title: "Extended Shortcode - mapbox"
+title: Extended Shortcode - mapbox
 date: 2022-07-20T12:22:15+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "The mapbox shortcode supports interactive maps in Hugo with Mapbox GL JS library."
+  name: Lruihao
+  link: https://lruihao.cn
+description: The mapbox shortcode supports interactive maps in Hugo with Mapbox GL JS
+  library.
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - shortcodes
+categories:
+  - documentation
 hiddenFromHomePage: true
 ---
 

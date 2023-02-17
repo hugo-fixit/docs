@@ -1,17 +1,17 @@
 ---
-title: "Extended Shortcode - echarts"
+title: Extended Shortcode - echarts
 date: 2022-07-20T11:44:15+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "The echarts shortcode supports data visualization in Hugo with ECharts library."
+  name: Lruihao
+  link: https://lruihao.cn
+description: The echarts shortcode supports data visualization in Hugo with ECharts library.
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - shortcodes
+categories:
+  - documentation
 hiddenFromHomePage: true
 code:
   maxShownLines: 70

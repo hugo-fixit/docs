@@ -1,30 +1,30 @@
 ---
 weight: 1
-title: "主题文档 - 基本概念"
+title: 主题文档 - 基本概念
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "探索 Hugo - FixIt 主题的全部内容和背后的核心概念。"
+  name: Lruihao
+  link: https://lruihao.cn
+description: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["installation", "configuration"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - installation
+  - configuration
+categories:
+  - documentation
 lightgallery: true
 reward: true
 toc:
   auto: false
-
 menu:
   main:
-    title: "探索 Hugo - FixIt 主题的全部内容和背后的核心概念。"
-    parent: "documentation"
+    title: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 探索 Hugo - **FixIt** 主题的全部内容和背后的核心概念。
@@ -101,11 +101,11 @@ git submodule set-branch -b dev themes/FixIt
 1. 初始化 Hugo 模块系统：`hugo mod init github.com/<your_user>/<your_project>`
 2. 导入主题：
 
-    ```toml
-    [module]
-      [[module.imports]]
-        path = "github.com/hugo-fixit/FixIt"
-    ```
+   ```toml
+   [module]
+     [[module.imports]]
+       path = "github.com/hugo-fixit/FixIt"
+   ```
 
 > 使用基于 Hugo 模块的模板：[hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
 
@@ -858,13 +858,13 @@ hugo
   [params.mermaid]
     # 取值详见 https://mermaid-js.github.io/mermaid/#/Setup?id=theme
     themes = ["neutral", "dark"]
-  
+
   # {{< version 0.2.12 >}} 盘古之白配置
   [params.pangu]
     # 适用于中文写作用户
     enable = false
     selector = "article" # {{< version 0.2.17 >}}
-  
+
   # {{< version 0.2.12 >}} 水印配置
   # 详细参数见 https://github.com/Lruihao/watermark#readme
   [params.watermark]
@@ -1024,7 +1024,7 @@ hugo
     codeFences = true
     lineNos = true
     lineNumbersInTable = true
-    noClasses = false 
+    noClasses = false
     ################## 必要的配置 ##################
     guessSyntax = true
   # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
@@ -1109,7 +1109,7 @@ hugo
 [params.cdn]
   # CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
   data = ""
-````
+```
 
 默认的 CDN 数据文件位于 `themes/FixIt/assets/data/cdn/` 目录。
 可以在你的项目下相同路径存放你自己的数据文件：`assets/data/cdn/`。
@@ -1351,43 +1351,43 @@ Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-manage
 
 ```yaml
 ---
-title: "主题文档 - 基本概念"
-author: "Lruihao"
+title: 主题文档 - 基本概念
+author: Lruihao
 menu:
   main:
-    title: "探索 Hugo - FixIt 主题的全部内容和背后的核心概念。"
-    parent: "documentation"
+    title: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
+# ...
 ---
-...
 ```
 
 ## 4 多语言和 i18n
 
 **FixIt** 主题完全兼容 Hugo 的多语言模式，并且支持在网页上切换语言。
 
-![语言切换](language-switch.gif "语言切换")
+![语言切换](language-switch.gif '语言切换')
 
 ### 4.1 兼容性 {#language-compatibility}
 
 {{< version 0.2.10 changed >}}
 
-| 语言 | Hugo 代码 | HTML `lang` 属性 | 主题文档 | Lunr.js 支持 |
-|:----|:----:|:----:|:----:|:----:|
-| 英语 | `en` | `en` | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 简体中文 | `zh-cn` | `zh-CN` | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 繁体中文 | `zh-tw` | `zh-TW` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 法语 | `fr` | `fr` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 波兰语 | `pl` | `pl` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-square fa-fw): |
-| 巴西葡萄牙语 | `pt-br` | `pt-BR` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 意大利语 | `it` | `it` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 西班牙语 | `es` | `es` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 德语 | `de` | `de` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 塞尔维亚语 | `sr` | `sr` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-square fa-fw): |
-| 俄语 | `ru` | `ru` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 罗马尼亚语 | `ro` | `ro` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 越南语 | `vi` | `vi` | :(fa-regular fa-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 语言         | Hugo 代码 | HTML `lang` 属性 |               主题文档               |             Lunr.js 支持             |
+| :----------- | :-------: | :--------------: | :----------------------------------: | :----------------------------------: |
+| 英语         |   `en`    |       `en`       | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 简体中文     |  `zh-cn`  |     `zh-CN`      | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 繁体中文     |  `zh-tw`  |     `zh-TW`      |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 法语         |   `fr`    |       `fr`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 波兰语       |   `pl`    |       `pl`       |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
+| 巴西葡萄牙语 |  `pt-br`  |     `pt-BR`      |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 意大利语     |   `it`    |       `it`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 西班牙语     |   `es`    |       `es`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 德语         |   `de`    |       `de`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 塞尔维亚语   |   `sr`    |       `sr`       |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
+| 俄语         |   `ru`    |       `ru`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 罗马尼亚语   |   `ro`    |       `ro`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 越南语       |   `vi`    |       `vi`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 
 ### 4.2 基本配置
 

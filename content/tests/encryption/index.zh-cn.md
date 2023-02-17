@@ -1,30 +1,24 @@
 ---
-title: "文章加密测试"
+title: 文章加密测试
 date: 2022-05-28T00:24:22+08:00
-description: "文章加密测试"
-type: 'posts'
+description: 文章加密测试
+type: posts
 password: 1212
 message: 密码是 1212
-
 lightgallery: true
-
-math:
-  enable: true
-
+math: true
 tags:
-- Test
-- Encryption
+  - Test
+  - Encryption
 categories:
-- Test
-
+  - Test
 hiddenFromHomePage: true
-
 menu:
   main:
-    title: "文章加密测试"
-    parent: "tests"
+    title: 文章加密测试
+    parent: tests
     params:
-      icon: "fa-solid fa-vial"
+      icon: fa-solid fa-vial
 ---
 
 我很害羞，所以我藏起来了哈哈。

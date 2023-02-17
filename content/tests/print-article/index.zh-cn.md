@@ -1,30 +1,26 @@
 ---
-title: "重新认识 JavaScript"
-subtitle: "学习 JavaScript 新特性"
+title: 重新认识 JavaScript
+subtitle: 学习 JavaScript 新特性
 date: 2022-05-01T10:59:36+08:00
-description: "这是一篇测试 FixIt 主题在打印视图表现的测试文章"
-type: 'posts'
-
+description: 这是一篇测试 FixIt 主题在打印视图表现的测试文章
+type: posts
 tags:
-- Test
-- print
-- JavaScript
-- ES6
+  - Test
+  - print
+  - JavaScript
+  - ES6
 categories:
 - Test
-
 hiddenFromHomePage: true
-
 code:
   maxShownLines: 30
-
 menu:
   main:
-    name: "打印测试"
-    title: "这是一篇测试 FixIt 主题在打印视图表现的测试文章"
-    parent: "tests"
+    name: 打印测试
+    title: 这是一篇测试 FixIt 主题在打印视图表现的测试文章
+    parent: tests
     params:
-      icon: "fa-solid fa-vial"
+      icon: fa-solid fa-vial
 ---
 
 > **这是一篇测试 FixIt 主题在打印视图表现的测试文章。所有居中的说明文字将不会出现在打印视图。**

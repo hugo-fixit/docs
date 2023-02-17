@@ -1,28 +1,27 @@
 ---
 weight: 3
-title: "Theme Documentation - Built-in Shortcodes"
+title: Theme Documentation - Built-in Shortcodes
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."
+  name: Lruihao
+  link: https://lruihao.cn
+description: Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.png
+tags:
+  - shortcodes
+categories:
+  - documentation
 lightgallery: true
-
 menu:
   main:
-    name: "Built-in Shortcodes"
-    title: "Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean."
-    parent: "documentation"
+    name: Built-in Shortcodes
+    title: Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 **Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
@@ -38,7 +37,6 @@ A shortcode is a simple snippet that can generate reasonable HTML code and confo
 
 Hugo ships with a set of predefined shortcodes that represent very common usage. These shortcodes are provided for author convenience and to keep your markdown content clean.
 
-
 {{< admonition tip "Use Shortcodes" >}}
 
 1. Shortcodes with raw string parameters \` \`
@@ -48,7 +46,6 @@ Hugo ships with a set of predefined shortcodes that represent very common usage.
 See detail [shortcodes/#use-shortcodes](https://gohugo.io/content-management/shortcodes/#use-shortcodes)
 
 {{< /admonition >}}
-
 
 ## 1 figure {#figure}
 
@@ -68,10 +65,10 @@ The HTML looks like this:
 
 ```html
 <figure>
-    <img src="/images/lighthouse.jpg"/>
-    <figcaption>
-        <h4>Lighthouse (figure)</h4>
-    </figcaption>
+  <img src="/images/lighthouse.jpg" />
+  <figcaption>
+    <h4>Lighthouse (figure)</h4>
+  </figcaption>
 </figure>
 ```
 

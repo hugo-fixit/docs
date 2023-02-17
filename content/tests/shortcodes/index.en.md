@@ -1,24 +1,21 @@
 ---
-title: "Shortcodes Test"
+title: Shortcodes Test
 date: 2022-03-07T22:31:22+08:00
-description: "Test for shortcodes usages"
-type: 'posts'
-
+description: Test for shortcodes usages
+type: posts
 tags:
-- Test
-- shortcodes
+  - Test
+  - shortcodes
 categories:
-- Test
-
+  - Test
 hiddenFromHomePage: true
 lightgallery: true
-
 menu:
   main:
-    title: "Test for shortcodes usages"
-    parent: "tests"
+    title: Test for shortcodes usages
+    parent: tests
     params:
-      icon: "fa-solid fa-vial"
+      icon: fa-solid fa-vial
 ---
 
 normal content

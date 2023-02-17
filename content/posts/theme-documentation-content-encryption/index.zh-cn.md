@@ -1,34 +1,31 @@
 ---
-title: "主题文档 - 内容加密"
+title: 主题文档 - 内容加密
 date: 2022-05-28T11:51:41+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "了解如何在 FixIt 主题中加密内容。"
+  name: Lruihao
+  link: https://lruihao.cn
+description: 了解如何在 FixIt 主题中加密内容。
 keywords:
-- Hugo 加密
-- 内容加密
-- FixIt
+  - Hugo 加密
+  - 内容加密
+  - FixIt
 password: 1212
-message: "密码是 1212"
-
+message: 密码是 1212
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
+  - name: featured-image
+    src: featured-image.png
 tags:
-- Encryption
+  - Encryption
 categories:
-- documentation
-
+  - documentation
 reward: true
 menu:
   main:
-    name: "主题文档 - 内容加密"
-    title: "了解如何在 FixIt 主题中加密内容。"
-    parent: "documentation"
+    name: 主题文档 - 内容加密
+    title: 了解如何在 FixIt 主题中加密内容。
+    parent: documentation
     params:
-      icon: "fa-solid fa-lock"
+      icon: fa-solid fa-lock
 ---
 
 了解如何在 FixIt 主题中加密内容。
@@ -47,23 +44,21 @@ FixIt 主题提供了两个前置参数用于全文加密。
 例如，本文的前置参数如下：
 
 ```yaml
-title: "主题文档 - 内容加密"
+title: 主题文档 - 内容加密
 date: 2022-05-28T11:51:41+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "了解如何在 FixIt 主题中加密内容。"
+  name: Lruihao
+  link: https://lruihao.cn
+description: 了解如何在 FixIt 主题中加密内容。
 password: 1212
-message: "密码是 1212"
-
+message: 密码是 1212
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
+  - name: featured-image
+    src: featured-image.png
 tags:
-- Encryption
+  - Encryption
 categories:
-- documentation
+  - documentation
 ```
 
 {{< admonition info >}}

@@ -1,25 +1,22 @@
 ---
-title: "Markdown 测试"
+title: Markdown 测试
 date: 2022-04-20T17:50:22+08:00
-description: "Test for Markdown rendering"
-type: 'posts'
-
+description: Test for Markdown rendering
+type: posts
 tags:
-- Test
-- content
-- Markdown
+  - Test
+  - content
+  - Markdown
 categories:
-- Test
-
+  - Test
 lightgallery: true
 hiddenFromHomePage: true
-
 menu:
   main:
-    title: "Test for Markdown rendering"
-    parent: "tests"
+    title: Test for Markdown rendering
+    parent: tests
     params:
-      icon: "fa-solid fa-vial"
+      icon: fa-solid fa-vial
 ---
 
 ## line break

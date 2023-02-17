@@ -1,24 +1,21 @@
 ---
-title: "Font Awesome Test"
+title: Font Awesome Test
 date: 2022-04-19T10:15:22+08:00
-description: "Test for rendering Font Awesome icons"
-type: 'posts'
-
+description: Test for rendering Font Awesome icons
+type: posts
 tags:
-- Test
-- content
-- Font Awesome
+  - Test
+  - content
+  - Font Awesome
 categories:
-- Test
-
+  - Test
 hiddenFromHomePage: true
-
 menu:
   main:
-    title: "Test for rendering Font Awesome icons"
-    parent: "tests"
+    title: Test for rendering Font Awesome icons
+    parent: tests
     params:
-      icon: "fa-solid fa-vial"
+      icon: fa-solid fa-vial
 ---
 
 ## Size
@@ -36,7 +33,7 @@ menu:
 
 :(fa-solid fa-skating fa-fw fa-2x): Skating  
 :(fa-solid fa-skiing fa-fw fa-2x): Skiing  
-:(fa-solid fa-skiing-nordic fa-fw fa-2x): Nordic Skiing  
+:(fa-solid fa-skiing-nordic fa-fw fa-2x): Nordic Skiing
 
 ## List icon
 
@@ -59,7 +56,6 @@ menu:
 :(fa-solid fa-snowboarding fa-flip-horizontal):
 :(fa-solid fa-snowboarding fa-flip-vertical):
 :(fa-solid fa-snowboarding fa-flip-both):
-
 
 ## Animation
 

@@ -1,34 +1,31 @@
 ---
-title: "Theme Documentation - Content Encryption"
+title: Theme Documentation - Content Encryption
 date: 2022-05-28T11:51:41+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "Find out how to encrypt content in FixIt theme."
+  name: Lruihao
+  link: https://lruihao.cn
+description: Find out how to encrypt content in FixIt theme.
 keywords:
-- Hugo Encryption
-- Content Encryption
-- FixIt
+  - Hugo Encryption
+  - Content Encryption
+  - FixIt
 password: 1212
-message: "Password is 1212"
-
+message: Password is 1212
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
+  - name: featured-image
+    src: featured-image.png
 tags:
-- Encryption
+  - Encryption
 categories:
-- documentation
-
+  - documentation
 reward: true
 menu:
   main:
-    name: "Content Encryption"
-    title: "Find out how to encrypt content in FixIt theme."
-    parent: "documentation"
+    name: Content Encryption
+    title: Find out how to encrypt content in FixIt theme.
+    parent: documentation
     params:
-      icon: "fa-solid fa-lock"
+      icon: fa-solid fa-lock
 ---
 
 Find out how to encrypt content in FixIt theme.
@@ -48,23 +45,21 @@ For example, the frontmatters in this article are as follows:
 
 ```yaml
 ---
-title: "Theme Documentation - Content Encryption"
+title: Theme Documentation - Content Encryption
 date: 2022-05-28T11:51:41+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "Find out how to encrypt content in FixIt theme."
+  name: Lruihao
+  link: https://lruihao.cn
+description: Find out how to encrypt content in FixIt theme.
 password: 1212
-message: "Password is 1212"
-
+message: Password is 1212
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
+  - name: featured-image
+    src: featured-image.png
 tags:
-- Encryption
+  - Encryption
 categories:
-- documentation
+  - documentation
 ---
 ```
 
@@ -162,14 +157,14 @@ FixIt decryptor for encrypted pages
 
 ### new FixItDecryptor(options)
 
-| Name    | Type   | Description                                                  |
-| ------- | ------ | ------------------------------------------------------------ |
+| Name    | Type   | Description                                          |
+| ------- | ------ | ---------------------------------------------------- |
 | options | Object | The options of FixItDecryptor（[Options](#options)） |
 
 #### Options
 
-| Name      | Type     | Attributes | Default | Description                                               |
-| --------- | -------- | ---------- | ------- | --------------------------------------------------------- |
+| Name      | Type     | Attributes   | Default | Description                                               |
+| --------- | -------- | ------------ | ------- | --------------------------------------------------------- |
 | decrypted | Function | \<optional\> |         | [Lifecycle Hooks] handler after decrypting                |
 | reset     | Function | \<optional\> |         | [Lifecycle Hooks] handler after encrypting again          |
 | duration  | Number   | \<optional\> | 86400   | number of seconds to cache decryption statistics. unit: s |

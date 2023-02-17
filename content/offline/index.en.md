@@ -1,5 +1,5 @@
 ---
-type: "offline"
+type: offline
 description: "offline cache page of FixIt theme"
 keywords: 
   - PWA

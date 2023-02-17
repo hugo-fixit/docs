@@ -1,20 +1,20 @@
 ---
-title: "Markdown 基本语法"
+title: Markdown 基本语法
 date: 2021-12-18T16:15:22+08:00
 draft: false
-description: "这篇文章展示了基本的 Markdown 语法和格式。"
+description: 这篇文章展示了基本的 Markdown 语法和格式。
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
-tags: ["Markdown", "HTML"]
-categories: ["Markdown"]
-
+  - name: featured-image
+    src: featured-image.png
+tags:
+  - Markdown
+  - HTML
+categories:
+  - Markdown
 lightgallery: true
-
 repost:
   enable: true
-  url: "https://hugoloveit.com/zh-cn/basic-markdown-syntax/"
+  url: https://hugoloveit.com/zh-cn/basic-markdown-syntax/
 ---
 
 这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。

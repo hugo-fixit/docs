@@ -1,30 +1,29 @@
 ---
 weight: 2
-title: "主题文档 - 内容"
+title: '主题文档 - 内容'
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "了解如何在 FixIt 主题中快速，直观地创建和组织内容。"
+  name: 'Lruihao'
+  link: 'https://lruihao.cn'
+description: '了解如何在 FixIt 主题中快速，直观地创建和组织内容。'
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
+  - name: 'featured-image'
+    src: 'featured-image.jpg'
 
-tags: ["content", "Markdown"]
-categories: ["documentation"]
+tags: ['content', 'Markdown']
+categories: ['documentation']
 
 lightgallery: true
 reward: true
-math:
-  enable: true
+math: true
 
 menu:
   main:
-    title: "了解如何在 FixIt 主题中快速，直观地创建和组织内容。"
-    parent: "documentation"
+    title: '了解如何在 FixIt 主题中快速，直观地创建和组织内容。'
+    parent: 'documentation'
     params:
-      icon: "fa-brands fa-readme"
+      icon: 'fa-brands fa-readme'
 ---
 
 了解如何在 **FixIt** 主题中快速，直观地创建和组织内容。
@@ -134,10 +133,10 @@ menu:
 
 ```yaml
 resources:
-- name: featured-image
-  src: featured-image.jpg
-- name: featured-image-preview
-  src: featured-image-preview.jpg
+  - name: featured-image
+    src: featured-image.jpg
+  - name: featured-image-preview
+    src: featured-image-preview.jpg
 ```
 
 {{< version 0.2.12 >}}

@@ -1,17 +1,17 @@
 ---
-title: "扩展 Shortcode - bilibili"
+title: 扩展 Shortcode - bilibili
 date: 2022-07-20T13:55:03+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "bilibili shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。"
+  name: Lruihao
+  link: https://lruihao.cn
+description: bilibili shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - shortcodes
+categories:
+  - documentation
 hiddenFromHomePage: true
 ---
 

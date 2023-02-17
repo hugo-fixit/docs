@@ -1,27 +1,26 @@
 ---
 weight: 3
-title: "主题文档 - 内置 Shortcodes"
+title: 主题文档 - 内置 Shortcodes
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。"
+  name: Lruihao
+  link: https://lruihao.cn
+description: Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。
 resources:
-- name: "featured-image"
-  src: "featured-image.png"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.png
+tags:
+  - shortcodes
+categories:
+  - documentation
 lightgallery: true
-
 menu:
   main:
-    title: "Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。"
-    parent: "documentation"
+    title: Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 **Hugo** 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。
@@ -66,10 +65,10 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ```html
 <figure>
-    <img src="/images/lighthouse.jpg"/>
-    <figcaption>
-        <h4>Lighthouse (figure)</h4>
-    </figcaption>
+  <img src="/images/lighthouse.jpg" />
+  <figcaption>
+    <h4>Lighthouse (figure)</h4>
+  </figcaption>
 </figure>
 ```
 

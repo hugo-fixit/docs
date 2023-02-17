@@ -1,19 +1,18 @@
 ---
-title: "扩展 Shortcode - mapbox"
+title: 扩展 Shortcode - mapbox
 date: 2022-07-20T12:22:15+08:00
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "mapbox shortcode 使用 Mapbox GL JS 库提供互动式地图的功能。"
+  name: Lruihao
+  link: https://lruihao.cn
+description: mapbox shortcode 使用 Mapbox GL JS 库提供互动式地图的功能。
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - shortcodes
+categories:
+  - documentation
 hiddenFromHomePage: true
-
 mapbox:
   lightStyle: mapbox://styles/mapbox/light-zh-v1?optimize=true
   darkStyle: mapbox://styles/mapbox/dark-zh-v1?optimize=true

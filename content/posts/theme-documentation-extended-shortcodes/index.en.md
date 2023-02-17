@@ -1,33 +1,31 @@
 ---
 weight: 4
-title: "Theme Documentation - Extended Shortcodes"
+title: Theme Documentation - Extended Shortcodes
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "FixIt theme provides multiple shortcodes on top of built-in ones in Hugo."
+  name: Lruihao
+  link: https://lruihao.cn
+description: FixIt theme provides multiple shortcodes on top of built-in ones in Hugo.
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-- name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+  - name: featured-image-preview
+    src: featured-image-preview.jpg
+tags:
+  - shortcodes
+categories:
+  - documentation
 lightgallery: true
-math:
-  enable: true
-
+math: true
 reward: true
 menu:
   main:
-    name: "Extended Shortcodes"
-    title: "FixIt theme provides multiple shortcodes on top of built-in ones in Hugo."
-    parent: "documentation"
+    name: Extended Shortcodes
+    title: FixIt theme provides multiple shortcodes on top of built-in ones in Hugo.
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.

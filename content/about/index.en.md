@@ -1,23 +1,20 @@
 ---
-title: "About FixIt"
+title: About FixIt
 date: 2019-08-02T11:04:49+08:00
 draft: false
 comment: false
-pageStyle: "wide"
+pageStyle: wide
 lightgallery: true
-math:
-  enable: true
+math: true
 ---
 
-{{< style "img { height: 1.25rem; }" >}}
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.89.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
-{{< /style >}}
 
-> [<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://github.com/Lruihao "Follow me on GitHub").
+> [<img loading="lazy" class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://github.com/Lruihao 'Follow me on GitHub').
 >
 > It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).
 

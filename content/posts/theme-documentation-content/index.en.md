@@ -1,31 +1,31 @@
 ---
 weight: 2
-title: "Theme Documentation - Content"
+title: Theme Documentation - Content
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "Find out how to create and organize your content quickly and intuitively in FixIt theme."
+  name: Lruihao
+  link: https://lruihao.cn
+description: Find out how to create and organize your content quickly and intuitively in FixIt theme.
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-
-tags: ["content", "Markdown"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+tags:
+  - content
+  - Markdown
+categories:
+  - documentation
 lightgallery: true
 reward: true
-math:
-  enable: true
-
+math: true
 menu:
   main:
-    name: "Content"
-    title: "Find out how to create and organize your content quickly and intuitively in FixIt theme."
-    parent: "documentation"
+    name: Content
+    title: Find out how to create and organize your content quickly and intuitively
+      in FixIt theme.
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 Find out how to create and organize your content quickly and intuitively in **FixIt** theme.
@@ -136,10 +136,10 @@ it is not necessary to set the parameter `featuredImage` or `featuredImagePrevie
 
 ```yaml
 resources:
-- name: featured-image
-  src: featured-image.jpg
-- name: featured-image-preview
-  src: featured-image-preview.jpg
+  - name: featured-image
+    src: featured-image.jpg
+  - name: featured-image-preview
+    src: featured-image-preview.jpg
 ```
 
 {{< version 0.2.12 >}}

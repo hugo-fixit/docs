@@ -1,32 +1,30 @@
 ---
 weight: 4
-title: "主题文档 - 扩展 Shortcodes"
+title: 主题文档 - 扩展 Shortcodes
 date: 2021-12-19T16:15:22+08:00
 draft: false
 author:
-  name: "Lruihao"
-  link: "https://lruihao.cn"
-description: "FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode"
+  name: Lruihao
+  link: https://lruihao.cn
+description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode
 resources:
-- name: "featured-image"
-  src: "featured-image.jpg"
-- name: "featured-image-preview"
-  src: "featured-image-preview.jpg"
-
-tags: ["shortcodes"]
-categories: ["documentation"]
-
+  - name: featured-image
+    src: featured-image.jpg
+  - name: featured-image-preview
+    src: featured-image-preview.jpg
+tags:
+  - shortcodes
+categories:
+  - documentation
 lightgallery: true
-math:
-  enable: true
-
+math: true
 reward: true
 menu:
   main:
-    title: "FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode"
-    parent: "documentation"
+    title: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode
+    parent: documentation
     params:
-      icon: "fa-brands fa-readme"
+      icon: fa-brands fa-readme
 ---
 
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。

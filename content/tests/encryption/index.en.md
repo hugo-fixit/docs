@@ -1,39 +1,32 @@
 ---
-title: "Encrypt Test"
+title: Encrypt Test
 date: 2022-05-21T22:31:22+08:00
-description: "Test for encrypting content"
-type: 'posts'
+description: Test for encrypting content
+type: posts
 password: 1212
 message: Password is 1212
-
 lightgallery: true
-
-math:
-  enable: true
-
+math: true
 twemoji: true
-
 tags:
-- Test
-- Encryption
+  - Test
+  - Encryption
 categories:
 - Test
-
 hiddenFromHomePage: true
-
 menu:
   main:
-    title: "Test for encrypting content"
-    parent: "tests"
+    title: Test for encrypting content
+    parent: tests
     params:
-      icon: "fa-solid fa-vial"
+      icon: fa-solid fa-vial
 ---
 
 I was shy, so I hid.
 
 <!--more-->
 
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "Hugo Theme FixIt")
+![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg 'Hugo Theme FixIt')
 
 ## Encrypted Content
 
@@ -46,9 +39,11 @@ Gone camping! :tent: Be back soon.
 That is so funny! :joy:
 
 ### ruby
+
 [Hugo]^(An open-source static site generator)
 
 ### math
+
 $$ \ce{CO2 + C -> 2 CO} $$
 
 $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
@@ -251,7 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
 **hello** *world*  
 this is a center-quote shortcode example.
 {{% /center-quote %}}
-
 
 ### fixit-encryptor
 
