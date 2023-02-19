@@ -4,88 +4,95 @@
 # -------------------------------------------------------------------------------------
 
 [[main]]
+  identifier = "documentation"
+  name = "Docs"
+  url = "documentation/"
+  title = "Theme Documentation"
+  weight = 1
+  [main.params]
+    icon = "fa-solid fa-book"
+
+[[main]]
+  identifier = "faqs"
+  name = "FAQ"
+  url = "faqs/"
+  weight = 2
+  [main.params]
+    icon = "fa-solid fa-fire"
+
+[[main]]
   identifier = "posts"
-  # you can add extra information before the name (HTML format is supported), such as icons
-  # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-  pre = ""
-  # you can add extra information after the name (HTML format is supported), such as icons
-  # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-  post = ""
   name = "Posts"
   url = "posts/"
-  # title will be shown when you hover on this menu link
-  # 当您将鼠标悬停在此菜单链接上时, 将显示标题
-  title = ""
-  weight = 1
-  # FixIt 0.2.14 | NEW parent menu, a menu item's parent should be another menu item's identifier, which should be unique within the menu.
-  # FixIt 0.2.14 | 新增 父级菜单，一个菜单项的父项应该是另一个菜单项的标识符 (identifier)，在菜单中标识符应该是唯一的。
+  weight = 10
   parent = ""
-  # FixIt 0.2.14 | NEW add user-defined content to menu items
-  # FixIt 0.2.14 | 新增 向菜单项添加用户定义的内容
   [main.params]
-    # add CSS class to menu item
-    # 添加 CSS 类到菜单项
-    class = ""
-    # whether it is a draft menu, similar to a draft page
-    # 是否为草稿菜单，类似草稿页面
-    draft = false
-    # FixIt 0.2.16 | NEW add fontawesome icons to menu items
-    # FixIt 0.2.16 | 新增 添加 fontawesome 图标到菜单项
     icon = "fa-solid fa-archive"
-    # FixIt 0.2.16 | NEW set the menu item type, optional values: ["mobile", "desktop"]
-    # FixIt 0.2.16 | 新增 设置菜单项类型，可选值：["mobile", "desktop"]
-    type = ""
 [[main]]
   identifier = "categories"
   name = "Categories"
   url = "categories/"
-  weight = 2
+  weight = 11
+  parent = "posts"
   [main.params]
     icon = "fa-solid fa-th"
 [[main]]
   identifier = "tags"
   name = "Tags"
   url = "tags/"
-  weight = 3
+  weight = 12
+  parent = "posts"
   [main.params]
     icon = "fa-solid fa-tags"
-[[main]]
-  identifier = "documentation"
-  name = "Docs"
-  url = "categories/documentation/"
-  title = "Theme Documentation"
-  weight = 4
-  [main.params]
-    icon = "fa-solid fa-book"
-[[main]]
-  identifier = "tests"
-  name = "Tests"
-  url = "tests/"
-  title = "Test for FixIt"
-  weight = 5
-  [main.params]
-    draft = true
-    icon = "fa-solid fa-flask"
-[[main]]
-  identifier = "friends"
-  name = "Friends"
-  url = "friends/"
-  weight = 6
-  [main.params]
-    icon = "fa-solid fa-users"
+
 [[main]]
   identifier = "about"
   name = "About"
   url = "about/"
-  weight = 7
+  weight = 20
   [main.params]
     icon = "fa-solid fa-info-circle"
+[[main]]
+  identifier = "friends"
+  name = "Friends"
+  url = "friends/"
+  weight = 21
+  parent = "about"
+  [main.params]
+    icon = "fa-solid fa-users"
+[[main]]
+  identifier = "guides"
+  name = "Guides"
+  url = "guides/"
+  weight = 22
+  parent = "about"
+  [main.params]
+    icon = "fa-solid fa-layer-group"
+[[main]]
+  identifier = "references"
+  name = "References"
+  url = "references/"
+  weight = 23
+  parent = "about"
+  [main.params]
+    icon = "fa-solid fa-microchip"
+[[main]]
+  identifier = "tests"
+  name = "Tests"
+  url = "tests/"
+  title = "Tests for FixIt"
+  weight = 29
+  parent = "about"
+  [main.params]
+    draft = true
+    icon = "fa-solid fa-flask"
+
 [[main]]
   identifier = "github"
   pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
   url = "https://github.com/hugo-fixit/FixIt"
   title = "GitHub"
-  weight = 8
+  weight = 100
   [main.params]
     class = "text-center"
     type = "mobile"
