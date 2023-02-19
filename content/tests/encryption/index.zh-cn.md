@@ -8,17 +8,17 @@ message: 密码是 1212
 lightgallery: true
 math: true
 tags:
-  - Test
+  - Tests
   - Encryption
 categories:
-  - Test
+  - Tests
 hiddenFromHomePage: true
 menu:
   main:
     title: 文章加密测试
     parent: tests
     params:
-      icon: fa-solid fa-vial
+      icon: fa-solid fa-vial text-success
 ---
 
 我很害羞，所以我藏起来了哈哈。

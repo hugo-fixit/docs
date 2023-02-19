@@ -5,12 +5,12 @@ date: 2022-05-01T10:59:36+08:00
 description: 这是一篇测试 FixIt 主题在打印视图表现的测试文章
 type: posts
 tags:
-  - Test
+  - Tests
   - print
   - JavaScript
   - ES6
 categories:
-- Test
+- Tests
 hiddenFromHomePage: true
 code:
   maxShownLines: 30
@@ -20,7 +20,7 @@ menu:
     title: 这是一篇测试 FixIt 主题在打印视图表现的测试文章
     parent: tests
     params:
-      icon: fa-solid fa-vial
+      icon: fa-solid fa-vial text-success
 ---
 
 > **这是一篇测试 FixIt 主题在打印视图表现的测试文章。所有居中的说明文字将不会出现在打印视图。**

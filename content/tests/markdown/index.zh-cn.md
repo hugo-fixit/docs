@@ -4,11 +4,11 @@ date: 2022-04-20T17:50:22+08:00
 description: Test for Markdown rendering
 type: posts
 tags:
-  - Test
+  - Tests
   - content
   - Markdown
 categories:
-  - Test
+  - Tests
 lightgallery: true
 hiddenFromHomePage: true
 menu:
@@ -16,7 +16,7 @@ menu:
     title: Test for Markdown rendering
     parent: tests
     params:
-      icon: fa-solid fa-vial
+      icon: fa-solid fa-vial text-success
 ---
 
 ## line break

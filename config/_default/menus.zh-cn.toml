@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
 # Menu Configuration | 菜单配置
-# See: https://fixit.lruihao.cn/theme-documentation-basics/#menu-advanced-configuration
+# See: https://fixit.lruihao.cn/documentation/basics/#menu-advanced-configuration
 # -------------------------------------------------------------------------------------
 
 [[main]]
@@ -13,37 +13,22 @@
     icon = "fa-solid fa-book"
 
 [[main]]
-  identifier = "faqs"
-  name = "FAQ"
-  url = "faqs/"
+  identifier = "faq"
+  name = "常见问答"
+  url = "faq/"
   weight = 2
   [main.params]
-    icon = "fa-solid fa-fire"
+    icon = "fa-solid fa-fire text-danger"
 
 [[main]]
-  identifier = "posts"
-  name = "归档"
-  url = "posts/"
-  weight = 10
-  parent = ""
+  identifier = "tests"
+  name = "测试"
+  url = "tests/"
+  title = "FixIt 测试文章"
+  weight = 3
   [main.params]
-    icon = "fa-solid fa-archive"
-[[main]]
-  identifier = "categories"
-  name = "分类"
-  url = "categories/"
-  weight = 11
-  parent = "posts"
-  [main.params]
-    icon = "fa-solid fa-th"
-[[main]]
-  identifier = "tags"
-  name = "标签"
-  url = "tags/"
-  weight = 12
-  parent = "posts"
-  [main.params]
-    icon = "fa-solid fa-tags"
+    draft = true
+    icon = "fa-solid fa-flask text-success"
 
 [[main]]
   identifier = "about"
@@ -79,15 +64,19 @@
   [main.params]
     icon = "fa-solid fa-microchip"
 [[main]]
-  identifier = "tests"
-  name = "测试"
-  url = "tests/"
-  title = "FixIt 测试文章"
-  weight = 29
+  identifier = "categories"
+  name = "分类"
+  url = "categories/"
   parent = "about"
   [main.params]
-    draft = true
-    icon = "fa-solid fa-flask"
+    icon = "fa-solid fa-th"
+[[main]]
+  identifier = "tags"
+  name = "标签"
+  url = "tags/"
+  parent = "about"
+  [main.params]
+    icon = "fa-solid fa-tags"
 
 [[main]]
   identifier = "github"
