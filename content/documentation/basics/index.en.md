@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 2
 title: Theme Documentation - Basics
 date: 2021-12-19T16:15:22+08:00
 type: posts
@@ -25,9 +25,9 @@ toc:
 menu:
   main:
     name: Basics
-    title: Discover what the Hugo - FixIt theme is all about and the core-concepts
-      behind it.
+    title: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
     parent: documentation
+    weight: 2
     params:
       icon: fa-brands fa-readme
 ---
@@ -119,7 +119,7 @@ The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme i
 The following is a basic configuration for the FixIt theme:
 
 ```toml
-title = "My New Hugo FixIt Site"
+title = "My Hugo FixIt Site"
 baseURL = "http://example.org/"
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "en"
@@ -1403,7 +1403,7 @@ defaultContentLanguage = "en"
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo FixIt Site"
+    title = "My Hugo FixIt Site"
     languageCode = "en"
     languageName = "English"
     [[languages.en.menu.main]]
@@ -1433,7 +1433,7 @@ defaultContentLanguage = "en"
 
   [languages.zh-cn]
     weight = 2
-    title = "我的全新 Hugo FixIt 网站"
+    title = "我的 Hugo FixIt 网站"
     # language code, CN only here
     languageCode = "zh-CN"
     languageName = "简体中文"

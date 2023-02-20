@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 2
 title: 主题文档 - 基本概念
 date: 2021-12-19T16:15:22+08:00
 type: posts
@@ -25,6 +25,7 @@ menu:
   main:
     title: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
     parent: documentation
+    weight: 2
     params:
       icon: fa-brands fa-readme
 ---
@@ -116,7 +117,7 @@ git submodule set-branch -b dev themes/FixIt
 以下是 FixIt 主题的基本配置：
 
 ```toml
-title = "我的全新 Hugo FixIt 网站"
+title = "我的 Hugo FixIt 网站"
 baseURL = "http://example.org/"
 # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
@@ -265,7 +266,7 @@ hugo
   # {{< version 0.2.15 changed >}} FixIt 主题版本
   version = "0.2.X" # 例如："0.2.X", "0.2.15", "v0.2.15" 等
   # 网站描述
-  description = "这是我的全新 Hugo FixIt 网站"
+  description = "这是我的 Hugo FixIt 网站"
   # 网站关键词
   keywords = ["Hugo", "FixIt"]
   # 网站默认主题样式 ["light", "dark", "auto"]
@@ -447,7 +448,7 @@ hugo
       # {{< version 0.2.7 changed >}} 主页显示的网站标题（支持 HTML 格式）
       title = ""
       # 主页显示的网站副标题
-      subtitle = "这是我的全新 Hugo FixIt 网站"
+      subtitle = "这是我的 Hugo FixIt 网站"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
@@ -1404,7 +1405,7 @@ defaultContentLanguage = "zh-cn"
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo FixIt Site"
+    title = "My Hugo FixIt Site"
     languageCode = "en"
     languageName = "English"
     [[languages.en.menu.main]]
@@ -1434,7 +1435,7 @@ defaultContentLanguage = "zh-cn"
 
   [languages.zh-cn]
     weight = 2
-    title = "我的全新 Hugo FixIt 网站"
+    title = "我的 Hugo FixIt 网站"
     # 网站语言，仅在这里 CN 大写
     languageCode = "zh-CN"
     languageName = "简体中文"
