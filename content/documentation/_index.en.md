@@ -1,0 +1,5 @@
+---
+title: Documentation
+aliases:
+  - /posts/
+---
