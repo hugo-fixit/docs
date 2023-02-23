@@ -1,14 +1,14 @@
 ---
 weight: 2
-title: 主题文档 - 基本概念
-date: 2021-12-19T16:15:22+08:00
+title: 入门篇
+date: 2023-02-23T16:04:22+08:00
 type: posts
 aliases:
   - /zh-cn/theme-documentation-basics/
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
+description: 探索 Hugo - FixIt 主题的的基础知识和背后的核心概念。
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -23,81 +23,66 @@ toc:
   auto: false
 menu:
   main:
-    title: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
+    title: 探索 Hugo - FixIt 主题的的基础知识和背后的核心概念。
     parent: documentation
     weight: 2
     params:
       icon: fa-brands fa-readme
 ---
 
-探索 Hugo - **FixIt** 主题的全部内容和背后的核心概念。
+探索 Hugo - **FixIt** 主题的的基础知识和背后的核心概念。
 
 <!--more-->
 
-## 1 准备
 
-由于 Hugo 提供的便利性，[Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖。
+## 安装方式
 
-直接安装满足你操作系统 (**Windows**, **Linux**, **macOS**) 的最新版本 [:(fa-regular fa-file-archive fa-fw): Hugo(>= 0.89.0)](https://gohugo.io/getting-started/installing/)。
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题的仓库" "" true >}}
 
-{{< admonition note "为什么不支持早期版本的 Hugo?" >}}
-由于 [函数 `path.Clean`](https://gohugo.io/functions/path.clean/) 在 [Hugo 发行版 v0.89.0](https://github.com/gohugoio/hugo/releases/tag/v0.89.0) 中被引入的，因此本主题只支持不低于 **0.89.0** 的 Hugo 版本。
-{{< /admonition >}}
 
-{{< admonition tip "推荐使用 Hugo extended 版本" >}}
-由于这个主题的一些特性需要将 :(fa-brands fa-sass fa-fw): SCSS 转换为 :(fa-brands fa-css3 fa-fw): CSS, 推荐使用 Hugo **extended** 版本来获得更好的使用体验。
-{{< /admonition >}}
+实际上有多种方式可以快速安装主题，选择其中 **一种** 即可（推荐 [Git 子模块](#git-submodule) 或者 [Hugo 模块](#hugo-module)）。
 
-## 2 安装
-
-以下步骤可帮助你初始化新网站。如果你根本不了解 Hugo, 我们强烈建议你按照此 [快速入门文档](https://gohugo.io/getting-started/quick-start/) 进一步了解它。
-
-### 2.1 创建你的项目
-
-Hugo 提供了一个 `new` 命令来创建一个新的网站：
-
-```bash
-hugo new site my_website
-cd my_website
-```
-
-### 2.2 安装主题 {#install-theme}
-
-{{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题源码" "" true >}}
-
-**FixIt** 主题的仓库是：<https://github.com/hugo-fixit/FixIt>
-
-有多种方式可以快速安装主题，请选择其中 **一种** 即可。
-
-#### 2.2.1 手动下载
+### 手动下载
 
 你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件](https://github.com/hugo-fixit/FixIt/releases) 并且解压放到 `themes` 目录。
 
-#### 2.2.2 Git 克隆
+### Git 克隆
 
-另外，也可以直接把这个主题克隆到 `themes` 目录：
+或者，也可以直接把这个主题克隆到 `themes` 目录：
 
 ```bash
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
-#### 2.2.3 Git 子模块（推荐）
+### Git 子模块
 
-或者，初始化你的项目目录为 git 仓库，并且把主题仓库作为你的网站目录的子模块：
+{{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "基于 Git 子模块的快速入门模板" "" true >}}
+
+另外，在您的项目目录初始化一个空的 Git 存储库，将 [FixIt](https://github.com/hugo-fixit/FixIt) 主题克隆到 `themes` 目录中，将其作为 [Git 子模块](https://git-scm.com/book/en/v2/Git-Tools-Submodules) 添加到您的项目中。
+
 
 ```bash
 git init
-# 稳定版
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
-# ⚠️ 开发版
+```
+
+如果你想使用 `dev` 分支上的版本，可以使用以下命令：
+
+```bash
 git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
-# 切换版本
+```
+
+或者将子模块分支从 `master` 切换到 `dev`：
+
+```bash
 git submodule set-branch -b dev themes/FixIt
 ```
 
-> 使用基于 Git 子模块的模板：[hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git)
+### Hugo 模块
 
-#### 2.2.4 Hugo 模块（推荐）
+{{< link "https://github.com/hugo-fixit/hugo-fixit-blog-go" "基于 Hugo 模块的快速入门模板" "" true >}}
+
+> 以这种方式，无需要在 `config.toml` 中配置 `theme = "FixIt"`。
 
 将 [Hugo 模块](https://gohugo.io/hugo-modules/) 用于主题的最简单方法是将其导入配置中。请参阅 [使用 Hugo 模块](https://gohugo.io/hugo-modules/use-modules/)。
 
@@ -110,154 +95,77 @@ git submodule set-branch -b dev themes/FixIt
        path = "github.com/hugo-fixit/FixIt"
    ```
 
-> 使用基于 Hugo 模块的模板：[hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+## 完整配置
 
-### 2.3 基础配置 {#basic-configuration}
+在开始配置之前，建议您执行以下命令，将主题的默认 [config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) 复制到您的项目中：
 
-以下是 FixIt 主题的基本配置：
+```bash
+mv config.toml config.old.toml
+cp themes/FixIt/config.toml config.toml
+```
+
+### 菜单配置 {#menu-configuration}
+
+Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-management/menus/)。
+
+根据 Hugo 提供的接口，FixIt 主题只实现了部分功能，这足以满足大多数人的需求，也让用户在使用上更加简单。
+
+下面是一个完整的菜单项配置：
 
 ```toml
-title = "我的 Hugo FixIt 网站"
-baseURL = "http://example.org/"
-# 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
-defaultContentLanguage = "zh-cn"
-# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "zh-CN"
-# 是否包括中日韩文字
-hasCJKLanguage = true
-
-# 更改使用 Hugo 构建网站时使用的默认主题
-# 如果使用 Hugo Module 加载主题，则不需要配置该参数
-theme = "FixIt"
-
-[params]
-  # FixIt 主题版本
-  version = "0.2.X"
-
 [menu]
   [[menu.main]]
-    identifier = "posts"
+    identifier = ""
+    # {{< version 0.2.14 >}} 父级菜单项的标识符 (identifier)
+    parent = ""
     # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
     pre = ""
     # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
     post = ""
-    name = "文章"
-    url = "/posts/"
+    name = ""
+    url = ""
     # 当你将鼠标悬停在此菜单链接上时，将显示的标题
     title = ""
     weight = 1
-    # 向菜单项添加用户定义的内容
+    # {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
     [menu.main.params]
       # 添加 CSS 类到菜单项
       class = ""
       # 是否为草稿菜单，类似草稿页面
       draft = false
-      # 添加 fontawesome 图标到菜单项
-      icon = "fa-solid fa-archive"
-      # 设置菜单项类型，可选值：["mobile", "desktop"]
+      # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
+      icon = ""
+      # {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
       type = ""
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "分类"
-    url = "/categories/"
-    title = ""
-    weight = 2
-    [menu.main.params]
-      icon = "fa-solid fa-th"
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "标签"
-    url = "/tags/"
-    title = ""
-    weight = 3
-    [menu.main.params]
-      icon = "fa-solid fa-tags"
-
-# Hugo 解析文档的配置
-[markup]
-  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false 是必要的设置 (https://github.com/hugo-fixit/FixIt/issues/43)
-    noClasses = false
 ```
 
-{{< admonition >}}
+{{< admonition note "子菜单" >}}
+考虑到实用性和排版问题，FixIt 主题只支持两层嵌套的菜单，通过在菜单配置中的 `parent` 字段即可。
 
-- 在构建网站时，你可以使用 `--theme` 选项设置主题。但是，我建议你修改配置文件 (**config.toml**) 将本主题设置为默认主题。
-- {{< version 0.2.14 >}} FixIt 主题提供了子菜单的支持，请详见 [菜单进阶配置](#menu-advanced-configuration)。
-
+一个菜单项的父项应该是另一个菜单项的标识符（`identifier`），在菜单中标识符应该是唯一的。
 {{< /admonition >}}
 
-### 2.4 创建你的第一篇文章
+另外，也可以通过配置页面（即 `.md` 文件）的 `front matter` 添加内容到菜单中。
 
-以下是创建第一篇文章的方法：
+这是一个 `yaml` 示例：
 
-```bash
-hugo new posts/first_post.md
+```yaml
+---
+title: 入门篇
+author: Lruihao
+menu:
+  main:
+    title: 探索 Hugo - FixIt 主题的的基础知识和背后的核心概念。
+    parent: documentation
+    params:
+      icon: fa-brands fa-readme
+# ...
+---
 ```
 
-通过添加一些示例内容并替换文件开头的标题，你可以随意编辑文章。
+### 主题配置 {#theme-configuration}
 
-{{< admonition >}}
-默认情况下，所有文章和页面均作为草稿创建。如果想要渲染这些页面，请从元数据中删除属性 `draft: true`, 设置属性 `draft: false` 或者为 `hugo` 命令添加 `-D`/`--buildDrafts` 参数。
-{{< /admonition >}}
-
-### 2.5 在本地启动网站
-
-使用以下命令启动网站：
-
-```bash
-# `hugo serve` 是 `hugo server` 的一个别名，并不是文档拼写错误哦 ~
-hugo server
-```
-
-去查看 `http://localhost:1313`。
-
-![基本配置下的预览](basic-configuration-preview.zh-cn.png "基本配置下的预览")
-
-{{< admonition tip >}}
-
-当你运行 `hugo server` 时，当文件内容更改时，页面会随着更改自动刷新。
-{{< /admonition >}}
-
-{{< admonition >}}
-由于本主题使用了 Hugo 中的 `.Scratch` 来实现一些特性，
-非常建议你为 `hugo server` 命令添加 `--disableFastRender` 参数来实时预览你正在编辑的文章页面。
-
-```bash
-hugo server --disableFastRender
-```
-
-{{< /admonition >}}
-
-### 2.6 构建网站
-
-当你准备好部署你的网站时，运行以下命令：
-
-```bash
-hugo
-```
-
-会生成一个 `public` 目录，其中包含你网站的所有静态内容和资源。现在可以将其部署在任何 Web 服务器上。
-
-{{< admonition tip >}}
-网站内容可以通过 [Netlify](https://www.netlify.com/) 自动发布和托管（了解有关 [通过 Netlify 进行 HUGO 自动化部署](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/) 的更多信息）。
-或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及 [更多](https://gohugo.io/hosting-and-dep……loyment/)……
-{{< /admonition >}}
-
-<!-- TODO 补充快捷模板 -->
-
-## 3 配置
-
-### 3.1 网站配置 {#site-configuration}
-
-除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#basic-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数（默认值见 [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml)）。
-
-> 请注意，本文档其他部分将详细解释其中一些参数。
+除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#menu-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数。
 
 请打开下面的代码块查看完整的 `config.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -349,7 +257,7 @@ hugo
       # LOGO 的 URL
       logo = "/fixit.min.svg"
       # 标题名称
-      name = ""
+      name = "我的 Hugo FixIt 网站"
       # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
       pre = ""
       # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
@@ -440,9 +348,9 @@ hugo
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = "xx@xx.com"
+      gravatarEmail = ""
       # 主页显示头像的 URL
-      avatarURL = ""
+      avatarURL = "/images/avatar.png"
       # {{< version 0.2.17 >}} 头像菜单链接的 identifier
       avatarMenu = ""
       # {{< version 0.2.7 changed >}} 主页显示的网站标题（支持 HTML 格式）
@@ -1053,7 +961,7 @@ hugo
   name = "xxxx"
   email = ""
   link = ""
-  avatar = "" # {{< version 0.2.18 >}}
+  avatar = "/images/avatar.png" # {{< version 0.2.18 >}}
 
 # 网站地图配置
 [sitemap]
@@ -1105,53 +1013,20 @@ hugo
   taxonomyTerm = ["HTML"]
 ```
 
-{{< admonition tip "关于 CDN 配置的技巧" >}}
-{{< version 0.2.7 changed >}}
+![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
+
+### 搜索配置
+
+基于 [Lunr.js](https://lunrjs.com/)、 [algolia](https://www.algolia.com/) 或 [Fuse.js](https://fusejs.io/)，**FixIt** 主题支持搜索功能，详见 [主题配置](#theme-configuration) 的 `params.search` 配置。
+
+为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
 ```toml
-[params.cdn]
-  # CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
-  data = ""
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 ```
 
-默认的 CDN 数据文件位于 `themes/FixIt/assets/data/cdn/` 目录。
-可以在你的项目下相同路径存放你自己的数据文件：`assets/data/cdn/`。
-{{< /admonition >}}
-
-{{< admonition tip "关于社交链接配置的技巧" >}}
-{{< version 0.2.0 >}}
-
-你可以直接配置你的社交 ID 来生成一个默认社交链接和图标：
-
-```toml
-[params.social]
-  Mastodon = "@xxxx"
-```
-
-生成的社交链接是 `https://mastodon.technology/@xxxx`。
-
-或者你可以通过一个字典来设置更多的选项：
-
-```toml
-[params.social]
-  [params.social.Mastodon]
-    # 排列图标时的权重（权重越大，图标的位置越靠后）
-    weight = 0
-    # 你的社交 ID
-    id = "@xxxx"
-    # 你的社交链接的前缀
-    prefix = "https://mastodon.social/"
-    # 当鼠标停留在图标上时的提示内容
-    title = "Mastodon"
-```
-
-所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`。
-你可以参考它来配置你的社交链接。
-{{< /admonition >}}
-
-![完整配置下的预览](complete-configuration-preview.zh-cn.png "完整配置下的预览")
-
-### 3.2 网站图标，浏览器配置，网站清单
+### 网站图标，浏览器配置，网站清单
 
 强烈建议你把：
 
@@ -1164,237 +1039,37 @@ hugo
 
 放在 `/static` 目录。利用 [https://realfavicongenerator.net/](https://realfavicongenerator.net/) 可以很容易地生成这些文件。
 
-可以自定义 `browserconfig.xml` 和 `site.webmanifest` 文件来设置 theme-color 和 background-color。
+可以自定义 `browserconfig.xml` 和 `site.webmanifest` 文件来设置 `theme-color` 和 `background-color`。
 
-### 3.3 自定义样式
-
-{{< version 0.2.8 changed >}}
-
-{{< admonition >}}
-Hugo **extended** 版本对于自定义样式是必需的。
-{{< /admonition >}}
-
-通过定义自定义 `.scss` 样式文件，**FixIt** 主题支持可配置的样式。
-
-包含自定义 `.scss` 样式文件的目录相对于 **你的项目根目录** 的路径为 `assets/css`。
-
-在 `assets/css/_override.scss` 中，你可以覆盖 `themes/FixIt/assets/css/_variables.scss` 中的变量以自定义样式。
-
-这是一个例子：
-
-```scss
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace;
-```
-
-在 `assets/css/_custom.scss` 中，你可以添加一些 CSS 样式代码以自定义样式。
-
-#### 3.3.1 页面宽度 {#page-style}
-
-{{< version 0.2.13 >}}
-
-FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项。
-
-- **narrow** 保留 `<v0.2.13` 页面目录宽度比
-- **normal** 新的默认页面目录宽度比
-- **wide** 较大的页面目录宽度比
-
-另外，你还可以在 `assets/css/_custom.scss` 中，自定义 `pageStyle` 值
-
-例如： `pageStyle="custom"`
-
-```scss
-@media only screen and (min-width: 1441px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 70%;
-    }
-
-    aside {
-      width: 15%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 60%;
-    }
-
-    aside {
-      width: 20%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 56%;
-    }
-
-    aside {
-      width: 22%;
-    }
-  }
-}
-```
-
-#### 3.3.2 打印样式 {#print-style}
-
-{{< version 0.2.13 >}}
-
-在 FixIt 主题中，提供有三个打印视图相关的 CSS 类
-
-- `page-break-before` 在元素之前插入分页符
-- `page-break-after` 在元素之后插入分页符
-- `print-d-none` 在打印视图中隐藏元素
-
-下面是一个简单的例子：
-
-```html
-<div class="page-break-before"></div>
-<div class="page-break-after"></div>
-<div class="print-d-none">
-  您希望在打印视图中隐藏的某些内容写在此处。
-</div>
-```
-
-如果设置 `goldmark.parser.attribute.block` 为 `true`，你也可以这样用：
-
-```markdown
-{.page-break-before}
-{.page-break-after}
-
-您希望在打印视图中隐藏的某些内容写在此处。
-{.print-d-none}
-```
-
-### 3.4 自定义脚本
-
-{{< version 0.2.16 >}}
-
-包含自定义脚本文件 `custom.js` 的目录相对于 **你的项目根目录** 的路径为 `assets/js`。
-
-如果脚本文件 `assets/js/custom.js` 存在，它将在每篇文章和页面的末尾执行。
-
-### 3.5 菜单进阶配置 {#menu-advanced-configuration}
-
-Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-management/menus/)。
-
-根据 Hugo 提供的接口，FixIt 主题只实现了部分功能，但我想这足以满足大多数人的需求，也让用户在使用上更加简单。
-
-下面是一个完整的菜单项配置：
-
-```toml
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # {{< version 0.2.14 >}} 父级菜单项的标识符 (identifier)
-    parent = ""
-    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
-    pre = ""
-    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
-    post = ""
-    name = "文章"
-    url = "/posts/"
-    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
-    title = ""
-    weight = 1
-    # {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
-    [menu.main.params]
-      # 添加 CSS 类到菜单项
-      class = "text-center"
-      # 是否为草稿菜单，类似草稿页面
-      draft = false
-      # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
-      icon = "fa-solid fa-archive"
-      # {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
-      type = ""
-```
-
-#### 3.5.1 子菜单
-
-{{< version 0.2.14 >}}
-
-考虑到实用性和排版问题，FixIt 主题只支持两层嵌套的菜单，通过在菜单配置中的 `parent` 字段即可。
-
-一个菜单项的父项应该是另一个菜单项的标识符 (`identifier`)，在菜单中标识符应该是唯一的。
-
-#### 3.5.2 菜单参数
-
-{{< version 0.2.14 >}}
-
-您还可以通过 `params` 字段将自定义的内容添加到菜单项。 FixIt 主题目前提供了四个参数的配置：
-
-- **class** *{String}* 添加 CSS 类到菜单项
-- **draft** *{Boolean}* 是否为草稿菜单，类似草稿页面
-- **icon** *{String}* {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
-- **type** *{String}* {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
-
-{{< admonition >}}
-`hugo server` 命令启动或者为 `hugo` 添加 `-D`/`--buildDrafts` 参数，都能渲染草稿菜单和页面。
-{{< /admonition >}}
-
-{{< admonition tip >}}
-这样做有利于在部署时很好地区分**预览环境**和**生产环境**不同的内容。
-
-例如：
-
-- [有草稿菜单的预览环境](https://pre.fixit.lruihao.cn/zh-cn/)
-- [没有草稿菜单的生产环境](https://fixit.lruihao.cn/zh-cn/)
-{{< /admonition >}}
-
-#### 3.5.3 添加内容到菜单 {#content-to-menu}
-
-也可以通过配置 `front matter` 从页面创建菜单项（即 `.md` 文件）。
-
-这是一个 `yaml` 示例：
-
-```yaml
----
-title: 主题文档 - 基本概念
-author: Lruihao
-menu:
-  main:
-    title: 探索 Hugo - FixIt 主题的全部内容和背后的核心概念。
-    parent: documentation
-    params:
-      icon: fa-brands fa-readme
-# ...
----
-```
-
-## 4 多语言和 i18n
+### 多语言和 i18n
 
 **FixIt** 主题完全兼容 Hugo 的多语言模式，并且支持在网页上切换语言。
 
 ![语言切换](language-switch.gif '语言切换')
 
-### 4.1 兼容性 {#language-compatibility}
+#### 兼容性 {#language-compatibility}
 
 {{< version 0.2.10 changed >}}
 
-| 语言         | Hugo 代码 | HTML `lang` 属性 |               主题文档               |             Lunr.js 支持             |
+| 语言         | Hugo 代码 | HTML `lang` 属性 | 主题文档                             | Lunr.js 支持                         |
 | :----------- | :-------: | :--------------: | :----------------------------------: | :----------------------------------: |
-| 英语         |   `en`    |       `en`       | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 简体中文     |  `zh-cn`  |     `zh-CN`      | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 繁体中文     |  `zh-tw`  |     `zh-TW`      |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 法语         |   `fr`    |       `fr`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 波兰语       |   `pl`    |       `pl`       |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
-| 巴西葡萄牙语 |  `pt-br`  |     `pt-BR`      |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 意大利语     |   `it`    |       `it`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 西班牙语     |   `es`    |       `es`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 德语         |   `de`    |       `de`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 塞尔维亚语   |   `sr`    |       `sr`       |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
-| 俄语         |   `ru`    |       `ru`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 罗马尼亚语   |   `ro`    |       `ro`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| 越南语       |   `vi`    |       `vi`       |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| 英语         | `en`      | `en`             | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 简体中文     | `zh-cn`   | `zh-CN`          | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| 繁体中文     | `zh-tw`   | `zh-TW`          | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 法语         | `fr`      | `fr`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 波兰语       | `pl`      | `pl`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| 巴西葡萄牙语 | `pt-br`   | `pt-BR`          | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 意大利语     | `it`      | `it`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 西班牙语     | `es`      | `es`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 德语         | `de`      | `de`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 塞尔维亚语   | `sr`      | `sr`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
+| 俄语         | `ru`      | `ru`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 罗马尼亚语   | `ro`      | `ro`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 越南语       | `vi`      | `vi`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
 
-### 4.2 基本配置
+#### 基本配置
 
-学习了 [Hugo 如何处理多语言网站](https://gohugo.io/content-management/multilingual) 之后，请在 [站点配置](#site-configuration) 中定义你的网站语言。
+学习了 [Hugo 如何处理多语言网站](https://gohugo.io/content-management/multilingual) 之后，请在站点配置中定义你的网站语言。
 
 例如，一个支持英语，中文和法语的网站配置：
 
@@ -1505,15 +1180,11 @@ defaultContentLanguage = "zh-cn"
 - 中文：`my-page.zh-cn.md`
 - 法语：`my-page.fr.md`
 
-{{< admonition >}}
-请注意，菜单中仅显示翻译的页面。它不会替换为默认语言内容。
-{{< /admonition >}}
-
 {{< admonition tip >}}
 也可以使用 [文章前置参数](https://gohugo.io/content-management/multilingual#translate-your-content) 来翻译网址。
 {{< /admonition >}}
 
-### 4.3 修改默认的翻译字符串
+#### 修改默认的翻译字符串
 
 翻译字符串用于在主题中使用的常见默认值。
 目前提供 [一些语言](#language-compatibility) 的翻译，但你可能自定义其他语言或覆盖默认值。
@@ -1521,81 +1192,3 @@ defaultContentLanguage = "zh-cn"
 要覆盖默认值，请在你项目的 i18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/FixIt/i18n/en.toml` 中获得提示。
 
 另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/FixIt/pulls) 来贡献主题翻译，谢谢！
-
-## 5 搜索
-
-{{< version 0.2.0 >}}
-
-基于 [Lunr.js](https://lunrjs.com/) 或 [algolia](https://www.algolia.com/) 或 [Fuse.js](https://fusejs.io/)，**FixIt** 主题支持搜索功能。
-
-### 5.1 输出配置
-
-为了生成搜索功能所需要的 `index.json`, 请在你的 [网站配置](#site-configuration) 中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-```
-
-### 5.2 搜索配置
-
-基于 Hugo 生成的 `index.json` 文件，你可以激活搜索功能。
-
-这是你的 [网站配置](#site-configuration) 中的搜索部分：
-
-```toml
-[params.search]
-  enable = true
-  # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
-  type = "lunr"
-  # 文章内容最长索引长度
-  contentLength = 4000
-  # 搜索框的占位提示语
-  placeholder = ""
-  # {{< version 0.2.1 >}} 最大结果数目
-  maxResultLength = 10
-  # {{< version 0.2.3 >}} 结果内容片段长度
-  snippetLength = 50
-  # {{< version 0.2.1 >}} 搜索结果中高亮部分的 HTML 标签
-  highlightTag = "em"
-  # {{< version 0.2.4 >}} 是否在搜索索引中使用基于 baseURL 的绝对路径
-  absoluteURL = false
-  [params.search.algolia]
-    index = ""
-    appID = ""
-    searchKey = ""
-  [params.search.fuse]
-    # {{< version 0.2.17 >}} https://fusejs.io/api/options.html
-    isCaseSensitive = false
-    minMatchCharLength = 2
-    findAllMatches = false
-    location = 0
-    threshold = 0.3
-    distance = 100
-    ignoreLocation = false
-    useExtendedSearch = false
-    ignoreFieldNorm = false
-```
-
-{{< admonition note "怎样选择搜索引擎？" >}}
-以下是两种搜索引擎的对比：
-
-- `fuse`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制, 性能高
-- `lunr`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，但占用带宽大且性能低（特别是中文需要一个较大的分词依赖库）
-- `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
-
-{{< version 0.2.3 >}} 文章内容被 `h2` 和 `h3` HTML 标签切分来提高查询效果并且基本实现全文搜索。
-`contentLength` 用来限制 `h2` 和 `h3` HTML 标签开头的内容部分的最大长度。
-{{< /admonition >}}
-
-{{< admonition tip "关于 algolia 的使用技巧" >}}
-你需要上传 `index.json` 到 algolia 来激活搜索功能。你可以使用浏览器来上传 `index.json` 文件但是一个自动化的脚本可能效果更好。
-[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) 是一个不错的选择。
-为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `index.json` 文件到对应的 algolia index, 例如 `zh-cn/index.json` 或 `fr/index.json`……
-{{< /admonition >}}
-
----
-
-{{< admonition quote "感谢" >}}
-*本文档中 `v0.2.10` 版本之前的内容，感谢原作者 [Dillon](https://dillonzq.com) 编写修订。*
-{{< /admonition >}}

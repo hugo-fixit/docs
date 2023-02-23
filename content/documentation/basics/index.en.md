@@ -1,14 +1,14 @@
 ---
 weight: 2
-title: Theme Documentation - Basics
-date: 2021-12-19T16:15:22+08:00
+title: Basics
+date: 2023-02-23T16:04:22+08:00
 type: posts
 aliases:
   - /theme-documentation-basics/
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
+description: Discover the basics of the Hugo - FixIt theme and the core concepts behind it.
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -25,81 +25,63 @@ toc:
 menu:
   main:
     name: Basics
-    title: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
+    title: Discover the basics of the Hugo - FixIt theme and the core concepts behind it.
     parent: documentation
     weight: 2
     params:
       icon: fa-brands fa-readme
 ---
 
-Discover what the Hugo - **FixIt** theme is all about and the core-concepts behind it.
+Discover the basics of the Hugo - **FixIt** theme and the core concepts behind it.
 
 <!--more-->
 
-## 1 Requirements
+## Installation ways
 
-Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
+{{< link "https://github.com/hugo-fixit/FixIt" "The repository of FixIt theme" "" true >}}
 
-Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo(>= 0.89.0)](https://gohugo.io/getting-started/installing/) for your OS (**Windows**, **Linux**, **macOS**).
+In fact, there are many ways to quickly install the theme, just choose **one** of them ([Git Submodule](#git-submodule) or [Hugo Module](#hugo-module) is be recommended).
 
-{{< admonition note "Why not support earlier versions of Hugo?" >}}
-Since [function `path.Clean`](https://gohugo.io/functions/path.clean/) was introduced in the [Hugo release v0.89.0](https://github.com/gohugoio/hugo/releases/tag/v0.89.0), this theme only supports Hugo versions not lower than **0.89.0**.
-{{< /admonition >}}
-
-{{< admonition tip "Hugo extended version is recommended" >}}
-Since some features of this theme need to processes :(fa-brands fa-sass fa-fw): SCSS to :(fa-brands fa-css3 fa-fw): CSS, it is recommended to use Hugo **extended** version for better experience.
-{{< /admonition >}}
-
-## 2 Installation
-
-The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/quick-start/).
-
-### 2.1 Create Your Project
-
-Hugo provides a `new` command to create a new website:
-
-```bash
-hugo new site my_website
-cd my_website
-```
-
-### 2.2 Install the Theme {#install-theme}
-
-{{< link "https://github.com/hugo-fixit/FixIt" "source of FixIt theme" "" true >}}
-
-The repository of **FixIt** theme is: <https://github.com/hugo-fixit/FixIt>.
-
-There are many ways to quickly install themes, just choose **one** of them.
-
-#### 2.2.1 Manual
+### Manual
 
 You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/hugo-fixit/FixIt/releases) of the theme and extract it in the `themes` directory.
 
-#### 2.2.2 Git Clone
+### Git Clone
 
-Alternatively, clone this repository to the `themes` directory:
+Or, clone the [FixIt](https://github.com/hugo-fixit/FixIt) theme into the `themes` directory:
 
 ```bash
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
-#### 2.2.3 Git Submodule (Recommended)
+### Git Submodule {#git-submodule}
 
-Or, create an empty git repository and make this repository a submodule of your site directory:
+{{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "A Template base on Git Submodule" "" true >}}
+
+Alternatively, initialize an empty Git repository and clone the [FixIt](https://github.com/hugo-fixit/FixIt) theme into the `themes` directory, adding it to your project as a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 ```bash
 git init
-# Stable version
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
-# ⚠️ Dev version
+```
+
+If you want to use the version on the `dev` branch, you can use the following command:
+
+```bash
 git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
-# switch version
+```
+
+Or switch the submodule branch from `master` to `dev`:
+
+```bash
 git submodule set-branch -b dev themes/FixIt
 ```
 
-> Use this template based on Git Submodule: [hugo-fixit/hugo-fixit-blog-git](https://github.com/hugo-fixit/hugo-fixit-blog-git)
+### Hugo Module {#hugo-module}
 
-#### 2.2.4 Hugo Module (Recommended)
+{{< link "https://github.com/hugo-fixit/hugo-fixit-blog-go" "A Template base on Hugo Module" "" true >}}
+
+> In this way, you don't need to configure `theme = "FixIt"` in `config.toml`.
 
 The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme is to import it in the config. See [Use Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
 
@@ -112,149 +94,78 @@ The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme i
        path = "github.com/hugo-fixit/FixIt"
    ```
 
-> Use this template based on Hugo Modules: [hugo-fixit/hugo-fixit-blog-go](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+## Full Configuration
 
-### 2.3 Basic Configuration {#basic-configuration}
+Before starting configuration, it is recommended that you execute the following command to copy the default [config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) of theme to your project:
 
-The following is a basic configuration for the FixIt theme:
+```bash
+mv config.toml config.old.toml
+cp themes/FixIt/config.toml config.toml
+```
+
+###  Menu Configuration
+
+Hugo has a simple yet powerful [menu system](https://gohugo.io/content-management/menus/).
+
+According to the interface provided by Hugo, FixIt theme only realizes some functions, it is enough to meet the needs of most people and make users easier to use.
+
+The following is a complete menu item configuration:
 
 ```toml
-title = "My Hugo FixIt Site"
-baseURL = "http://example.org/"
-# determines default content language ["en", "zh-cn", "fr", "pl", ...]
-defaultContentLanguage = "en"
-# language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
-
-# Change the default theme to be use when building the site with Hugo
-# If you use the Hugo Module to load the theme, you don't need to configure this parameter
-theme = "FixIt"
-
-[params]
-  # FixIt theme version
-  version = "0.2.X"
-
 [menu]
   [[menu.main]]
-    identifier = "posts"
+    identifier = ""
+    # {{< version 0.2.14 >}} Identifier of the parent menu item
+    parent = ""
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Posts"
-    url = "/posts/"
+    name = ""
+    url = ""
     # title will be shown when you hover on this menu link
     title = ""
     weight = 1
-    # add user-defined content to menu items
+    # {{< version 0.2.14 >}} add user-defined content to menu items
     [menu.main.params]
       # add css class to a specific menu item
       class = ""
       # whether set as a draft menu item whose function is similar to a draft post/page
       draft = false
-      # add fontawesome icon to a specific menu item
-      icon = "fa-solid fa-archive"
-      # set menu item type, optional values: ["mobile", "desktop"]
+      # {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
+      icon = ""
+      # {{< version 0.2.16 >}} set menu item type, optional values: ["mobile", "desktop"]
       type = ""
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 2
-    [menu.main.params]
-      icon = "fa-solid fa-th"
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 3
-    [menu.main.params]
-      icon = "fa-solid fa-tags"
-
-# Markup related configuration in Hugo
-[markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false is a necessary configuration (https://github.com/hugo-fixit/FixIt/issues/43)
-    noClasses = false
 ```
 
-{{< admonition >}}
+{{< admonition note "Sub Menu" >}}
+In consideration of practicability and typesetting, the FixIt theme only supports two-tier nested menus, which can be configured through the `parent` field in the menu configuration.
 
-- When building the website, you can set a theme by using `--theme` option. However, we suggest you modify the configuration file (**config.toml**) and set the theme as the default.
-- {{< version 0.2.14 >}} The FixIt theme provides sub menu support. Please refer to [Menu Advanced Configuration](#menu-advanced-configuration) for details.
-
+The parent item of a menu item should be the `identifier` of another menu item, and the identifier should be unique in the menu.
 {{< /admonition >}}
 
-### 2.4 Create Your First Post
+In addition, you can also add content to the menu through the `front matter` of the configuration page (i.e. the `.md`-file).
 
-Here is the way to create your first post:
+Here is a `yaml` example:
 
-```bash
-hugo new posts/first_post.md
+```yaml
+---
+title: Theme Documentation - Basics
+author: Lruihao
+menu:
+  main:
+    name: Basics
+    title: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
+    parent: documentation
+    params:
+      icon: fa-brands fa-readme
+# ...
+---
 ```
 
-Feel free to edit the post file by adding some sample content and replacing the title value in the beginning of the file.
-
-{{< admonition >}}
-By default all posts and pages are created as a draft. If you want to render these pages, remove the property `draft: true` from the metadata, set the property `draft: false` or add `-D`/`--buildDrafts` parameter to `hugo` command.
-{{< /admonition >}}
-
-### 2.5 Launching the Website Locally
-
-Launch by using the following command:
-
-```bash
-# `hugo serve` is an alias of `hugo server`, which is not a misspelling ~
-hugo server
-```
-
-Go to `http://localhost:1313`.
-
-![Basic configuration preview](basic-configuration-preview.png "Basic configuration preview")
-
-{{< admonition tip >}}
-When you run `hugo server`, when the contents of the files change, the page automatically refreshes with the changes.
-{{< /admonition >}}
-
-{{< admonition >}}
-Since the theme use `.Scratch` in Hugo to implement some features,
-it is highly recommended that you add `--disableFastRender` parameter to `hugo server` command for the live preview of the page you are editing.
-
-```bash
-hugo server --disableFastRender
-```
-
-{{< /admonition >}}
-
-### 2.6 Build the Website
-
-When your site is ready to deploy, run the following command:
-
-```bash
-hugo
-```
-
-A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
-
-{{< admonition tip >}}
-The website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)).
-Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and [more](https://gohugo.io/hosting-and-deployment/) ...
-{{< /admonition >}}
-
-## 3 Configuration
-
-### 3.1 Site Configuration {#site-configuration}
+### Theme Configuration {#theme-configuration}
 
 In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration (see [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) for default values).
-
-> Note that some of these parameters are explained in details in other sections of this documentation.
 
 Please open the code block below to view the complete `config.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -346,7 +257,7 @@ Please open the code block below to view the complete `config.toml` sample confi
       # URL of the LOGO
       logo = "/fixit.min.svg"
       # title name
-      name = ""
+      name = "My Hugo FixIt Site"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -437,9 +348,9 @@ Please open the code block below to view the complete `config.toml` sample confi
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = "xx@xx.com"
+      gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = ""
+      avatarURL = "/images/avatar.png"
       # {{< version 0.2.17 >}} identifier of avatar menu link
       avatarMenu = ""
       # {{< version 0.2.7 changed >}} title shown in home page (HTML format is supported)
@@ -1050,7 +961,7 @@ Please open the code block below to view the complete `config.toml` sample confi
   name = "xxxx"
   email = ""
   link = ""
-  avatar = "" # {{< version 0.2.18 >}}
+  avatar = "/images/avatar.png" # {{< version 0.2.18 >}}
 
 # Sitemap config
 [sitemap]
@@ -1102,53 +1013,20 @@ Please open the code block below to view the complete `config.toml` sample confi
   taxonomyTerm = ["HTML"]
 ```
 
-{{< admonition tip "Tips about CDN Configuration" >}}
-{{< version 0.2.7 changed >}}
+![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
+
+### Search Configuration
+
+Based on [Lunr.js](https://lunrjs.com/), [algolia](https://www.algolia.com/) or [Fuse.js](https://fusejs.io/), searching is supported in **FixIt** theme.
+
+In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your [site configuration](#site-configuration), see `params.search` configuration in [Theme Configuration](#theme-configuration) for details.
 
 ```toml
-[params.cdn]
-  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
-  data = ""
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 ```
 
-The default CDN data file is located in `themes/FixIt/assets/data/cdn/` directory.
-You can store your own data file in the same path under your project: `assets/data/cdn/`.
-{{< /admonition >}}
-
-{{< admonition tip "Tips about social Configuration" >}}
-{{< version 0.2.0 >}}
-
-You can directly set your ID to get a default social link and its icon:
-
-```toml
-[params.social]
-  Mastodon = "@xxxx"
-```
-
-The social link generated is `https://mastodon.technology/@xxxx`.
-
-Or You can set more options through a dict:
-
-```toml
-[params.social]
-  [params.social.Mastodon]
-    # weight when arranging icons (the greater the weight, the later the icon is positioned)
-    weight = 0
-    # your social ID
-    id = "@xxxx"
-    # prefix of your social link
-    prefix = "https://mastodon.social/"
-    # content hovering on the icon
-    title = "Mastodon"
-```
-
-The default data of all supported social links is located in `themes/FixIt/assets/data/social.yaml`,
-which is you can refer to.
-{{< /admonition >}}
-
-![Complete configuration preview](complete-configuration-preview.png "Complete configuration preview")
-
-### 3.2 Favicons, Browserconfig, Manifest
+### Favicons, Browserconfig, Manifest
 
 It is recommended to put your own favicons:
 
@@ -1161,216 +1039,15 @@ It is recommended to put your own favicons:
 
 into `/static`. They’re easily created via [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
 
-Customize `browserconfig.xml` and `site.webmanifest` to set theme-color and background-color.
+Customize `browserconfig.xml` and `site.webmanifest` to set `theme-color` and `background-color`.
 
-### 3.3 Style Customization
-
-{{< version 0.2.8 changed >}}
-
-{{< admonition >}}
-Hugo **extended** version is necessary for the style customization.
-{{< /admonition >}}
-
-**FixIt** theme has been built to be as configurable as possible by defining custom `.scss` style files.
-
-The directory including the custom `.scss` style files is `assets/css` relative to **your project root directory**.
-
-In `assets/css/_override.scss`, you can override the variables in `themes/FixIt/assets/css/_variables.scss` to customize the style.
-
-Here is a example:
-
-```scss
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace;
-```
-
-In `assets/css/_custom.scss`, you can add some css style code to customize the style.
-
-#### 3.3.1 Page Style {#page-style}
-
-{{< version 0.2.13 >}}
-
-The FixIt theme provides a page width configuration option `pageStyle` and three values.
-
-- **narrow** Keep `<v0.2.13` page/toc width ratio
-- **normal** New default page/toc width ratio
-- **wide** Larger page/toc width ratio
-
-In addition, you can also customize the `pageStyle` value in `assets/css/_custom.scss`
-
-For example: `pageStyle="custom"`
-
-```scss
-@media only screen and (min-width: 1441px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 70%;
-    }
-
-    aside {
-      width: 15%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 60%;
-    }
-
-    aside {
-      width: 20%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 56%;
-    }
-
-    aside {
-      width: 22%;
-    }
-  }
-}
-```
-
-#### 3.3.2 Print Style {#print-style}
-
-{{< version 0.2.13 >}}
-
-There are three css common class for print view in FixIt Theme.
-
-- `page-break-before` Insert page break before element
-- `page-break-after` Insert page break after element
-- `print-d-none` Hide elements in print view
-
-Here is a simple exmple:
-
-```html
-<div class="page-break-before"></div>
-<div class="page-break-after"></div>
-<div class="print-d-none">
-  Something you want to hide in the print view is written here.
-</div>
-```
-
-If you set `goldmark.parser.attribute.block` to `true`, you can also use:
-
-```markdown
-{.page-break-before}
-{.page-break-after}
-
-Something you want to hide in the print view is written here.
-{.print-d-none}
-```
-
-### 3.4 Script Customization
-
-{{< version 0.2.16 >}}
-
-The directory including the custom script file named `custom.js` is `assets/js` relative to **your project root directory**.
-
-If the script file `assets/js/custom.js` exists, it will be executed at the end of each post and page.
-
-### 3.5 Menu Advanced Configuration {#menu-advanced-configuration}
-
-Hugo has a simple yet powerful [menu system](https://gohugo.io/content-management/menus/).
-
-According to the interface provided by Hugo, FixIt theme only realizes some functions, but I think it is enough to meet the needs of most people and make users easier to use.
-
-The following is a complete menu item configuration:
-
-```toml
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # {{< version 0.2.14 >}} Identifier of the parent menu item
-    parent = ""
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 1
-    # {{< version 0.2.14 >}} add user-defined content to menu items
-    [menu.main.params]
-      # add css class to a specific menu item
-      class = "text-center"
-      # whether set as a draft menu item whose function is similar to a draft post/page
-      draft = false
-      # {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
-      icon = "fa-solid fa-archive"
-      # {{< version 0.2.16 >}} set menu item type, optional values: ["mobile", "desktop"]
-      type = ""
-```
-
-#### 3.5.1 Sub Menu
-
-{{< version 0.2.14 >}}
-
-In consideration of practicability and typesetting, the FixIt theme only supports two-tier nested menus, which can be configured through the `parent` field in the menu configuration.
-
-The parent item of a menu item should be the `identifier` of another menu item, and the identifier should be unique in the menu.
-
-#### 3.5.2 Menu Params
-
-{{< version 0.2.14 >}}
-
-You can also add user-defined content to menu items via the `params` field. The FixIt theme currently provides four parameters:
-
-- **class** *{String}* add css class to a specific menu item
-- **draft** *{Boolean}* whether set as a draft menu item whose function is similar to a draft post/page
-- **icon** *{String}* {{< version 0.2.16 >}} add fontawesome icon to a specificmenu item
-- **type** *{String}* {{< version 0.2.16 >}} set menu item type, optional values: ["mobile", "desktop"]
-
-{{< admonition >}}
-The draft menu items and posts/pages can be rendered by starting the `Hugo server` command or adding the `-D`/`--buildDrafts` parameter to `hugo` command.
-{{< /admonition >}}
-
-{{< admonition tip >}}
-This helps to distinguish the different contents of preview environment and production environment during deployment.
-
-For example:
-
-- [preview environment with draft menu items](https://pre.fixit.lruihao.cn)
-- [production environment without draft menu items](https://fixit.lruihao.cn)
-{{< /admonition >}}
-
-#### 3.5.3 Add content to Menu {#content-to-menu}
-
-It’s also possible to create menu entries from the page by configuring `front matter` (i.e. the `.md`-file).
-
-Here is a `yaml` example:
-
-```yaml
----
-title: Theme Documentation - Basics
-author: Lruihao
-menu:
-  main:
-    name: Basics
-    title: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
-    parent: documentation
-    params:
-      icon: fa-brands fa-readme
-# ...
----
-```
-
-## 4 Multilingual and i18n
+### Multilingual and i18n
 
 **FixIt** theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.
 
 ![Language Switch](language-switch.gif 'Language Switch')
 
-### 4.1 Compatibility {#language-compatibility}
+#### Compatibility {#language-compatibility}
 
 {{< version 0.2.10 changed >}}
 
@@ -1390,9 +1067,9 @@ menu:
 | Romanian             |   `ro`    |         `ro`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 | Vietnamese           |   `vi`    |         `vi`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 
-### 4.2 Basic Configuration
+#### Basic Configuration
 
-After learning [how Hugo handle multilingual websites](https://gohugo.io/content-management/multilingual), define your languages in your [site configuration](#site-configuration).
+After learning [how Hugo handle multilingual websites](https://gohugo.io/content-management/multilingual), define your languages in your site configuration.
 
 For example with English, Chinese and French website:
 
@@ -1511,91 +1188,10 @@ Be aware that only translated pages are displayed in menu. It’s not replaced w
 Use [Front Matter parameter](https://gohugo.io/content-management/multilingual#translate-your-content) to translate urls too.
 {{< /admonition >}}
 
-### 4.3 Overwrite Translation Strings
+#### Overwrite Translation Strings
 
 Translations strings are used for common default values used in the theme. Translations are available in [some languages](#language-compatibility), but you may use another language or want to override default values.
 
 To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/FixIt/i18n/en.toml`.
 
 By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
-
-## 5 Search
-
-{{< version 0.2.0 >}}
-
-Based on [Lunr.js](https://lunrjs.com/) or [algolia](https://www.algolia.com/) or [Fuse.js](https://fusejs.io/), searching is supported in **FixIt** theme.
-
-### 5.1 Output Configuration
-
-In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your [site configuration](#site-configuration).
-
-```toml
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-```
-
-### 5.2 Search Configuration
-
-Based on `index.json` generated by Hugo, you could activate searching.
-
-Here is the search configuration in your [site configuration](#site-configuration):
-
-```toml
-[params.search]
-  enable = true
-  # type of search engine ["lunr", "algolia", "fuse"]
-  type = "lunr"
-  # max index length of the chunked content
-  contentLength = 4000
-  # placeholder of the search bar
-  placeholder = ""
-  # {{< version 0.2.1 >}} max number of results length
-  maxResultLength = 10
-  # {{< version 0.2.3 >}} snippet length of the result
-  snippetLength = 30
-  # {{< version 0.2.1 >}} HTML tag name of the highlight part in results
-  highlightTag = "em"
-  # {{< version 0.2.4 >}} whether to use the absolute URL based on the baseURL in search index
-  absoluteURL = false
-  [params.search.algolia]
-    index = ""
-    appID = ""
-    searchKey = ""
-  [params.search.fuse]
-    # {{< version 0.2.17 >}} https://fusejs.io/api/options.html
-    isCaseSensitive = false
-    minMatchCharLength = 2
-    findAllMatches = false
-    location = 0
-    threshold = 0.3
-    distance = 100
-    ignoreLocation = false
-    useExtendedSearch = false
-    ignoreFieldNorm = false
-```
-
-{{< admonition note "How to choose search engine?" >}}
-The following is a comparison of two search engines:
-
-- `fuse`: simple, no need to synchronize `index.json`, no limit for `contentLength`, high performance
-- `lunr`: simple, no need to synchronize `index.json`, no limit for `contentLength`,
-  but high bandwidth and low performance (Especially for Chinese which needs a large segmentit library)
-- `algolia`: high performance and low bandwidth, but need to synchronize `index.json` and limit for `contentLength`
-
-{{< version 0.2.3 >}} The content of the post is separated by `h2` and `h3` HTML tag to improve query performance and basically implement full-text search.
-`contentLength` is used to limit the max index length of the part starting with `h2` and `h3` HTML tag.
-{{< /admonition >}}
-
-{{< admonition tip "Tips about algolia" >}}
-You need to upload `index.json` files to algolia to activate searching.
-You could upload the `index.json` files by browsers but a CLI tool may be better.
-[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) is a good choice.
-To be compatible with Hugo multilingual mode,
-you need to upload different `index.json` for each language to the different index of algolia, such as `zh-cn/index.json` or `fr/index.json`...
-{{< /admonition >}}
-
----
-
-{{< admonition quote "Thanks" >}}
-*Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation.*
-{{< /admonition >}}
