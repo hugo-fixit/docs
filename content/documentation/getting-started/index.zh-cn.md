@@ -62,6 +62,12 @@ git init
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+之后，你可以在站点目录通过这条命令来将主题更新至最新版本：
+
+```bash
+git submodule update --remote --merge
+```
+
 ## 基础配置 {#basic-configuration}
 
 以下是 FixIt 主题的基本配置：

@@ -62,6 +62,12 @@ git init
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+And later you can update the submodule in your site directory to the latest commit using this command:
+
+```bash
+git submodule update --remote --merge
+```
+
 ## Basic Configuration {#basic-configuration}
 
 The following is a basic configuration for the FixIt theme:
