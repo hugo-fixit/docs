@@ -1,6 +1,5 @@
 ---
-weight: 6
-title: 主题文档 - 内容加密
+title: 内容加密
 date: 2022-05-28T11:51:41+08:00
 type: posts
 aliases:
@@ -23,13 +22,6 @@ tags:
 categories:
   - documentation
 reward: true
-menu:
-  main:
-    name: 主题文档 - 内容加密
-    title: 了解如何在 FixIt 主题中加密内容。
-    parent: documentation
-    params:
-      icon: fa-solid fa-lock
 ---
 
 了解如何在 FixIt 主题中加密内容。

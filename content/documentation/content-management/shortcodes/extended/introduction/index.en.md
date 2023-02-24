@@ -1,5 +1,4 @@
 ---
-weight: 4
 title: Theme Documentation - Extended Shortcodes
 date: 2021-12-19T16:15:22+08:00
 type: posts
@@ -21,13 +20,6 @@ categories:
 lightgallery: true
 math: true
 reward: true
-menu:
-  main:
-    name: Extended Shortcodes
-    title: FixIt theme provides multiple shortcodes on top of built-in ones in Hugo.
-    parent: documentation
-    params:
-      icon: fa-brands fa-readme
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
@@ -70,9 +62,9 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.0 >}}
 
-`link` shortcode is an alternative to [Markdown link syntax](../../basic-markdown-syntax#links). `link` shortcode can provide some other features and can be used in code blocks.
+`link` shortcode is an alternative to [Markdown link syntax](../../../../basic-markdown-syntax#links). `link` shortcode can provide some other features and can be used in code blocks.
 
-{{< version 0.2.10 >}} The complete usage of [local resource references](../../theme-documentation-content#contents-organization) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references](../../../../theme-documentation-content#contents-organization) is supported.
 
 The `link` shortcode has the following named parameters:
 
@@ -178,9 +170,9 @@ The rendered output looks like this:
 
 {{< version 0.2.18 changed >}}
 
-`image` shortcode is an alternative to [`figure` shortcode](../../theme-documentation-built-in-shortcodes#figure). `image` shortcode can take full advantage of the dependent library of [lightgallery](https://github.com/sachinchoolur/lightgallery).
+`image` shortcode is an alternative to [`figure` shortcode](../../../../theme-documentation-built-in-shortcodes#figure). `image` shortcode can take full advantage of the dependent library of [lightgallery](https://github.com/sachinchoolur/lightgallery).
 
-{{< version 0.2.10 >}} The complete usage of [local resource references](../../theme-documentation-content#contents-organization) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references](../../../../theme-documentation-content#contents-organization) is supported.
 
 The `image` shortcode has the following named parameters:
 
@@ -336,37 +328,37 @@ A **tip** banner
 
 The `mermaid` shortcode supports diagrams in Hugo with [Mermaid](https://mermaidjs.github.io/) library.
 
-The full documentation is provided in [Extended Shortcode - mermaid](../mermaid/).
+The full documentation is provided in [Extended Shortcode - mermaid](./../mermaid).
 
 ## 6 echarts
 
 The `echarts` shortcode supports data visualization in Hugo with [ECharts](https://echarts.apache.org/) library.
 
-The full documentation is provided in [Extended Shortcode - echarts](../echarts/).
+The full documentation is provided in [Extended Shortcode - echarts](./../echarts).
 
 ## 7 mapbox
 
 The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) library.
 
-The full documentation is provided in [Extended Shortcode - mapbox](../mapbox).
+The full documentation is provided in [Extended Shortcode - mapbox](./../mapbox).
 
 ## 8 music
 
 The `music` shortcode embeds a responsive music player based on [APlayer](https://github.com/MoePlayer/APlayer) and [MetingJS](https://github.com/metowolf/MetingJS) library.
 
-The full documentation is provided in [Extended Shortcode - music](../music).
+The full documentation is provided in [Extended Shortcode - music](./../music).
 
 ## 9 bilibili
 
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 
-The full documentation is provided in [Extended Shortcode - bilibili](../bilibili).
+The full documentation is provided in [Extended Shortcode - bilibili](./../bilibili).
 
 ## 10 typeit
 
 The `typeit` shortcode provides typing animation based on [TypeIt](https://typeitjs.com/).
 
-The full documentation is provided in [Extended Shortcode - typeit](../typeit).
+The full documentation is provided in [Extended Shortcode - typeit](./../typeit).
 
 ## 11 script
 
@@ -450,7 +442,7 @@ this is a center-quote shortcode example.
 
 You can use `fixit-encryptor` shortcode to encrypt partial content.
 
-The full documentation is provided in [Theme Documentation - Content Encryption](../../content-encryption#partial-encryption).
+The full documentation is provided in [Theme Documentation - Content Encryption](../../../../content-encryption#partial-encryption).
 
 ## 15 raw
 

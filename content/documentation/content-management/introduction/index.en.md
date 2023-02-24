@@ -1,7 +1,7 @@
 ---
-weight: 2
-title: Theme Documentation - Content
-date: 2021-12-19T16:15:22+08:00
+weight: 4
+title: Content Management
+date: 2023-02-24T17:27:22+08:00
 type: posts
 aliases:
   - /theme-documentation-content/
@@ -20,14 +20,6 @@ categories:
 lightgallery: true
 reward: true
 math: true
-menu:
-  main:
-    name: Content
-    title: Find out how to create and organize your content quickly and intuitively
-      in FixIt theme.
-    parent: documentation
-    params:
-      icon: fa-brands fa-readme
 ---
 
 Find out how to create and organize your content quickly and intuitively in **FixIt** theme.
@@ -70,12 +62,12 @@ It's really cool! :(fa-regular fa-grin-squint fa-fw):
 
 {{< admonition >}}
 **Not all** of the below front matters need to be set in each of your posts.
-It is necessary only if the front matters and the `page` part in your [site configuration](../basics/#site-configuration) are inconsistent.
+It is necessary only if the front matters and the `page` part in your [site configuration](../basics#site-configuration) are inconsistent.
 {{< /admonition >}}
 
 * **title**: the title for the content.
 * **subtitle**: {{< version 0.2.0 >}} the subtitle for the content.
-* **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [site configuration](../basics/#site-configuration).
+* **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [site configuration](../basics#site-configuration).
 * **lastmod**: the datetime at which the content was last modified.
 * **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
 * **author**: {{< version 0.2.18 changed >}} the author for the content.
@@ -95,38 +87,38 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **hiddenFromHomePage**: if `true`, the content will not be shown in the home page.
 * **hiddenFromSearch**: {{< version 0.2.0 >}} if `true`, the content will not be shown in the search results.
 * **twemoji**: {{< version 0.2.0 >}} if `true`, the content will enable the twemoji.
-* **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [site configuration](../basics/#site-configuration).
+* **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [site configuration](../basics#site-configuration).
 * **ruby**: {{< version 0.2.0 >}} if `true`, the content will enable the [ruby extended syntax](#ruby).
 * **fraction**: {{< version 0.2.0 >}} if `true`, the content will enable the [fraction extended syntax](#fraction).
 * **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax](#fontawesome).
 * **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
 * **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
-* **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style](../basics/#page-style).
+* **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style](../basics#page-style).
 * **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} Gravatar is force-used as the author's avatar.
 
-* **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [site configuration](../basics/#site-configuration).
-* **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [site configuration](../basics/#site-configuration).
-* **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [site configuration](../basics/#site-configuration).
-* **edit**: {{< version 0.2.14 >}} the same as the `params.page.edit` part in the [site configuration](../basics/#site-configuration).
-* **math**: {{< version 0.2.0 changed >}} the same as the `params.page.math` part in the [site configuration](../basics/#site-configuration).
-* **mapbox**: {{< version 0.2.0 >}} the same as the `params.page.mapbox` part in the [site configuration](../basics/#site-configuration).
-* **share**: the same as the `params.page.share` part in the [site configuration](../basics/#site-configuration).
-* **comment**: {{< version 0.2.0 changed >}} the same as the `params.page.comment` part in the [site configuration](../basics/#site-configuration).
-* **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [site configuration](../basics/#site-configuration).
-* **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [site configuration](../basics/#site-configuration).
+* **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [site configuration](../basics#site-configuration).
+* **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [site configuration](../basics#site-configuration).
+* **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [site configuration](../basics#site-configuration).
+* **edit**: {{< version 0.2.14 >}} the same as the `params.page.edit` part in the [site configuration](../basics#site-configuration).
+* **math**: {{< version 0.2.0 changed >}} the same as the `params.page.math` part in the [site configuration](../basics#site-configuration).
+* **mapbox**: {{< version 0.2.0 >}} the same as the `params.page.mapbox` part in the [site configuration](../basics#site-configuration).
+* **share**: the same as the `params.page.share` part in the [site configuration](../basics#site-configuration).
+* **comment**: {{< version 0.2.0 changed >}} the same as the `params.page.comment` part in the [site configuration](../basics#site-configuration).
+* **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [site configuration](../basics#site-configuration).
+* **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [site configuration](../basics#site-configuration).
 * **type**: the rendering template of page, see [templates](#templates) for details.
-* **menu**: see [Add content to Menu](../basics/#content-to-menu).
+* **menu**: see [Add content to Menu](../basics#content-to-menu).
 
 * **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Theme Documentation - Content Encryption](../content-encryption).
 * **message**: {{< version 0.2.15 >}} encryption prompt, see [Theme Documentation - Content Encryption](../content-encryption).
 
-* **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [site configuration](../basics/#site-configuration).
-* **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [site configuration](../basics/#site-configuration).
-* **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [site configuration](../basics/#site-configuration).
-* **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [site configuration](../basics/#site-configuration).
-* **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [site configuration](../basics/#site-configuration).
-* **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [site configuration](../basics/#site-configuration).
-* **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [site configuration](../basics/#site-configuration).
+* **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [site configuration](../basics#site-configuration).
+* **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [site configuration](../basics#site-configuration).
+* **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [site configuration](../basics#site-configuration).
+* **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [site configuration](../basics#site-configuration).
+* **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [site configuration](../basics#site-configuration).
+* **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [site configuration](../basics#site-configuration).
+* **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [site configuration](../basics#site-configuration).
 
 {{< admonition tip >}}
 {{< version 0.2.10 >}}
@@ -290,9 +282,9 @@ hugo new offline/index.md
 
 By default, Hugo automatically takes the first 70 words of your content as its summary.
 
-You may customize the summary length by setting `summaryLength` in the [site configuration](../basics/#site-configuration).
+You may customize the summary length by setting `summaryLength` in the [site configuration](../basics#site-configuration).
 
-If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your [site configuration](../basics/#site-configuration).
+If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your [site configuration](../basics#site-configuration).
 
 ### Manual Summary Splitting
 
@@ -345,7 +337,7 @@ This part is shown in the [emoji support page](../emoji-support).
 
 **FixIt** theme supports mathematical formulas based on [$\KaTeX$](https://katex.org/).
 
-Set the property `enable = true` under `[params.math]` in your [site configuration](../basics/#site-configuration)
+Set the property `enable = true` under `[params.math]` in your [site configuration](../basics#site-configuration)
 and the property `math: true` of the article front matter to enable the automatic rendering of mathematical formulas.
 
 {{< admonition tip >}}
@@ -497,7 +489,7 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 \end{CD}
 
 {{< admonition tip >}}
-You can add more inline and block delimiters in your [site configuration](../basics/#site-configuration).
+You can add more inline and block delimiters in your [site configuration](../basics#site-configuration).
 {{< /admonition >}}
 
 #### Copy-tex
@@ -506,7 +498,7 @@ You can add more inline and block delimiters in your [site configuration](../bas
 
 By the extension, when selecting and copying $\KaTeX$ rendered elements, copies their $\LaTeX$ source to the clipboard.
 
-Set the property `copyTex = true` under `[params.math]` in your [site configuration](../basics/#site-configuration) to enable Copy-tex.
+Set the property `copyTex = true` under `[params.math]` in your [site configuration](../basics#site-configuration) to enable Copy-tex.
 
 Select and copy the formula rendered in the previous section, and you can find that the copied content is the LaTeX source code.
 
@@ -516,7 +508,7 @@ Select and copy the formula rendered in the previous section, and you can find t
 
 By the extension, you can write beautiful chemical equations easily in the article.
 
-Set the property `mhchem = true` under `[params.math]` in your [site configuration](../basics/#site-configuration) to enable mhchem.
+Set the property `mhchem = true` under `[params.math]` in your [site configuration](../basics#site-configuration) to enable mhchem.
 
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$

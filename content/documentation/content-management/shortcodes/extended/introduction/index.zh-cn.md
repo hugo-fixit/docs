@@ -1,5 +1,4 @@
 ---
-weight: 4
 title: 主题文档 - 扩展 Shortcodes
 date: 2021-12-19T16:15:22+08:00
 type: posts
@@ -8,7 +7,7 @@ aliases:
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode
+description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -21,12 +20,6 @@ categories:
 lightgallery: true
 math: true
 reward: true
-menu:
-  main:
-    title: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode
-    parent: documentation
-    params:
-      icon: fa-brands fa-readme
 ---
 
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
@@ -68,10 +61,10 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.0 >}}
 
-`link` shortcode 是 [Markdown 链接语法](../../basic-markdown-syntax#links) 的替代。
+`link` shortcode 是 [Markdown 链接语法](../../../../basic-markdown-syntax#links) 的替代。
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用。
 
-{{< version 0.2.10 >}} 支持 [本地资源引用](../../theme-documentation-content#contents-organization) 的完整用法。
+{{< version 0.2.10 >}} 支持 [本地资源引用](../../../../theme-documentation-content#contents-organization) 的完整用法。
 
 `link` shortcode 有以下命名参数：
 
@@ -177,9 +170,9 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.18 changed >}}
 
-`image` shortcode 是 [`figure` shortcode](../../theme-documentation-built-in-shortcodes#figure) 的替代。`image` shortcode 可以充分利用 [lightgallery](https://github.com/sachinchoolur/lightgallery)。
+`image` shortcode 是 [`figure` shortcode](../../../../theme-documentation-built-in-shortcodes#figure) 的替代。`image` shortcode 可以充分利用 [lightgallery](https://github.com/sachinchoolur/lightgallery)。
 
-{{< version 0.2.10 >}} 支持 [本地资源引用](../../theme-documentation-content#contents-organization) 的完整用法。
+{{< version 0.2.10 >}} 支持 [本地资源引用](../../../../theme-documentation-content#contents-organization) 的完整用法。
 
 `image` shortcode 有以下命名参数：
 
@@ -335,37 +328,37 @@ This is a **right-aligned** paragraph.
 
 `mermaid` shortcode 使用 [Mermaid](https://mermaidjs.github.io/) 库提供绘制图表和流程图的功能。
 
-完整文档请查看页面 [扩展 Shortcode - mermaid](../mermaid/)。
+完整文档请查看页面 [扩展 Shortcode - mermaid](./../mermaid)。
 
 ## 6 echarts
 
 `echarts` shortcode 使用 [ECharts](https://echarts.apache.org/) 库提供数据可视化的功能。
 
-完整文档请查看页面 [扩展 Shortcode - echarts](../echarts/)。
+完整文档请查看页面 [扩展 Shortcode - echarts](./../echarts)。
 
 ## 7 mapbox
 
 `mapbox` shortcode 使用 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 库提供互动式地图的功能。
 
-完整文档请查看页面 [扩展 Shortcode - mapbox](../mapbox/)。
+完整文档请查看页面 [扩展 Shortcode - mapbox](./../mapbox)。
 
 ## 8 music
 
 `music` shortcode 基于 [APlayer](https://github.com/MoePlayer/APlayer) 和 [MetingJS](https://github.com/metowolf/MetingJS) 库提供了一个内嵌的响应式音乐播放器。
 
-完整文档请查看页面 [扩展 Shortcode - music](../music/)。
+完整文档请查看页面 [扩展 Shortcode - music](./../music)。
 
 ## 9 bilibili
 
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 
-完整文档请查看页面 [扩展 Shortcode - bilibili](../bilibili/)。
+完整文档请查看页面 [扩展 Shortcode - bilibili](./../bilibili)。
 
 ## 10 typeit
 
 `typeit` shortcode 基于 [TypeIt](https://typeitjs.com/) 提供了打字动画。
 
-完整文档请查看页面 [扩展 Shortcode - typeit](../typeit/)。
+完整文档请查看页面 [扩展 Shortcode - typeit](./../typeit)。
 
 ## 11 script
 
@@ -450,7 +443,7 @@ this is a center-quote shortcode example.
 
 您可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 
-完整文档请查看页面 [主题文档 - 内容加密](../../content-encryption#partial-encryption)。
+完整文档请查看页面 [主题文档 - 内容加密](../../../../content-encryption#partial-encryption)。
 
 ## 15 raw
 

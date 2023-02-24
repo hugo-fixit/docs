@@ -1,6 +1,5 @@
 ---
-weight: 3
-title: Theme Documentation - Built-in Shortcodes
+title: Built-in Shortcodes
 date: 2021-12-19T16:15:22+08:00
 type: posts
 aliases:
@@ -17,13 +16,6 @@ tags:
 categories:
   - documentation
 lightgallery: true
-menu:
-  main:
-    name: Built-in Shortcodes
-    title: Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
-    parent: documentation
-    params:
-      icon: fa-brands fa-readme
 ---
 
 **Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.

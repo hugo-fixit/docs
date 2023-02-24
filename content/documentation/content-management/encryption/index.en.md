@@ -1,6 +1,5 @@
 ---
-weight: 6
-title: Theme Documentation - Content Encryption
+title: Content Encryption
 date: 2022-05-28T11:51:41+08:00
 type: posts
 aliases:
@@ -23,13 +22,6 @@ tags:
 categories:
   - documentation
 reward: true
-menu:
-  main:
-    name: Content Encryption
-    title: Find out how to encrypt content in FixIt theme.
-    parent: documentation
-    params:
-      icon: fa-solid fa-lock
 ---
 
 Find out how to encrypt content in FixIt theme.
