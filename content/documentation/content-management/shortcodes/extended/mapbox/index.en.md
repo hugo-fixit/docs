@@ -1,6 +1,6 @@
 ---
 title: Extended Shortcode - mapbox
-date: 2022-07-20T12:22:15+08:00
+date: 2023-02-24T22:45:45+08:00
 type: posts
 aliases:
   - /extended-shortcode-mapbox/
@@ -13,9 +13,9 @@ resources:
   - name: featured-image
     src: featured-image.jpg
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 hiddenFromHomePage: true
 ---
 

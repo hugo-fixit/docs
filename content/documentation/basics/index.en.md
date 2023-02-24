@@ -1,6 +1,6 @@
 ---
 weight: 2
-title: Basics
+title: Basics Usage
 date: 2023-02-23T16:04:22+08:00
 type: posts
 aliases:
@@ -13,10 +13,10 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - installation
-  - configuration
+  - Installation
+  - Configuration
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 reward:
   enable: true
@@ -24,7 +24,6 @@ toc:
   auto: false
 menu:
   main:
-    name: Basics
     title: Discover the basics of the Hugo - FixIt theme and the core concepts behind it.
     parent: documentation
     weight: 2

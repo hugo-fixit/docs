@@ -13,10 +13,10 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - installation
-  - configuration
+  - Installation
+  - Configuration
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 reward: true
 toc:

@@ -18,6 +18,7 @@ lightgallery: true
 resources:
   - name: featured-image
     src: featured-image.jpg
+hiddenFromHomePage: true
 ---
 
 Emoji can be enabled in a Hugo project in a number of ways.

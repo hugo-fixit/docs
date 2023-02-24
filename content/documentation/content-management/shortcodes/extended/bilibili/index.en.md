@@ -1,6 +1,6 @@
 ---
 title: Extended Shortcode - bilibili
-date: 2022-07-20T13:55:03+08:00
+date: 2023-02-24T22:52:50+08:00
 type: posts
 aliases:
   - /extended-shortcode-bilibili/
@@ -12,9 +12,9 @@ resources:
   - name: featured-image
     src: featured-image.jpg
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 hiddenFromHomePage: true
 ---
 

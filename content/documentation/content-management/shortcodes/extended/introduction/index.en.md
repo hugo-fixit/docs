@@ -1,6 +1,6 @@
 ---
-title: Theme Documentation - Extended Shortcodes
-date: 2021-12-19T16:15:22+08:00
+title: Extended Shortcodes
+date: 2023-02-24T22:11:39+08:00
 type: posts
 aliases:
   - /theme-documentation-extended-shortcodes/
@@ -14,19 +14,20 @@ resources:
   - name: featured-image-preview
     src: featured-image-preview.jpg
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 math: true
 reward: true
+hiddenFromHomePage: true
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
 
 <!--more-->
 
-## 1 style
+## style
 
 {{< version 0.2.0 changed >}}
 
@@ -58,13 +59,13 @@ The rendered output looks like this:
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
-## 2 link
+## link
 
 {{< version 0.2.0 >}}
 
-`link` shortcode is an alternative to [Markdown link syntax](../../../../basic-markdown-syntax#links). `link` shortcode can provide some other features and can be used in code blocks.
+`link` shortcode is an alternative to [Markdown link syntax]({{< relref path="/guides/basic-markdown-syntax#links" >}}). `link` shortcode can provide some other features and can be used in code blocks.
 
-{{< version 0.2.10 >}} The complete usage of [local resource references](../../../../theme-documentation-content#contents-organization) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references]({{< relref path="/documentation/content-management/introduction#contents-organization" >}}) is supported.
 
 The `link` shortcode has the following named parameters:
 
@@ -166,13 +167,13 @@ The rendered output looks like this:
 
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
-## 3 image {#image}
+## image {#image}
 
 {{< version 0.2.18 changed >}}
 
-`image` shortcode is an alternative to [`figure` shortcode](../../../../theme-documentation-built-in-shortcodes#figure). `image` shortcode can take full advantage of the dependent library of [lightgallery](https://github.com/sachinchoolur/lightgallery).
+`image` shortcode is an alternative to [`figure` shortcode]({{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}). `image` shortcode can take full advantage of the dependent library of [lightgallery](https://github.com/sachinchoolur/lightgallery).
 
-{{< version 0.2.10 >}} The complete usage of [local resource references](../../../../theme-documentation-content#contents-organization) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references]({{< relref path="/documentation/content-management/introduction#contents-organization" >}}) is supported.
 
 The `image` shortcode has the following named parameters:
 
@@ -238,7 +239,7 @@ The rendered output looks like this:
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 
-## 4 admonition
+## admonition
 
 The `admonition` shortcode supports **12** types of banners to help you put notice in your page.
 
@@ -324,43 +325,43 @@ The rendered output looks like this:
 A **tip** banner
 {{< /admonition >}}
 
-## 5 mermaid
+## mermaid
 
 The `mermaid` shortcode supports diagrams in Hugo with [Mermaid](https://mermaidjs.github.io/) library.
 
 The full documentation is provided in [Extended Shortcode - mermaid](./../mermaid).
 
-## 6 echarts
+## echarts
 
 The `echarts` shortcode supports data visualization in Hugo with [ECharts](https://echarts.apache.org/) library.
 
 The full documentation is provided in [Extended Shortcode - echarts](./../echarts).
 
-## 7 mapbox
+## mapbox
 
 The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) library.
 
 The full documentation is provided in [Extended Shortcode - mapbox](./../mapbox).
 
-## 8 music
+## music
 
 The `music` shortcode embeds a responsive music player based on [APlayer](https://github.com/MoePlayer/APlayer) and [MetingJS](https://github.com/metowolf/MetingJS) library.
 
 The full documentation is provided in [Extended Shortcode - music](./../music).
 
-## 9 bilibili
+## bilibili
 
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 
 The full documentation is provided in [Extended Shortcode - bilibili](./../bilibili).
 
-## 10 typeit
+## typeit
 
 The `typeit` shortcode provides typing animation based on [TypeIt](https://typeitjs.com/).
 
 The full documentation is provided in [Extended Shortcode - typeit](./../typeit).
 
-## 11 script
+## script
 
 {{< version 0.2.8 >}}
 
@@ -384,7 +385,7 @@ You can see the output in the console of the developer tool.
 console.log('Hello FixIt!');
 {{< /script >}}
 
-## 12 details
+## details
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
@@ -414,7 +415,7 @@ The rendered output looks like this:
 *All pages and graphics on this web site are the property of FixIt.*
 {{< /details >}}
 
-## 13 center-quote
+## center-quote
 
 {{< version 0.2.13 >}}
 
@@ -436,7 +437,7 @@ The rendered output looks like this:
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
-## 14 fixit-encryptor
+## fixit-encryptor
 
 {{< version 0.2.15 >}}
 
@@ -444,7 +445,7 @@ You can use `fixit-encryptor` shortcode to encrypt partial content.
 
 The full documentation is provided in [Theme Documentation - Content Encryption](../../../../content-encryption#partial-encryption).
 
-## 15 raw
+## raw
 
 {{< version 0.2.16 >}}
 
@@ -481,7 +482,7 @@ Block Formula:
 
 Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
-## 16 reward
+## reward
 
 {{< version 0.2.17 >}}
 
@@ -505,9 +506,3 @@ Or
 The rendered output looks like this:
 
 {{< reward >}}
-
----
-
-{{< admonition quote "Thanks" >}}
-*Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation.*
-{{< /admonition >}}

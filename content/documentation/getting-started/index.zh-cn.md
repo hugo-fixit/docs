@@ -11,9 +11,9 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - installation
+  - Installation
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 toc:
   auto: false

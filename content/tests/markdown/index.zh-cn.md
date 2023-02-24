@@ -5,7 +5,7 @@ description: Test for Markdown rendering
 type: posts
 tags:
   - Tests
-  - content
+  - Content
   - Markdown
 categories:
   - Tests

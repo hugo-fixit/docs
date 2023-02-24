@@ -1,6 +1,6 @@
 ---
 title: 扩展 Shortcode - mermaid
-date: 2022-07-09T17:20:15+08:00
+date: 2023-02-24T22:11:45+08:00
 type: posts
 aliases:
   - /zh-cn/extended-shortcode-mermaid/
@@ -12,9 +12,9 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 hiddenFromHomePage: true
 ---
 

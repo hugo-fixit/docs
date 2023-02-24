@@ -1,5 +1,5 @@
 ---
 title: Extended Shortcodes
-date: 2021-12-19T16:15:22+08:00
+date: 2023-02-24T22:13:22+08:00
 description: FixIt theme provides multiple shortcodes on top of built-in ones in Hugo.
 ---

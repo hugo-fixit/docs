@@ -12,9 +12,9 @@ resources:
     src: featured-image.png
 tags:
   - Advanced
-  - configuration
+  - Configuration
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 reward:
   enable: true
@@ -146,3 +146,7 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 包含自定义脚本文件 `custom.js` 的目录相对于 **你的项目根目录** 的路径为 `assets/js`。
 
 如果脚本文件 `assets/js/custom.js` 存在，它将在每篇文章和页面的末尾执行。
+
+## PWA 支持
+
+这部分内容在 [PWA 支持页面](../../guides/pwa-support/) 中介绍。

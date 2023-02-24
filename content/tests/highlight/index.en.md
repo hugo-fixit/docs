@@ -6,7 +6,7 @@ type: 'posts'
 
 tags:
   - Tests
-  - content
+  - Content
   - highlight
 categories:
   - Tests

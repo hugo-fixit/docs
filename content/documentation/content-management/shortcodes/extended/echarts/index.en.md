@@ -1,6 +1,6 @@
 ---
 title: Extended Shortcode - echarts
-date: 2022-07-20T11:44:15+08:00
+date: 2023-02-24T22:40:40+08:00
 type: posts
 aliases:
   - /extended-shortcode-echarts/
@@ -12,9 +12,9 @@ resources:
   - name: featured-image
     src: featured-image.jpg
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 hiddenFromHomePage: true
 code:
   maxShownLines: 70

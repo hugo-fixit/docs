@@ -5,7 +5,7 @@ description: Test for shortcodes usages
 type: posts
 tags:
   - Tests
-  - shortcodes
+  - Shortcodes
 categories:
   - Tests
 hiddenFromHomePage: true

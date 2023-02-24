@@ -1,6 +1,6 @@
 ---
 title: Built-in Shortcodes
-date: 2021-12-19T16:15:22+08:00
+date: 2023-02-24T22:11:22+08:00
 type: posts
 aliases:
   - /theme-documentation-built-in-shortcodes/
@@ -12,10 +12,11 @@ resources:
   - name: featured-image
     src: featured-image.webp
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
+hiddenFromHomePage: true
 ---
 
 **Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
@@ -41,7 +42,7 @@ See detail [shortcodes/#use-shortcodes](https://gohugo.io/content-management/sho
 
 {{< /admonition >}}
 
-## 1 figure {#figure}
+## figure {#figure}
 
 [Documentation of `figure`](https://gohugo.io/content-management/shortcodes#figure)
 
@@ -66,7 +67,7 @@ The HTML looks like this:
 </figure>
 ```
 
-## 2 gist
+## gist
 
 [Documentation of `gist`](https://gohugo.io/content-management/shortcodes#gist)
 
@@ -86,7 +87,7 @@ The HTML looks like this:
 <script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
 ```
 
-## 3 highlight
+## highlight
 
 [Documentation of `highlight`](https://gohugo.io/content-management/shortcodes#highlight)
 
@@ -118,7 +119,7 @@ The rendered output looks like this:
 </section>
 {{< /highlight >}}
 
-## 4 param
+## param
 
 [Documentation of `param`](https://gohugo.io/content-management/shortcodes#param)
 
@@ -132,11 +133,11 @@ The rendered output looks like this:
 
 {{< param description >}}
 
-## 5 ref and relref {#ref-and-relref}
+## ref and relref {#ref-and-relref}
 
 [Documentation of `ref` and `relref`](https://gohugo.io/content-management/shortcodes#ref-and-relref)
 
-## 6 tweet
+## tweet
 
 [Documentation of `tweet`](https://gohugo.io/content-management/shortcodes#tweet)
 
@@ -150,7 +151,7 @@ The rendered output looks like this:
 
 {{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
 
-## 7 vimeo
+## vimeo
 
 [Documentation of `vimeo`](https://gohugo.io/content-management/shortcodes#vimeo)
 
@@ -164,7 +165,7 @@ The rendered output looks like this:
 
 {{< vimeo 146022717 >}}
 
-## 8 youtube
+## youtube
 
 [Documentation of `youtube`](https://gohugo.io/content-management/shortcodes#youtube)
 

@@ -5,7 +5,7 @@ description: Test for rendering Font Awesome icons
 type: posts
 tags:
   - Tests
-  - content
+  - Content
   - Font Awesome
 categories:
   - Tests

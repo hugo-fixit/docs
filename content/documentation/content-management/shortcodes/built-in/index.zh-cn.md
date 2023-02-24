@@ -1,6 +1,6 @@
 ---
 title: 内置 Shortcodes
-date: 2021-12-19T16:15:22+08:00
+date: 2023-02-24T22:11:22+08:00
 type: posts
 aliases:
   - /zh-cn/theme-documentation-built-in-shortcodes/
@@ -12,10 +12,11 @@ resources:
   - name: featured-image
     src: featured-image.webp
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
+hiddenFromHomePage: true
 ---
 
 **Hugo** 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。
@@ -42,7 +43,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< /admonition >}}
 
-## 1 figure {#figure}
+## figure {#figure}
 
 [`figure` 的文档](https://gohugo.io/content-management/shortcodes#figure)
 
@@ -67,7 +68,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 </figure>
 ```
 
-## 2 gist
+## gist
 
 [`gist` 的文档](https://gohugo.io/content-management/shortcodes#gist)
 
@@ -87,7 +88,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 <script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
 ```
 
-## 3 highlight
+## highlight
 
 [`highlight` 的文档](https://gohugo.io/content-management/shortcodes#highlight)
 
@@ -119,7 +120,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 </section>
 {{< /highlight >}}
 
-## 4 param
+## param
 
 [`param` 的文档](https://gohugo.io/content-management/shortcodes#param)
 
@@ -133,11 +134,11 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< param description >}}
 
-## 5 ref 和 relref {#ref-and-relref}
+## ref 和 relref {#ref-and-relref}
 
 [`ref` 和 `relref` 的文档](https://gohugo.io/content-management/shortcodes#ref-and-relref)
 
-## 6 tweet
+## tweet
 
 [`tweet` 的文档](https://gohugo.io/content-management/shortcodes#tweet)
 
@@ -151,7 +152,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
 
-## 7 vimeo
+## vimeo
 
 [`vimeo` 的文档](https://gohugo.io/content-management/shortcodes#vimeo)
 
@@ -165,7 +166,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< vimeo 146022717 >}}
 
-## 8 youtube
+## youtube
 
 [`youtube` 的文档](https://gohugo.io/content-management/shortcodes#youtube)
 

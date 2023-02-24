@@ -1,6 +1,6 @@
 ---
 title: 内容加密
-date: 2022-05-28T11:51:41+08:00
+date: 2023-02-24T20:32:41+08:00
 type: posts
 aliases:
   - /zh-cn/theme-documentation-content-encryption/
@@ -20,8 +20,9 @@ resources:
 tags:
   - Encryption
 categories:
-  - documentation
+  - Documentation
 reward: true
+hiddenFromHomePage: true
 ---
 
 了解如何在 FixIt 主题中加密内容。
@@ -54,7 +55,7 @@ resources:
 tags:
   - Encryption
 categories:
-  - documentation
+  - Documentation
 ```
 
 {{< admonition info >}}
@@ -68,7 +69,7 @@ categories:
 
 ### 进阶使用
 
-FixIt Dcryptor 有两个生命周期钩子函数，详见 [Class FixItDecryptor API](/theme-documentation-content-encryption/#fixit-decryptor-api)
+FixIt Dcryptor 有两个生命周期钩子函数，详见 [Class FixItDecryptor API]({{< relref path="/documentation/content-management/encryption#fixit-decryptor-api" lang="en" >}})
 
 例如在解锁文章后，输出文本：
 

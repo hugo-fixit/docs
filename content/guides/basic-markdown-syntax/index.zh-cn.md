@@ -17,6 +17,7 @@ lightgallery: true
 repost:
   enable: true
   url: https://hugoloveit.com/zh-cn/basic-markdown-syntax/
+hiddenFromHomePage: true
 ---
 
 这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。

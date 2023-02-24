@@ -1,6 +1,6 @@
 ---
 weight: 3
-title: Advanced
+title: Advanced Usage
 date: 2023-02-24T13:22:22+08:00
 type: posts
 author:
@@ -12,9 +12,9 @@ resources:
     src: featured-image.png
 tags:
   - Advanced
-  - configuration
+  - Configuration
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 reward:
   enable: true
@@ -22,7 +22,6 @@ toc:
   auto: false
 menu:
   main:
-    name: Advanced
     title: Discover advanced usage of the Hugo - FixIt theme.
     parent: documentation
     weight: 3
@@ -146,3 +145,7 @@ Something you want to hide in the print view is written here.
 The directory including the custom script file named `custom.js` is `assets/js` relative to **your project root directory**.
 
 If the script file `assets/js/custom.js` exists, it will be executed at the end of each post and page.
+
+## PWA Support
+
+This part is shown in the [pwa support page](../../guides/pwa-support/).

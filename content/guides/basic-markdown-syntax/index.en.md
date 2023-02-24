@@ -17,6 +17,7 @@ lightgallery: true
 repost:
   enable: true
   url: https://hugoloveit.com/basic-markdown-syntax/
+hiddenFromHomePage: true
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files.

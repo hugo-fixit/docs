@@ -1,6 +1,6 @@
 ---
 title: Content Encryption
-date: 2022-05-28T11:51:41+08:00
+date: 2023-02-24T20:32:41+08:00
 type: posts
 aliases:
   - /theme-documentation-content-encryption/
@@ -20,8 +20,9 @@ resources:
 tags:
   - Encryption
 categories:
-  - documentation
+  - Documentation
 reward: true
+hiddenFromHomePage: true
 ---
 
 Find out how to encrypt content in FixIt theme.
@@ -55,7 +56,7 @@ resources:
 tags:
   - Encryption
 categories:
-  - documentation
+  - Documentation
 ---
 ```
 

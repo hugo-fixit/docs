@@ -1,6 +1,6 @@
 ---
 title: 扩展 Shortcode - mapbox
-date: 2022-07-20T12:22:15+08:00
+date: 2023-02-24T22:45:45+08:00
 type: posts
 aliases:
   - /zh-cn/extended-shortcode-mapbox/
@@ -12,9 +12,9 @@ resources:
   - name: featured-image
     src: featured-image.jpg
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 hiddenFromHomePage: true
 mapbox:
   lightStyle: mapbox://styles/mapbox/light-zh-v1?optimize=true

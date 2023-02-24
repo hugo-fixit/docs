@@ -1,6 +1,6 @@
 ---
-title: 主题文档 - 扩展 Shortcodes
-date: 2021-12-19T16:15:22+08:00
+title: 扩展 Shortcodes
+date: 2023-02-24T22:11:39+08:00
 type: posts
 aliases:
   - /zh-cn/theme-documentation-extended-shortcodes/
@@ -14,19 +14,20 @@ resources:
   - name: featured-image-preview
     src: featured-image-preview.jpg
 tags:
-  - shortcodes
+  - Shortcodes
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 math: true
 reward: true
+hiddenFromHomePage: true
 ---
 
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
 
 <!--more-->
 
-## 1 style
+## style
 
 {{< version 0.2.0 changed >}}
 
@@ -57,11 +58,11 @@ This is a **right-aligned** paragraph.
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
-## 2 link
+## link
 
 {{< version 0.2.0 >}}
 
-`link` shortcode 是 [Markdown 链接语法](../../../../basic-markdown-syntax#links) 的替代。
+`link` shortcode 是 [Markdown 链接语法](../../../../../guides/basic-markdown-syntax/#links) 的替代。
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用。
 
 {{< version 0.2.10 >}} 支持 [本地资源引用](../../../../theme-documentation-content#contents-organization) 的完整用法。
@@ -166,7 +167,7 @@ This is a **right-aligned** paragraph.
 
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
-## 3 image {#image}
+## image {#image}
 
 {{< version 0.2.18 changed >}}
 
@@ -238,7 +239,7 @@ This is a **right-aligned** paragraph.
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 
-## 4 admonition
+## admonition
 
 `admonition` shortcode 支持 **12** 种 帮助你在页面中插入提示的横幅。
 
@@ -324,43 +325,43 @@ This is a **right-aligned** paragraph.
 一个 **技巧** 横幅
 {{< /admonition >}}
 
-## 5 mermaid
+## mermaid
 
 `mermaid` shortcode 使用 [Mermaid](https://mermaidjs.github.io/) 库提供绘制图表和流程图的功能。
 
 完整文档请查看页面 [扩展 Shortcode - mermaid](./../mermaid)。
 
-## 6 echarts
+## echarts
 
 `echarts` shortcode 使用 [ECharts](https://echarts.apache.org/) 库提供数据可视化的功能。
 
 完整文档请查看页面 [扩展 Shortcode - echarts](./../echarts)。
 
-## 7 mapbox
+## mapbox
 
 `mapbox` shortcode 使用 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 库提供互动式地图的功能。
 
 完整文档请查看页面 [扩展 Shortcode - mapbox](./../mapbox)。
 
-## 8 music
+## music
 
 `music` shortcode 基于 [APlayer](https://github.com/MoePlayer/APlayer) 和 [MetingJS](https://github.com/metowolf/MetingJS) 库提供了一个内嵌的响应式音乐播放器。
 
 完整文档请查看页面 [扩展 Shortcode - music](./../music)。
 
-## 9 bilibili
+## bilibili
 
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 
 完整文档请查看页面 [扩展 Shortcode - bilibili](./../bilibili)。
 
-## 10 typeit
+## typeit
 
 `typeit` shortcode 基于 [TypeIt](https://typeitjs.com/) 提供了打字动画。
 
 完整文档请查看页面 [扩展 Shortcode - typeit](./../typeit)。
 
-## 11 script
+## script
 
 {{< version 0.2.8 >}}
 
@@ -385,7 +386,7 @@ console.log('Hello FixIt!');
 console.log('Hello FixIt!');
 {{< /script >}}
 
-## 12 details
+## details
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
@@ -415,7 +416,7 @@ console.log('Hello FixIt!');
 *All pages and graphics on this web site are the property of FixIt.*
 {{< /details >}}
 
-## 13 center-quote
+## center-quote
 
 {{< version 0.2.13 >}}
 
@@ -437,7 +438,7 @@ this is a center-quote shortcode example.
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
-## 14 fixit-encryptor
+## fixit-encryptor
 
 {{< version 0.2.15 >}}
 
@@ -445,7 +446,7 @@ this is a center-quote shortcode example.
 
 完整文档请查看页面 [主题文档 - 内容加密](../../../../content-encryption#partial-encryption)。
 
-## 15 raw
+## raw
 
 {{< version 0.2.16 >}}
 
@@ -481,7 +482,7 @@ this is a center-quote shortcode example.
 
 原始的带有 Markdown 和 HTML 语法的内容：{{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
-## 16 reward
+## reward
 
 {{< version 0.2.17 >}}
 
@@ -503,9 +504,3 @@ this is a center-quote shortcode example.
 呈现的输出效果如下：
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
-
----
-
-{{< admonition quote "感谢" >}}
-*本文档中 `v0.2.10` 版本之前的内容，感谢原作者 [Dillon](https://dillonzq.com) 编写修订。*
-{{< /admonition >}}

@@ -13,20 +13,26 @@ resources:
   - name: featured-image
     src: featured-image.jpg
 tags:
-  - content
-  - Markdown
+  - Content
 categories:
-  - documentation
+  - Documentation
 lightgallery: true
 reward: true
-math: true
+menu:
+  main:
+    name: Content Management
+    title: Find out how to create and organize your content quickly and intuitively in FixIt theme.
+    parent: documentation
+    weight: 4
+    params:
+      icon: fa-brands fa-readme
 ---
 
 Find out how to create and organize your content quickly and intuitively in **FixIt** theme.
 
 <!--more-->
 
-## 1 Contents Organization {#contents-organization}
+## Contents Organization {#contents-organization}
 
 A few suggestions to help you get a good looking site quickly:
 
@@ -56,7 +62,7 @@ will be supported in the future.
 It's really cool! :(fa-regular fa-grin-squint fa-fw):
 {{< /admonition >}}
 
-## 2 Front Matter {#front-matter}
+## Front Matter {#front-matter}
 
 **Hugo** allows you to add front matter in `yaml`, `toml` or `json` to your content files.
 
@@ -222,7 +228,54 @@ seo:
 ---
 ```
 
-## 3 Templates {#templates}
+## Content Summaries
+
+**FixIt** theme uses the summary of the content to display abstract information in the home page. Hugo can generate summaries of your content.
+
+![Summary Preview](summary.png "Summary Preview")
+
+### Automatic Summary Splitting
+
+By default, Hugo automatically takes the first 70 words of your content as its summary.
+
+You may customize the summary length by setting `summaryLength` in the [site configuration](../basics#site-configuration).
+
+If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your [site configuration](../basics#site-configuration).
+
+### Manual Summary Splitting
+
+Alternatively, you may add the `<!--more-->` summary divider where you want to split the article.
+
+Content that comes before the summary divider will be used as that content’s summary.
+
+{{< admonition >}}
+Be careful to enter `<!--more-->` exactly; i.e., all lowercase and with no whitespace.
+{{< /admonition >}}
+
+### Front Matter Summary
+
+You might want your summary to be something other than the text that starts the article. In this case you can provide a separate summary in the `summary` variable of the article front matter.
+
+### Use Description as Summary
+
+You might want your description in the `description` variable of the article front matter as the summary.
+
+You may add the `<!--more-->` summary divider at the start of the article. Keep content that comes before the summary divider empty. Then **FixIt** theme will use your description as the summary.
+
+### Priority Order of Summary Selection
+
+Because there are multiple ways in which a summary can be specified it is useful to understand the order. It is as follows:
+
+1. If there is a `<!--more-->` summary divider present in the article but no content is before the divider, the description will be used as the summary.
+2. If there is a `<!--more-->` summary divider present in the article the text up to the divider will be provided as per the manual summary split method.
+3. If there is a summary variable in the article front matter the value of the variable will be provided as per the front matter summary method.
+4. The text at the start of the article will be provided as per the automatic summary split method.
+
+{{< admonition >}}
+It is not recommended to include rich text block elements in the summary, which will cause typographic errors. Such as code blocks, pictures, tables, etc.
+{{< /admonition >}}
+
+## Templates {#templates}
 
 Generally, you don't need to set the **type** parameter, because Hugo and fixit will help you choose. However, the **FixIt** theme provides some special templates for users to use.
 
@@ -272,400 +325,14 @@ hugo new offline/index.md
 
 {{< /admonition >}}
 
-## 4 Content Summaries
+## Content Encryption
 
-**FixIt** theme uses the summary of the content to display abstract information in the home page. Hugo can generate summaries of your content.
+This part is shown in the [content encryption page](../encryption/).
 
-![Summary Preview](summary.png "Summary Preview")
+## Markdown Syntax
 
-### Automatic Summary Splitting
+This part is shown in the [basic markdown syntax page](../../../guides/basic-markdown-syntax/) and the [extended markdown syntax page](../extended-markdown-syntax/).
 
-By default, Hugo automatically takes the first 70 words of your content as its summary.
+## Shortcodes
 
-You may customize the summary length by setting `summaryLength` in the [site configuration](../basics#site-configuration).
-
-If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your [site configuration](../basics#site-configuration).
-
-### Manual Summary Splitting
-
-Alternatively, you may add the `<!--more-->` summary divider where you want to split the article.
-
-Content that comes before the summary divider will be used as that content’s summary.
-
-{{< admonition >}}
-Be careful to enter `<!--more-->` exactly; i.e., all lowercase and with no whitespace.
-{{< /admonition >}}
-
-### Front Matter Summary
-
-You might want your summary to be something other than the text that starts the article. In this case you can provide a separate summary in the `summary` variable of the article front matter.
-
-### Use Description as Summary
-
-You might want your description in the `description` variable of the article front matter as the summary.
-
-You may add the `<!--more-->` summary divider at the start of the article. Keep content that comes before the summary divider empty. Then **FixIt** theme will use your description as the summary.
-
-### Priority Order of Summary Selection
-
-Because there are multiple ways in which a summary can be specified it is useful to understand the order. It is as follows:
-
-1. If there is a `<!--more-->` summary divider present in the article but no content is before the divider, the description will be used as the summary.
-2. If there is a `<!--more-->` summary divider present in the article the text up to the divider will be provided as per the manual summary split method.
-3. If there is a summary variable in the article front matter the value of the variable will be provided as per the front matter summary method.
-4. The text at the start of the article will be provided as per the automatic summary split method.
-
-{{< admonition >}}
-It is not recommended to include rich text block elements in the summary, which will cause typographic errors. Such as code blocks, pictures, tables, etc.
-{{< /admonition >}}
-
-## 5 Basic Markdown Syntax
-
-This part is shown in the [basic markdown syntax page](../basic-markdown-syntax).
-
-## 6 Extended Markdown Syntax {#extended-markdown-syntax}
-
-**FixIt** theme has some extended syntax elements for you to write articles.
-
-### Emoji Support
-
-This part is shown in the [emoji support page](../emoji-support).
-
-### Mathematical Formula
-
-{{< version 0.2.16 changed >}}
-
-**FixIt** theme supports mathematical formulas based on [$\KaTeX$](https://katex.org/).
-
-Set the property `enable = true` under `[params.math]` in your [site configuration](../basics#site-configuration)
-and the property `math: true` of the article front matter to enable the automatic rendering of mathematical formulas.
-
-{{< admonition tip >}}
-Here is a list of [$\TeX$ functions supported by $\KaTeX$](https://katex.org/docs/supported.html).
-{{< /admonition >}}
-
-{{< admonition >}}
-Since Hugo generates HTML documents according to the syntax such as `_`/`*`/`>>` when rendering Markdown documents,
-and some text content in the form of escape characters
-(such as `\(`/`\)`/`\[`/`\]`/`\\`) escape processing will be performed automatically,
-therefore, additional escape character expressions are required for these places to achieve automatic rendering:
-
-* `_` -> `\_`
-* `*` -> `\*`
-* `>>` -> `\>>`
-* `\(` -> `\\(`
-* `\)` -> `\\)`
-* `\[` -> `\\[`
-* `\]` -> `\\]`
-* `\\` -> `\\\\`
-
-**FixIt** theme supports [`raw` shortcode](../extended-shortcodes/index#15-raw) to avoid these escape characters,
-which helps you write raw mathematical formula content.
-
-Example `raw` input:
-
-```markdown
-{{</* raw */>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
-
-{{</* raw */>}}
-Block Formula:
-\[ a=b+c \\ d+e=f \]
-{{</* /raw */>}}
-```
-
-The rendered output looks like this:
-
-{{< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
-
-{{< raw>}}
-Block Formula:
-\[ a=b+c \\ d+e=f \]
-{{< /raw >}}
-{{< /admonition >}}
-
-#### Inline Formula
-
-The default inline delimiters are:
-
-* `$ ... $`
-* `\( ... \)` (escaped: `\\( ... \\)`)
-
-For example:
-
-```tex
-$c = \pm\sqrt{a^2 + b^2}$ and \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
-```
-
-The rendered output looks like this:
-
-$c = \pm\sqrt{a^2 + b^2}$ and \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
-
-#### Block Formula
-
-The default block delimiters are:
-
-* `$$ ... $$`
-* `\[ ... \]` (escaped: `\\[ ... \\]`)
-* `\begin{equation} ... \end{equation}` (unnumbered: `\begin{equation*} ... \end{equation*}`)
-* `\begin{align} ... \end{align}` (unnumbered: `\begin{align*} ... \end{align*}`)
-* `\begin{alignat} ... \end{alignat}` (unnumbered: `\begin{alignat*} ... \end{alignat*}`)
-* `\begin{gather} ... \end{gather}` (unnumbered: `\begin{gather*} ... \end{gather*}`)
-* `\begin{CD} ... \end{CD}`
-
-{{< admonition warning >}}
-When there are newlines in the block formula, please turn on `goldmark.renderer.hardWraps` carefully, set it to true, Goldmark will render the newlines as `<br>` elements.
-{{< /admonition >}}
-
-For example:
-
-```tex
-$$ c = \pm\sqrt{a^2 + b^2} $$
-
-\\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\]
-
-\begin{equation*}
-  \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
-\end{equation*}
-
-\begin{equation}
-  \mathbf{E}=\sum_{i} \mathbf{E}\_{i}=\mathbf{E}\_{1}+\mathbf{E}\_{2}+\mathbf{E}_{3}+\cdots
-\end{equation}
-
-\begin{align}
-  a&=b+c \\\\
-  d+e&=f
-\end{align}
-
-\begin{alignat}{2}
-   10&x+&3&y = 2 \\\\
-   3&x+&13&y = 4
-\end{alignat}
-
-\begin{gather}
-   a=b \\\\
-   e=b+c
-\end{gather}
-
-\begin{CD}
-   A @>a\>> B \\\\
-@VbVV @AAcA \\\\
-   C @= D
-\end{CD}
-```
-
-The rendered output looks like this:
-
-$$ c = \pm\sqrt{a^2 + b^2} $$
-
-\\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\]
-
-\begin{equation*}
-  \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
-\end{equation*}
-
-\begin{equation}
-  \mathbf{E}=\sum_{i} \mathbf{E}\_{i}=\mathbf{E}\_{1}+\mathbf{E}\_{2}+\mathbf{E}_{3}+\cdots
-\end{equation}
-
-\begin{align}
-  a&=b+c \\\\
-  d+e&=f
-\end{align}
-
-\begin{alignat}{2}
-   10&x+&3&y = 2 \\\\
-   3&x+&13&y = 4
-\end{alignat}
-
-\begin{gather}
-   a=b \\\\
-   e=b+c
-\end{gather}
-
-\begin{CD}
-   A @>a\>> B \\\\
-@VbVV @AAcA \\\\
-   C @= D
-\end{CD}
-
-{{< admonition tip >}}
-You can add more inline and block delimiters in your [site configuration](../basics#site-configuration).
-{{< /admonition >}}
-
-#### Copy-tex
-
-**[Copy-tex](https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex)** is an extension for **$\KaTeX$**.
-
-By the extension, when selecting and copying $\KaTeX$ rendered elements, copies their $\LaTeX$ source to the clipboard.
-
-Set the property `copyTex = true` under `[params.math]` in your [site configuration](../basics#site-configuration) to enable Copy-tex.
-
-Select and copy the formula rendered in the previous section, and you can find that the copied content is the LaTeX source code.
-
-#### mhchem
-
-**[mhchem](https://github.com/Khan/KaTeX/tree/master/contrib/mhchem)** is an extension for **$\KaTeX$**.
-
-By the extension, you can write beautiful chemical equations easily in the article.
-
-Set the property `mhchem = true` under `[params.math]` in your [site configuration](../basics#site-configuration) to enable mhchem.
-
-```markdown
-$$ \ce{CO2 + C -> 2 CO} $$
-
-$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
-```
-
-The rendered output looks like this:
-
-$$ \ce{CO2 + C -> 2 CO} $$
-
-$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
-
-### Ruby Annotation {#ruby}
-
-An extended Markdown syntax for **ruby annotation** is supported in **FixIt** theme:
-
-```markdown
-[Hugo]{?^}(An open-source static site generator)
-```
-
-The rendered output looks like this:
-
-[Hugo]^(An open-source static site generator)
-
-### Fraction {#fraction}
-
-{{< version 0.2.0 >}}
-
-An extended Markdown syntax for **fraction** is supported in **FixIt** theme:
-
-```markdown
-[Light]{?/}[Dark]
-
-[99]{?/}[100]
-```
-
-The rendered output looks like this:
-
-[Light]/[Dark]
-
-[90]/[100]
-
-### Font Awesome {#fontawesome}
-
-**FixIt** theme uses [Font Awesome](https://fontawesome.com/) as the icon library.
-You can easily use these icons in your articles.
-
-Get the `class` of icons you wanted from the [Font Awesome website](https://fontawesome.com/icons?d=gallery).
-
-```markdown
-Gone camping! {?:}(fa-solid fa-campground fa-fw): Be back soon.
-
-That is so funny! {?:}(fa-regular fa-grin-tears):
-```
-
-The rendered output looks like this:
-
-Gone camping! :(fa-solid fa-campground fa-fw): Be back soon.
-
-That is so funny! :(fa-regular fa-grin-tears):
-
-### Escape character {#escape-character}
-
-In some special cases (when writing this theme documentation :(fa-regular fa-grin-squint-tears):),
-your content will conflict with basic or extended Markdown syntax, and it is inevitable.
-
-The escape character syntax can help you build the content you wanted:
-
-```markdown
-{{??}X} -> X
-```
-
-For example, two `:` will enable emoji syntax, which is not the behavior you want. The escape character syntax is like this:
-
-```markdown
-{{??}:}joy:
-```
-
-The rendered output looks like this:
-
-**{?:}joy{?:}** instead of **:joy:**
-
-{{< admonition tip >}}
-This is related to **[an issue for Hugo](https://github.com/gohugoio/hugo/issues/4978)**, which has not been resolved.
-{{< /admonition >}}
-
-Another example is:
-
-```markdown
-[link{{??}]}(#escape-character)
-```
-
-The rendered output looks like this:
-
-**[link{?]}(#escape-character)** instead of **[link](#escape-character)**.
-
-### Custom attribute
-
-> The premise is that you set `goldmark.parser.attribute.block` to `true`.
-
-Enable custom attribute support for titles and blocks by adding attribute lists inside single curly brackets (`{.myclass class="class1 class2"}`) and placing it after the Markdown element it decorates, on the same line for titles and on a new line directly below for blocks.
-
-Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tables, lists, paragraphs etc.
-
-A blockquote with a CSS class:
-
-```md
-> foo  
-> bar
-{.text-danger}
-```
-
-The rendered output looks like this:
-
-> foo  
-> bar
-{.text-danger}
-
-There are some current limitations: For tables you can currently only apply it to the full table, and for lists the `ul`/`ol`-nodes only, e.g.:
-
-```md
-* Fruit
-  * Apple
-  * Orange
-  * Banana
-  {.text-success}
-* Dairy
-  * Milk
-  * Cheese
-  {.text-warning}
-{.text-primary}
-```
-
-The rendered output looks like this:
-
-* Fruit
-  * Apple
-  * Orange
-  * Banana
-  {.text-success}
-* Dairy
-  * Milk
-  * Cheese
-  {.text-warning}
-{.text-primary}
-
-Note that attributes in [code fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences) must come after the opening tag, with any other highlighting processing instruction, e.g.:
-
-```md
-{?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
-// ... code
-{?`}{?`}{?`}
-```
-
----
-
-{{< admonition quote "Thanks" >}}
-_Thanks to the original author [Dillon](https://dillonzq.com) for preparing and revising the content before version `v0.2.10` in this documentation._
-{{< /admonition >}}
+This part is shown in the [shortcodes page](../shortcodes/).

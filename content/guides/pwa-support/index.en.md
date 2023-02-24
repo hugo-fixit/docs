@@ -1,6 +1,5 @@
 ---
-weight: 5
-title: Theme Documentation - PWA Support
+title: PWA Support
 date: 2022-01-26T09:32:56+08:00
 type: posts
 aliases:
@@ -9,6 +8,7 @@ description: Guide to setup PWA in FixIt.
 tags:
   - PWA
 categories:
+  - Guides
   - Documentation
 resources:
   - name: featured-image
@@ -18,6 +18,7 @@ toc:
 repost:
   enable: true
   url: https://hugodoit.com/pwa-support/
+hiddenFromHomePage: true
 ---
 
 Find out how to turn your FixIt site into a Progressive Web App.
