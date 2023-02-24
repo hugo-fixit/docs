@@ -9,7 +9,7 @@ author:
 description: Learn to create a Hugo FixIt site in minutes.
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.png
 tags:
   - installation
 categories:

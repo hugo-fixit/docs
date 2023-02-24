@@ -11,7 +11,7 @@ author:
 description: Discover the basics of the Hugo - FixIt theme and the core concepts behind it.
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.png
 tags:
   - installation
   - configuration
@@ -1015,7 +1015,47 @@ Please open the code block below to view the complete `config.toml` sample confi
 
 ![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
 
-### Search Configuration
+#### CDN Configuration
+
+```toml
+[params.cdn]
+  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
+  data = ""
+```
+
+The default CDN data file is located in `themes/FixIt/assets/data/cdn/` directory.
+You can store your own data file in the same path under your project: `assets/data/cdn/`.
+
+#### Social Configuration
+
+You can directly set your ID to get a default social link and its icon:
+
+```toml
+[params.social]
+  Mastodon = "@xxxx"
+```
+
+The social link generated is `https://mastodon.technology/@xxxx`.
+
+Or You can set more options through a dict:
+
+```toml
+[params.social]
+  [params.social.Mastodon]
+    # weight when arranging icons (the greater the weight, the later the icon is positioned)
+    weight = 0
+    # your social ID
+    id = "@xxxx"
+    # prefix of your social link
+    prefix = "https://mastodon.social/"
+    # content hovering on the icon
+    title = "Mastodon"
+```
+
+The default data of all supported social links is located in `themes/FixIt/assets/data/social.yaml`,
+which is you can refer to.
+
+#### Search Configuration
 
 Based on [Lunr.js](https://lunrjs.com/), [algolia](https://www.algolia.com/) or [Fuse.js](https://fusejs.io/), searching is supported in **FixIt** theme.
 
@@ -1025,6 +1065,14 @@ In order to generate `index.json` for searching, add `JSON` output file type to 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 ```
+
+{{< admonition tip "Tips about algolia" >}}
+You need to upload `index.json` files to algolia to activate searching.
+You could upload the `index.json` files by browsers but a CLI tool may be better.
+[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) is a good choice.
+To be compatible with Hugo multilingual mode,
+you need to upload different `index.json` for each language to the different index of algolia, such as `zh-cn/index.json` or `fr/index.json`...
+{{< /admonition >}}
 
 ### Favicons, Browserconfig, Manifest
 

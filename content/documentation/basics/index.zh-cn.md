@@ -11,7 +11,7 @@ author:
 description: 探索 Hugo - FixIt 主题的的基础知识和背后的核心概念。
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.png
 tags:
   - installation
   - configuration
@@ -1015,7 +1015,47 @@ menu:
 
 ![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
 
-### 搜索配置
+#### CDN 配置
+
+```toml
+[params.cdn]
+  # CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
+  data = ""
+```
+
+默认的 CDN 数据文件位于 `themes/FixIt/assets/data/cdn/` 目录。
+可以在你的项目下相同路径存放你自己的数据文件：`assets/data/cdn/`。
+
+#### 社交链接配置
+
+你可以直接配置你的社交 ID 来生成一个默认社交链接和图标：
+
+```toml
+[params.social]
+  Mastodon = "@xxxx"
+```
+
+生成的社交链接是 `https://mastodon.technology/@xxxx`。
+
+或者你可以通过一个字典来设置更多的选项：
+
+```toml
+[params.social]
+  [params.social.Mastodon]
+    # 排列图标时的权重（权重越大，图标的位置越靠后）
+    weight = 0
+    # 你的社交 ID
+    id = "@xxxx"
+    # 你的社交链接的前缀
+    prefix = "https://mastodon.social/"
+    # 当鼠标停留在图标上时的提示内容
+    title = "Mastodon"
+```
+
+所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`。
+你可以参考它来配置你的社交链接。
+
+#### 搜索配置
 
 基于 [Lunr.js](https://lunrjs.com/)、 [algolia](https://www.algolia.com/) 或 [Fuse.js](https://fusejs.io/)，**FixIt** 主题支持搜索功能，详见 [主题配置](#theme-configuration) 的 `params.search` 配置。
 
@@ -1025,6 +1065,12 @@ menu:
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 ```
+
+{{< admonition tip "关于 algolia 的使用技巧" >}}
+你需要上传 `index.json` 到 algolia 来激活搜索功能。你可以使用浏览器来上传 `index.json` 文件但是一个自动化的脚本可能效果更好。
+[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) 是一个不错的选择。
+为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `index.json` 文件到对应的 algolia index, 例如 `zh-cn/index.json` 或 `fr/index.json`……
+{{< /admonition >}}
 
 ### 网站图标，浏览器配置，网站清单
 
