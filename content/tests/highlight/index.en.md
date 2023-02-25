@@ -5,11 +5,11 @@ description: 'Test for code highlight feature'
 type: 'posts'
 
 tags:
-  - Test
-  - content
+  - Tests
+  - Content
   - highlight
 categories:
-  - Test
+  - Tests
 
 hiddenFromHomePage: true
 
@@ -18,7 +18,7 @@ menu:
     title: 'Test for code highlight feature'
     parent: 'tests'
     params:
-      icon: 'fa-solid fa-vial'
+      icon: 'fa-solid fa-vial text-success'
 ---
 
 > [List of Chroma Highlighting Languages](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)

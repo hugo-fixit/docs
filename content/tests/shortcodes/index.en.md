@@ -4,10 +4,11 @@ date: 2022-03-07T22:31:22+08:00
 description: Test for shortcodes usages
 type: posts
 tags:
-  - Test
-  - shortcodes
+  - Tests
+  - Shortcodes
+  - Content
 categories:
-  - Test
+  - Tests
 hiddenFromHomePage: true
 lightgallery: true
 menu:
@@ -15,7 +16,7 @@ menu:
     title: Test for shortcodes usages
     parent: tests
     params:
-      icon: fa-solid fa-vial
+      icon: fa-solid fa-vial text-success
 ---
 
 normal content
@@ -86,7 +87,7 @@ render
 
 ## image
 
-![language-switch](/theme-documentation-basics/language-switch.gif)
+![language-switch](/documentation/basics/language-switch.gif)
 
 ```go-html-template
 <!-- ![Lighthouse](/images/lighthouse.jpg "Lighthouse title") -->

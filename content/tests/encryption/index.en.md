@@ -9,17 +9,17 @@ lightgallery: true
 math: true
 twemoji: true
 tags:
-  - Test
+  - Tests
   - Encryption
 categories:
-- Test
+- Tests
 hiddenFromHomePage: true
 menu:
   main:
     title: Test for encrypting content
     parent: tests
     params:
-      icon: fa-solid fa-vial
+      icon: fa-solid fa-vial text-success
 ---
 
 I was shy, so I hid.

@@ -4,18 +4,18 @@ date: 2022-04-19T10:15:22+08:00
 description: Test for rendering Font Awesome icons
 type: posts
 tags:
-  - Test
-  - content
+  - Tests
+  - Content
   - Font Awesome
 categories:
-  - Test
+  - Tests
 hiddenFromHomePage: true
 menu:
   main:
     title: Test for rendering Font Awesome icons
     parent: tests
     params:
-      icon: fa-solid fa-vial
+      icon: fa-solid fa-vial text-success
 ---
 
 ## Size

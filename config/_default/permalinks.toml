@@ -4,4 +4,6 @@
 # -------------------------------------------------------------------------------------
 
 # posts = ":year/:month/:filename"
-posts = ":filename"
+documentation = ":sections[0:]/:filename"
+faq = "faq/:filename"
+guides = "guides/:filename"
