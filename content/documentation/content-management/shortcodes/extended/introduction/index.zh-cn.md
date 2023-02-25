@@ -39,7 +39,7 @@ Hugo **extended** 版本对于 `style` shortcode 是必需的。
 
 `style` shortcode 有两个位置参数。
 
-第一个参数是自定义样式的内容。它支持 [:(fa-brands fa-sass fa-fw): SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting) 中的嵌套语法，
+第一个参数是自定义样式的内容。它支持 [:(fa-brands fa-sass fa-fw): SASS][sass] 中的嵌套语法，
 并且 `&` 指代这个父元素。
 
 第二个参数是包裹你要更改样式的内容的 HTML 标签，默认值是 `div`。
@@ -62,10 +62,10 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.0 >}}
 
-`link` shortcode 是 [Markdown 链接语法](../../../../../guides/basic-markdown-syntax/#links) 的替代。
+`link` shortcode 是 [Markdown 链接语法][md-link] 的替代。
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用。
 
-{{< version 0.2.10 >}} 支持 [本地资源引用](../../../../theme-documentation-content#contents-organization) 的完整用法。
+{{< version 0.2.10 >}} 支持 [本地资源引用][contents-organization] 的完整用法。
 
 `link` shortcode 有以下命名参数：
 
@@ -171,9 +171,9 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.18 changed >}}
 
-`image` shortcode 是 [`figure` shortcode](../../../../theme-documentation-built-in-shortcodes#figure) 的替代。`image` shortcode 可以充分利用 [lightgallery](https://github.com/sachinchoolur/lightgallery)。
+`image` shortcode 是 [`figure` shortcode][figure] 的替代。`image` shortcode 可以充分利用 [lightgallery][lightgallery]。
 
-{{< version 0.2.10 >}} 支持 [本地资源引用](../../../../theme-documentation-content#contents-organization) 的完整用法。
+{{< version 0.2.10 >}} 支持 [本地资源引用][contents-organization] 的完整用法。
 
 `image` shortcode 有以下命名参数：
 
@@ -327,39 +327,39 @@ This is a **right-aligned** paragraph.
 
 ## mermaid
 
-`mermaid` shortcode 使用 [Mermaid](https://mermaidjs.github.io/) 库提供绘制图表和流程图的功能。
+`mermaid` shortcode 使用 [Mermaid][mermaidjs] 库提供绘制图表和流程图的功能。
 
-完整文档请查看页面 [扩展 Shortcode - mermaid](./../mermaid)。
+完整文档请查看页面 [扩展 Shortcode - mermaid][sc-mermaid]。
 
 ## echarts
 
-`echarts` shortcode 使用 [ECharts](https://echarts.apache.org/) 库提供数据可视化的功能。
+`echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
 
-完整文档请查看页面 [扩展 Shortcode - echarts](./../echarts)。
+完整文档请查看页面 [扩展 Shortcode - echarts][sc-echarts]。
 
 ## mapbox
 
-`mapbox` shortcode 使用 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 库提供互动式地图的功能。
+`mapbox` shortcode 使用 [Mapbox GL JS][mapbox] 库提供互动式地图的功能。
 
-完整文档请查看页面 [扩展 Shortcode - mapbox](./../mapbox)。
+完整文档请查看页面 [扩展 Shortcode - mapbox][sc-mapbox]。
 
 ## music
 
-`music` shortcode 基于 [APlayer](https://github.com/MoePlayer/APlayer) 和 [MetingJS](https://github.com/metowolf/MetingJS) 库提供了一个内嵌的响应式音乐播放器。
+`music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 库提供了一个内嵌的响应式音乐播放器。
 
-完整文档请查看页面 [扩展 Shortcode - music](./../music)。
+完整文档请查看页面 [扩展 Shortcode - music][sc-music]。
 
 ## bilibili
 
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 
-完整文档请查看页面 [扩展 Shortcode - bilibili](./../bilibili)。
+完整文档请查看页面 [扩展 Shortcode - bilibili][sc-bilibili]。
 
 ## typeit
 
-`typeit` shortcode 基于 [TypeIt](https://typeitjs.com/) 提供了打字动画。
+`typeit` shortcode 基于 [TypeIt][typeitjs] 提供了打字动画。
 
-完整文档请查看页面 [扩展 Shortcode - typeit](./../typeit)。
+完整文档请查看页面 [扩展 Shortcode - typeit][sc-typeit]。
 
 ## script
 
@@ -444,7 +444,7 @@ this is a center-quote shortcode example.
 
 您可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 
-完整文档请查看页面 [主题文档 - 内容加密](../../../../content-encryption#partial-encryption)。
+完整文档请查看页面 [内容加密][content-encryption]。
 
 ## raw
 
@@ -504,3 +504,22 @@ this is a center-quote shortcode example.
 呈现的输出效果如下：
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
+
+[sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
+[md-link]: {{< relref path="/guides/basic-markdown-syntax#links" >}}
+[contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
+[sc-figure]: {{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}
+[lightgallery]: https://github.com/sachinchoolur/lightgallery
+[mermaidjs]: https://mermaidjs.github.io/
+[echarts]: https://echarts.apache.org/
+[mapbox]: https://docs.mapbox.com/mapbox-gl-js
+[aplayer]: https://github.com/MoePlayer/APlayer
+[metingjs]: https://github.com/metowolf/MetingJS
+[typeitjs]: https://typeitjs.com/
+[sc-mermaid]: {{< relref path="/documentation/content-management/shortcodes/extended/mermaid" >}}
+[sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
+[sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}
+[sc-music]: {{< relref path="/documentation/content-management/shortcodes/extended/music" >}}
+[sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
+[sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
+[content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}

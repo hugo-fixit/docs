@@ -44,7 +44,7 @@ menu:
 
 ### 手动下载
 
-你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件](https://github.com/hugo-fixit/FixIt/releases) 并且解压放到 `themes` 目录。
+你可以下载主题的 [最新版本 :(fa-regular fa-file-archive fa-fw): .zip 文件][releases] 并且解压放到 `themes` 目录。
 
 ### Git 克隆
 
@@ -58,7 +58,7 @@ git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "基于 Git 子模块的快速入门模板" "" true >}}
 
-另外，在您的项目目录初始化一个空的 Git 存储库，将 [FixIt](https://github.com/hugo-fixit/FixIt) 主题克隆到 `themes` 目录中，将其作为 [Git 子模块](https://git-scm.com/book/en/v2/Git-Tools-Submodules) 添加到您的项目中。
+另外，在您的项目目录初始化一个空的 Git 存储库，将 [FixIt][fixit] 主题克隆到 `themes` 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中。
 
 
 ```bash
@@ -84,7 +84,7 @@ git submodule set-branch -b dev themes/FixIt
 
 > 以这种方式，无需要在 `config.toml` 中配置 `theme = "FixIt"`。
 
-将 [Hugo 模块](https://gohugo.io/hugo-modules/) 用于主题的最简单方法是将其导入配置中。请参阅 [使用 Hugo 模块](https://gohugo.io/hugo-modules/use-modules/)。
+将 [Hugo 模块][hugo-modules] 用于主题的最简单方法是将其导入配置中。请参阅 [使用 Hugo 模块][use-hugo-modules]。
 
 1. 初始化 Hugo 模块系统：`hugo mod init github.com/<your_user>/<your_project>`
 2. 导入主题：
@@ -97,7 +97,7 @@ git submodule set-branch -b dev themes/FixIt
 
 ## 完整配置
 
-在开始配置之前，建议您执行以下命令，将主题的默认 [config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) 复制到您的项目中：
+在开始配置之前，建议您执行以下命令，将主题的默认 [config.toml][config] 复制到您的项目中：
 
 ```bash
 mv config.toml config.old.toml
@@ -106,7 +106,7 @@ cp themes/FixIt/config.toml config.toml
 
 ### 菜单配置 {#menu-configuration}
 
-Hugo 有一个简单而强大的 [菜单系统](https://gohugo.io/content-management/menus/)。
+Hugo 有一个简单而强大的 [菜单系统][menu-system]。
 
 根据 Hugo 提供的接口，FixIt 主题只实现了部分功能，这足以满足大多数人的需求，也让用户在使用上更加简单。
 
@@ -165,7 +165,7 @@ menu:
 
 ### 主题配置 {#theme-configuration}
 
-除了 [Hugo 全局配置](https://gohugo.io/overview/configuration/) 和 [菜单配置](#menu-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数。
+除了 [Hugo 全局配置][hugo-config] 和 [菜单配置](#menu-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数。
 
 请打开下面的代码块查看完整的 `config.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -1057,7 +1057,7 @@ menu:
 
 #### 搜索配置
 
-基于 [Lunr.js](https://lunrjs.com/)、 [algolia](https://www.algolia.com/) 或 [Fuse.js](https://fusejs.io/)，**FixIt** 主题支持搜索功能，详见 [主题配置](#theme-configuration) 的 `params.search` 配置。
+基于 [Lunr.js][lunrjs]、 [algolia][algolia] 或 [Fuse.js][fusejs]，**FixIt** 主题支持搜索功能，详见 [主题配置](#theme-configuration) 的 `params.search` 配置。
 
 为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
@@ -1115,7 +1115,7 @@ menu:
 
 #### 基本配置
 
-学习了 [Hugo 如何处理多语言网站](https://gohugo.io/content-management/multilingual) 之后，请在站点配置中定义你的网站语言。
+学习了 [Hugo 如何处理多语言网站][multilingual] 之后，请在站点配置中定义你的网站语言。
 
 例如，一个支持英语，中文和法语的网站配置：
 
@@ -1237,4 +1237,18 @@ defaultContentLanguage = "zh-cn"
 
 要覆盖默认值，请在你项目的 i18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/FixIt/i18n/en.toml` 中获得提示。
 
-另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/FixIt/pulls) 来贡献主题翻译，谢谢！
+另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):][pulls] 来贡献主题翻译，谢谢！
+
+[fixit]: https://github.com/hugo-fixit/FixIt
+[releases]: https://github.com/hugo-fixit/FixIt/releases
+[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[hugo-modules]: https://gohugo.io/hugo-modules/
+[use-hugo-modules]: https://gohugo.io/hugo-modules/use-modules/
+[config]: https://github.com/hugo-fixit/FixIt/blob/master/config.toml
+[menu-system]: https://gohugo.io/content-management/menus/
+[hugo-config]: https://gohugo.io/overview/configuration/
+[lunrjs]: https://lunrjs.com/
+[algolia]: https://www.algolia.com/
+[fusejs]: https://fusejs.io/
+[multilingual]: https://gohugo.io/content-management/multilingual
+[pulls]: https://github.com/hugo-fixit/FixIt/pulls

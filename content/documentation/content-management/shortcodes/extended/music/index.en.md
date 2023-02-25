@@ -18,7 +18,7 @@ categories:
 hiddenFromHomePage: true
 ---
 
-The `music` shortcode embeds a responsive music player based on [APlayer](https://github.com/MoePlayer/APlayer) and [MetingJS](https://github.com/metowolf/MetingJS).
+The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs].
 
 <!--more-->
 
@@ -26,7 +26,7 @@ There are three ways to use it the `music` shortcode.
 
 ## 1 Custom Music URL {#custom-music-url}
 
-{{< version 0.2.10 >}} The complete usage of [local resource references](../../../posts/theme-documentation-content#contents-organization) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references][contents-organization] is supported.
 
 The `music` shortcode has the following named parameters by custom music URL:
 
@@ -158,3 +158,7 @@ The `music` shortcode has the following named parameters only applying to the ty
 * **list-max-height** *[optional]*
 
     Max height of the music list, default value is `340px`.
+
+[aplayer]: https://github.com/MoePlayer/APlayer
+[metingjs]: https://github.com/metowolf/MetingJS
+[contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}

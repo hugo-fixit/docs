@@ -27,7 +27,7 @@ Find out how to turn your FixIt site into a Progressive Web App.
 
 ## What are PWAs?
 
-[**Progressive Web Apps** (PWAs) ](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)are web apps that use [service workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), [manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest), and other web-platform features in combination with [progressive enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) to give users an experience on par with native apps.
+[**Progressive Web Apps** (PWAs)][pwas] are web apps that use [service workers][service-workers], [manifests][manifest], and other web-platform features in combination with [progressive enhancement][progressive-enhancement] to give users an experience on par with native apps.
 
 ## Why bother?
 
@@ -62,7 +62,7 @@ Here are the key values required.
 
     An array of objects representing image files will be served as application icons. You can reuse the favicon of your site as the icons.
 
-There are other optional values you can set in the manifest file, check out this [documentation](https://developer.mozilla.org/en-US/docs/Web/Manifest) for more information.
+There are other optional values you can set in the manifest file, check out this [documentation][manifest] for more information.
 
 Here is a sample `site.webmanifest` file from this documentation site.
 
@@ -143,4 +143,12 @@ Now, an install button should show up when you visit your website and you will b
 
 Congratulation! You have successfully turned your static site into a PWA 🎉
 
-If you have any issues during the setup process, you can check the `Console` and `Application` panels in your browser's DevTools for debugging. Alternatively, you can check your site on [PWA Builder](https://www.pwabuilder.com/) for more information. You can also start a [discussion](https://github.com/hugo-fixit/FixIt/discussions) if you have any questions or propose an [issue](https://github.com/hugo-fixit/FixIt/issues) for any bugs you find. 
+If you have any issues during the setup process, you can check the `Console` and `Application` panels in your browser's DevTools for debugging. Alternatively, you can check your site on [PWA Builder][pwabuilder] for more information. You can also start a [discussion][discussions] if you have any questions or propose an [issue][issues] for any bugs you find. 
+
+[pwas]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+[service-workers]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+[manifest]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[progressive-enhancement]: https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
+[pwabuilder]: https://www.pwabuilder.com/
+[discussions]: https://github.com/hugo-fixit/FixIt/discussions
+[issues]: https://github.com/hugo-fixit/FixIt/issues

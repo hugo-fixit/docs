@@ -177,14 +177,33 @@ hugo
 会生成一个 `public` 目录，其中包含你网站的所有静态内容和资源。现在可以将其部署在任何 Web 服务器上。
 
 {{< admonition tip "部署" >}}
-网站内容可以通过 [Vercel](https://vercel.com/)、[Netlify](https://www.netlify.com/) 自动发布和托管，或者，您可以使用 [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) 以及 [更多](https://gohugo.io/hosting-and-deployment/)……
+网站内容可以通过 [Vercel][vercel]、[Netlify][netlify] 自动发布和托管，或者，您可以使用 [AWS Amplify][hosting-on-aws-amplify], [Github pages][hosting-on-github], [Render][hosting-on-render] 以及 [更多][hosting-and-deployment]……
 
 相关指南：
 
-- [如何使用 Vercel 部署 Hugo 站点](https://vercel.com/guides/deploying-hugo-with-vercel)
-- [在 Netlify 上部署 Hugo](https://docs.netlify.com/integrations/frameworks/hugo/)
+- [如何使用 Vercel 部署 Hugo 站点][deploying-hugo-with-vercel]
+- [在 Netlify 上部署 Hugo][hugo-on-netlify]
+
+[vercel]: https://vercel.com/
+[netlify]: https://www.netlify.com/
+[hosting-on-aws-amplify]: https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/
+[hosting-on-github]: https://gohugo.io/hosting-and-deployment/hosting-on-github/
+[hosting-on-render]: https://gohugo.io/hosting-and-deployment/hosting-on-render/
+[hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
+[deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
+[hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 {{< /admonition >}}
 
 ## 寻求帮助
 
-所有的反馈都是欢迎的！详见 [议题](https://github.com/hugo-fixit/FixIt/issues)、[讨论](https://github.com/hugo-fixit/FixIt/discussions) 或者加入 QQ 群：`814031017`。
+所有的反馈都是欢迎的！详见 [议题][issues]、[讨论][discussions] 或者加入 QQ 群：`814031017`。
+
+[getting-started]: https://gohugo.io/getting-started/
+[hugo-fixit-blog-git]: https://github.com/hugo-fixit/hugo-fixit-blog-git
+[hugo-fixit-blog-go]: https://github.com/hugo-fixit/hugo-fixit-blog-go
+[hugo]: https://gohugo.io/
+[hugo-installing]: https://gohugo.io/getting-started/installing/
+[fixit]: https://github.com/hugo-fixit/FixIt
+[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[issues]: https://github.com/hugo-fixit/FixIt/issues
+[discussions]: https://github.com/hugo-fixit/FixIt/discussions

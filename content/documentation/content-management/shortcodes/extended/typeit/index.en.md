@@ -24,7 +24,7 @@ The `typeit` shortcode provides typing animation based on [TypeIt](https://typei
 
 Just insert your content in the `typeit` shortcode and that’s it.
 
-## 1 Simple Content {#simple-content}
+## Simple Content {#simple-content}
 
 Simple content is allowed in `Markdown` format and **without** rich block content such as images and more...
 
@@ -58,7 +58,7 @@ The rendered output looks like this:
 This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{< /typeit >}}
 
-## 2 Code Content {#code-content}
+## Code Content {#code-content}
 
 Code content is allowed and will be highlighted by named parameter `code` for the type of code language.
 
@@ -84,7 +84,7 @@ public class HelloWorld {
 }
 {{< /typeit >}}
 
-## 3 Group Content {#group-content}
+## Group Content {#group-content}
 
 All typing animations start at the same time by default.
 But sometimes you may want to start a set of `typeit` contents in order.

@@ -1,6 +1,6 @@
 ---
 weight: 2
-title: Basics Usage
+title: Basic Usage
 date: 2023-02-23T16:04:22+08:00
 type: posts
 aliases:
@@ -43,11 +43,11 @@ In fact, there are many ways to quickly install the theme, just choose **one** o
 
 ### Manual
 
-You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/hugo-fixit/FixIt/releases) of the theme and extract it in the `themes` directory.
+You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file][releases] of the theme and extract it in the `themes` directory.
 
 ### Git Clone
 
-Or, clone the [FixIt](https://github.com/hugo-fixit/FixIt) theme into the `themes` directory:
+Or, clone the [FixIt][fixit] theme into the `themes` directory:
 
 ```bash
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
@@ -57,7 +57,7 @@ git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "A Template base on Git Submodule" "" true >}}
 
-Alternatively, initialize an empty Git repository and clone the [FixIt](https://github.com/hugo-fixit/FixIt) theme into the `themes` directory, adding it to your project as a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+Alternatively, initialize an empty Git repository and clone the [FixIt][fixit] theme into the `themes` directory, adding it to your project as a [Git submodule][git-submodule].
 
 ```bash
 git init
@@ -82,7 +82,7 @@ git submodule set-branch -b dev themes/FixIt
 
 > In this way, you don't need to configure `theme = "FixIt"` in `config.toml`.
 
-The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme is to import it in the config. See [Use Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
+The easiest way to use a [Module][hugo-modules] for a theme is to import it in the config. See [Use Hugo Modules][use-hugo-modules].
 
 1. Initialize the hugo module system: `hugo mod init github.com/<your_user>/<your_project>`
 2. Import the theme:
@@ -95,7 +95,7 @@ The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme i
 
 ## Full Configuration
 
-Before starting configuration, it is recommended that you execute the following command to copy the default [config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) of theme to your project:
+Before starting configuration, it is recommended that you execute the following command to copy the default [config.toml][config] of theme to your project:
 
 ```bash
 mv config.toml config.old.toml
@@ -104,7 +104,7 @@ cp themes/FixIt/config.toml config.toml
 
 ###  Menu Configuration
 
-Hugo has a simple yet powerful [menu system](https://gohugo.io/content-management/menus/).
+Hugo has a simple yet powerful [menu system][menu-system].
 
 According to the interface provided by Hugo, FixIt theme only realizes some functions, it is enough to meet the needs of most people and make users easier to use.
 
@@ -164,7 +164,7 @@ menu:
 
 ### Theme Configuration {#theme-configuration}
 
-In addition to [Hugo global configuration](https://gohugo.io/overview/configuration/) and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration (see [FixIt/config.toml](https://github.com/hugo-fixit/FixIt/blob/master/config.toml) for default values).
+In addition to [Hugo global configuration][hugo-config] and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration.
 
 Please open the code block below to view the complete `config.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -1056,9 +1056,9 @@ which is you can refer to.
 
 #### Search Configuration
 
-Based on [Lunr.js](https://lunrjs.com/), [algolia](https://www.algolia.com/) or [Fuse.js](https://fusejs.io/), searching is supported in **FixIt** theme.
+Based on [Lunr.js][lunrjs], [algolia][algolia] or [Fuse.js][fusejs], searching is supported in **FixIt** theme.
 
-In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your [site configuration](#site-configuration), see `params.search` configuration in [Theme Configuration](#theme-configuration) for details.
+In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your site configuration, see `params.search` configuration in [Theme Configuration](#theme-configuration) for details.
 
 ```toml
 [outputs]
@@ -1116,7 +1116,7 @@ Customize `browserconfig.xml` and `site.webmanifest` to set `theme-color` and `b
 
 #### Basic Configuration
 
-After learning [how Hugo handle multilingual websites](https://gohugo.io/content-management/multilingual), define your languages in your site configuration.
+After learning [how Hugo handle multilingual websites][multilingual], define your languages in your site configuration.
 
 For example with English, Chinese and French website:
 
@@ -1241,4 +1241,19 @@ Translations strings are used for common default values used in the theme. Trans
 
 To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/FixIt/i18n/en.toml`.
 
-By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
+By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):][pulls] to the theme!
+
+
+[fixit]: https://github.com/hugo-fixit/FixIt
+[releases]: https://github.com/hugo-fixit/FixIt/releases
+[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[hugo-modules]: https://gohugo.io/hugo-modules/
+[use-hugo-modules]: https://gohugo.io/hugo-modules/use-modules/
+[config]: https://github.com/hugo-fixit/FixIt/blob/master/config.toml
+[menu-system]: https://gohugo.io/content-management/menus/
+[hugo-config]: https://gohugo.io/overview/configuration/
+[lunrjs]: https://lunrjs.com/
+[algolia]: https://www.algolia.com/
+[fusejs]: https://fusejs.io/
+[multilingual]: https://gohugo.io/content-management/multilingual
+[pulls]: https://github.com/hugo-fixit/FixIt/pulls

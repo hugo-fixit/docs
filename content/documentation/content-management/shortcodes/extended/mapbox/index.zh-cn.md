@@ -23,11 +23,11 @@ mapbox:
 
 {{< version 0.2.0 >}}
 
-`mapbox` shortcode 使用 [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 库提供互动式地图的功能。
+`mapbox` shortcode 使用 [Mapbox GL JS][mapbox] 库提供互动式地图的功能。
 
 <!--more-->
 
-[Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) 是一个 JavaScript 库，它使用 WebGL, 以 [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) 和 [Mapbox styles](https://docs.mapbox.com/mapbox-gl-js/style-spec/) 为来源，将它们渲染成互动式地图。
+[Mapbox GL JS][mapbox] 是一个 JavaScript 库，它使用 WebGL, 以 [vector tiles][vector-tiles] 和 [Mapbox styles][style-spec] 为来源，将它们渲染成互动式地图。
 
 `mapbox` shortcode 有以下命名参数来使用 Mapbox GL JS:
 
@@ -49,27 +49,27 @@ mapbox:
 
 * **light-style** *[可选]*（**第五个**位置参数）
 
-    浅色主题的地图样式，默认值是 [前置参数](../../content/#front-matter) 或者 [网站配置](../../basics/#site-configuration) 中设置的值。
+    浅色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 * **dark-style** *[可选]*（**第六个**位置参数）
 
-    深色主题的地图样式，默认值是 [前置参数](../../content/#front-matter) 或者 [网站配置](../../basics/#site-configuration) 中设置的值。
+    深色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 * **navigation** *[可选]*
 
-    是否添加 [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), 默认值是 [前置参数](../../content/#front-matter) 或者 [网站配置](../../basics/#site-configuration) 中设置的值。
+    是否添加 [NavigationControl][navigationcontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 * **geolocate** *[可选]*
 
-    是否添加 [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), 默认值是 [前置参数](../../content/#front-matter) 或者 [网站配置](../../basics/#site-configuration) 中设置的值。
+    是否添加 [GeolocateControl][geolocatecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 * **scale** *[可选]*
 
-    是否添加 [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), 默认值是 [前置参数](../../content/#front-matter) 或者 [网站配置](../../basics/#site-configuration) 中设置的值。
+    是否添加 [ScaleControl][scalecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 * **fullscreen** *[可选]*
 
-   是否添加 [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), 默认值是 [前置参数](../../content/#front-matter) 或者 [网站配置](../../basics/#site-configuration) 中设置的值。
+   是否添加 [FullscreenControl][fullscreencontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 * **width** *[可选]*
 
@@ -102,3 +102,13 @@ mapbox:
 呈现的输出效果如下：
 
 {{< mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/streets-zh-v1?optimize=true" >}}
+
+[mapbox]: https://docs.mapbox.com/mapbox-gl-js
+[vector-tiles]: https://docs.mapbox.com/help/glossary/vector-tiles/
+[style-spec]: https://docs.mapbox.com/mapbox-gl-js/style-spec/
+[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[front-matter]: {{< relref path="/documentation/content-management/introduction#front-matter" >}}
+[navigationcontrol]: https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol
+[geolocatecontrol]: https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol
+[scalecontrol]: https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol
+[fullscreencontrol]: https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol

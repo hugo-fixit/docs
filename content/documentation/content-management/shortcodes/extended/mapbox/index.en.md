@@ -21,11 +21,11 @@ hiddenFromHomePage: true
 
 {{< version 0.2.0 >}}
 
-The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) library.
+The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.
 
 <!--more-->
 
-[Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) is a JavaScript library that uses WebGL to render interactive maps from [vector tiles](https://docs.mapbox.com/help/glossary/vector-tiles/) and [Mapbox styles](https://docs.mapbox.com/mapbox-gl-js/style-spec/).
+[Mapbox GL JS][mapbox] is a JavaScript library that uses WebGL to render interactive maps from [vector tiles][vector-tiles] and [Mapbox styles][style-spec].
 
 The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
 
@@ -47,27 +47,27 @@ The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
 
 * **light-style** *[optional]* (**fifth** positional parameter)
 
-    Style for the light theme, default value is the value set in the [front matter](../../content/#front-matter) or the [site configuration](../../basics/#site-configuration).
+    Style for the light theme, default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
 * **dark-style** *[optional]* (**sixth** positional parameter)
 
-    Style for the dark theme, default value is the value set in the [front matter](../../content/#front-matter) or the [site configuration](../../basics/#site-configuration).
+    Style for the dark theme, default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
 * **navigation** *[optional]*
 
-    Whether to add [NavigationControl](https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol), default value is the value set in the [front matter](../../content/#front-matter) or the [site configuration](../../basics/#site-configuration).
+    Whether to add [NavigationControl][navigationcontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
 * **geolocate** *[optional]*
 
-    Whether to add [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol), default value is the value set in the [front matter](../../content/#front-matter) or the [site configuration](../../basics/#site-configuration).
+    Whether to add [GeolocateControl][geolocatecontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
 * **scale** *[optional]*
 
-    Whether to add [ScaleControl](https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol), default value is the value set in the [front matter](../../content/#front-matter) or the [site configuration](../../basics/#site-configuration).
+    Whether to add [ScaleControl][scalecontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
 * **fullscreen** *[optional]*
 
-    Whether to add [FullscreenControl](https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol), default value is the value set in the [front matter](../../content/#front-matter) or the [site configuration](../../basics/#site-configuration).
+    Whether to add [FullscreenControl][fullscreencontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
 * **width** *[optional]*
 
@@ -100,3 +100,13 @@ Or
 The rendered output looks like this:
 
 {{< mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/navigation-preview-day-v4?optimize=true" "mapbox://styles/mapbox/navigation-preview-night-v4?optimize=true" >}}
+
+[mapbox]: https://docs.mapbox.com/mapbox-gl-js
+[vector-tiles]: https://docs.mapbox.com/help/glossary/vector-tiles/
+[style-spec]: https://docs.mapbox.com/mapbox-gl-js/style-spec/
+[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[front-matter]: {{< relref path="/documentation/content-management/introduction#front-matter" >}}
+[navigationcontrol]: https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol
+[geolocatecontrol]: https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol
+[scalecontrol]: https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol
+[fullscreencontrol]: https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol

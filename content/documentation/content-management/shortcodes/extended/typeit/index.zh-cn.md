@@ -24,7 +24,7 @@ hiddenFromHomePage: true
 
 只需将你需要打字动画的内容插入 `typeit` shortcode 中即可。
 
-## 1 简单内容 {#simple-content}
+## 简单内容 {#simple-content}
 
 允许使用 `Markdown` 格式的简单内容，并且 **不包含** 富文本的块内容，例如图像等等……
 
@@ -58,7 +58,7 @@ hiddenFromHomePage: true
 这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{< /typeit >}}
 
-## 2 代码内容 {#code-content}
+## 代码内容 {#code-content}
 
 代码内容也是允许的，并且通过使用参数 `code` 指定语言类型可以实习语法高亮。
 
@@ -84,7 +84,7 @@ public class HelloWorld {
 }
 {{< /typeit >}}
 
-## 3 分组内容 {#code-content}
+## 分组内容 {#code-content}
 
 默认情况下，所有打字动画都是同时开始的。
 但是有时你可能需要按顺序开始一组 `typeit` 内容的打字动画。

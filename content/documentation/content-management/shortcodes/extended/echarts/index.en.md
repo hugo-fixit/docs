@@ -20,13 +20,13 @@ code:
   maxShownLines: 70
 ---
 
-The `echarts` shortcode supports data visualization in Hugo with [ECharts](https://echarts.apache.org/) library.
+The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
 
 <!--more-->
 
 **ECharts** is a library helping you to generate interactive data visualization.
 
-The basic chart types ECharts supports include [line series](https://echarts.apache.org/en/option.html#series-line), [bar series](https://echarts.apache.org/en/option.html#series-line), [scatter series](https://echarts.apache.org/en/option.html#series-scatter), [pie charts](https://echarts.apache.org/en/option.html#series-pie), [candle-stick series](https://echarts.apache.org/en/option.html#series-candlestick), [boxplot series](https://echarts.apache.org/en/option.html#series-boxplot) for statistics, [map series](https://echarts.apache.org/en/option.html#series-map), [heatmap series](https://echarts.apache.org/en/option.html#series-heatmap), [lines series](https://echarts.apache.org/en/option.html#series-lines) for directional information, [graph series](https://echarts.apache.org/en/option.html#series-graph) for relationships, [treemap series](https://echarts.apache.org/en/option.html#series-treemap), [sunburst series](https://echarts.apache.org/en/option.html#series-sunburst), [parallel series](https://echarts.apache.org/en/option.html#series-parallel) for multi-dimensional data, [funnel series](https://echarts.apache.org/en/option.html#series-funnel), [gauge series](https://echarts.apache.org/en/option.html#series-gauge). And it's extremely easy to create a combinition of them with ECharts.
+The basic chart types ECharts supports include [line series][line], [bar series][bar], [scatter series][scatter], [pie charts][pie], [candle-stick series][candlestick], [boxplot series][boxplot] for statistics, [map series][map], [heatmap series][heatmap], [lines series][lines] for directional information, [graph series][graph] for relationships, [treemap series][treemap], [sunburst series][sunburst], [parallel series][parallel] for multi-dimensional data, [funnel series][funnel], [gauge series][gauge]. And it's extremely easy to create a combinition of them with ECharts.
 
 Just insert your ECharts option in `JSON`/`YAML`/`TOML` format in the `echarts` shortcode and that’s it.
 
@@ -409,3 +409,19 @@ The `echarts` shortcode has also the following named parameters:
 * **height** *[optional]* (**second** positional parameter)
 
     {{< version 0.2.0 >}} Height of the data visualization, default value is `30rem`.
+
+[echarts]: https://echarts.apache.org/
+[line]: https://echarts.apache.org/en/option.html#series-line
+[bar]: https://echarts.apache.org/en/option.html#series-bar
+[scatter]: https://echarts.apache.org/en/option.html#series-scatter
+[pie]: https://echarts.apache.org/en/option.html#series-pie
+[candlestick]: https://echarts.apache.org/en/option.html#series-candlestick
+[map]: https://echarts.apache.org/en/option.html#series-map
+[heatmap]: https://echarts.apache.org/en/option.html#series-heatmap
+[lines]: https://echarts.apache.org/en/option.html#series-lines
+[graph]: https://echarts.apache.org/en/option.html#series-graph
+[treemap]: https://echarts.apache.org/en/option.html#series-treemap
+[sunburst]: https://echarts.apache.org/en/option.html#series-sunburst
+[parallel]: https://echarts.apache.org/en/option.html#series-parallel
+[funnel]: https://echarts.apache.org/en/option.html#series-funnel
+[gauge]: https://echarts.apache.org/en/option.html#series-gauge

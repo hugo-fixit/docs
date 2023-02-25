@@ -45,7 +45,7 @@ menu:
 
 有三种方法来引用**图片**和**音乐**等本地资源：
 
-1. 使用 [页面包](https://gohugo.io/content-management/page-bundles/) 中的 [页面资源](https://gohugo.io/content-management/page-resources/)。
+1. 使用 [页面包][page-bundles] 中的 [页面资源][page-resources]。
    你可以使用适用于 `Resources.GetMatch` 的值或者直接使用相对于当前页面目录的文件路径来引用页面资源。
 2. 将本地资源放在 **assets** 目录中，默认路径是 `/assets`。
    引用资源的文件路径是相对于 assets 目录的。
@@ -57,8 +57,12 @@ menu:
 在这个主题中的很多地方可以使用上面的本地资源引用，
 例如 **链接**, **图片**, `image` shortcode, `music` shortcode 和**前置参数**中的部分参数。
 
-页面资源或者 **assets** 目录中的 [图片处理](https://gohugo.io/content-management/image-processing/) 会在未来的版本中得到支持。
+页面资源或者 **assets** 目录中的 [图片处理][image-processing] 会在未来的版本中得到支持。
 非常酷的功能！:(fa-regular fa-grin-squint fa-fw):
+
+[page-resources]: https://gohugo.io/content-management/page-resources/
+[page-bundles]: https://gohugo.io/content-management/page-bundles/
+[image-processing]: https://gohugo.io/content-management/image-processing/
 {{< /admonition >}}
 
 ## 前置参数 {#front-matter}
@@ -67,12 +71,12 @@ menu:
 
 {{< admonition >}}
 **不是所有**的以下前置参数都必须在你的每篇文章中设置。
-只有在文章的参数和你的 [网站设置](../basics#site-configuration) 中的 `page` 部分不一致时才有必要这么做。
+只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/basics#theme-configuration" >}}) 中的 `page` 部分不一致时才有必要这么做。
 {{< /admonition >}}
 
 * **title**: 文章标题
 * **subtitle**: {{< version 0.2.0 >}} 文章副标题
-* **date**: 这篇文章创建的日期时间它通常是从文章的前置参数中的 `date` 字段获取的，但是也可以在 [网站配置](../basics#site-configuration) 中设置
+* **date**: 这篇文章创建的日期时间它通常是从文章的前置参数中的 `date` 字段获取的，但是也可以在 [主题配置][theme-config] 中设置
 * **lastmod**: 上次修改内容的日期时间
 * **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
 * **authorAvatar**: {{< version 0.2.18 >}} 是否启用文章作者头像
@@ -92,7 +96,7 @@ menu:
 * **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上
 * **hiddenFromSearch**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章将不会显示在搜索结果中
 * **twemoji**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 twemoji
-* **lightgallery**: {{< version 0.2.18 changed >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.lightgallery` 部分相同
+* **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
 * **ruby**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法](#ruby)
 * **fraction**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [分数扩展语法](#fraction)
 * **fontawesome**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法](#fontawesome)
@@ -101,29 +105,29 @@ menu:
 * **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度](../basics#page-style)
 * **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
 
-* **toc**: {{< version 0.2.9 changed >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.toc` 部分相同
-* **expirationReminder**: {{< version 0.2.13 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.expirationReminder` 部分相同
-* **code**: {{< version 0.2.0 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.code` 部分相同
-* **edit**: {{< version 0.2.14 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.edit` 部分相同
-* **math**: {{< version 0.2.0 changed >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.math` 部分相同
-* **mapbox**: {{< version 0.2.0 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.mapbox` 部分相同
-* **share**: 和 [网站配置](../basics#site-configuration) 中的 `params.page.share` 部分相同
-* **comment**: {{< version 0.2.0 changed >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.comment` 部分相同
-* **library**: {{< version 0.2.7 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.library` 部分相同
-* **seo**: {{< version 0.2.10 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.seo` 部分相同
+* **toc**: {{< version 0.2.9 changed >}} 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
+* **expirationReminder**: {{< version 0.2.13 >}} 和 [主题配置][theme-config] 中的 `params.page.expirationReminder` 部分相同
+* **code**: {{< version 0.2.0 >}} 和 [主题配置][theme-config] 中的 `params.page.code` 部分相同
+* **edit**: {{< version 0.2.14 >}} 和 [主题配置][theme-config] 中的 `params.page.edit` 部分相同
+* **math**: {{< version 0.2.0 changed >}} 和 [主题配置][theme-config] 中的 `params.page.math` 部分相同
+* **mapbox**: {{< version 0.2.0 >}} 和 [主题配置][theme-config] 中的 `params.page.mapbox` 部分相同
+* **share**: 和 [主题配置][theme-config] 中的 `params.page.share` 部分相同
+* **comment**: {{< version 0.2.0 changed >}} 和 [主题配置][theme-config] 中的 `params.page.comment` 部分相同
+* **library**: {{< version 0.2.7 >}} 和 [主题配置][theme-config] 中的 `params.page.library` 部分相同
+* **seo**: {{< version 0.2.10 >}} 和 [主题配置][theme-config] 中的 `params.page.seo` 部分相同
 * **type**: 页面渲染模板，详见 [页面模板](#templates)
-* **menu**: 详见 [添加内容到菜单](../basics#content-to-menu)
+* **menu**: 详见 [添加内容到菜单][content-to-menu]
 
-* **password**: {{< version 0.2.15 >}} 加密页面内容的密码，详见 [主题文档 - 内容加密](../content-encryption)
-* **message**: {{< version 0.2.15 >}} 加密提示信息，详见 [主题文档 - 内容加密](../content-encryption)
+* **password**: {{< version 0.2.15 >}} 加密页面内容的密码，详见 [内容加密](#content-encryption)
+* **message**: {{< version 0.2.15 >}} 加密提示信息，详见 [内容加密](#content-encryption)
 
-* **repost**: {{< version 0.2.15 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.repost` 部分相同
-* **autoBookmark**: {{< version 0.2.17 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.autoBookmark` 部分相同
-* **wordCount**: {{< version 0.2.17 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.wordCount` 部分相同
-* **readingTime**: {{< version 0.2.17 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.readingTime` 部分相同
-* **endFlag**: {{< version 0.2.17 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.endFlag` 部分相同
-* **reward**: {{< version 0.2.17 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.reward` 部分相同
-* **instantPage**: {{< version 0.2.18 >}} 和 [网站配置](../basics#site-configuration) 中的 `params.page.instantPage` 部分相同
+* **repost**: {{< version 0.2.15 >}} 和 [主题配置][theme-config] 中的 `params.page.repost` 部分相同
+* **autoBookmark**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.autoBookmark` 部分相同
+* **wordCount**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.wordCount` 部分相同
+* **readingTime**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.readingTime` 部分相同
+* **endFlag**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.endFlag` 部分相同
+* **reward**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.reward` 部分相同
+* **instantPage**: {{< version 0.2.18 >}} 和 [主题配置][theme-config] 中的 `params.page.instantPage` 部分相同
 
 {{< admonition tip >}}
 {{< version 0.2.10 >}}
@@ -236,9 +240,9 @@ seo:
 
 默认情况下，Hugo 自动将内容的前 70 个单词作为摘要。
 
-你可以通过在 [网站配置](../basics#site-configuration) 中设置 `summaryLength` 来自定义摘要长度。
+你可以通过在网站配置中设置 `summaryLength` 来自定义摘要长度。
 
-如果您要使用 [CJK]^(中文/日语/韩语) 语言创建内容，并且想使用 Hugo 的自动摘要拆分功能，请在 [网站配置](../basics#site-configuration) 中将 `hasCJKLanguage` 设置为 `true`。
+如果您要使用 [CJK]^(中文/日语/韩语) 语言创建内容，并且想使用 Hugo 的自动摘要拆分功能，请在网站配置中将 `hasCJKLanguage` 设置为 `true`。
 
 ### 手动摘要拆分
 
@@ -303,7 +307,7 @@ hugo new friends/index.md
 
 ### 离线页面
 
-{{< version 0.2.12 >}} 详见 [PWA 支持](/zh-cn/pwa-support/)
+{{< version 0.2.12 >}} 详见 [PWA 支持][pwa-support]
 
 在前置参数中设置 `type: "offline"`，并在 `config.toml` 中开启 `enablePWA`：
 
@@ -326,12 +330,24 @@ hugo new offline/index.md
 
 ## 内容加密
 
-这部分内容在 [内容加密页面](../encryption/) 中介绍。
+这部分内容在 [内容加密页面][content-encryption] 中介绍。
 
 ## Markdown 语法
 
-这部分内容在 [Markdown 基本语法页面](../../../guides/basic-markdown-syntax/) 和 [Markdown 扩展语法页面](../extended-markdown-syntax/) 中介绍。
+这部分内容在 [Markdown 基本语法页面][basic-markdown-syntax] 和 [Markdown 扩展语法页面][extended-markdown-syntax] 中介绍。
 
 ## Shortcodes
 
-这部分内容在 [Shortcodes 页面](../shortcodes/) 中介绍。
+这部分内容在 [Shortcodes 页面][shortcodes] 中介绍。
+
+[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[content-to-menu]: {{< relref path="/documentation/basics#content-to-menu" >}}
+[ruby-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#ruby" >}}
+[fraction-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#fraction" >}}
+[fontawesome-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#fontawesome" >}}
+[page-style]: {{< relref path="/documentation/advanced#page-style" >}}
+[pwa-support]: {{< relref path="/guides/pwa-support" >}}
+[content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[basic-markdown-syntax]: {{< relref path="/guides/basic-markdown-syntax" >}}
+[extended-markdown-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax" >}}
+[shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}

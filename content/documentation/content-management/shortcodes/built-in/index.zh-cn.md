@@ -27,7 +27,7 @@ Hugo 使用 Markdown 为其简单的内容格式。但是，Markdown 在很多�
 
 但这恰好是一个坏主意。大家使用 Markdown, 正是因为它即使不经过渲染也可以轻松阅读。应该尽可能避免使用 HTML 以保持内容简洁。
 
-为了避免这种限制，Hugo 创建了 [shortcodes](https://gohugo.io/extras/shortcodes/)。
+为了避免这种限制，Hugo 创建了 [shortcodes][shortcodes]。
 shortcode 是一个简单代码段，可以生成合理的 HTML 代码，并且符合 Markdown 的设计哲学。
 
 Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见的用法。
@@ -45,7 +45,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## figure {#figure}
 
-[`figure` 的文档](https://gohugo.io/content-management/shortcodes#figure)
+[`figure` 的文档][figure]
 
 一个 `figure` 示例：
 
@@ -70,7 +70,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## gist
 
-[`gist` 的文档](https://gohugo.io/content-management/shortcodes#gist)
+[`gist` 的文档][gist]
 
 一个 `gist` 示例：
 
@@ -90,7 +90,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## highlight
 
-[`highlight` 的文档](https://gohugo.io/content-management/shortcodes#highlight)
+[`highlight` 的文档][highlight]
 
 一个 `highlight` 示例：
 
@@ -122,7 +122,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## param
 
-[`param` 的文档](https://gohugo.io/content-management/shortcodes#param)
+[`param` 的文档][param]
 
 一个 `param` 示例：
 
@@ -136,11 +136,11 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## ref 和 relref {#ref-and-relref}
 
-[`ref` 和 `relref` 的文档](https://gohugo.io/content-management/shortcodes#ref-and-relref)
+[`ref` 和 `relref` 的文档][ref-and-relref]
 
 ## tweet
 
-[`tweet` 的文档](https://gohugo.io/content-management/shortcodes#tweet)
+[`tweet` 的文档][tweet]
 
 一个 `tweet` 示例：
 
@@ -154,7 +154,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## vimeo
 
-[`vimeo` 的文档](https://gohugo.io/content-management/shortcodes#vimeo)
+[`vimeo` 的文档][vimeo]
 
 一个 `vimeo` 示例：
 
@@ -168,7 +168,7 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 ## youtube
 
-[`youtube` 的文档](https://gohugo.io/content-management/shortcodes#youtube)
+[`youtube` 的文档][youtube]
 
 一个 `youtube` 示例：
 
@@ -179,3 +179,13 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 呈现的输出效果如下：
 
 {{< youtube w7Ft2ymGmfc >}}
+
+[shortcodes]: https://gohugo.io/extras/shortcodes/
+[figure]: https://gohugo.io/content-management/shortcodes#figure
+[gist]: https://gohugo.io/content-management/shortcodes#gist
+[highlight]: https://gohugo.io/content-management/shortcodes#highlight
+[param]: https://gohugo.io/content-management/shortcodes#param
+[ref-and-relref]: https://gohugo.io/content-management/shortcodes#ref-and-relref
+[tweet]: https://gohugo.io/content-management/shortcodes#tweet
+[vimeo]: https://gohugo.io/content-management/shortcodes#vimeo
+[youtube]: https://gohugo.io/content-management/shortcodes#youtube

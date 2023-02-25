@@ -22,13 +22,13 @@ code:
   maxShownLines: 70
 ---
 
-`echarts` shortcode 使用 [ECharts](https://echarts.apache.org/) 库提供数据可视化的功能。
+`echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
 
 <!--more-->
 
 **ECharts** 是一个帮助你生成交互式数据可视化的库。
 
-ECharts 提供了常规的 [折线图](https://echarts.apache.org/zh/option.html#series-line), [柱状图](https://echarts.apache.org/zh/option.html#series-line), [散点图](https://echarts.apache.org/zh/option.html#series-scatter), [饼图](https://echarts.apache.org/zh/option.html#series-pie), [K 线图](https://echarts.apache.org/zh/option.html#series-candlestick), 用于统计的 [盒形图](https://echarts.apache.org/zh/option.html#series-boxplot), 用于地理数据可视化的 [地图](https://echarts.apache.org/zh/option.html#series-map), [热力图](https://echarts.apache.org/zh/option.html#series-heatmap), [线图](https://echarts.apache.org/zh/option.html#series-lines), 用于关系数据可视化的 [关系图](https://echarts.apache.org/zh/option.html#series-graph), [treemap](https://echarts.apache.org/zh/option.html#series-treemap), [旭日图](https://echarts.apache.org/zh/option.html#series-sunburst), 多维数据可视化的 [平行坐标](https://echarts.apache.org/zh/option.html#series-parallel), 还有用于 BI 的 [漏斗图](https://echarts.apache.org/zh/option.html#series-funnel), [仪表盘](https://echarts.apache.org/zh/option.html#series-gauge), 并且支持图与图之间的混搭。
+ECharts 提供了常规的 [折线图][line], [柱状图][line], [散点图][scatter], [饼图][pie], [K 线图][candlestick], 用于统计的 [盒形图][boxplot], 用于地理数据可视化的 [地图][map], [热力图][heatmap], [线图][lines], 用于关系数据可视化的 [关系图][graph], [treemap][treemap], [旭日图][sunburst], 多维数据可视化的 [平行坐标][parallel], 还有用于 BI 的 [漏斗图][funnel], [仪表盘][gauge], 并且支持图与图之间的混搭。
 
 只需在 `echarts` shortcode 中以 `JSON`/`YAML`/`TOML`格式插入 ECharts 选项即可。
 
@@ -411,3 +411,19 @@ data = [
 * **height** *[可选]* (**第二个**位置参数)
 
     {{< version 0.2.0 >}} 数据可视化的高度, 默认值是 `30rem`
+
+[echarts]: https://echarts.apache.org/
+[line]: https://echarts.apache.org/zh/option.html#series-line
+[bar]: https://echarts.apache.org/zh/option.html#series-bar
+[scatter]: https://echarts.apache.org/zh/option.html#series-scatter
+[pie]: https://echarts.apache.org/zh/option.html#series-pie
+[candlestick]: https://echarts.apache.org/zh/option.html#series-candlestick
+[map]: https://echarts.apache.org/zh/option.html#series-map
+[heatmap]: https://echarts.apache.org/zh/option.html#series-heatmap
+[lines]: https://echarts.apache.org/zh/option.html#series-lines
+[graph]: https://echarts.apache.org/zh/option.html#series-graph
+[treemap]: https://echarts.apache.org/zh/option.html#series-treemap
+[sunburst]: https://echarts.apache.org/zh/option.html#series-sunburst
+[parallel]: https://echarts.apache.org/zh/option.html#series-parallel
+[funnel]: https://echarts.apache.org/zh/option.html#series-funnel
+[gauge]: https://echarts.apache.org/zh/option.html#series-gauge

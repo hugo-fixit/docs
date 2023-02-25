@@ -8,7 +8,7 @@ author:
 description: 这篇文章展示了扩展的 Markdown 语法和格式。
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: featured-image.webp
 tags:
   - Markdown
   - HTML
@@ -24,17 +24,17 @@ hiddenFromHomePage: true
 
 <!--more-->
 
-### Emoji 支持
+## Emoji 支持
 
-这部分内容在 [Emoji 支持页面](../emoji-support) 中介绍。
+这部分内容在 [Emoji 支持页面][emoji-support] 中介绍。
 
-### 数学公式
+## 数学公式
 
 {{< version 0.2.16 changed >}}
 
-**FixIt** 基于 [$\KaTeX$](https://katex.org/) 提供数学公式的支持。
+**FixIt** 基于 [$\KaTeX$][katex] 提供数学公式的支持。
 
-在你的 [网站配置](../basics#site-configuration) 中的 `[params.math]` 下面设置属性 `enable = true`,
+在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `enable = true`,
 并在文章的前置参数中设置属性 `math: true`来启用数学公式的自动渲染。
 
 {{< admonition tip >}}
@@ -55,18 +55,18 @@ hiddenFromHomePage: true
 * `\]` -> `\\]`
 * `\\` -> `\\\\`
 
-**FixIt** 主题支持 [`raw` shortcode](../extended-shortcodes/index#15-raw) 以避免这些转义字符，
+**FixIt** 主题支持 [`raw` shortcode]({{< relref path="/documentation/content-management/shortcodes/extended/introduction#raw" >}}) 以避免这些转义字符，
 它可以帮助您编写原始数学公式内容。
 
 一个 `raw` 示例：
 
 ```markdown
-{{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
+{{</*/* raw */*/>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</*/* /raw */*/>}}
 
-{{</* raw */>}}
+{{</*/* raw */*/>}}
 公式块：
 \[ a=b+c \\ d+e=f \]
-{{</* /raw */>}}
+{{</*/* /raw */*/>}}
 ```
 
 呈现的输出效果如下：
@@ -79,7 +79,7 @@ hiddenFromHomePage: true
 {{< /raw >}}
 {{< /admonition >}}
 
-#### 行内公式
+### 行内公式
 
 默认的行内公式分割符有：
 
@@ -96,7 +96,7 @@ $c = \pm\sqrt{a^2 + b^2}$ 和 \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 
 
 $c = \pm\sqrt{a^2 + b^2}$ 和 \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
 
-#### 公式块
+### 公式块
 
 默认的公式块分割符有：
 
@@ -185,26 +185,26 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 \end{CD}
 
 {{< admonition tip >}}
-你可以在 [网站配置](../basics#site-configuration) 中自定义行内公式和公式块的分割符。
+你可以在 [主题配置]({{< relref path="/documentation/basics#theme-configuration" >}}) 中自定义行内公式和公式块的分割符。
 {{< /admonition >}}
 
-#### Copy-tex
+### Copy-tex
 
-**[Copy-tex](https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex)** 是一个 **$\KaTeX$** 的插件。
+**[Copy-tex][copy-tex]** 是一个 **$\KaTeX$** 的插件。
 
 通过这个扩展，在选择并复制 $\KaTeX$ 渲染的公式时，会将其 $\LaTeX$ 源代码复制到剪贴板。
 
-在你的 [网站配置](../basics#site-configuration) 中的 `[params.math]` 下面设置属性 `copyTex = true` 来启用 Copy-tex。
+在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `copyTex = true` 来启用 Copy-tex。
 
 选择并复制上一节中渲染的公式，可以发现复制的内容为 LaTeX 源代码。
 
-#### mhchem
+### mhchem
 
-**[mhchem](https://github.com/Khan/KaTeX/tree/master/contrib/mhchem)** 是一个 **$\KaTeX$** 的插件。
+**[mhchem][mhchem]** 是一个 **$\KaTeX$** 的插件。
 
 通过这个扩展，你可以在文章中轻松编写漂亮的化学方程式。
 
-在你的 [网站配置](../basics#site-configuration) 中的 `[params.math]` 下面设置属性 `mhchem = true` 来启用 mhchem。
+在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `mhchem = true` 来启用 mhchem。
 
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
@@ -218,7 +218,7 @@ $$ \ce{CO2 + C -> 2 CO} $$
 
 $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
-### 字符注音或者注释 {#ruby}
+## 字符注音或者注释 {#ruby}
 
 **FixIt** 主题支持一种 **字符注音或者注释** Markdown 扩展语法：
 
@@ -230,7 +230,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 [Hugo]^(一个开源的静态网站生成工具)
 
-### 分数 {#fraction}
+## 分数 {#fraction}
 
 {{< version 0.2.0 >}}
 
@@ -248,12 +248,12 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 [90]/[100]
 
-### Font Awesome {#fontawesome}
+## Font Awesome {#fontawesome}
 
-**FixIt** 主题使用 [Font Awesome](https://fontawesome.com/) 作为图标库。
+**FixIt** 主题使用 [Font Awesome][fontawesome] 作为图标库。
 你同样可以在文章中轻松使用这些图标。
 
-从 [Font Awesome 网站](https://fontawesome.com/icons?d=gallery) 上获取所需的图标 `class`。
+从 [Font Awesome 网站][fontawesome-icons] 上获取所需的图标 `class`。
 
 ```markdown
 去露营啦！{?:}(fa-solid fa-campground fa-fw): 很快就回来。
@@ -267,7 +267,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 真开心！:(fa-regular fa-grin-tears):
 
-### 转义字符 {#escape-character}
+## 转义字符 {#escape-character}
 
 在某些特殊情况下 （编写这个主题文档时 :(fa-regular fa-grin-squint-tears):),
 你的文章内容会与 Markdown 的基本或者扩展语法冲突，并且无法避免。
@@ -302,7 +302,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 **[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**。
 
-### 自定义属性
+## 自定义属性
 
 > 前提是你设置了 `goldmark.parser.attribute.block` 为 `true`。
 
@@ -352,10 +352,19 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
   {.text-warning}
 {.text-primary}
 
-请注意，[code fences](https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences) 中的属性必须位于开始标记之后，以及任何其他突出显示处理指令，例如：
+请注意，[code fences][code-fences] 中的属性必须位于开始标记之后，以及任何其他突出显示处理指令，例如：
 
 ```md
 {?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
 // ... 代码
 {?`}{?`}{?`}
 ```
+
+[emoji-support]: {{< relref path="/guides/emoji-support" >}}
+[katex]: https://katex.org/
+[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
+[mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
+[fontawesome]: https://fontawesome.com/
+[fontawesome-icons]: https://fontawesome.com/icons?d=gallery
+[code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences

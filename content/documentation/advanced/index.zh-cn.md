@@ -15,9 +15,7 @@ tags:
   - Configuration
 categories:
   - Documentation
-lightgallery: true
-reward:
-  enable: true
+reward: true
 toc:
   auto: false
 menu:
@@ -149,4 +147,6 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 
 ## PWA 支持
 
-这部分内容在 [PWA 支持页面](../../guides/pwa-support/) 中介绍。
+这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
+
+[pwa-support]: {{< relref path="/guides/pwa-support" >}}

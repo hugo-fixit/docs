@@ -18,7 +18,7 @@ categories:
 hiddenFromHomePage: true
 ---
 
-`music` shortcode 基于 [APlayer](https://github.com/MoePlayer/APlayer) 和 [MetingJS](https://github.com/metowolf/MetingJS) 提供了一个内嵌的响应式音乐播放器。
+`music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 提供了一个内嵌的响应式音乐播放器。
 
 <!--more-->
 
@@ -26,7 +26,7 @@ hiddenFromHomePage: true
 
 ## 1 自定义音乐 URL {#custom-music-url}
 
-{{< version 0.2.10 >}} 支持 [本地资源引用](../../../posts/theme-documentation-content#contents-organization) 的完整用法。
+{{< version 0.2.10 >}} 支持 [本地资源引用][contents-organization] 的完整用法。
 
 `music` shortcode 有以下命名参数来使用自定义音乐 URL:
 
@@ -157,3 +157,7 @@ hiddenFromHomePage: true
 * **list-max-height** *[可选]*
 
     音乐列表的最大高度，默认值是 `340px`。
+
+[aplayer]: https://github.com/MoePlayer/APlayer
+[metingjs]: https://github.com/metowolf/MetingJS
+[contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}

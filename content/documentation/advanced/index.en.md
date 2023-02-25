@@ -15,9 +15,7 @@ tags:
   - Configuration
 categories:
   - Documentation
-lightgallery: true
-reward:
-  enable: true
+reward: true
 toc:
   auto: false
 menu:
@@ -148,4 +146,6 @@ If the script file `assets/js/custom.js` exists, it will be executed at the end 
 
 ## PWA Support
 
-This part is shown in the [pwa support page](../../guides/pwa-support/).
+This part is shown in the [pwa support page][pwa-support].
+
+[pwa-support]: {{< relref path="/guides/pwa-support" >}}

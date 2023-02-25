@@ -45,7 +45,7 @@ A few suggestions to help you get a good looking site quickly:
 
 There are three ways to reference local resources such as **images** and **music**:
 
-1. Using [page resources](https://gohugo.io/content-management/page-resources/) in [page bundles](https://gohugo.io/content-management/page-bundles/).
+1. Using [page resources][page-resources] in [page bundles][page-bundles].
    You can reference page resources by the value for `Resources.GetMatch` or the filepath of the resource relative to the page directory directly.
 2. Store resources in the **assets** directory, which is `/assets` by default.
    The filepath of the resource to reference in the post is relative to the assets directory.
@@ -57,9 +57,13 @@ The **priority** of references is also in the above order.
 There are many places in the theme where the above local resource references can be used,
 such as **links**, **images**, `image` shortcode, `music` shortcode and some params in the **front matter**.
 
-Images in page resources or assets directory [processing](https://gohugo.io/content-management/image-processing/)
+Images in page resources or assets directory [processing][image-processing]
 will be supported in the future.
 It's really cool! :(fa-regular fa-grin-squint fa-fw):
+
+[page-resources]: https://gohugo.io/content-management/page-resources/
+[page-bundles]: https://gohugo.io/content-management/page-bundles/
+[image-processing]: https://gohugo.io/content-management/image-processing/
 {{< /admonition >}}
 
 ## Front Matter {#front-matter}
@@ -68,12 +72,12 @@ It's really cool! :(fa-regular fa-grin-squint fa-fw):
 
 {{< admonition >}}
 **Not all** of the below front matters need to be set in each of your posts.
-It is necessary only if the front matters and the `page` part in your [site configuration](../basics#site-configuration) are inconsistent.
+It is necessary only if the front matters and the `page` part in your [theme configuration]({{< relref path="/documentation/basics#theme-configuration" >}}) are inconsistent.
 {{< /admonition >}}
 
 * **title**: the title for the content.
 * **subtitle**: {{< version 0.2.0 >}} the subtitle for the content.
-* **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [site configuration](../basics#site-configuration).
+* **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [theme configuration][theme-config].
 * **lastmod**: the datetime at which the content was last modified.
 * **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
 * **author**: {{< version 0.2.18 changed >}} the author for the content.
@@ -93,38 +97,38 @@ It is necessary only if the front matters and the `page` part in your [site conf
 * **hiddenFromHomePage**: if `true`, the content will not be shown in the home page.
 * **hiddenFromSearch**: {{< version 0.2.0 >}} if `true`, the content will not be shown in the search results.
 * **twemoji**: {{< version 0.2.0 >}} if `true`, the content will enable the twemoji.
-* **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [site configuration](../basics#site-configuration).
-* **ruby**: {{< version 0.2.0 >}} if `true`, the content will enable the [ruby extended syntax](#ruby).
-* **fraction**: {{< version 0.2.0 >}} if `true`, the content will enable the [fraction extended syntax](#fraction).
-* **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax](#fontawesome).
+* **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [theme configuration][theme-config].
+* **ruby**: {{< version 0.2.0 >}} if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].
+* **fraction**: {{< version 0.2.0 >}} if `true`, the content will enable the [fraction extended syntax][fraction-syntax].
+* **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax][fontawesome-syntax].
 * **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
 * **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
-* **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style](../basics#page-style).
+* **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
 * **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} Gravatar is force-used as the author's avatar.
 
-* **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [site configuration](../basics#site-configuration).
-* **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [site configuration](../basics#site-configuration).
-* **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [site configuration](../basics#site-configuration).
-* **edit**: {{< version 0.2.14 >}} the same as the `params.page.edit` part in the [site configuration](../basics#site-configuration).
-* **math**: {{< version 0.2.0 changed >}} the same as the `params.page.math` part in the [site configuration](../basics#site-configuration).
-* **mapbox**: {{< version 0.2.0 >}} the same as the `params.page.mapbox` part in the [site configuration](../basics#site-configuration).
-* **share**: the same as the `params.page.share` part in the [site configuration](../basics#site-configuration).
-* **comment**: {{< version 0.2.0 changed >}} the same as the `params.page.comment` part in the [site configuration](../basics#site-configuration).
-* **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [site configuration](../basics#site-configuration).
-* **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [site configuration](../basics#site-configuration).
+* **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [theme configuration][theme-config].
+* **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [theme configuration][theme-config].
+* **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [theme configuration][theme-config].
+* **edit**: {{< version 0.2.14 >}} the same as the `params.page.edit` part in the [theme configuration][theme-config].
+* **math**: {{< version 0.2.0 changed >}} the same as the `params.page.math` part in the [theme configuration][theme-config].
+* **mapbox**: {{< version 0.2.0 >}} the same as the `params.page.mapbox` part in the [theme configuration][theme-config].
+* **share**: the same as the `params.page.share` part in the [theme configuration][theme-config].
+* **comment**: {{< version 0.2.0 changed >}} the same as the `params.page.comment` part in the [theme configuration][theme-config].
+* **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [theme configuration][theme-config].
+* **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [theme configuration][theme-config].
 * **type**: the rendering template of page, see [templates](#templates) for details.
-* **menu**: see [Add content to Menu](../basics#content-to-menu).
+* **menu**: see [Add content to Menu][content-to-menu].
 
-* **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Theme Documentation - Content Encryption](../content-encryption).
-* **message**: {{< version 0.2.15 >}} encryption prompt, see [Theme Documentation - Content Encryption](../content-encryption).
+* **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Content Encryption](#content-encryption).
+* **message**: {{< version 0.2.15 >}} encryption prompt, see [Content Encryption](#content-encryption).
 
-* **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [site configuration](../basics#site-configuration).
-* **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [site configuration](../basics#site-configuration).
-* **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [site configuration](../basics#site-configuration).
-* **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [site configuration](../basics#site-configuration).
-* **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [site configuration](../basics#site-configuration).
-* **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [site configuration](../basics#site-configuration).
-* **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [site configuration](../basics#site-configuration).
+* **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [theme configuration][theme-config].
+* **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [theme configuration][theme-config].
+* **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [theme configuration][theme-config].
+* **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [theme configuration][theme-config].
+* **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [theme configuration][theme-config].
+* **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [theme configuration][theme-config].
+* **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [theme configuration][theme-config].
 
 {{< admonition tip >}}
 {{< version 0.2.10 >}}
@@ -238,9 +242,9 @@ seo:
 
 By default, Hugo automatically takes the first 70 words of your content as its summary.
 
-You may customize the summary length by setting `summaryLength` in the [site configuration](../basics#site-configuration).
+You may customize the summary length by setting `summaryLength` in the site configuration.
 
-If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your [site configuration](../basics#site-configuration).
+If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your site configuration.
 
 ### Manual Summary Splitting
 
@@ -305,7 +309,7 @@ hugo new friends/index.md
 
 ### Offline
 
-{{< version 0.2.12 >}} See [PWA Support](/pwa-support/) for details.
+{{< version 0.2.12 >}} See [PWA Support][pwa-support] for details.
 
 Set `type: "offline"` in the front matter and set `enablePWA` in `config.toml`:
 
@@ -327,12 +331,24 @@ hugo new offline/index.md
 
 ## Content Encryption
 
-This part is shown in the [content encryption page](../encryption/).
+This part is shown in the [content encryption page][content-encryption].
 
 ## Markdown Syntax
 
-This part is shown in the [basic markdown syntax page](../../../guides/basic-markdown-syntax/) and the [extended markdown syntax page](../extended-markdown-syntax/).
+This part is shown in the [basic markdown syntax page][basic-markdown-syntax] and the [extended markdown syntax page][extended-markdown-syntax].
 
 ## Shortcodes
 
-This part is shown in the [shortcodes page](../shortcodes/).
+This part is shown in the [shortcodes page][shortcodes].
+
+[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[content-to-menu]: {{< relref path="/documentation/basics#content-to-menu" >}}
+[ruby-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#ruby" >}}
+[fraction-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#fraction" >}}
+[fontawesome-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#fontawesome" >}}
+[page-style]: {{< relref path="/documentation/advanced#page-style" >}}
+[pwa-support]: {{< relref path="/guides/pwa-support" >}}
+[content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[basic-markdown-syntax]: {{< relref path="/guides/basic-markdown-syntax" >}}
+[extended-markdown-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax" >}}
+[shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}

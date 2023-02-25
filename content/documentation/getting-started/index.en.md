@@ -27,18 +27,18 @@ menu:
       icon: fa-brands fa-readme
 ---
 
-The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/). Or if you already know Hugo, you can start directly with a template:
+The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners][getting-started]. Or if you already know Hugo, you can start directly with a template:
 
-- [A quick-start template base on Git submodule](https://github.com/hugo-fixit/hugo-fixit-blog-git)
-- [A quick-start template base on Hugo Modules](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+- [A quick-start template base on Git submodule][hugo-fixit-blog-git]
+- [A quick-start template base on Hugo Modules][hugo-fixit-blog-go]
 
 <!--more-->
 
 ## Prerequisites
 
-Thanks to the simplicity of Hugo, [Hugo](https://gohugo.io/) is the only dependency of this theme.
+Thanks to the simplicity of Hugo, [Hugo][hugo] is the only dependency of this theme.
 
-Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo extended edition(>= 0.89.0)](https://gohugo.io/getting-started/installing/) for your machine (**macOS**, **Linux**, **Windows**, **BSD**, and any machine that can run the Go compiler tool chain).
+Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo extended edition(>= 0.89.0)][hugo-installing] for your machine (**macOS**, **Linux**, **Windows**, **BSD**, and any machine that can run the Go compiler tool chain).
 
 ## Create a Site
 
@@ -55,7 +55,7 @@ cd my_website
 
 Initialize an empty Git repository in the current directory.
 
-Clone the [FixIt](https://github.com/hugo-fixit/FixIt) theme into the `themes` directory, adding it to your project as a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+Clone the [FixIt][fixit] theme into the `themes` directory, adding it to your project as a [Git submodule][git-submodule].
 
 ```bash
 git init
@@ -176,14 +176,33 @@ hugo
 A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
 
 {{< admonition tip "Deploy" >}}
-The website can be automatically published and hosted with [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/). Alternatively, you can use [AWS Amplify](https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/), [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/), [Render](https://gohugo.io/hosting-and-deployment/hosting-on-render/) and [more](https://gohugo.io/hosting-and-deployment/) ...
+The website can be automatically published and hosted with [Vercel][vercel] or [Netlify][netlify]. Alternatively, you can use [AWS Amplify][hosting-on-aws-amplify], [Github pages][hosting-on-github], [Render][hosting-on-render] and [more][hosting-and-deployment] ...
 
 Related guides:
 
-- [How to Deploy a Hugo Site with Vercel](https://vercel.com/guides/deploying-hugo-with-vercel)
-- [Hugo on Netlify](https://docs.netlify.com/integrations/frameworks/hugo/)
+- [How to Deploy a Hugo Site with Vercel][deploying-hugo-with-vercel]
+- [Hugo on Netlify][hugo-on-netlify]
+
+[vercel]: https://vercel.com/
+[netlify]: https://www.netlify.com/
+[hosting-on-aws-amplify]: https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/
+[hosting-on-github]: https://gohugo.io/hosting-and-deployment/hosting-on-github/
+[hosting-on-render]: https://gohugo.io/hosting-and-deployment/hosting-on-render/
+[hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
+[deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
+[hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 {{< /admonition >}}
 
 ## Ask for help
 
-All feedback is welcome! Head over to the [issues](https://github.com/hugo-fixit/FixIt/issues) or [discussions](https://github.com/hugo-fixit/FixIt/discussions) tracker.
+All feedback is welcome! Head over to the [issues][issues] or [discussions][discussions] tracker.
+
+[getting-started]: https://gohugo.io/getting-started/
+[hugo-fixit-blog-git]: https://github.com/hugo-fixit/hugo-fixit-blog-git
+[hugo-fixit-blog-go]: https://github.com/hugo-fixit/hugo-fixit-blog-go
+[hugo]: https://gohugo.io/
+[hugo-installing]: https://gohugo.io/getting-started/installing/
+[fixit]: https://github.com/hugo-fixit/FixIt
+[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[issues]: https://github.com/hugo-fixit/FixIt/issues
+[discussions]: https://github.com/hugo-fixit/FixIt/discussions

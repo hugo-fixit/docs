@@ -40,7 +40,7 @@ Hugo **extended** version is necessary for `style` shortcode.
 The `style` shortcode has two positional parameters.
 
 The **first** one is the custom style content,
-which supports nesting syntax in [:(fa-brands fa-sass fa-fw): SASS](https://sass-lang.com/documentation/style-rules/declarations#nesting)
+which supports nesting syntax in [:(fa-brands fa-sass fa-fw): SASS][sass]
 and `&` referring to this parent HTML element.
 
 And the **second** one is the tag name of the HTML element wrapping the content you want to change style, and whose default value is `div`.
@@ -63,9 +63,9 @@ This is a **right-aligned** paragraph.
 
 {{< version 0.2.0 >}}
 
-`link` shortcode is an alternative to [Markdown link syntax]({{< relref path="/guides/basic-markdown-syntax#links" >}}). `link` shortcode can provide some other features and can be used in code blocks.
+`link` shortcode is an alternative to [Markdown link syntax][md-link]. `link` shortcode can provide some other features and can be used in code blocks.
 
-{{< version 0.2.10 >}} The complete usage of [local resource references]({{< relref path="/documentation/content-management/introduction#contents-organization" >}}) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references][contents-organization] is supported.
 
 The `link` shortcode has the following named parameters:
 
@@ -171,9 +171,9 @@ The rendered output looks like this:
 
 {{< version 0.2.18 changed >}}
 
-`image` shortcode is an alternative to [`figure` shortcode]({{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}). `image` shortcode can take full advantage of the dependent library of [lightgallery](https://github.com/sachinchoolur/lightgallery).
+`image` shortcode is an alternative to [`figure` shortcode][sc-figure]. `image` shortcode can take full advantage of the dependent library of [lightgallery][lightgallery].
 
-{{< version 0.2.10 >}} The complete usage of [local resource references]({{< relref path="/documentation/content-management/introduction#contents-organization" >}}) is supported.
+{{< version 0.2.10 >}} The complete usage of [local resource references][contents-organization] is supported.
 
 The `image` shortcode has the following named parameters:
 
@@ -327,39 +327,39 @@ A **tip** banner
 
 ## mermaid
 
-The `mermaid` shortcode supports diagrams in Hugo with [Mermaid](https://mermaidjs.github.io/) library.
+The `mermaid` shortcode supports diagrams in Hugo with [Mermaid][mermaidjs] library.
 
-The full documentation is provided in [Extended Shortcode - mermaid](./../mermaid).
+The full documentation is provided in [Extended Shortcode - mermaid][sc-mermaid].
 
 ## echarts
 
-The `echarts` shortcode supports data visualization in Hugo with [ECharts](https://echarts.apache.org/) library.
+The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
 
-The full documentation is provided in [Extended Shortcode - echarts](./../echarts).
+The full documentation is provided in [Extended Shortcode - echarts][sc-echarts].
 
 ## mapbox
 
-The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js) library.
+The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.
 
-The full documentation is provided in [Extended Shortcode - mapbox](./../mapbox).
+The full documentation is provided in [Extended Shortcode - mapbox][sc-mapbox].
 
 ## music
 
-The `music` shortcode embeds a responsive music player based on [APlayer](https://github.com/MoePlayer/APlayer) and [MetingJS](https://github.com/metowolf/MetingJS) library.
+The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs] library.
 
-The full documentation is provided in [Extended Shortcode - music](./../music).
+The full documentation is provided in [Extended Shortcode - music][sc-music].
 
 ## bilibili
 
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 
-The full documentation is provided in [Extended Shortcode - bilibili](./../bilibili).
+The full documentation is provided in [Extended Shortcode - bilibili][sc-bilibili].
 
 ## typeit
 
-The `typeit` shortcode provides typing animation based on [TypeIt](https://typeitjs.com/).
+The `typeit` shortcode provides typing animation based on [TypeIt][typeitjs].
 
-The full documentation is provided in [Extended Shortcode - typeit](./../typeit).
+The full documentation is provided in [Extended Shortcode - typeit][sc-typeit].
 
 ## script
 
@@ -443,7 +443,7 @@ this is a center-quote shortcode example.
 
 You can use `fixit-encryptor` shortcode to encrypt partial content.
 
-The full documentation is provided in [Theme Documentation - Content Encryption](../../../../content-encryption#partial-encryption).
+The full documentation is provided in [Content Encryption][content-encryption].
 
 ## raw
 
@@ -506,3 +506,22 @@ Or
 The rendered output looks like this:
 
 {{< reward >}}
+
+[sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
+[md-link]: {{< relref path="/guides/basic-markdown-syntax#links" >}}
+[contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
+[sc-figure]: {{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}
+[lightgallery]: https://github.com/sachinchoolur/lightgallery
+[mermaidjs]: https://mermaidjs.github.io/
+[echarts]: https://echarts.apache.org/
+[mapbox]: https://docs.mapbox.com/mapbox-gl-js
+[aplayer]: https://github.com/MoePlayer/APlayer
+[metingjs]: https://github.com/metowolf/MetingJS
+[typeitjs]: https://typeitjs.com/
+[sc-mermaid]: {{< relref path="/documentation/content-management/shortcodes/extended/mermaid" >}}
+[sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
+[sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}
+[sc-music]: {{< relref path="/documentation/content-management/shortcodes/extended/music" >}}
+[sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
+[sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
+[content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}

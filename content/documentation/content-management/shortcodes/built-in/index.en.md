@@ -27,7 +27,7 @@ Hugo uses Markdown for its simple content format. However, there are a lot of th
 
 But this happens to be a bad idea. Everyone uses Markdown because it’s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.
 
-To avoid this limitations, Hugo created [shortcodes](https://gohugo.io/extras/shortcodes/).
+To avoid this limitations, Hugo created [shortcodes][shortcodes].
 A shortcode is a simple snippet that can generate reasonable HTML code and conforms to Markdown's design philosophy.
 
 Hugo ships with a set of predefined shortcodes that represent very common usage. These shortcodes are provided for author convenience and to keep your markdown content clean.
@@ -44,7 +44,7 @@ See detail [shortcodes/#use-shortcodes](https://gohugo.io/content-management/sho
 
 ## figure {#figure}
 
-[Documentation of `figure`](https://gohugo.io/content-management/shortcodes#figure)
+[Documentation of `figure`][figure]
 
 Example `figure` input:
 
@@ -69,7 +69,7 @@ The HTML looks like this:
 
 ## gist
 
-[Documentation of `gist`](https://gohugo.io/content-management/shortcodes#gist)
+[Documentation of `gist`][gist]
 
 Example `gist` input:
 
@@ -89,7 +89,7 @@ The HTML looks like this:
 
 ## highlight
 
-[Documentation of `highlight`](https://gohugo.io/content-management/shortcodes#highlight)
+[Documentation of `highlight`][highlight]
 
 Example `highlight` input:
 
@@ -121,7 +121,7 @@ The rendered output looks like this:
 
 ## param
 
-[Documentation of `param`](https://gohugo.io/content-management/shortcodes#param)
+[Documentation of `param`][param]
 
 Example `param` input:
 
@@ -135,11 +135,11 @@ The rendered output looks like this:
 
 ## ref and relref {#ref-and-relref}
 
-[Documentation of `ref` and `relref`](https://gohugo.io/content-management/shortcodes#ref-and-relref)
+[Documentation of `ref` and `relref`][ref-and-relref]
 
 ## tweet
 
-[Documentation of `tweet`](https://gohugo.io/content-management/shortcodes#tweet)
+[Documentation of `tweet`][tweet]
 
 Example `tweet` input:
 
@@ -153,7 +153,7 @@ The rendered output looks like this:
 
 ## vimeo
 
-[Documentation of `vimeo`](https://gohugo.io/content-management/shortcodes#vimeo)
+[Documentation of `vimeo`][vimeo]
 
 Example `vimeo` input:
 
@@ -167,7 +167,7 @@ The rendered output looks like this:
 
 ## youtube
 
-[Documentation of `youtube`](https://gohugo.io/content-management/shortcodes#youtube)
+[Documentation of `youtube`][youtube]
 
 Example `youtube` input:
 
@@ -178,3 +178,13 @@ Example `youtube` input:
 The rendered output looks like this:
 
 {{< youtube w7Ft2ymGmfc >}}
+
+[shortcodes]: https://gohugo.io/extras/shortcodes/
+[figure]: https://gohugo.io/content-management/shortcodes#figure
+[gist]: https://gohugo.io/content-management/shortcodes#gist
+[highlight]: https://gohugo.io/content-management/shortcodes#highlight
+[param]: https://gohugo.io/content-management/shortcodes#param
+[ref-and-relref]: https://gohugo.io/content-management/shortcodes#ref-and-relref
+[tweet]: https://gohugo.io/content-management/shortcodes#tweet
+[vimeo]: https://gohugo.io/content-management/shortcodes#vimeo
+[youtube]: https://gohugo.io/content-management/shortcodes#youtube

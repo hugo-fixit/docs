@@ -27,7 +27,7 @@ hiddenFromHomePage: true
 
 ## 什么是 PWA？
 
-[**PWA**（Progressive Web Apps，渐进式 Web 应用）](https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps) 运用现代的 Web API 以及传统的渐进式增强策略来创建跨平台 Web 应用程序。这些应用无处不在、功能丰富，使其具有与原生应用相同的用户体验优势。
+[**PWA**（Progressive Web Apps，渐进式 Web 应用）][pwas] 运用现代的 Web API 以及传统的渐进式增强策略来创建跨平台 Web 应用程序。这些应用无处不在、功能丰富，使其具有与原生应用相同的用户体验优势。
 
 ## 为什么要配置 PWA？
 
@@ -62,7 +62,7 @@ hiddenFromHomePage: true
 
     你的 PWA 的图标。你可以将网站的 favicon 作为图标。
 
-您还可以在 `site.webmanifest` 中设置其他可选值，查看这篇 [文档](https://developer.mozilla.org/zh-CN/docs/Web/Manifest) 来了解更多。
+您还可以在 `site.webmanifest` 中设置其他可选值，查看这篇 [文档][manifest] 来了解更多。
 
 这是一份示例 `site.webmanifest` 文件：
 
@@ -143,4 +143,10 @@ type: "offline"
 
 大功告成！你已成功将你的静态网站配置为了一个 PWA 🎉
 
-如果你在配置过程中有任何问题，你可以通过浏览器调试工具中的 `Console` 与 `Application` 面板来进行调试。你也可以用 [PWA Builder](https://www.pwabuilder.com/) 来检查你的网站以获得更多信息。你可以创建一个 [discussion](https://github.com/hugo-fixit/FixIt/discussions) 来获得社区帮助或者提交 [issue](https://github.com/hugo-fixit/FixIt/issues) 来报告你遇到的任何 bug。
+如果你在配置过程中有任何问题，你可以通过浏览器调试工具中的 `Console` 与 `Application` 面板来进行调试。你也可以用 [PWA Builder][pwabuilder] 来检查你的网站以获得更多信息。你可以创建一个 [discussion][discussions] 来获得社区帮助或者提交 [issue][issues] 来报告你遇到的任何 bug。
+
+[pwas]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+[manifest]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[pwabuilder]: https://www.pwabuilder.com/
+[discussions]: https://github.com/hugo-fixit/FixIt/discussions
+[issues]: https://github.com/hugo-fixit/FixIt/issues
