@@ -14,6 +14,7 @@ resources:
 
 tags:
   - Shortcodes
+  - Content
 categories:
   - Documentation
 

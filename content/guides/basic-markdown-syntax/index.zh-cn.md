@@ -9,8 +9,10 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - Markdown
+  - Basics
+  - Content
   - HTML
+  - Markdown
 categories:
   - Guides
 lightgallery: true

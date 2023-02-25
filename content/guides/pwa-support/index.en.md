@@ -7,6 +7,7 @@ aliases:
 description: Guide to setup PWA in FixIt.
 tags:
   - PWA
+  - Advanced
 categories:
   - Guides
   - Documentation

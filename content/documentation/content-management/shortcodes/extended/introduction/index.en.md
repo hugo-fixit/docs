@@ -15,6 +15,8 @@ resources:
     src: featured-image-preview.jpg
 tags:
   - Shortcodes
+  - Content
+  - Advanced
 categories:
   - Documentation
 lightgallery: true

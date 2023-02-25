@@ -11,6 +11,7 @@ description: Guide to emoji usage in Hugo and FixIt.
 tags:
   - emoji
   - Markdown
+  - Content
 categories:
   - Guides
 twemoji: false

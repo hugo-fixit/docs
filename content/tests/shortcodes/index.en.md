@@ -6,6 +6,7 @@ type: posts
 tags:
   - Tests
   - Shortcodes
+  - Content
 categories:
   - Tests
 hiddenFromHomePage: true

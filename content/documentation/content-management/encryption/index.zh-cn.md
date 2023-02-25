@@ -18,7 +18,9 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
+  - Content
   - Encryption
+  - Advanced
 categories:
   - Documentation
 reward: true

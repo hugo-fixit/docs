@@ -14,6 +14,7 @@ resources:
     src: featured-image.jpg
 tags:
   - Shortcodes
+  - Content
 categories:
   - Documentation
 hiddenFromHomePage: true

@@ -13,8 +13,9 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - Installation
   - Configuration
+  - Installation
+  - Basics
 categories:
   - Documentation
 lightgallery: true

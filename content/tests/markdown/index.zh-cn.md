@@ -5,8 +5,8 @@ description: Test for Markdown rendering
 type: posts
 tags:
   - Tests
-  - Content
   - Markdown
+  - Content
 categories:
   - Tests
 lightgallery: true

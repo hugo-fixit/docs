@@ -13,8 +13,9 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - Installation
   - Configuration
+  - Installation
+  - Basics
 categories:
   - Documentation
 lightgallery: true
@@ -24,7 +25,8 @@ toc:
   auto: false
 menu:
   main:
-    title: Discover the basics of the Hugo - FixIt theme and the core concepts behind it.
+    title: Discover the basics of the Hugo - FixIt theme and the core concepts
+      behind it.
     parent: documentation
     weight: 2
     params:

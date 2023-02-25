@@ -13,6 +13,8 @@ resources:
     src: featured-image.webp
 tags:
   - Shortcodes
+  - Content
+  - Basics
 categories:
   - Documentation
 lightgallery: true

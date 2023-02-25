@@ -12,7 +12,7 @@ resources:
     src: featured-image.png
 tags:
   - Advanced
-  - Configuration
+  - Customization
 categories:
   - Documentation
 reward: true

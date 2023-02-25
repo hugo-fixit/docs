@@ -12,6 +12,7 @@ resources:
     src: featured-image.png
 tags:
   - Installation
+  - Basics
 categories:
   - Documentation
 lightgallery: true

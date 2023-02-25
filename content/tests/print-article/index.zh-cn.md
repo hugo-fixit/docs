@@ -6,7 +6,7 @@ description: 这是一篇测试 FixIt 主题在打印视图表现的测试文章
 type: posts
 tags:
   - Tests
-  - print
+  - Print
   - JavaScript
   - ES6
 categories:

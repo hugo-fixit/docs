@@ -7,6 +7,7 @@ aliases:
 description: 在 FixIt 中设置 PWA 的指南。
 tags:
   - PWA
+  - Advanced
 categories:
   - Guides
   - Documentation

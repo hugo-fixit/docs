@@ -11,7 +11,9 @@ resources:
     src: featured-image.webp
 tags:
   - Markdown
+  - Content
   - HTML
+  - Advanced
 categories:
   - Documentation
   - Guides

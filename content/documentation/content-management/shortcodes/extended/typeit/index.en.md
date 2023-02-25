@@ -13,6 +13,7 @@ resources:
     src: featured-image.png
 tags:
   - Shortcodes
+  - Content
 categories:
   - Documentation
 hiddenFromHomePage: true
