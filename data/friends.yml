@@ -22,6 +22,11 @@
   url: https://ayang.ink
   description: Ayang's blog
 
+- nickname: haiyux
+  avatar: https://haiyux.cc/avatar.png
+  url: https://haiyux.cc
+  description: haiyux's blog
+
 - nickname: hiifong
   avatar: https://i.hiifong.cc/images/avatar.png
   url: https://i.hiifong.cc
@@ -36,11 +41,6 @@
   avatar: https://wlanxww.com/images/avatar.jpeg
   url: https://wlanxww.com
   description: wlanxww's blog
-
-- nickname: haiyux
-  avatar: https://haiyux.cc/avatar.png
-  url: https://haiyux.cc
-  description: haiyux's blog
 
 - nickname: ADD
   avatar: /fixit.min.svg
