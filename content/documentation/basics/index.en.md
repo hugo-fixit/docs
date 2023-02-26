@@ -37,7 +37,7 @@ Discover the basics of the Hugo - **FixIt** theme and the core concepts behind i
 
 <!--more-->
 
-## Installation ways
+## Installation ways {#install-theme}
 
 {{< link "https://github.com/hugo-fixit/FixIt" "The repository of FixIt theme" "" true >}}
 

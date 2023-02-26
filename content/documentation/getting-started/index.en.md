@@ -28,12 +28,14 @@ menu:
       icon: fa-brands fa-readme
 ---
 
+Learn to create a Hugo **FixIt** site in minutes.
+
+<!--more-->
+
 The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners][getting-started]. Or if you already know Hugo, you can start directly with a template:
 
 - [A quick-start template base on Git submodule][hugo-fixit-blog-git]
 - [A quick-start template base on Hugo Modules][hugo-fixit-blog-go]
-
-<!--more-->
 
 ## Prerequisites
 

@@ -36,7 +36,7 @@ menu:
 <!--more-->
 
 
-## 安装方式
+## 安装方式 {#install-theme}
 
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题的仓库" "" true >}}
 

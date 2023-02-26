@@ -28,12 +28,14 @@ menu:
       icon: fa-brands fa-readme
 ---
 
+学习在几分钟内创建一个 Hugo **FixIt** 站点。
+
+<!--more-->
+
 以下步骤可帮助您初始化新网站。如果您根本不了解 Hugo，我们强烈建议您通过阅读此 [快速入门文档](https://gohugo.io/getting-started/) 进一步了解它。或者如果你已经了解 Hugo，你也可以从一个模板直接开始：
 
 - [基于 Git 子模块的快速入门模板](https://github.com/hugo-fixit/hugo-fixit-blog-git)
 - [基于 Hugo 模块的快速入门模板](https://github.com/hugo-fixit/hugo-fixit-blog-go)
-
-<!--more-->
 
 ## 准备
 
