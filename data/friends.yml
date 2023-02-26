@@ -37,6 +37,11 @@
   url: https://wlanxww.com
   description: wlanxww's blog
 
+- nickname: haiyux
+  avatar: https://haiyux.cc/avatar.png
+  url: https://haiyux.cc
+  description: haiyux's blog
+
 - nickname: ADD
   avatar: /fixit.min.svg
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
