@@ -10,13 +10,12 @@ resources:
   - name: featured-image
     src: featured-image.webp
 tags:
+  - Markdown
   - Content
   - HTML
-  - Markdown
   - Advanced
 categories:
   - Documentation
-  - Guides
 reward: true
 math: true
 hiddenFromHomePage: true

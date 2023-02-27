@@ -9,16 +9,16 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - Basics
+  - Markdown
   - Content
   - HTML
-  - Markdown
+  - Basics
 categories:
   - Guides
 lightgallery: true
 repost:
   enable: true
-  url: https://hugoloveit.com/zh-cn/basic-markdown-syntax/
+  url: http://learn.getgrav.org/content/markdown
 hiddenFromHomePage: true
 ---
 
@@ -29,7 +29,7 @@ hiddenFromHomePage: true
 {{< admonition >}}
 这篇文章借鉴了一篇很棒的 [来自 Grav 的文章](http://learn.getgrav.org/content/markdown)。
 
-如果你想了解 **FixIt** 主题的扩展 Markdown 语法，请阅读 [扩展 Markdown 语法页面](../theme-documentation-content#extended-markdown-syntax)。
+如果你想了解 **FixIt** 主题的扩展 Markdown 语法，请阅读 [扩展 Markdown 语法页面]({{< relref "/documentation/content-management/markdown-syntax/extended" >}})。
 {{< /admonition >}}
 
 事实上，编写 Web 内容很麻烦。[WYSIWYG]^(所见即所得) 编辑器帮助减轻了这一任务。但通常会导致代码太糟，或更糟糕的是，网页也会很丑。
@@ -683,6 +683,32 @@ grunt.initConfig({
 <a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
 ```
 
+### 引用式链接
+
+引用式链接是一种特殊的链接，它使 URL 在 Markdown 中更易于显示和阅读。
+
+引用式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。
+
+```markdown
+[text][id]
+⋮
+[id]: http://example.org/ "title"
+```
+
+例如：
+
+```markdown
+[FixIt][fixit-repo]
+
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
+```
+
+呈现的输出效果如下：
+
+[FixIt][fixit-repo]
+
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
+
 ### 定位标记
 
 定位标记使你可以跳至同一页面上的指定锚点。例如，每个章节：
@@ -757,7 +783,7 @@ Content for chapter one.
 
 ![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-像链接一样，图片也具有脚注样式的语法：
+像链接一样，图片也具有引用式的语法：
 
 ```markdown
 ![Alt text][id]

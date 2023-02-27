@@ -16,7 +16,6 @@ tags:
   - Advanced
 categories:
   - Documentation
-  - Guides
 reward: true
 math: true
 hiddenFromHomePage: true
@@ -64,12 +63,12 @@ which helps you write raw mathematical formula content.
 Example `raw` input:
 
 ```markdown
-{{</*/* raw */*/>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</*/* /raw */*/>}}
+{?{}{?{}< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){?{}{?{}< /raw >}}
 
-{{</*/* raw */*/>}}
+{?{}{?{}< raw >}}
 Block Formula:
 \[ a=b+c \\ d+e=f \]
-{{</*/* /raw */*/>}}
+{?{}{?{}< /raw >}}
 ```
 
 The rendered output looks like this:

@@ -510,7 +510,7 @@ The rendered output looks like this:
 {{< reward >}}
 
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
-[md-link]: {{< relref path="/guides/basic-markdown-syntax#links" >}}
+[md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
 [sc-figure]: {{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}
 [lightgallery]: https://github.com/sachinchoolur/lightgallery

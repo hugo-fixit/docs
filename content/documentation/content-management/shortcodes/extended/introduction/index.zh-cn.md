@@ -508,7 +508,7 @@ this is a center-quote shortcode example.
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
 
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
-[md-link]: {{< relref path="/guides/basic-markdown-syntax#links" >}}
+[md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
 [sc-figure]: {{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}
 [lightgallery]: https://github.com/sachinchoolur/lightgallery

@@ -9,16 +9,16 @@ resources:
   - name: featured-image
     src: featured-image.png
 tags:
-  - Basics
+  - Markdown
   - Content
   - HTML
-  - Markdown
+  - Basics
 categories:
   - Guides
 lightgallery: true
 repost:
   enable: true
-  url: https://hugoloveit.com/basic-markdown-syntax/
+  url: http://learn.getgrav.org/content/markdown
 hiddenFromHomePage: true
 ---
 
@@ -29,7 +29,7 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 {{< admonition >}}
 This article is a shameful copy of the great [Grav original page](http://learn.getgrav.org/content/markdown).
 
-If you want to know about the extended Markdown syntax of **FixIt** theme, please read [extended Markdown syntax page](../theme-documentation-content#extended-markdown-syntax).
+If you want to know about the extended Markdown syntax of **FixIt** theme, please read [extended Markdown syntax page]({{< relref "/documentation/content-management/markdown-syntax/extended" >}}).
 {{< /admonition >}}
 
 Let's face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.
@@ -681,6 +681,32 @@ The HTML looks like this:
 <a href="https://github.com/upstage/" title="Visit Upstage!">Upstage</a>
 ```
 
+### Reference-style link
+
+Reference-style links are special links that make URLs easier to display and read in Markdown.
+
+Reference-style links are broken into two parts: a part kept inline with the text and a part stored elsewhere in the file to make the text easier to read.
+
+```markdown
+[text][id]
+⋮
+[id]: http://example.org/ "title"
+```
+
+For example:
+
+```markdown
+[FixIt][fixit-repo]
+
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
+```
+
+The rendered output looks like this:
+
+[FixIt][fixit-repo]
+
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
+
 ### Named Anchors
 
 Named anchors enable you to jump to the specified anchor point on the same page. For example, each of these chapters:
@@ -750,7 +776,7 @@ or:
 
 ![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-Like links, images also have a footnote style syntax:
+Like links, images also have a reference-style syntax:
 
 ```markdown
 ![Alt text][id]
@@ -767,5 +793,5 @@ With a reference later in the document defining the URL location:
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
 {{< admonition tip >}}
-**FixIt** theme has [special shortcode for image](../theme-documentation-extended-shortcodes#image), which provides more features.
+**FixIt** theme has [special shortcode for image](./../theme-documentation-extended-shortcodes#image), which provides more features.
 {{< /admonition >}}

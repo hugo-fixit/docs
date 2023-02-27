@@ -343,12 +343,12 @@ This part is shown in the [shortcodes page][shortcodes].
 
 [theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/basics#content-to-menu" >}}
-[ruby-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#ruby" >}}
-[fraction-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#fraction" >}}
-[fontawesome-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax#fontawesome" >}}
+[ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
+[fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
+[fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
 [page-style]: {{< relref path="/documentation/advanced#page-style" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
-[basic-markdown-syntax]: {{< relref path="/guides/basic-markdown-syntax" >}}
-[extended-markdown-syntax]: {{< relref path="/documentation/content-management/extended-markdown-syntax" >}}
+[basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
+[extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
