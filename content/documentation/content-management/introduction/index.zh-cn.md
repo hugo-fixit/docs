@@ -14,6 +14,7 @@ resources:
     src: featured-image.jpg
 tags:
   - Content
+  - Basics
 categories:
   - Documentation
 lightgallery: true
@@ -97,12 +98,12 @@ menu:
 * **hiddenFromSearch**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章将不会显示在搜索结果中
 * **twemoji**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 twemoji
 * **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
-* **ruby**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法](#ruby)
-* **fraction**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [分数扩展语法](#fraction)
-* **fontawesome**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法](#fontawesome)
+* **ruby**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]
+* **fraction**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [分数扩展语法][fraction-syntax]
+* **fontawesome**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法][fontawesome-syntax]
 * **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接
 * **rssFullText**: {{< version 0.2.4 >}} 如果设为 `true`, 在 RSS 中将会显示全文内容
-* **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度](../basics#page-style)
+* **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
 * **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
 
 * **toc**: {{< version 0.2.9 changed >}} 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
@@ -285,7 +286,7 @@ seo:
 
 {{< version 0.2.12 >}}
 
-在前置参数中设置 `type: "friends"`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
+在前置参数中设置 `type: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
 
 ```yml
 # 朋友/站点信息例子
@@ -309,7 +310,7 @@ hugo new friends/index.md
 
 {{< version 0.2.12 >}} 详见 [PWA 支持][pwa-support]
 
-在前置参数中设置 `type: "offline"`，并在 `config.toml` 中开启 `enablePWA`：
+在前置参数中设置 `type: offline`，并在 `config.toml` 中开启 `enablePWA`：
 
 ```toml
 [params]
