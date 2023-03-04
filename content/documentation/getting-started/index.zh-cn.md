@@ -179,23 +179,9 @@ hugo
 
 会生成一个 `public` 目录，其中包含你网站的所有静态内容和资源。现在可以将其部署在任何 Web 服务器上。
 
-{{< admonition tip "部署" >}}
-网站内容可以通过 [Vercel][vercel]、[Netlify][netlify] 自动发布和托管，或者，您可以使用 [AWS Amplify][hosting-on-aws-amplify], [Github pages][hosting-on-github], [Render][hosting-on-render] 以及 [更多][hosting-and-deployment]……
+我们的大多数用户使用 CI/CD 工作流程部署他们的网站，通过推送[^1]到他们的 GitHub 或 GitLab 存储库会触发构建和部署。流行的提供商包括 [Vercel][vercel][^2]、[Netlify][netlify][^3]、[AWS Amplify][amplify]、[CloudCannon][cloudcannon]、[Cloudflare Pages][cf-pages]、 [GitHub pages][gh-pages] 和 [GitLab pages][gl-pages]。
 
-相关指南：
-
-- [如何使用 Vercel 部署 Hugo 站点][deploying-hugo-with-vercel]
-- [在 Netlify 上部署 Hugo][hugo-on-netlify]
-
-[vercel]: https://vercel.com/
-[netlify]: https://www.netlify.com/
-[hosting-on-aws-amplify]: https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/
-[hosting-on-github]: https://gohugo.io/hosting-and-deployment/hosting-on-github/
-[hosting-on-render]: https://gohugo.io/hosting-and-deployment/hosting-on-render/
-[hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
-[deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
-[hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
-{{< /admonition >}}
+在 [托管和部署][hosting-and-deployment] 部分了解更多信息。
 
 ## 寻求帮助
 
@@ -208,5 +194,19 @@ hugo
 [hugo-installing]: https://gohugo.io/getting-started/installing/
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[vercel]: https://vercel.com/
+[netlify]: https://www.netlify.com/
+[amplify]: https://aws.amazon.com/cn/amplify/
+[cloudcannon]: https://cloudcannon.com/
+[cf-pages]: https://pages.cloudflare.com/
+[gh-pages]: https://pages.github.com/
+[gl-pages]: https://docs.gitlab.com/ee/user/project/pages/
+[deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
+[hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
+[hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [discussions]: https://github.com/hugo-fixit/FixIt/discussions
+
+[^1]: Git 存储库包含整个项目目录，通常不包括 public 目录，因为站点是在推送后构建的。
+[^2]: [如何使用 Vercel 部署 Hugo 站点][deploying-hugo-with-vercel]
+[^3]: [在 Netlify 上部署 Hugo][hugo-on-netlify]

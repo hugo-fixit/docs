@@ -178,23 +178,9 @@ hugo
 
 A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
 
-{{< admonition tip "Deploy" >}}
-The website can be automatically published and hosted with [Vercel][vercel] or [Netlify][netlify]. Alternatively, you can use [AWS Amplify][hosting-on-aws-amplify], [Github pages][hosting-on-github], [Render][hosting-on-render] and [more][hosting-and-deployment] ...
+Most of our users deploy their sites using a CI/CD workflow, where a push[^1] to their GitHub or GitLab repository triggers a build and deployment. Popular providers include [Vercel][vercel][^2], [Netlify][netlify][^3], [AWS Amplify][amplify], [CloudCannon][cloudcannon], [Cloudflare Pages][cf-pages], [GitHub Pages][gh-pages] and [GitLab Pages][gl-pages].
 
-Related guides:
-
-- [How to Deploy a Hugo Site with Vercel][deploying-hugo-with-vercel]
-- [Hugo on Netlify][hugo-on-netlify]
-
-[vercel]: https://vercel.com/
-[netlify]: https://www.netlify.com/
-[hosting-on-aws-amplify]: https://gohugo.io/hosting-and-deployment/hosting-on-aws-amplify/
-[hosting-on-github]: https://gohugo.io/hosting-and-deployment/hosting-on-github/
-[hosting-on-render]: https://gohugo.io/hosting-and-deployment/hosting-on-render/
-[hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
-[deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
-[hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
-{{< /admonition >}}
+Learn more in the [hosting and deployment][hosting-and-deployment] section.
 
 ## Ask for help
 
@@ -207,5 +193,19 @@ All feedback is welcome! Head over to the [issues][issues] or [discussions][disc
 [hugo-installing]: https://gohugo.io/getting-started/installing/
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[vercel]: https://vercel.com/
+[netlify]: https://www.netlify.com/
+[amplify]: https://aws.amazon.com/amplify/
+[cloudcannon]: https://cloudcannon.com/
+[cf-pages]: https://pages.cloudflare.com/
+[gh-pages]: https://pages.github.com/
+[gl-pages]: https://docs.gitlab.com/ee/user/project/pages/
+[deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
+[hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
+[hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [discussions]: https://github.com/hugo-fixit/FixIt/discussions
+
+[^1]: The Git repository contains the entire project directory, typically excluding the public directory because the site is built after the push.
+[^2]: [How to Deploy a Hugo Site with Vercel][deploying-hugo-with-vercel]
+[^3]: [Hugo on Netlify][hugo-on-netlify]
