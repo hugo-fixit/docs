@@ -144,8 +144,45 @@ The directory including the custom script file named `custom.js` is `assets/js` 
 
 If the script file `assets/js/custom.js` exists, it will be executed at the end of each post and page.
 
+## Templates Customization
+
+Hugo allows you to modify the theme by overriding the theme templates, for example: you can create `layouts/404.html` file to override `themes/FixIt/layouts/404.html`, so as to meet the needs of custom 404 page template of FixIt theme.
+
+However, for most of the templates, FixIt theme generally doesn't recommend you do this, as it may make theme upgrades difficult in the future.
+
+In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens several empty templates in commonly used locations for user customization, see `params.customFilePath` parameter in [theme configuration][theme-config].
+
+For example, the FixIt theme documentation site customizes the profile section of the home page by creating `layouts/partials/custom/profile.html`.
+
+First enable custom file path parameter:
+
+```toml
+[params.customFilePath]
+  profile = "custom/profile.html"
+```
+
+then, customize the template:
+
+```go-html-template
+<div class="profile-custom">
+  {{- if .Site.BuildDrafts -}}
+    <a href="https://fixit.lruihao.cn" target="_blank" rel="external" title="Go to Production Environment">
+      <img src="https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=Production&logo=vercel" alt="Production environment">
+    </a>
+  {{- else -}}
+    <a href="https://pre.fixit.lruihao.cn" target="_blank" rel="external" title="Go to Preview Environment">
+      <img src="https://img.shields.io/github/deployments/hugo-fixit/FixIt/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
+    </a>
+  {{- end -}}
+  <a href="https://demo.fixit.lruihao.cn" target="_blank" rel="external" title="FixIt Demo">
+    <img src="https://img.shields.io/badge/Demo-orange" alt="FixIt Demo">
+  </a>
+</div>
+```
+
 ## PWA Support
 
 This part is shown in the [pwa support page][pwa-support].
 
+[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
