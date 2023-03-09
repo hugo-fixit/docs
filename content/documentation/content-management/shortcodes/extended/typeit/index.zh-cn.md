@@ -25,6 +25,28 @@ hiddenFromHomePage: true
 
 只需将你需要打字动画的内容插入 `typeit` shortcode 中即可。
 
+`typeit` shortcode 有以下命名参数：
+
+* **tag** *[可选]*
+
+    内容容器的 HTML 标签。
+
+* **code** *[可选]*
+
+    指定代码内容语言类型，可以实习语法高亮。
+
+* **code-link** *[可选]*
+
+    是否解析代码内容中的 Markdown 链接，默认：`false`。
+
+* **group** *[可选]*
+
+    内容分组，相同分组的内容将按顺序开始打字动画。
+
+* **loop** *[可选]*
+
+    内容是否会在打字动画完成后继续循环。
+
 ## 简单内容 {#simple-content}
 
 允许使用 `Markdown` 格式的简单内容，并且 **不包含** 富文本的块内容，例如图像等等……

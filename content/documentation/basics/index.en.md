@@ -765,6 +765,8 @@ Please open the code block below to view the complete `config.toml` sample confi
     cursorChar = "|"
     # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
     duration = -1
+    # {{< version 0.2.18 >}} whether your strings will continuously loop after completing
+    loop = false
 
   # {{< version 0.2.15 >}} Mermaid config
   [params.mermaid]

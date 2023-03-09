@@ -765,6 +765,8 @@ menu:
     cursorChar = "|"
     # 打字结束之后光标的持续时间（单位是毫秒，"-1" 代表无限大）
     duration = -1
+    # {{< version 0.2.18 >}} 打字完成后是否会连续循环
+    loop = false
 
   # {{< version 0.2.15 >}} Mermaid 配置
   [params.mermaid]

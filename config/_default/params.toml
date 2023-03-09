@@ -755,6 +755,9 @@ disableThemeInject = false
   # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
   # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
   duration = -1
+  # FixIt 0.2.18 | NEW whether your strings will continuously loop after completing
+  # FixIt 0.2.18 | 新增 打字完成后是否会连续循环
+  loop = false
 
 # Mermaid config since v0.2.15
 # Mermaid 配置 since v0.2.15
