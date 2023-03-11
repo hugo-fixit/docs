@@ -62,12 +62,12 @@ hiddenFromHomePage: true
 一个 `raw` 示例：
 
 ```markdown
-{{</*/* raw */*/>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</*/* /raw */*/>}}
+{?{}{?{}< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){?{}{?{}< /raw >}}
 
-{{</*/* raw */*/>}}
+{?{}{?{}< raw >}}
 公式块：
 \[ a=b+c \\ d+e=f \]
-{{</*/* /raw */*/>}}
+{?{}{?{}< /raw >}}
 ```
 
 呈现的输出效果如下：
