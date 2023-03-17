@@ -16,6 +16,7 @@ tags:
 categories:
   - Documentation
 lightgallery: true
+reward: true
 toc:
   auto: false
 menu:

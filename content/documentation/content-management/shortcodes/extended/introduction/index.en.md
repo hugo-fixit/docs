@@ -500,14 +500,12 @@ The `reward` shortcode has the following named parameters:
 Example `reward` input:
 
 ```go-html-template
-{{</* reward */>}}
-Or
 {{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< reward >}}
+{{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" >}}
 
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
