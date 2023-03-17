@@ -31,6 +31,50 @@
     icon = "fa-solid fa-flask text-success"
 
 [[main]]
+  identifier = "releases"
+  name = "版本发布"
+  url = "https://github.com/hugo-fixit/FixIt/releases"
+  weight = 10
+  [main.params]
+    type = "desktop"
+[[main]]
+  identifier = "v0.2.17"
+  name = "v0.2.17"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
+  url = "https://fixit-pcwilecsu-x-cell.vercel.app"
+  parent = "releases"
+[[main]]
+  identifier = "v0.2.16"
+  name = "v0.2.16"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
+  url = "https://fixit-jir7e7kzt-x-cell.vercel.app"
+  parent = "releases"
+[[main]]
+  identifier = "v0.2.15"
+  name = "v0.2.15"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
+  url = "https://fixit-hvd1rg4ba-x-cell.vercel.app"
+  parent = "releases"
+[[main]]
+  identifier = "v0.2.14"
+  name = "v0.2.14"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
+  url = "https://fixit-p1tg6tsml-lruihao.vercel.app"
+  parent = "releases"
+[[main]]
+  identifier = "v0.2.13"
+  name = "v0.2.13"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
+  url = "https://fixit-bbh5g5x90-lruihao.vercel.app"
+  parent = "releases"
+[[main]]
+  identifier = "v0.2.12"
+  name = "v0.2.12"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
+  url = "https://fixit-e9lpwfkbp-lruihao.vercel.app"
+  parent = "releases"
+
+[[main]]
   identifier = "about"
   name = "关于"
   url = "about/"
