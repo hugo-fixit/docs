@@ -140,6 +140,16 @@ math: true
 
 </details>
 
+### Sponsor
+
+Giving me a Star 🌟 is already the greatest encouragement and support for me.\
+If you enjoy the theme, please consider buying me a coffee ☕️.
+
+{{< details "Thanks all! ❤️" >}}
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love ❤️" >}}
+{{< sponsor-log >}}
+{{< /details >}}
+
 ### License
 
 FixIt is licensed under the **MIT** license. Check the [LICENSE file](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE) for details.

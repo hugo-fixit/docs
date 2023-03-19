@@ -12,15 +12,4 @@
 
 FixIt theme documentation is mainly divided into: [Documentation](https://fixit.lruihao.cn/documentation/), [FAQ](https://fixit.lruihao.cn/faq/) , [Guides](https://fixit.lruihao.cn/guides/) three major sections, welcome everyone to initiate a PR to improve the theme documentation.
 
-Start previewing the documentation site locally:
-
-```bash
-# download docs
-git clone https://github.com/hugo-fixit/docs.git --depth=1
-# download theme
-git clone https://github.com/hugo-fixit/FixIt.git docs/themes/FixIt --depth=1
-
-cd docs
-# start preview
-hugo server --themesDir="themes" -D --disableFastRender --navigateToChanged --ignoreCache
-```
+Start previewing the documentation site locally, see [CONTRIBUTING](https://github.com/hugo-fixit/FixIt/blob/master/CONTRIBUTING.md) for details.

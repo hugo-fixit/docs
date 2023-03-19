@@ -12,15 +12,4 @@
 
 FixIt 主题文档主要分为：[文档](https://fixit.lruihao.cn/zh-cn/documentation/)、[FAQ](https://fixit.lruihao.cn/zh-cn/faq/)、[教程](https://fixit.lruihao.cn/zh-cn/guides/)三个大的板块，欢迎大家发起 PR 完善主题文档。
 
-本地启动预览该文档：
-
-```bash
-# 下载文档
-git clone https://github.com/hugo-fixit/docs.git --depth=1
-# 下载主题
-git clone  https://github.com/hugo-fixit/FixIt.git docs/themes/FixIt --depth=1
-
-cd docs
-# 启动预览
-hugo server --themesDir="themes" -D --disableFastRender --navigateToChanged --ignoreCache
-```
+本地启动预览该文档，详见 [CONTRIBUTING](https://github.com/hugo-fixit/FixIt/blob/master/CONTRIBUTING.md)。

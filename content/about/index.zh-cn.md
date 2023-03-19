@@ -140,6 +140,16 @@ math: true
 
 </details>
 
+### 赞助支持
+
+给我一个 Star 🌟 已经是对我最大的鼓励和支持了。\
+如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。
+
+{{< details "谢谢大家！❤️" >}}
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="❤️ 为爱发电 ⚡️" >}}
+{{< sponsor-log >}}
+{{< /details >}}
+
 ### 许可协议
 
 FixIt 根据 **MIT** 许可协议授权。 更多信息请查看 [LICENSE 文件](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)。
