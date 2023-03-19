@@ -1,0 +1,3 @@
+[submodule "themes/shortcode-sponsor-log"]
+	path = themes/shortcode-sponsor-log
+	url = https://github.com/Lruihao/hugo-shortcode-sponsor-log.git
