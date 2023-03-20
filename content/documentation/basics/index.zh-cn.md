@@ -727,6 +727,7 @@ menu:
         category = ""
         categoryId = ""
         mapping = ""
+        strict = "0" # {{< version 0.2.18 >}}
         term = ""
         reactionsEnabled = "1"
         emitMetadata = "0"

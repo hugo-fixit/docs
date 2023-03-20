@@ -726,6 +726,7 @@ Please open the code block below to view the complete `config.toml` sample confi
         category = ""
         categoryId = ""
         mapping = ""
+        strict = "0" # {{< version 0.2.18 >}}
         term = ""
         reactionsEnabled = "1"
         emitMetadata = "0"

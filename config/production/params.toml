@@ -143,6 +143,7 @@
     category = "General"
     categoryId = "DIC_kwDOGihPtc4CApHX"
     mapping = "title"
+    strict = "0" # FixIt NEW | 0.2.18
     term = ""
     reactionsEnabled = "1"
     emitMetadata = "0"
