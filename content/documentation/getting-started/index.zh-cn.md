@@ -42,7 +42,7 @@ menu:
 
 由于 Hugo 提供的便利性，[Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖。
 
-只需为您的机器（**macOS**、**Linux**、**Windows**、**BSD**，以及任何可以运行 Go 编译器工具链的机器）安装最新版本的 [:(fa-regular fa-file-archive fa-fw): Hugo 扩展版 (>=0.89.0)](https://gohugo.io/getting-started/installing/) 即可。
+只需为您的机器（**macOS**、**Linux**、**Windows**、**BSD**，以及任何可以运行 Go 编译器工具链的机器）安装最新版本的 [:(fa-regular fa-file-archive fa-fw): Hugo 扩展版 (>=0.93.0)](https://gohugo.io/getting-started/installing/) 即可。
 
 ## 创建网站
 

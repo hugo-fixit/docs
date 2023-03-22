@@ -29,10 +29,6 @@ The `mermaid` shortcode supports diagrams in Hugo with [Mermaid](https://mermaid
 
 Just insert your mermaid code in the `mermaid` shortcode and that’s it.
 
-{{< admonition tip >}}
-You can configure mermaid themes globally in `config.toml` via the `params.mermaid` parameter
-{{< /admonition >}}
-
 ## Flowchart {#flowchart}
 
 Example **flowchart** `mermaid` input:
@@ -364,3 +360,46 @@ type: simulation
 
 test_entity - satisfies -> test_req
 {{< /mermaid >}}
+
+## Mermaid Themes
+
+Available themes are as follows:
+
+1. [**default**][theme-default] - This is the default theme for all diagrams.
+2. [**neutral**][theme-neutral] - This theme is great for black and white documents that will be printed.
+3. [**dark**][theme-dark] - This theme goes well with dark-colored elements or dark-mode.
+4. [**forest**][theme-forest] - This theme contains shades of green.
+5. [**base**][theme-base] - This is the only theme that can be modified. Use this theme as the base for customizations.
+
+Head to the [Theme Configuration | Mermaid][mermaid-theming] page to learn more about dynamic and integrated theme configuration.
+
+### Site-wide Themes
+
+You can configure mermaid themes globally in `config.toml` via the `params.mermaid` parameter.
+
+### Diagram-specific Themes
+
+To customize the theme of an individual diagram, use the `init` directive.
+
+Example of `init` directive setting the `theme` to `forest`:
+
+```markdown
+{{</* mermaid */>}}
+%%{init: {'theme':'forest'}}%%
+  graph TD
+    a --> b
+{{</* /mermaid */>}}
+```
+
+{{< mermaid >}}
+%%{init: {'theme':'forest'}}%%
+  graph TD
+    a --> b
+{{< /mermaid >}}
+
+[theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
+[theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
+[theme-dark]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-dark.js
+[theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
+[theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
+[mermaid-theming]: https://mermaid.js.org/config/theming.html

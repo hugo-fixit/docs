@@ -361,6 +361,12 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
 {?`}{?`}{?`}
 ```
 
+## 代码块扩展语法
+
+### 图表支持
+
+这部分内容在 [图表支持页面][diagrams-support] 中介绍。
+
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
@@ -369,3 +375,4 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
+[diagrams-support]: {{< relref path="/documentation/content-management/diagrams" >}}

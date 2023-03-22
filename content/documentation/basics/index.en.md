@@ -770,8 +770,8 @@ Please open the code block below to view the complete `config.toml` sample confi
 
   # {{< version 0.2.15 >}} Mermaid config
   [params.mermaid]
-    # For values, see https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-    themes = ["neutral", "dark"]
+    # For values, see https://mermaid.js.org/config/theming.html#available-themes
+    themes = ["default", "dark"]
 
   # {{< version 0.2.12 >}} PanguJS config
   [params.pangu]

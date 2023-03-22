@@ -9,7 +9,7 @@ lightgallery: true
 > This documentation records some common questions and answers, mainly from [GitHub Discussions](https://github.com/hugo-fixit/FixIt/discussions).
 
 {{< admonition question "Why not support earlier versions of Hugo?" false >}}
-Since [function `path.Clean`](https://gohugo.io/functions/path.clean/) was introduced in the [Hugo release v0.89.0](https://github.com/gohugoio/hugo/releases/tag/v0.89.0), this theme only supports Hugo versions not lower than **0.89.0**.
+Since the [Render Hooks for Code Blocks](https://gohugo.io/templates/render-hooks/#render-hooks-for-code-blocks) was introduced in the [Hugo release v0.93.0](https://github.com/gohugoio/hugo/releases/tag/v0.93.0), this theme only supports Hugo versions not lower than **0.93.0**.
 {{< /admonition >}}
 
 {{< admonition question "Why the Hugo extended edition is recommended?" false >}}

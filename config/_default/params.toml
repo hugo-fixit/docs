@@ -763,9 +763,9 @@ disableThemeInject = false
 # Mermaid config since v0.2.15
 # Mermaid 配置 since v0.2.15
 [mermaid]
-  # For values, see https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-  # 取值详见 https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-  themes = ['neutral', 'dark']
+  # For values, see https://mermaid.js.org/config/theming.html#available-themes
+  # 取值详见 https://mermaid.js.org/config/theming.html#available-themes
+  themes = ["default", "dark"]
 
 # PanguJS config since v0.2.12
 # 盘古之白配置 since v0.2.12

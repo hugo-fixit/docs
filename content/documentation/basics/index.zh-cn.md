@@ -771,8 +771,8 @@ menu:
 
   # {{< version 0.2.15 >}} Mermaid 配置
   [params.mermaid]
-    # 取值详见 https://mermaid-js.github.io/mermaid/#/Setup?id=theme
-    themes = ["neutral", "dark"]
+    # 取值详见 https://mermaid.js.org/config/theming.html#available-themes
+    themes = ["default", "dark"]
 
   # {{< version 0.2.12 >}} 盘古之白配置
   [params.pangu]

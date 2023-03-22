@@ -9,7 +9,7 @@ lightgallery: true
 > 本文档记录一些常见的问答，主要来自 [GitHub Discussions](https://github.com/hugo-fixit/FixIt/discussions) 和 QQ 群：`814031017`。
 
 {{< admonition question "为什么不支持早期版本的 Hugo？" false >}}
-由于 [函数 `path.Clean`](https://gohugo.io/functions/path.clean/) 在 [Hugo 发行版 v0.89.0](https://github.com/gohugoio/hugo/releases/tag/v0.89.0) 中被引入的，因此本主题只支持不低于 **0.89.0** 的 Hugo 版本。
+由于 [代码块的渲染钩子](https://gohugo.io/templates/render-hooks/#render-hooks-for-code-blocks) 在 [Hugo 发行版 v0.93.0](https://github.com/gohugoio/hugo/releases/tag/v0.93.0) 中被引入的，因此本主题只支持不低于 **0.93.0** 的 Hugo 版本。
 {{< /admonition >}}
 
 {{< admonition question "为什么推荐使用 Hugo extended 版本？" false >}}

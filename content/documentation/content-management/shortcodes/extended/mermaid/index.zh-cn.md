@@ -29,10 +29,6 @@ hiddenFromHomePage: true
 
 只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可。
 
-{{< admonition tip >}}
-你可以在 `config.toml` 中通过 `params.mermaid` 参数全局配置 mermaid 的主题
-{{< /admonition >}}
-
 ## 流程图 {#flowchart}
 
 一个 **流程图** `mermaid` 示例:
@@ -364,3 +360,46 @@ type: simulation
 
 test_entity - satisfies -> test_req
 {{< /mermaid >}}
+
+## Mermaid 主题
+
+以下是可用的主题：
+
+1. [**default**][theme-default] - 这是所有图表的默认主题。
+2. [**neutral**][theme-neutral] - 这个主题非常适合黑白打印的文档。
+3. [**dark**][theme-dark] - 这个主题适合与深色元素或暗模式搭配使用。
+4. [**forest**][theme-forest] - 这个主题包含各种绿色。
+5. [**base**][theme-base] - 这是唯一可以修改的主题。使用此主题作为自定义的基础。
+
+请前往 [Theme Configuration | Mermaid][mermaid-theming] 页面，了解有关动态和集成主题配置的更多信息。
+
+### 站点范围主题
+
+您可以通过 `config.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
+
+### 图表特定主题
+
+要自定义单个图表的主题，请使用 `init` 指令。
+
+以下是使用 `init` 指令将主题设置为 `forest` 的示例代码：
+
+```markdown
+{{</* mermaid */>}}
+%%{init: {'theme':'forest'}}%%
+  graph TD
+    a --> b
+{{</* /mermaid */>}}
+```
+
+{{< mermaid >}}
+%%{init: {'theme':'forest'}}%%
+  graph TD
+    a --> b
+{{< /mermaid >}}
+
+[theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
+[theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
+[theme-dark]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-dark.js
+[theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
+[theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
+[mermaid-theming]: https://mermaid.js.org/config/theming.html

@@ -362,6 +362,12 @@ Note that attributes in [code fences][code-fences] must come after the opening t
 {?`}{?`}{?`}
 ```
 
+## Code Fences Extended
+
+### Diagrams Support
+
+This part is shown in the [diagrams support page][diagrams-support].
+
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
@@ -371,3 +377,4 @@ Note that attributes in [code fences][code-fences] must come after the opening t
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
+[diagrams-support]: {{< relref path="/documentation/content-management/diagrams" >}}
