@@ -23,6 +23,7 @@
     enable = true
     gravatarEmail = ""
     avatarURL = "/images/avatar.png"
+    avatarMenu = ""
     title = ""
     subtitle = "A Clean, Elegant but Advanced Hugo Theme"
     typeit = true

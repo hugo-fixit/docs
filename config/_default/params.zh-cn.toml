@@ -25,6 +25,7 @@ description = "Hugo 主题 - FixIt"
     enable = true
     gravatarEmail = ""
     avatarURL = "/images/avatar.png"
+    avatarMenu = ""
     title = ""
     subtitle = "一个简洁、优雅且高效的 Hugo 主题"
     typeit = true

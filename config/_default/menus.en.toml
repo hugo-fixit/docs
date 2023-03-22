@@ -6,7 +6,7 @@
 [[main]]
   identifier = "documentation"
   name = "Docs"
-  url = "documentation/"
+  url = "/categories/documentation/"
   title = "Theme Documentation"
   weight = 1
   [main.params]
