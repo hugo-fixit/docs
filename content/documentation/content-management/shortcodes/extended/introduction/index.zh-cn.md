@@ -512,7 +512,7 @@ this is a center-quote shortcode example.
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
 [sc-figure]: {{< relref path="/documentation/content-management/shortcodes/built-in#figure" >}}
 [lightgallery]: https://github.com/sachinchoolur/lightgallery
-[mermaidjs]: https://mermaidjs.github.io/
+[mermaidjs]: https://mermaid.js.org/
 [echarts]: https://echarts.apache.org/
 [mapbox]: https://docs.mapbox.com/mapbox-gl-js
 [aplayer]: https://github.com/MoePlayer/APlayer

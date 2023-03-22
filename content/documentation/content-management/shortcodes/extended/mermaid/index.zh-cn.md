@@ -21,11 +21,11 @@ hiddenFromHomePage: true
 
 {{< version 0.2.15 changed >}}
 
-`mermaid` shortcode 使用 [Mermaid](https://mermaidjs.github.io/) 库提供绘制图表和流程图的功能。
+`mermaid` shortcode 使用 [Mermaid][mermaid] 库提供绘制图表和流程图的功能。
 
 <!--more-->
 
-[mermaid](https://mermaidjs.github.io/) 是一个可以帮助你在文章中绘制图表和流程图的库, 类似 Markdown 的语法。
+[Mermaid][mermaid] 是一个可以帮助你在文章中绘制图表和流程图的库, 类似 Markdown 的语法。
 
 只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可。
 
@@ -89,40 +89,6 @@ sequenceDiagram
     Bob-->John: Jolly good!
 {{< /mermaid >}}
 
-## 甘特图 {#gantt}
-
-一个 **甘特图** `mermaid` 示例:
-
-```markdown
-{{</* mermaid */>}}
-gantt
-dateFormat  YYYY-MM-DD
-title Adding GANTT diagram to mermaid
-excludes weekdays 2014-01-10
-
-section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2              :         des4, after des3, 5d
-{{</* /mermaid */>}}
-```
-
-呈现的输出效果如下:
-
-{{< mermaid >}}
-gantt
-dateFormat  YYYY-MM-DD
-title Adding GANTT diagram to mermaid
-excludes weekdays 2014-01-10
-
-section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2              :         des4, after des3, 5d
-{{< /mermaid >}}
-
 ## 类图 {#class-diagram}
 
 一个 **类图** `mermaid` 示例:
@@ -181,7 +147,7 @@ classDiagram
 
 ## 状态图 {#state-diagram}
 
-一个 **状态图** `mermaid` 示例:
+一个 **状态图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -195,7 +161,7 @@ stateDiagram-v2
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 stateDiagram-v2
@@ -205,42 +171,6 @@ stateDiagram-v2
     Moving --> Still
     Moving --> Crash
     Crash --> [*]
-{{< /mermaid >}}
-
-## Git 图 {#git-graph}
-
-一个 **Git 图** `mermaid` 示例:
-
-```markdown
-{{</* mermaid */>}}
-gitGraph
-    commit
-    commit
-    branch develop
-    checkout develop
-    commit
-    commit
-    checkout main
-    merge develop
-    commit
-    commit
-{{</* /mermaid */>}}
-```
-
-呈现的输出效果如下:
-
-{{< mermaid >}}
-gitGraph
-    commit
-    commit
-    branch develop
-    checkout develop
-    commit
-    commit
-    checkout main
-    merge develop
-    commit
-    commit
 {{< /mermaid >}}
 
 ## 实体关系图 {#entity-relationship-diagram}
@@ -295,6 +225,40 @@ journey
     section Go home
       Go downstairs: 5: Me
       Sit down: 5: Me
+{{< /mermaid >}}
+
+## 甘特图 {#gantt}
+
+一个 **甘特图** `mermaid` 示例:
+
+```markdown
+{{</* mermaid */>}}
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2              :         des4, after des3, 5d
+{{</* /mermaid */>}}
+```
+
+呈现的输出效果如下:
+
+{{< mermaid >}}
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2              :         des4, after des3, 5d
 {{< /mermaid >}}
 
 ## 饼图 {#pie}
@@ -361,6 +325,149 @@ type: simulation
 test_entity - satisfies -> test_req
 {{< /mermaid >}}
 
+
+## Git 图 {#git-graph}
+
+一个 **Git 图** `mermaid` 示例:
+
+```markdown
+{{</* mermaid */>}}
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+{{</* /mermaid */>}}
+```
+
+呈现的输出效果如下:
+
+{{< mermaid >}}
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+{{< /mermaid >}}
+
+## C4 图 :warning: {#c4-diagrams}
+
+> C4 图：目前这是一个实验性的图表。语法和属性可能会在未来的版本中发生变化。当语法稳定后，将会提供适当的文档说明。
+
+Mermaid 的 C4 图语法与 PlantUML 兼容。以下是示例：
+
+```markdown
+{{</* mermaid */>}}
+    C4Context
+      title System Context diagram for Internet Banking System
+      Enterprise_Boundary(b0, "BankBoundary0") {
+        Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+        Person(customerB, "Banking Customer B")
+        Person_Ext(customerC, "Banking Customer C", "desc")
+
+        Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+
+        System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+
+        Enterprise_Boundary(b1, "BankBoundary") {
+
+          SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+
+          System_Boundary(b2, "BankBoundary2") {
+            System(SystemA, "Banking System A")
+            System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts. next line.")
+          }
+
+          System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+          SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+
+          Boundary(b3, "BankBoundary3", "boundary") {
+            SystemQueue(SystemF, "Banking System F Queue", "A system of the bank.")
+            SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+          }
+        }
+      }
+
+      BiRel(customerA, SystemAA, "Uses")
+      BiRel(SystemAA, SystemE, "Uses")
+      Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
+      Rel(SystemC, customerA, "Sends e-mails to")
+
+      UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
+      UpdateRelStyle(customerA, SystemAA, $textColor="blue", $lineColor="blue", $offsetX="5")
+      UpdateRelStyle(SystemAA, SystemE, $textColor="blue", $lineColor="blue", $offsetY="-10")
+      UpdateRelStyle(SystemAA, SystemC, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+      UpdateRelStyle(SystemC, customerA, $textColor="red", $lineColor="red", $offsetX="-50", $offsetY="20")
+
+      UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
+{{</* /mermaid */>}}
+```
+
+{{< mermaid >}}
+    C4Context
+      title System Context diagram for Internet Banking System
+      Enterprise_Boundary(b0, "BankBoundary0") {
+        Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+        Person(customerB, "Banking Customer B")
+        Person_Ext(customerC, "Banking Customer C", "desc")
+
+        Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+
+        System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+
+        Enterprise_Boundary(b1, "BankBoundary") {
+
+          SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+
+          System_Boundary(b2, "BankBoundary2") {
+            System(SystemA, "Banking System A")
+            System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts. next line.")
+          }
+
+          System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+          SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+
+          Boundary(b3, "BankBoundary3", "boundary") {
+            SystemQueue(SystemF, "Banking System F Queue", "A system of the bank.")
+            SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+          }
+        }
+      }
+
+      BiRel(customerA, SystemAA, "Uses")
+      BiRel(SystemAA, SystemE, "Uses")
+      Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
+      Rel(SystemC, customerA, "Sends e-mails to")
+
+      UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
+      UpdateRelStyle(customerA, SystemAA, $textColor="blue", $lineColor="blue", $offsetX="5")
+      UpdateRelStyle(SystemAA, SystemE, $textColor="blue", $lineColor="blue", $offsetY="-10")
+      UpdateRelStyle(SystemAA, SystemC, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+      UpdateRelStyle(SystemC, customerA, $textColor="red", $lineColor="red", $offsetX="-50", $offsetY="20")
+
+      UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
+{{< /mermaid >}}
+
+## Mindmap :warning:
+
+- [ ] Bump Mermaid from 9.x to 10.x
+
+## Timeline Diagram :warning:
+
+- [ ] Bump Mermaid from 9.x to 10.x
+
 ## Mermaid 主题
 
 以下是可用的主题：
@@ -397,6 +504,7 @@ test_entity - satisfies -> test_req
     a --> b
 {{< /mermaid >}}
 
+[mermaid]: https://mermaid.js.org/
 [theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
 [theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
 [theme-dark]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-dark.js
