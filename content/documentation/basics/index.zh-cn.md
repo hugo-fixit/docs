@@ -272,6 +272,12 @@ menu:
       # 是否为副标题显示打字机动画
       typeit = false
 
+  # {{< version 0.2.18 >}} 面包屑导航配置
+  [params.breadcrumb]
+    enable = false
+    sticky = false
+    showHome = false
+
   # 页面底部信息配置
   [params.footer]
     enable = true

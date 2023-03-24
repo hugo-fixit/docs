@@ -141,6 +141,13 @@ disableThemeInject = false
     # 是否为副标题显示打字机动画
     typeit = false
 
+# FixIt 0.2.18 | NEW Breadcrumb config
+# FixIt 0.2.18 | 新增 面包屑导航配置
+[breadcrumb]
+  enable = true
+  sticky = true
+  showHome = false
+
 # Footer config
 # 页面底部信息配置
 [footer]

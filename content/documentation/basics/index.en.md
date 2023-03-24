@@ -271,6 +271,12 @@ Please open the code block below to view the complete `config.toml` sample confi
       # whether to use typeit animation for subtitle name
       typeit = false
 
+  # {{< version 0.2.18 >}} Breadcrumb config
+  [params.breadcrumb]
+    enable = false
+    sticky = false
+    showHome = false
+
   # Footer config
   [params.footer]
     enable = true

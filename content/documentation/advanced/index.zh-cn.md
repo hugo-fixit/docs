@@ -70,38 +70,22 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 例如： `pageStyle="custom"`
 
 ```scss
-@media only screen and (min-width: 1441px) {
-  [data-page-style='custom'] {
-    .page {
+[data-page-style='custom'] {
+  @media only screen and (min-width: 1441px) {
+    %page-style {
       width: 70%;
     }
+  }
 
-    aside {
-      width: 15%;
+  @media only screen and (min-width: 1440px) {
+    %page-style {
+      width: 70%;
     }
   }
-}
 
-@media only screen and (max-width: 1440px) {
-  [data-page-style='custom'] {
-    .page {
+  @media only screen and (min-width: 1200px) {
+    %page-style {
       width: 60%;
-    }
-
-    aside {
-      width: 20%;
-    }
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  [data-page-style='custom'] {
-    .page {
-      width: 56%;
-    }
-
-    aside {
-      width: 22%;
     }
   }
 }
