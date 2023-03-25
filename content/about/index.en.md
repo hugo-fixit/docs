@@ -146,7 +146,7 @@ Giving me a Star 🌟 is already the greatest encouragement and support for me.\
 If you enjoy the theme, please consider buying me a coffee ☕️.
 
 {{< details "Thanks all! ❤️" >}}
-{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love ❤️" >}}
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love ❤️" mode="fixed" >}}
 {{< sponsor-log >}}
 {{< /details >}}
 

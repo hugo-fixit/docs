@@ -541,6 +541,9 @@ disableThemeInject = false
     # position relative to post footer, optional values: ["before", "after"]
     # 相对于页脚的位置，可选值：["before", "after"]
     position = "after"
+    # FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+    # FixIt 0.2.18 | 新增 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
+    mode = "fixed"
     comment = "Buy me a coffee~"
     [page.reward.ways]
       wechatpay = "/images/wechatpay.jpg"

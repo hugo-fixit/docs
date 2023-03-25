@@ -496,16 +496,19 @@ The `reward` shortcode has the following named parameters:
 * **bitcoin** *[optional]* (**fourth** positional parameter)
 * **author** *[optional]* (**fifth** positional parameter)
 * **comment** *[optional]* (**sixth** positional parameter)
+* **mode** *[optional]* (**seventh** positional parameter)
+
+    {{< version 0.2.18 >}} display mode of QR code images, optional values: ["static", "fixed"], default: `static`
 
 Example `reward` input:
 
 ```go-html-template
-{{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" */>}}
+{{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="Buy me a coffee~" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" >}}
+{{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="Buy me a coffee~" >}}
 
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}

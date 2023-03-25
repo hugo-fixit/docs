@@ -579,6 +579,8 @@ menu:
       # 相对于页脚的位置，可选值：["before", "after"]
       position = "after"
       # comment = "Buy me a coffee"
+      # {{< version 0.2.18 >}} 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
+      mode = "static"
       [params.page.reward.ways]
         # wechatpay = "/images/wechatpay.png"
         # alipay = "/images/alipay.png"

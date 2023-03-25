@@ -146,7 +146,7 @@ math: true
 如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。
 
 {{< details "谢谢大家！❤️" >}}
-{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="❤️ 为爱发电 ⚡️" >}}
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="❤️ 为爱发电 ⚡️" mode="fixed" >}}
 {{< sponsor-log >}}
 {{< /details >}}
 

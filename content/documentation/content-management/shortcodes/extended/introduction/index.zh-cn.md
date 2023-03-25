@@ -486,7 +486,7 @@ this is a center-quote shortcode example.
 
 ## reward
 
-{{< version 0.2.17 >}}
+{{< version 0.2.18 changed >}}
 
 `reward` shortcode 有以下命名参数：
 
@@ -496,6 +496,9 @@ this is a center-quote shortcode example.
 * **bitcoin** *[可选]*（**第四个**位置参数）
 * **author** *[可选]*（**第五个**位置参数）
 * **comment** *[可选]*（**第六个**位置参数）
+* **mode** *[可选]*（**第七个**位置参数）
+
+    {{< version 0.2.18 >}} 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
 
 一个 `reward` 示例:
 

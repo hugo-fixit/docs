@@ -578,6 +578,8 @@ Please open the code block below to view the complete `config.toml` sample confi
       # position relative to post footer, optional values: ["before", "after"]
       position = "after"
       # comment = "Buy me a coffee"
+      # {{< version 0.2.18 >}} display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+      mode = "static"
       [params.page.reward.ways]
         # wechatpay = "/images/wechatpay.png"
         # alipay = "/images/alipay.png"
