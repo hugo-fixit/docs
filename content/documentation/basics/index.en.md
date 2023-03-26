@@ -103,7 +103,7 @@ mv config.toml config.old.toml
 cp themes/FixIt/config.toml config.toml
 ```
 
-###  Menu Configuration
+### Menu Configuration {#menu-configuration}
 
 Hugo has a simple yet powerful [menu system][menu-system].
 
@@ -165,7 +165,7 @@ menu:
 
 ### Theme Configuration {#theme-configuration}
 
-In addition to [Hugo global configuration][hugo-config] and [menu configuration](#basic-configuration), **FixIt** lets you define the following parameters in your site configuration.
+In addition to [Hugo global configuration][hugo-config] and [menu configuration](#menu-configuration), **FixIt** lets you define the following parameters in your site configuration.
 
 Please open the code block below to view the complete `config.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
