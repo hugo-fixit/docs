@@ -73,10 +73,20 @@ It is necessary only if the front matters and the `page` part in your [theme con
 * **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [theme configuration][theme-config].
 * **lastmod**: the datetime at which the content was last modified.
 * **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
-* **author**: {{< version 0.2.18 changed >}} the author for the content.
+* **author**: {{< version 0.2.18 changed >}} the author config for the content, the same as the `params.author` part in the [theme configuration][theme-config].
+
+    ```yaml
+    author:
+      name: "" # the author's name
+      link: "" # the link of the author
+      email: "" # the email of the author, used to set a Gravatar avatar, which takes precedence over `author.avatar`
+      avatar: "" # the local avatar of the author
+    ```
+
+* **authorLink**: {{< version 0.2.18 deleted >}} ~~the link of the author~~, migrate to `author.link`
+* **authorEmail**: {{< version 0.2.18 deleted >}} ~~the email of the author~~, migrate to `author.email`
+* **gravatarForce**: {{< version 0.2.18 deleted >}} ~~Gravatar is force-used as the author's avatar.~~
 * **authorAvatar**: {{< version 0.2.18 >}} whether to enable the author's avatar of the post.
-* **authorLink**: {{< version 0.2.18 deleted >}} the link of the author.
-* **authorEmail**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} the email of the author.
 * **description**: the description for the content.
 * **keywords**: the keywords for the content.
 * **license**: the special lisence for this content.
@@ -97,7 +107,6 @@ It is necessary only if the front matters and the `page` part in your [theme con
 * **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
 * **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
 * **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
-* **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} Gravatar is force-used as the author's avatar.
 
 * **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [theme configuration][theme-config].
 * **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [theme configuration][theme-config].

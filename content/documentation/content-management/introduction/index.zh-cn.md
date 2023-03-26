@@ -72,10 +72,20 @@ reward: true
 * **date**: 这篇文章创建的日期时间它通常是从文章的前置参数中的 `date` 字段获取的，但是也可以在 [主题配置][theme-config] 中设置
 * **lastmod**: 上次修改内容的日期时间
 * **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
+* **author**: {{< version 0.2.18 changed >}} 文章作者配置，和 [主题配置][theme-config] 中的 `params.author` 部分相同
+
+    ```yaml
+    author:
+      name: "" # 文章作者
+      link: "" # 文章作者的链接
+      email: "" # 文章作者的邮箱，用于设置 Gravatar 头像，优先于 `author.avatar`
+      avatar: "" # 文章作者的头像
+    ```
+
+* **authorLink**: {{< version 0.2.18 deleted >}} ~~文章作者的链接~~，合并到 `author.link`
+* **authorEmail**: {{< version 0.2.18 deleted >}} ~~文章作者的邮箱~~，合并到 `author.email`
+* **gravatarForce**: {{< version 0.2.18 deleted >}} ~~强制使用 Gravatar 作为作者头像~~
 * **authorAvatar**: {{< version 0.2.18 >}} 是否启用文章作者头像
-* **author**: {{< version 0.2.18 changed >}} 文章作者
-* **authorLink**: {{< version 0.2.18 deleted >}} 文章作者的链接
-* **authorEmail**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 文章作者的邮箱
 * **description**: 文章内容的描述
 * **keywords**: 文章内容的关键词
 * **license**: 这篇文章特殊的许可
@@ -96,7 +106,6 @@ reward: true
 * **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接
 * **rssFullText**: {{< version 0.2.4 >}} 如果设为 `true`, 在 RSS 中将会显示全文内容
 * **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
-* **gravatarForce**: {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
 
 * **toc**: {{< version 0.2.9 changed >}} 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
 * **expirationReminder**: {{< version 0.2.13 >}} 和 [主题配置][theme-config] 中的 `params.page.expirationReminder` 部分相同
