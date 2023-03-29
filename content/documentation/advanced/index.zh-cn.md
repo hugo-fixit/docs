@@ -79,13 +79,13 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 
   @media only screen and (min-width: 1440px) {
     %page-style {
-      width: 70%;
+      width: 60%;
     }
   }
 
   @media only screen and (min-width: 1200px) {
     %page-style {
-      width: 60%;
+      width: 56%;
     }
   }
 }

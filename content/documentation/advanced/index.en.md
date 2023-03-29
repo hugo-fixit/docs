@@ -78,13 +78,13 @@ For example: `pageStyle="custom"`
 
   @media only screen and (min-width: 1440px) {
     %page-style {
-      width: 70%;
+      width: 60%;
     }
   }
 
   @media only screen and (min-width: 1200px) {
     %page-style {
-      width: 60%;
+      width: 56%;
     }
   }
 }

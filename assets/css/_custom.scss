@@ -5,4 +5,5 @@
 
 .profile-custom {
   margin-top: 0.5rem;
+  @extend .print-d-none;
 }
