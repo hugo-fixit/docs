@@ -18,11 +18,22 @@
     sendBtn = ""
     editorTravel = true
     flatMode = 'auto'
-    maxNesting = 3
     # FixIt 0.2.17 | CHANGED enable lightgallery support
     # FixIt 0.2.17 | 更改 启用 lightgallery 支持
     lightgallery = false
     locale = "" # FixIt 0.2.15 | NEW
+    # FixIt 0.2.18 | NEW
+    emoticons = ""
+    nestMax = 2
+    nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+    vote = true
+    voteDown = false
+    uaBadge = true
+    listSort = true
+    imgUpload = true
+    preview = true
+    versionCheck = true
+    # TODO add pagination and heightLimit in release 1.0.0
   # Disqus comment config (https://disqus.com/)
   # Disqus 评论系统设置 (https://disqus.com/)
   [page.comment.disqus]

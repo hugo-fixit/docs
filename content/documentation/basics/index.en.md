@@ -632,6 +632,17 @@ Please open the code block below to view the complete `config.toml` sample confi
         # {{< version 0.2.17 changed >}} enable lightgallery support
         lightgallery = false
         locale = "" # {{< version 0.2.15 >}}
+        # {{< version 0.2.18 >}}
+        emoticons = ""
+        nestMax = 2
+        nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+        vote = true
+        voteDown = false
+        uaBadge = true
+        listSort = true
+        imgUpload = true
+        preview = true
+        versionCheck = true
       # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} comment config (https://disqus.com)
       [params.page.comment.disqus]
         enable = false

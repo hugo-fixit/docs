@@ -629,10 +629,20 @@ menu:
         sendBtn = ""
         editorTravel = true
         flatMode = "auto"
-        maxNesting = 3
         # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
         lightgallery = false
         locale = "" # {{< version 0.2.15 >}}
+        # {{< version 0.2.18 >}}
+        emoticons = ""
+        nestMax = 2
+        nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+        vote = true
+        voteDown = false
+        uaBadge = true
+        listSort = true
+        imgUpload = true
+        preview = true
+        versionCheck = true
       # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} 评论系统设置 (https://disqus.com)
       [params.page.comment.disqus]
         enable = false
