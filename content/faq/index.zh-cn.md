@@ -26,7 +26,6 @@ lightgallery: true
 以下是两种搜索引擎的对比：
 
 - `fuse`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制, 性能高
-- `lunr`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，但占用带宽大且性能低（特别是中文需要一个较大的分词依赖库）
 - `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
 
 {{< version 0.2.3 >}} 文章内容被 `h2` 和 `h3` HTML 标签切分来提高查询效果并且基本实现全文搜索。

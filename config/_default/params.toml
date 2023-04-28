@@ -67,9 +67,9 @@ disableThemeInject = false
 # 搜索配置
 [search]
   enable = true
-  # type of search engine ["lunr", "algolia", "fuse"]
-  # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
-  type = "lunr"
+  # type of search engine ["algolia", "fuse"]
+  # 搜索引擎的类型 ["algolia", "fuse"]
+  type = "fuse"
   # max index length of the chunked content
   # 文章内容最长索引长度
   contentLength = 4000

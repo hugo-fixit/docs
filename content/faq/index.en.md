@@ -25,7 +25,6 @@ You could enable these features with `hugo server -e production`.
 The following is a comparison of two search engines:
 
 - `fuse`: simple, no need to synchronize `index.json`, no limit for `contentLength`, high performance
-- `lunr`: simple, no need to synchronize `index.json`, no limit for `contentLength`,
   but high bandwidth and low performance (Especially for Chinese which needs a large segmentit library)
 - `algolia`: high performance and low bandwidth, but need to synchronize `index.json` and limit for `contentLength`
 

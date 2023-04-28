@@ -217,8 +217,8 @@ menu:
   # {{< version 0.2.0 >}} 搜索配置
   [params.search]
     enable = true
-    # 搜索引擎的类型 ["lunr", "algolia", "fuse"]
-    type = "lunr"
+    # 搜索引擎的类型 ["algolia", "fuse"]
+    type = "fuse"
     # 文章内容最长索引长度
     contentLength = 4000
     # 搜索框的占位提示语
@@ -1084,7 +1084,7 @@ menu:
 
 #### 搜索配置
 
-基于 [Lunr.js][lunrjs]、 [algolia][algolia] 或 [Fuse.js][fusejs]，**FixIt** 主题支持搜索功能，详见 [主题配置](#theme-configuration) 的 `params.search` 配置。
+基于 [algolia][algolia] 或 [Fuse.js][fusejs]，**FixIt** 主题支持搜索功能，详见 [主题配置](#theme-configuration) 的 `params.search` 配置。
 
 为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
@@ -1124,21 +1124,21 @@ menu:
 
 {{< version 0.2.10 changed >}}
 
-| 语言         | Hugo 代码 | HTML `lang` 属性 | 主题文档                             | Lunr.js 支持                         |
-| :----------- | :-------: | :--------------: | :----------------------------------: | :----------------------------------: |
-| 英语         | `en`      | `en`             | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 简体中文     | `zh-cn`   | `zh-CN`          | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| 繁体中文     | `zh-tw`   | `zh-TW`          | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 法语         | `fr`      | `fr`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 波兰语       | `pl`      | `pl`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
-| 巴西葡萄牙语 | `pt-br`   | `pt-BR`          | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 意大利语     | `it`      | `it`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 西班牙语     | `es`      | `es`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 德语         | `de`      | `de`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 塞尔维亚语   | `sr`      | `sr`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-square fa-fw):       |
-| 俄语         | `ru`      | `ru`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 罗马尼亚语   | `ro`      | `ro`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
-| 越南语       | `vi`      | `vi`             | :(fa-regular fa-square fa-fw):       | :(fa-regular fa-check-square fa-fw): |
+| 语言         | Hugo 代码 | HTML `lang` 属性 | 主题文档                             |
+| :----------- | :-------: | :--------------: | :----------------------------------: |
+| 英语         | `en`      | `en`             | :(fa-regular fa-check-square fa-fw): |
+| 简体中文     | `zh-cn`   | `zh-CN`          | :(fa-regular fa-check-square fa-fw): |
+| 繁体中文     | `zh-tw`   | `zh-TW`          | :(fa-regular fa-square fa-fw):       |
+| 法语         | `fr`      | `fr`             | :(fa-regular fa-square fa-fw):       |
+| 波兰语       | `pl`      | `pl`             | :(fa-regular fa-square fa-fw):       |
+| 巴西葡萄牙语 | `pt-br`   | `pt-BR`          | :(fa-regular fa-square fa-fw):       |
+| 意大利语     | `it`      | `it`             | :(fa-regular fa-square fa-fw):       |
+| 西班牙语     | `es`      | `es`             | :(fa-regular fa-square fa-fw):       |
+| 德语         | `de`      | `de`             | :(fa-regular fa-square fa-fw):       |
+| 塞尔维亚语   | `sr`      | `sr`             | :(fa-regular fa-square fa-fw):       |
+| 俄语         | `ru`      | `ru`             | :(fa-regular fa-square fa-fw):       |
+| 罗马尼亚语   | `ro`      | `ro`             | :(fa-regular fa-square fa-fw):       |
+| 越南语       | `vi`      | `vi`             | :(fa-regular fa-square fa-fw):       |
 
 #### 基本配置
 
@@ -1274,7 +1274,6 @@ defaultContentLanguage = "zh-cn"
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/overview/configuration/
-[lunrjs]: https://lunrjs.com/
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [multilingual]: https://gohugo.io/content-management/multilingual

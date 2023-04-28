@@ -219,8 +219,8 @@ Please open the code block below to view the complete `hugo.toml` sample configu
   # {{< version 0.2.0 >}} Search config
   [params.search]
     enable = true
-    # type of search engine ["lunr", "algolia", "fuse"]
-    type = "lunr"
+    # type of search engine ["algolia", "fuse"]
+    type = "fuse"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -1087,7 +1087,7 @@ which is you can refer to.
 
 #### Search Configuration
 
-Based on [Lunr.js][lunrjs], [algolia][algolia] or [Fuse.js][fusejs], searching is supported in **FixIt** theme.
+Based on [algolia][algolia] or [Fuse.js][fusejs], searching is supported in **FixIt** theme.
 
 In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your site configuration, see `params.search` configuration in [Theme Configuration](#theme-configuration) for details.
 
@@ -1129,21 +1129,21 @@ Customize `browserconfig.xml` and `site.webmanifest` to set `theme-color` and `b
 
 {{< version 0.2.10 changed >}}
 
-| Language             | Hugo Code | HTML `lang` Attribute |              Theme Docs              |           Lunr.js Support            |
-| :------------------- | :-------: | :-------------------: | :----------------------------------: | :----------------------------------: |
-| English              |   `en`    |         `en`          | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| Simplified Chinese   | `zh-cn`  |        `zh-CN`        | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| Traditional Chinese  | `zh-tw`  |        `zh-TW`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| French               |   `fr`    |         `fr`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| Polish               |   `pl`    |         `pl`          |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
-| Brazilian Portuguese | `pt-br`  |        `pt-BR`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| Italian              |   `it`    |         `it`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| Spanish              |   `es`    |         `es`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| German               |   `de`    |         `de`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| Serbian              |   `sr`    |         `sr`          |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
-| Russian              |   `ru`    |         `ru`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| Romanian             |   `ro`    |         `ro`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
-| Vietnamese           |   `vi`    |         `vi`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                           |
+| :------------------- | :-------: | :-------------------: | :----------------------------------: |
+| English              | `en`      | `en`                  | :(fa-regular fa-check-square fa-fw): |
+| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(fa-regular fa-check-square fa-fw): |
+| Traditional Chinese  | `zh-tw`   | `zh-TW`               | :(fa-regular fa-square fa-fw):       |
+| French               | `fr`      | `fr`                  | :(fa-regular fa-square fa-fw):       |
+| Polish               | `pl`      | `pl`                  | :(fa-regular fa-square fa-fw):       |
+| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(fa-regular fa-square fa-fw):       |
+| Italian              | `it`      | `it`                  | :(fa-regular fa-square fa-fw):       |
+| Spanish              | `es`      | `es`                  | :(fa-regular fa-square fa-fw):       |
+| German               | `de`      | `de`                  | :(fa-regular fa-square fa-fw):       |
+| Serbian              | `sr`      | `sr`                  | :(fa-regular fa-square fa-fw):       |
+| Russian              | `ru`      | `ru`                  | :(fa-regular fa-square fa-fw):       |
+| Romanian             | `ro`      | `ro`                  | :(fa-regular fa-square fa-fw):       |
+| Vietnamese           | `vi`      | `vi`                  | :(fa-regular fa-square fa-fw):       |
 
 #### Basic Configuration
 
@@ -1282,7 +1282,6 @@ By the way, as these translations could be used by other people, please take the
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/overview/configuration/
-[lunrjs]: https://lunrjs.com/
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [multilingual]: https://gohugo.io/content-management/multilingual
