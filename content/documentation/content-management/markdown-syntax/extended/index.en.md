@@ -364,6 +364,27 @@ Note that attributes in [code fences][code-fences] must come after the opening t
 
 ## Code Fences Extended
 
+### Code Block Attributes
+
+You can add attributes to a code block, for example:
+
+````markdown
+```js {title="test.js"}
+console.log('hello FixIt!');
+```
+````
+
+The rendered output looks like this:
+
+```js {title="test.js"}
+console.log('hello FixIt!');
+```
+
+Currently supported attributes include:
+
+- `title`: The title of the code block.
+
+
 ### Diagrams Support
 
 This part is shown in the [diagrams support page][diagrams-support].

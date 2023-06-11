@@ -363,6 +363,27 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
 
 ## 代码块扩展语法
 
+### 代码块属性
+
+可以在代码块后面添加属性，例如：
+
+````markdown
+```js {title="test.js"}
+console.log('hello FixIt!');
+```
+````
+
+呈现的输出效果如下：
+
+```js {title="test.js"}
+console.log('hello FixIt!');
+```
+
+目前支持的属性有：
+
+- `title`：代码块的标题
+
+
 ### 图表支持
 
 这部分内容在 [图表支持页面][diagrams-support] 中介绍。
