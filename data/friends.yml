@@ -47,6 +47,11 @@
   url: https://wlanxww.com
   description: wlanxww's blog
 
+- nickname: XIDCN
+  avatar: https://xidcn.com/images/avatar.webp
+  url: https://xidcn.com
+  description: XIDCN's blog
+
 - nickname: ADD
   avatar: /fixit.min.svg
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
