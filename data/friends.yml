@@ -56,3 +56,8 @@
   avatar: /fixit.min.svg
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
   description: Create a pull request to add a new site.
+
+- nickname: Ling
+  avatar: https://maling.io/avatar/ling.webp
+  url: https://maling.io/
+  description: Maling's Blog
