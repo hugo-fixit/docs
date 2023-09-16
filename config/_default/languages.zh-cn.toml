@@ -1,0 +1,19 @@
+# -------------------------------------------------------------------------------------
+# Multilingual and i18n | 多语言 i18n
+# See: https://gohugo.io/content-management/multilingual/#configure-languages
+# -------------------------------------------------------------------------------------
+
+weight = 2
+# language code, only CN capitalized here
+# 网站语言, 仅在这里 CN 大写
+languageCode = "zh-CN"
+# language name
+# 语言名称
+languageName = "简体中文"
+# whether to include Chinese/Japanese/Korean
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# copyright description used only for seo schema
+# 版权描述，仅用于 SEO
+# 使用 CC BY-NC 4.0 许可协议
+copyright = "本作品采用知识共享署名-非商业性使用 4.0 国际许可协议。"

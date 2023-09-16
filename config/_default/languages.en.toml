@@ -1,0 +1,18 @@
+# -------------------------------------------------------------------------------------
+# Multilingual and i18n | 多语言 i18n
+# See: https://gohugo.io/content-management/multilingual/#configure-languages
+# -------------------------------------------------------------------------------------
+
+weight = 1
+# language code
+# 网站语言
+languageCode = "en"
+# language name
+# 语言名称
+languageName = "English"
+# whether to include Chinese/Japanese/Korean
+# 是否包括中日韩文字
+hasCJKLanguage = false
+# copyright description used only for seo schema
+# 版权描述，仅用于 SEO
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
