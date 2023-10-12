@@ -15,5 +15,4 @@ languageName = "简体中文"
 hasCJKLanguage = true
 # copyright description used only for seo schema
 # 版权描述，仅用于 SEO
-# 使用 CC BY-NC 4.0 许可协议
-copyright = "本作品采用知识共享署名-非商业性使用 4.0 国际许可协议。"
+copyright = "本站内容采用知识共享署名-非商业性使用 4.0（CC BY-NC 4.0）国际许可协议。"

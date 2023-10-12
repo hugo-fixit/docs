@@ -165,10 +165,10 @@ Hugo 允许您通过覆盖主题模板来改造主题，例如：您可以创建
 </div>
 ```
 
-
 ## PWA 支持
 
 这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
 
+<!-- link reference definition -->
 [theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
