@@ -589,7 +589,7 @@ disableThemeInject = false
     # FixIt 0.2.13 | 新增 Artalk 评论系统设置 (https://artalk.js.org/)
     [page.comment.artalk]
       enable = false
-      server = "https://yourdomain/api/"
+      server = "https://yourdomain"
       site = "默认站点"
       placeholder = ""
       noComment = ""
@@ -923,6 +923,7 @@ disableThemeInject = false
 
 # FixIt 0.2.14 | NEW Gravatar config
 # FixIt 0.2.14 | 新增 Gravatar 设置
+# https://docs.gravatar.com/general/images/
 [gravatar]
   # FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
   # FixIt 0.2.18 | 新增 取决于作者邮箱，作者邮箱未设置则使用本地头像

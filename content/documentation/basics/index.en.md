@@ -621,7 +621,7 @@ Please open the code block below to view the complete `config.toml` sample confi
       # {{< version 0.2.13 >}} {{< link "https://artalk.js.org/" Artalk >}} comment config (https://artalk.js.org/)
       [params.page.comment.artalk]
         enable = false
-        server = "https://yourdomain/api/"
+        server = "https://yourdomain"
         site = "默认站点"
         placeholder = ""
         noComment = ""
