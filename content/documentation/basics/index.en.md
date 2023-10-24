@@ -38,6 +38,7 @@ Discover the basics of the Hugo - **FixIt** theme and the core concepts behind i
 
 ## Installation ways {#install-theme}
 
+<!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/FixIt" "The repository of FixIt theme" "" true >}}
 
 In fact, there are many ways to quickly install the theme, just choose **one** of them ([Git Submodule](#git-submodule) or [Hugo Module](#hugo-module) is be recommended).
@@ -56,6 +57,7 @@ git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 
 ### Git Submodule {#git-submodule}
 
+<!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "A Template base on Git Submodule" "" true >}}
 
 Alternatively, initialize an empty Git repository and clone the [FixIt][fixit] theme into the `themes` directory, adding it to your project as a [Git submodule][git-submodule].
@@ -79,6 +81,7 @@ git submodule set-branch -b dev themes/FixIt
 
 ### Hugo Module {#hugo-module}
 
+<!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-go" "A Template base on Hugo Module" "" true >}}
 
 > In this way, you don't need to configure `theme = "FixIt"` in `config.toml`.
@@ -602,11 +605,8 @@ Please open the code block below to view the complete `config.toml` sample confi
       Line = true
       Instapaper = false
       Pocket = false
-      Digg = false
-      Stumbleupon = false
       Flipboard = false
       Weibo = true
-      Renren = false
       Myspace = true
       Blogger = true
       Baidu = false
@@ -1265,7 +1265,6 @@ Translations strings are used for common default values used in the theme. Trans
 To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/FixIt/i18n/en.toml`.
 
 By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):][pulls] to the theme!
-
 
 [fixit]: https://github.com/hugo-fixit/FixIt
 [releases]: https://github.com/hugo-fixit/FixIt/releases

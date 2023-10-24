@@ -35,11 +35,10 @@ menu:
 
 <!--more-->
 
-
 ## 安装方式 {#install-theme}
 
+<!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt 主题的仓库" "" true >}}
-
 
 实际上有多种方式可以快速安装主题，选择其中 **一种** 即可（推荐 [Git 子模块](#git-submodule) 或者 [Hugo 模块](#hugo-module)）。
 
@@ -55,12 +54,12 @@ menu:
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
-### Git 子模块
+### Git 子模块 {#git-submodule}
 
+<!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "基于 Git 子模块的快速入门模板" "" true >}}
 
 另外，在您的项目目录初始化一个空的 Git 存储库，将 [FixIt][fixit] 主题克隆到 `themes` 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中。
-
 
 ```bash
 git init
@@ -79,8 +78,9 @@ git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 git submodule set-branch -b dev themes/FixIt
 ```
 
-### Hugo 模块
+### Hugo 模块 {#hugo-module}
 
+<!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-go" "基于 Hugo 模块的快速入门模板" "" true >}}
 
 > 以这种方式，无需要在 `config.toml` 中配置 `theme = "FixIt"`。
@@ -603,11 +603,8 @@ menu:
       Line = true
       Instapaper = false
       Pocket = false
-      Digg = false
-      Stumbleupon = false
       Flipboard = false
       Weibo = true
-      Renren = false
       Myspace = true
       Blogger = true
       Baidu = false
