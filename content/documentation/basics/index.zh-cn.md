@@ -924,6 +924,12 @@ menu:
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
+  
+  # {{< version 0.2.18-lts.3 >}} [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
+  [params.cacheRemoteImages]
+    enable = false
+    # 用本地图片链接替换远程图片链接
+    replace = false
 
   # {{< version 0.2.17 >}} 定义自定义文件路径
   # 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件

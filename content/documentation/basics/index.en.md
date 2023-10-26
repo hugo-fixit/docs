@@ -927,6 +927,12 @@ Please open the code block below to view the complete `config.toml` sample confi
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
+  
+  # {{< version 0.2.18-lts.3 >}} [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
+  [params.cacheRemoteImages]
+    enable = false
+    # replace remote image url with local image url
+    replace = false
 
   # {{< version 0.2.17 >}} Define custom file paths
   # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
