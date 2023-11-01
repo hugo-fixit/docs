@@ -123,6 +123,8 @@ get remote images test:
 ![Lruihao](https://lruihao.cn/images/avatar.jpg)
 ![logo](https://lruihao.cn/logo.png)
 
+{{< image src="https://fixit.lruihao.cn/images/lighthouse.jpg" linked=false src_s="https://fixit.lruihao.cn/images/lighthouse-small.jpg" src_l="https://fixit.lruihao.cn/images/lighthouse-large.jpg" >}}
+
 不支持 `svg` 和 `avif` 等格式，需要手动设置高度或设置为 `loading="eager"`
 
 {{< image src="https://fixit.lruihao.cn/fixit.min.svg" height="64px" width="64px" linked=false >}}
