@@ -120,14 +120,15 @@ Adipisci ipsam quae odit impedit vitae, nemo facere magnam voluptates! Praesenti
 
 get remote images test:
 
-![Lruihao](https://lruihao.cn/images/avatar.jpg)
+![Lruihao](https://lruihao.cn/images/avatar.jpg?from=FixIt)
 ![logo](https://lruihao.cn/logo.png)
 
 {{< image src="https://fixit.lruihao.cn/images/lighthouse.jpg" linked=false src_s="https://fixit.lruihao.cn/images/lighthouse-small.jpg" src_l="https://fixit.lruihao.cn/images/lighthouse-large.jpg" >}}
 
-不支持 `svg` 和 `avif` 等格式，需要手动设置高度或设置为 `loading="eager"`
+不支持 `svg` 和 `avif` 等格式以及不支持请求式图片（如 gravatar），需要手动设置高度或设置为 `loading="eager"`
 
 {{< image src="https://fixit.lruihao.cn/fixit.min.svg" height="64px" width="64px" linked=false >}}
+![gravatar](https://gravatar.loli.net/avatar/fee47a2f4f2cc71f99a02b0a73ecfee0?s=32&d=mp)
 {{< image src="https://avif.io/images/butterfly.avif" loading="eager" linked=false >}}
 
 ## custom attribute
