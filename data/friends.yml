@@ -37,10 +37,10 @@
   url: https://www.fordece.cn/
   description: 某人的小栈
 
-- nickname: haiyux
-  avatar: https://haiyux.cc/avatar.png
-  url: https://haiyux.cc
-  description: haiyux's blog
+# - nickname: haiyux
+#   avatar: https://haiyux.cc/avatar.png
+#   url: https://haiyux.cc
+#   description: haiyux's blog
 
 - nickname: hiifong
   avatar: https://www.gravatar.com/avatar/ba22db80ba3c392985cff46ec8c80332?s=240&d=mp

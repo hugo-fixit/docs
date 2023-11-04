@@ -123,7 +123,7 @@ get remote images test:
 ![Lruihao](https://lruihao.cn/images/avatar.jpg?from=FixIt)
 ![logo](https://lruihao.cn/logo.png)
 
-{{< image src="https://fixit.lruihao.cn/images/lighthouse.jpg" linked=false src_s="https://fixit.lruihao.cn/images/lighthouse-small.jpg" src_l="https://fixit.lruihao.cn/images/lighthouse-large.jpg" >}}
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 
 不支持 `svg` 和 `avif` 等格式以及不支持请求式图片（如 gravatar），需要手动设置高度或设置为 `loading="eager"`
 
