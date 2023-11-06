@@ -19,11 +19,11 @@ categories:
 hiddenFromHomePage: true
 ---
 
-{{< version 0.2.0 changed >}}
-
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 
 <!--more-->
+
+## 快速使用
 
 如果视频只有一个部分，则仅需要视频的 BV `id`, 例如：
 
@@ -60,3 +60,35 @@ https://www.bilibili.com/video/BV1TJ411C7An?p=3
 呈现的输出效果如下：
 
 {{< bilibili id=BV1TJ411C7An p=3 >}}
+
+## 详细参数
+
+`bilibili` shortcode 有以下命名参数：
+
+- **id** _[必需]_（**第一个**位置参数）
+
+    视频的 BV `id`。
+
+- **p** _[可选]_（**第二个**位置参数）
+
+    多 P 视频的集数。从 `1` 开始计数，默认值为 `1`。
+
+- **autoplay** _[可选]_ {{< version 0.2.18-lts.4 >}}
+
+    是否自动播放，默认值为 `false`。
+
+- **poster** _[可选]_ {{< version 0.2.18-lts.4 >}}
+
+    是否展示封面，默认值为 `true`。
+
+- **muted** _[可选]_ {{< version 0.2.18-lts.4 >}}
+
+    是否静音，默认值为 `true`。
+
+- **danmaku** _[可选]_ {{< version 0.2.18-lts.4 >}}
+
+    是否开启弹幕，默认值为 `true`。
+
+- **t** _[可选]_ {{< version 0.2.18-lts.4 >}}
+
+    跳转到媒体的初始时间点，默认值为 `0`，单位：秒。

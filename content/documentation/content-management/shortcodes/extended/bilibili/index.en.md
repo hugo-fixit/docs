@@ -19,11 +19,11 @@ categories:
 hiddenFromHomePage: true
 ---
 
-{{< version 0.2.0 changed >}}
-
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 
 <!--more-->
+
+## Usages
 
 When the video only has one part, only the BV `id` of the video is required, e.g.:
 
@@ -61,3 +61,35 @@ Or
 The rendered output looks like this:
 
 {{< bilibili id=BV1TJ411C7An p=3 >}}
+
+## Options
+
+The `bilibili` shortcode has the following named parameters:
+
+- **id** _[required]_ (**first** positional parameter)
+
+    The BV `id` of the video.
+
+- **p** _[optional]_ (**second** positional parameter)
+
+    Number of episodes of multi-P videos. Counting starts from `1`, default value is `1`.
+
+- **autoplay** _[optional]_ {{< version 0.2.18-lts.4 >}}
+
+    Whether to autoplay, default value is `false`.
+
+- **poster** _[optional]_ {{< version 0.2.18-lts.4 >}}
+
+    Whether to show the poster, default value is `true`.
+
+- **muted** _[optional]_ {{< version 0.2.18-lts.4 >}}
+
+    Whether to mute, default value is `true`.
+
+- **danmaku** _[optional]_ {{< version 0.2.18-lts.4 >}}
+
+    Whether to enable danmaku, default value is `true`.
+
+- **t** _[optional]_ {{< version 0.2.18-lts.4 >}}
+
+    Jump to the initial time point of the media, default value is `0`, unit: second.
