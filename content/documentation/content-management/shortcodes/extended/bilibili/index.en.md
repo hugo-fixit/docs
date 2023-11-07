@@ -84,7 +84,7 @@ The `bilibili` shortcode has the following named parameters:
 
 - **muted** _[optional]_ {{< version 0.2.18-lts.4 >}}
 
-    Whether to mute, default value is `true`.
+    Whether to mute, default value is `false`.
 
 - **danmaku** _[optional]_ {{< version 0.2.18-lts.4 >}}
 

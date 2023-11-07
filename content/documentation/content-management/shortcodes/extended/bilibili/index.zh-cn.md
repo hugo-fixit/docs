@@ -83,7 +83,7 @@ https://www.bilibili.com/video/BV1TJ411C7An?p=3
 
 - **muted** _[可选]_ {{< version 0.2.18-lts.4 >}}
 
-    是否静音，默认值为 `true`。
+    是否静音，默认值为 `false`。
 
 - **danmaku** _[可选]_ {{< version 0.2.18-lts.4 >}}
 
