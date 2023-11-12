@@ -1032,13 +1032,13 @@ Please open the code block below to view the complete `config.toml` sample confi
     isPlainText = true
     isHTML = false
 
-# {{< version 0.2.15 changed >}} Options to make hugo output files
+# {{< version 0.2.18-lts.5 changed >}} Options to make hugo output files
 [outputs]
   home = ["HTML", "RSS", "JSON", "BaiduUrls"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML", "RSS"]
 ```
 
 ![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
@@ -1130,11 +1130,11 @@ Customize `browserconfig.xml` and `site.webmanifest` to set `theme-color` and `b
 | Language             | Hugo Code | HTML `lang` Attribute |              Theme Docs              |           Lunr.js Support            |
 | :------------------- | :-------: | :-------------------: | :----------------------------------: | :----------------------------------: |
 | English              |   `en`    |         `en`          | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| Simplified Chinese   |  `zh-cn`  |        `zh-CN`        | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
-| Traditional Chinese  |  `zh-tw`  |        `zh-TW`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Simplified Chinese   | `zh-cn`  |        `zh-CN`        | :(fa-regular fa-check-square fa-fw): | :(fa-regular fa-check-square fa-fw): |
+| Traditional Chinese  | `zh-tw`  |        `zh-TW`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 | French               |   `fr`    |         `fr`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 | Polish               |   `pl`    |         `pl`          |    :(fa-regular fa-square fa-fw):    |    :(fa-regular fa-square fa-fw):    |
-| Brazilian Portuguese |  `pt-br`  |        `pt-BR`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
+| Brazilian Portuguese | `pt-br`  |        `pt-BR`        |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 | Italian              |   `it`    |         `it`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 | Spanish              |   `es`    |         `es`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |
 | German               |   `de`    |         `de`          |    :(fa-regular fa-square fa-fw):    | :(fa-regular fa-check-square fa-fw): |

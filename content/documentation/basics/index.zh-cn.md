@@ -1029,13 +1029,13 @@ menu:
     isPlainText = true
     isHTML = false
 
-# {{< version 0.2.15 changed >}} 用于 Hugo 输出文档的设置
+# {{< version 0.2.18-lts.5 changed >}} 用于 Hugo 输出文档的设置
 [outputs]
   home = ["HTML", "RSS", "JSON", "BaiduUrls"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML", "RSS"]
 ```
 
 ![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
