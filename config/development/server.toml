@@ -1,0 +1,8 @@
+[[redirects]]
+  from = '/zh-cn/**'
+  status = 404
+  to = '/zh-cn/404.html'
+[[redirects]]
+  from = '/**'
+  status = 404
+  to = '/404.html'
