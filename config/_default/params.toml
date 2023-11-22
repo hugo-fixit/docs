@@ -391,6 +391,9 @@ disableThemeInject = false
   # whether to hide a page from search results
   # 是否在搜索结果中隐藏一篇文章
   hiddenFromSearch = false
+  # FixIt 0.2.18-lts.5 | NEW whether to hide a page from RSS feed
+  # FixIt 0.2.18-lts.5 | 新增 是否在 RSS 中隐藏一篇文章
+  hiddenFromRss = false
   # whether to enable twemoji
   # 是否使用 twemoji
   twemoji = false

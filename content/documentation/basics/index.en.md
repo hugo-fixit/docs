@@ -474,6 +474,8 @@ Please open the code block below to view the complete `config.toml` sample confi
     hiddenFromHomePage = false
     # {{< version 0.2.0 >}} whether to hide a page from search results
     hiddenFromSearch = false
+    # {{< version 0.2.18-lts.5 >}} whether to hide a page from RSS feed
+    hiddenFromRss = false
     # {{< version 0.2.0 >}} whether to enable twemoji
     twemoji = false
     # whether to enable lightgallery

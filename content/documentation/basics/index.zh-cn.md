@@ -472,6 +472,8 @@ menu:
     hiddenFromHomePage = false
     # {{< version 0.2.0 >}} 是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
+    # {{< version 0.2.18-lts.5 >}} 是否在 RSS 中隐藏一篇文章
+    hiddenFromRss = false
     # {{< version 0.2.0 >}} 是否使用 twemoji
     twemoji = false
     # 是否使用 lightgallery
