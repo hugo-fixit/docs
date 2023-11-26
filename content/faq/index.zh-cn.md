@@ -8,10 +8,6 @@ lightgallery: true
 
 > 本文档记录一些常见的问答，主要来自 [GitHub Discussions](https://github.com/hugo-fixit/FixIt/discussions) 和 QQ 群：`814031017`。
 
-{{< admonition question "为什么不支持早期版本的 Hugo？" false >}}
-由于 [面包屑导航相关函数](https://gohugo.io/content-management/sections/#example-breadcrumb-navigation) 在 [Hugo 发行版 v0.109.0](https://github.com/gohugoio/hugo/releases/tag/v0.109.0) 中被引入的，因此本主题只支持不低于 **0.109.0** 的 Hugo 版本。
-{{< /admonition >}}
-
 {{< admonition question "为什么推荐使用 Hugo extended 版本？" false >}}
 由于这个主题的一些特性需要将 :(fa-brands fa-sass fa-fw): SCSS 转换为 :(fa-brands fa-css3 fa-fw): CSS, 推荐使用 Hugo **extended** 版本来获得更好的使用体验。
 {{< /admonition >}}

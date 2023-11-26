@@ -33,16 +33,16 @@ menu:
 
 <!--more-->
 
-以下步骤可帮助您初始化新网站。如果您根本不了解 Hugo，我们强烈建议您通过阅读此 [快速入门文档](https://gohugo.io/getting-started/) 进一步了解它。或者如果你已经了解 Hugo，你也可以从一个模板直接开始：
+以下步骤可帮助您初始化新网站。如果您根本不了解 Hugo，我们强烈建议您通过阅读此 [快速入门文档][getting-started] 进一步了解它。或者如果你已经了解 Hugo，你也可以从一个模板直接开始：
 
-- [基于 Git 子模块的快速入门模板](https://github.com/hugo-fixit/hugo-fixit-blog-git)
-- [基于 Hugo 模块的快速入门模板](https://github.com/hugo-fixit/hugo-fixit-blog-go)
+- [基于 Git 子模块的快速入门模板][hugo-fixit-blog-git]
+- [基于 Hugo 模块的快速入门模板][hugo-fixit-blog-go]
 
 ## 准备
 
-由于 Hugo 提供的便利性，[Hugo](https://gohugo.io/) 本身是这个主题唯一的依赖。
+由于 Hugo 提供的便利性，[Hugo][hugo] 本身是这个主题唯一的依赖。
 
-只需为您的机器（**macOS**、**Linux**、**Windows**、**BSD**，以及任何可以运行 Go 编译器工具链的机器）安装最新版本的 [:(fa-regular fa-file-archive fa-fw): Hugo 扩展版 (>=0.109.0)](https://gohugo.io/getting-started/installing/) 即可。
+只需为您的机器（**macOS**、**Linux**、**Windows**、**BSD**，以及任何可以运行 Go 编译器工具链的机器）安装最新版本的 [:(fa-regular fa-file-archive fa-fw): Hugo 扩展版 (>=0.110.0)][hugo-installing] 即可。
 
 ## 创建网站
 
@@ -59,7 +59,7 @@ cd my_website
 
 在当前目录中初始化一个空的 Git 存储库。
 
-将 [FixIt](https://github.com/hugo-fixit/FixIt) 主题克隆到 `themes` 目录中，将其作为 [Git 子模块](https://git-scm.com/book/en/v2/Git-Tools-Submodules) 添加到您的项目中。
+将 [FixIt][fixit] 主题克隆到 `themes` 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中。
 
 ```bash
 git init
@@ -81,7 +81,7 @@ title = "我的 Hugo FixIt 网站"
 baseURL = "http://example.org/"
 # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
-# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
+# 网站语言，仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = true
@@ -164,6 +164,7 @@ hugo server
 ```bash
 hugo server --disableFastRender
 ```
+
 {{< /admonition >}}
 
 去查看 `http://localhost:1313`。

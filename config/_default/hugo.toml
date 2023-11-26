@@ -19,7 +19,7 @@ theme = ["FixIt", "shortcode-sponsor-log"]
 # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "en"
 # language code ["en", "zh-CN", "fr", "pl", ...]
-# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
+# 网站语言，仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
 # language name ["English", "简体中文", "Français", "Polski", ...]
 # 语言名称 ["English", "简体中文", "Français", "Polski", ...]
@@ -31,9 +31,6 @@ hasCJKLanguage = false
 # default amount of posts in each pages
 # 默认每页列表显示的文章数目
 paginate = 12
-# google analytics code [UA-XXXXXXXX-X]
-# 谷歌分析代号 [UA-XXXXXXXX-X]
-googleAnalytics = ""
 # copyright description used only for seo schema
 # 版权描述，仅仅用于 SEO
 copyright = ""

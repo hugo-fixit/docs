@@ -8,10 +8,6 @@ lightgallery: true
 
 > This documentation records some common questions and answers, mainly from [GitHub Discussions](https://github.com/hugo-fixit/FixIt/discussions).
 
-{{< admonition question "Why not support earlier versions of Hugo?" false >}}
-Since the [breadcrumb navigation related function](https://gohugo.io/content-management/sections/#example-breadcrumb-navigation) was introduced in the [Hugo release v0.109.0](https://github.com/gohugoio/hugo/releases/tag/v0.109.0), this theme only supports Hugo versions not lower than **0.109.0**.
-{{< /admonition >}}
-
 {{< admonition question "Why the Hugo extended edition is recommended?" false >}}
 Since some features of this theme need to processes :(fa-brands fa-sass fa-fw): SCSS to :(fa-brands fa-css3 fa-fw): CSS, it is recommended to use Hugo **extended** version for better experience.
 {{< /admonition >}}
