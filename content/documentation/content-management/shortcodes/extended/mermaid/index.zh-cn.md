@@ -482,7 +482,7 @@ Mermaid 的 C4 图语法与 PlantUML 兼容。以下是示例：
 
 ### 站点范围主题
 
-您可以通过 `config.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
+您可以通过 `hugo.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
 
 ### 图表特定主题
 

@@ -481,7 +481,7 @@ Head to the [Theme Configuration | Mermaid][mermaid-theming] page to learn more 
 
 ### Site-wide Themes
 
-You can configure mermaid themes globally in `config.toml` via the `params.mermaid` parameter.
+You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid` parameter.
 
 ### Diagram-specific Themes
 

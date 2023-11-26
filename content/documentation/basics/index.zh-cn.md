@@ -83,7 +83,7 @@ git submodule set-branch -b dev themes/FixIt
 <!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-go" "基于 Hugo 模块的快速入门模板" "" true >}}
 
-> 以这种方式，无需要在 `config.toml` 中配置 `theme = "FixIt"`。
+> 以这种方式，无需要在 `hugo.toml` 中配置 `theme = "FixIt"`。
 
 将 [Hugo 模块][hugo-modules] 用于主题的最简单方法是将其导入配置中。请参阅 [使用 Hugo 模块][use-hugo-modules]。
 
@@ -98,11 +98,11 @@ git submodule set-branch -b dev themes/FixIt
 
 ## 完整配置
 
-在开始配置之前，建议您执行以下命令，将主题的默认 [config.toml][config] 复制到您的项目中：
+在开始配置之前，建议您执行以下命令，将主题的默认 [hugo.toml][config] 复制到您的项目中：
 
 ```bash
-mv config.toml config.old.toml
-cp themes/FixIt/config.toml config.toml
+mv hugo.toml config.old.toml
+cp themes/FixIt/hugo.toml hugo.toml
 ```
 
 ### 菜单配置 {#menu-configuration}
@@ -168,7 +168,7 @@ menu:
 
 除了 [Hugo 全局配置][hugo-config] 和 [菜单配置](#menu-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数。
 
-请打开下面的代码块查看完整的 `config.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
+请打开下面的代码块查看完整的 `hugo.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
 ```toml
 [params]
@@ -1271,7 +1271,7 @@ defaultContentLanguage = "zh-cn"
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
 [use-hugo-modules]: https://gohugo.io/hugo-modules/use-modules/
-[config]: https://github.com/hugo-fixit/FixIt/blob/master/config.toml
+[config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/overview/configuration/
 [lunrjs]: https://lunrjs.com/

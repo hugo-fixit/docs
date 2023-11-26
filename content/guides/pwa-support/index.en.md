@@ -128,7 +128,7 @@ type: "offline"
 
 ### Enable the `enablePWA` option {#enable-pwa}
 
-Go to `config.toml`, add or change the option `enablePWA = true` under `[params]`.
+Go to `hugo.toml`, add or change the option `enablePWA = true` under `[params]`.
 
 ```toml
 [params]

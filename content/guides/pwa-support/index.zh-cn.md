@@ -128,7 +128,7 @@ type: "offline"
 
 ### 开启 `enablePWA` 选项 {#enable-pwa}
 
-前往 `config.toml`, 添加/修改 `[params]` 配置项下 `enablePWA` 选项的值为 `true`。
+前往 `hugo.toml`, 添加/修改 `[params]` 配置项下 `enablePWA` 选项的值为 `true`。
 
 ```toml
 [params]

@@ -84,7 +84,7 @@ git submodule set-branch -b dev themes/FixIt
 <!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-go" "A Template base on Hugo Module" "" true >}}
 
-> In this way, you don't need to configure `theme = "FixIt"` in `config.toml`.
+> In this way, you don't need to configure `theme = "FixIt"` in `hugo.toml`.
 
 The easiest way to use a [Module][hugo-modules] for a theme is to import it in the config. See [Use Hugo Modules][use-hugo-modules].
 
@@ -99,11 +99,11 @@ The easiest way to use a [Module][hugo-modules] for a theme is to import it in t
 
 ## Full Configuration
 
-Before starting configuration, it is recommended that you execute the following command to copy the default [config.toml][config] of theme to your project:
+Before starting configuration, it is recommended that you execute the following command to copy the default [hugo.toml][config] of theme to your project:
 
 ```bash
-mv config.toml config.old.toml
-cp themes/FixIt/config.toml config.toml
+mv hugo.toml hugo.old.toml
+cp themes/FixIt/hugo.toml hugo.toml
 ```
 
 ### Menu Configuration {#menu-configuration}
@@ -170,7 +170,7 @@ menu:
 
 In addition to [Hugo global configuration][hugo-config] and [menu configuration](#menu-configuration), **FixIt** lets you define the following parameters in your site configuration.
 
-Please open the code block below to view the complete `config.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
+Please open the code block below to view the complete `hugo.toml` sample configuration :(fa-regular fa-hand-point-down fa-fw)::
 
 ```toml
 [params]
@@ -1279,7 +1279,7 @@ By the way, as these translations could be used by other people, please take the
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
 [use-hugo-modules]: https://gohugo.io/hugo-modules/use-modules/
-[config]: https://github.com/hugo-fixit/FixIt/blob/master/config.toml
+[config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/overview/configuration/
 [lunrjs]: https://lunrjs.com/
