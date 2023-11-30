@@ -1,0 +1,9 @@
+<ul class="sponsor-log">
+{{- range $index, $log := .Site.Data.sponsor_log -}}
+  <li>
+    <div><strong>{{ dict "Sponsor" $log.sponsor "Origin" (T (printf "sponsorLog.origin.%v" $log.origin) | default $log.origin) "Amount" $log.amount | T "sponsorLog.content" | $.Page.RenderString }}</strong></div>
+    {{- with $log.remark -}}<div class="text-secondary">{{ . | $.Page.RenderString }}</div>{{- end -}}
+    <small class="text-secondary">{{ $log.date }}</small>
+  </li>
+{{- end -}}
+</ul>

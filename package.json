@@ -20,12 +20,17 @@
   "license": "MIT",
   "author": "Lruihao (https://lruihao.cn)",
   "scripts": {
+    "build": "cross-env HUGO_MODULE_REPLACEMENTS=\"->\" hugo -v --gc --minify",
     "fix:md": "markdownlint-cli2 \"content/**/*.md\" --fix && autocorrect \"content/**/*.md\" --fix",
     "lint:md": "markdownlint-cli2 \"content/**/*.md\" && autocorrect \"content/**/*.md\" --lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "server": "rm -rf _vendor && cross-env HUGO_MODULE_REPLACEMENTS=\"->\" hugo server  -D --disableFastRender --navigateToChanged --ignoreCache --bind 0.0.0.0",
+    "server:production": "npm run server -- -e production",
+    "update:theme": "sed -i '' '8s/^/# /' config/_default/module.toml && hugo mod get -u github.com/hugo-fixit/FixIt@master && hugo mod tidy && sed -i '' '8s/^# //' config/_default/module.toml"
   },
   "devDependencies": {
     "autocorrect-node": "^2.8.4",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.0",
     "lint-staged": "^15.1.0",
     "markdownlint-cli2": "^0.11.0",

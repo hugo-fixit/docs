@@ -1,0 +1,12 @@
+# Translations for Simplified Chinese
+# 简体中文的翻译
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+[sponsorLog]
+content = "{{ .Sponsor }} 通过 {{ .Origin }} 打赏了 {{ .Amount }}"
+
+[sponsorLog.origin]
+alipay = "支付宝"
+bitcoin = "比特币"
+paypal = "贝宝"
+wechatpay = "微信"

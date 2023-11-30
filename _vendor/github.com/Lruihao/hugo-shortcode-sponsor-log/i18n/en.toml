@@ -1,0 +1,11 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+[sponsorLog]
+content = "{{ .Sponsor }} sponsored {{ .Amount }} via {{ .Origin }}"
+
+[sponsorLog.origin]
+alipay = "Alipay"
+bitcoin = "Bitcoin"
+paypal = "PayPal"
+wechatpay = "WeChat Pay"

@@ -1,0 +1,18 @@
+# -------------------------------------------------------------------------------------
+# Modules Configure | 模块配置
+# See: https://gohugo.io/hugo-modules/configuration/#module-config-imports
+# -------------------------------------------------------------------------------------
+
+# equivalent to `env HUGO_MODULE_REPLACEMENTS="github.com/hugo-fixit/FixIt -> FixIt"`
+# If you want to update the theme, comment out the next line, then run `hugo mod get -u`, then uncomment it.
+replacements = "github.com/hugo-fixit/FixIt -> FixIt"
+
+[[imports]]
+  path = "github.com/hugo-fixit/FixIt"
+
+[[imports]]
+  path = "github.com/Lruihao/hugo-shortcode-sponsor-log"
+
+[hugoVersion]
+  extended = true
+  min = "0.110.0"

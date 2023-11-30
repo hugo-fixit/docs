@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+hugo mod vendor && git add _vendor/
 npx lint-staged
