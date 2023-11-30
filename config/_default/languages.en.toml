@@ -4,6 +4,9 @@
 # -------------------------------------------------------------------------------------
 
 weight = 1
+# language directory
+# 语言目录
+contentDir = "content/en"
 # language code
 # 网站语言
 languageCode = "en"

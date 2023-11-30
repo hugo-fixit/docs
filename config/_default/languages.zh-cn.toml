@@ -4,8 +4,11 @@
 # -------------------------------------------------------------------------------------
 
 weight = 2
+# language directory
+# 语言目录
+contentDir = "content/zh-cn"
 # language code, only CN capitalized here
-# 网站语言, 仅在这里 CN 大写
+# 网站语言，仅在这里 CN 大写
 languageCode = "zh-CN"
 # language name
 # 语言名称
