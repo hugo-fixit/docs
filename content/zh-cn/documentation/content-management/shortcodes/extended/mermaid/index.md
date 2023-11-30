@@ -25,13 +25,13 @@ hiddenFromHomePage: true
 
 <!--more-->
 
-[Mermaid][mermaid] 是一个可以帮助你在文章中绘制图表和流程图的库, 类似 Markdown 的语法。
+[Mermaid][mermaid] 是一个可以帮助你在文章中绘制图表和流程图的库，类似 Markdown 的语法。
 
 只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可。
 
 ## 流程图 {#flowchart}
 
-一个 **流程图** `mermaid` 示例:
+一个 **流程图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -43,7 +43,7 @@ graph LR;
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 graph LR;
@@ -55,7 +55,7 @@ graph LR;
 
 ## 时序图 {#sequence-diagram}
 
-一个 **时序图** `mermaid` 示例:
+一个 **时序图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -73,7 +73,7 @@ sequenceDiagram
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 sequenceDiagram
@@ -91,7 +91,7 @@ sequenceDiagram
 
 ## 类图 {#class-diagram}
 
-一个 **类图** `mermaid` 示例:
+一个 **类图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -119,7 +119,7 @@ classDiagram
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 classDiagram
@@ -175,7 +175,7 @@ stateDiagram-v2
 
 ## 实体关系图 {#entity-relationship-diagram}
 
-一个 **实体关系图** `mermaid` 示例:
+一个 **实体关系图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -186,7 +186,7 @@ erDiagram
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 erDiagram
@@ -197,7 +197,7 @@ erDiagram
 
 ## 用户体验旅程图 {#user-journey}
 
-一个 **用户体验旅程图** `mermaid` 示例:
+一个 **用户体验旅程图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -213,7 +213,7 @@ journey
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 journey
@@ -229,41 +229,41 @@ journey
 
 ## 甘特图 {#gantt}
 
-一个 **甘特图** `mermaid` 示例:
+一个 **甘特图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
 gantt
-dateFormat  YYYY-MM-DD
+dateFormat YYYY-MM-DD
 title Adding GANTT diagram to mermaid
 excludes weekdays 2014-01-10
 
 section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2              :         des4, after des3, 5d
+Completed task            :done,   des1, 2014-01-06,2014-01-08
+Active task               :active, des2, 2014-01-09, 3d
+Future task               :        des3, after des2, 5d
+Future task2              :        des4, after des3, 5d
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 gantt
-dateFormat  YYYY-MM-DD
+dateFormat YYYY-MM-DD
 title Adding GANTT diagram to mermaid
 excludes weekdays 2014-01-10
 
 section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2              :         des4, after des3, 5d
+Completed task            :done,   des1, 2014-01-06,2014-01-08
+Active task               :active, des2, 2014-01-09, 3d
+Future task               :        des3, after des2, 5d
+Future task2              :        des4, after des3, 5d
 {{< /mermaid >}}
 
 ## 饼图 {#pie}
 
-一个 **饼图** `mermaid` 示例:
+一个 **饼图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -274,7 +274,7 @@ pie
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 pie
@@ -285,7 +285,7 @@ pie
 
 ## 依赖图 {#requirement-diagram}
 
-一个 **依赖图** `mermaid` 示例:
+一个 **依赖图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -306,7 +306,7 @@ test_entity - satisfies -> test_req
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 requirementDiagram
@@ -325,10 +325,9 @@ type: simulation
 test_entity - satisfies -> test_req
 {{< /mermaid >}}
 
-
 ## Git 图 {#git-graph}
 
-一个 **Git 图** `mermaid` 示例:
+一个 **Git 图** `mermaid` 示例：
 
 ```markdown
 {{</* mermaid */>}}
@@ -346,7 +345,7 @@ gitGraph
 {{</* /mermaid */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< mermaid >}}
 gitGraph
@@ -482,7 +481,7 @@ Mermaid 的 C4 图语法与 PlantUML 兼容。以下是示例：
 
 ### 站点范围主题
 
-您可以通过 `hugo.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
+你可以通过 `hugo.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
 
 ### 图表特定主题
 

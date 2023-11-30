@@ -25,6 +25,7 @@ hiddenFromHomePage: true
 Emoji 可以通过多种方式在 Hugo 项目中启用。
 
 <!--more-->
+<!-- markdownlint-disable-file -->
 
 [`emojify`](https://gohugo.io/functions/emojify/) 方法可以直接在模板中调用，或者使用 [行内 Shortcodes](https://gohugo.io/templates/shortcode-templates#inline-shortcodes)。
 
@@ -110,9 +111,9 @@ Emoji 可以通过多种方式在 Hugo 项目中启用。
 
 ### 戴帽子的表情
 
-|       图标        | 代码              | 图标 | 代码 |
-| :---------------: | ----------------- | :--: | ---- |
-| :cowboy_hat_face: | `cowboy_hat_face` |      |      |
+|       图标        | 代码              | 图标  | 代码 |
+| :---------------: | ----------------- | :---: | ---- |
+| :cowboy_hat_face: | `cowboy_hat_face` |       |      |
 
 ### 戴眼镜的表情
 
@@ -420,8 +421,8 @@ Emoji 可以通过多种方式在 Hugo 项目中启用。
 
 ### 两栖动物
 
-|  icon  | code   | icon | code |
-| :----: | ------ | :--: | ---- |
+|  icon  | code   | icon  | code |
+| :----: | ------ | :---: | ---- |
 | :frog: | `frog` |
 
 ### 爬虫类
@@ -671,8 +672,8 @@ Emoji 可以通过多种方式在 Hugo 项目中启用。
 
 ### 旅馆
 
-|      icon      | code           | icon | code |
-| :------------: | -------------- | :--: | ---- |
+|      icon      | code           | icon  | code |
+| :------------: | -------------- | :---: | ---- |
 | :bellhop_bell: | `bellhop_bell` |
 
 ### 时间

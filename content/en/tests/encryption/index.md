@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ### 13 center-quote
 
 {{% center-quote %}}
-**hello** *world*  
+**hello** _world_
 this is a center-quote shortcode example.
 {{% /center-quote %}}
 
@@ -262,6 +262,7 @@ This is a `fixit-encryptor` shortcode example.
 *world*
 
 {{< admonition >}}
+<!-- markdownlint-disable-next-line MD037 -->
 The `fixit-encryptor` shortcode was supported in version {{</* version 0.2.15 */>}}.
 {{< /admonition >}}
 {{% /fixit-encryptor %}}

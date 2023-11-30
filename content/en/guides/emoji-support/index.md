@@ -25,6 +25,7 @@ hiddenFromHomePage: true
 Emoji can be enabled in a Hugo project in a number of ways.
 
 <!--more-->
+<!-- markdownlint-disable-file -->
 
 The [`emojify`](https://gohugo.io/functions/emojify/) function can be called directly in templates or [Inline Shortcodes](https://gohugo.io/templates/shortcode-templates#inline-shortcodes).
 
@@ -110,9 +111,9 @@ The following **cheat sheet** is a useful reference for emoji shorthand codes.
 
 ### Face Hat
 
-|       icon        | code              | icon | code |
-| :---------------: | ----------------- | :--: | ---- |
-| :cowboy_hat_face: | `cowboy_hat_face` |      |      |
+|       icon        | code              | icon  | code |
+| :---------------: | ----------------- | :---: | ---- |
+| :cowboy_hat_face: | `cowboy_hat_face` |       |      |
 
 ### Face Glasses
 
@@ -420,9 +421,9 @@ The following **cheat sheet** is a useful reference for emoji shorthand codes.
 
 ### Animal Amphibian
 
-|  icon  | code   | icon | code |
-| :----: | ------ | :--: | ---- |
-| :frog: | `frog` |
+|  icon  | code   | icon  | code |
+| :----: | ------ | :---: | ---- |
+| :frog: | `frog` |       |      |
 
 ### Animal Reptile
 
@@ -671,9 +672,9 @@ The following **cheat sheet** is a useful reference for emoji shorthand codes.
 
 ### Hotel
 
-|      icon      | code           | icon | code |
-| :------------: | -------------- | :--: | ---- |
-| :bellhop_bell: | `bellhop_bell` |
+|      icon      | code           | icon  | code |
+| :------------: | -------------- | :---: | ---- |
+| :bellhop_bell: | `bellhop_bell` |       |      |
 
 ### Time
 

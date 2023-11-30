@@ -32,51 +32,51 @@ mapbox:
 
 `mapbox` shortcode 有以下命名参数来使用 Mapbox GL JS:
 
-* **lng** *[必需]*（**第一个**位置参数）
+- **lng** _[必需]_（**第一个**位置参数）
 
     地图初始中心点的经度，以度为单位。
 
-* **lat** *[必需]*（**第二个**位置参数）
+- **lat** _[必需]_（**第二个**位置参数）
 
     地图初始中心点的纬度，以度为单位。
 
-* **zoom** *[可选]*（**第三个**位置参数）
+- **zoom** _[可选]_（**第三个**位置参数）
 
     地图的初始缩放级别，默认值是 `10`。
 
-* **marked** *[可选]*（**第四个**位置参数）
+- **marked** _[可选]_（**第四个**位置参数）
 
     是否在地图的初始中心点添加图钉，默认值是 `true`。
 
-* **light-style** *[可选]*（**第五个**位置参数）
+- **light-style** _[可选]_（**第五个**位置参数）
 
     浅色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-* **dark-style** *[可选]*（**第六个**位置参数）
+- **dark-style** _[可选]_（**第六个**位置参数）
 
     深色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-* **navigation** *[可选]*
+- **navigation** *[可选]*
 
     是否添加 [NavigationControl][navigationcontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-* **geolocate** *[可选]*
+- **geolocate** *[可选]*
 
     是否添加 [GeolocateControl][geolocatecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-* **scale** *[可选]*
+- **scale** *[可选]*
 
     是否添加 [ScaleControl][scalecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-* **fullscreen** *[可选]*
+- **fullscreen** *[可选]*
 
    是否添加 [FullscreenControl][fullscreencontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-* **width** *[可选]*
+- **width** *[可选]*
 
     地图的宽度，默认值是 `100%`。
 
-* **height** *[可选]*
+- **height** *[可选]*
 
     地图的高度，默认值是 `20rem`。
 

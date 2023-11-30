@@ -29,11 +29,11 @@ code:
 
 **ECharts** 是一个帮助你生成交互式数据可视化的库。
 
-ECharts 提供了常规的 [折线图][line], [柱状图][line], [散点图][scatter], [饼图][pie], [K 线图][candlestick], 用于统计的 [盒形图][boxplot], 用于地理数据可视化的 [地图][map], [热力图][heatmap], [线图][lines], 用于关系数据可视化的 [关系图][graph], [treemap][treemap], [旭日图][sunburst], 多维数据可视化的 [平行坐标][parallel], 还有用于 BI 的 [漏斗图][funnel], [仪表盘][gauge], 并且支持图与图之间的混搭。
+ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scatter], [饼图][pie], [K 线图][candlestick], 用于统计的 [盒形图][boxplot], 用于地理数据可视化的 [地图][map], [热力图][heatmap], [线图][lines], 用于关系数据可视化的 [关系图][graph], [treemap][treemap], [旭日图][sunburst], 多维数据可视化的 [平行坐标][parallel], 还有用于 BI 的 [漏斗图][funnel], [仪表盘][gauge], 并且支持图与图之间的混搭。
 
 只需在 `echarts` shortcode 中以 `JSON`/`YAML`/`TOML`格式插入 ECharts 选项即可。
 
-一个 `JSON` 格式的 `echarts` 示例:
+一个 `JSON` 格式的 `echarts` 示例：
 
 ```json
 {{</* echarts */>}}
@@ -108,7 +108,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][line], [散点图][sca
 {{</* /echarts */>}}
 ```
 
-一个 `YAML` 格式的 `echarts` 示例:
+一个 `YAML` 格式的 `echarts` 示例：
 
 ```yaml
 {{</* echarts */>}}
@@ -208,7 +208,7 @@ series:
 {{</* /echarts */>}}
 ```
 
-一个 `TOML` 格式的 `echarts` 示例:
+一个 `TOML` 格式的 `echarts` 示例：
 
 ```toml
 {{</* echarts */>}}
@@ -330,7 +330,7 @@ data = [
 {{</* /echarts */>}}
 ```
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 {{< echarts >}}
 {
@@ -403,15 +403,15 @@ data = [
 }
 {{< /echarts >}}
 
-`echarts` shortcode 还有以下命名参数:
+`echarts` shortcode 还有以下命名参数：
 
-* **width** *[可选]* (**第一个**位置参数)
+- **width** _[可选]_ (**第一个**位置参数)
 
-    {{< version 0.2.0 >}} 数据可视化的宽度, 默认值是 `100%`
+    {{< version 0.2.0 >}} 数据可视化的宽度，默认值是 `100%`
 
-* **height** *[可选]* (**第二个**位置参数)
+- **height** _[可选]_ (**第二个**位置参数)
 
-    {{< version 0.2.0 >}} 数据可视化的高度, 默认值是 `30rem`
+    {{< version 0.2.0 >}} 数据可视化的高度，默认值是 `30rem`
 
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/zh/option.html#series-line

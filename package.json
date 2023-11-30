@@ -21,8 +21,8 @@
   "author": "Lruihao (https://lruihao.cn)",
   "scripts": {
     "build": "cross-env HUGO_MODULE_REPLACEMENTS=\"->\" hugo -v --gc --minify",
-    "fix:md": "markdownlint-cli2 \"content/**/*.md\" --fix && autocorrect \"content/**/*.md\" --fix",
-    "lint:md": "markdownlint-cli2 \"content/**/*.md\" && autocorrect \"content/**/*.md\" --lint",
+    "fix:md": "autocorrect content --fix && markdownlint-cli2 \"content/**/*.md\" --fix",
+    "lint:md": "autocorrect content --lint && markdownlint-cli2 \"content/**/*.md\"",
     "prepare": "husky install",
     "server": "rm -rf _vendor && cross-env HUGO_MODULE_REPLACEMENTS=\"->\" hugo server  -D --disableFastRender --navigateToChanged --ignoreCache --bind 0.0.0.0",
     "server:production": "npm run server -- -e production",

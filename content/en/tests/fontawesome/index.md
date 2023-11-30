@@ -31,16 +31,16 @@ menu:
 
 ## Fixed width
 
-:(fa-solid fa-skating fa-fw fa-2x): Skating  
-:(fa-solid fa-skiing fa-fw fa-2x): Skiing  
+:(fa-solid fa-skating fa-fw fa-2x): Skating\
+:(fa-solid fa-skiing fa-fw fa-2x): Skiing\
 :(fa-solid fa-skiing-nordic fa-fw fa-2x): Nordic Skiing
 
 ## List icon
 
-:(fa-regular fa-check-square): Eat a hamburger  
+:(fa-regular fa-check-square): Eat a hamburger\
 :(fa-regular fa-square): Get a girlfriend
 
-:(fa-regular fa-check-circle): Go to beach  
+:(fa-regular fa-check-circle): Go to beach\
 :(fa-regular fa-circle): Go to Tibet
 
 ## Rotate

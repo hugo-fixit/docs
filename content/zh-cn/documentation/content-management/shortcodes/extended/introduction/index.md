@@ -71,41 +71,41 @@ This is a **right-aligned** paragraph.
 
 `link` shortcode 有以下命名参数：
 
-* **href** *[必需]*（**第一个**位置参数）
+- **href** _[必需]_（**第一个**位置参数）
 
     链接的目标。
 
-* **content** *[可选]*（**第二个**位置参数）
+- **content** _[可选]_（**第二个**位置参数）
 
     链接的内容，默认值是 **href** 参数的值。
 
     *支持 Markdown 或者 HTML 格式。*
 
-* **title** *[可选]*（**第三个**位置参数）
+- **title** _[可选]_（**第三个**位置参数）
 
     HTML `a` 标签 的 `title` 属性，当悬停在链接上会显示的提示。
 
-* **card** *[可选]*（**第四个**位置参数）{{< version 0.2.12 >}}
+- **card** _[可选]_（**第四个**位置参数）{{< version 0.2.12 >}}
 
     是否显示为卡片式链接，默认值 `false`。
 
-* **download** *[可选]* {{< version 0.2.12 >}}
+- **download** _[可选]_ {{< version 0.2.12 >}}
 
     HTML `a` 标签 的 `download` 属性。
 
-* **class** *[可选]*
+- **class** *[可选]*
 
     HTML `a` 标签 的 `class` 属性。
 
-* **rel** *[可选]*
+- **rel** *[可选]*
 
     HTML `a` 标签 的 `rel` 补充属性。
 
-* **external-icon** *[可选]* {{< version 0.2.14 >}}
+- **external-icon** _[可选]_ {{< version 0.2.14 >}}
 
     是否自动显示外链图标。
 
-* **noreferrer** *[可选]* {{< version 0.2.16 >}}
+- **noreferrer** _[可选]_ {{< version 0.2.16 >}}
 
     `rel` 属性是否添加 `noreferrer`, 默认：`true`。
 
@@ -127,9 +127,9 @@ This is a **right-aligned** paragraph.
 
 呈现的输出效果如下：
 
-* {{< link "https://assemble.io" >}}
-* {{< link "mailto:contact@revolunet.com" >}}
-* {{< link "https://assemble.io" Assemble >}}
+- {{< link "https://assemble.io" >}}
+- {{< link "mailto:contact@revolunet.com" >}}
+- {{< link "https://assemble.io" Assemble >}}
 
 一个带有标题的 `link` 示例：
 
@@ -139,7 +139,7 @@ This is a **right-aligned** paragraph.
 {{</* link href="https://github.com/upstage/" content=Upstage title="Visit Upstage!" */>}}
 ```
 
-呈现的输出效果如下 （将鼠标悬停在链接上，会有一行提示）:
+呈现的输出效果如下（将鼠标悬停在链接上，会有一行提示）:
 
 {{< link "https://github.com/upstage/" Upstage "Visit Upstage!" >}}
 
@@ -179,55 +179,55 @@ This is a **right-aligned** paragraph.
 
 `image` shortcode 有以下命名参数：
 
-* **src** *[必需]*（**第一个**位置参数）
+- **src** _[必需]_（**第一个**位置参数）
 
     图片的 URL。
 
-* **alt** *[可选]*（**第二个**位置参数）
+- **alt** _[可选]_（**第二个**位置参数）
 
     图片无法显示时的替代文本，默认值是 **src** 参数的值。
 
     *支持 Markdown 或者 HTML 格式。*
 
-* **caption** *[可选]*（**第三个**位置参数）
+- **caption** _[可选]_（**第三个**位置参数）
 
     图片标题。
 
     *支持 Markdown 或者 HTML 格式。*
 
-* **title** *[可选]*
+- **title** *[可选]*
 
     当悬停在图片上会显示的提示。
 
-* **class** *[可选]*
+- **class** *[可选]*
 
     HTML `figure` 标签的 `class` 属性。
 
-* **src_s** *[可选]*
+- **src_s** *[可选]*
 
     图片缩略图的 URL, 用在画廊模式中，默认值是 **src** 参数的值。
 
-* **src_l** *[可选]*
+- **src_l** *[可选]*
 
     高清图片的 URL, 用在画廊模式中，默认值是 **src** 参数的值。
 
-* **height** *[可选]*
+- **height** *[可选]*
 
     图片的 `height` 属性。
 
-* **width** *[可选]*
+- **width** *[可选]*
 
     图片的 `width` 属性。
 
-* **linked** *[可选]*
+- **linked** *[可选]*
 
     图片是否需要被链接，默认值是 `true`。
 
-* **rel** *[可选]*
+- **rel** *[可选]*
 
     HTML `a` 标签 的 `rel` 补充属性，仅在 **linked** 属性设置成 `true` 时有效。
 
-* **loading** *[可选]* {{< version 0.2.18 >}}
+- **loading** _[可选]_ {{< version 0.2.18 >}}
 
     HTML `a` 标签 的 `loading` 补充属性，可选值：`eager`、`lazy`，默认值是 `lazy`。
 
@@ -297,15 +297,15 @@ This is a **right-aligned** paragraph.
 
 `admonition` shortcode 有以下命名参数：
 
-* **type** *[必需]*（**第一个**位置参数）
+- **type** _[必需]_（**第一个**位置参数）
 
     `admonition` 横幅的类型，默认值是 `note`。
 
-* **title** *[可选]*（**第二个**位置参数）
+- **title** _[可选]_（**第二个**位置参数）
 
     `admonition` 横幅的标题，默认值是 **type** 参数的值。（支持 markdown）{{< version 0.2.14 changed >}}
 
-* **open** *[可选]*（**第三个**位置参数） {{< version 0.2.0 changed >}}
+- **open** _[可选]_（**第三个**位置参数） {{< version 0.2.0 changed >}}
 
     横幅内容是否默认展开，默认值是 `true`。
 
@@ -396,7 +396,7 @@ console.log('Hello FixIt!');
 
 `details` shortcode 只有一个参数：
 
-* **summary** *[可选]* (**第一个**位置参数）
+- **summary** _[可选]_ (**第一个**位置参数）
 
     summary 标签的内容（支持 markdown）
 
@@ -428,7 +428,7 @@ console.log('Hello FixIt!');
 
 ```go-html-template
 {{</* center-quote */>}}
-**hello** *world*  
+**hello** *world*
 this is a center-quote shortcode example.
 {{</* /center-quote */>}}
 ```
@@ -436,7 +436,7 @@ this is a center-quote shortcode example.
 呈现的输出效果如下：
 
 {{< center-quote >}}
-**hello** *world*  
+**hello** _world_
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
@@ -444,7 +444,7 @@ this is a center-quote shortcode example.
 
 {{< version 0.2.15 >}}
 
-您可以使用 `fixit-encryptor` shortcode 来加密部分内容。
+你可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 
 完整文档请查看页面 [内容加密][content-encryption]。
 
@@ -456,11 +456,11 @@ this is a center-quote shortcode example.
 
 `raw` shortcode 只有一个参数：
 
-* **tag** *[可选]* (**第一个**位置参数）
+- **tag** _[可选]_ (**第一个**位置参数）
 
     原始内容的父级元素 HTML 标签，默认值是 `div`。
 
-一个 `raw` 示例:
+一个 `raw` 示例：
 
 ```go-html-template
 {{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
@@ -490,17 +490,17 @@ this is a center-quote shortcode example.
 
 `reward` shortcode 有以下命名参数：
 
-* **wechatpay** *[可选]*（**第一个**位置参数）
-* **alipay** *[可选]*（**第二个**位置参数）
-* **paypal** *[可选]*（**第三个**位置参数）
-* **bitcoin** *[可选]*（**第四个**位置参数）
-* **author** *[可选]*（**第五个**位置参数）
-* **comment** *[可选]*（**第六个**位置参数）
-* **mode** *[可选]*（**第七个**位置参数）
+- **wechatpay** _[可选]_（**第一个**位置参数）
+- **alipay** _[可选]_（**第二个**位置参数）
+- **paypal** _[可选]_（**第三个**位置参数）
+- **bitcoin** _[可选]_（**第四个**位置参数）
+- **author** _[可选]_（**第五个**位置参数）
+- **comment** _[可选]_（**第六个**位置参数）
+- **mode** _[可选]_（**第七个**位置参数）
 
     {{< version 0.2.18 >}} 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
 
-一个 `reward` 示例:
+一个 `reward` 示例：
 
 ```go-html-template
 {{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" */>}}

@@ -513,7 +513,7 @@ The HTML looks like this:
 
 ### Syntax Highlighting
 
-- [List of Chroma Highlighting Languages  - Hugo](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
+- [List of Chroma Highlighting Languages - Hugo](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
 - [Chroma supported languages - Chroma](https://github.com/alecthomas/chroma#supported-languages)
 
 [GFM]^(GitHub Flavored Markdown) also supports syntax highlighting.
@@ -795,7 +795,7 @@ With a reference later in the document defining the URL location:
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 ```
 
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 {{< admonition tip >}}
 **FixIt** theme has [special shortcode for image](../theme-documentation-extended-shortcodes#image), which provides more features.

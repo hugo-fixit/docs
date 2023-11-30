@@ -27,23 +27,23 @@ hiddenFromHomePage: true
 
 `typeit` shortcode 有以下命名参数：
 
-* **tag** *[可选]*
+- **tag** *[可选]*
 
     内容容器的 HTML 标签。
 
-* **code** *[可选]*
+- **code** *[可选]*
 
     指定代码内容语言类型，可以实习语法高亮。
 
-* **code-link** *[可选]*
+- **code-link** *[可选]*
 
     是否解析代码内容中的 Markdown 链接，默认：`false`。
 
-* **group** *[可选]*
+- **group** *[可选]*
 
     内容分组，相同分组的内容将按顺序开始打字动画。
 
-* **loop** *[可选]*
+- **loop** *[可选]*
 
     内容是否会在打字动画完成后继续循环。
 
@@ -62,7 +62,7 @@ hiddenFromHomePage: true
 呈现的输出效果如下：
 
 {{< typeit >}}
-这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
+这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 _段落_……
 {{< /typeit >}}
 
 另外，你也可以自定义 **HTML 标签**.
@@ -78,7 +78,7 @@ hiddenFromHomePage: true
 呈现的输出效果如下：
 
 {{< typeit tag=h4 >}}
-这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
+这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 _段落_……
 {{< /typeit >}}
 
 ## 代码内容 {#code-content}

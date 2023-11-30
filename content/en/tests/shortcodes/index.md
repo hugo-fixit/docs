@@ -27,7 +27,7 @@ normal content
 
 {{< center-quote >}}
 {{< raw >}}
-**hello** *world*  
+**hello** _world_
 this is a center-quote shortcode example.
 {{< /raw >}}
 {{< /center-quote >}}
@@ -35,7 +35,7 @@ this is a center-quote shortcode example.
 ## Shortcodes with Markdown
 
 {{< center-quote >}}
-**hello** *world*  
+**hello** _world_
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
@@ -43,7 +43,7 @@ this is a center-quote shortcode example.
 *All pages and graphics on this web site are the property of [FixIt](/).*
 {{< /details >}}
 
-{{< admonition type=tip title="*This is a tip*" open=false >}}
+{{< admonition type=tip title="_This is a tip_" open=false >}}
 A **tip** banner
 {{< /admonition >}}
 

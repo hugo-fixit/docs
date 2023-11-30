@@ -151,7 +151,7 @@ soluta officiis concludaturque ei qui, vide sensibus vim ad.
 
 ## 内联 HTML 元素
 
-如果你需要某个 HTML 标签 （带有一个类）, 则可以简单地像这样使用：
+如果你需要某个 HTML 标签（带有一个类）, 则可以简单地像这样使用：
 
 ```html
 Markdown 格式的段落。
@@ -579,7 +579,7 @@ grunt.initConfig({
 
 ## 表格
 
-通过在每个单元格之间添加竖线作为分隔线，并在标题下添加一行破折号 （也由竖线分隔） 来创建表格。注意，竖线不需要垂直对齐。
+通过在每个单元格之间添加竖线作为分隔线，并在标题下添加一行破折号（也由竖线分隔）来创建表格。注意，竖线不需要垂直对齐。
 
 ```markdown
 | Option | Description |
@@ -656,7 +656,7 @@ grunt.initConfig({
 [Assemble](https://assemble.io)
 ```
 
-呈现的输出效果如下 （将鼠标悬停在链接上，没有提示）:
+呈现的输出效果如下（将鼠标悬停在链接上，没有提示）:
 
 <https://assemble.io>
 
@@ -678,7 +678,7 @@ grunt.initConfig({
 [Upstage](https://github.com/upstage/ "Visit Upstage!")
 ```
 
-呈现的输出效果如下 （将鼠标悬停在链接上，会有一行提示）:
+呈现的输出效果如下（将鼠标悬停在链接上，会有一行提示）:
 
 [Upstage](https://github.com/upstage/ "Visit Upstage!")
 
@@ -802,7 +802,7 @@ Content for chapter one.
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 ```
 
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 {{< admonition tip >}}
 **FixIt** 主题提供了一个包含更多功能的 [图片的 shortcode](./../theme-documentation-extended-shortcodes#image)。

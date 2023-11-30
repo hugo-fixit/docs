@@ -25,7 +25,7 @@ lightgallery: true
 {{< admonition question "怎样选择搜索引擎？" false >}}
 以下是两种搜索引擎的对比：
 
-- `fuse`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制, 性能高
+- `fuse`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，性能高
 - `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
 
 {{< version 0.2.3 >}} 文章内容被 `h2` 和 `h3` HTML 标签切分来提高查询效果并且基本实现全文搜索。

@@ -37,8 +37,8 @@ hiddenFromHomePage: true
 
 FixIt 主题提供了两个前置参数用于全文加密。
 
-* **password**: *[必需]* 加密页面内容的密码
-* **message**: *[可选]* 加密提示信息
+- **password**: _[必需]_ 加密页面内容的密码
+- **message**: _[可选]_ 加密提示信息
 
 例如，本文的前置参数如下：
 
@@ -63,7 +63,7 @@ categories:
 {{< admonition info >}}
 
 1. 每次输入正确密码后，会在用户本地缓存密码 hash 值，一天之内再次访问时，将自动解锁文章
-2. 文章最后提供有一个 “重新加密” 的按钮，点击即可立即忘记密码，并重新加密内容
+2. 文章最后提供有一个“重新加密”的按钮，点击即可立即忘记密码，并重新加密内容
 3. 加密文章已从搜索中隐藏
 4. 加密文章的 Markdown 输出已禁用，为了防止密码泄漏，**请勿将加密文章以任何形式公开**
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 {{</* /script */>}}
 ```
 
-您可以在开发人员工具的控制台中看到输出。
+你可以在开发人员工具的控制台中看到输出。
 
 {{< script >}}
 document.addEventListener('DOMContentLoaded', () => {
@@ -105,15 +105,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 {{< version 0.2.15 >}}
 
-您可以使用 `fixit-encryptor` shortcode 来加密部分内容。
+你可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 
 `fixit-encryptor` shortcode 具有以下命名参数：
 
-* **password** *[必选]*（**第一个**位置参数）
+- **password** _[必选]_（**第一个**位置参数）
 
     部分加密内容的密码。
 
-* **message** *[可选]*（**第二个**位置参数）
+- **message** _[可选]_（**第二个**位置参数）
 
     解密输入框的提示信息。
 
@@ -139,8 +139,8 @@ Or
 
 相比于通过 Golang/Python/JavaScript 等以脚本批处理的方式加密内容，FixIt 主题内置加密具有以下优缺点：
 
-* **优点**：易用性高，开箱即用，无需进一步批处理
-* **缺点**：安全性低，加密算法受限于 `go-html-template` 语法
+- **优点**：易用性高，开箱即用，无需进一步批处理
+- **缺点**：安全性低，加密算法受限于 `go-html-template` 语法
 
 > “最简单的密码，就足以防住 90% 的人！”
 >

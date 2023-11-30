@@ -59,7 +59,7 @@ git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
 <!-- markdownlint-disable-next-line no-bare-urls -->
 {{< link "https://github.com/hugo-fixit/hugo-fixit-blog-git" "基于 Git 子模块的快速入门模板" "" true >}}
 
-另外，在您的项目目录初始化一个空的 Git 存储库，将 [FixIt][fixit] 主题克隆到 `themes` 目录中，将其作为 [Git 子模块][git-submodule] 添加到您的项目中。
+另外，在你的项目目录初始化一个空的 Git 存储库，将 [FixIt][fixit] 主题克隆到 `themes` 目录中，将其作为 [Git 子模块][git-submodule] 添加到你的项目中。
 
 ```bash
 git init
@@ -98,7 +98,7 @@ git submodule set-branch -b dev themes/FixIt
 
 ## 完整配置
 
-在开始配置之前，建议您执行以下命令，将主题的默认 [hugo.toml][config] 复制到您的项目中：
+在开始配置之前，建议你执行以下命令，将主题的默认 [hugo.toml][config] 复制到你的项目中：
 
 ```bash
 mv hugo.toml config.old.toml
@@ -166,7 +166,7 @@ menu:
 
 ### 主题配置 {#theme-configuration}
 
-除了 [Hugo 全局配置][hugo-config] 和 [菜单配置](#menu-configuration) 之外，**FixIt** 主题还允许您在网站配置中定义以下参数。
+除了 [Hugo 全局配置][hugo-config] 和 [菜单配置](#menu-configuration) 之外，**FixIt** 主题还允许你在网站配置中定义以下参数。
 
 请打开下面的代码块查看完整的 `hugo.toml` 示例配置 :(fa-regular fa-hand-point-down fa-fw)::
 
@@ -194,7 +194,7 @@ menu:
   # {{< version 0.2.14 >}} 是否自动显示外链图标
   externalIcon = false
   # {{< version 0.2.14 >}} 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记
-  # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法
+  # 你可以将其关闭，但如果你不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法
   disableThemeInject = false
 
   # {{< version 0.2.0 >}} 应用图标配置
@@ -926,7 +926,7 @@ menu:
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
-  
+
   # {{< version 0.2.18-lts.3 >}} [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
   [params.cacheRemoteImages]
     enable = false
@@ -934,7 +934,7 @@ menu:
     replace = false
 
   # {{< version 0.2.17 >}} 定义自定义文件路径
-  # 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件
+  # 在站点目录 `layouts/partials/custom` 中创建你的自定义文件，并取消注释下面需要的文件
   [params.customFilePath]
     # aside = "custom/aside.html"
     # profile = "custom/profile.html"

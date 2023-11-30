@@ -138,7 +138,7 @@ Enable custom attribute support for titles and blocks by adding attribute lists 
 hello world
 {.text-center}
 
-> foo  
+> foo\
 > bar
 {.text-danger title="这是红色字体"}
 

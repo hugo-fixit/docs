@@ -48,14 +48,14 @@ and some text content in the form of escape characters
 (such as `\(`/`\)`/`\[`/`\]`/`\\`) escape processing will be performed automatically,
 therefore, additional escape character expressions are required for these places to achieve automatic rendering:
 
-* `_` -> `\_`
-* `*` -> `\*`
-* `>>` -> `\>>`
-* `\(` -> `\\(`
-* `\)` -> `\\)`
-* `\[` -> `\\[`
-* `\]` -> `\\]`
-* `\\` -> `\\\\`
+- `_` -> `\_`
+- `*` -> `\*`
+- `>>` -> `\>>`
+- `\(` -> `\\(`
+- `\)` -> `\\)`
+- `\[` -> `\\[`
+- `\]` -> `\\]`
+- `\\` -> `\\\\`
 
 **FixIt** theme supports [`raw` shortcode][raw-shortcode] to avoid these escape characters,
 which helps you write raw mathematical formula content.
@@ -85,8 +85,8 @@ Block Formula:
 
 The default inline delimiters are:
 
-* `$ ... $`
-* `\( ... \)` (escaped: `\\( ... \\)`)
+- `$ ... $`
+- `\( ... \)` (escaped: `\\( ... \\)`)
 
 For example:
 
@@ -102,13 +102,13 @@ $c = \pm\sqrt{a^2 + b^2}$ and \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 
 
 The default block delimiters are:
 
-* `$$ ... $$`
-* `\[ ... \]` (escaped: `\\[ ... \\]`)
-* `\begin{equation} ... \end{equation}` (unnumbered: `\begin{equation*} ... \end{equation*}`)
-* `\begin{align} ... \end{align}` (unnumbered: `\begin{align*} ... \end{align*}`)
-* `\begin{alignat} ... \end{alignat}` (unnumbered: `\begin{alignat*} ... \end{alignat*}`)
-* `\begin{gather} ... \end{gather}` (unnumbered: `\begin{gather*} ... \end{gather*}`)
-* `\begin{CD} ... \end{CD}`
+- `$$ ... $$`
+- `\[ ... \]` (escaped: `\\[ ... \\]`)
+- `\begin{equation} ... \end{equation}` (unnumbered: `\begin{equation*} ... \end{equation*}`)
+- `\begin{align} ... \end{align}` (unnumbered: `\begin{align*} ... \end{align*}`)
+- `\begin{alignat} ... \end{alignat}` (unnumbered: `\begin{alignat*} ... \end{alignat*}`)
+- `\begin{gather} ... \end{gather}` (unnumbered: `\begin{gather*} ... \end{gather*}`)
+- `\begin{CD} ... \end{CD}`
 
 {{< admonition warning >}}
 When there are newlines in the block formula, please turn on `goldmark.renderer.hardWraps` carefully, set it to true, Goldmark will render the newlines as `<br>` elements.
@@ -315,14 +315,14 @@ Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tabl
 A blockquote with a CSS class:
 
 ```md
-> foo  
+> foo\
 > bar
 {.text-danger}
 ```
 
 The rendered output looks like this:
 
-> foo  
+> foo\
 > bar
 {.text-danger}
 
@@ -343,14 +343,14 @@ There are some current limitations: For tables you can currently only apply it t
 
 The rendered output looks like this:
 
-* Fruit
-  * Apple
-  * Orange
-  * Banana
+- Fruit
+  - Apple
+  - Orange
+  - Banana
   {.text-success}
-* Dairy
-  * Milk
-  * Cheese
+- Dairy
+  - Milk
+  - Cheese
   {.text-warning}
 {.text-primary}
 
@@ -383,7 +383,6 @@ console.log('hello FixIt!');
 Currently supported attributes include:
 
 - `title`: The title of the code block.
-
 
 ### Diagrams Support
 

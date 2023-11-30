@@ -107,7 +107,7 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 <div class="page-break-before"></div>
 <div class="page-break-after"></div>
 <div class="print-d-none">
-  您希望在打印视图中隐藏的某些内容写在此处。
+  你希望在打印视图中隐藏的某些内容写在此处。
 </div>
 ```
 
@@ -117,7 +117,7 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 {.page-break-before}
 {.page-break-after}
 
-您希望在打印视图中隐藏的某些内容写在此处。
+你希望在打印视图中隐藏的某些内容写在此处。
 {.print-d-none}
 ```
 
@@ -131,9 +131,9 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 
 ## 自定义模板
 
-Hugo 允许您通过覆盖主题模板来改造主题，例如：您可以创建 `layouts/404.html` 文件以覆盖 `themes/FixIt/layouts/404.html`，从而实现自定义 FixIt 主题 404 页面模板的需求。
+Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建 `layouts/404.html` 文件以覆盖 `themes/FixIt/layouts/404.html`，从而实现自定义 FixIt 主题 404 页面模板的需求。
 
-但是，对于主题的大多数模板，FixIt 通常不建议您这样做，因为这样可能会导致未来升级主题困难。
+但是，对于主题的大多数模板，FixIt 通常不建议你这样做，因为这样可能会导致未来升级主题困难。
 
 为了避免升级冲突问题，基于这一特性，FixIt 主题在常用的位置开放了几个空的模板以供用户客制化，详见 [主题配置][theme-config] 中的 `params.customFilePath` 参数。
 

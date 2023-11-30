@@ -47,19 +47,19 @@ Under the `/static/` folder, you need to create a file named `site.webmanifest`.
 
 Here are the key values required.
 
-* **name** *[required]*
+- **name** *[required]*
 
     The name of your web app.
 
-* **short_name** *[required]*
+- **short_name** *[required]*
 
     A shorter name for your web app.
 
-* **start_url** *[required]*
+- **start_url** *[required]*
 
     The start URL of your web app. Please fill in `"/"` by default.
 
-* **icons** *[required]*
+- **icons** *[required]*
 
     An array of objects representing image files will be served as application icons. You can reuse the favicon of your site as the icons.
 
@@ -144,7 +144,7 @@ Now, an install button should show up when you visit your website and you will b
 
 Congratulation! You have successfully turned your static site into a PWA 🎉
 
-If you have any issues during the setup process, you can check the `Console` and `Application` panels in your browser's DevTools for debugging. Alternatively, you can check your site on [PWA Builder][pwabuilder] for more information. You can also start a [discussion][discussions] if you have any questions or propose an [issue][issues] for any bugs you find. 
+If you have any issues during the setup process, you can check the `Console` and `Application` panels in your browser's DevTools for debugging. Alternatively, you can check your site on [PWA Builder][pwabuilder] for more information. You can also start a [discussion][discussions] if you have any questions or propose an [issue][issues] for any bugs you find.
 
 [pwas]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
 [service-workers]: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API

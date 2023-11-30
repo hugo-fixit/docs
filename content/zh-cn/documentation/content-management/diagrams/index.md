@@ -310,7 +310,7 @@ hiddenFromHomePage: true
 
 ## Mermaid
 
-[Mermaid][mermaid] 是一个基于 JavaScript 的图表工具，它允许您使用文本和代码创建图表和可视化。
+[Mermaid][mermaid] 是一个基于 JavaScript 的图表工具，它允许你使用文本和代码创建图表和可视化。
 
 要使用 Mermaid，只需将 Mermaid 的代码输入放在代码块中，并将语言设置为 `mermaid`。
 
@@ -420,7 +420,7 @@ Class08 <--> C2: Cool label
 
 ### 状态图
 
-Mermaid 可以渲染 [状态图][mermaid-stateDiagram]。 语法尝试与 plantUml 中使用的语法兼容，因为这将使用户更容易在 mermaid 和 plantUml 之间共享图表。
+Mermaid 可以渲染 [状态图][mermaid-stateDiagram]。语法尝试与 plantUml 中使用的语法兼容，因为这将使用户更容易在 mermaid 和 plantUml 之间共享图表。
 
 一个 **状态图** `mermaid` 示例：
 
@@ -534,7 +534,7 @@ Future task2               :         des4, after des3, 5d
 
 Mermaid 可以渲染 [饼图][mermaid-pie]。
 
-一个 **饼图** `mermaid` 示例:
+一个 **饼图** `mermaid` 示例：
 
 ````markdown
 ```mermaid
@@ -545,7 +545,7 @@ pie
 ```
 ````
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 ```mermaid
 pie
@@ -558,7 +558,7 @@ pie
 
 [依赖图][mermaid-requirementDiagram] 提供了需求及其相互关系和其他文档化元素的可视化。建模规范遵循 SysML v1.6 定义的规范。
 
-一个 **依赖图** `mermaid` 示例:
+一个 **依赖图** `mermaid` 示例：
 
 ````markdown
 ```mermaid
@@ -579,7 +579,7 @@ test_entity - satisfies -> test_req
 ```
 ````
 
-呈现的输出效果如下:
+呈现的输出效果如下：
 
 ```mermaid
 requirementDiagram
@@ -814,7 +814,7 @@ Mermaid 的 C4 图语法与 PlantUML 兼容。以下是示例：
 
 #### 站点范围主题
 
-您可以通过 `hugo.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
+你可以通过 `hugo.toml` 中的 `params.mermaid` 参数全局配置 Mermaid 主题。
 
 #### 图表特定主题
 

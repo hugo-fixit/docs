@@ -27,23 +27,23 @@ Just insert your content in the `typeit` shortcode and that’s it.
 
 The `typeit` shortcode has the following named parameters:
 
-* **tag** *[optional]*
+- **tag** *[optional]*
 
     HTML tag of the content container.
 
-* **code** *[optional]*
+- **code** *[optional]*
 
     Specify the language type of the code content that will be highlighted.
 
-* **code-link** *[optional]*
+- **code-link** *[optional]*
 
     Whether to parse Markdown links in code content, default: `false`.
 
-* **group** *[optional]*
+- **group** *[optional]*
 
     Grouping of content, the content of the same group will start typing animation in order.
 
-* **loop** *[optional]*
+- **loop** *[optional]*
 
     Whether your content will continuously loop after completing.
 
@@ -62,7 +62,7 @@ This is a *paragraph* with **typing animation** based on [TypeIt](https://typeit
 The rendered output looks like this:
 
 {{< typeit >}}
-This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
+This is a _paragraph_ with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{< /typeit >}}
 
 Alternatively, you can use custom **HTML tags**.
@@ -78,7 +78,7 @@ This is a *paragraph* with **typing animation** based on [TypeIt](https://typeit
 The rendered output looks like this:
 
 {{< typeit tag=h4 >}}
-This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
+This is a _paragraph_ with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{< /typeit >}}
 
 ## Code Content {#code-content}

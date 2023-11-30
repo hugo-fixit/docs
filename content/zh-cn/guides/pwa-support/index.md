@@ -47,23 +47,23 @@ hiddenFromHomePage: true
 
 以下是必填参数。
 
-* **name** *[必须]*
+- **name** *[必须]*
 
     你的 PWA 的名称。
 
-* **short_name** *[必须]*
+- **short_name** *[必须]*
 
     你的 PWA 的简称。
 
-* **start_url** *[必须]*
+- **start_url** *[必须]*
 
     你的 PWA 的起始地址。请默认填写`"/"`。
 
-* **icons** *[必须]*
+- **icons** *[必须]*
 
     你的 PWA 的图标。你可以将网站的 favicon 作为图标。
 
-您还可以在 `site.webmanifest` 中设置其他可选值，查看这篇 [文档][manifest] 来了解更多。
+你还可以在 `site.webmanifest` 中设置其他可选值，查看这篇 [文档][manifest] 来了解更多。
 
 这是一份示例 `site.webmanifest` 文件：
 
@@ -113,7 +113,7 @@ hugo new offline/index.zh-tw.md
 ```
 
 {{< admonition type=tip title="Permalink" open=true >}}
-你需要确保离线页面的 [Permalink](https://gohugo.io/content-management/urls/#permalinks) 是 `/offline/`,  否则你需要手动更改 service worker 中 `OFFLINE_CACHE_FILES` 和 `OFFLINE_PAGE` 的值。
+你需要确保离线页面的 [Permalink](https://gohugo.io/content-management/urls/#permalinks) 是 `/offline/`, 否则你需要手动更改 service worker 中 `OFFLINE_CACHE_FILES` 和 `OFFLINE_PAGE` 的值。
 
 目前，离线页面支持 i18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
 {{< /admonition >}}

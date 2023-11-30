@@ -127,7 +127,6 @@ console.log(found);
 *在这个位置使用 `page-break-after` 进行了强制分页*
 {.text-danger .text-center .print-d-none}
 
-
 返回值是一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
 
 ```

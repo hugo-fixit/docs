@@ -30,51 +30,51 @@ The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][map
 
 The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
 
-* **lng** *[required]* (**first** positional parameter)
+- **lng** _[required]_ (**first** positional parameter)
 
     Longitude of the inital centerpoint of the map, measured in degrees.
 
-* **lat** *[required]* (**second** positional parameter)
+- **lat** _[required]_ (**second** positional parameter)
 
     Latitude of the inital centerpoint of the map, measured in degrees.
 
-* **zoom** *[optional]* (**third** positional parameter)
+- **zoom** _[optional]_ (**third** positional parameter)
 
     The initial zoom level of the map, default value is `10`.
 
-* **marked** *[optional]* (**fourth** positional parameter)
+- **marked** _[optional]_ (**fourth** positional parameter)
 
     Whether to add a marker at the inital centerpoint of the map, default value is `true`.
 
-* **light-style** *[optional]* (**fifth** positional parameter)
+- **light-style** _[optional]_ (**fifth** positional parameter)
 
     Style for the light theme, default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-* **dark-style** *[optional]* (**sixth** positional parameter)
+- **dark-style** _[optional]_ (**sixth** positional parameter)
 
     Style for the dark theme, default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-* **navigation** *[optional]*
+- **navigation** *[optional]*
 
     Whether to add [NavigationControl][navigationcontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-* **geolocate** *[optional]*
+- **geolocate** *[optional]*
 
     Whether to add [GeolocateControl][geolocatecontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-* **scale** *[optional]*
+- **scale** *[optional]*
 
     Whether to add [ScaleControl][scalecontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-* **fullscreen** *[optional]*
+- **fullscreen** *[optional]*
 
     Whether to add [FullscreenControl][fullscreencontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-* **width** *[optional]*
+- **width** *[optional]*
 
     Width of the map, default value is `100%`.
 
-* **height** *[optional]*
+- **height** *[optional]*
 
     Height of the map, default value is `20rem`.
 

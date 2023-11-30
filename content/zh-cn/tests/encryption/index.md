@@ -43,6 +43,6 @@ menu:
 不能信任那些Terminal或Editor用白底的人
 ```
 
-當你凝視著bug，bug也凝視著你
+當你凝視著 bug，bug 也凝視著你
 
-不能信任那些Terminal或Editor用白底的人
+不能信任那些 Terminal 或 Editor 用白底的人

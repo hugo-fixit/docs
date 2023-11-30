@@ -929,7 +929,7 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
-  
+
   # {{< version 0.2.18-lts.3 >}} [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
   [params.cacheRemoteImages]
     enable = false

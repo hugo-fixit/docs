@@ -37,8 +37,8 @@ Find out how to encrypt content in FixIt theme.
 
 The FixIt theme provides two frontmatters for page encryption.
 
-* **password**: *[required]* password of encrypted page content
-* **message**: *[optional]* encryption prompt
+- **password**: _[required]_ password of encrypted page content
+- **message**: _[optional]_ encryption prompt
 
 For example, the frontmatters in this article are as follows:
 
@@ -111,11 +111,11 @@ You can use `fixit-encryptor` shortcode to encrypt partial content.
 
 The `fixit-encryptor` shortcode has the following named parameters:
 
-* **password** *[required]* (**first** positional parameter)
+- **password** _[required]_ (**first** positional parameter)
 
     Password of the partial encrypted content.
 
-* **message** *[optional]* (**second** positional parameter)
+- **message** _[optional]_ (**second** positional parameter)
 
     Placeholder of the decryptor input.
 
@@ -141,8 +141,8 @@ The `fixit-encryptor` shortcode was supported in version {{< version 0.2.15 >}}.
 
 Compared with encrypting content through script batch processing such as golang/python/javascript, FixIt theme built-in encryption has the following advantages and disadvantages:
 
-* **Advantages**: High usability, out of the box, without further batch processing
-* **Disadvantages**: Low security, the encryption algorithm is limited by the `go-html-template` syntax
+- **Advantages**: High usability, out of the box, without further batch processing
+- **Disadvantages**: Low security, the encryption algorithm is limited by the `go-html-template` syntax
 
 > "The simplest password is enough to prevent 90% of people!"
 >

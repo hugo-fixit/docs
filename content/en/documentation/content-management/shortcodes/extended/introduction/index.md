@@ -71,41 +71,41 @@ This is a **right-aligned** paragraph.
 
 The `link` shortcode has the following named parameters:
 
-* **href** *[required]* (**first** positional parameter)
+- **href** _[required]_ (**first** positional parameter)
 
     Destination of the link.
 
-* **content** *[optional]* (**second** positional parameter)
+- **content** _[optional]_ (**second** positional parameter)
 
     Content of the link, default value is the value of **href** parameter.
 
     *Markdown or HTML format is supported.*
 
-* **title** *[optional]* (**third** positional parameter)
+- **title** _[optional]_ (**third** positional parameter)
 
     `title` attribute of the HTML `a` tag, which will be shown when hovering on the link.
 
-* **card** *[optional]* (**fourth** positional parameter) {{< version 0.2.12 >}}
+- **card** _[optional]_ (**fourth** positional parameter) {{< version 0.2.12 >}}
 
     Whether to display as a card link, whose default value is `false`.
 
-* **download** *[optional]* {{< version 0.2.12 >}}
+- **download** _[optional]_ {{< version 0.2.12 >}}
 
     `optional` attribute of the HTML `a` tag.
 
-* **class** *[optional]*
+- **class** *[optional]*
 
     `class` attribute of the HTML `a` tag.
 
-* **rel** *[optional]*
+- **rel** *[optional]*
 
     Additional `rel` attributes of the HTML `a` tag.
 
-* **external-icon** *[optional]* {{< version 0.2.14 >}}
+- **external-icon** _[optional]_ {{< version 0.2.14 >}}
 
     Whether to automatically display the external link icon.
 
-* **noreferrer** *[optional]* {{< version 0.2.16 >}}
+- **noreferrer** _[optional]_ {{< version 0.2.16 >}}
 
     Whether to add `noreferrer` to the `rel` attribute, default: `true`.
 
@@ -127,9 +127,9 @@ Or
 
 The rendered output looks like this:
 
-* {{< link "https://assemble.io" >}}
-* {{< link "mailto:contact@revolunet.com" >}}
-* {{< link "https://assemble.io" Assemble >}}
+- {{< link "https://assemble.io" >}}
+- {{< link "mailto:contact@revolunet.com" >}}
+- {{< link "https://assemble.io" Assemble >}}
 
 Example `link` input with a title:
 
@@ -179,55 +179,55 @@ The rendered output looks like this:
 
 The `image` shortcode has the following named parameters:
 
-* **src** *[required]* (**first** positional parameter)
+- **src** _[required]_ (**first** positional parameter)
 
     URL of the image to be displayed.
 
-* **alt** *[optional]* (**second** positional parameter)
+- **alt** _[optional]_ (**second** positional parameter)
 
     Alternate text for the image if the image cannot be displayed, default value is the value of **src** parameter.
 
     *Markdown or HTML format is supported.*
 
-* **caption** *[optional]* (**third** positional parameter)
+- **caption** _[optional]_ (**third** positional parameter)
 
     Image caption.
 
     *Markdown or HTML format is supported.*
 
-* **title** *[optional]*
+- **title** *[optional]*
 
     Image title that will be shown when hovering on the image.
 
-* **class** *[optional]*
+- **class** *[optional]*
 
     `class` attribute of the HTML `figure` tag.
 
-* **src_s** *[optional]*
+- **src_s** *[optional]*
 
     URL of the image thumbnail, used for lightgallery, default value is the value of **src** parameter.
 
-* **src_l** *[optional]*
+- **src_l** *[optional]*
 
     URL of the HD image, used for lightgallery, default value is the value of **src** parameter.
 
-* **height** *[optional]*
+- **height** *[optional]*
 
     `height` attribute of the image.
 
-* **width** *[optional]*
+- **width** *[optional]*
 
     `width` attribute of the image.
 
-* **linked** *[optional]*
+- **linked** *[optional]*
 
     Whether the image needs to be hyperlinked, default value is `true`.
 
-* **rel** *[optional]*
+- **rel** *[optional]*
 
     Additional `rel` attributes of the HTML `a` tag, if **linked** parameter is set to `true`.
 
-* **loading** *[optional]* {{< version 0.2.18 >}}
+- **loading** _[optional]_ {{< version 0.2.18 >}}
 
     Additional `loading` attribute of the HTML `a` tag, optional values: `eager`, `lazy`, default value is `lazy`.
 
@@ -297,15 +297,15 @@ A **quote** banner
 
 The `admonition` shortcode has the following named parameters:
 
-* **type** *[optional]* (**first** positional parameter)
+- **type** _[optional]_ (**first** positional parameter)
 
     Type of the `admonition` banner, default value is `note`.
 
-* **title** *[optional]* (**second** positional parameter)
+- **title** _[optional]_ (**second** positional parameter)
 
     Title of the `admonition` banner, default value is the value of **type** parameter. (markdown support) {{< version 0.2.14 changed >}}
 
-* **open** *[optional]* (**third** positional parameter) {{< version 0.2.0 changed >}}
+- **open** _[optional]_ (**third** positional parameter) {{< version 0.2.0 changed >}}
 
     Whether the content will be expandable by default, default value is `true`.
 
@@ -395,7 +395,7 @@ console.log('Hello FixIt!');
 
 The `details` shortcode has only one parameter:
 
-* **summary** *[optional]* (**first** positional parameter)
+- **summary** _[optional]_ (**first** positional parameter)
 
     summary of details. (markdown support)
 
@@ -427,7 +427,7 @@ Example `center-quote` input:
 
 ```go-html-template
 {{</* center-quote */>}}
-**hello** *world*  
+**hello** *world*
 this is a center-quote shortcode example.
 {{</* /center-quote */>}}
 ```
@@ -435,7 +435,7 @@ this is a center-quote shortcode example.
 The rendered output looks like this:
 
 {{< center-quote >}}
-**hello** *world*  
+**hello** _world_
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
@@ -456,7 +456,7 @@ This is useful when you want to include some Markdown content to **avoid being r
 
 The `raw` shortcode has only one parameter:
 
-* **tag** *[optional]* (**first** positional parameter)
+- **tag** _[optional]_ (**first** positional parameter)
 
     The tag name of the wrapper HTML element, whose default value is `div`.
 
@@ -490,13 +490,13 @@ Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>
 
 The `reward` shortcode has the following named parameters:
 
-* **wechatpay** *[optional]* (**first** positional parameter)
-* **alipay** *[optional]* (**second** positional parameter)
-* **paypal** *[optional]* (**third** positional parameter)
-* **bitcoin** *[optional]* (**fourth** positional parameter)
-* **author** *[optional]* (**fifth** positional parameter)
-* **comment** *[optional]* (**sixth** positional parameter)
-* **mode** *[optional]* (**seventh** positional parameter)
+- **wechatpay** _[optional]_ (**first** positional parameter)
+- **alipay** _[optional]_ (**second** positional parameter)
+- **paypal** _[optional]_ (**third** positional parameter)
+- **bitcoin** _[optional]_ (**fourth** positional parameter)
+- **author** _[optional]_ (**fifth** positional parameter)
+- **comment** _[optional]_ (**sixth** positional parameter)
+- **mode** _[optional]_ (**seventh** positional parameter)
 
     {{< version 0.2.18 >}} display mode of QR code images, optional values: ["static", "fixed"], default: `static`
 
