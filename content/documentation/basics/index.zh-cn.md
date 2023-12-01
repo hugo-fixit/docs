@@ -197,6 +197,13 @@ menu:
   # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法
   disableThemeInject = false
 
+  # 作者配置
+  [params.author]
+    name = ""
+    email = ""
+    link = ""
+    avatar = ""
+
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
     # 当添加到 iOS 主屏幕或者 Android 启动器时的标题，覆盖默认标题
@@ -982,13 +989,6 @@ menu:
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 6
-
-# 作者配置
-[author]
-  name = "xxxx"
-  email = ""
-  link = ""
-  avatar = "/images/avatar.png" # {{< version 0.2.18 >}}
 
 # 网站地图配置
 [sitemap]
