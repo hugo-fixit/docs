@@ -1096,13 +1096,7 @@ In order to generate `index.json` for searching, add `JSON` output file type to 
   home = ["HTML", "RSS", "JSON"]
 ```
 
-{{< admonition tip "Tips about algolia" >}}
-You need to upload `index.json` files to algolia to activate searching.
-You could upload the `index.json` files by browsers but a CLI tool may be better.
-[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) is a good choice.
-To be compatible with Hugo multilingual mode,
-you need to upload different `index.json` for each language to the different index of algolia, such as `zh-cn/index.json` or `fr/index.json`...
-{{< /admonition >}}
+{{< link href="/guides/algolia-atomic" content="Tips about algolia" card=true >}}
 
 ### Favicons, Browserconfig, Manifest
 
