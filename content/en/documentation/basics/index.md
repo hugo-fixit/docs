@@ -199,6 +199,13 @@ Please open the code block below to view the complete `hugo.toml` sample configu
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false
 
+  # Author Configuration
+  [params.author]
+    name = ""
+    email = ""
+    link = ""
+    avatar = ""
+
   # {{< version 0.2.0 >}} App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
@@ -985,13 +992,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 6
-
-# Author config
-[author]
-  name = "xxxx"
-  email = ""
-  link = ""
-  avatar = "/images/avatar.png" # {{< version 0.2.18 >}}
 
 # Sitemap config
 [sitemap]

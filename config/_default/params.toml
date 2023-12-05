@@ -39,6 +39,14 @@ externalIcon = true
 # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
 disableThemeInject = false
 
+# Author Configuration
+# 作者配置
+[author]
+  name = "Lruihao"
+  email = "1024@lruihao.cn"
+  link = "https://lruihao.cn"
+  avatar = "/images/avatar.png"
+
 # App icon config
 # 应用图标配置
 [app]
