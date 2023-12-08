@@ -515,6 +515,10 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     endFlag = ""
     # {{< version 0.2.18 >}} whether to enable instant.page
     instantPage = false
+    # {{< version 0.3.0 >}} whether to enable collection list at the sidebar
+    collectionList = false
+    # {{< version 0.3.0 >}} whether to enable collection navigation at the end of the post
+    collectionNavigation = false
 
     # {{< version 0.2.15 >}} Repost config
     [params.page.repost]

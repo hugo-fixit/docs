@@ -513,6 +513,10 @@ menu:
     endFlag = ""
     # {{< version 0.2.18 >}} 是否开启即时页面
     instantPage = false
+    # {{< version 0.3.0 >}} 是否在侧边栏显示集合列表
+    collectionList = false
+    # {{< version 0.3.0 >}} 是否在文章末尾显示集合导航
+    collectionNavigation = false
 
     # {{< version 0.2.15 >}} 转载配置
     [params.page.repost]

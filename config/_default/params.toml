@@ -448,6 +448,12 @@ disableThemeInject = false
   # FixIt 0.2.18 | NEW whether to enable instant.page
   # FixIt 0.2.18 | 新增 是否开启即时页面
   instantPage = true
+  # FixIt 0.3.0 | NEW whether to enable collection list at the sidebar
+  # FixIt 0.3.0 | 新增 是否在侧边栏显示集合列表
+  collectionList = false
+  # FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post
+  # FixIt 0.3.0 | 新增 是否在文章末尾显示集合导航
+  collectionNavigation = false
 
   # Repost config since v0.2.15
   # 转载配置 since v0.2.15

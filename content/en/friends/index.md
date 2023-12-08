@@ -1,7 +1,7 @@
 ---
 title: Friends
 subtitle: Recording some friends who use FixIt theme
-type: friends
+layout: friends
 description: Friends template demo of FixIt theme
 keywords:
   - Hugo

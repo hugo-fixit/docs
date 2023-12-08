@@ -3,6 +3,7 @@
 # See: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
 # -------------------------------------------------------------------------------------
 
+# series = "series"
 category = "categories"
 tag = "tags"
-# series = "series"
+collections = "collections"
