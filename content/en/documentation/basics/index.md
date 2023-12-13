@@ -819,8 +819,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     content = ""
     # watermark's transparency
     opacity = 0.1
-    # parent of watermark's container
-    appendTo = ".wrapper>main"
     # watermark's width. unit: px
     width = 150
     # watermark's height. unit: px

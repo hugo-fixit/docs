@@ -816,8 +816,6 @@ menu:
     content = ""
     # 水印透明度
     opacity = 0.1
-    # 水印父节点
-    appendTo = ".wrapper>main"
     # 单水印宽度 单位：px
     width = 150
     # 单水印高度 单位：px

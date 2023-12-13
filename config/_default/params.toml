@@ -824,9 +824,6 @@ disableThemeInject = false
   # watermark's transparency
   # 水印透明度
   opacity = 0.0125
-  # parent of watermark's container
-  # 水印父节点
-  appendTo = ".wrapper>main"
   # watermark's width. unit: px
   # 单水印宽度 单位：px
   width = 150
