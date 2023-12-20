@@ -100,6 +100,7 @@ It is necessary only if the front matters and the `page` part in your [theme con
 - **hiddenFromHomePage**: if `true`, the content will not be shown in the home page.
 - **hiddenFromSearch**: {{< version 0.2.0 >}} if `true`, the content will not be shown in the search results.
 - **hiddenFromRss**: {{< version 0.2.18-lts.5 >}} if `true`, the content will not be shown in the RSS feed.
+- **hiddenFromRelated**: {{< version 0.3.0 >}} if `true`, the content will not be shown in the related posts.
 - **twemoji**: {{< version 0.2.0 >}} if `true`, the content will enable the twemoji.
 - **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [theme configuration][theme-config].
 - **ruby**: {{< version 0.2.0 >}} if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].

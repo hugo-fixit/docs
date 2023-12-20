@@ -402,6 +402,9 @@ disableThemeInject = false
   # FixIt 0.2.18-lts.5 | NEW whether to hide a page from RSS feed
   # FixIt 0.2.18-lts.5 | 新增 是否在 RSS 中隐藏一篇文章
   hiddenFromRss = false
+  # FixIt 0.3.0 | NEW whether to hide a page from related posts
+  # FixIt 0.3.0 | 新增 是否在相关文章中隐藏一篇文章
+  hiddenFromRelated = false
   # whether to enable twemoji
   # 是否使用 twemoji
   twemoji = false
@@ -777,6 +780,12 @@ disableThemeInject = false
     [page.seo.publisher]
       name = "Lruihao"
       logoUrl = "/images/avatar.png"
+
+    # FixIt 0.3.0 | NEW Related content config (https://gohugo.io/content-management/related/)
+    # FixIt 0.3.0 | 新增 相关内容配置 (https://gohugo.io/content-management/related/)
+    [page.related]
+      enable = true
+      count = 5
 
 # TypeIt config
 # TypeIt 配置

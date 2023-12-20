@@ -99,6 +99,7 @@ reward: true
 - **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上
 - **hiddenFromSearch**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章将不会显示在搜索结果中
 - **hiddenFromRss**: {{< version 0.2.18-lts.5 >}} 如果设为 `true`, 这篇文章将不会显示在 RSS 中
+- **hiddenFromRelated**: {{< version 0.3.0 >}} 如果设为 `true`, 这篇文章将不会显示在相关文章中
 - **twemoji**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 twemoji
 - **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
 - **ruby**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]

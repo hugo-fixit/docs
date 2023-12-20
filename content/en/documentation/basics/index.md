@@ -483,6 +483,8 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     hiddenFromSearch = false
     # {{< version 0.2.18-lts.5 >}} whether to hide a page from RSS feed
     hiddenFromRss = false
+    # {{< version 0.3.0 >}} whether to hide a page from related posts
+    hiddenFromRelated = false
     # {{< version 0.2.0 >}} whether to enable twemoji
     twemoji = false
     # whether to enable lightgallery
@@ -786,6 +788,11 @@ Please open the code block below to view the complete `hugo.toml` sample configu
       [params.page.seo.publisher]
         name = ""
         logoUrl = ""
+
+    # {{< version 0.3.0 >}} Related content config (https://gohugo.io/content-management/related/)
+    [params.page.related]
+      enable = false
+      count = 5
 
   # {{< version 0.2.5 >}} TypeIt config
   [params.typeit]

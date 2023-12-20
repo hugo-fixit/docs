@@ -481,6 +481,8 @@ menu:
     hiddenFromSearch = false
     # {{< version 0.2.18-lts.5 >}} 是否在 RSS 中隐藏一篇文章
     hiddenFromRss = false
+    # {{< version 0.3.0 >}} 是否在相关文章中隐藏一篇文章
+    hiddenFromRelated = false
     # {{< version 0.2.0 >}} 是否使用 twemoji
     twemoji = false
     # 是否使用 lightgallery
@@ -783,6 +785,11 @@ menu:
       [params.page.seo.publisher]
         name = ""
         logoUrl = ""
+
+    # {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
+    [params.page.related]
+      enable = false
+      count = 5
 
   # {{< version 0.2.5 >}} TypeIt 配置
   [params.typeit]
