@@ -15,9 +15,6 @@ keywords = ["Hugo", "FixIt"]
 # site default theme ["light", "dark", "auto"]
 # 网站默认主题 ["light", "dark", "auto"]
 defaultTheme = "auto"
-# public git repo url only then enableGitInfo is true
-# 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-gitRepo = "https://github.com/hugo-fixit/docs"
 # which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
 # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ["sha256", "sha384", "sha512", "md5"]
 fingerprint = ""
@@ -46,6 +43,20 @@ disableThemeInject = false
   email = "1024@lruihao.cn"
   link = "https://lruihao.cn"
   avatar = "/images/avatar.png"
+
+# FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
+# FixIt 0.3.0 | 新增 公共 Git 仓库信息，仅在 enableGitInfo 设为 true 时有效
+[gitInfo]
+  repo = "https://github.com/hugo-fixit/docs"
+  branch = "main"
+  # the content directory path relative to the root of the repository
+  # 相对于仓库根目录的内容目录路径
+  dir = "content"
+  # the issue template for reporting issue of the posts
+  # available template params: {title} {URL} {sourceURL}
+  # 用于报告文章问题的 issue 模板
+  # 可用模板参数：{title} {URL} {sourceURL}
+  issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 
 # App icon config
 # 应用图标配置
@@ -425,9 +436,18 @@ disableThemeInject = false
   # license info (HTML format is supported)
   # 许可协议信息（支持 HTML 格式）
   license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-  # whether to show link to Raw Markdown content of the content
+  # whether to show link to Raw Markdown content of the post
   # 是否显示原始 Markdown 文档内容的链接
   linkToMarkdown = true
+  # whether to show link to view source code of the post
+  # 是否显示查看文章源码的链接
+  linkToSource = true
+  # whether to show link to edit the post
+  # 是否显示编辑文章的链接
+  linkToEdit = true
+  # whether to show link to report issue for the post
+  # 是否显示报告文章问题的链接
+  linkToReport = true
   # whether to show the full text content in RSS
   # 是否在 RSS 中显示全文内容
   rssFullText = false
@@ -503,14 +523,6 @@ disableThemeInject = false
     # the maximum number of lines of displayed code by default
     # 默认展开显示的代码行数
     maxShownLines = 10
-  # Post edit since v0.2.14
-  # 文章编辑 since v0.2.14
-  [page.edit]
-    enable = true
-    # Link for fork & edit
-    # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
-    # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
-    url = "/edit/main/content"
   # KaTeX mathematical formulas config (KaTeX https://katex.org/)
   # KaTeX 数学公式配置 (KaTeX https://katex.org/)
   [page.math]

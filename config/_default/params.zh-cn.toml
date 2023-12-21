@@ -5,6 +5,9 @@
 
 description = "Hugo 主题 - FixIt"
 
+[gitInfo]
+  dir = "content/zh-cn"
+
 [search]
   enable = true
   type = "algolia"

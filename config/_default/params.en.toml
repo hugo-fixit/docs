@@ -3,6 +3,9 @@
 # See: https://fixit.lruihao.cn/documentation/basics/#theme-configuration
 # -------------------------------------------------------------------------------------
 
+[gitInfo]
+  dir = "content/en"
+
 [search]
   enable = true
   type = "algolia"

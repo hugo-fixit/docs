@@ -180,8 +180,6 @@ menu:
   keywords = ["Hugo", "FixIt"]
   # 网站默认主题样式 ["light", "dark", "auto"]
   defaultTheme = "auto"
-  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = ""
   # {{< version 0.1.1 >}} 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
@@ -203,6 +201,17 @@ menu:
     email = ""
     link = ""
     avatar = ""
+
+  # {{< version 0.3.0 >}} 公共 Git 仓库信息，仅在 enableGitInfo 设为 true 时有效
+  [params.gitInfo]
+    # 例如 "https://github.com/hugo-fixit/docs"
+    repo = ""
+    branch = "main"
+    # 相对于仓库根目录的内容目录路径
+    dir = "content"
+    # 用于报告文章问题的 issue 模板
+    # 可用模板参数：{title} {URL} {sourceURL}
+    issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 
   # {{< version 0.2.0 >}} 应用图标配置
   [params.app]
@@ -496,8 +505,14 @@ menu:
     fontawesome = true
     # 许可协议信息（支持 HTML 格式）
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-    # 是否在文章页面显示原始 Markdown 文档链接
+    # 是否显示原始 Markdown 文档内容的链接
     linkToMarkdown = true
+    # {{< version 0.3.0 >}} 是否显示查看文章源码的链接
+    linkToSource = true
+    # {{< version 0.3.0 >}} 是否显示编辑文章的链接
+    linkToEdit = true
+    # {{< version 0.3.0 >}} 是否显示报告文章问题的链接
+    linkToReport = true
     # {{< version 0.2.4 >}} 是否在 RSS 中显示全文内容
     rssFullText = false
     # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
@@ -551,13 +566,6 @@ menu:
       edit = true
       # 默认展开显示的代码行数
       maxShownLines = 10
-    # {{< version 0.2.14 >}} 文章编辑
-    [params.page.edit]
-      enable = false
-      # {{< version 0.2.15 changed >}} 编辑的基础链接
-      # url = "/edit/branch-name/subdirectory-name" # 相对于 `params.gitRepo`
-      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # 完整链接
-      url = ""
     # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} 数学公式 (https://katex.org)
     [params.page.math]
       enable = true

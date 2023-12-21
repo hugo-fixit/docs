@@ -182,8 +182,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
   keywords = ["Hugo", "FixIt"]
   # site default theme ["light", "dark", "auto"]
   defaultTheme = "auto"
-  # public git repo url only then enableGitInfo is true
-  gitRepo = ""
   # {{< version 0.1.1 >}} which hash function used for SRI, when empty, no SRI is used
   # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
@@ -205,6 +203,17 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     email = ""
     link = ""
     avatar = ""
+
+  # {{< version 0.3.0 >}} public Git repository information only then enableGitInfo is true
+  [params.gitInfo]
+    # e.g. "https://github.com/hugo-fixit/docs"
+    repo = ""
+    branch = "main"
+    # the content directory path relative to the root of the repository
+    dir = "content"
+    # the issue template for reporting issue of the posts
+    # available template params: {title} {URL} {sourceURL}
+    issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 
   # {{< version 0.2.0 >}} App icon config
   [params.app]
@@ -498,8 +507,14 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     fontawesome = true
     # license info (HTML format is supported)
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-    # whether to show link to Raw Markdown content of the content
+    # whether to show link to Raw Markdown content of the post
     linkToMarkdown = true
+    # {{< version 0.3.0 >}} whether to show link to view source code of the post
+    linkToSource = true
+    # {{< version 0.3.0 >}} whether to show link to edit the post
+    linkToEdit = true
+    # {{< version 0.3.0 >}} whether to show link to report issue for the post
+    linkToReport = true
     # {{< version 0.2.4 >}} whether to show the full text content in RSS
     rssFullText = false
     # {{< version 0.2.13 >}} Page style ["narrow", "normal", "wide", ...]
@@ -566,13 +581,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
       edit = true
       # the maximum number of lines of displayed code by default
       maxShownLines = 10
-    # {{< version 0.2.14 >}} Post edit
-    [params.page.edit]
-      enable = false
-      # {{< version 0.2.15 changed >}} Link for fork & edit
-      # url = "/edit/branch-name/subdirectory-name" # base on `params.gitRepo`
-      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # full url
-      url = ""
     # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS

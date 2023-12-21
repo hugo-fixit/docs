@@ -107,6 +107,9 @@ It is necessary only if the front matters and the `page` part in your [theme con
 - **fraction**: {{< version 0.2.0 >}} if `true`, the content will enable the [fraction extended syntax][fraction-syntax].
 - **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax][fontawesome-syntax].
 - **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
+- **linkToSource**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the source file.
+- **linkToEdit**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the edit page.
+- **linkToReport**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the report issue.
 - **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
 - **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
 
