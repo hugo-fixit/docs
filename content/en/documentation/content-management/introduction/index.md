@@ -294,7 +294,7 @@ Generally, you don't need to set the **type** parameter, because Hugo and fixit 
 
 {{< version 0.2.12 >}}
 
-Set `type: friends` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows:
+Set `layout: friends` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows:
 
 ```yml
 # Friend/Site info of one
@@ -318,7 +318,7 @@ hugo new friends/index.md
 
 {{< version 0.2.12 >}} See [PWA Support][pwa-support] for details.
 
-Set `type: offline` in the front matter and set `enablePWA` in `hugo.toml`:
+Set `layout: offline` in the front matter and set `enablePWA` in `hugo.toml`:
 
 ```toml
 [params]

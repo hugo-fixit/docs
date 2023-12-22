@@ -111,7 +111,7 @@
   url = "categories/"
   parent = "about"
   [main.params]
-    icon = "fa-solid fa-th"
+    icon = "fa-solid fa-folder-tree"
 [[main]]
   identifier = "tags"
   name = "Tags"

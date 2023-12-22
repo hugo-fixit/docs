@@ -293,7 +293,7 @@ seo:
 
 {{< version 0.2.12 >}}
 
-在前置参数中设置 `type: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
+在前置参数中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
 
 ```yml
 # 朋友/站点信息例子
@@ -317,7 +317,7 @@ hugo new friends/index.md
 
 {{< version 0.2.12 >}} 详见 [PWA 支持][pwa-support]
 
-在前置参数中设置 `type: offline`，并在 `hugo.toml` 中开启 `enablePWA`：
+在前置参数中设置 `layout: offline`，并在 `hugo.toml` 中开启 `enablePWA`：
 
 ```toml
 [params]
