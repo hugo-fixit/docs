@@ -82,9 +82,6 @@ reward: true
       avatar: "" # 文章作者的头像
     ```
 
-- **authorLink**: {{< version 0.2.18 deleted >}} ~~文章作者的链接~~，合并到 `author.link`
-- **authorEmail**: {{< version 0.2.18 deleted >}} ~~文章作者的邮箱~~，合并到 `author.email`
-- **gravatarForce**: {{< version 0.2.18 deleted >}} ~~强制使用 Gravatar 作为作者头像~~
 - **authorAvatar**: {{< version 0.2.18 >}} 是否启用文章作者头像
 - **description**: 文章内容的描述
 - **keywords**: 文章内容的关键词
@@ -114,8 +111,8 @@ reward: true
 
 - **toc**: {{< version 0.2.9 changed >}} 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
 - **expirationReminder**: {{< version 0.2.13 >}} 和 [主题配置][theme-config] 中的 `params.page.expirationReminder` 部分相同
+- **heading**: {{< version 0.3.0 >}} 和 [主题配置][theme-config] 中的 `params.page.heading` 部分相同
 - **code**: {{< version 0.2.0 >}} 和 [主题配置][theme-config] 中的 `params.page.code` 部分相同
-- **edit**: {{< version 0.2.14 >}} 和 [主题配置][theme-config] 中的 `params.page.edit` 部分相同
 - **math**: {{< version 0.2.0 changed >}} 和 [主题配置][theme-config] 中的 `params.page.math` 部分相同
 - **mapbox**: {{< version 0.2.0 >}} 和 [主题配置][theme-config] 中的 `params.page.mapbox` 部分相同
 - **share**: 和 [主题配置][theme-config] 中的 `params.page.share` 部分相同

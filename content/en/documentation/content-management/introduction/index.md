@@ -83,9 +83,6 @@ It is necessary only if the front matters and the `page` part in your [theme con
       avatar: "" # the local avatar of the author
     ```
 
-- **authorLink**: {{< version 0.2.18 deleted >}} ~~the link of the author~~, migrate to `author.link`
-- **authorEmail**: {{< version 0.2.18 deleted >}} ~~the email of the author~~, migrate to `author.email`
-- **gravatarForce**: {{< version 0.2.18 deleted >}} ~~Gravatar is force-used as the author's avatar.~~
 - **authorAvatar**: {{< version 0.2.18 >}} whether to enable the author's avatar of the post.
 - **description**: the description for the content.
 - **keywords**: the keywords for the content.
@@ -115,8 +112,8 @@ It is necessary only if the front matters and the `page` part in your [theme con
 
 - **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [theme configuration][theme-config].
 - **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [theme configuration][theme-config].
+- **heading**: {{< version 0.3.0 >}} the same as the `params.page.heading` part in the [theme configuration][theme-config].
 - **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [theme configuration][theme-config].
-- **edit**: {{< version 0.2.14 >}} the same as the `params.page.edit` part in the [theme configuration][theme-config].
 - **math**: {{< version 0.2.0 changed >}} the same as the `params.page.math` part in the [theme configuration][theme-config].
 - **mapbox**: {{< version 0.2.0 >}} the same as the `params.page.mapbox` part in the [theme configuration][theme-config].
 - **share**: the same as the `params.page.share` part in the [theme configuration][theme-config].

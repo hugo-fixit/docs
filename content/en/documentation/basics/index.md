@@ -560,6 +560,18 @@ Please open the code block below to view the complete `hugo.toml` sample configu
       warning = 180
       # If the article expires, close the comment or not
       closeComment = false
+    # {{< version 0.3.0 >}} page heading config
+    [params.page.heading]
+      [params.page.heading.number]
+        # whether to enable auto heading numbering
+        enable = false
+        [params.page.heading.number.format]
+          h1 = "{title}"
+          h2 = "{h2} {title}"
+          h3 = "{h2}.{h3} {title}"
+          h4 = "{h2}.{h3}.{h4} {title}"
+          h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+          h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
     # {{< version 0.2.16 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
     [params.page.math]
       enable = true

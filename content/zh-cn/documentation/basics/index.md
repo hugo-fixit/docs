@@ -558,6 +558,20 @@ menu:
       warning = 180
       # 如果文章到期是否关闭评论
       closeComment = false
+    # {{< version 0.3.0 >}} page heading config
+    # {{< version 0.3.0 >}} 页面标题配置
+    [params.page.heading]
+      [params.page.heading.number]
+        # whether to enable auto heading numbering
+        # 是否启用自动标题编号
+        enable = false
+        [params.page.heading.number.format]
+          h1 = "{title}"
+          h2 = "{h2} {title}"
+          h3 = "{h2}.{h3} {title}"
+          h4 = "{h2}.{h3}.{h4} {title}"
+          h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+          h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
     # {{< version 0.2.0 >}} 代码配置
     [params.page.code]
       # 是否显示代码块的复制按钮

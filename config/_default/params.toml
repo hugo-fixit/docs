@@ -511,6 +511,20 @@ disableThemeInject = false
     # If the article expires, close the comment or not
     # 如果文章到期是否关闭评论
     closeComment = false
+  # FixIt 0.3.0 | NEW page heading config
+  # FixIt 0.3.0 | 新增 页面标题配置
+  [page.heading]
+    [page.heading.number]
+      # whether to enable auto heading numbering
+      # 是否启用自动标题编号
+      enable = true
+      [page.heading.number.format]
+        h1 = "{title}"
+        h2 = "{h2} {title}"
+        h3 = "{h2}.{h3} {title}"
+        h4 = "{h2}.{h3}.{h4} {title}"
+        h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+        h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
   # Code config
   # 代码配置
   [page.code]
