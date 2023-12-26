@@ -562,6 +562,7 @@ Please open the code block below to view the complete `hugo.toml` sample configu
       closeComment = false
     # {{< version 0.3.0 >}} page heading config
     [params.page.heading]
+      # used with `markup.tableOfContents.ordered` parameter
       [params.page.heading.number]
         # whether to enable auto heading numbering
         enable = false

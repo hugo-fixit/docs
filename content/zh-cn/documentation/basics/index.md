@@ -558,11 +558,10 @@ menu:
       warning = 180
       # 如果文章到期是否关闭评论
       closeComment = false
-    # {{< version 0.3.0 >}} page heading config
     # {{< version 0.3.0 >}} 页面标题配置
     [params.page.heading]
+      # 配合 `markup.tableOfContents.ordered` 参数使用
       [params.page.heading.number]
-        # whether to enable auto heading numbering
         # 是否启用自动标题编号
         enable = false
         [params.page.heading.number.format]

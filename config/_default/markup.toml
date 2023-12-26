@@ -44,5 +44,6 @@
 # Table Of Contents settings
 # 目录设置
 [tableOfContents]
+  ordered = true
   startLevel = 2
   endLevel = 6
