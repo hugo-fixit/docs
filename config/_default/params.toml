@@ -30,6 +30,9 @@ enablePWA = true
 # whether to add external Icon for external links automatically since v0.2.14
 # 是否自动显示外链图标 since v0.2.14
 externalIcon = true
+# FixIt 0.3.0 | NEW whether to reverse the order of the navigation menu
+# FixIt 0.3.0 | 新增 是否反转导航菜单的顺序
+navigationReverse = true
 # FixIt will, by default, inject a theme meta tag in the HTML head on the home page only. since v0.2.14
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
 # 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。since v0.2.14
