@@ -42,7 +42,7 @@ The following steps are here to help you initialize your new website. If you don
 
 Thanks to the simplicity of Hugo, [Hugo][hugo] is the only dependency of this theme.
 
-Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo extended edition(>= 0.111.0)][hugo-installing] for your machine (**macOS**, **Linux**, **Windows**, **BSD**, and any machine that can run the Go compiler tool chain).
+Just install latest version of [:(fa-regular fa-file-archive fa-fw): Hugo extended edition(>= 0.112.0)][hugo-installing] for your machine (**macOS**, **Linux**, **Windows**, **BSD**, and any machine that can run the Go compiler tool chain).
 
 ## Create a Site
 

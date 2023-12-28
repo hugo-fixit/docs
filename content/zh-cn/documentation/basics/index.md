@@ -193,6 +193,11 @@ menu:
   externalIcon = false
   # {{< version 0.3.0 >}} 是否反转导航菜单的顺序
   navigationReverse = false
+  # {{< version 0.3.0 >}} 是否在每个页面标题中添加网站标题
+  # 请记得在 `hugo.toml` 中设置网站标题 (例如 title = "title")
+  withSiteTitle = true
+  # {{< version 0.3.0 >}} 当网站标题被添加到每个页面标题时的标题分隔符
+  titleDelimiter = "-"
   # {{< version 0.2.14 >}} 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记
   # 你可以将其关闭，但如果你不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法
   disableThemeInject = false
