@@ -15,4 +15,4 @@ replacements = "github.com/hugo-fixit/FixIt -> FixIt"
 
 [hugoVersion]
   extended = true
-  min = "0.111.0"
+  min = "0.112.0"

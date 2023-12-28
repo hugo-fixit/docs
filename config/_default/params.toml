@@ -7,8 +7,8 @@
 # FixIt 主题版本
 version = "0.2.X"
 # website description for RSS, SEO, Open Graph and Twitter Cards
-# 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-description = "Hugo theme - FixIt"
+# 网站描述，用于 RSS, SEO, Open Graph 和 Twitter Cards
+description = "Hugo theme | FixIt"
 # site keywords
 # 网站关键词
 keywords = ["Hugo", "FixIt"]
@@ -22,20 +22,20 @@ fingerprint = ""
 # 日期格式
 dateFormat = "2006-01-02"
 # website images for Open Graph and Twitter Cards
-# 网站图片, 用于 Open Graph 和 Twitter Cards
-images = ["/logo.png"]
+# 网站图片，用于 Open Graph 和 Twitter Cards
+images = ["/fixit.min.svg"]
 # FixIt 0.2.12 | NEW enable PWA
 # FixIt 0.2.12 | 新增 开启 PWA 支持
 enablePWA = true
-# whether to add external Icon for external links automatically since v0.2.14
-# 是否自动显示外链图标 since v0.2.14
+# FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
+# FixIt 0.2.14 | 新增 是否自动显示外链图标
 externalIcon = true
 # FixIt 0.3.0 | NEW whether to reverse the order of the navigation menu
 # FixIt 0.3.0 | 新增 是否反转导航菜单的顺序
 navigationReverse = true
-# FixIt will, by default, inject a theme meta tag in the HTML head on the home page only. since v0.2.14
+# FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
-# 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。since v0.2.14
+# FixIt 0.2.14 | 新增 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。
 # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
 disableThemeInject = false
 
@@ -65,13 +65,13 @@ disableThemeInject = false
 # 应用图标配置
 [app]
   # optional site title override for the app when added to an iOS home screen or Android launcher
-  # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
+  # 当添加到 iOS 主屏幕或者 Android 启动器时的标题，覆盖默认标题
   title = "FixIt"
   # whether to omit favicon resource links
   # 是否隐藏网站图标资源链接
   noFavicon = false
   # modern SVG favicon to use in place of older style .png and .ico files
-  # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
+  # 更现代的 SVG 网站图标，可替代旧的 .png 和 .ico 文件
   svgFavicon = ""
   # Safari mask icon color
   # Safari 图标颜色
@@ -138,23 +138,23 @@ disableThemeInject = false
   # Header title config
   # 页面头部导航栏标题配置
   [header.title]
-    # URL of the LOGO
-    # LOGO 的 URL
+    # URL of the LOGO, default is favicon
+    # LOGO 的 URL，默认为网站图标
     logo = "/fixit.min.svg"
-    # title name
-    # 标题名称
-    name = "FixIt"
+    # title name, default is site title
+    # 标题名称，默认为网站标题
+    name = ""
     # you can add extra information before the name (HTML format is supported), such as icons
-    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息，例如图标
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
-    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息，例如图标
     post = ""
     # whether to use typeit animation for title name
     # 是否为标题显示打字机动画
     typeit = false
-  # Header subtitle config since v0.2.12
-  # 页面头部导航栏副标题配置 since v0.2.12
+  # FixIt 0.2.12 | NEW Header subtitle config
+  # FixIt 0.2.12 | 新增 页面头部导航栏副标题配置
   [header.subtitle]
     # subtitle name
     # 副标题名称
@@ -194,8 +194,8 @@ disableThemeInject = false
   # TODO whether to show total word count of site content
   # TODO 是否显示网站内容总字数
   wordCount = true
-  # Public network security only in China (HTML format is supported) since v0.2.12
-  # 公网安备信息，仅在中国使用 (支持 HTML 格式) since v0.2.12
+  # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
+  # FixIt 0.2.12 | 新增 公网安备信息，仅在中国使用 (支持 HTML 格式)
   gov = ""
   # ICP info only in China (HTML format is supported)
   # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
@@ -232,8 +232,8 @@ disableThemeInject = false
   # amount of RSS pages
   # RSS 文章数目
   rss = 10
-  # recently updated posts settings since v0.2.13
-  # 最近更新文章设置 since v0.2.13
+  # FixIt 0.2.13 | NEW recently updated posts settings
+  # FixIt 0.2.13 | 新增 最近更新文章设置
   [section.recentlyUpdated]
     enable = true
     rss = true
@@ -273,8 +273,8 @@ disableThemeInject = false
 # Home page config
 # 主页配置
 [home]
-  # FixIt 0.2.0 | NEW amount of RSS pages
-  # FixIt 0.2.0 | 新增 RSS 文章数目
+  # amount of RSS pages
+  # RSS 文章数目
   rss = 10
   # Home page profile
   # 主页个人信息
@@ -289,8 +289,8 @@ disableThemeInject = false
     # FixIt 0.2.17 | NEW identifier of avatar menu link
     # FixIt 0.2.17 | 新增 头像菜单链接的 identifier
     avatarMenu = ""
-    # FixIt 0.2.7 | CHANGED title shown in home page (HTML format is supported)
-    # FixIt 0.2.7 | 更改 主页显示的网站标题（支持 HTML 格式）
+    # title shown in home page (HTML format is supported)
+    # 主页显示的网站标题（支持 HTML 格式）
     title = ""
     # subtitle shown in home page
     # 主页显示的网站副标题
@@ -301,8 +301,8 @@ disableThemeInject = false
     # whether to show social links
     # 是否显示社交账号
     social = true
-    # FixIt 0.2.0 | NEW disclaimer (HTML format is supported)
-    # FixIt 0.2.0 | 新增 免责声明（支持 HTML 格式）
+    # disclaimer (HTML format is supported)
+    # 免责声明（支持 HTML 格式）
     disclaimer = ""
   # Home page posts
   # 主页文章列表
@@ -413,8 +413,8 @@ disableThemeInject = false
   # whether to hide a page from search results
   # 是否在搜索结果中隐藏一篇文章
   hiddenFromSearch = false
-  # FixIt 0.2.18-lts.5 | NEW whether to hide a page from RSS feed
-  # FixIt 0.2.18-lts.5 | 新增 是否在 RSS 中隐藏一篇文章
+  # FixIt 0.3.0 | NEW whether to hide a page from RSS feed
+  # FixIt 0.3.0 | 新增 是否在 RSS 中隐藏一篇文章
   hiddenFromRss = false
   # FixIt 0.3.0 | NEW whether to hide a page from related posts
   # FixIt 0.3.0 | 新增 是否在相关文章中隐藏一篇文章
@@ -454,13 +454,13 @@ disableThemeInject = false
   # whether to show the full text content in RSS
   # 是否在 RSS 中显示全文内容
   rssFullText = false
-  # Page style ["narrow", "normal", "wide", ...) since v0.2.13
-  # 页面样式 ["narrow", "normal", "wide", ...) since v0.2.13
+  # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...)
+  # FixIt 0.2.13 | 新增 页面样式 ["narrow", "normal", "wide", ...)
   pageStyle = "normal"
   # FixIt 0.2.17 | CHANGED Auto Bookmark Support
   # If true, save the reading progress when closing the page.
   # FixIt 0.2.17 | 更改 自动书签支持
-  # 如果为true，关闭页面时保存阅读进度。
+  # 如果为 true，关闭页面时保存阅读进度。
   autoBookmark = true
   # FixIt 0.2.17 | NEW whether to enable wordCount
   # FixIt 0.2.17 | 新增 是否启用字数显示
@@ -476,13 +476,12 @@ disableThemeInject = false
   instantPage = true
   # FixIt 0.3.0 | NEW whether to enable collection list at the sidebar
   # FixIt 0.3.0 | 新增 是否在侧边栏显示集合列表
-  collectionList = false
+  collectionList = true
   # FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post
   # FixIt 0.3.0 | 新增 是否在文章末尾显示集合导航
-  collectionNavigation = false
-
-  # Repost config since v0.2.15
-  # 转载配置 since v0.2.15
+  collectionNavigation = true
+  # FixIt 0.2.15 | NEW Repost config
+  # FixIt 0.2.15 | 新增 转载配置
   [page.repost]
     enable = false
     url = ""
@@ -498,11 +497,11 @@ disableThemeInject = false
     # whether to make the table of the contents in the sidebar automatically collapsed
     # 是否使侧边目录自动折叠展开
     auto = true
-    # position of TOC ["left", "right"] since v0.2.13
-    # 目录位置 ["left", "right"] since v0.2.13
+    # FixIt 0.2.13 | NEW position of TOC ["left", "right"]
+    # FixIt 0.2.13 | 新增 目录位置 ["left", "right"]
     position = "right"
-  # Display a message at the beginning of an article to warn the reader that its content might be expired. since v0.2.13
-  # 在文章开头显示提示信息，提醒读者文章内容可能过时。 since v0.2.13
+  # FixIt 0.2.13 | NEW Display a message at the beginning of an article to warn the reader that its content might be expired.
+  # FixIt 0.2.13 | 新增 在文章开头显示提示信息，提醒读者文章内容可能过时。
   [page.expirationReminder]
     enable = true
     # Display the reminder if the last modified time is more than 90 days ago
@@ -536,8 +535,8 @@ disableThemeInject = false
     # whether to show the copy button of the code block
     # 是否显示代码块的复制按钮
     copy = true
-    # whether to show the edit button of the code block since v0.2.13
-    # 是否显示代码块的编辑按钮 since v0.2.13
+    # FixIt 0.2.13 | NEW whether to show the edit button of the code block
+    # FixIt 0.2.13 | 新增 是否显示代码块的编辑按钮
     edit = true
     # the maximum number of lines of displayed code by default
     # 默认展开显示的代码行数
@@ -696,10 +695,10 @@ disableThemeInject = false
       # located in "themes/FixIt/assets/lib/valine/emoji/" directory
       # you can store your own data files in the same path under your project:
       # "assets/lib/valine/emoji/"
-      # emoji 数据文件名称, 默认是 "google.yml"
+      # emoji 数据文件名称，默认是 "google.yml"
       # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
       # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
-      # 可以在你的项目下相同路径存放你自己的数据文件:
+      # 可以在你的项目下相同路径存放你自己的数据文件：
       # "assets/lib/valine/emoji/"
       emoji = ""
       commentCount = true # FixIt 0.2.13 | NEW
@@ -831,30 +830,30 @@ disableThemeInject = false
   # 光标的字符 (支持 HTML 格式)
   cursorChar = "|"
   # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-  # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
+  # 打字结束之后光标的持续时间 (单位是毫秒，"-1" 代表无限大)
   duration = -1
   # FixIt 0.2.18 | NEW whether your strings will continuously loop after completing
   # FixIt 0.2.18 | 新增 打字完成后是否会连续循环
   loop = false
 
-# Mermaid config since v0.2.15
-# Mermaid 配置 since v0.2.15
+# FixIt 0.2.15 | NEW Mermaid config
+# FixIt 0.2.15 | 新增 Mermaid 配置
 [mermaid]
   # For values, see https://mermaid.js.org/config/theming.html#available-themes
   # 取值详见 https://mermaid.js.org/config/theming.html#available-themes
   themes = ["default", "dark"]
 
-# PanguJS config since v0.2.12
-# 盘古之白配置 since v0.2.12
+# FixIt 0.2.12 | NEW PanguJS config
+# FixIt 0.2.12 | 新增 盘古之白配置
 [pangu]
   # For Chinese writing
   # 适用于中文写作用户
   enable = false
   selector = "article" # FixIt 0.2.17 | NEW
 
-# Watermark config since v0.2.12
+# FixIt 0.2.12 | NEW Watermark config
 # Detail config see https://github.com/Lruihao/watermark#readme
-# 水印配置 since v0.2.12
+# FixIt 0.2.12 | 新增 水印配置
 # 详细参数见 https://github.com/Lruihao/watermark#readme
 [watermark]
   enable = true
@@ -887,7 +886,7 @@ disableThemeInject = false
   fontFamily = "inherit"
 
 # FixIt 0.2.12 | NEW Busuanzi count
-# FixIt 0.2.12 | NEW 不蒜子统计
+# FixIt 0.2.12 | 新增 不蒜子统计
 [ibruce]
   enable = false
   # Enable in post meta
@@ -949,7 +948,7 @@ disableThemeInject = false
   # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
   # located in "themes/FixIt/assets/data/cdn/" directory
   # you can store your own data files in the same path under your project: "assets/data/cdn/"
-  # CDN 数据文件名称, 默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
+  # CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
   # 位于 "themes/FixIt/assets/data/cdn/" 目录
   # 可以在你的项目下相同路径存放你自己的数据文件："assets/data/cdn/"
   # data = "unpkg.yml"
@@ -964,8 +963,8 @@ disableThemeInject = false
   # 是否使用 object-fit-images 来兼容旧式浏览器
   objectFit = false
 
-# GitHub banner in the top-right or top-left corner since v0.2.14
-# 在左上角或者右上角显示 GitHub 开源链接 since v0.2.14
+# FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
+# FixIt 0.2.14 | 新增 在左上角或者右上角显示 GitHub 开源链接
 [githubCorner]
   enable = true
   permalink = "https://github.com/hugo-fixit/FixIt"
@@ -1023,8 +1022,8 @@ disableThemeInject = false
   # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
   theme = "minimal"
 
-# FixIt 0.2.18-lts.3 | NEW [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
-# FixIt 0.2.18-lts.3 | 新增 [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
+# FixIt 0.3.0 | NEW [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
+# FixIt 0.3.0 | 新增 [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
 [cacheRemoteImages]
   enable = false
   # replace remote image url with local image url
@@ -1040,8 +1039,8 @@ disableThemeInject = false
   # profile = "custom/profile.html"
   # footer = "custom/footer.html"
 
-# Developer options since v0.2.15
-# 开发者选项 since v0.2.15
+# FixIt 0.2.15 | NEW Developer options
+# FixIt 0.2.15 | 新增 开发者选项
 [dev]
   enable = false
   # Check for updates
