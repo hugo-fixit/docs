@@ -6,10 +6,13 @@ comment: false
 pageStyle: wide
 lightgallery: true
 math: true
+heading:
+  number:
+    enable: false
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.111.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.112.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
@@ -20,9 +23,9 @@ math: true
 
 ![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
 
-### Features
+## Features
 
-#### Performance and SEO
+### Performance and SEO
 
 - :(fa-solid fa-rocket fa-fw): Optimized for **performance**: [99]/[100] on mobile and [100]/[100] on desktop in [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)
 - :(fa-brands fa-searchengin fa-fw): Optimized SEO performance with a correct **SEO SCHEMA** based on JSON-LD
@@ -31,7 +34,7 @@ math: true
 - :(fa-solid fa-search fa-fw): Search engine **verification** supported (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 - :(fa-solid fa-tachometer-alt fa-fw): **CDN** for third-party libraries supported
 
-#### Appearance and Layout
+### Appearance and Layout
 
 - [:(fa-solid fa-desktop):]/[:(fa-solid fa-mobile):] **Responsive** layout
 - [:(fa-solid fa-sun):]/[:(fa-solid fa-moon):] **[Light]/[Dark]** mode
@@ -42,7 +45,7 @@ math: true
 - :(fa-brands fa-css3-alt fa-fw): Beautiful **CSS animation**
 - :(fa-solid fa-text-width fa-fw): Flexible **page width**
 
-#### Social and Comment Systems
+### Social and Comment Systems
 
 - :(fa-regular fa-user fa-fw): **Gravatar** supported by [Gravatar](https://gravatar.com)
 - :(fa-solid fa-user-circle fa-fw): Local **Avatar** supported
@@ -60,7 +63,7 @@ math: true
 - :(fa-regular fa-comments fa-fw): **Twikoo** comment system supported by [Twikoo](https://twikoo.js.org/)
 - :(fa-regular fa-comments fa-fw): **giscus** comment system supported by [giscus](https://giscus.app/)
 
-#### Extended Features
+### Extended Features
 
 - :(fa-solid fa-desktop fa-fw): **PWA (Progressive Web App)** supported
 - :(fa-solid fa-bars fa-fw): **Sub Menu** supported
@@ -90,7 +93,7 @@ math: true
 - :(fa-solid fa-image fa-fw): Options to **cache remote image** locally
 - ...
 
-### Acknowledgements
+## Acknowledgements
 
 <details>
 <summary>Thanks to the authors of following resources included in the theme:</summary>
@@ -140,7 +143,7 @@ math: true
 
 </details>
 
-### Sponsor
+## Sponsor
 
 Giving me a Star 🌟 is already the greatest encouragement and support for me.
 
@@ -149,6 +152,6 @@ Giving me a Star 🌟 is already the greatest encouragement and support for me.
 {{< sponsor-log >}}
 {{< /details >}}
 
-### License
+## License
 
 FixIt is licensed under the **MIT** license. Check the [LICENSE file](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE) for details.

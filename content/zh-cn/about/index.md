@@ -6,10 +6,13 @@ comment: false
 pageStyle: wide
 lightgallery: true
 math: true
+heading:
+  number:
+    enable: false
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.111.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.112.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
@@ -20,9 +23,9 @@ math: true
 
 ![Hugo 主题 FixIt](/images/Apple-Devices-Preview.jpg "一个简洁、优雅且高效的 Hugo 主题")
 
-### 特性
+## 特性
 
-#### 性能和 SEO
+### 性能和 SEO
 
 - :(fa-solid fa-rocket fa-fw): **性能**优化：在 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) 中， [99]/[100] 的移动设备得分和 [100]/[100] 的桌面设备得分
 - :(fa-brands fa-searchengin fa-fw): 使用基于 JSON-LD 格式 的 **SEO SCHEMA** 文件进行 SEO 优化
@@ -31,7 +34,7 @@ math: true
 - :(fa-solid fa-search fa-fw): 支持搜索引擎的**网站验证** (Google, Bing, Yandex, Pinterest, Baidu, 360 and Sogou)
 - :(fa-solid fa-tachometer-alt fa-fw): 支持所有第三方库的 **CDN**
 
-#### 外观和布局
+### 外观和布局
 
 - [:(fa-solid fa-desktop):]/[:(fa-solid fa-mobile):] **响应式**布局
 - [:(fa-solid fa-sun):]/[:(fa-solid fa-moon):] **[浅色]/[深色]** 主题模式
@@ -42,7 +45,7 @@ math: true
 - :(fa-brands fa-css3-alt fa-fw): 美观的 **CSS 动画**
 - :(fa-solid fa-text-width fa-fw): 灵活的 **页面宽度**
 
-#### 社交和评论系统
+### 社交和评论系统
 
 - :(fa-regular fa-user fa-fw): 支持 **[Gravatar](https://gravatar.com)** 头像
 - :(fa-solid fa-user-circle fa-fw): 支持本地**头像**
@@ -60,7 +63,7 @@ math: true
 - :(fa-regular fa-comments fa-fw): 支持 **[Twikoo](https://twikoo.js.org/)** 评论系统
 - :(fa-regular fa-comments fa-fw): 支持 **[giscus](https://giscus.app/zh-CN/)** 评论系统
 
-#### 扩展功能
+### 扩展功能
 
 - :(fa-solid fa-desktop fa-fw): 支持**渐进式网页应用**
 - :(fa-solid fa-bars fa-fw): 支持**二级菜单**
@@ -90,7 +93,7 @@ math: true
 - :(fa-solid fa-image fa-fw): 支持本地**缓存远程图床图片**
 - ...
 
-### 致谢
+## 致谢
 
 <details>
 <summary>FixIt 主题中用到了以下项目，感谢它们的作者：</summary>
@@ -140,7 +143,7 @@ math: true
 
 </details>
 
-### 赞助支持
+## 赞助支持
 
 给我一个 Star 🌟 已经是对我最大的鼓励和支持了。
 
@@ -149,6 +152,6 @@ math: true
 {{< sponsor-log >}}
 {{< /details >}}
 
-### 许可协议
+## 许可协议
 
 FixIt 根据 **MIT** 许可协议授权。更多信息请查看看 [LICENSE 文件](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)。
