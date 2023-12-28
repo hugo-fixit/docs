@@ -200,6 +200,9 @@ Please open the code block below to view the complete `hugo.toml` sample configu
   withSiteTitle = true
   # {{< version 0.3.0 >}} title delimiter when the site title is be added to the title of every page
   titleDelimiter = "-"
+  # {{< version 0.3.0 >}} whether to add site subtitle to the title of index page
+  # remember to set up your site subtitle by `params.header.subtitle.name`
+  indexWithSubtitle = false
   # {{< version 0.2.14 >}} FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
   disableThemeInject = false
