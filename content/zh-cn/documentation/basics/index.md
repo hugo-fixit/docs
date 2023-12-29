@@ -1057,7 +1057,6 @@ menu:
   [mediaTypes."text/plain"]
     suffixes = ["txt"]
 
-# {{< version 0.2.15 changed >}}
 [outputFormats]
   # 用于输出 Markdown 格式文档的设置
   [outputFormats.MarkDown]
@@ -1070,10 +1069,18 @@ menu:
     mediaType = "text/plain"
     isPlainText = true
     isHTML = false
+  # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
+  [outputFormats.archives]
+    path = "archives"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
 
-# {{< version 0.2.18-lts.5 changed >}} 用于 Hugo 输出文档的设置
+# {{< version 0.3.0 changed >}} 用于 Hugo 输出文档的设置
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls"]
+  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML"]

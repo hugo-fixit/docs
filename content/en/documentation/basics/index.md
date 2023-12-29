@@ -1060,7 +1060,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
   [mediaTypes."text/plain"]
     suffixes = ["txt"]
 
-# {{< version 0.2.15 changed >}}
 [outputFormats]
   # Options to make output .md files
   [outputFormats.MarkDown]
@@ -1073,10 +1072,18 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     mediaType = "text/plain"
     isPlainText = true
     isHTML = false
+  # {{< version 0.3.0 >}} Options to make output /archives/index.html file
+  [outputFormats.archives]
+    path = "archives"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
 
-# {{< version 0.2.18-lts.5 changed >}} Options to make hugo output files
+# {{< version 0.3.0 changed >}} Options to make hugo output files
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls"]
+  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML"]

@@ -10,10 +10,20 @@
   isPlainText = true
   isHTML = false
 
-# Options to make output baidu_urls.txt file
-# 用于输出 baidu_urls.txt 文件的设置
+# FixIt 0.2.15 | NEW Options to make output baidu_urls.txt file
+# FixIt 0.2.15 | 新增 用于输出 baidu_urls.txt 文件的设置
 [BaiduUrls]
   baseName = "baidu_urls"
   mediaType = "text/plain"
   isPlainText = true
   isHTML = false
+
+# FixIt 0.3.0 | NEW Options to make output /archives/index.html file
+# FixIt 0.3.0 | 新增 用于输出 /archives/index.html 文件的设置
+[archives]
+  path = "archives"
+  baseName = "index"
+  mediaType = "text/html"
+  isPlainText = false
+  isHTML = true
+  permalinkable = true
