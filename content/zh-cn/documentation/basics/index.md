@@ -282,7 +282,7 @@ menu:
     # {{< version 0.2.0 >}} 页面头部导航栏标题配置
     [params.header.title]
       # LOGO 的 URL
-      logo = "/fixit.min.svg"
+      logo = "/images/fixit.min.svg"
       # 标题名称
       name = "我的 Hugo FixIt 网站"
       # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
@@ -310,22 +310,23 @@ menu:
     # {{< version 0.2.17 changed >}} 自定义内容（支持 HTML 格式）
     # 进阶使用，见参数 `params.customFilePath.footer`
     custom = ""
-    # {{< version 0.2.0 >}} 是否显示 Hugo 和主题信息
-    hugo = true
     # {{< version 0.2.0 >}} 是否显示版权信息
     copyright = true
     # {{< version 0.2.0 >}} 是否显示作者
     author = true
     # 网站创立年份
     since = 2021
-    # {{< version 0.2.14 >}} 是否显示网站内容总字数
-    wordCount = true
     # {{< version 0.2.12 >}} 公网安备信息，仅在中国使用（支持 HTML 格式）
     gov = ""
     # {{< version 0.2.12 changed >}} ICP 备案信息，仅在中国使用（支持 HTML 格式）
     icp = ""
     # 许可协议信息（支持 HTML 格式）
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    # {{< version 0.3.o >}} 是否显示 Hugo 和主题信息
+    [params.footer.powered]
+      enable = true
+      hugoLogo = true
+      themeLogo = true
     # {{< version 0.2.17 changed >}} 网站创立时间
     [params.footer.siteTime]
       enable = false

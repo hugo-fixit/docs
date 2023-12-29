@@ -55,7 +55,7 @@ description = "Hugo 主题 - FixIt"
 
 [watermark]
   enable = true
-  content = '<img class="fixit-icon" src="/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'
+  content = '<img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'
   opacity = 0.0125
   height = 21
 

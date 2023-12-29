@@ -147,7 +147,7 @@ get remote images test:
 
 不支持 `svg` 和 `avif` 等格式以及不支持请求式图片（如 gravatar），需要手动设置高度或设置为 `loading="eager"`
 
-{{< image src="https://fixit.lruihao.cn/fixit.min.svg" height="64px" width="64px" linked=false >}}
+{{< image src="https://fixit.lruihao.cn/images/fixit.min.svg" height="64px" width="64px" linked=false >}}
 ![gravatar](https://gravatar.loli.net/avatar/fee47a2f4f2cc71f99a02b0a73ecfee0?s=32&d=mp)
 {{< image src="https://avif.io/images/butterfly.avif" loading="eager" linked=false >}}
 

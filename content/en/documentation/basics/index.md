@@ -284,7 +284,7 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     # {{< version 0.2.0 >}} Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/fixit.min.svg"
+      logo = "/images/fixit.min.svg"
       # title name
       name = "My Hugo FixIt Site"
       # you can add extra information before the name (HTML format is supported), such as icons
@@ -312,22 +312,23 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     # {{< version 0.2.17 changed >}} Custom content (HTML format is supported)
     # For advanced use, see parameter `params.customFilePath.footer`
     custom = ""
-    # {{< version 0.2.0 >}} whether to show Hugo and theme info
-    hugo = true
     # {{< version 0.2.0 >}} whether to show copyright info
     copyright = true
     # {{< version 0.2.0 >}} whether to show the author
     author = true
     # Site creation year
     since = 2021
-    # {{< version 0.2.14 >}} whether to show total word count of site content
-    wordCount = true
     # {{< version 0.2.12 >}} Public network security only in China (HTML format is supported)
     gov = ""
     # ICP info only in China (HTML format is supported)
     icp = ""
     # license info (HTML format is supported)
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    # {{< version 0.3.0 >}} whether to show Hugo and theme info
+    [params.footer.powered]
+      enable = true
+      hugoLogo = true
+      themeLogo = true
     # {{< version 0.2.17 changed >}} Site creation time
     [params.footer.siteTime]
       enable = false

@@ -73,6 +73,6 @@
   description: XIDCN's blog
 
 - nickname: ADD
-  avatar: /fixit.min.svg
+  avatar: /images/fixit.min.svg
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
   description: Create a pull request to add a new site.
