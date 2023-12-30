@@ -621,6 +621,15 @@ Please open the code block below to view the complete `hugo.toml` sample configu
       scale = true
       # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
       fullscreen = true
+    # {{< version 0.3.0 >}} [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
+    [params.page.cacheRemoteImages]
+      enable = false
+      # replace remote image url with local image url (place in public/images/remote/)
+      replace = false
+    # {{< version 0.3.0 >}} Related content config (https://gohugo.io/content-management/related/)
+    [params.page.related]
+      enable = false
+      count = 5
     # {{< version 0.2.17 >}} Donate (Sponsor) settings
     [params.page.reward]
       enable = false
@@ -821,11 +830,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
         name = ""
         logoUrl = ""
 
-    # {{< version 0.3.0 >}} Related content config (https://gohugo.io/content-management/related/)
-    [params.page.related]
-      enable = false
-      count = 5
-
   # {{< version 0.2.5 >}} TypeIt config
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
@@ -977,12 +981,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
-
-  # {{< version 0.2.18-lts.3 >}} [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
-  [params.cacheRemoteImages]
-    enable = false
-    # replace remote image url with local image url
-    replace = false
 
   # {{< version 0.2.17 >}} Define custom file paths
   # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below

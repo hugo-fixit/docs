@@ -599,6 +599,18 @@ disableThemeInject = false
     # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
     # 是否添加 全屏控制 (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
     fullscreen = true
+  # FixIt 0.3.0 | NEW [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
+  # FixIt 0.3.0 | 新增 [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
+  [page.cacheRemoteImages]
+    enable = false
+    # replace remote image url with local image url (place in public/images/remote/)
+    # 用本地图片链接替换远程图片链接 (放置在 public/images/remote/)
+    replace = false
+  # FixIt 0.3.0 | NEW Related content config (https://gohugo.io/content-management/related/)
+  # FixIt 0.3.0 | 新增 相关内容配置 (https://gohugo.io/content-management/related/)
+  [page.related]
+    enable = true
+    count = 5
   # Donate (Sponsor) settings
   # 赞赏设置
   [page.reward]
@@ -827,12 +839,6 @@ disableThemeInject = false
       name = "Lruihao"
       logoUrl = "/images/avatar.png"
 
-    # FixIt 0.3.0 | NEW Related content config (https://gohugo.io/content-management/related/)
-    # FixIt 0.3.0 | 新增 相关内容配置 (https://gohugo.io/content-management/related/)
-    [page.related]
-      enable = true
-      count = 5
-
 # TypeIt config
 # TypeIt 配置
 [typeit]
@@ -1037,14 +1043,6 @@ disableThemeInject = false
   # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
   # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
   theme = "minimal"
-
-# FixIt 0.3.0 | NEW [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
-# FixIt 0.3.0 | 新增 [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
-[cacheRemoteImages]
-  enable = false
-  # replace remote image url with local image url
-  # 用本地图片链接替换远程图片链接
-  replace = false
 
 # Define custom file paths
 # Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below

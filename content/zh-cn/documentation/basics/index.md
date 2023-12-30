@@ -619,6 +619,15 @@ menu:
       scale = true
       # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
       fullscreen = true
+    # {{< version 0.3.0 >}} [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
+    [params.page.cacheRemoteImages]
+      enable = false
+      # 用本地图片链接替换远程图片链接 (放置在 public/images/remote/)
+      replace = false
+    # {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
+    [params.page.related]
+      enable = false
+      count = 5
     # {{< version 0.2.17 >}} 赞赏设置
     [params.page.reward]
       enable = false
@@ -818,11 +827,6 @@ menu:
         name = ""
         logoUrl = ""
 
-    # {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
-    [params.page.related]
-      enable = false
-      count = 5
-
   # {{< version 0.2.5 >}} TypeIt 配置
   [params.typeit]
     # 每一步的打字速度（单位是毫秒）
@@ -974,12 +978,6 @@ menu:
     # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
     # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
     theme = "minimal"
-
-  # {{< version 0.2.18-lts.3 >}} [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
-  [params.cacheRemoteImages]
-    enable = false
-    # 用本地图片链接替换远程图片链接
-    replace = false
 
   # {{< version 0.2.17 >}} 定义自定义文件路径
   # 在站点目录 `layouts/partials/custom` 中创建你的自定义文件，并取消注释下面需要的文件
