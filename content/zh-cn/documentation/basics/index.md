@@ -1076,10 +1076,18 @@ menu:
     isPlainText = false
     isHTML = true
     permalinkable = true
+  # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
+  [outputFormats.offline]
+    path = "offline"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
 
 # {{< version 0.3.0 changed >}} 用于 Hugo 输出文档的设置
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives"]
+  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives", "offline"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML"]

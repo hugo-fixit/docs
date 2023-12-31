@@ -1079,10 +1079,18 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     isPlainText = false
     isHTML = true
     permalinkable = true
+  # {{< version 0.3.0 >}} Options to make output /offline/index.html file
+  [outputFormats.offline]
+    path = "offline"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
 
 # {{< version 0.3.0 changed >}} Options to make hugo output files
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives"]
+  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives", "offline"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML"]
