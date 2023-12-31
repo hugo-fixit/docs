@@ -310,29 +310,6 @@ hugo new friends/index.md
 
 {{< /admonition >}}
 
-### 离线页面
-
-{{< version 0.2.12 >}} 详见 [PWA 支持][pwa-support]
-
-在前置参数中设置 `layout: offline`，并在 `hugo.toml` 中开启 `enablePWA`：
-
-```toml
-[params]
-  # enable PWA
-  # 开启 PWA 支持
-  enablePWA = true
-```
-
-{{< admonition tip >}}
-
-你可以使用以下命令快速创建离线页面：
-
-```bash
-hugo new offline/index.md
-```
-
-{{< /admonition >}}
-
 ## 内容加密
 
 这部分内容在 [内容加密页面][content-encryption] 中介绍。
@@ -351,7 +328,6 @@ hugo new offline/index.md
 [fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
 [page-style]: {{< relref path="/documentation/advanced#page-style" >}}
-[pwa-support]: {{< relref path="/guides/pwa-support" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}

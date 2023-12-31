@@ -99,32 +99,34 @@ hiddenFromHomePage: true
 
 ### 配置离线页面 {#offline-page}
 
-离线页面将在访客离线访问未缓存的页面时显示。
+离线页面将在访客离线访问未缓存的页面时显示，你只需要简单几步就可以配置离线页面。
 
-你只需要在 `/content/` 目录创建 `offline.md` 或者 `offline/index.md`, 你可以通过以下命令快速完成创建：
+1. 增加 `outputFormats.offline` 配置：
 
-```bash
-hugo new offline.md
-hugo new offline/index.md
-# [i18n] if you are running a multilingual website.
-hugo new offline/index.en.md
-hugo new offline/index.zh-cn.md
-hugo new offline/index.zh-tw.md
-```
+    ```toml
+    [outputFormats]
+      # ...
+      # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
+      [offline]
+        path = "offline"
+        baseName = "index"
+        mediaType = "text/html"
+        isPlainText = false
+        isHTML = true
+        permalinkable = true
+    ```
 
-{{< admonition type=tip title="Permalink" open=true >}}
-你需要确保离线页面的 [Permalink](https://gohugo.io/content-management/urls/#permalinks) 是 `/offline/`, 否则你需要手动更改 service worker 中 `OFFLINE_CACHE_FILES` 和 `OFFLINE_PAGE` 的值。
+2. 添加 "offline" 到 `outputs.home` 配置中：
 
+    ```toml
+    [outputs]
+      home = ["HTML", "RSS", "JSON", "BaiduUrls", "offline"]
+      # ...
+    ```
+
+{{< admonition type=tip title="I18n" open=true >}}
 目前，离线页面支持 i18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
 {{< /admonition >}}
-
-这是一个示例离线页面：
-
-```md
----
-type: "offline"
----
-```
 
 ### 开启 `enablePWA` 选项 {#enable-pwa}
 

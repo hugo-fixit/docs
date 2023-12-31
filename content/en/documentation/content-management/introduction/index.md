@@ -311,28 +311,6 @@ hugo new friends/index.md
 
 {{< /admonition >}}
 
-### Offline
-
-{{< version 0.2.12 >}} See [PWA Support][pwa-support] for details.
-
-Set `layout: offline` in the front matter and set `enablePWA` in `hugo.toml`:
-
-```toml
-[params]
-  # enable PWA
-  enablePWA = true
-```
-
-{{< admonition tip >}}
-
-You can use the following command to quickly create a offline page:
-
-```bash
-hugo new offline/index.md
-```
-
-{{< /admonition >}}
-
 ## Content Encryption
 
 This part is shown in the [content encryption page][content-encryption].
@@ -351,7 +329,6 @@ This part is shown in the [shortcodes page][shortcodes].
 [fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
 [page-style]: {{< relref path="/documentation/advanced#page-style" >}}
-[pwa-support]: {{< relref path="/guides/pwa-support" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}

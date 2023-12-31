@@ -101,30 +101,34 @@ Here is a sample `site.webmanifest` file from this documentation site.
 
 The offline page will be served to your visitor when they are offline.
 
-You just need to create an `offline.md` or `offline/index.md` in the `/content/` directory, and you can create them quickly with the following commands in your site directory:
+You only need to follow a few steps to configure the offline page.
 
-```bash
-hugo new offline.md
-hugo new offline/index.md
-# [i18n] if you are running a multilingual website.
-hugo new offline/index.en.md
-hugo new offline/index.zh-cn.md
-hugo new offline/index.zh-tw.md
-```
+1. Add `outputFormats.offline` as below:
 
-{{< admonition type=tip title="Permalink" open=true >}}
-You need to make sure the [Permalink](https://gohugo.io/content-management/urls/#permalinks) to the offline page is `/offline/`, otherwise, you will need to modify the value of `OFFLINE_CACHE_FILES` and `OFFLINE_PAGE` in the service worker yourself.
+    ```toml
+    [outputFormats]
+      # ...
+      # {{< version 0.3.0 >}} Options to make output /offline/index.html file
+      [offline]
+        path = "offline"
+        baseName = "index"
+        mediaType = "text/html"
+        isPlainText = false
+        isHTML = true
+        permalinkable = true
+    ```
 
+2. Add "offline" in `outputs.home` as below:
+
+    ```toml
+    [outputs]
+      home = ["HTML", "RSS", "JSON", "BaiduUrls", "offline"]
+      # ...
+    ```
+
+{{< admonition type=tip title="I18n" open=true >}}
 Currently, i18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
 {{< /admonition >}}
-
-Here is a sample offline page.
-
-```md
----
-type: "offline"
----
-```
 
 ### Enable the `enablePWA` option {#enable-pwa}
 
