@@ -1062,12 +1062,6 @@ menu:
     mediaType = "text/markdown"
     isPlainText = true
     isHTML = false
-  # {{< version 0.2.15 >}} 用于输出 baidu_urls.txt 文件的设置
-  [outputFormats.BaiduUrls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
   # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
   [outputFormats.archives]
     path = "archives"
@@ -1084,10 +1078,27 @@ menu:
     isPlainText = false
     isHTML = true
     permalinkable = true
+  # {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
+  [outputFormats.README]
+    baseName = "readme"
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.0 changed >}} 用于输出 baidu_urls.txt 文件的设置
+  [outputFormats.baidu_urls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
 
-# {{< version 0.3.0 changed >}} 用于 Hugo 输出文档的设置
+# 用于 Hugo 输出文档的设置，可选值如下：
+# home: ["HTML", "RSS", "JSON", "archives", "offline", "README", "baidu_urls"]
+# page: ["HTML", "MarkDown"]
+# section: ["HTML", "RSS"]
+# taxonomy: ["HTML", "RSS"]
+# term: ["HTML", "RSS"]
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives", "offline"]
+  home = ["HTML", "RSS", "JSON", "archives", "offline"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML"]

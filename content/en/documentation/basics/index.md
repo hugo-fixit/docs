@@ -1065,12 +1065,6 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     mediaType = "text/markdown"
     isPlainText = true
     isHTML = false
-  # {{< version 0.2.15 >}} Options to make output baidu_urls.txt file
-  [outputFormats.BaiduUrls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
   # {{< version 0.3.0 >}} Options to make output /archives/index.html file
   [outputFormats.archives]
     path = "archives"
@@ -1087,10 +1081,27 @@ Please open the code block below to view the complete `hugo.toml` sample configu
     isPlainText = false
     isHTML = true
     permalinkable = true
+  # {{< version 0.3.0 >}} Options to make output readme.md file
+  [outputFormats.README]
+    baseName = "readme"
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.0 changed >}} Options to make output baidu_urls.txt file
+  [outputFormats.baidu_urls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
 
-# {{< version 0.3.0 changed >}} Options to make hugo output files
+# Options to make hugo output files, the optional values are below:
+# home: ["HTML", "RSS", "JSON", "archives", "offline", "README", "baidu_urls"]
+# page: ["HTML", "MarkDown"]
+# section: ["HTML", "RSS"]
+# taxonomy: ["HTML", "RSS"]
+# term: ["HTML", "RSS"]
 [outputs]
-  home = ["HTML", "RSS", "JSON", "BaiduUrls", "archives", "offline"]
+  home = ["HTML", "RSS", "JSON", "archives", "offline"]
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML"]
