@@ -13,14 +13,6 @@
     icon = "fa-solid fa-book"
 
 [[main]]
-  identifier = "faq"
-  name = "常见问答"
-  url = "faq/"
-  weight = 2
-  [main.params]
-    icon = "fa-solid fa-fire text-danger"
-
-[[main]]
   identifier = "tests"
   name = "测试"
   url = "tests/"
@@ -31,48 +23,36 @@
     icon = "fa-solid fa-flask text-success"
 
 [[main]]
-  identifier = "releases"
-  name = "版本发布"
-  url = "https://github.com/hugo-fixit/FixIt/releases"
+  identifier = "archives"
+  name = "归档"
+  url = "archives/"
   weight = 10
   [main.params]
-    type = "desktop"
+    icon = "fa-solid fa-archive"
 [[main]]
-  identifier = "v0.2.17"
-  name = "v0.2.17"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
-  url = "https://fixit-pcwilecsu-x-cell.vercel.app"
-  parent = "releases"
+  identifier = "categories"
+  parent = "archives"
+  name = "分类"
+  url = "categories/"
+  weight = 11
+  [main.params]
+    icon = "fa-solid fa-folder-tree"
 [[main]]
-  identifier = "v0.2.16"
-  name = "v0.2.16"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
-  url = "https://fixit-jir7e7kzt-x-cell.vercel.app"
-  parent = "releases"
+  identifier = "collections"
+  parent = "archives"
+  name = "合集"
+  url = "collections/"
+  weight = 12
+  [main.params]
+    icon = "fa-solid fa-layer-group"
 [[main]]
-  identifier = "v0.2.15"
-  name = "v0.2.15"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
-  url = "https://fixit-hvd1rg4ba-x-cell.vercel.app"
-  parent = "releases"
-[[main]]
-  identifier = "v0.2.14"
-  name = "v0.2.14"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
-  url = "https://fixit-p1tg6tsml-lruihao.vercel.app"
-  parent = "releases"
-[[main]]
-  identifier = "v0.2.13"
-  name = "v0.2.13"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
-  url = "https://fixit-bbh5g5x90-lruihao.vercel.app"
-  parent = "releases"
-[[main]]
-  identifier = "v0.2.12"
-  name = "v0.2.12"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-sm text-secondary"></i>'
-  url = "https://fixit-e9lpwfkbp-lruihao.vercel.app"
-  parent = "releases"
+  identifier = "tags"
+  parent = "archives"
+  name = "标签"
+  url = "tags/"
+  weight = 13
+  [main.params]
+    icon = "fa-solid fa-tags"
 
 [[main]]
   identifier = "about"
@@ -82,45 +62,55 @@
   [main.params]
     icon = "fa-solid fa-info-circle"
 [[main]]
-  identifier = "friends"
-  name = "友链"
-  url = "friends/"
-  title = "友情链接"
-  weight = 21
+  identifier = "releases"
   parent = "about"
+  name = "版本发布"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
+  url = "https://github.com/hugo-fixit/FixIt/releases"
+  weight = 21
   [main.params]
-    icon = "fa-solid fa-users"
+    icon = "fa-solid fa-code-branch"
+[[main]]
+  identifier = "community"
+  parent = "about"
+  name = "社区讨论"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
+  url = "https://github.com/hugo-fixit/FixIt/discussions"
+  weight = 22
+  [main.params]
+    icon = "fa-regular fa-comments"
 [[main]]
   identifier = "guides"
-  name = "教程"
+  name = "相关教程"
   url = "guides/"
-  title = "相关教程"
-  weight = 22
+  weight = 23
   parent = "about"
   [main.params]
     icon = "fa-solid fa-layer-group"
 [[main]]
+  identifier = "components"
+  parent = "about"
+  name = "相关组件"
+  url = "components/overview/"
+  weight = 24
+  [main.params]
+    icon = "fa-solid fa-puzzle-piece"
+[[main]]
+  identifier = "showcase"
+  name = "案例展示"
+  url = "showcase/"
+  weight = 25
+  parent = "about"
+  [main.params]
+    icon = "fa-solid fa-blog"
+[[main]]
   identifier = "references"
   name = "参考"
-  url = "references/"
-  weight = 23
+  url = "references/overview/"
+  weight = 26
   parent = "about"
   [main.params]
     icon = "fa-solid fa-microchip"
-[[main]]
-  identifier = "categories"
-  name = "分类"
-  url = "categories/"
-  parent = "about"
-  [main.params]
-    icon = "fa-solid fa-folder-tree"
-[[main]]
-  identifier = "tags"
-  name = "标签"
-  url = "tags/"
-  parent = "about"
-  [main.params]
-    icon = "fa-solid fa-tags"
 
 [[main]]
   identifier = "github"

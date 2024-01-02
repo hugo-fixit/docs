@@ -1,7 +1,9 @@
 ---
-title: 友情链接
+title: 案例展示
 subtitle: 记录一些使用 FixIt 主题的朋友们
 layout: friends
+aliases:
+  - /zh-cn/friends/
 description: FixIt 主题的友链模板 Demo
 keywords:
   - Hugo

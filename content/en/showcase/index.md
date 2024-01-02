@@ -1,7 +1,9 @@
 ---
-title: Friends
+title: Showcase
 subtitle: Recording some friends who use FixIt theme
 layout: friends
+aliases:
+  - /friends/
 description: Friends template demo of FixIt theme
 keywords:
   - Hugo
