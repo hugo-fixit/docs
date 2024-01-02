@@ -1,1 +1,0 @@
-# github.com/Lruihao/hugo-shortcode-sponsor-log v1.0.0

@@ -13,7 +13,7 @@ baseURL = "http://localhost:1313"
 
 # theme
 # 主题
-# theme = ["FixIt", "shortcode-sponsor-log"]
+theme = ["FixIt", "shortcode-sponsor-log"]
 
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]

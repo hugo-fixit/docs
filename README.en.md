@@ -10,15 +10,13 @@
 
 ## Contributing Documentation
 
-FixIt theme documentation is mainly divided into: [Documentation](https://fixit.lruihao.cn/documentation/), [FAQ](https://fixit.lruihao.cn/faq/) , [Guides](https://fixit.lruihao.cn/guides/) three major sections, welcome everyone to initiate a PR to improve the theme documentation.
-
-Start previewing the documentation site locally:
-
 ```bash
 git clone https://github.com/hugo-fixit/docs.git
 npm install
-npm run server
-npm run server:production
 ```
+
+FixIt theme documentation is mainly divided into: [Documentation](https://fixit.lruihao.cn/documentation/), [Guides](https://fixit.lruihao.cn/guides/) two major sections, welcome everyone to initiate a PR to improve the theme documentation.
+
+Start previewing the documentation site locally:
 
 If you want to do theme-related docs changes, the simplest way is to clone FixIt theme recursively, see [CONTRIBUTING](https://github.com/hugo-fixit/FixIt/blob/master/CONTRIBUTING.md) for details.
