@@ -151,11 +151,11 @@ then, customize the template:
 <div class="profile-custom">
   {{- if .Site.BuildDrafts -}}
     <a href="https://fixit.lruihao.cn" target="_blank" rel="external" title="Go to Production Environment">
-      <img src="https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=Production&logo=vercel" alt="Production environment">
+      <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Production&logo=vercel" alt="Production environment">
     </a>
   {{- else -}}
     <a href="https://pre.fixit.lruihao.cn" target="_blank" rel="external" title="Go to Preview Environment">
-      <img src="https://img.shields.io/github/deployments/hugo-fixit/FixIt/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
+      <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
     </a>
   {{- end -}}
   <a href="https://demo.fixit.lruihao.cn" target="_blank" rel="external" title="FixIt Demo">
