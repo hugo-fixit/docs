@@ -18,7 +18,7 @@ Find out how to use algolia in the FixIt theme and update index automatically.
 
 ## Create algolia Application
 
-1. Register [algolia](https://www.algolia.com/) ac count
+1. Register [algolia](https://www.algolia.com/) account
 2. Create an application in algolia, such as `fixit-blog`
 3. Select the application `fixit-blog` => Click `Data Sources` => Click `Indices` => Click `Create Index`
 4. Create an index, such as `index.en`

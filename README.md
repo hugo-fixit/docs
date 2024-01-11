@@ -10,13 +10,8 @@
 
 ## 贡献文档
 
-```bash
-git clone https://github.com/hugo-fixit/docs.git
-npm install
-```
-
 FixIt 主题文档主要分为：[文档](https://fixit.lruihao.cn/zh-cn/documentation/)、[教程](https://fixit.lruihao.cn/zh-cn/guides/)三个大的板块，欢迎大家发起 PR 完善主题文档。
 
-本地启动预览该文档：
+请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 以了解贡献该项目的基本信息。
 
-如果你想进行与主题相关的文档更改，最简单的方式是递归克隆 FixIt 主题，详见 [CONTRIBUTING](https://github.com/hugo-fixit/FixIt/blob/master/CONTRIBUTING.md)。
+如果你想进行与主题相关的更改，请前往 [hugo-fixit/FixIt](https://github.com/hugo-fixit/FixIt) 仓库。

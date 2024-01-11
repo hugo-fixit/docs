@@ -20,13 +20,16 @@
   "license": "MIT",
   "author": "Lruihao (https://lruihao.cn)",
   "scripts": {
+    "algolia": "atomic-algolia",
     "fix:md": "autocorrect content --fix && markdownlint-cli2 \"content/**/*.md\" --fix",
     "lint:md": "autocorrect content --lint && markdownlint-cli2 \"content/**/*.md\"",
     "prepare": "husky install",
-    "server": "hugo server  -D --disableFastRender --navigateToChanged --ignoreCache --bind 0.0.0.0 ",
+    "build": "hugo -v --gc --minify",
+    "server": "hugo server  -D --disableFastRender --navigateToChanged --ignoreCache --bind 0.0.0.0",
     "server:production": "npm run server -- -e production"
   },
   "devDependencies": {
+    "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.8.4",
     "husky": "^8.0.0",
     "lint-staged": "^15.1.0",

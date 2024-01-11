@@ -1,3 +1,6 @@
+[submodule "themes/FixIt"]
+	path = themes/FixIt
+	url = https://github.com/hugo-fixit/FixIt.git
 [submodule "themes/shortcode-sponsor-log"]
 	path = themes/shortcode-sponsor-log
 	url = https://github.com/Lruihao/hugo-shortcode-sponsor-log.git
