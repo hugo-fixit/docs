@@ -4,15 +4,13 @@
 # -------------------------------------------------------------------------------------
 
 # equivalent to `env HUGO_MODULE_REPLACEMENTS="github.com/hugo-fixit/FixIt -> FixIt"`
-# If you want to update the theme, comment out the next line, then run `hugo mod get -u`, then uncomment it.
-# sed -i '' '9s/^/# /' config/_default/module.toml && hugo mod get -u github.com/hugo-fixit/FixIt@master && hugo mod tidy && sed -i '' '9s/^# //' config/_default/module.toml
 # replacements = "github.com/hugo-fixit/FixIt -> FixIt"
 
-# [[imports]]
-#   path = "github.com/hugo-fixit/FixIt"
+[[imports]]
+  path = "github.com/hugo-fixit/FixIt"
 
-# [[imports]]
-#   path = "github.com/Lruihao/hugo-shortcode-sponsor-log"
+[[imports]]
+  path = "github.com/Lruihao/hugo-shortcode-sponsor-log"
 
 [hugoVersion]
   extended = true

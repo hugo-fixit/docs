@@ -23,7 +23,7 @@ updates:
       - "Lruihao"
     labels:
       - "dependencies"
-  - package-ecosystem: "gitsubmodule"
+  - package-ecosystem: "gomod"
     directory: "/"
     schedule:
       interval: "weekly"

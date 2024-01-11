@@ -11,6 +11,8 @@ on:
       - 'data/**'
       - 'static/**'
       - 'themes/**'
+      - 'go.mod'
+      - 'go.sum'
   workflow_dispatch:
 
 jobs:
