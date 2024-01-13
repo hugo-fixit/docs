@@ -10,7 +10,7 @@
   title = "Theme Documentation"
   weight = 1
   [main.params]
-    icon = "fa-solid fa-book"
+    icon = "fa-regular fa-newspaper"
 
 [[main]]
   identifier = "tests"
@@ -60,7 +60,7 @@
   url = "about/"
   weight = 20
   [main.params]
-    icon = "fa-solid fa-info-circle"
+    icon = "fa-solid fa-signature"
 [[main]]
   identifier = "releases"
   parent = "about"
@@ -86,7 +86,7 @@
   url = "guides/"
   weight = 23
   [main.params]
-    icon = "fa-solid fa-layer-group"
+    icon = "fa-regular fa-compass"
 [[main]]
   identifier = "components"
   parent = "about"
