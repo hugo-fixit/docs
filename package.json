@@ -27,11 +27,13 @@
     "build": "hugo -v --gc --minify",
     "server": "hugo server  -D --disableFastRender --navigateToChanged --ignoreCache --bind 0.0.0.0",
     "server:production": "npm run server -- -e production",
+    "server:development": "cross-env HUGO_MODULE_WORKSPACE=hugo.work npm run server -- --ignoreVendorPaths \"**\"",
     "update:theme": "hugo mod get -u github.com/hugo-fixit/FixIt@latest && hugo mod tidy"
   },
   "devDependencies": {
     "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.9.0",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
     "markdownlint-cli2": "^0.11.0",
