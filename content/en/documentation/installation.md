@@ -1,0 +1,194 @@
+---
+title: Installation Theme
+linkTitle: Installation
+date: 2024-01-18T10:29:25+08:00
+type: posts
+categories:
+  - Documentation
+tags:
+  - Installation
+menu:
+  main:
+    title: Install FixIt Theme for your Hugo site in a few steps.
+    parent: documentation
+    weight: 1
+    params:
+      icon: fa-brands fa-readme
+---
+
+Install **FixIt** theme for your Hugo site in a few steps.
+
+<!--more-->
+
+1. Configure the default theme to FixIt in `hugo.toml`, e.g. `theme = "FixIt"`
+2. Install the theme by one of the following ways.
+
+## Prerequisites
+
+Thanks to the simplicity of Hugo, [Hugo][hugo] may be the only dependency of this theme.
+
+Although not required in all cases, [Git][git], [Go][go], [Dart Sass][dart-sass] and [Node.js][node.js] are commonly used when working with Hugo.
+
+Git is required to:
+
+- Build Hugo from source
+- Use the [Hugo Modules][hugo-modules] feature
+- Install a theme as a Git submodule
+- Access [commit information][commit-info] from a local Git repository
+- Host your site with services such as [CloudCannon][cloudcannon], [Cloudflare Pages][cloudflare-pages], [GitHub Pages][github-pages], [GitLab Pages][gitlab-pages], and [Netlify][netlify]
+
+Go is required to:
+
+- Build Hugo from source
+- Use the Hugo Modules feature
+
+Dart Sass is required to transpile Sass to CSS when using the latest features of the Sass language.
+
+Node.js is required to:
+
+- Use the FixIt CLI
+- Some Automation Tools, e.g. [atomic-algolia]({{< relref path="/guides/algolia-atomic" >}})
+
+Please refer to the relevant documentation for installation instructions:
+
+- [Hugo][hugo-install] (extended edition, v0.112.0 or later)
+- [Git][git-install]
+- [Go][go-install]
+- _[Dart Sass][dart-sass-install] (not used yet)_
+- [Node.js][node-install] (v16.0.0 or later)
+
+## Manual
+
+You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file][releases] of the theme and extract it in the `themes` directory.
+
+To upgrade the theme by replacing the old theme with the new one.
+
+## Git Clone
+
+In this way, just clone the [FixIt][fixit] theme into the `themes` directory.
+
+```bash
+git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
+```
+
+To upgrade the theme by pulling the latest commits from the repository.
+
+```bash
+cd themes/FixIt
+git pull
+```
+
+## Git Submodule {#git-submodule}
+
+<!-- markdownlint-disable-next-line no-bare-urls -->
+{{< link "https://github.com/hugo-fixit/hugo-fixit-starter1" "A Template base on Git Submodule" "" true >}}
+
+Initialize an empty Git repository in the current directory.
+
+```bash
+git init
+```
+
+Add [FixIt][fixit] to your project as a [Git submodule][git-submodule] stored in the `themes` directory.
+
+```bash
+git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
+```
+
+To use the version on the `dev` branch, you can use the following command:
+
+```bash
+git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
+
+# Alternatively, switch the submodule branch from `master` to `dev`:
+git submodule set-branch -b dev themes/FixIt
+```
+
+To upgrade the theme by using the following command:
+
+```bash
+git submodule update --remote --merge themes/FixIt
+```
+
+## Hugo Module {#hugo-module}
+
+<!-- markdownlint-disable-next-line no-bare-urls -->
+{{< link "https://github.com/hugo-fixit/hugo-fixit-starter" "A Template base on Hugo Module" "" true >}}
+
+{{< admonition tip >}}
+In this way, you don't need to configure `theme = "FixIt"` in `hugo.toml`.
+{{< /admonition >}}
+
+The easiest way to use a [Module][hugo-modules] for a theme is to import it in the config. See [Use Hugo Modules][use-hugo-modules].
+
+1. Initialize the hugo module system: `hugo mod init github.com/<your_user>/<your_project>`
+2. Import the theme:
+
+   ```toml
+   [module]
+     [[module.imports]]
+       path = "github.com/hugo-fixit/FixIt"
+   ```
+
+To update or manage versions, you can use `hugo mod get`.
+
+```bash
+# Update all modules
+hugo mod get -u
+# Update all modules recursively
+hugo mod get -u ./...
+# Update one module
+hugo mod get -u github.com/hugo-fixit/FixIt
+# Get a specific version (e.g. v0.3.2, @latest, @master, @dev)
+hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
+```
+
+## CLI
+
+FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hugo FixIt site. It provides two ways to quickly scaffold Hugo FixIt site based on Git Submodule or Hugo Module, and provides the ability to check the latest version of the FixIt theme. See the [FixIt CLI docs][fixit-cli] for more details.
+
+```bash
+npm install -g fixit-cli
+fixit create my-blog
+```
+
+<!-- markdownlint-disable search-replace -->
+
+{{< admonition danger "Tip" >}}
+The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any build tools before using the CLI.
+{{< /admonition >}}
+
+## Comparison
+
+|                               | Manual             | Git Clone          | Git Submodule      | Hugo Module        |
+| ----------------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
+| Prerequisites                 | Hugo               | Hugo, Git          | Hugo, Git          | Hugo, Git, Go      |
+| Easy to install?              | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Easy to upgrade or downgrade? | :heavy_check_mark: | :heavy_check_mark: | :white_check_mark: | :white_check_mark: |
+| Download speed?               | :x:                | :x:                | :heavy_check_mark: | :white_check_mark: |
+| Automatic updates?            | :x:                | :x:                | :white_check_mark: | :white_check_mark: |
+| Latest version available?     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+<!-- link reference definition -->
+[hugo]: https://gohugo.io/
+[hugo-install]: https://gohugo.io/installation/
+[git]: https://git-scm.com/
+[git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[go]: https://go.dev/
+[go-install]: https://go.dev/doc/install
+[dart-sass]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
+[dart-sass-install]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
+[node.js]: https://nodejs.org/
+[node-install]: https://nodejs.org/en/download/
+[commit-info]: https://gohugo.io/variables/git/
+[cloudcannon]: https://cloudcannon.com/
+[cloudflare-pages]: https://pages.cloudflare.com/
+[github-pages]: https://pages.github.com/
+[gitlab-pages]: https://docs.gitlab.com/ee/user/project/pages/
+[netlify]: https://www.netlify.com/
+[fixit]: https://github.com/hugo-fixit/FixIt
+[fixit-cli]: https://github.com/hugo-fixit/fixit-cli
+[releases]: https://github.com/hugo-fixit/FixIt/releases
+[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[hugo-modules]: https://gohugo.io/hugo-modules/
+[use-hugo-modules]: https://gohugo.io/hugo-modules/use-modules/
