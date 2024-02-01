@@ -52,11 +52,6 @@
   url: https://blog.inuya.ltd/
   description: 相见时难别亦难，东风无力百花残
 
-- nickname: Ling
-  avatar: https://maling.io/avatar/ling.webp
-  url: https://maling.io/
-  description: Maling's Blog
-
 - nickname: Niku
   avatar: https://www.nikunokoya.com/images/avatar.jpg
   url: https://www.nikunokoya.com
@@ -71,6 +66,11 @@
   avatar: https://xidcn.com/images/avatar.webp
   url: https://xidcn.com
   description: XIDCN's blog
+
+- nickname: 羽翎轩
+  avatar: https://maling.io/avatar/ling.webp
+  url: https://maling.io/
+  description: 羽翎轩 
 
 - nickname: ADD
   avatar: /images/fixit.min.svg
