@@ -1,37 +1,54 @@
 /**
- * Custom javascript for FixIt site.
+ * Custom JavaScript for FixIt documentation site.
  * @author @Lruihao https://lruihao.cn
  */
-const Docs = new (function () {
-  /**
-   * Rest in Peace. R.I.P 🕯️
-   * @2022-3-28 [3.21-mu5735] 沉痛哀悼 132 名遇难同胞：东航航班失事，遇难者含旅客 123 人，机组 9 人
-   * @2022-12-03 江泽民同志逝世，享年96岁
-   * @returns {Docs}
-   */
-  this.RIP = () => {
-    if (new Date() < new Date('2022-12-03')) {
-      document.querySelector('html').style.filter = 'grayscale(100%)';
+class FixItDocs {
+  constructor() {
+    this.author = {
+      name: 'Lruihao',
+      github: 'https://github.com/Lruihao',
+      website: 'https://lruihao.cn',
     }
-    return this;
-  };
+    this.site = 'FixIt';
+    this.url = location.origin;
+  }
   /**
-   * Initialize.
-   * @returns {Docs}
+   * print theme info with pretty style
+   * @returns {FixItDocs}
    */
-  this.init = () => {
-    this.RIP();
+  themeInfo() {
+    const themeVersion = fixit.config?.version || 'unknown';
+    console.log(
+      `%c FixIt ${themeVersion} %c https://github.com/hugo-fixit %c`,
+      `background: #FF735A;border:1px solid #FF735A; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
+      `border:1px solid #FF735A; padding: 1px; border-radius: 0 2px 2px 0; color: #FF735A;`,
+      'background:transparent'
+    );
+    // set header subtitle with theme version (desktop and mobile)
+    const headerSubtitles = document.querySelectorAll('.header-subtitle');
+    headerSubtitles.forEach((subtitle) => {
+      subtitle.textContent = `${themeVersion}`;
+    });
     return this;
-  };
-})();
+  }
+
+  /**
+   * initialize
+   * @returns {FixItDocs}
+   */
+  init() {
+    this.themeInfo();
+    return this;
+  }
+}
 
 /**
- * Immediate.
+ * immediate execution
  */
 (() => {
-  // Docs.init();
-  // It will be executed when the DOM tree is built.
+  window.fixitDocs = new FixItDocs();
+  // it will be executed when the DOM tree is built
   document.addEventListener('DOMContentLoaded', () => {
-    // Docs.init();
+    window.fixitDocs.init();
   });
 })();
