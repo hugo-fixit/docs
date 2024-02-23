@@ -32,7 +32,7 @@
   "devDependencies": {
     "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.9.0",
-    "husky": "^8.0.0",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "markdownlint-cli2": "^0.12.1",
     "markdownlint-rule-search-replace": "^1.2.0"
