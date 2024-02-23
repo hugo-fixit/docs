@@ -6,6 +6,7 @@ type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn
+
 description: Learn to create a Hugo FixIt site in minutes.
 resources:
   - name: featured-image
@@ -24,7 +25,7 @@ menu:
     name: Getting Started
     title: Learn to create a Hugo FixIt site in minutes.
     parent: documentation
-    weight: 1
+    weight: 2
     params:
       icon: fa-brands fa-readme
 ---

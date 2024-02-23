@@ -155,7 +155,7 @@ fixit create my-blog
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "Tip" >}}
-The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any build tools before using the CLI.
+The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
 {{< /admonition >}}
 
 ## Comparison
