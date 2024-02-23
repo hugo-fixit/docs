@@ -33,6 +33,7 @@
   "devDependencies": {
     "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.9.0",
+    "cross-env": "^7.0.3",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "markdownlint-cli2": "^0.12.1",
