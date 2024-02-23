@@ -3,9 +3,6 @@
 # See: https://gohugo.io/hugo-modules/configuration/#module-config-imports
 # -------------------------------------------------------------------------------------
 
-# equivalent to `env HUGO_MODULE_REPLACEMENTS="github.com/hugo-fixit/FixIt -> FixIt"`
-# replacements = "github.com/hugo-fixit/FixIt -> FixIt"
-
 [[imports]]
   path = "github.com/hugo-fixit/FixIt"
 

@@ -6,12 +6,49 @@
 
 👉 中文 | [English](README.en.md)
 
-[FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://github.com/Lruihao "在 GitHub 上关注我") 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
+[FixIt](https://github.com/hugo-fixit/FixIt) 主题文档主要分为：[文档](https://fixit.lruihao.cn/zh-cn/documentation/)、[教程](https://fixit.lruihao.cn/zh-cn/guides/) 两大板块，欢迎大家发起 PR 完善主题文档。
+
+## 系统依赖
+
+- [Node.js](https://nodejs.org/): >= 18.0.0
+- [Go](https://go.dev/dl/)
+- [Hugo](https://gohugo.io/installation/): >= 0.112.0 (extended version)
 
 ## 贡献文档
 
-FixIt 主题文档主要分为：[文档](https://fixit.lruihao.cn/zh-cn/documentation/)、[教程](https://fixit.lruihao.cn/zh-cn/guides/)三个大的板块，欢迎大家发起 PR 完善主题文档。
+首先，点击 fork 按钮 fork 本仓库。
 
-请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 以了解贡献该项目的基本信息。
+然后，克隆你 fork 的仓库。
 
-如果你想进行与主题相关的更改，请前往 [hugo-fixit/FixIt](https://github.com/hugo-fixit/FixIt) 仓库。
+```bash
+git clone https://github.com/hugo-fixit/docs.git fixit-docs && cd fixit-docs
+```
+
+接着，安装开发依赖。
+
+```bash
+npm install
+```
+
+最后，你就可以开始了！
+
+这里有一些有用的命令。
+
+```bash
+# 运行带有监听文件变化的本地调试服务器
+npm run server
+# 运行带有监听文件变化的本地调试服务器（生产环境）
+npm run server:production
+# 查看编辑主题部分
+npm run server:development
+```
+
+## 编辑主题
+
+如果你想做与文档相关的主题更改，最简单的方法是将 `fixit-docs` 和 `FixIt` 克隆为兄弟目录，然后运行：
+
+```bash
+HUGO_MODULE_WORKSPACE=hugo.work hugo server --ignoreVendorPaths "**"
+```
+
+最后，在 <https://github.com/hugo-fixit/docs/pulls> 创建一个新的 pull request 来提交你的贡献 🎉
