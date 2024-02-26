@@ -49,6 +49,11 @@ enableEmoji = true
 # 创建新内容时使用的编辑器
 newContentEditor = "code"
 
+# Whether to capitalize automatic list titles
+# 是否大写自动列表标题
+titleCaseStyle = "ap"
+capitalizeListTitles = false
+
 # ignore some build errors
 # 忽略一些构建错误
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
