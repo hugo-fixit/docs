@@ -63,7 +63,7 @@ You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip f
 
 To upgrade the theme by replacing the old theme with the new one.
 
-## Git Clone
+## Git Clone {#git-clone}
 
 In this way, just clone the [FixIt][fixit] theme into the `themes` directory.
 
