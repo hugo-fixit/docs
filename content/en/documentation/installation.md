@@ -145,7 +145,7 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 
 ## CLI
 
-FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hugo FixIt site. It provides two ways to quickly scaffold Hugo FixIt site based on Git Submodule or Hugo Module, and provides the ability to check the latest version of the FixIt theme. See the [FixIt CLI docs][fixit-cli] for more details.
+FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hugo FixIt site skeleton. It provides two ways to quickly scaffold Hugo FixIt site based on Git Submodule or Hugo Module, and provides the ability to check the latest version of the FixIt theme. See the [FixIt CLI docs][fixit-cli] for more details.
 
 ```bash
 npm install -g fixit-cli

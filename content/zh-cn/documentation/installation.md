@@ -145,7 +145,7 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 
 ## CLI
 
-FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建配置好的 Hugo FixIt 站点。它提供了基于 Git 子模块和 Hugo 模块两种方式来快速搭建 Hugo FixIt 站点，并提供了查看 FixIt 主题最新版本的功能。有关更多详细信息，请参阅 [FixIt CLI 文档][fixit-cli]。
+FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站点骨架。它提供了基于 Git 子模块和 Hugo 模块两种方式来快速搭建 Hugo FixIt 站点，并提供了查看 FixIt 主题最新版本的功能。有关更多详细信息，请参阅 [FixIt CLI 文档][fixit-cli]。
 
 ```bash
 npm install -g fixit-cli
