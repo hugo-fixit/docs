@@ -27,7 +27,7 @@ menu:
     title: Discover the basics of the Hugo - FixIt theme and the core concepts
       behind it.
     parent: documentation
-    weight: 2
+    weight: 3
     params:
       icon: fa-brands fa-readme
 ---

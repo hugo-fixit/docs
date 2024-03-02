@@ -1,4 +1,5 @@
 ---
+weight: 1
 title: 安装主题
 linkTitle: 安装
 date: 2024-01-18T10:29:25+08:00

@@ -1,6 +1,6 @@
 ---
-weight: 2
-title: 入门篇
+weight: 3
+title: 基础使用
 date: 2023-02-23T16:04:22+08:00
 type: posts
 aliases:
