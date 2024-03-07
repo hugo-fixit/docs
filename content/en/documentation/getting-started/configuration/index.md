@@ -2,7 +2,7 @@
 weight: 2
 title: Configure FixIt
 linkTitle: Configuration
-date: 2023-02-23T16:04:22+08:00
+date: 2024-03-07T15:37:59+08:00
 type: posts
 aliases:
   - /theme-documentation-basics/

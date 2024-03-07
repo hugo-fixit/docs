@@ -10,7 +10,6 @@
 
 [lang='en'] {
   .collection-details .collection-summary .collection-name::before {
-    margin-left: -4px;
-    content: '・';
+    content: '';
   }
 }
