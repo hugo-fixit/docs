@@ -65,7 +65,7 @@ It's really cool! :(fa-regular fa-grin-squint fa-fw):
 
 {{< admonition >}}
 **Not all** of the below front matters need to be set in each of your posts.
-It is necessary only if the front matters and the `page` part in your [theme configuration]({{< relref path="/documentation/basics#theme-configuration" >}}) are inconsistent.
+It is necessary only if the front matters and the `page` part in your [theme configuration]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) are inconsistent.
 {{< /admonition >}}
 
 - **title**: the title for the content.
@@ -323,8 +323,157 @@ This part is shown in the [basic markdown syntax page][basic-markdown-syntax] an
 
 This part is shown in the [shortcodes page][shortcodes].
 
-[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
-[content-to-menu]: {{< relref path="/documentation/basics#content-to-menu" >}}
+## Multilingual and I18n
+
+**FixIt** theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.
+
+![Language Switch](language-switch.gif 'Language Switch')
+
+### Compatibility {#language-compatibility}
+
+| Language             | Hugo Code | HTML `lang` Attribute | Theme Docs                           |
+| :------------------- | :-------: | :-------------------: | :----------------------------------: |
+| English              | `en`      | `en`                  | :(fa-regular fa-check-square fa-fw): |
+| Simplified Chinese   | `zh-cn`   | `zh-CN`               | :(fa-regular fa-check-square fa-fw): |
+| Traditional Chinese  | `zh-tw`   | `zh-TW`               | :(fa-regular fa-square fa-fw):       |
+| French               | `fr`      | `fr`                  | :(fa-regular fa-square fa-fw):       |
+| Polish               | `pl`      | `pl`                  | :(fa-regular fa-square fa-fw):       |
+| Brazilian Portuguese | `pt-br`   | `pt-BR`               | :(fa-regular fa-square fa-fw):       |
+| Italian              | `it`      | `it`                  | :(fa-regular fa-square fa-fw):       |
+| Spanish              | `es`      | `es`                  | :(fa-regular fa-square fa-fw):       |
+| German               | `de`      | `de`                  | :(fa-regular fa-square fa-fw):       |
+| Serbian              | `sr`      | `sr`                  | :(fa-regular fa-square fa-fw):       |
+| Russian              | `ru`      | `ru`                  | :(fa-regular fa-square fa-fw):       |
+| Romanian             | `ro`      | `ro`                  | :(fa-regular fa-square fa-fw):       |
+| Vietnamese           | `vi`      | `vi`                  | :(fa-regular fa-square fa-fw):       |
+
+### Basic Configuration
+
+After learning [how Hugo handle multilingual websites][multilingual], define your languages in your site configuration.
+
+For example with English, Chinese and French website:
+
+```toml
+# [en, zh-cn, fr, pl, ...] determines default content language
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    weight = 1
+    title = "My Hugo FixIt Site"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [languages.zh-cn]
+    weight = 2
+    title = "我的 Hugo FixIt 网站"
+    # language code, CN only here
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    # whether to include Chinese/Japanese/Korean
+    hasCJKLanguage = true
+    [[languages.zh-cn.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "文章"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "标签"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "分类"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [languages.fr]
+    weight = 3
+    title = "Mon nouveau site Hugo FixIt"
+    languageCode = "fr"
+    languageName = "Français"
+    [[languages.fr.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Postes"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.fr.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Balises"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.fr.menu.main]]
+      identifier = "categories"
+      name = "Catégories"
+      pre = ""
+      post = ""
+      url = "/categories/"
+      title = ""
+      weight = 3
+```
+
+Then, for each new page, append the language code to the file name.
+
+Single file `my-page.md` is split in three files:
+
+- in English: `my-page.en.md`
+- in Chinese: `my-page.zh-cn.md`
+- in French: `my-page.fr.md`
+
+{{< admonition tip >}}
+Use [Front Matter parameter](https://gohugo.io/content-management/multilingual#translate-your-content) to translate urls too.
+{{< /admonition >}}
+
+### Overwrite Translation Strings
+
+Translations strings are used for common default values used in the theme. Translations are available in [some languages](#language-compatibility), but you may use another language or want to override default values.
+
+To override these values, create a new file in your local i18n folder `i18n/<languageCode>.toml` and inspire yourself from `themes/FixIt/i18n/en.toml`.
+
+By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):][pulls] to the theme!
+
+[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
 [fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
@@ -333,3 +482,5 @@ This part is shown in the [shortcodes page][shortcodes].
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
+[multilingual]: https://gohugo.io/content-management/multilingual
+[pulls]: https://github.com/hugo-fixit/FixIt/pulls

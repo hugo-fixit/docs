@@ -7,3 +7,10 @@
   margin-top: 0.5rem;
   @extend .print-d-none;
 }
+
+[lang='en'] {
+  .collection-details .collection-summary .collection-name::before {
+    margin-left: -4px;
+    content: '・';
+  }
+}

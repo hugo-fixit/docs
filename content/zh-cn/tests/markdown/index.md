@@ -149,7 +149,6 @@ get remote images test:
 
 {{< image src="https://fixit.lruihao.cn/images/fixit.min.svg" height="64px" width="64px" linked=false >}}
 ![gravatar](https://gravatar.loli.net/avatar/fee47a2f4f2cc71f99a02b0a73ecfee0?s=32&d=mp)
-{{< image src="https://avif.io/images/butterfly.avif" loading="eager" linked=false >}}
 
 ## custom attribute
 

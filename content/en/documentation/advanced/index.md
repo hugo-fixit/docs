@@ -169,5 +169,5 @@ then, customize the template:
 This part is shown in the [pwa support page][pwa-support].
 
 <!-- link reference definition -->
-[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}

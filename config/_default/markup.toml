@@ -6,13 +6,13 @@
 # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
 # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
 [highlight]
-  ######## 必要配置 necessary configurations ########
+  ######## 必要配置 necessary configuration ########
   # https://github.com/hugo-fixit/FixIt/issues/43
   codeFences = true
   lineNos = true
   lineNumbersInTable = true
   noClasses = false
-  ######## 必要配置 necessary configurations ########
+  ######## 必要配置 necessary configuration ########
   guessSyntax = true
 
 # Goldmark is from Hugo 0.60 the default library used for Markdown
@@ -44,6 +44,6 @@
 # Table Of Contents settings
 # 目录设置
 [tableOfContents]
-  ordered = true
+  ordered = false
   startLevel = 2
   endLevel = 6

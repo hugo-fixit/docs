@@ -537,7 +537,7 @@ disableThemeInject = false
     [page.heading.number]
       # whether to enable auto heading numbering
       # 是否启用自动标题编号
-      enable = true
+      enable = false
       [page.heading.number.format]
         h1 = "{title}"
         h2 = "{h2} {title}"

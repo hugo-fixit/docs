@@ -15,6 +15,8 @@ tags:
   - Basics
 categories:
   - Documentation
+collections:
+  - Getting Started
 lightgallery: true
 reward: true
 toc:

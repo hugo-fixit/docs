@@ -87,7 +87,7 @@ render
 
 ## image
 
-![language-switch](/documentation/basics/language-switch.gif)
+![language-switch](/documentation/getting-started/configuration/language-switch.gif)
 
 ```go-html-template
 <!-- ![Lighthouse](/images/lighthouse.jpg "Lighthouse title") -->

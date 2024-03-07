@@ -187,7 +187,7 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 \end{CD}
 
 {{< admonition tip >}}
-You can add more inline and block delimiters in your [theme configuration]({{< relref path="/documentation/basics#theme-configuration" >}}).
+You can add more inline and block delimiters in your [theme configuration]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}).
 {{< /admonition >}}
 
 ### Copy-tex
@@ -390,7 +390,7 @@ This part is shown in the [diagrams support page][diagrams-support].
 
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
-[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [raw-shortcode]: {{< relref path="/documentation/content-management/shortcodes/extended#raw" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
