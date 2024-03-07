@@ -18,7 +18,6 @@ categories:
   - Documentation
 reward: true
 math: true
-hiddenFromHomePage: true
 ---
 
 **FixIt** 主题提供了一些扩展的语法便于你撰写文章。

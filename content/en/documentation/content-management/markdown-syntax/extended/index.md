@@ -18,7 +18,6 @@ categories:
   - Documentation
 reward: true
 math: true
-hiddenFromHomePage: true
 ---
 
 **FixIt** theme has some extended syntax elements for you to write articles.

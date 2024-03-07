@@ -16,7 +16,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 ---
 
 `music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 提供了一个内嵌的响应式音乐播放器。

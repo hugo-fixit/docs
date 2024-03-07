@@ -18,7 +18,6 @@ tags:
 categories:
   - Documentation
 lightgallery: true
-hiddenFromHomePage: true
 ---
 
 **Hugo** 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。

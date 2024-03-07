@@ -16,7 +16,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 ---
 
 The `typeit` shortcode provides typing animation based on [TypeIt](https://typeitjs.com/) library.

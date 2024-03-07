@@ -18,7 +18,6 @@ tags:
 categories:
   - Documentation
 lightgallery: true
-hiddenFromHomePage: true
 ---
 
 **Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.

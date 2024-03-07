@@ -16,7 +16,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 ---
 
 `typeit` shortcode 基于 [TypeIt](https://typeitjs.com/) 提供了打字动画。

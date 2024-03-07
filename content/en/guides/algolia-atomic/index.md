@@ -9,7 +9,6 @@ tags:
   - algolia
   - Advanced
 description: Tips about using algolia in FixIt theme.
-hiddenFromHomePage: true
 ---
 
 Find out how to use algolia in the FixIt theme and update index automatically.

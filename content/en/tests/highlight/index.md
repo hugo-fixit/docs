@@ -11,7 +11,6 @@ tags:
 categories:
   - Tests
 
-hiddenFromHomePage: true
 
 menu:
   main:

@@ -16,7 +16,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 ---
 
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.

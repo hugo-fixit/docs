@@ -22,7 +22,6 @@ categories:
 lightgallery: true
 math: true
 reward: true
-hiddenFromHomePage: true
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.

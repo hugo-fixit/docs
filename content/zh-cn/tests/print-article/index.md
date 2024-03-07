@@ -11,7 +11,6 @@ tags:
   - ES6
 categories:
 - Tests
-hiddenFromHomePage: true
 code:
   maxShownLines: 30
 menu:

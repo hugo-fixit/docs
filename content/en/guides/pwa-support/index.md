@@ -19,7 +19,6 @@ toc:
 repost:
   enable: true
   url: https://hugodoit.com/pwa-support/
-hiddenFromHomePage: true
 ---
 
 Find out how to turn your FixIt site into a Progressive Web App.

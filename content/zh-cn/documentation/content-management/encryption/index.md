@@ -24,7 +24,6 @@ tags:
 categories:
   - Documentation
 reward: true
-hiddenFromHomePage: true
 ---
 
 了解如何在 FixIt 主题中加密内容。

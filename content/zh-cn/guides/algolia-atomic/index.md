@@ -9,7 +9,6 @@ tags:
   - algolia
   - Advanced
 description: 在 FixIt 主题中使用 algolia 的技巧。
-hiddenFromHomePage: true
 ---
 
 了解如何在 FixIt 主题中使用 algolia，并自动化更新索引。

@@ -9,7 +9,6 @@ tags:
   - Content
 categories:
   - Tests
-hiddenFromHomePage: true
 lightgallery: true
 menu:
   main:

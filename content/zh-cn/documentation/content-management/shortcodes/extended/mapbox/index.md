@@ -16,7 +16,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 mapbox:
   lightStyle: mapbox://styles/mapbox/light-zh-v1?optimize=true
   darkStyle: mapbox://styles/mapbox/dark-zh-v1?optimize=true

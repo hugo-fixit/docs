@@ -9,7 +9,6 @@ tags:
   - Font Awesome
 categories:
   - Tests
-hiddenFromHomePage: true
 menu:
   main:
     title: Test for rendering Font Awesome icons

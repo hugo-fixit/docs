@@ -24,7 +24,6 @@ tags:
 categories:
   - Documentation
 reward: true
-hiddenFromHomePage: true
 ---
 
 Find out how to encrypt content in FixIt theme.

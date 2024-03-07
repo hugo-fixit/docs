@@ -19,7 +19,6 @@ lightgallery: true
 repost:
   enable: true
   url: http://learn.getgrav.org/content/markdown
-hiddenFromHomePage: true
 ---
 
 这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。

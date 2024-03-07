@@ -10,7 +10,6 @@ tags:
 categories:
   - Tests
 lightgallery: true
-hiddenFromHomePage: true
 cacheRemoteImages:
   enable: true
 menu:

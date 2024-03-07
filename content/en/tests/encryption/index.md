@@ -13,7 +13,6 @@ tags:
   - Encryption
 categories:
 - Tests
-hiddenFromHomePage: true
 menu:
   main:
     title: Test for encrypting content

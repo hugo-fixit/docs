@@ -19,7 +19,6 @@ toc:
 repost:
   enable: true
   url: https://hugodoit.com/zh-cn/pwa-support/
-hiddenFromHomePage: true
 ---
 
 了解如何在 FixIt 主题中配置渐进式网络应用程序 (PWA)。

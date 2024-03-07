@@ -16,7 +16,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 ---
 
 The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs].

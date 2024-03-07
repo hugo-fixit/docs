@@ -16,7 +16,6 @@ toc:
   enable: true
   auto: false
 reward: true
-hiddenFromHomePage: true
 ---
 
 <!--more-->

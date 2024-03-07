@@ -12,7 +12,6 @@ tags:
   - Encryption
 categories:
   - Tests
-hiddenFromHomePage: true
 menu:
   main:
     title: 文章加密测试

@@ -18,7 +18,6 @@ tags:
 categories:
   - Documentation
 
-hiddenFromHomePage: true
 code:
   maxShownLines: 70
 ---

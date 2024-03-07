@@ -17,7 +17,6 @@ tags:
   - Content
 categories:
   - Documentation
-hiddenFromHomePage: true
 ---
 
 {{< version 0.2.0 >}}
