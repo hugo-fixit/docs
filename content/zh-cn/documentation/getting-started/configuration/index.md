@@ -1,0 +1,1579 @@
+---
+weight: 3
+title: 配置 FixIt
+linkTitle: 配置
+date: 2024-03-07T15:37:59+08:00
+type: posts
+aliases:
+  - /zh-cn/theme-documentation-basics/
+  - /zh-cn/documentation/basics/
+author:
+  name: Lruihao
+  link: https://lruihao.cn
+description: 了解如何配置你的 Hugo FixIt 站点。
+resources:
+  - name: featured-image
+    src: featured-image.png
+tags:
+  - Configuration
+  - Installation
+  - Basics
+categories:
+  - Documentation
+collections:
+  - Getting Started
+lightgallery: true
+reward: true
+toc:
+  auto: false
+menu:
+  main:
+    title: 了解如何配置你的 Hugo FixIt 站点。
+    parent: documentation
+    weight: 2
+    params:
+      icon: fa-brands fa-readme
+---
+
+了解如何配置你的 Hugo **FixIt** 站点。
+
+<!--more-->
+
+## 配置文件 {#configuration-file}
+
+Hugo 有一些全局配置设置，但这不在本文的讨论范围之内。
+
+在开始配置之前，建议你执行以下命令，将主题的默认 [hugo.toml][config] 复制到你的项目中：
+
+```bash
+mv hugo.toml hugo.old.toml
+cp themes/FixIt/hugo.toml hugo.toml
+echo "theme = 'FixIt'" >> hugo.toml
+```
+
+作为进阶使用，你也可以将你的配置按环境、根配置键和语言拆分，而不是一个单独的站点配置文件。
+
+更多细节可以在 [配置 Hugo][hugo-config] 页面找到。
+
+## 菜单配置 {#menu-configuration}
+
+Hugo 有一个简单而强大的 [菜单系统][menu-system]。
+
+根据 Hugo 提供的接口，FixIt 主题只实现了部分功能，这足以满足大多数人的需求，也让用户在使用上更加简单。
+
+下面是一个完整的菜单项配置：
+
+```toml
+[menu]
+  [[menu.main]]
+    identifier = ""
+    # {{< version 0.2.14 >}} 父级菜单项的标识符 (identifier)
+    parent = ""
+    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
+    pre = ""
+    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
+    post = ""
+    name = ""
+    url = ""
+    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
+    title = ""
+    weight = 1
+    # {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
+    [menu.main.params]
+      # 添加 CSS 类到菜单项
+      class = ""
+      # 是否为草稿菜单，类似草稿页面
+      draft = false
+      # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
+      icon = ""
+      # {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
+      type = ""
+```
+
+{{< admonition note "子菜单" >}}
+考虑到实用性和排版问题，FixIt 主题只支持两层嵌套的菜单，通过在菜单配置中的 `parent` 字段即可。
+
+一个菜单项的父项应该是另一个菜单项的标识符（`identifier`），在菜单中标识符应该是唯一的。
+{{< /admonition >}}
+
+另外，也可以通过配置页面（即 `.md` 文件）的 `front matter` 添加内容到菜单中。
+
+这是一个 `yaml` 示例：
+
+```yaml
+---
+title: 配置 Fixit
+author: Lruihao
+menu:
+  main:
+    title: 了解如何配置你的 Hugo FixIt 站点。
+    parent: documentation
+    weight: 3
+    params:
+      icon: fa-brands fa-readme
+# ...
+---
+```
+
+## 主题配置 {#theme-configuration}
+
+除了 Hugo 全局配置外，FixIt 还通过根配置键 `params` 提供了一些主题配置。
+
+一个简单的例子：
+
+```toml {title="hugo.toml"}
+baseURL = 'https://example.org/'
+languageCode = 'en'
+title = 'ABC Widgets, Inc.'
+[params]
+  version = "0.3.X"
+  description = "This is my new Hugo FixIt site"
+  keywords = ["Hugo", "FixIt"]
+  # ...
+```
+
+All theme configuration settings are as follows:
+
+所有 FixIt 主题配置设置如下：
+
+### version
+
+`string` FixIt 主题版本，例如：`0.3.X`, `0.3.0`, `v0.3.0` 等。
+
+### description
+
+`string` 网站描述。
+
+### keywords
+
+`string array` 网站关键词。
+
+### defaultTheme
+
+`string` 网站默认主题样式，默认：`auto`，可选值可以是以下之一：
+
+light
+: 浅色主题
+
+dark
+: 深色主题
+
+auto
+: 根据用户的系统主题自动选择
+
+### fingerprint
+
+`string` 哪种哈希函数用来 SRI, 为空时表示不使用 SRI，可选值：`["sha256", "sha384", "sha512", "md5"]`。
+
+### dateFormat
+
+`string` 日期格式，默认：`2006-01-02`。
+
+### images
+
+`string array` 网站图片，用于 Open Graph 和 Twitter Cards。
+
+### enablePWA
+
+{{< version 0.2.12 >}}
+
+`bool` 开启 PWA 支持，默认：`false`。
+
+### externalIcon
+
+{{< version 0.2.14 >}}
+
+`bool` 是否自动显示外链图标，默认：`false`。
+
+### navigationReverse
+
+{{< version 0.3.0 >}}
+
+`bool` 是否反转导航菜单的顺序，默认：`false`。
+
+### withSiteTitle
+
+{{< version 0.3.0 >}}
+
+`bool` 是否在每个页面标题中添加网站标题，默认：`true`。请记得在 `hugo.toml` 中设置网站标题 (例如 `title = "title"`)。
+
+### titleDelimiter
+
+{{< version 0.3.0 >}}
+
+`string` 当网站标题被添加到每个页面标题时的标题分隔符，默认：`-`。
+
+### indexWithSubtitle
+
+{{< version 0.3.0 >}}
+
+`bool` 是否在主页标题中添加网站副标题，默认：`false`。请记得通过 `params.header.subtitle.name` 设置网站副标题。
+
+### disableThemeInject
+
+{{< version 0.2.14 >}}
+
+`bool` 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。你可以将其关闭，但如果你不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
+
+### author
+
+`map` 作者配置。
+
+```toml
+[params]
+  [params.author]
+    name = ""
+    email = ""
+    link = ""
+    avatar = ""
+```
+
+name
+: `string` 作者名称
+
+email
+: `string` 作者邮箱
+
+link
+: `string` 作者链接
+
+avatar
+: `string` 作者头像
+
+### gitInfo
+
+{{< version 0.3.0 >}}
+
+`map` 公共 Git 仓库信息，仅在 `enableGitInfo` 设为 `true` 时有效。
+
+```toml
+[params]
+  [params.gitInfo]
+    repo = ""
+    branch = "main"
+    dir = "content"
+    issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
+```
+
+repo
+: `string` 公开 Git 仓库的 URL，例如 `https://github.com/hugo-fixit/docs`。
+
+branch
+: `string` 仓库分支，默认：`main`。
+
+dir
+: `string` 相对于仓库根目录的内容目录路径。
+
+issueTpl
+: `string` 用于报告文章问题的 issue 模板，可用模板参数：`{title}`, `{URL}`, `{sourceURL}`。
+
+### app
+
+`map` 应用图标配置。
+
+```toml
+[params]
+  [params.app]
+    name = ""
+    shortName = ""
+    noFavicon = false
+    svgFavicon = ""
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+    [params.app.themeColor]
+      light = "#f8f8f8"
+      dark = "#252627"
+```
+
+title
+: `string` 当添加到 iOS 主屏幕或者 Android 启动器时的标题，覆盖默认标题。
+
+noFavicon
+: `bool` 是否隐藏网站图标资源链接。
+
+svgFavicon
+: `string` 更现代的 SVG 网站图标，可替代旧的 `.png` 和 `.ico` 文件。
+
+iconColor
+: `string` Safari 图标颜色。
+
+tileColor
+: `string` Windows v8-10 磁贴颜色。
+
+themeColor
+: `map` Android 浏览器主题色。
+
+- light: `string` 浅色主题颜色，默认：`#f8f8f8`。
+- dark: `string` 深色主题颜色，默认：`#252627`。
+
+### search
+
+`map` 搜索配置。
+
+```toml
+[params]
+  [params.search]
+    enable = false
+    type = "fuse"
+    contentLength = 4000
+    placeholder = ""
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+    [params.search.algolia]
+      index = ""
+      appID = ""
+      searchKey = ""
+    [params.search.fuse]
+      isCaseSensitive = false
+      minMatchCharLength = 2
+      findAllMatches = false
+      location = 0
+      threshold = 0.3
+      distance = 100
+      ignoreLocation = false
+      useExtendedSearch = false
+      ignoreFieldNorm = false
+```
+
+enable
+: `bool` 是否启用搜索。
+
+type
+: `string` 搜索引擎的类型，可选值：`algolia`、`fuse`，默认：`fuse`。
+
+contentLength
+: `int` 文章内容最长索引长度。
+
+placeholder
+: `string` 搜索框的占位提示语。
+
+maxResultLength
+: `int` 最大结果数目。
+
+snippetLength
+: `int` 结果内容片段长度。
+
+highlightTag
+: `string` 搜索结果中高亮部分的 HTML 标签。
+
+absoluteURL
+: `bool` 是否在搜索索引中使用基于 `baseURL` 的绝对路径。
+
+algolia
+: `map` Algolia 搜索配置。
+
+- index: `string` Algolia 索引。
+- appID: `string` Algolia App ID。
+- searchKey: `string` Algolia Search Key。
+
+fuse
+: {{< version 0.2.17 >}}\
+`map` [Fuse 搜索配置][fusejs-options]。
+
+- isCaseSensitive: `bool` 是否区分大小写，默认：`false`。
+- minMatchCharLength: `int` 最小匹配字符长度，默认：`2`。
+- findAllMatches: `bool` 是否查找所有匹配项，默认：`false`。
+- location: `int` 位置，默认：`0`。
+- threshold: `float` 阈值，默认：`0.3`。
+- distance: `int` 距离，默认：`100`。
+- ignoreLocation: `bool` 是否忽略位置，默认：`false`。
+- useExtendedSearch: `bool` 是否使用扩展搜索，默认：`false`。
+- ignoreFieldNorm: `bool` 是否忽略字段规范化，默认：`false`。
+
+---
+
+基于 [algolia][algolia] 或 [Fuse.js][fusejs]，**FixIt** 主题支持搜索功能。
+
+为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+```
+
+{{< link href="/zh-cn/guides/algolia-atomic/" content="关于 algolia 的使用技巧" card=true >}}
+
+### header
+
+`map` 页面头部导航栏配置。
+
+```toml
+[params]
+  [params.header]
+    desktopMode = "sticky"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = ""
+      pre = ""
+      post = ""
+      typeit = false
+    [params.header.subtitle]
+      name = ""
+      typeit = false
+```
+
+desktopMode
+: {{< version 0.2.13 changed >}}\
+`string` 桌面端导航栏模式，可选值：`sticky`、`normal`、`auto`, 默认：`sticky`。
+
+mobileMode
+: {{< version 0.2.13 changed >}}\
+`string` 移动端导航栏模式，可选值：`sticky`、`normal`、`auto`, 默认：`auto`。
+
+title
+: `map` 页面头部导航栏标题配置。
+
+- logo: `string` LOGO 的 URL。
+- name: `string` 标题名称。
+- pre: `string` 在名称之前添加其他信息。
+- post: `string` 在名称之后添加其他信息。
+- typeit: `bool` 是否为标题显示打字机动画。
+
+subtitle
+: {{< version 0.2.12 >}}\
+`map` 页面头部导航栏副标题配置。
+
+- name: `string` 副标题名称。
+- typeit: `bool` 是否为副标题显示打字机动画。
+
+### breadcrumb
+
+{{< version 0.2.18 >}}
+
+`map` 面包屑导航配置。
+
+enable
+: `bool` 是否启用面包屑导航。
+
+sticky
+: `bool` 是否固定面包屑导航。
+
+showHome
+: `bool` 是否显示主页链接。
+
+### footer
+
+`map` 页面底部信息配置。
+
+```toml
+[params]
+  [params.footer]
+    enable = true
+    custom = ""
+    copyright = true
+    author = true
+    since = ""
+    gov = ""
+    icp = ""
+    license = ""
+    [params.footer.powered]
+      enable = true
+      hugoLogo = true
+      themeLogo = true
+    [params.footer.siteTime]
+      enable = false
+      animate = true
+      icon = "fa-solid fa-heartbeat"
+      pre = ""
+      value = ""
+    [params.footer.order]
+      powered = 0
+      copyright = 0
+      statistics = 0
+      visitor = 0
+      beian = 0
+```
+
+enable
+: `bool` 是否启用页面底部信息。
+
+custom
+: {{< version 0.2.17 changed >}}\
+`string` 自定义内容（支持 HTML 格式）。
+
+copyright
+: `bool` 是否显示版权信息。
+
+author
+: `bool` 是否显示作者。
+
+since
+: `int` 网站创立年份。
+
+gov
+: {{< version 0.2.12 >}}\
+`string` 公网安备信息，仅在中国使用（支持 HTML 格式）。
+
+icp
+: {{< version 0.2.12 changed >}}\
+`string` ICP 备案信息，仅在中国使用（支持 HTML 格式）。
+
+license
+: `string` 许可协议信息（支持 HTML 格式）。
+
+powered
+: `map` Hugo 和主题信息。
+
+- enable: `bool` 是否显示 Hugo 和主题信息。
+- hugoLogo: `bool` 是否显示 Hugo Logo。
+- themeLogo: `bool` 是否显示主题 Logo。
+
+siteTime
+: {{< version 0.2.17 >}}\
+`map` 网站创立时间。
+
+- enable: `bool` 是否显示网站创立时间。
+- animate: `bool` 是否显示动画。
+- icon: `string` 图标。
+- pre: `string` 前缀。
+- value: `string` 网站创立时间，例如：`2021-12-18T16:15:22+08:00`。
+
+order
+: {{< version 0.2.17 >}}\
+`map` 页面底部行排序。
+
+- powered: `int` Hugo 和主题信息。
+- copyright: `int` 版权信息。
+- statistics: `int` 统计信息。
+- visitor: `int` 访客信息。
+- beian: `int` 备案信息。
+
+### archives
+
+{{< version 0.3.0 >}}
+
+`map` 归档页面配置。
+
+```toml
+[params]
+  [params.archives]
+    paginate = 20
+    dateFormat = "01-02"
+```
+
+paginate
+: `int` 归档页面每页显示文章数量，默认：`20`。
+
+dateFormat
+: `string` 日期格式，默认：`01-02`。
+
+### section
+
+`map` Section（所有文章）页面配置。
+
+```toml
+[params]
+  [params.section]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+    [params.section.recentlyUpdated]
+      enable = false
+      rss = false
+      days = 30
+      maxCount = 10
+```
+
+paginate
+: `int` section 页面每页显示文章数量，默认：`20`。
+
+dateFormat
+: `string` 日期格式，默认：`01-02`。
+
+rss
+: `int` RSS 文章数目，默认：`10`。
+
+recentlyUpdated
+: {{< version 0.2.13 >}}\
+`map` 最近更新文章设置。
+
+- enable: `bool` 是否启用最近更新文章，默认：`false`。
+- rss: `bool` 是否在 RSS 中显示最近更新文章，默认：`false`。
+- days: `int` 最近更新文章的天数，默认：`30`。
+- maxCount: `int` 最大文章数目，默认：`10`。
+
+### list
+
+`map` List（目录或标签）页面配置。
+
+```toml
+[params]
+  [params.list]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+```
+
+paginate
+: `int` list 页面每页显示文章数量，默认：`20`。
+
+dateFormat
+: `string` 日期格式，默认：`01-02`。
+
+rss
+: `int` RSS 文章数目，默认：`10`。
+
+### tagcloud
+
+{{< version 0.2.17 >}}
+
+`map` 标签云配置。
+
+```toml
+[params]
+  [params.tagcloud]
+    enable = false
+    min = 14
+    max = 32
+    peakCount = 10
+    orderby = "name"
+```
+
+enable
+: `bool` 是否启用标签云，默认：`false`。
+
+min
+: `int` 最小字体大小，单位：px，默认：`14`。
+
+max
+: `int` 最大字体大小，单位：px，默认：`32`。
+
+peakCount
+: `int` 每个标签的最大文章数，默认：`10`。
+
+orderby
+: `string` 标签排序方式，可选值：`name`、`count`，默认：`name`。
+
+### home
+
+`map` 主页配置。
+
+```toml
+[params]
+  [params.home]
+    paginate = 10
+    [params.home.profile]
+      enable = false
+      gravatarEmail = ""
+      avatarURL = ""
+      avatarMenu = ""
+      title = ""
+      subtitle = ""
+      typeit = true
+      social = true
+      disclaimer = ""
+    [params.home.posts]
+      enable = true
+      paginate = 6
+```
+
+rss
+: `int` RSS 文章数目，默认：`10`。
+
+profile
+: `map` 主页个人信息配置。
+
+- enable: `bool` 是否显示个人信息，默认：`false`。
+- gravatarEmail: `string`Gravatar 邮箱，用于优先在主页显示的头像。
+- avatarURL: `string` 主页显示头像的 URL。{{< version 0.2.17 >}}
+- avatarMenu: `string` 头像菜单链接的 identifier。
+- title: `string` 主页显示的网站标题（支持 HTML 格式）。
+- subtitle: `string` 主页显示的网站副标题。
+- typeit: `bool` 是否为副标题显示打字机动画，默认：`true`。
+- social: `bool` 是否显示社交账号，默认：`true`。
+- disclaimer: `string` 免责声明（支持 HTML 格式）。
+
+posts
+: `map` 主页文章列表配置。
+
+- enable: `bool` 是否显示文章列表，默认：`true`。
+- paginate: `int` 主页每页显示文章数量，默认：`6`。
+
+### social
+
+`map` 作者的社交信息设置。
+
+你可以参考位于 `themes/FixIt/assets/data/social.yaml` 的默认数据来配置你的社交链接。
+
+你可以直接配置你的社交 ID 来生成一个默认社交链接和图标：
+
+```toml
+[params.social]
+  Mastodon = "@xxxx"
+```
+
+生成的社交链接是 `https://mastodon.technology/@xxxx`。
+
+或者你可以通过一个字典来设置更多的选项：
+
+```toml
+[params.social]
+  [params.social.Mastodon]
+    # 排列图标时的权重（权重越大，图标的位置越靠后）
+    weight = 0
+    # 你的社交 ID
+    id = "@xxxx"
+    # 你的社交链接的前缀
+    prefix = "https://mastodon.social/"
+    # 当鼠标停留在图标上时的提示内容
+    title = "Mastodon"
+```
+
+所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`。
+你可以参考它来配置你的社交链接。
+
+### typeit
+
+`map` 打字机动画配置。
+
+```toml
+[params]
+  [params.typeit]
+    speed = 100
+    cursorSpeed = 1000
+    cursorChar = "|"
+    duration = -1
+    loop = false
+```
+
+speed
+: `int` 打字速度，默认：`100`。
+
+cursorSpeed
+: `int` 光标速度，默认：`1000`。
+
+cursorChar
+: `string` 光标字符，默认：`|`。
+
+duration
+: `int` 动画持续时间，默认：`-1`。
+
+loop
+: {{< version 0.2.18 >}}\
+`bool` 是否循环播放，默认：`false`。
+
+### mermaid
+
+{{< version 0.2.15 >}}
+
+`map` Mermaid 配置。
+
+```toml
+[params]
+  [params.mermaid]
+    themes = ["default", "dark"]
+```
+
+themes
+`string array(2)` Mermaid 主题，详见 [Mermaid Themes][mermaid-themes]。
+
+### pangu
+
+{{< version 0.2.12 >}}
+
+`map` PanguJS 配置。
+
+```toml
+[params]
+  [params.pangu]
+    enable = false
+    selector = "article"
+```
+
+enable
+: `bool` 是否启用 PanguJS，默认：`false`。
+
+selector
+: {{< version 0.2.17 >}}\
+`string` 选择器，默认：`article`。
+
+### watermark
+
+{{< version 0.2.13 changed >}}
+
+`map` 水印配置，详见 [Watermark][watermark] 文档。
+
+```toml
+[params]
+  [params.watermark]
+    enable = false
+    content = ""
+    opacity = 0.1
+    width = 150
+    height = 20
+    rowSpacing = 60
+    colSpacing = 30
+    rotate = 15
+    fontSize = 0.85
+    fontFamily = "inherit"
+```
+
+### ibruce
+
+{{< version 0.2.12 >}}
+
+`map` 不蒜子计数器配置。
+
+```toml
+[params]
+  [params.ibruce]
+    enable = false
+    enablePost = false
+```
+
+enable
+: `bool` 是否启用不蒜子计数器，默认：`false`。
+
+enablePost
+: `bool` 是否在文章中启用不蒜子计数器，默认：`false`。
+
+### verification
+
+`map` 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou。
+
+```toml
+[params]
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+    so = ""
+    sogou = ""
+```
+
+### seo
+
+`map` SEO 配置。
+
+```toml
+[params]
+  [params.seo]
+    image = ""
+    thumbnailUrl = ""
+```
+
+image
+: `string` 网站默认图片。
+
+thumbnailUrl
+: `string` 网站缩略图 URL。
+
+### analytics
+
+`map` 网站分析配置。
+
+```toml
+[params]
+  [params.analytics]
+    enable = false
+    [params.analytics.google]
+      id = ""
+      anonymizeIP = true
+    [params.analytics.fathom]
+      id = ""
+      server = ""
+```
+
+enable
+: `bool` 是否启用网站分析，默认：`false`。
+
+google
+: `map` Google Analytics 配置。
+
+- id: `string` Google Analytics ID。
+- anonymizeIP: `bool` 是否匿名化 IP，默认：`true`。
+
+fathom
+: `map` Fathom Analytics 配置。
+
+- id: `string` Fathom Analytics ID。
+- server: `string` Fathom Analytics 服务器地址。
+
+### cookieconsent
+
+`map` Cookie 许可配置。
+
+```toml
+[params]
+  [params.cookieconsent]
+    enable = true
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+```
+
+enable
+: `bool` 是否启用 Cookie Consent，默认：`true`。
+
+content
+: `map` 用于 Cookie 许可横幅的文本字符串。
+
+- message: `string` Cookie 许可横幅的消息。
+- dismiss: `string` Cookie 许可横幅的关闭按钮文本。
+- link: `string` Cookie 许可横幅的链接文本。
+
+### cdn
+
+`map` CDN 配置。
+
+```toml
+[params.cdn]
+  data = ""
+```
+
+data
+: `string` CDN 数据文件名称，默认不启用。位于 `themes/FixIt/assets/data/cdn/` 目录，你可以在你的项目下相同路径存放你自己的数据文件：`assets/data/cdn/`。可选值：`jsdelivr.yml`、`unpkg.yml` 等。
+
+### compatibility
+
+`map` 兼容性设置。
+
+```toml
+[params]
+  [params.compatibility]
+    polyfill = false
+    objectFit = false
+```
+
+polyfill
+: `bool` 是否使用 Polyfill.io 来兼容旧式浏览器，默认：`false`。
+
+objectFit
+: `bool` 是否使用 object-fit-images 来兼容旧式浏览器，默认：`false`。
+
+### githubCorner
+
+{{< version 0.2.14 >}}
+
+`map` 在左上角或者右上角显示 GitHub 开源链接。
+
+```toml
+[params]
+  [params.githubCorner]
+    enable = false
+    permalink = ""
+    title = "View source on GitHub"
+    position = "right"
+```
+
+enable
+: `bool` 是否启用 GitHub 横幅。默认为 `false`。
+
+permalink
+: `string` GitHub 仓库的 URL。例如：`https://github.com/hugo-fixit/FixIt`
+
+title
+: `string` GitHub 横幅的标题。
+
+position
+: `string` GitHub 横幅的位置。`left` 或 `right`。默认为 `right`。
+
+### gravatar
+
+{{< version 0.2.18 changed >}}
+
+`map` Gravatar 配置。
+
+```toml
+[params]
+  [params.gravatar]
+    enable = false
+    host = "www.gravatar.com"
+    style = ""
+```
+
+enable
+: `bool` 是否启用 Gravatar，默认：`false`。
+
+host
+: `string` Gravatar 主机，例如：`www.gravatar.com`、`cn.gravatar.com` 等，默认：`www.gravatar.com`。
+
+style
+: `string` Gravatar 样式，例如：`mp`、`identicon`、`monsterid`、`wavatar`、`retro`、`robohash`、`blank` 等，默认：`""`。
+
+### backToTop
+
+{{< version 0.2.16 >}}
+
+`map` 返回顶部按钮配置。
+
+```toml
+[params]
+  [params.backToTop]
+    enable = true
+    scrollpercent = false
+```
+
+enable
+: `bool` 是否启用返回顶部按钮，默认：`true`。
+
+scrollpercent
+: `bool` 是否显示滚动百分比，默认：`false`。
+
+### readingProgress
+
+{{< version 0.2.16 >}}
+
+`map` 阅读进度条配置。
+
+```toml
+[params]
+  [params.readingProgress]
+    enable = false
+    start = "left"
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
+```
+
+enable
+: `bool` 是否启用阅读进度条，默认：`false`。
+
+start
+: `string` 阅读进度条开始位置，可选值：`left`、`right`，默认：`left`。
+
+position
+: `string` 阅读进度条位置，可选值：`top`、`bottom`，默认：`top`。
+
+reversed
+: `bool` 是否反转阅读进度条，默认：`false`。
+
+light
+: `string` 浅色主题颜色，默认：`""`。
+
+dark
+: `string` 深色主题颜色，默认：`""`。
+
+height
+: `string` 阅读进度条高度，默认：`2px`。
+
+### pace
+
+{{< version 0.2.17 >}}
+
+`map` 页面加载期间顶部的进度条，详见 [Pace.js][pacejs]。
+
+```toml
+[params]
+  [params.pace]
+    enable = false
+    color = "blue"
+    theme = "minimal"
+```
+
+enable
+: `bool` 是否启用 Pace.js，默认：`false`。
+
+color
+: `string` 进度条颜色，可选值：`black`、`blue`、`green`、`orange`、`pink`、`purple`、`red`、`silver`、`white`、`yellow`，默认：`blue`。
+
+theme
+: `string` 进度条主题，可选值：`barber-shop`、`big-counter`、`bounce`、`center-atom`、`center-circle`、`center-radar`、`center-simple`、`corner-indicator`、`fill-left`、`flash`、`flat-top`、`loading-bar`、`mac-osx`、`material`、`minimal`，默认：`minimal`。
+
+### customFilePath
+
+{{< version 0.2.17 >}}
+
+`string` 定义自定义文件路径，并在站点目录 `layouts/partials/custom` 中创建自定义文件。
+
+```toml
+[params]
+  [params.customFilePath]
+    aside = "custom/aside.html"
+    profile = "custom/profile.html"
+    footer = "custom/footer.html"
+```
+
+### dev
+
+{{< version 0.2.15 >}}
+
+`map` 开发者选项。
+
+```toml
+[params]
+  [params.dev]
+    enable = false
+    c4u = false
+    githubToken = ""
+    [params.dev.mDevtools]
+      enable = false
+      type = "vConsole"
+```
+
+enable
+: `bool` 是否启用开发者选项，默认：`false`。
+
+c4u
+: `bool` 是否启用检查功能，默认：`false`。
+
+githubToken
+: `string` GitHub Token。
+
+mDevtools
+: `map` 移动端开发者工具。
+
+- enable: `bool` 是否启用移动端开发者工具，默认：`false`。
+- type: `string` 移动端开发者工具类型，可选值：`vConsole`、`eruda`，默认：`vConsole`。
+
+### page
+
+`map` 文章页面配置。
+
+```toml
+[params]
+  [params.page]
+    # {{< version 0.2.18 >}} 是否启用文章作者头像
+    authorAvatar = true
+    # {{< version 0.2.0 >}} 是否在主页隐藏一篇文章
+    hiddenFromHomePage = false
+    # {{< version 0.2.0 >}} 是否在搜索结果中隐藏一篇文章
+    hiddenFromSearch = false
+    # {{< version 0.2.18-lts.5 >}} 是否在 RSS 中隐藏一篇文章
+    hiddenFromRss = false
+    # {{< version 0.3.0 >}} 是否在相关文章中隐藏一篇文章
+    hiddenFromRelated = false
+    # {{< version 0.2.0 >}} 是否使用 twemoji
+    twemoji = false
+    # 是否使用 lightgallery
+    # {{< version 0.2.18 changed >}} 如果设为 "force"，文章中的图片将强制按照画廊形式呈现
+    lightgallery = false
+    # {{< version 0.2.0 >}} 是否使用 ruby 扩展语法
+    ruby = true
+    # {{< version 0.2.0 >}} 是否使用 fraction 扩展语法
+    fraction = true
+    # {{< version 0.2.0 >}} 是否使用 fontawesome 扩展语法
+    fontawesome = true
+    # 许可协议信息（支持 HTML 格式）
+    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    # 是否显示原始 Markdown 文档内容的链接
+    linkToMarkdown = true
+    # {{< version 0.3.0 >}} 是否显示查看文章源码的链接
+    linkToSource = true
+    # {{< version 0.3.0 >}} 是否显示编辑文章的链接
+    linkToEdit = true
+    # {{< version 0.3.0 >}} 是否显示报告文章问题的链接
+    linkToReport = true
+    # {{< version 0.2.4 >}} 是否在 RSS 中显示全文内容
+    rssFullText = false
+    # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
+    pageStyle = "normal"
+    # {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
+    # gravatarForce = true
+    # {{< version 0.2.17 changed >}} 开启自动书签支持
+    # 如果为 true，则在关闭页面时保存阅读进度
+    autoBookmark = false
+    # {{< version 0.2.17 >}} 是否使用 字数统计
+    wordCount = true
+    # {{< version 0.2.17 >}} 是否使用 预计阅读
+    readingTime = true
+    # {{< version 0.2.17 >}} 文章结束标志
+    endFlag = ""
+    # {{< version 0.2.18 >}} 是否开启即时页面
+    instantPage = false
+    # {{< version 0.3.0 >}} 是否在侧边栏显示集合列表
+    collectionList = false
+    # {{< version 0.3.0 >}} 是否在文章末尾显示集合导航
+    collectionNavigation = false
+
+    # {{< version 0.2.15 >}} 转载配置
+    [params.page.repost]
+      enable = false
+      url = ""
+    # {{< version 0.2.0 >}} 目录配置
+    [params.page.toc]
+      # 是否使用目录
+      enable = true
+      # {{< version 0.2.9 >}} 是否保持使用文章前面的静态目录
+      keepStatic = false
+      # 是否使侧边目录自动折叠展开
+      auto = true
+      # {{< version 0.2.13 >}} 目录位置 ["left", "right"]
+      position = "right"
+    # {{< version 0.2.13 >}} 在文章开头显示提示信息，提醒读者文章内容可能过时
+    [params.page.expirationReminder]
+      enable = false
+      # 如果文章最后更新于这天数之前，显示提醒
+      reminder = 90
+      # 如果文章最后更新于这天数之前，显示警告
+      warning = 180
+      # 如果文章到期是否关闭评论
+      closeComment = false
+    # {{< version 0.3.0 >}} 页面标题配置
+    [params.page.heading]
+      # 配合 `markup.tableOfContents.ordered` 参数使用
+      [params.page.heading.number]
+        # 是否启用自动标题编号
+        enable = false
+        [params.page.heading.number.format]
+          h1 = "{title}"
+          h2 = "{h2} {title}"
+          h3 = "{h2}.{h3} {title}"
+          h4 = "{h2}.{h3}.{h4} {title}"
+          h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+          h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+    # {{< version 0.2.0 >}} 代码配置
+    [params.page.code]
+      # 是否显示代码块的复制按钮
+      copy = true
+      # {{< version 0.2.13 >}} 是否显示代码块的编辑按钮
+      edit = true
+      # 默认展开显示的代码行数
+      maxShownLines = 10
+    # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} 数学公式 (https://katex.org)
+    [params.page.math]
+      enable = true
+      # 默认行内定界符是 $ ... $ 和 \( ... \)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # KaTeX 插件 copy_tex
+      copyTex = true
+      # KaTeX 插件 mhchem
+      mhchem = true
+    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # Mapbox GL JS 的 access token
+      accessToken = ""
+      # 浅色主题的地图样式
+      lightStyle = "mapbox://styles/mapbox/light-v9"
+      # 深色主题的地图样式
+      darkStyle = "mapbox://styles/mapbox/dark-v9"
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
+      navigation = true
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}
+      geolocate = true
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol" ScaleControl >}}
+      scale = true
+      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
+      fullscreen = true
+    # {{< version 0.3.0 >}} [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
+    [params.page.cacheRemoteImages]
+      enable = false
+      # 用本地图片链接替换远程图片链接 (放置在 public/images/remote/)
+      replace = false
+    # {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
+    [params.page.related]
+      enable = false
+      count = 5
+    # {{< version 0.2.17 >}} 赞赏设置
+    [params.page.reward]
+      enable = false
+      animation = false
+      # 相对于页脚的位置，可选值：["before", "after"]
+      position = "after"
+      # comment = "Buy me a coffee"
+      # {{< version 0.2.18 >}} 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
+      mode = "static"
+      [params.page.reward.ways]
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        # paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
+    # {{< version 0.2.0 changed >}} 文章页面的分享信息设置
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = true
+      Pinterest = false
+      Tumblr = false
+      HackerNews = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = true
+      Instapaper = false
+      Pocket = false
+      Flipboard = false
+      Weibo = true
+      Myspace = true
+      Blogger = true
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = true
+      Skype = false
+      Trello = false
+      Mix = false
+    # {{< version 0.2.15 changed >}} 评论系统设置
+    [params.page.comment]
+      enable = false
+      # {{< version 0.2.13 >}} {{< link "https://artalk.js.org/" Artalk >}} 评论系统设置 (https://artalk.js.org/)
+      [params.page.comment.artalk]
+        enable = false
+        server = "https://yourdomain"
+        site = "默认站点"
+        placeholder = ""
+        noComment = ""
+        sendBtn = ""
+        editorTravel = true
+        flatMode = "auto"
+        # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
+        lightgallery = false
+        locale = "" # {{< version 0.2.15 >}}
+        # {{< version 0.2.18 >}}
+        emoticons = ""
+        nestMax = 2
+        nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+        vote = true
+        voteDown = false
+        uaBadge = true
+        listSort = true
+        imgUpload = true
+        preview = true
+        versionCheck = true
+      # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} 评论系统设置 (https://disqus.com)
+      [params.page.comment.disqus]
+        enable = false
+        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+        shortname = ""
+      # {{< version 0.1.1 >}} {{< link "https://github.com/gitalk/gitalk" Gitalk >}} 评论系统设置 (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # {{< link "https://github.com/xCss/Valine" Valine >}} 评论系统设置 (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = "mp"
+        meta = ""
+        requiredFields = ""
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = ""
+        # {{< version 0.2.6 >}} emoji 数据文件名称，默认是 "google.yml"
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+        # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
+        # 可以在你的项目下相同路径存放你自己的数据文件：
+        # "assets/lib/valine/emoji/"
+        emoji = ""
+        commentCount = true # {{< version 0.2.13 >}}
+      # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} 评论系统设置 (https://waline.js.org)
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+        pageview = false # {{< version 0.2.15 >}}
+        emoji = ["//unpkg.com/@waline/emojis@1.1.0/weibo"]
+        meta = ["nick", "mail", "link"]
+        requiredMeta = []
+        login = "enable"
+        wordLimit = 0
+        pageSize = 10
+        imageUploader = false # {{< version 0.2.15 >}}
+        highlighter = false # {{< version 0.2.15 >}}
+        comment = false # {{< version 0.2.15 >}}
+        texRenderer = false # {{< version 0.2.16 >}}
+        search = false # {{< version 0.2.16 >}}
+        recaptchaV3Key = "" # {{< version 0.2.16 >}}
+        reaction = false # {{< version 0.2.18 >}}
+      # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置 (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = "zh_CN"
+      # {{< version 0.2.0 >}} {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置 (https://comments.app)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} 评论系统设置 (https://commento.io)
+      [params.page.comment.commento]
+        enable = false
+      # {{< version 0.2.5 >}} {{< link "https://utteranc.es/" "Utterances" >}} 评论系统设置 (https://utteranc.es)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      # {{< version 0.2.13 >}} {{< link "https://twikoo.js.org/" "Twikoo" >}} 评论系统设置 (https://twikoo.js.org/)
+      [params.page.comment.twikoo]
+        enable = false
+        envId = ""
+        region = ""
+        path = ""
+        visitor = true
+        commentCount = true
+        # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
+        lightgallery = false
+        # {{< version 0.2.17 >}} 启用 Katex 支持
+        katex = false
+      # {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} 评论系统设置
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = ""
+        categoryId = ""
+        mapping = ""
+        strict = "0" # {{< version 0.2.18 >}}
+        term = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom" # ["top", "bottom"]
+        lightTheme = "light"
+        darkTheme = "dark"
+        lazyLoad = true
+    # {{< version 0.2.7 >}} 第三方库配置
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css"
+        # 位于 "assets/"
+        # 或者
+        # someCSS = "https://cdn.example.com/some.css"
+      [params.page.library.js]
+        # someJavascript = "some.js"
+        # 位于 "assets/"
+        # 或者
+        # someJavascript = "https://cdn.example.com/some.js"
+    # {{< version 0.2.10 changed >}} 页面 SEO 配置
+    [params.page.seo]
+      # 图片 URL
+      images = []
+      # 出版者信息
+      [params.page.seo.publisher]
+        name = ""
+        logoUrl = ""
+
+```
+
+## 解析配置 {#markup-configuration}
+
+通过根配置键 `markup` 配置将标记语言转为 HTML。
+
+本节仅记录**FixIt**主题的一些 [必要配置][necessary-configuration-for-theme]。有关更多详细信息，请参阅 [Configure markup][configuration-markup] 页面。
+
+```toml
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+```
+
+## Custom output formats
+
+Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能。为了完全配置主题，请将以下选项配置到 `hugo.toml` 中。
+
+有关输出格式配置的更多详细信息，请参阅 [自定义输出格式][hugo-output-formats] 页面。
+
+```toml
+# {{< version 0.2.15 changed >}}
+[mediaTypes]
+  # 用于输出 Markdown 格式文档的设置
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+  # 用于输出 txt 格式文档的设置
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+  # 用于输出 Markdown 格式文档的设置
+  [outputFormats.MarkDown]
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
+  [outputFormats.archives]
+    path = "archives"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+  # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
+  [outputFormats.offline]
+    path = "offline"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+  # {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
+  [outputFormats.README]
+    baseName = "readme"
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.0 changed >}} 用于输出 baidu_urls.txt 文件的设置
+  [outputFormats.baidu_urls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+
+# 用于 Hugo 输出文档的设置，可选值如下：
+# home: ["HTML", "RSS", "JSON", "archives", "offline", "README", "baidu_urls"]
+# page: ["HTML", "MarkDown"]
+# section: ["HTML", "RSS"]
+# taxonomy: ["HTML", "RSS"]
+# term: ["HTML", "RSS"]
+[outputs]
+  home = ["HTML", "RSS", "JSON", "archives", "offline"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML", "RSS"]
+```
+
+## Favicon 生成
+
+强烈建议你把你自己的网站图标，`browserconfig.xml` 和 `site.webmanifest` 文件放在 `/static` 目录。
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-32x32.png
+- favicon-16x16.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+
+利用 <https://realfavicongenerator.net/> 可以很容易地生成这些文件。
+
+![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
+
+[config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
+[menu-system]: https://gohugo.io/content-management/menus/
+[hugo-config]: https://gohugo.io/getting-started/configuration/
+[algolia]: https://www.algolia.com/
+[fusejs]: https://fusejs.io/
+[fusejs-options]: https://fusejs.io/api/options.html
+[mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
+[watermark]: https://github.com/Lruihao/watermark#readme
+[pacejs]: https://github.com/CodeByZach/pace
+[configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
+[necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
+[hugo-output-formats]: https://gohugo.io/templates/output-formats/

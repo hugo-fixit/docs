@@ -100,13 +100,13 @@ Here is a `yaml` example:
 
 ```yaml
 ---
-title: Theme Documentation - Basics
+title: Configure FixIt
 author: Lruihao
 menu:
   main:
-    name: Basics
-    title: Discover what the Hugo - FixIt theme is all about and the core-concepts behind it.
+    title: Find out how to configure your Hugo FixIt site.
     parent: documentation
+    weight: 3
     params:
       icon: fa-brands fa-readme
 # ...
@@ -1064,7 +1064,7 @@ height
 
 {{< version 0.2.17 >}}
 
-`map` Progress bar in the top during page loading.
+`map` Progress bar in the top during page loading, based on [Pace.js][pacejs].
 
 ```toml
 [params]
@@ -1576,6 +1576,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [fusejs-options]: https://fusejs.io/api/options.html
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
+[pacejs]: https://github.com/CodeByZach/pace
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/templates/output-formats/

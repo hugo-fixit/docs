@@ -1,5 +1,5 @@
 ---
-weight: 5
+weight: 4
 title: 内容管理概述
 date: 2023-02-24T17:27:22+08:00
 type: posts
@@ -64,7 +64,7 @@ reward: true
 
 {{< admonition >}}
 **不是所有**的以下前置参数都必须在你的每篇文章中设置。
-只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/basics#theme-configuration" >}}) 中的 `page` 部分不一致时才有必要这么做。
+只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 中的 `page` 部分不一致时才有必要这么做。
 {{< /admonition >}}
 
 - **title**: 文章标题
@@ -322,8 +322,160 @@ hugo new friends/index.md
 
 这部分内容在 [Shortcodes 页面][shortcodes] 中介绍。
 
-[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
-[content-to-menu]: {{< relref path="/documentation/basics#content-to-menu" >}}
+## 多语言和 I18n
+
+**FixIt** 主题完全兼容 Hugo 的多语言模式，并且支持在网页上切换语言。
+
+![语言切换](/documentation/content-management/introduction/language-switch.gif '语言切换')
+
+### 兼容性 {#language-compatibility}
+
+{{< version 0.2.10 changed >}}
+
+| 语言         | Hugo 代码 | HTML `lang` 属性 | 主题文档                             |
+| :----------- | :-------: | :--------------: | :----------------------------------: |
+| 英语         | `en`      | `en`             | :(fa-regular fa-check-square fa-fw): |
+| 简体中文     | `zh-cn`   | `zh-CN`          | :(fa-regular fa-check-square fa-fw): |
+| 繁体中文     | `zh-tw`   | `zh-TW`          | :(fa-regular fa-square fa-fw):       |
+| 法语         | `fr`      | `fr`             | :(fa-regular fa-square fa-fw):       |
+| 波兰语       | `pl`      | `pl`             | :(fa-regular fa-square fa-fw):       |
+| 巴西葡萄牙语 | `pt-br`   | `pt-BR`          | :(fa-regular fa-square fa-fw):       |
+| 意大利语     | `it`      | `it`             | :(fa-regular fa-square fa-fw):       |
+| 西班牙语     | `es`      | `es`             | :(fa-regular fa-square fa-fw):       |
+| 德语         | `de`      | `de`             | :(fa-regular fa-square fa-fw):       |
+| 塞尔维亚语   | `sr`      | `sr`             | :(fa-regular fa-square fa-fw):       |
+| 俄语         | `ru`      | `ru`             | :(fa-regular fa-square fa-fw):       |
+| 罗马尼亚语   | `ro`      | `ro`             | :(fa-regular fa-square fa-fw):       |
+| 越南语       | `vi`      | `vi`             | :(fa-regular fa-square fa-fw):       |
+
+### 基本配置
+
+学习了 [Hugo 如何处理多语言网站][multilingual] 之后，请在站点配置中定义你的网站语言。
+
+例如，一个支持英语，中文和法语的网站配置：
+
+```toml
+# [en, zh-cn, fr, pl, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+
+[languages]
+  [languages.en]
+    weight = 1
+    title = "My Hugo FixIt Site"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [languages.zh-cn]
+    weight = 2
+    title = "我的 Hugo FixIt 网站"
+    # 网站语言，仅在这里 CN 大写
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    [[languages.zh-cn.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "文章"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "标签"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "分类"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [languages.fr]
+    weight = 3
+    title = "Mon nouveau site Hugo FixIt"
+    languageCode = "fr"
+    languageName = "Français"
+    [[languages.fr.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Postes"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.fr.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Balises"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.fr.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Catégories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+```
+
+然后，对于每个新页面，将语言代码附加到文件名中。
+
+单个文件 `my-page.md` 需要分为三个文件：
+
+- 英语：`my-page.en.md`
+- 中文：`my-page.zh-cn.md`
+- 法语：`my-page.fr.md`
+
+{{< admonition tip >}}
+也可以使用 [文章前置参数](https://gohugo.io/content-management/multilingual#translate-your-content) 来翻译网址。
+{{< /admonition >}}
+
+#### 修改默认的翻译字符串
+
+翻译字符串用于在主题中使用的常见默认值。
+目前提供 [一些语言](#language-compatibility) 的翻译，但你可能自定义其他语言或覆盖默认值。
+
+要覆盖默认值，请在你项目的 I18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/FixIt/i18n/en.toml` 中获得提示。
+
+另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):][pulls] 来贡献主题翻译，谢谢！
+
+[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
 [fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
@@ -332,3 +484,5 @@ hugo new friends/index.md
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
+[multilingual]: https://gohugo.io/content-management/multilingual
+[pulls]: https://github.com/hugo-fixit/FixIt/pulls

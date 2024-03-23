@@ -185,7 +185,7 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 \end{CD}
 
 {{< admonition tip >}}
-你可以在 [主题配置]({{< relref path="/documentation/basics#theme-configuration" >}}) 中自定义行内公式和公式块的分割符。
+你可以在 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 中自定义行内公式和公式块的分割符。
 {{< /admonition >}}
 
 ### Copy-tex
@@ -388,7 +388,7 @@ console.log('hello FixIt!');
 
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
-[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
 [fontawesome]: https://fontawesome.com/

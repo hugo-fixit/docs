@@ -170,5 +170,5 @@ Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建
 这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
 
 <!-- link reference definition -->
-[theme-config]: {{< relref path="/documentation/basics#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
