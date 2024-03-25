@@ -23,7 +23,7 @@ menu:
     name: 进阶篇
     title: 探索 Hugo - FixIt 主题的的进阶使用。
     parent: documentation
-    weight: 3
+    weight: 4
     params:
       icon: fa-brands fa-readme
 ---

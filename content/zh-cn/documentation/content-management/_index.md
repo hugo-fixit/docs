@@ -10,7 +10,7 @@ menu:
   main:
     title: 了解如何在 FixIt 主题中快速，直观地创建和组织内容。
     parent: documentation
-    weight: 4
+    weight: 3
     params:
       icon: fa-brands fa-readme
 ---

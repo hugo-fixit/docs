@@ -1,7 +1,7 @@
 ---
 weight: 3
 title: 配置 FixIt
-linkTitle: 配置
+linkTitle: 配置篇
 date: 2024-03-07T15:37:59+08:00
 type: posts
 aliases:
@@ -26,13 +26,6 @@ lightgallery: true
 reward: true
 toc:
   auto: false
-menu:
-  main:
-    title: 了解如何配置你的 Hugo FixIt 站点。
-    parent: documentation
-    weight: 2
-    params:
-      icon: fa-brands fa-readme
 ---
 
 了解如何配置你的 Hugo **FixIt** 站点。

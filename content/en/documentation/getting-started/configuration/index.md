@@ -24,13 +24,6 @@ collections:
   - Getting Started
 lightgallery: true
 reward: true
-menu:
-  main:
-    title: Find out how to configure your Hugo FixIt site.
-    parent: documentation
-    weight: 3
-    params:
-      icon: fa-brands fa-readme
 ---
 
 Find out how to configure your Hugo **FixIt** site.

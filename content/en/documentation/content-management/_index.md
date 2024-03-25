@@ -10,7 +10,7 @@ menu:
   main:
     title: Find out how to create and organize your content quickly and intuitively in FixIt theme.
     parent: documentation
-    weight: 4
+    weight: 3
     params:
       icon: fa-brands fa-readme
 ---
