@@ -17,5 +17,167 @@
       "status": 404,
       "dest": "/zh-cn/404.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/theme-documentation-basics/",
+      "destination": "/documentation/getting-started/configuration/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/theme-documentation-basics/",
+      "destination": "/zh-cn/documentation/getting-started/configuration/",
+      "statusCode": 301
+    },
+    {
+      "source": "/documentation/basics/",
+      "destination": "/documentation/getting-started/configuration/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/documentation/basics/",
+      "destination": "/zh-cn/documentation/getting-started/configuration/",
+      "statusCode": 301
+    },
+    {
+      "source": "/theme-documentation-content/",
+      "destination": "/documentation/content-management/introduction/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/theme-documentation-content/",
+      "destination": "/zh-cn/documentation/content-management/introduction/",
+      "statusCode": 301
+    },
+    {
+      "source": "/theme-documentation-content-encryption/",
+      "destination": "/documentation/content-management/encryption/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/theme-documentation-content-encryption/",
+      "destination": "/zh-cn/documentation/content-management/encryption/",
+      "statusCode": 301
+    },
+    {
+      "source": "/theme-documentation-built-in-shortcodes/",
+      "destination": "/documentation/content-management/shortcodes/built-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/theme-documentation-built-in-shortcodes/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/built-in/",
+      "statusCode": 301
+    },
+    {
+      "source": "/theme-documentation-extended-shortcodes/",
+      "destination": "/documentation/content-management/shortcodes/extended/introduction/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/theme-documentation-extended-shortcodes/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/introduction/",
+      "statusCode": 301
+    },
+    {
+      "source": "/extended-shortcode-bilibili/",
+      "destination": "/documentation/content-management/shortcodes/extended/bilibili/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/extended-shortcode-bilibili/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/bilibili/",
+      "statusCode": 301
+    },
+    {
+      "source": "/extended-shortcode-echarts/",
+      "destination": "/documentation/content-management/shortcodes/extended/echarts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/extended-shortcode-echarts/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/echarts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/extended-shortcode-mapbox/",
+      "destination": "/documentation/content-management/shortcodes/extended/mapbox/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/extended-shortcode-mapbox/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/mapbox/",
+      "statusCode": 301
+    },
+    {
+      "source": "/extended-shortcode-mermaid/",
+      "destination": "/documentation/content-management/shortcodes/extended/mermaid/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/extended-shortcode-mermaid/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/mermaid/",
+      "statusCode": 301
+    },
+    {
+      "source": "/extended-shortcode-music/",
+      "destination": "/documentation/content-management/shortcodes/extended/music/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/extended-shortcode-music/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/music/",
+      "statusCode": 301
+    },
+    {
+      "source": "/extended-shortcode-typeit/",
+      "destination": "/documentation/content-management/shortcodes/extended/typeit/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/extended-shortcode-typeit/",
+      "destination": "/zh-cn/documentation/content-management/shortcodes/extended/typeit/",
+      "statusCode": 301
+    },
+    {
+      "source": "/basic-markdown-syntax/",
+      "destination": "/documentation/content-management/markdown-syntax/basics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/basic-markdown-syntax/",
+      "destination": "/zh-cn/documentation/content-management/markdown-syntax/basics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/emoji-support/",
+      "destination": "/guides/emoji-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/emoji-support/",
+      "destination": "/zh-cn/guides/emoji-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pwa-support/",
+      "destination": "/guides/pwa-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/pwa-support/",
+      "destination": "/zh-cn/guides/pwa-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/friends/",
+      "destination": "/showcase/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/friends/",
+      "destination": "/zh-cn/showcase/",
+      "statusCode": 301
+    }
   ]
 }
