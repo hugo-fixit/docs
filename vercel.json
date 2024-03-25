@@ -1,4 +1,13 @@
 {
+  "framework": "hugo",
+  "installCommand": "npm install && dnf install -y golang.x86_64",
+  "buildCommand": "npm run build -- $BUILD_DRAFTS",
+  "outputDirectory": "public",
+  "env": {
+    "BUILD_DRAFTS": "--buildDrafts",
+    "HUGO_VERSION": "0.112.0",
+    "HUGO_EXTENDED": "true"
+  },
   "routes": [
     {
       "handle": "filesystem"
