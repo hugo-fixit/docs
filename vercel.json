@@ -1,21 +1,27 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "regions": ["hkg1"],
   "framework": "hugo",
   "installCommand": "npm install && dnf install -y golang.x86_64",
   "buildCommand": "npm run build -- $BUILD_DRAFTS",
   "outputDirectory": "public",
-  "env": {
-    "BUILD_DRAFTS": "--buildDrafts",
-    "HUGO_VERSION": "0.112.0",
-    "HUGO_EXTENDED": "true"
-  },
-  "routes": [
+  "alias": ["fixit.lruihao.cn", "pre.fixit.lruihao.cn", "hugofixit"],
+  "headers": [
     {
-      "handle": "filesystem"
-    },
+      "source": "/service-worker.min.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/zh-cn/(.*)",
-      "status": 404,
-      "dest": "/zh-cn/404.html"
+      "source": "/zh-cn/(.*)",
+      "destination": "/zh-cn/404.html"
     }
   ],
   "redirects": [
