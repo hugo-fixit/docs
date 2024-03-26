@@ -285,7 +285,7 @@ It is not recommended to include rich text block elements in the summary, which 
 
 ## Templates {#templates}
 
-Generally, you don't need to set the **type** parameter, because Hugo and fixit will help you choose. However, the **FixIt** theme provides some special templates for users to use.
+Generally, you don't need to set the **type** or **layout** parameter, because Hugo and fixit will help you choose. However, the **FixIt** theme provides some special templates for users to use.
 
 ### Friends
 

@@ -24,8 +24,6 @@ collections:
   - Getting Started
 lightgallery: true
 reward: true
-toc:
-  auto: false
 ---
 
 了解如何配置你的 Hugo **FixIt** 站点。
@@ -1475,7 +1473,7 @@ mDevtools
     noClasses = false
 ```
 
-## Custom output formats
+## 自定义输出格式
 
 Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能。为了完全配置主题，请将以下选项配置到 `hugo.toml` 中。
 

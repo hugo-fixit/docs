@@ -164,7 +164,7 @@ hugo server -D --disableFastRender
 
 ![基本配置下的预览](simple-preview.png '基本配置下的预览')
 
-当对新内容感到满意时，将前 front matter 中的 `draft` 值更改为 `false`，然后保存文件。
+当对新内容感到满意时，将 front matter 中的 `draft` 值更改为 `false`，然后保存文件。
 
 {{< admonition >}}
 Hugo 的渲染引擎符合 Markdown 的 CommonMark [规范](https://spec.commonmark.org/)。\
