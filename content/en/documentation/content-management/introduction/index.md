@@ -59,7 +59,7 @@ It's really cool! :(fa-regular fa-grin-squint fa-fw):
 [image-processing]: https://gohugo.io/content-management/image-processing/
 {{< /admonition >}}
 
-## Front Matter {#front-matter}
+## Front matter {#front-matter}
 
 **Hugo** allows you to add front matter in `yaml`, `toml` or `json` to your content files.
 

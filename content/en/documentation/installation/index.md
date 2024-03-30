@@ -8,6 +8,9 @@ categories:
   - Documentation
 tags:
   - Installation
+resources:
+  - name: featured-image
+    src: cover.png
 menu:
   main:
     title: Install FixIt Theme for your Hugo site in a few steps.
@@ -156,7 +159,7 @@ fixit create my-blog
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "Tip" >}}
-The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
+The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../..) without any scaffold tools before using the CLI.
 {{< /admonition >}}
 
 ## Comparison

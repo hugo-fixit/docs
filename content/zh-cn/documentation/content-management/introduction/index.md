@@ -34,8 +34,6 @@ reward: true
 - 本地资源组织
 
 {{< admonition note "本地资源引用" >}}
-{{< version 0.2.10 >}}
-
 有三种方法来引用**图片**和**音乐**等本地资源：
 
 1. 使用 [页面包][page-bundles] 中的 [页面资源][page-resources]。
@@ -58,9 +56,9 @@ reward: true
 [image-processing]: https://gohugo.io/content-management/image-processing/
 {{< /admonition >}}
 
-## 前置参数 {#front-matter}
+## Front matter {#front-matter}
 
-**Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的前置参数。
+**Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的前置参数，详见 [Front matter][front-matter]。
 
 {{< admonition >}}
 **不是所有**的以下前置参数都必须在你的每篇文章中设置。
@@ -474,6 +472,7 @@ defaultContentLanguage = "zh-cn"
 
 另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):][pulls] 来贡献主题翻译，谢谢！
 
+[front-matter]: https://gohugo.io/content-management/front-matter/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}

@@ -25,14 +25,14 @@ toc:
 
 Learn to create a Hugo **FixIt** site in minutes.
 
+<!--more-->
+
 In this tutorial you will:
 
 1. Create a site
 2. Add content
 3. Configure the site
 4. Publish the site
-
-<!--more-->
 
 ## Prerequisites
 
