@@ -8,7 +8,7 @@
 version = "0.2.X"
 # website description for RSS, SEO, Open Graph and Twitter Cards
 # 网站描述，用于 RSS, SEO, Open Graph 和 Twitter Cards
-description = "Hugo theme | FixIt"
+description = "A Clean, Elegant but Advanced Hugo Theme"
 # site keywords
 # 网站关键词
 keywords = ["Hugo", "FixIt"]
