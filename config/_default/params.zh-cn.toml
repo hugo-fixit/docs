@@ -30,7 +30,7 @@ description = "Hugo 主题 - FixIt"
   selector = "article"
 
 [watermark]
-  content = '<img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt 主题'
+  content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt 主题'
 
 [githubCorner]
   title = "在 GitHub 上查看源代码"

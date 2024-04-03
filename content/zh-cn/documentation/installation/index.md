@@ -158,7 +158,7 @@ fixit create my-blog
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "提醒" >}}
-CLI 假定你事先了解 Hugo 和 FixIt。如果你是 Hugo 或 FixIt 的新手，我们强烈建议你在使用 CLI 之前先阅读 [主题文档](./..)，不要使用任何脚手架工具。
+CLI 假定你事先了解 Hugo 和 FixIt。如果你是 Hugo 或 FixIt 的新手，我们强烈建议你在使用 CLI 之前先阅读 [主题文档](../..)，不要使用任何脚手架工具。
 {{< /admonition >}}
 
 ## 比较

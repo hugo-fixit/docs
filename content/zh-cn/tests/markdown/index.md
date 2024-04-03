@@ -133,9 +133,9 @@ Adipisci ipsam quae odit impedit vitae, nemo facere magnam voluptates! Praesenti
 
 ## images
 
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg)
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
-![](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
+![Hugo Theme FixIt](/images/apple-devices-preview.webp)
+![Hugo Theme FixIt](/images/apple-devices-preview.webp "A Clean, Elegant but Advanced Hugo Theme")
+![](/images/apple-devices-preview.webp "A Clean, Elegant but Advanced Hugo Theme")
 
 get remote images test:
 

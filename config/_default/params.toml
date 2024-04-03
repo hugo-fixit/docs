@@ -23,7 +23,7 @@ fingerprint = ""
 dateFormat = "2006-01-02"
 # website images for Open Graph and Twitter Cards
 # 网站图片，用于 Open Graph 和 Twitter Cards
-images = ["/images/fixit.min.svg"]
+images = ["/images/apple-devices-preview.webp"]
 # FixIt 0.2.12 | NEW enable PWA
 # FixIt 0.2.12 | 新增 开启 PWA 支持
 enablePWA = true
@@ -85,13 +85,13 @@ disableThemeInject = false
   noFavicon = false
   # modern SVG favicon to use in place of older style .png and .ico files
   # 更现代的 SVG 网站图标，可替代旧的 .png 和 .ico 文件
-  svgFavicon = ""
+  # svgFavicon = "/images/fixit.min.svg"
   # Safari mask icon color
   # Safari 图标颜色
-  iconColor = "#5bbad5"
+  iconColor = "#FF7359"
   # Windows v8-10 tile color
   # Windows v8-10 磁贴颜色
-  tileColor = "#da532c"
+  tileColor = "#2d89ef"
   # Android browser theme color
   # Android 浏览器主题色
   [app.themeColor]
@@ -153,7 +153,7 @@ disableThemeInject = false
   [header.title]
     # URL of the LOGO, default is favicon
     # LOGO 的 URL，默认为网站图标
-    logo = "/images/fixit.min.svg"
+    logo = "/images/hugo-fixit.webp"
     # title name, default is site title
     # 标题名称，默认为网站标题
     name = ""
@@ -301,7 +301,7 @@ disableThemeInject = false
     gravatarEmail = ""
     # URL of avatar shown in home page
     # 主页显示头像的 URL
-    avatarURL = "/images/fixit.min.svg"
+    avatarURL = "/images/hugo-fixit.webp"
     # FixIt 0.2.17 | NEW identifier of avatar menu link
     # FixIt 0.2.17 | 新增 头像菜单链接的 identifier
     avatarMenu = ""
@@ -940,10 +940,10 @@ disableThemeInject = false
 [seo]
   # image URL
   # 图片 URL
-  image = "/images/Apple-Devices-Preview.jpg"
+  image = "/images/apple-devices-preview.webp"
   # thumbnail URL
   # 缩略图 URL
-  thumbnailUrl = "/images/tn.png"
+  thumbnailUrl = "/images/tn.webp"
 
 # Analytics config
 # 网站分析配置

@@ -22,3 +22,6 @@
   [social.QQGroup]
     id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
     Title = "Join FixIt related discussion on QQ Group"
+
+[watermark]
+  content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt Theme'

@@ -3,7 +3,6 @@ title: 关于 FixIt
 date: 2019-08-02T11:04:49+08:00
 draft: false
 comment: false
-pageStyle: wide
 lightgallery: true
 math: true
 heading:
@@ -18,10 +17,10 @@ heading:
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
 
 > [FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://github.com/Lruihao '在 GitHub 上关注我') 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
->
-> 它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[KeepIt 主题](https://github.com/Fastbyte01/KeepIt) 和 [LeaveIt 主题](https://github.com/liuzc/LeaveIt)。
 
-![Hugo 主题 FixIt](/images/Apple-Devices-Preview.jpg "一个简洁、优雅且高效的 Hugo 主题")
+它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[KeepIt 主题](https://github.com/Fastbyte01/KeepIt) 和 [LeaveIt 主题](https://github.com/liuzc/LeaveIt)。
+
+![Hugo 主题 FixIt](/images/apple-devices-preview.webp "一个简洁、优雅且高效的 Hugo 主题")
 
 ## 特性
 
@@ -143,15 +142,17 @@ heading:
 
 </details>
 
+## 许可协议
+
+FixIt 根据 **MIT** 许可协议授权。更多信息请查看看 [LICENSE 文件](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)。
+
 ## 赞助支持
 
-给我一个 Star 🌟 已经是对我最大的鼓励和支持了。
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)
 
 {{< details "如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。" >}}
 {{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ 为爱发电，谢谢大家！❤️" mode="fixed" >}}
 {{< sponsor-log >}}
 {{< /details >}}
 
-## 许可协议
-
-FixIt 根据 **MIT** 许可协议授权。更多信息请查看看 [LICENSE 文件](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)。
+如果你喜欢这个主题，别忘了留下一颗 ⭐️ 哦，谢谢！

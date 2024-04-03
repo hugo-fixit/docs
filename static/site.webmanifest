@@ -1,6 +1,6 @@
 {
-  "name": "FixIt Theme Documentation",
-  "short_name": "FixIt Docs",
+  "name": "Hugo FixIt Docs",
+  "short_name": "Hugo FixIt",
   "start_url": "/",
   "description": "A Clean, Elegant but Advanced Hugo Theme",
   "theme_color": "#ffffff",

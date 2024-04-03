@@ -73,6 +73,6 @@
   description: 羽翎轩 
 
 - nickname: ADD
-  avatar: /images/fixit.min.svg
+  avatar: /images/hugo-fixit.webp
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
   description: Create a pull request to add a new site.

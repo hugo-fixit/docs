@@ -3,7 +3,6 @@ title: About FixIt
 date: 2019-08-02T11:04:49+08:00
 draft: false
 comment: false
-pageStyle: wide
 lightgallery: true
 math: true
 heading:
@@ -18,10 +17,10 @@ heading:
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
 
 > [FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://github.com/Lruihao 'Follow me on GitHub').
->
-> It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).
 
-![Hugo Theme FixIt](/images/Apple-Devices-Preview.jpg "A Clean, Elegant but Advanced Hugo Theme")
+It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).
+
+![Hugo Theme FixIt](/images/apple-devices-preview.webp "A Clean, Elegant but Advanced Hugo Theme")
 
 ## Features
 
@@ -143,15 +142,17 @@ heading:
 
 </details>
 
+## License
+
+FixIt is licensed under the **MIT** license. Check the [LICENSE file](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE) for details.
+
 ## Sponsor
 
-Giving me a Star 🌟 is already the greatest encouragement and support for me.
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)
 
 {{< details "If you enjoy the theme, please consider buying me a coffee ☕️." >}}
 {{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love, Thanks all! ❤️" mode="fixed" >}}
 {{< sponsor-log >}}
 {{< /details >}}
 
-## License
-
-FixIt is licensed under the **MIT** license. Check the [LICENSE file](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE) for details.
+Don't forget to leave a ⭐️ if you like this theme, thanks!
