@@ -12,6 +12,9 @@ tags:
 categories:
   - Documentation
   - Guides
+resources:
+  - name: featured-image
+    src: cover.webp
 toc:
   enable: true
   auto: false

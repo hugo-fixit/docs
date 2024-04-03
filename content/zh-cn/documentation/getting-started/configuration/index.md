@@ -1,5 +1,4 @@
 ---
-weight: 3
 title: 配置 FixIt
 linkTitle: 配置篇
 date: 2024-03-07T15:37:59+08:00
@@ -13,7 +12,7 @@ author:
 description: 了解如何配置你的 Hugo FixIt 站点。
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: cover.webp
 tags:
   - Configuration
   - Installation

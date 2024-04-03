@@ -1,5 +1,4 @@
 ---
-weight: 3
 title: Configure FixIt
 linkTitle: Configuration
 date: 2024-03-07T15:37:59+08:00
@@ -13,7 +12,7 @@ author:
 description: Find out how to configure your Hugo FixIt site.
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: cover.webp
 tags:
   - Configuration
   - Installation

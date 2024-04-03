@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 1
 title: 快速上手
 date: 2023-02-20T20:14:22+08:00
 type: posts
@@ -9,7 +9,7 @@ author:
 description: 学习在几分钟内创建一个 Hugo FixIt 站点。
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: cover.webp
 tags:
   - Installation
   - Basics
@@ -162,7 +162,7 @@ hugo server -D --disableFastRender
 由于本主题使用了 Hugo 中的 `.Scratch` 和 `.Store` 来实现一些特性，
 非常建议你为 `hugo server` 命令添加 `--disableFastRender` 参数来实时预览你正在编辑的文章页面。
 
-![基本配置下的预览](simple-preview.png '基本配置下的预览')
+![基本配置下的预览](simple-preview.webp '基本配置下的预览')
 
 当对新内容感到满意时，将 front matter 中的 `draft` 值更改为 `false`，然后保存文件。
 

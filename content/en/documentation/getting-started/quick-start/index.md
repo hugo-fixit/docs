@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 1
 title: Quick Start
 date: 2024-03-01T15:18:19+08:00
 type: posts
@@ -9,7 +9,7 @@ author:
 description: Learn to create a Hugo FixIt site in minutes.
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: cover.webp
 tags:
   - Installation
   - Basics
@@ -154,7 +154,7 @@ hugo server -D --disableFastRender
 
 Since the theme use `.Scratch` and `.Store` in Hugo to implement some features, it is highly recommended that you add `--disableFastRender` parameter.
 
-![Simple preview](simple-preview.png 'Simple preview')
+![Simple preview](simple-preview.webp 'Simple preview')
 
 View your site at the URL displayed in your terminal. Keep the development server running as you continue to add and change content.
 

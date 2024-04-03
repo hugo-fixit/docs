@@ -1,5 +1,4 @@
 ---
-weight: 1
 title: Installation Theme
 linkTitle: Installation
 date: 2024-01-18T10:29:25+08:00
@@ -10,7 +9,7 @@ tags:
   - Installation
 resources:
   - name: featured-image
-    src: cover.png
+    src: cover.webp
 menu:
   main:
     title: Install FixIt Theme for your Hugo site in a few steps.

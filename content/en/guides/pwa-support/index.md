@@ -13,7 +13,7 @@ categories:
   - Documentation
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: cover.webp
 toc:
   auto: false
 repost:

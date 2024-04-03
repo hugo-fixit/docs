@@ -8,6 +8,9 @@ categories:
 tags: 
   - algolia
   - Advanced
+resources:
+  - name: featured-image
+    src: cover.webp
 description: Tips about using algolia in FixIt theme.
 ---
 
