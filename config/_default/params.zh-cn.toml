@@ -9,41 +9,21 @@ description = "Hugo 主题 - FixIt"
   dir = "content/zh-cn"
 
 [search]
-  enable = true
-  type = "algolia"
-  contentLength = 4000
-  placeholder = ""
-  maxResultLength = 10
-  snippetLength = 50
-  highlightTag = "em"
-  absoluteURL = false
   [search.algolia]
     index = "index.zh-cn"
-    appID = "YKOM6PKLUY"
-    searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
 
 [home]
-  rss = 10
   [home.profile]
-    enable = true
-    gravatarEmail = ""
-    avatarURL = "/images/avatar.png"
-    avatarMenu = ""
-    title = ""
     subtitle = "一个简洁、优雅且高效的 Hugo 主题"
-    typeit = true
-    social = true
-    disclaimer = ""
-  [home.posts]
-    enable = true
-    paginate = 6
 
 [social]
   GitHub = "hugo-fixit"
   Weibo = "liahao"
-  QQGroup = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM" # https://qun.qq.com/join.html
   Email = "fixit@lruihao.cn"
   RSS = true
+  [social.QQGroup]
+    id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
+    Title = "FixIt 主题交流群"
 
 [pangu]
   enable = true

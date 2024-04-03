@@ -104,7 +104,7 @@ disableThemeInject = false
   enable = true
   # type of search engine ["algolia", "fuse"]
   # 搜索引擎的类型 ["algolia", "fuse"]
-  type = "fuse"
+  type = "algolia"
   # max index length of the chunked content
   # 文章内容最长索引长度
   contentLength = 4000
@@ -125,8 +125,8 @@ disableThemeInject = false
   absoluteURL = false
   [search.algolia]
     index = ""
-    appID = ""
-    searchKey = ""
+    appID = "YKOM6PKLUY"
+    searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
   [search.fuse]
     # FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
     isCaseSensitive = false
@@ -298,10 +298,10 @@ disableThemeInject = false
     enable = true
     # Gravatar Email for preferred avatar in home page
     # Gravatar 邮箱，用于优先在主页显示的头像
-    gravatarEmail = "xx@xx.com"
+    gravatarEmail = ""
     # URL of avatar shown in home page
     # 主页显示头像的 URL
-    avatarURL = ""
+    avatarURL = "/images/fixit.min.svg"
     # FixIt 0.2.17 | NEW identifier of avatar menu link
     # FixIt 0.2.17 | 新增 头像菜单链接的 identifier
     avatarMenu = ""
@@ -416,6 +416,15 @@ disableThemeInject = false
   Phone = ""
   Email = ""
   RSS = true
+  # custom social links like the following
+  # 自定义社交链接如下
+  # [social.twitter]
+  #   id = "lruihao"
+  #   weight = 3
+  #   prefix = "https://twitter.com/"
+  #   Title = "Twitter"
+  #   [social.twitter.icon]
+  #     class = "fa-brands fa-x-twitter fa-fw"
 
 # Page config
 # 文章页面配置
@@ -472,7 +481,7 @@ disableThemeInject = false
   rssFullText = false
   # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...)
   # FixIt 0.2.13 | 新增 页面样式 ["narrow", "normal", "wide", ...)
-  pageStyle = "normal"
+  pageStyle = "wide"
   # FixIt 0.2.17 | CHANGED Auto Bookmark Support
   # If true, save the reading progress when closing the page.
   # FixIt 0.2.17 | 更改 自动书签支持
