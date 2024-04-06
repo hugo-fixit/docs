@@ -5,6 +5,8 @@ date: 2024-01-18T10:29:25+08:00
 type: posts
 categories:
   - Documentation
+collections:
+  - Documentation
 tags:
   - Installation
 resources:
