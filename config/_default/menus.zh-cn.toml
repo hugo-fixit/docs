@@ -90,7 +90,7 @@
 [[main]]
   identifier = "components"
   parent = "about"
-  name = "相关组件"
+  name = "主题组件"
   url = "components/"
   weight = 24
   [main.params]
