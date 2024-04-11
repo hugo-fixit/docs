@@ -1,8 +1,20 @@
-- title: My developed
-  description: Below are some open source works I have developed.
+- title: 🧩 Shortcodes components
   repos:
-    - hugo-fixit/FixIt
-- title: My contributed
-  description: Below are some open source works I have contributed to.
+    - hugo-fixit/component-projects
+    - hugo-fixit/shortcode-mmt-netease
+    - hugo-fixit/shortcode-sponsor-log
+- title: 🧩 Layout components
   repos:
-    - gohugoio/hugo
+    - hugo-fixit/component-projects
+- title: 🛠️ Templates & Tools
+  repos:
+    - hugo-fixit/hugo-fixit-starter
+    - hugo-fixit/hugo-fixit-starter1
+    - hugo-fixit/docs
+    - Lruihao/hugo-blog
+    - hugo-fixit/fixit-cli
+    - hugo-fixit/hugo-shell
+- title: 🧩 Other components
+  description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
+  repos:
+    - fixit-theme/hugo-shortcode-plugins-live2d

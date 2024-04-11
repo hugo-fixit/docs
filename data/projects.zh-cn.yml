@@ -1,8 +1,20 @@
-- title: 我开发的
-  description: Below are some open source works I have developed.
+- title: 🧩 Shortcodes 组件
   repos:
-    - hugo-fixit/FixIt
-- title: 我贡献的
-  description: Below are some open source works I have contributed to.
+    - hugo-fixit/component-projects
+    - hugo-fixit/shortcode-mmt-netease
+    - hugo-fixit/shortcode-sponsor-log
+- title: 🧩 布局组件
   repos:
-    - gohugoio/hugo
+    - hugo-fixit/component-projects
+- title: 🛠️ 模板 & 工具
+  repos:
+    - hugo-fixit/hugo-fixit-starter
+    - hugo-fixit/hugo-fixit-starter1
+    - hugo-fixit/docs
+    - Lruihao/hugo-blog
+    - hugo-fixit/fixit-cli
+    - hugo-fixit/hugo-shell
+- title: 🧩 其他组件
+  description: "欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。"
+  repos:
+    - fixit-theme/hugo-shortcode-plugins-live2d

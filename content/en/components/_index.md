@@ -1,9 +1,17 @@
 ---
 title: Theme Components
-titleIcon: fa-solid fa-puzzle-piece
+titleIcon: fa-solid fa-puzzle-piece text-success
 subtitle: <https://github.com/hugo-fixit>
-sectionSlot: ''
+sectionSlot: If you want to develop your own components or preview the effects of some of the above components, you might as well take a look at the following articles.
 layout: projects
+pageStyle: wide
+description: The FixIt theme balances simplicity and extensibility with extra Hugo theme components for customization.
+keyword:
+  - Hugo
+  - FixIt
+  - theme components
 ---
 
-> 🚧 WIP: This page is still being organized...
+![Hugo FixIt Components](/images/components-cover.webp)
+
+The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.
