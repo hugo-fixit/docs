@@ -17,9 +17,9 @@ heading:
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
 
-> [FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://github.com/Lruihao '在 GitHub 上关注我') 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
+[FixIt](https://github.com/hugo-fixit/FixIt) 是一个由 [Lruihao](https://github.com/Lruihao '在 GitHub 上关注我') 开发的**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 
-它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[KeepIt 主题](https://github.com/Fastbyte01/KeepIt) 和 [LeaveIt 主题](https://github.com/liuzc/LeaveIt)。
+它的原型基于 [LoveIt 主题](https://github.com/dillonzq/LoveIt)，[KeepIt 主题](https://github.com/Fastbyte01/KeepIt) 和 [LeaveIt 主题](https://github.com/liuzc/LeaveIt)。[^1]
 
 ![Hugo 主题 FixIt](/images/apple-devices-preview.webp "一个简洁、优雅且高效的 Hugo 主题")
 
@@ -157,3 +157,5 @@ FixIt 根据 **MIT** 许可协议授权。更多信息请查看看 [LICENSE 文�
 {{< /details >}}
 
 如果你喜欢这个主题，别忘了留下一颗 ⭐️ 哦，谢谢！
+
+[^1]: 主题名称趣谈：“leave it, keep it，love it，fix it”。出现又离开，爱而不得。这像不像那该死的爱情和 BUG 呢？🤣

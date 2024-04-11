@@ -91,7 +91,7 @@
   identifier = "components"
   parent = "about"
   name = "Components"
-  url = "components/overview/"
+  url = "components/"
   weight = 24
   [main.params]
     icon = "fa-solid fa-puzzle-piece"

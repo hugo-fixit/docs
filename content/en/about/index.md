@@ -17,9 +17,9 @@ heading:
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
 
-> [FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://github.com/Lruihao 'Follow me on GitHub').
+[FixIt](https://github.com/hugo-fixit/FixIt) is a **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/) developed by [Lruihao](https://github.com/Lruihao 'Follow me on GitHub').
 
-It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).
+It is based on the original [LoveIt Theme](https://github.com/dillonzq/LoveIt), [KeepIt Theme](https://github.com/Fastbyte01/KeepIt) and [LeaveIt Theme](https://github.com/liuzc/LeaveIt).[^1]
 
 ![Hugo Theme FixIt](/images/apple-devices-preview.webp "A Clean, Elegant but Advanced Hugo Theme")
 
@@ -157,3 +157,5 @@ FixIt is licensed under the **MIT** license. Check the [LICENSE file](https://gi
 {{< /details >}}
 
 Don't forget to leave a ⭐️ if you like this theme, thanks!
+
+[^1]: The theme name is interesting: "leave it, keep it, love it, fix it". Appears and leaves, loves but cannot keep. Doesn't it look like that damn love and BUG? 🤣

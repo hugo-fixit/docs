@@ -56,4 +56,8 @@ capitalizeListTitles = false
 
 # ignore some build errors
 # 忽略一些构建错误
-ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+ignoreLogs = [
+  "error-get-remote-json",
+  "error-remote-getjson",
+  "error-missing-instagram-accesstoken"
+]
