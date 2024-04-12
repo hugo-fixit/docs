@@ -6,9 +6,6 @@ comment: false
 pageStyle: wide
 lightgallery: true
 math: true
-heading:
-  number:
-    enable: false
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
