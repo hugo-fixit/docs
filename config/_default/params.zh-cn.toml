@@ -35,5 +35,3 @@ description = "Hugo 主题 - FixIt"
 [githubCorner]
   title = "在 GitHub 上查看源代码"
 
-[gravatar]
-  host = "gravatar.loli.net"
