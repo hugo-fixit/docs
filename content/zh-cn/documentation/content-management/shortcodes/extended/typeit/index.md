@@ -26,23 +26,23 @@ categories:
 
 `typeit` shortcode 有以下命名参数：
 
-- **tag** *[可选]*
+- **tag** _[可选]_
 
     内容容器的 HTML 标签。
 
-- **code** *[可选]*
+- **code** _[可选]_
 
     指定代码内容语言类型，可以实习语法高亮。
 
-- **code-link** *[可选]*
+- **code-link** _[可选]_
 
     是否解析代码内容中的 Markdown 链接，默认：`false`。
 
-- **group** *[可选]*
+- **group** _[可选]_
 
     内容分组，相同分组的内容将按顺序开始打字动画。
 
-- **loop** *[可选]*
+- **loop** _[可选]_
 
     内容是否会在打字动画完成后继续循环。
 
@@ -133,4 +133,24 @@ public class HelloWorld {
 
 {{< typeit group=paragraph >}}
 **然后**, 这个段落开始
+{{< /typeit >}}
+
+## 循环内容 {#loop-content}
+
+默认情况下，打字动画完成后将停止。
+
+如果你需要内容在打字动画完成后继续循环，可以使用 `loop` 参数。
+
+一个带有 `loop` 参数的 `typeit` 示例：
+
+```go-html-template
+{{</* typeit loop=true */>}}
+这个段落将会循环……
+{{</* /typeit */>}}
+```
+
+呈现的输出效果如下：
+
+{{< typeit loop=true >}}
+这个段落将会循环……
 {{< /typeit >}}

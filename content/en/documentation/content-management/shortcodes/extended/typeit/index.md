@@ -26,23 +26,23 @@ Just insert your content in the `typeit` shortcode and that’s it.
 
 The `typeit` shortcode has the following named parameters:
 
-- **tag** *[optional]*
+- **tag** _[optional]_
 
     HTML tag of the content container.
 
-- **code** *[optional]*
+- **code** _[optional]_
 
     Specify the language type of the code content that will be highlighted.
 
-- **code-link** *[optional]*
+- **code-link** _[optional]_
 
     Whether to parse Markdown links in code content, default: `false`.
 
-- **group** *[optional]*
+- **group** _[optional]_
 
     Grouping of content, the content of the same group will start typing animation in order.
 
-- **loop** *[optional]*
+- **loop** _[optional]_
 
     Whether your content will continuously loop after completing.
 
@@ -133,4 +133,22 @@ The rendered output looks like this:
 
 {{< typeit group=paragraph >}}
 **Then** this paragraph begins
+{{< /typeit >}}
+
+## Loop Content {#loop-content}
+
+By default, the typing animation will stop after completion.
+
+Example `typeit` input with `loop`:
+
+```go-html-template
+{{</* typeit loop=true */>}}
+This content will continue to loop after the typing animation is complete.
+{{</* /typeit */>}}
+```
+
+The rendered output looks like this:
+
+{{< typeit loop=true >}}
+This content will continue to loop after the typing animation is complete.
 {{< /typeit >}}
