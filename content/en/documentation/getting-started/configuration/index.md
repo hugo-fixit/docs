@@ -1310,6 +1310,8 @@ mDevtools
         enable = false
         server = "https://yourdomain"
         site = "默认站点"
+        # {{< version 0.3.3 >}} whether use backend configuration
+        useBackendConf = false
         placeholder = ""
         noComment = ""
         sendBtn = ""
