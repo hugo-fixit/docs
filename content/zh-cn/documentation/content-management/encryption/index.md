@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 一个 `fixit-encryptor` 示例：
 
-```go-html-template
+```md
 {{%/* fixit-encryptor "1212" "密码是 1212" */%}}
 `fixit-encryptor` shortcode 在版本 {{</* version 0.2.15 */>}} 得到支持。
 {{%/* /fixit-encryptor */%}}
@@ -132,6 +132,34 @@ Or
 
 {{% fixit-encryptor "1212" "密码是 1212" %}}
 `fixit-encryptor` shortcode 在版本 {{< version 0.2.15 >}} 得到支持。
+{{% /fixit-encryptor %}}
+
+{{< version 0.3.3 >}} 支持无限级嵌套。
+
+一个嵌套的例子：
+
+```md
+{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
+{{</* typeit >}}如果你愿意一层一层一层地剥开我的心{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
+{{</* typeit >}}你会发现 你会讶异{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
+{{</* typeit >}}你是我最压抑最深处的秘密{{</* /typeit */>}}
+{{%/* /fixit-encryptor */%}}
+{{%/* /fixit-encryptor */%}}
+{{%/* /fixit-encryptor */%}}
+```
+
+呈现的输出效果如下：
+
+{{% fixit-encryptor "1212" "密码是 1212" %}}
+{{< typeit >}}如果你愿意一层一层一层地剥开我的心{{< /typeit >}}
+{{% fixit-encryptor "1212" "密码是 1212" %}}
+{{< typeit >}}你会发现 你会讶异{{< /typeit >}}
+{{% fixit-encryptor "1212" "密码是 1212" %}}
+{{< typeit >}}你是我最压抑最深处的秘密{{< /typeit >}}
+{{% /fixit-encryptor %}}
+{{% /fixit-encryptor %}}
 {{% /fixit-encryptor %}}
 
 ## 结语

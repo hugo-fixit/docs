@@ -136,6 +136,34 @@ The rendered output looks like this:
 The `fixit-encryptor` shortcode was supported in version {{< version 0.2.15 >}}.
 {{% /fixit-encryptor %}}
 
+{{< version 0.3.3 >}} Support infinite nesting.
+
+An example of nesting:
+
+```md
+{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
+{{</* typeit >}}如果你愿意一层一层一层地剥开我的心{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
+{{</* typeit >}}你会发现 你会讶异{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
+{{</* typeit >}}你是我最压抑最深处的秘密{{</* /typeit */>}}
+{{%/* /fixit-encryptor */%}}
+{{%/* /fixit-encryptor */%}}
+{{%/* /fixit-encryptor */%}}
+```
+
+The rendered output looks like this:
+
+{{% fixit-encryptor "1212" "密码是 1212" %}}
+{{< typeit >}}如果你愿意一层一层一层地剥开我的心{{< /typeit >}}
+{{% fixit-encryptor "1212" "密码是 1212" %}}
+{{< typeit >}}你会发现 你会讶异{{< /typeit >}}
+{{% fixit-encryptor "1212" "密码是 1212" %}}
+{{< typeit >}}你是我最压抑最深处的秘密{{< /typeit >}}
+{{% /fixit-encryptor %}}
+{{% /fixit-encryptor %}}
+{{% /fixit-encryptor %}}
+
 ## Summary
 
 Compared with encrypting content through script batch processing such as golang/python/javascript, FixIt theme built-in encryption has the following advantages and disadvantages:
@@ -161,11 +189,12 @@ FixIt decryptor for encrypted pages
 
 #### Options
 
-| Name      | Type     | Attributes   | Default | Description                                               |
-| --------- | -------- | ------------ | ------- | --------------------------------------------------------- |
-| decrypted | Function | \<optional\> |         | [Lifecycle Hooks] handler after decrypting                |
-| reset     | Function | \<optional\> |         | [Lifecycle Hooks] handler after encrypting again          |
-| duration  | Number   | \<optional\> | 86400   | number of seconds to cache decryption statistics. unit: s |
+| Name              | Type     | Attributes   | Default | Description                                               |
+| ----------------- | -------- | ------------ | ------- | --------------------------------------------------------- |
+| decrypted         | Function | \<optional\> |         | [Lifecycle Hooks] handler after decrypting                |
+| partialDecrypted | Function | \<optional\> |         | [Lifecycle Hooks] handler after partially decrypting      |
+| reset             | Function | \<optional\> |         | [Lifecycle Hooks] handler after encrypting again          |
+| duration          | Number   | \<optional\> | 86400   | number of seconds to cache decryption statistics. unit: s |
 
 ### Methods
 
@@ -204,6 +233,10 @@ remove event listener for FixIt Decryptor
 #### decrypted
 
 after decrypting
+
+#### partial-decrypted
+
+after partially decrypting
 
 #### reset
 
