@@ -16,7 +16,7 @@ password: 1212
 message: Password is 1212
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: featured-image.webp
 tags:
   - Content
   - Encryption
