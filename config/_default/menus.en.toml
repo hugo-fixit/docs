@@ -91,6 +91,7 @@
   identifier = "components"
   parent = "about"
   name = "Components"
+  title = "Hugo FixIt Components"
   url = "components/"
   weight = 24
   [main.params]
@@ -111,6 +112,16 @@
   weight = 26
   [main.params]
     icon = "fa-solid fa-microchip"
+[[main]]
+  identifier = "contributions"
+  parent = "about"
+  name = "Contributions"
+  title = "Contribute to the FixIt project"
+  url = "contributions/overview/"
+  weight = 27
+  [main.params]
+    icon = "fa-solid fa-heart-circle-bolt text-danger fa-beat"
+    class = "fa-bounce"
 
 [[main]]
   identifier = "github"
