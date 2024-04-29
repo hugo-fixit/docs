@@ -18,7 +18,7 @@ hiddenFromHomePage: true
 对于当前文档的更正和改进，请提交问题和拉取请求到 [文档存储库][docs]。
 
 你也可以：
-
+<!-- markdownlint-disable reference-links-images -->
 - 通过编辑 `data/friends.yml` 文件提交 [案例展示][showcase]
 - 通过编辑 `data/projects.lang.yml` 文件提交 [主题组件][components]
 
@@ -76,5 +76,5 @@ HUGO_MODULE_WORKSPACE=hugo.work hugo server --ignoreVendorPaths "**"
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/
-[showcase]: {{< relref path="/showcase/" >}}
-[components]: {{< relref "/components/" >}}
+[showcase]: {{< relref path="/showcase" >}}
+[components]: {{< relref "/components" >}}
