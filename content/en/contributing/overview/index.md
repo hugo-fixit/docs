@@ -1,6 +1,9 @@
 ---
 title: Contribute to the FixIt project
+linkTitle: Overview of contributing
 date: 2024-04-25T20:30:42+08:00
+collections:
+  - Contributing
 type: posts
 pageStyle: wide
 description: Hugo FixIt is eager for enthusiasm and participation from the open-source community. We need your support!

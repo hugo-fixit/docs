@@ -112,11 +112,11 @@
   [main.params]
     icon = "fa-solid fa-microchip"
 [[main]]
-  identifier = "contributions"
+  identifier = "contributing"
   parent = "about"
   name = "贡献指南"
   title = "为 FixIt 项目做贡献"
-  url = "contributions/overview/"
+  url = "contributing/overview/"
   weight = 27
   [main.params]
     icon = "fa-solid fa-heart-circle-bolt text-danger fa-beat"

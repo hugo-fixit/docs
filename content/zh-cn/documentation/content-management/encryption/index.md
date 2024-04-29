@@ -32,14 +32,14 @@ reward: true
 
 ## 全文加密
 
-### 前置参数
+### Front matter
 
-FixIt 主题提供了两个前置参数用于全文加密。
+FixIt 主题提供了两个 front matter 用于全文加密。
 
 - **password**: _[必需]_ 加密页面内容的密码
 - **message**: _[可选]_ 加密提示信息
 
-例如，本文的前置参数如下：
+例如，本文的 front matter 如下：
 
 ```yaml
 title: 主题文档 - 内容加密

@@ -32,14 +32,14 @@ Find out how to encrypt content in FixIt theme.
 
 ## Page Encryption
 
-### Frontmatter
+### Front matter
 
-The FixIt theme provides two frontmatters for page encryption.
+The FixIt theme provides two front matters for page encryption.
 
 - **password**: _[required]_ password of encrypted page content
 - **message**: _[optional]_ encryption prompt
 
-For example, the frontmatters in this article are as follows:
+For example, the front matters in this article are as follows:
 
 ```yaml
 ---
