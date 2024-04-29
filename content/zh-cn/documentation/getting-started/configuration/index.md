@@ -982,7 +982,7 @@ enable
 : `bool` 是否启用 Gravatar，默认：`false`。
 
 host
-: `string` Gravatar 主机，例如：`www.gravatar.com`、`cn.gravatar.com` 等，默认：`www.gravatar.com`。
+: `string` Gravatar 主机，例如：`www.gravatar.com`、`cravatar.cn` 等，默认：`www.gravatar.com`。
 
 style
 : `string` Gravatar 样式，例如：`mp`、`identicon`、`monsterid`、`wavatar`、`retro`、`robohash`、`blank` 等，默认：`""`。

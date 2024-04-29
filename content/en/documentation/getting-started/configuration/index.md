@@ -989,7 +989,7 @@ enable
 Depends on the author's email, if the author's email is not set, the local avatar will be used.
 
 host
-: `string` Gravatar host. e.g. `www.gravatar.com`, `cn.gravatar.com` etc. Default is `www.gravatar.com`.
+: `string` Gravatar host. e.g. `www.gravatar.com`, `cravatar.cn` etc. Default is `www.gravatar.com`.
 
 style
 : `string` Gravatar style. The configuration value for `style` can be one of `mp`, `identicon`, `monsterid`, `wavatar`, `retro`, `blank`, `robohash`. Default is `""`.
