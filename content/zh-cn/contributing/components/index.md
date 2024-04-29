@@ -6,6 +6,7 @@ collections:
 type: posts
 draft: true
 hiddenFromHomePage: true
+reward: true
 related:
   enable: false
 ---

@@ -6,6 +6,7 @@ collections:
   - Contributing
 draft: true
 hiddenFromHomePage: true
+reward: true
 related:
   enable: false
 ---

@@ -5,6 +5,7 @@ collections:
   - Contributing
 type: posts
 hiddenFromHomePage: true
+reward: true
 related:
   enable: false
 ---
