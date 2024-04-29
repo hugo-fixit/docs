@@ -8,6 +8,8 @@ resources:
     src: cover.webp
 type: posts
 pageStyle: wide
+related:
+  enable: false
 description: Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你们的支持！
 keywords: 
   - hugo-fixit

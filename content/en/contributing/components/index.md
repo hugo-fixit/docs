@@ -6,8 +6,10 @@ collections:
   - Contributing
 draft: true
 hiddenFromHomePage: true
+related:
+  enable: false
 ---
-
+<!-- markdownlint-disable reference-links-images -->
 If you’ve built a Hugo theme components and want to contribute back to the Hugo FixIt Community, please share it with us.
 
 <!--more-->

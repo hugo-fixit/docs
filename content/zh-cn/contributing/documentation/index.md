@@ -5,6 +5,8 @@ collections:
   - Contributing
 type: posts
 hiddenFromHomePage: true
+related:
+  enable: false
 ---
 
 通过发现问题并提出更改来帮助我们改进文档。
