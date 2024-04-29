@@ -4,6 +4,6 @@ go 1.20
 
 require (
 	github.com/Lruihao/hugo-shortcode-sponsor-log v1.0.0 // indirect
-	github.com/hugo-fixit/FixIt v0.3.4 // indirect
+	github.com/hugo-fixit/FixIt v0.3.5-0.20240429143332-84bca1af4fb7 // indirect
 	github.com/hugo-fixit/component-projects v1.0.0 // indirect
 )
