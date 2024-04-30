@@ -27,6 +27,7 @@
     taskList = true
     typographer = true
     # TODO passthrough refactor https://gohugo.io/getting-started/configuration-markup/#parserattributeblock
+    # TODO hugo 0.122.0 https://gohugo.io/content-management/mathematics/
   [goldmark.parser]
     autoHeadingID = true
     autoHeadingIDType = "github"

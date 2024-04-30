@@ -1095,12 +1095,13 @@ theme
 
 `map` Developer options.
 
+Select the scope named `public_repo` to generate personal access token, Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see <https://gohugo.io/functions/os/getenv/#examples>.
+
 ```toml
 [params]
   [params.dev]
     enable = false
     c4u = false
-    githubToken = ""
     [params.dev.mDevtools]
       enable = false
       type = "vConsole"
@@ -1111,9 +1112,6 @@ enable
 
 c4u
 : `bool` Whether to check for updates. Default is `false`.
-
-githubToken
-: `string` GitHub token. Please do not expose to public!
 
 mDevtools
 : `map` Mobile Devtools Configuration.

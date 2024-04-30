@@ -1088,12 +1088,13 @@ theme
 
 `map` 开发者选项。
 
+选择命名为 `public_repo` 的范围以生成个人访问令牌，配置环境变量 `HUGO_PARAMS_GHTOKEN=xxx`，详见 <https://gohugo.io/functions/os/getenv/#examples>。
+
 ```toml
 [params]
   [params.dev]
     enable = false
     c4u = false
-    githubToken = ""
     [params.dev.mDevtools]
       enable = false
       type = "vConsole"
@@ -1104,9 +1105,6 @@ enable
 
 c4u
 : `bool` 是否启用检查功能，默认：`false`。
-
-githubToken
-: `string` GitHub Token.
 
 mDevtools
 : `map` 移动端开发者工具。
