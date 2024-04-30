@@ -34,7 +34,7 @@ related:
 - 安装 [Node.js][node] 版本大于 18.0.0
 
 ## API 参考
-<!-- markdownlint-disable reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images -->
 前往 [API 参考][references] 页面获取更多信息。
 
 <!-- link reference definition -->

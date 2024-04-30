@@ -10,7 +10,7 @@ reward: true
 related:
   enable: false
 ---
-<!-- markdownlint-disable reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images -->
 如果你已经构建了一个 Hugo 主题组件，并希望贡献给 Hugo FixIt 社区，请与我们分享。
 
 <!--more-->

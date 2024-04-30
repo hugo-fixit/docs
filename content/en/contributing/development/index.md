@@ -34,7 +34,7 @@ To contribute to the development of the FixIt theme, you need to:
 - Install [Node.js][node] above version 18.0.0
 
 ## References
-<!-- markdownlint-disable reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images -->
 Head to the [References][references] page for more information.
 
 <!-- link reference definition -->

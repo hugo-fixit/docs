@@ -12,6 +12,7 @@ categories:
 lightgallery: true
 cacheRemoteImages:
   enable: true
+  replace: false
 menu:
   main:
     title: Test for Markdown rendering
@@ -19,6 +20,7 @@ menu:
     params:
       icon: fa-solid fa-vial text-success
 ---
+<!-- markdownlint-disable-file MD045 -->
 
 ## 二级标题
 
@@ -74,7 +76,7 @@ Ut reiciendis sit optio autem fugit porro tempora maiores debitis aliquam! Perfe
 
 ~~deleted line~~
 
-:truck: Feat: *migrate ~~`ibruce.siteTime`~~ to `footer.siteTime`*
+:truck: Feat: _migrate ~~`ibruce.siteTime`~~ to `footer.siteTime`_
 
 ## long text
 
@@ -131,6 +133,11 @@ Eum a esse delectus, sit odio enim culpa! Aperiam atque tempora, quibusdam ea bl
 Ut eaque tenetur animi ea cumque architecto minima commodi nisi dolores sapiente. In quia hic voluptates sint porro inventore mollitia itaque nemo placeat necessitatibus! Repudiandae provident doloremque nesciunt sed! Culpa?
 Adipisci ipsam quae odit impedit vitae, nemo facere magnam voluptates! Praesentium laborum optio, quasi libero amet cum voluptates quod a dolores maiores nesciunt perspiciatis facilis voluptate accusantium mollitia ut autem.
 
+## link
+
+{{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
+{{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
+
 ## images
 
 ![Hugo Theme FixIt](/images/apple-devices-preview.webp)
@@ -140,7 +147,7 @@ Adipisci ipsam quae odit impedit vitae, nemo facere magnam voluptates! Praesenti
 get remote images test:
 
 ![Lruihao](https://lruihao.cn/images/avatar.jpg?from=FixIt)
-![logo](https://lruihao.cn/logo.png)
+![logo](https://lruihao.cn/logo.webp)
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 

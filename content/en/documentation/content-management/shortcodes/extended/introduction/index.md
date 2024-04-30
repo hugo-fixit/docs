@@ -23,7 +23,7 @@ lightgallery: true
 math: true
 reward: true
 ---
-
+<!-- markdownlint-disable-file reference-links-images -->
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
 
 <!--more-->
@@ -78,7 +78,7 @@ The `link` shortcode has the following named parameters:
 
     Content of the link, default value is the value of **href** parameter.
 
-    *Markdown or HTML format is supported.*
+    _Markdown or HTML format is supported._
 
 - **title** _[optional]_ (**third** positional parameter)
 
@@ -88,15 +88,19 @@ The `link` shortcode has the following named parameters:
 
     Whether to display as a card link, whose default value is `false`.
 
+- **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.5 >}}
+
+    Icon of the card link, support Font Awesome class name or image URL. default value is the favicon of the link.
+
 - **download** _[optional]_ {{< version 0.2.12 >}}
 
     `optional` attribute of the HTML `a` tag.
 
-- **class** *[optional]*
+- **class** _[optional]_
 
     `class` attribute of the HTML `a` tag.
 
-- **rel** *[optional]*
+- **rel** _[optional]_
 
     Additional `rel` attributes of the HTML `a` tag.
 
@@ -146,26 +150,26 @@ Example `link` input for card type:
 
 ```go-html-template
 {{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
-Or
-{{</* link href="https://github.com/hugo-fixit/FixIt" content="FixIt Theme" title="source of FixIt Theme" card=true */>}}
+{{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
+{{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 The rendered output looks like this:
 
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
+{{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 
 Example `link` input with download attribute:
 
 ```go-html-template
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" */>}}
-
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true */>}}
 ```
 
 The rendered output looks like this:
 
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
-
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
 ## image {#image}
@@ -186,43 +190,43 @@ The `image` shortcode has the following named parameters:
 
     Alternate text for the image if the image cannot be displayed, default value is the value of **src** parameter.
 
-    *Markdown or HTML format is supported.*
+    _Markdown or HTML format is supported._
 
 - **caption** _[optional]_ (**third** positional parameter)
 
     Image caption.
 
-    *Markdown or HTML format is supported.*
+    _Markdown or HTML format is supported._
 
-- **title** *[optional]*
+- **title** _[optional]_
 
     Image title that will be shown when hovering on the image.
 
-- **class** *[optional]*
+- **class** _[optional]_
 
     `class` attribute of the HTML `figure` tag.
 
-- **src_s** *[optional]*
+- **src_s** _[optional]_
 
     URL of the image thumbnail, used for lightgallery, default value is the value of **src** parameter.
 
-- **src_l** *[optional]*
+- **src_l** _[optional]_
 
     URL of the HD image, used for lightgallery, default value is the value of **src** parameter.
 
-- **height** *[optional]*
+- **height** _[optional]_
 
     `height` attribute of the image.
 
-- **width** *[optional]*
+- **width** _[optional]_
 
     `width` attribute of the image.
 
-- **linked** *[optional]*
+- **linked** _[optional]_
 
     Whether the image needs to be hyperlinked, default value is `true`.
 
-- **rel** *[optional]*
+- **rel** _[optional]_
 
     Additional `rel` attributes of the HTML `a` tag, if **linked** parameter is set to `true`.
 
@@ -244,7 +248,7 @@ The rendered output looks like this:
 
 The `admonition` shortcode supports **12** types of banners to help you put notice in your page.
 
-*Markdown or HTML format in the content is supported.*
+_Markdown or HTML format in the content is supported._
 
 {{< admonition >}}
 A **note** banner
@@ -413,7 +417,7 @@ Or
 The rendered output looks like this:
 
 {{< details "**Copyright** 2022." >}}
-*All pages and graphics on this web site are the property of FixIt.*
+_All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
 ## center-quote

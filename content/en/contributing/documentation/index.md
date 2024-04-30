@@ -21,7 +21,7 @@ We welcome corrections and improvements to the documentation. Please note that t
 For corrections and improvements to the current documentation, please submit issues and pull requests to the [documentation repository][docs].
 
 You can also:
-<!-- markdownlint-disable reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images -->
 - Submit [showcase][showcase] by editing the `data/friends.yml` file
 - Submit [theme components][components] by editing the `data/projects.lang.yml` file
 

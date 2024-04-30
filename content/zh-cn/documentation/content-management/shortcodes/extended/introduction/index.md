@@ -23,7 +23,7 @@ lightgallery: true
 math: true
 reward: true
 ---
-
+<!-- markdownlint-disable-file reference-links-images -->
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
 
 <!--more-->
@@ -78,7 +78,7 @@ This is a **right-aligned** paragraph.
 
     链接的内容，默认值是 **href** 参数的值。
 
-    *支持 Markdown 或者 HTML 格式。*
+    _支持 Markdown 或者 HTML 格式。_
 
 - **title** _[可选]_（**第三个**位置参数）
 
@@ -88,15 +88,19 @@ This is a **right-aligned** paragraph.
 
     是否显示为卡片式链接，默认值 `false`。
 
+- **card-icon** _[可选]_ (**第五个**位置参数) {{< version 0.3.5 >}}
+
+    卡片式链接的图标，支持图片链接和 Font Awesome 图标，默认值是链接的 favicon。
+
 - **download** _[可选]_ {{< version 0.2.12 >}}
 
     HTML `a` 标签 的 `download` 属性。
 
-- **class** *[可选]*
+- **class** _[可选]_
 
     HTML `a` 标签 的 `class` 属性。
 
-- **rel** *[可选]*
+- **rel** _[可选]_
 
     HTML `a` 标签 的 `rel` 补充属性。
 
@@ -146,26 +150,26 @@ This is a **right-aligned** paragraph.
 
 ```go-html-template
 {{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
-或者
-{{</* link href="https://github.com/hugo-fixit/FixIt" content="FixIt Theme" title="source of FixIt Theme" card=true */>}}
+{{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
+{{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 呈现的输出效果如下：
 
 {{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
+{{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 
 一个可下载的 `link` 示例：
 
 ```go-html-template
-{{</* link href="/music/Wavelength.mp3" content="Wavelength" title="Download Wavelength.mp3" download="Wavelength.mp3" */>}}
-
+{{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" */>}}
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true */>}}
 ```
 
 呈现的输出效果如下：
 
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
-
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
 ## image {#image}
@@ -186,43 +190,43 @@ This is a **right-aligned** paragraph.
 
     图片无法显示时的替代文本，默认值是 **src** 参数的值。
 
-    *支持 Markdown 或者 HTML 格式。*
+    _支持 Markdown 或者 HTML 格式。_
 
 - **caption** _[可选]_（**第三个**位置参数）
 
     图片标题。
 
-    *支持 Markdown 或者 HTML 格式。*
+    _支持 Markdown 或者 HTML 格式。_
 
-- **title** *[可选]*
+- **title** _[可选]_
 
     当悬停在图片上会显示的提示。
 
-- **class** *[可选]*
+- **class** _[可选]_
 
     HTML `figure` 标签的 `class` 属性。
 
-- **src_s** *[可选]*
+- **src_s** _[可选]_
 
     图片缩略图的 URL, 用在画廊模式中，默认值是 **src** 参数的值。
 
-- **src_l** *[可选]*
+- **src_l** _[可选]_
 
     高清图片的 URL, 用在画廊模式中，默认值是 **src** 参数的值。
 
-- **height** *[可选]*
+- **height** _[可选]_
 
     图片的 `height` 属性。
 
-- **width** *[可选]*
+- **width** _[可选]_
 
     图片的 `width` 属性。
 
-- **linked** *[可选]*
+- **linked** _[可选]_
 
     图片是否需要被链接，默认值是 `true`。
 
-- **rel** *[可选]*
+- **rel** _[可选]_
 
     HTML `a` 标签 的 `rel` 补充属性，仅在 **linked** 属性设置成 `true` 时有效。
 
@@ -244,7 +248,7 @@ This is a **right-aligned** paragraph.
 
 `admonition` shortcode 支持 **12** 种 帮助你在页面中插入提示的横幅。
 
-*支持 Markdown 或者 HTML 格式。*
+_支持 Markdown 或者 HTML 格式。_
 
 {{< admonition >}}
 一个 **注意** 横幅
@@ -414,7 +418,7 @@ console.log('Hello FixIt!');
 呈现的输出效果如下：
 
 {{< details "**Copyright** 2022." >}}
-*All pages and graphics on this web site are the property of FixIt.*
+_All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
 ## center-quote

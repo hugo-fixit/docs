@@ -19,7 +19,7 @@ categories:
 reward: true
 math: true
 ---
-
+<!-- markdownlint-disable-file reference-links-images -->
 **FixIt** 主题提供了一些扩展的语法便于你撰写文章。
 
 <!--more-->
@@ -306,9 +306,41 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 > 前提是你设置了 `goldmark.parser.attribute.block` 为 `true`。
 
-通过在一对花括号 (`{.myclass class="class1 class2"}`) 内添加属性列表并将其放在它装饰的 Markdown 元素之后，标题元素，在同一行其后添加即可，对于块语法，在其后新一行添加。
-
 Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、列表、段落等。
+
+### 语法
+
+```md
+some Markdown content
+{#id .class1 .class2 key1="value1" key2="value2"}
+```
+
+在大多数情况下，将属性列表放置在标记元素下方。对于标题和围栏代码块，将属性列表放在右侧。
+
+| Element           | Position of attribute list |
+| :---------------- | :------------------------- |
+| blockquote        | bottom                     |
+| fenced code block | right                      |
+| heading           | right                      |
+| horizontal rule   | bottom                     |
+| image             | bottom                     |
+| list              | bottom                     |
+| paragraph         | bottom                     |
+| table             | bottom                     |
+
+### 例子
+
+带有 CSS 类的分割线：
+
+```md
+---
+{.awesome-hr}
+```
+
+呈现的输出如下所示：
+
+---
+{.awesome-hr}
 
 带有 CSS 类的块引用：
 
@@ -323,6 +355,8 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
 > foo\
 > bar
 {#test-id .text-danger}
+
+---
 
 目前有一些限制：对于表格，你目前只能将其应用于完整表格，而对于列表，仅适用于 `ul`/`ol` 节点，例如：
 
@@ -352,7 +386,9 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
   {.text-warning}
 {.text-primary}
 
-请注意，[code fences][code-fences] 中的属性必须位于开始标记之后，以及任何其他突出显示处理指令，例如：
+---
+
+请注意，[code fences][code-fences] 中的属性和其他高亮处理指令必须位于开始标记之，例如：
 
 ```md
 {?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
@@ -360,16 +396,11 @@ Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、�
 {?`}{?`}{?`}
 ```
 
-## 代码块扩展语法
-
-### 代码块属性
-
-可以在代码块后面添加属性，例如：
+给代码块添加 `title` 属性，例如：
 
 ````markdown
 ```js {title="test.js"}
 console.log('hello FixIt!');
-```
 ````
 
 呈现的输出效果如下：
@@ -378,14 +409,13 @@ console.log('hello FixIt!');
 console.log('hello FixIt!');
 ```
 
-目前支持的属性有：
-
-- `title`：代码块的标题
+## 代码块扩展语法
 
 ### 图表支持
 
 这部分内容在 [图表支持页面][diagrams-support] 中介绍。
 
+<!-- link reference definition -->
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
