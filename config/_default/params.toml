@@ -1011,7 +1011,7 @@ disableThemeInject = false
   enable = true
   # Gravatar host, default: "www.gravatar.com"
   # Gravatar 主机，默认：“www.gravatar.com”
-  host = "gravatar.lruihao.cn" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+  host = "cravatar.cn" # ["cravatar.cn", "gravatar.loli.net", ...]
   style = "mp" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
 
 # Back to top
@@ -1064,14 +1064,15 @@ disableThemeInject = false
 
 # FixIt 0.2.15 | NEW Developer options
 # FixIt 0.2.15 | 新增 开发者选项
+# Select the scope named `public_repo` to generate personal access token,
+# Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see https://gohugo.io/functions/os/getenv/#examples
+# 选择命名为 "public_repo" 的范围以生成个人访问令牌，
+# 配置环境变量 HUGO_PARAMS_GHTOKEN=xxx，详见 https://gohugo.io/functions/os/getenv/#examples
 [dev]
   enable = false
   # Check for updates
   # 检查更新
   c4u = false
-  # For using the GitHub API, please do not expose to public!
-  # 用于使用 GitHub API，请勿公开展示！
-  githubToken = ""
   # Mobile Devtools config
   # 移动端开发者工具配置
   [dev.mDevtools]

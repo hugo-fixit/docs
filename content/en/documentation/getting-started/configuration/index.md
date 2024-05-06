@@ -989,7 +989,7 @@ enable
 Depends on the author's email, if the author's email is not set, the local avatar will be used.
 
 host
-: `string` Gravatar host. e.g. `www.gravatar.com`, `cn.gravatar.com` etc. Default is `www.gravatar.com`.
+: `string` Gravatar host. e.g. `www.gravatar.com`, `cravatar.cn` etc. Default is `www.gravatar.com`.
 
 style
 : `string` Gravatar style. The configuration value for `style` can be one of `mp`, `identicon`, `monsterid`, `wavatar`, `retro`, `blank`, `robohash`. Default is `""`.
@@ -1095,12 +1095,13 @@ theme
 
 `map` Developer options.
 
+Select the scope named `public_repo` to generate personal access token, Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see <https://gohugo.io/functions/os/getenv/#examples>.
+
 ```toml
 [params]
   [params.dev]
     enable = false
     c4u = false
-    githubToken = ""
     [params.dev.mDevtools]
       enable = false
       type = "vConsole"
@@ -1111,9 +1112,6 @@ enable
 
 c4u
 : `bool` Whether to check for updates. Default is `false`.
-
-githubToken
-: `string` GitHub token. Please do not expose to public!
 
 mDevtools
 : `map` Mobile Devtools Configuration.

@@ -81,10 +81,10 @@
     icon = "fa-regular fa-comments"
 [[main]]
   identifier = "guides"
+  parent = "about"
   name = "相关教程"
   url = "guides/"
   weight = 23
-  parent = "about"
   [main.params]
     icon = "fa-regular fa-compass"
 [[main]]
@@ -97,20 +97,30 @@
     icon = "fa-solid fa-puzzle-piece"
 [[main]]
   identifier = "showcase"
+  parent = "about"
   name = "案例展示"
   url = "showcase/"
   weight = 25
-  parent = "about"
   [main.params]
     icon = "fa-solid fa-blog"
 [[main]]
   identifier = "references"
-  name = "参考"
+  parent = "about"
+  name = "API 参考"
   url = "references/overview/"
   weight = 26
-  parent = "about"
   [main.params]
     icon = "fa-solid fa-microchip"
+[[main]]
+  identifier = "contributing"
+  parent = "about"
+  name = "贡献指南"
+  title = "为 FixIt 项目做贡献"
+  url = "contributing/overview/"
+  weight = 27
+  [main.params]
+    icon = "fa-solid fa-heart-circle-bolt text-danger fa-beat"
+    class = "fa-bounce"
 
 [[main]]
   identifier = "github"

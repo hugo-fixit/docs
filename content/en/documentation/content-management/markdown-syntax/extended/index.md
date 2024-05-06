@@ -19,7 +19,7 @@ categories:
 reward: true
 math: true
 ---
-
+<!-- markdownlint-disable-file reference-links-images -->
 **FixIt** theme has some extended syntax elements for you to write articles.
 
 <!--more-->
@@ -307,9 +307,41 @@ The rendered output looks like this:
 
 > The premise is that you set `goldmark.parser.attribute.block` to `true`.
 
-Enable custom attribute support for titles and blocks by adding attribute lists inside single curly brackets (`{.myclass class="class1 class2"}`) and placing it after the Markdown element it decorates, on the same line for titles and on a new line directly below for blocks.
-
 Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tables, lists, paragraphs etc.
+
+## Syntax
+
+```md
+some Markdown content
+{#id .class1 .class2 key1="value1" key2="value2"}
+```
+
+In most cases, place the attribute list beneath the markup element. For headings and fenced code blocks, place the attribute list on the right.
+
+| Element           | Position of attribute list |
+| :---------------- | :------------------------- |
+| blockquote        | bottom                     |
+| fenced code block | right                      |
+| heading           | right                      |
+| horizontal rule   | bottom                     |
+| image             | bottom                     |
+| list              | bottom                     |
+| paragraph         | bottom                     |
+| table             | bottom                     |
+
+## Examples
+
+A horizontal rule with a CSS class:
+
+```md
+---
+{.awesome-hr}
+```
+
+The rendered output looks like this:
+
+---
+{.awesome-hr}
 
 A blockquote with a CSS class:
 
@@ -324,6 +356,8 @@ The rendered output looks like this:
 > foo\
 > bar
 {.text-danger}
+
+---
 
 There are some current limitations: For tables you can currently only apply it to the full table, and for lists the `ul`/`ol`-nodes only, e.g.:
 
@@ -353,6 +387,8 @@ The rendered output looks like this:
   {.text-warning}
 {.text-primary}
 
+---
+
 Note that attributes in [code fences][code-fences] must come after the opening tag, with any other highlighting processing instruction, e.g.:
 
 ```md
@@ -361,16 +397,11 @@ Note that attributes in [code fences][code-fences] must come after the opening t
 {?`}{?`}{?`}
 ```
 
-## Code Fences Extended
-
-### Code Block Attributes
-
-You can add attributes to a code block, for example:
+Add `title` attributes to a code block, for example:
 
 ````markdown
 ```js {title="test.js"}
 console.log('hello FixIt!');
-```
 ````
 
 The rendered output looks like this:
@@ -379,14 +410,13 @@ The rendered output looks like this:
 console.log('hello FixIt!');
 ```
 
-Currently supported attributes include:
-
-- `title`: The title of the code block.
+## Code Fences Extended
 
 ### Diagrams Support
 
 This part is shown in the [diagrams support page][diagrams-support].
 
+<!-- link reference definition -->
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
