@@ -23,12 +23,12 @@ Hugo FixIt is eager for enthusiasm and participation from the open-source commun
 
 <!--more-->
 
-{{< link "../development" "🔧 Develop FixIt theme" "Contribute to the development of FixIt." true >}}
+{{< link "../development" "🔧 Develop FixIt theme" "Contribute to the development of FixIt." true "fa-solid fa-code" >}}
 
 ---
 
-{{< link "../documentation" "📝 Improve documentation" "Help us to improve the documentation by identifying issues and suggesting changes." true >}}
+{{< link "../documentation" "📝 Improve documentation" "Help us to improve the documentation by identifying issues and suggesting changes." true "fa-regular fa-newspaper" >}}
 
 ---
 
-{{< link "../components" "🧩 Develop theme components" "Contribute to the development of Hugo FixIt components." true >}}
+{{< link "../components" "🧩 Develop theme components" "Contribute to the development of Hugo FixIt components." true "fa-solid fa-puzzle-piece" >}}

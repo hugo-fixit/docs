@@ -22,12 +22,12 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 
 <!--more-->
 
-{{< link "../development" "🔧 开发 FixIt 主题" "为 FixIt 的开发做贡献。" true >}}
+{{< link "../development" "🔧 开发 FixIt 主题" "为 FixIt 的开发做贡献。" true "fa-solid fa-code" >}}
 
 ---
 
-{{< link "../documentation" "📝 完善文档" "通过发现问题并提出更改来帮助我们改进文档。" true >}}
+{{< link "../documentation" "📝 完善文档" "通过发现问题并提出更改来帮助我们改进文档。" true "fa-regular fa-newspaper" >}}
 
 ---
 
-{{< link "../components" "🧩 开发组件" "为 Hugo FixIt 主题组件的开发做贡献。" true >}}
+{{< link "../components" "🧩 开发组件" "为 Hugo FixIt 主题组件的开发做贡献。" true "fa-solid fa-puzzle-piece" >}}
