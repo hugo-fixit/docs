@@ -107,7 +107,7 @@
   identifier = "references"
   parent = "about"
   name = "API 参考"
-  url = "references/overview/"
+  url = "references/"
   weight = 26
   [main.params]
     icon = "fa-solid fa-microchip"

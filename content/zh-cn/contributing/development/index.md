@@ -46,4 +46,4 @@ related:
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/
-[references]: {{< relref "/references/" >}}
+[references]: {{< relref "/references" >}}

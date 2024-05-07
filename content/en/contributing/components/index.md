@@ -22,5 +22,5 @@ Visit [this page][components] to browse a collection of themes components create
 Head to the [References][references] page for more information.
 
 <!-- link reference definition -->
-[components]: {{< relref "/components/" >}}
-[references]: {{< relref "/references/" >}}
+[components]: {{< relref "/components" >}}
+[references]: {{< relref "/references" >}}

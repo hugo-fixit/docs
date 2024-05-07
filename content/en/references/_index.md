@@ -1,3 +1,4 @@
 ---
-title: References
+title: All References
+titleIcon: fa-solid fa-microchip
 ---

@@ -22,5 +22,5 @@ related:
 前往 [API 参考][references] 页面获取更多信息。
 
 <!-- link reference definition -->
-[components]: {{< relref "/components/" >}}
-[references]: {{< relref "/references/" >}}
+[components]: {{< relref "/components" >}}
+[references]: {{< relref "/references" >}}
