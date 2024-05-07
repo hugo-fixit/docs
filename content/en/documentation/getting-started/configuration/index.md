@@ -1202,6 +1202,8 @@ mDevtools
       closeComment = false
     # {{< version 0.3.0 >}} page heading config
     [params.page.heading]
+      # {{< version 0.3.6 >}} whether to capitalize automatic text of headings
+      capitalize = false
       # used with `markup.tableOfContents.ordered` parameter
       [params.page.heading.number]
         # whether to enable auto heading numbering

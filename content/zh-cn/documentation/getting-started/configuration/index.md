@@ -1197,6 +1197,8 @@ mDevtools
       closeComment = false
     # {{< version 0.3.0 >}} 页面标题配置
     [params.page.heading]
+      # {{< version 0.3.6 >}} 是否自动大写标题
+      capitalize = false
       # 配合 `markup.tableOfContents.ordered` 参数使用
       [params.page.heading.number]
         # 是否启用自动标题编号
