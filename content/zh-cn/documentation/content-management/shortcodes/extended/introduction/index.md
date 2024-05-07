@@ -88,9 +88,9 @@ This is a **right-aligned** paragraph.
 
     是否显示为卡片式链接，默认值 `false`。
 
-- **card-icon** _[可选]_ (**第五个**位置参数) {{< version 0.3.5 >}}
+- **card-icon** _[可选]_ (**第五个**位置参数) {{< version 0.3.6 changed >}}
 
-    卡片式链接的图标，支持图片链接和 Font Awesome 图标，默认值是链接的 favicon。
+    卡片式链接的图标，支持图片链接和 Font Awesome 图标。设置为 `true`，自动获取链接的 favicon。
 
 - **download** _[可选]_ {{< version 0.2.12 >}}
 
@@ -149,14 +149,14 @@ This is a **right-aligned** paragraph.
 一个卡片式 `link` 示例：
 
 ```go-html-template
-{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
+{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 

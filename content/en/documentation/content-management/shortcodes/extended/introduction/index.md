@@ -88,9 +88,9 @@ The `link` shortcode has the following named parameters:
 
     Whether to display as a card link, whose default value is `false`.
 
-- **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.5 >}}
+- **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.6 changed >}}
 
-    Icon of the card link, support Font Awesome class name or image URL. default value is the favicon of the link.
+    Icon of the card link, support Font Awesome class name or image URL. Set to `true` to get the favicon of the link.
 
 - **download** _[optional]_ {{< version 0.2.12 >}}
 
@@ -149,14 +149,14 @@ The rendered output looks like this (hover over the link, there should be a tool
 Example `link` input for card type:
 
 ```go-html-template
-{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
+{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 

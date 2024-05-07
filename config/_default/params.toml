@@ -719,7 +719,7 @@ disableThemeInject = false
   # If true, save the reading progress when closing the page.
   # FixIt 0.2.17 | 更改 自动书签支持
   # 如果为 true，关闭页面时保存阅读进度。
-  autoBookmark = true
+  autoBookmark = false
   # FixIt 0.2.17 | NEW whether to enable wordCount
   # FixIt 0.2.17 | 新增 是否启用字数显示
   wordCount = true
