@@ -23,7 +23,7 @@ lightgallery: true
 math: true
 reward: true
 ---
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html -->
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
 
 <!--more-->
@@ -90,7 +90,7 @@ The `link` shortcode has the following named parameters:
 
 - **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.6 changed >}}
 
-    Icon of the card link, support Font Awesome class name or image URL. Set to `true` to get the favicon of the link.
+    Icon of the card link, support Font Awesome class name or image URL. Set to `true` to get the shortcut from the link.
 
 - **download** _[optional]_ {{< version 0.2.12 >}}
 

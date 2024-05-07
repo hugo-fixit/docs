@@ -23,7 +23,7 @@ lightgallery: true
 math: true
 reward: true
 ---
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html -->
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
 
 <!--more-->
@@ -90,7 +90,7 @@ This is a **right-aligned** paragraph.
 
 - **card-icon** _[可选]_ (**第五个**位置参数) {{< version 0.3.6 changed >}}
 
-    卡片式链接的图标，支持图片链接和 Font Awesome 图标。设置为 `true`，自动获取链接的 favicon。
+    卡片式链接的图标，支持图片链接和 Font Awesome 图标。设置为 `true`，自动从链接获取缩略图。
 
 - **download** _[可选]_ {{< version 0.2.12 >}}
 
