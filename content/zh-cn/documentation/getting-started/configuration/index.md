@@ -452,7 +452,6 @@ showHome
 [params]
   [params.footer]
     enable = true
-    custom = ""
     copyright = true
     author = true
     since = ""
@@ -479,10 +478,6 @@ showHome
 
 enable
 : `bool` 是否启用页面底部信息。
-
-custom
-: {{< version 0.2.17 changed >}}\
-`string` 自定义内容（支持 HTML 格式）。
 
 copyright
 : `bool` 是否显示版权信息。
@@ -1070,7 +1065,7 @@ theme
 
 ### customFilePath
 
-{{< version 0.2.17 >}}
+{{< version 0.3.8 deleted >}}
 
 `string` 定义自定义文件路径，并在站点目录 `layouts/partials/custom` 中创建自定义文件。
 

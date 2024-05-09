@@ -8,7 +8,7 @@ author:
 description: 探索 Hugo - FixIt 主题的的进阶使用。
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: featured-image.webp
 categories:
   - Documentation
 collections:
@@ -28,7 +28,7 @@ menu:
     params:
       icon: fa-brands fa-readme
 ---
-
+<!-- markdownlint-disable-file MD052 -->
 探索 Hugo - **FixIt** 主题的的进阶使用。
 
 <!--more-->
@@ -134,42 +134,14 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 
 Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建 `layouts/404.html` 文件以覆盖 `themes/FixIt/layouts/404.html`，从而实现自定义 FixIt 主题 404 页面模板的需求。
 
-但是，对于主题的大多数模板，FixIt 通常不建议你这样做，因为这样可能会导致未来升级主题困难。
+但是，对于主题的大多数模板，我们通常不建议你这样做，因为这样可能会导致未来升级主题困难。
 
-为了避免升级冲突问题，基于这一特性，FixIt 主题在常用的位置开放了几个空的模板以供用户客制化，详见 [主题配置][theme-config] 中的 `params.customFilePath` 参数。
-
-例如，FixIt 主题文档站点通过创建 `layouts/partials/custom/profile.html` 自定义了首页的 profile 部分。
-
-首先，启用自定义文件路径参数：
-
-```toml
-[params.customFilePath]
-  profile = "custom/profile.html"
-```
-
-然后，自定义模板：
-
-```go-html-template
-<div class="profile-custom">
-  {{- if .Site.BuildDrafts -}}
-    <a href="https://fixit.lruihao.cn" target="_blank" rel="external" title="Go to Production Environment">
-      <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Production&logo=vercel" alt="Production environment">
-    </a>
-  {{- else -}}
-    <a href="https://pre.fixit.lruihao.cn" target="_blank" rel="external" title="Go to Preview Environment">
-      <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
-    </a>
-  {{- end -}}
-  <a href="https://demo.fixit.lruihao.cn" target="_blank" rel="external" title="FixIt Demo">
-    <img src="https://img.shields.io/badge/Demo-orange" alt="FixIt Demo">
-  </a>
-</div>
-```
+{{< version 0.3.7 >}} 为了避免升级冲突问题，基于这一特性，FixIt 主题开放了统一的自定义模板入口文件，你可以通过 `define` 实现 [开放的自定义块][block]。
 
 ## PWA 支持
 
 这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
 
 <!-- link reference definition -->
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
+[block]: {{< relref path="/references/block" >}}

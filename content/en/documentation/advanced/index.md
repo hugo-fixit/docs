@@ -8,7 +8,7 @@ author:
 description: Discover advanced usage of the Hugo - FixIt theme.
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: featured-image.webp
 categories:
   - Documentation
 collections:
@@ -27,7 +27,7 @@ menu:
     params:
       icon: fa-brands fa-readme
 ---
-
+<!-- markdownlint-disable-file MD052 -->
 Discover advanced usage of the Hugo - **FixIt** theme.
 
 <!--more-->
@@ -135,40 +135,12 @@ Hugo allows you to modify the theme by overriding the theme templates, for examp
 
 However, for most of the templates, FixIt theme generally doesn't recommend you do this, as it may make theme upgrades difficult in the future.
 
-In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens several empty templates in commonly used locations for user customization, see `params.customFilePath` parameter in [theme configuration][theme-config].
-
-For example, the FixIt theme documentation site customizes the profile section of the home page by creating `layouts/partials/custom/profile.html`.
-
-First enable custom file path parameter:
-
-```toml
-[params.customFilePath]
-  profile = "custom/profile.html"
-```
-
-then, customize the template:
-
-```go-html-template
-<div class="profile-custom">
-  {{- if .Site.BuildDrafts -}}
-    <a href="https://fixit.lruihao.cn" target="_blank" rel="external" title="Go to Production Environment">
-      <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Production&logo=vercel" alt="Production environment">
-    </a>
-  {{- else -}}
-    <a href="https://pre.fixit.lruihao.cn" target="_blank" rel="external" title="Go to Preview Environment">
-      <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
-    </a>
-  {{- end -}}
-  <a href="https://demo.fixit.lruihao.cn" target="_blank" rel="external" title="FixIt Demo">
-    <img src="https://img.shields.io/badge/Demo-orange" alt="FixIt Demo">
-  </a>
-</div>
-```
+{{< version 0.3.7 >}} In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens a unified custom template entry file, you can implement [Open Custom Blocks][block] through `define`.
 
 ## PWA Support
 
 This part is shown in the [pwa support page][pwa-support].
 
 <!-- link reference definition -->
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
+[block]: {{< relref path="/references/block" >}}

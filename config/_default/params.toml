@@ -187,11 +187,6 @@ disableThemeInject = false
 # 页面底部信息配置
 [footer]
   enable = true
-  # FixIt 0.2.17 | CHANGED Custom content (HTML format is supported)
-  # For advanced use, see parameter `params.customFilePath.footer`
-  # FixIt 0.2.17 | 更改 自定义内容 (支持 HTML 格式)
-  # 进阶使用，见参数 `params.customFilePath.footer`
-  custom = ""
   # whether to show copyright info
   # 是否显示版权信息
   copyright = true
@@ -630,15 +625,6 @@ disableThemeInject = false
   # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
   # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
   theme = "minimal"
-
-# Define custom file paths
-# Create your custom files in site directory `layouts/partials/custom` and uncomment needed files below
-# 定义自定义文件路径
-# 在站点目录 `layouts/partials/custom` 中创建您的自定义文件，并取消注释下面需要的文件
-[customFilePath]
-  # aside = "custom/aside.html"
-  # profile = "custom/profile.html"
-  # footer = "custom/footer.html"
 
 # FixIt 0.2.15 | NEW Developer options
 # FixIt 0.2.15 | 新增 开发者选项

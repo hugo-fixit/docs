@@ -458,7 +458,6 @@ showHome
 [params]
   [params.footer]
     enable = true
-    custom = ""
     copyright = true
     author = true
     since = ""
@@ -485,10 +484,6 @@ showHome
 
 enable
 : `bool` Whether to enable footer. Default is `true`.
-
-custom
-: {{< version 0.2.17 changed >}}\
-`string` Custom content (HTML format is supported). For advanced use, see parameter `params.customFilePath.footer`.
 
 copyright
 : `bool` Whether to show copyright info. Default is `true`.
@@ -1077,7 +1072,7 @@ theme
 
 ### customFilePath
 
-{{< version 0.2.17 >}}
+{{< version 0.3.8 deleted >}}
 
 `map` Define custom file paths and create your custom files in site directory `layouts/partials/custom`.
 
