@@ -6,7 +6,7 @@ type: posts
 categories:
   - Documentation
 collections:
-  - Documentation
+  - Outline
 tags:
   - Installation
 resources:

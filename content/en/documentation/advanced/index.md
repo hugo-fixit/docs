@@ -12,7 +12,7 @@ resources:
 categories:
   - Documentation
 collections:
-  - Documentation
+  - Outline
 tags:
   - Advanced
   - Customization
