@@ -193,7 +193,6 @@ fontawesome: true
 linkToMarkdown: true
 rssFullText: false
 pageStyle: "normal"
-gravatarForce: false
 
 toc:
   enable: true
@@ -346,6 +345,7 @@ This part is shown in the [shortcodes page][shortcodes].
 | Russian              | `ru`      | `ru`                  | :(fa-regular fa-square fa-fw):       |
 | Romanian             | `ro`      | `ro`                  | :(fa-regular fa-square fa-fw):       |
 | Vietnamese           | `vi`      | `vi`                  | :(fa-regular fa-square fa-fw):       |
+| Hindi                | `hi`      | `hi`                  | :(fa-regular fa-square fa-fw):       |
 
 ### Basic Configuration
 
