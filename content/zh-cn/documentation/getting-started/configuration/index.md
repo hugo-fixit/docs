@@ -1063,20 +1063,6 @@ color
 theme
 : `string` 进度条主题，可选值：`barber-shop`、`big-counter`、`bounce`、`center-atom`、`center-circle`、`center-radar`、`center-simple`、`corner-indicator`、`fill-left`、`flash`、`flat-top`、`loading-bar`、`mac-osx`、`material`、`minimal`，默认：`minimal`。
 
-### customFilePath
-
-{{< version 0.3.8 deleted >}}
-
-`string` 定义自定义文件路径，并在站点目录 `layouts/partials/custom` 中创建自定义文件。
-
-```toml
-[params]
-  [params.customFilePath]
-    aside = "custom/aside.html"
-    profile = "custom/profile.html"
-    footer = "custom/footer.html"
-```
-
 ### dev
 
 {{< version 0.2.15 >}}
@@ -1149,8 +1135,6 @@ mDevtools
     rssFullText = false
     # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
-    # {{< version 0.2.14 >}} {{< version 0.2.18 deleted >}} 强制使用 Gravatar 作为作者头像
-    # gravatarForce = true
     # {{< version 0.2.17 changed >}} 开启自动书签支持
     # 如果为 true，则在关闭页面时保存阅读进度
     autoBookmark = false

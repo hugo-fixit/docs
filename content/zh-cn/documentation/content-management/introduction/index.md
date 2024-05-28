@@ -345,6 +345,7 @@ hugo new friends/index.md
 | 俄语         | `ru`      | `ru`             | :(fa-regular fa-square fa-fw):       |
 | 罗马尼亚语   | `ro`      | `ro`             | :(fa-regular fa-square fa-fw):       |
 | 越南语       | `vi`      | `vi`             | :(fa-regular fa-square fa-fw):       |
+| 印地语       | `hi`      | `hi`             | :(fa-regular fa-square fa-fw):       |
 
 ### 基本配置
 

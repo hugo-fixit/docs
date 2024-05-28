@@ -1070,20 +1070,6 @@ color
 theme
 : `string` The theme of pace. All available themes: `barber-shop`, `big-counter`, `bounce`, `center-atom`, `center-circle`, `center-radar`, `center-simple`, `corner-indicator`, `fill-left`, `flash`, `flat-top`, `loading-bar`, `mac-osx`, `material`, `minimal`. Default is `minimal`.
 
-### customFilePath
-
-{{< version 0.3.8 deleted >}}
-
-`map` Define custom file paths and create your custom files in site directory `layouts/partials/custom`.
-
-```toml
-[params]
-  [params.customFilePath]
-    aside = "custom/aside.html"
-    profile = "custom/profile.html"
-    footer = "custom/footer.html"
-```
-
 ### dev
 
 {{< version 0.2.15 >}}
