@@ -62,11 +62,6 @@
   url: https://xidcn.com
   description: XIDCN's blog
 
-- nickname: 羽翎轩
-  avatar: https://maling.io/avatar/ling.webp
-  url: https://maling.io/
-  description: 羽翎轩 
-
 - nickname: ADD
   avatar: /images/hugo-fixit.webp
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
