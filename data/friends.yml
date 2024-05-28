@@ -62,10 +62,10 @@
   url: https://xidcn.com
   description: XIDCN's blog
 
-- nickname: 羽翎轩
-  avatar: https://maling.io/avatar/ling.webp
-  url: https://maling.io/
-  description: 羽翎轩 
+- nickname: 小翎哥的博客
+  avatar: https://iling.me/assets/img/logo.jpg
+  url: https://iling.me/blog/
+  description: 小翎哥的博客
 
 - nickname: ADD
   avatar: /images/hugo-fixit.webp
