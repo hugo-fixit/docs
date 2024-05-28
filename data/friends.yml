@@ -62,6 +62,11 @@
   url: https://xidcn.com
   description: XIDCN's blog
 
+- nickname: 小翎哥的博客
+  avatar: https://iling.me/assets/img/logo.jpg
+  url: https://iling.me/blog/
+  description: 小翎哥的博客
+
 - nickname: ADD
   avatar: /images/hugo-fixit.webp
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
