@@ -401,6 +401,7 @@ some Markdown content
 ````markdown
 ```js {title="test.js"}
 console.log('hello FixIt!');
+```
 ````
 
 呈现的输出效果如下：

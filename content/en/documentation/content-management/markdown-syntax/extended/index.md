@@ -402,6 +402,7 @@ Add `title` attributes to a code block, for example:
 ````markdown
 ```js {title="test.js"}
 console.log('hello FixIt!');
+```
 ````
 
 The rendered output looks like this:

@@ -140,11 +140,11 @@ Or
 
 ```md
 {{%/* fixit-encryptor "1212" "密码是 1212" */%}}
-{{</* typeit >}}如果你愿意一层一层一层地剥开我的心{{</* /typeit */>}}
+{{</* typeit */>}}如果你愿意一层一层一层地剥开我的心{{</* /typeit */>}}
 {{%/* fixit-encryptor "1212" "密码是 1212" */%}}
-{{</* typeit >}}你会发现 你会讶异{{</* /typeit */>}}
+{{</* typeit */>}}你会发现 你会讶异{{</* /typeit */>}}
 {{%/* fixit-encryptor "1212" "密码是 1212" */%}}
-{{</* typeit >}}你是我最压抑最深处的秘密{{</* /typeit */>}}
+{{</* typeit */>}}你是我最压抑最深处的秘密{{</* /typeit */>}}
 {{%/* /fixit-encryptor */%}}
 {{%/* /fixit-encryptor */%}}
 {{%/* /fixit-encryptor */%}}
