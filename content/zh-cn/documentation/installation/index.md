@@ -86,7 +86,7 @@ git pull
 ## Git 子模块 {#git-submodule}
 
 <!-- markdownlint-disable-next-line no-bare-urls -->
-{{< link "https://github.com/hugo-fixit/hugo-fixit-starter1" "基于 Git 子模块的模板" "" true >}}
+{{< link "https://github.com/hugo-fixit/hugo-fixit-starter1/generate" "点击快速创建博客！" "一个基于 Git 子模块创建 Hugo FixIt 站点的快速启动模板。" true "fa-solid fa-screwdriver-wrench" >}}
 
 在当前目录中初始化一个空的 Git 存储库。
 
@@ -118,7 +118,7 @@ git submodule update --remote --merge themes/FixIt
 ## Hugo 模块 {#hugo-module}
 
 <!-- markdownlint-disable-next-line no-bare-urls -->
-{{< link "https://github.com/hugo-fixit/hugo-fixit-starter" "基于 Hugo 模块的模板" "" true >}}
+{{< link "https://github.com/hugo-fixit/hugo-fixit-starter/generate" "点击快速创建博客！" "一个基于 Hugo 模块创建 Hugo FixIt 站点的快速启动模板。" true "fa-solid fa-screwdriver-wrench" >}}
 
 {{< admonition tip >}}
 以这种方式，无需要在 `hugo.toml` 中配置 `theme = "FixIt"`。

@@ -187,10 +187,20 @@ hugo
 
 要了解如何部署站点，请参阅 [托管和部署][hosting-and-deployment] 部分。
 
+## 文档指南
+
+我们强烈建议你花少量时间完整阅读 FixIt 主题的文档，以便你更好地了解如何使用它。
+
+1. [安装篇][installation]
+2. [入门篇][getting-started]
+3. [内容管理][content-management]
+4. [进阶篇][advanced]
+
 ## 寻求帮助
 
 所有的反馈都是欢迎的！详见 [议题][issues]、[讨论][discussions] 或者加入 QQ 群：`814031017`。
 
+<!-- link reference definition -->
 [hugo-installing]: https://gohugo.io/getting-started/installing/
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
@@ -211,7 +221,13 @@ hugo
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [discussions]: https://github.com/hugo-fixit/FixIt/discussions
+<!-- markdownlint-disable-file reference-links-images -->
+[installation]: {{< relref path="/documentation/installation" >}}
+[getting-started]: {{< relref path="/documentation/getting-started" >}}
+[content-management]: {{< relref path="/documentation/content-management" >}}
+[advanced]: {{< relref path="/documentation/advanced" >}}
 
+<!-- footnote reference definition -->
 [^1]: Git 存储库包含整个项目目录，通常不包括 public 目录，因为站点是在推送后构建的。
 [^2]: [如何使用 Vercel 部署 Hugo 站点][deploying-hugo-with-vercel]
 [^3]: [在 Netlify 上部署 Hugo][hugo-on-netlify]

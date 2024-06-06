@@ -86,7 +86,7 @@ git pull
 ## Git Submodule {#git-submodule}
 
 <!-- markdownlint-disable-next-line no-bare-urls -->
-{{< link "https://github.com/hugo-fixit/hugo-fixit-starter1" "A Template base on Git Submodule" "" true >}}
+{{< link "https://github.com/hugo-fixit/hugo-fixit-starter1/generate" "Click to quickly create a blog!" "A quick-start template base on Git submodule to create a Hugo FixIt site." true "fa-solid fa-screwdriver-wrench" >}}
 
 Initialize an empty Git repository in the current directory.
 
@@ -118,7 +118,7 @@ git submodule update --remote --merge themes/FixIt
 ## Hugo Module {#hugo-module}
 
 <!-- markdownlint-disable-next-line no-bare-urls -->
-{{< link "https://github.com/hugo-fixit/hugo-fixit-starter" "A Template base on Hugo Module" "" true >}}
+{{< link "https://github.com/hugo-fixit/hugo-fixit-starter/generate" "Click to quickly create a blog!" "A quick-start template base on Hugo Modules to create a Hugo FixIt site." true "fa-solid fa-screwdriver-wrench" >}}
 
 {{< admonition tip >}}
 In this way, you don't need to configure `theme = "FixIt"` in `hugo.toml`.

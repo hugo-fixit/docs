@@ -181,10 +181,20 @@ Most of our users deploy their sites using a CI/CD workflow, where a push[^1] to
 
 To learn how to deploy your site, see the [hosting and deployment][hosting-and-deployment] section.
 
+## Documentation Guide
+
+We strongly recommend that you take the time to read the FixIt theme's documentation in its entirety so that you have a better understanding of how to use it.
+
+1. [Installation][installation]
+2. [Getting Started][getting-started]
+3. [Content Management][content-management]
+4. [Advanced Usage][advanced]
+
 ## Ask for help
 
 All feedback is welcome! Head over to the [issues][issues] or [discussions][discussions] tracker.
 
+<!-- link reference definition -->
 [hugo-installing]: https://gohugo.io/getting-started/installing/
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
@@ -205,7 +215,13 @@ All feedback is welcome! Head over to the [issues][issues] or [discussions][disc
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [discussions]: https://github.com/hugo-fixit/FixIt/discussions
+<!-- markdownlint-disable-file reference-links-images -->
+[installation]: {{< relref path="/documentation/installation" >}}
+[getting-started]: {{< relref path="/documentation/getting-started" >}}
+[content-management]: {{< relref path="/documentation/content-management" >}}
+[advanced]: {{< relref path="/documentation/advanced" >}}
 
+<!-- footnote reference definition -->
 [^1]: The Git repository contains the entire project directory, typically excluding the public directory because the site is built after the push.
 [^2]: [How to Deploy a Hugo Site with Vercel][deploying-hugo-with-vercel]
 [^3]: [Hugo on Netlify][hugo-on-netlify]
