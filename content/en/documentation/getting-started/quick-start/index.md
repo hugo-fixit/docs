@@ -183,7 +183,7 @@ To learn how to deploy your site, see the [hosting and deployment][hosting-and-d
 
 ## Documentation Guide
 
-We strongly recommend that you take the time to read the FixIt theme's documentation in its entirety so that you have a better understanding of how to use it.
+We strongly recommend that you read the full documentation for the FixIt theme to better understand how to use it.
 
 1. [Installation][installation]
 2. [Getting Started][getting-started]
