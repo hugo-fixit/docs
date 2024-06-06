@@ -1357,6 +1357,7 @@ mDevtools
         texRenderer = false # {{< version 0.2.16 >}}
         search = false # {{< version 0.2.16 >}}
         recaptchaV3Key = "" # {{< version 0.2.16 >}}
+        turnstileKey = "" # {{< version 0.3.8 >}}
         reaction = false # {{< version 0.2.18 >}}
       # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置 (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
@@ -1407,6 +1408,7 @@ mDevtools
         category = ""
         categoryId = ""
         mapping = ""
+        origin = "https://giscus.app" # {{< version 0.3.7 >}} Or set it to your self-hosted domain
         strict = "0" # {{< version 0.2.18 >}}
         term = ""
         reactionsEnabled = "1"

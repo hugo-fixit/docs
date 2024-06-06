@@ -309,7 +309,7 @@ The rendered output looks like this:
 
 Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tables, lists, paragraphs etc.
 
-## Syntax
+### Syntax
 
 ```md
 some Markdown content
@@ -329,7 +329,7 @@ In most cases, place the attribute list beneath the markup element. For headings
 | paragraph         | bottom                     |
 | table             | bottom                     |
 
-## Examples
+### Examples
 
 A horizontal rule with a CSS class:
 

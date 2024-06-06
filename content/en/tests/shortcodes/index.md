@@ -39,7 +39,7 @@ this is a center-quote shortcode example.
 {{< /center-quote >}}
 
 {{< details "**Copyright** 2022. [Lruihao](https://lruihao.cn/)" >}}
-*All pages and graphics on this web site are the property of [FixIt](/).*
+_All pages and graphics on this web site are the property of [FixIt](/)._
 {{< /details >}}
 
 {{< admonition type=tip title="_This is a tip_" open=false >}}
@@ -49,7 +49,7 @@ A **tip** banner
 ## Shortcodes with raw string parameters
 
 {{< details `<b>Copyright</b> 2022. <em>Lruihao</em>` >}}
-*All pages and graphics on this web site are the property of [FixIt](/).*
+_All pages and graphics on this web site are the property of [FixIt](/)._
 {{< /details >}}
 
 ## Nested Shortcodes
@@ -75,7 +75,7 @@ render
 ```
 
 {{< raw >}}
-render **raw** *markdown*
+render **raw** _markdown_
 {{< /raw >}}
 
 {{< raw >}}
@@ -86,7 +86,7 @@ render
 
 ## image
 
-![language-switch](/documentation/getting-started/configuration/language-switch.gif)
+![language-switch](/documentation/content-management/introduction/language-switch.gif)
 
 ```go-html-template
 <!-- ![Lighthouse](/images/lighthouse.jpg "Lighthouse title") -->

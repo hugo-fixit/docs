@@ -317,16 +317,16 @@ some Markdown content
 
 在大多数情况下，将属性列表放置在标记元素下方。对于标题和围栏代码块，将属性列表放在右侧。
 
-| Element           | Position of attribute list |
-| :---------------- | :------------------------- |
-| blockquote        | bottom                     |
-| fenced code block | right                      |
-| heading           | right                      |
-| horizontal rule   | bottom                     |
-| image             | bottom                     |
-| list              | bottom                     |
-| paragraph         | bottom                     |
-| table             | bottom                     |
+| 标记元素          | 属性放置的位置 |
+| :---------------- | :------------- |
+| blockquote        | 底部           |
+| fenced code block | 右侧           |
+| heading           | 右侧           |
+| horizontal rule   | 底部           |
+| image             | 底部           |
+| list              | 底部           |
+| paragraph         | 底部           |
+| table             | 底部           |
 
 ### 例子
 
