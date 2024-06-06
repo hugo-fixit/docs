@@ -16,6 +16,10 @@ related:
 
 ## 简介
 
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/docs" >}}
+{{< /gh-repo-card-container >}}
+
 我们欢迎对文档的更正和改进。请注意，文档存储在单独的存储库中，与项目存储库分开。
 
 对于当前文档的更正和改进，请提交问题和拉取请求到 [文档存储库][docs]。

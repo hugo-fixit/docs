@@ -16,6 +16,10 @@ Help us to improve the documentation by identifying issues and suggesting change
 
 ## Introduction
 
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/docs" >}}
+{{< /gh-repo-card-container >}}
+
 We welcome corrections and improvements to the documentation. Please note that the documentation resides in its own repository, separate from the project repository.
 
 For corrections and improvements to the current documentation, please submit issues and pull requests to the [documentation repository][docs].

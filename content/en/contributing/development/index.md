@@ -16,6 +16,10 @@ Contribute to the development of FixIt.
 
 ## Introduction
 
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/FixIt" >}}
+{{< /gh-repo-card-container >}}
+
 You can contribute to the FixIt theme project by:
 
 - Answering questions on the [discussions][discussions] page

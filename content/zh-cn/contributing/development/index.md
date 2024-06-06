@@ -14,7 +14,11 @@ related:
 
 <!--more-->
 
-## 介绍
+## 简介
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/FixIt" >}}
+{{< /gh-repo-card-container >}}
 
 你可以通过以下方式为 FixIt 主题项目做出贡献：
 
