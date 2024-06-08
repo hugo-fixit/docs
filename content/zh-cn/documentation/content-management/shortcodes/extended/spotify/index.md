@@ -1,0 +1,55 @@
+---
+title: 扩展 Shortcode - spotify
+date: 2024-05-20T11:06:24+08:00
+type: posts
+author:
+  name: Lruihao
+  link: https://lruihao.cn
+description: spotify shortcode 提供了一个内嵌的响应式音乐播放器。
+resources:
+  - name: featured-image
+    src: featured-image.webp
+tags:
+  - Shortcodes
+  - Content
+categories:
+  - Documentation
+---
+
+`spotify` shortcode 提供了一个内嵌的响应式音乐播放器。
+
+<!--more-->
+
+## 快速使用
+
+一个 `spotify` 示例：
+
+```go-html-template
+{{</* spotify type=artist id=74ASZWbe4lXaubB36ztrGX */>}}
+Or
+{{</* spotify artist 74ASZWbe4lXaubB36ztrGX */>}}
+```
+
+呈现的输出效果如下：
+
+{{< spotify artist 74ASZWbe4lXaubB36ztrGX >}}
+
+## 详细参数
+
+`spotify` shortcode 有以下命名参数：
+
+- **type** _[必需]_ (**第一个**位置参数)
+
+    Spotify 音乐的 `type`，可以是 `艺术家`、`专辑`、`曲目` 或 `播放列表`。
+
+- **id** _[必需]_ (**第二个**位置参数)
+
+    Spotify 音乐的 `id`，可以在 Spotify URL 中找到。
+
+- **width** _[optional]_ (**第三个**位置参数)
+
+    Spotify 音乐播放器的宽度。
+
+- **height** _[optional]_ (**第四个**位置参数)
+
+    Spotify 音乐播放器的高度。
