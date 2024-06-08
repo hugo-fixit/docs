@@ -26,23 +26,23 @@ categories:
 
 ## 1 自定义音乐 URL {#custom-music-url}
 
-{{< version 0.2.10 >}} 支持 [本地资源引用][contents-organization] 的完整用法。
+支持 [本地资源引用][contents-organization] 的完整用法。
 
 `music` shortcode 有以下命名参数来使用自定义音乐 URL:
 
-- **server** *[必需]*
+- **server** _[必需]_
 
     音乐的链接。
 
-- **type** *[可选]*
+- **type** _[可选]_
 
     音乐的名称。
 
-- **artist** *[可选]*
+- **artist** _[可选]_
 
     音乐的创作者。
 
-- **cover** *[可选]*
+- **cover** _[可选]_
 
     音乐的封面链接。
 
@@ -112,49 +112,49 @@ categories:
 
 `music` shortcode 有一些可以应用于以上三种方式的其它命名参数：
 
-- **theme** *[可选]*
+- **theme** _[可选]_
 
-    {{< version 0.2.0 changed >}} 音乐播放器的主题色，默认值是 `#448aff`。
+    音乐播放器的主题色，默认值是 `#448aff`。
 
-- **fixed** *[可选]*
+- **fixed** _[可选]_
 
     是否开启固定模式，默认值是 `false`。
 
-- **mini** *[可选]*
+- **mini** _[可选]_
 
     是否开启迷你模式，默认值是 `false`。
 
-- **autoplay** *[可选]*
+- **autoplay** _[可选]_
 
     是否自动播放音乐，默认值是 `false`。
 
-- **volume** *[可选]*
+- **volume** _[可选]_
 
     第一次打开播放器时的默认音量，会被保存在浏览器缓存中，默认值是 `0.7`。
 
-- **mutex** *[可选]*
+- **mutex** _[可选]_
 
     是否自动暂停其它播放器，默认值是 `true`。
 
 `music` shortcode 还有一些只适用于音乐列表方式的其它命名参数：
 
-- **loop** *[可选]*
+- **loop** _[可选]_
 
     [`all`, `one`, `none`]
 
     音乐列表的循环模式，默认值是 `none`。
 
-- **order** *[可选]*
+- **order** _[可选]_
 
     [`list`, `random`]
 
     音乐列表的播放顺序，默认值是 `list`。
 
-- **list-folded** *[可选]*
+- **list-folded** _[可选]_
 
     初次打开的时候音乐列表是否折叠，默认值是 `false`。
 
-- **list-max-height** *[可选]*
+- **list-max-height** _[可选]_
 
     音乐列表的最大高度，默认值是 `340px`。
 

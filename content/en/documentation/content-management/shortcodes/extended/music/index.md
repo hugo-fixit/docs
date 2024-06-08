@@ -26,23 +26,23 @@ There are three ways to use it the `music` shortcode.
 
 ## 1 Custom Music URL {#custom-music-url}
 
-{{< version 0.2.10 >}} The complete usage of [local resource references][contents-organization] is supported.
+The complete usage of [local resource references][contents-organization] is supported.
 
 The `music` shortcode has the following named parameters by custom music URL:
 
-- **server** *[required]*
+- **server** _[required]_
 
     URL of the custom music.
 
-- **name** *[optional]*
+- **name** _[optional]_
 
     Name of the custom music.
 
-- **artist** *[optional]*
+- **artist** _[optional]_
 
     Artist of the custom music.
 
-- **cover** *[required]*
+- **cover** _[required]_
 
     URL of the custom music cover.
 
@@ -113,49 +113,49 @@ The rendered output looks like this:
 
 The `music` shortcode has other named parameters applying to the above three ways:
 
-- **theme** *[optional]*
+- **theme** _[optional]_
 
-    {{< version 0.2.0 changed >}} Main color of the music player, default value is `#448aff`.
+    Main color of the music player, default value is `#448aff`.
 
-- **fixed** *[optional]*
+- **fixed** _[optional]_
 
     Whether to enable fixed mode, default value is `false`.
 
-- **mini** *[optional]*
+- **mini** _[optional]_
 
     Whether to enable mini mode, default value is `false`.
 
-- **autoplay** *[optional]*
+- **autoplay** _[optional]_
 
     Whether to autoplay music, default value is `false`.
 
-- **volume** *[optional]*
+- **volume** _[optional]_
 
     Default volume when the player is first opened, which will be remembered in the browser, default value is `0.7`.
 
-- **mutex** *[optional]*
+- **mutex** _[optional]_
 
     Whether to pause other players when this player starts playing, default value is `true`.
 
 The `music` shortcode has the following named parameters only applying to the type of music list:
 
-- **loop** *[optional]*
+- **loop** _[optional]_
 
     [`all`, `one`, `none`]
 
     Loop mode of the music list, default value is `none`.
 
-- **order** *[optional]*
+- **order** _[optional]_
 
     [`list`, `random`]
 
     Play order of the music list, default value is `list`.
 
-- **list-folded** *[optional]*
+- **list-folded** _[optional]_
 
     Whether the music list should be folded at first, default value is `false`.
 
-- **list-max-height** *[optional]*
+- **list-max-height** _[optional]_
 
     Max height of the music list, default value is `340px`.
 

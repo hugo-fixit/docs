@@ -21,8 +21,6 @@ mapbox:
   darkStyle: mapbox://styles/mapbox/dark-zh-v1?optimize=true
 ---
 
-{{< version 0.2.0 >}}
-
 `mapbox` shortcode 使用 [Mapbox GL JS][mapbox] 库提供互动式地图的功能。
 
 <!--more-->
@@ -55,27 +53,27 @@ mapbox:
 
     深色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-- **navigation** *[可选]*
+- **navigation** _[可选]_
 
     是否添加 [NavigationControl][navigationcontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-- **geolocate** *[可选]*
+- **geolocate** _[可选]_
 
     是否添加 [GeolocateControl][geolocatecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-- **scale** *[可选]*
+- **scale** _[可选]_
 
     是否添加 [ScaleControl][scalecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-- **fullscreen** *[可选]*
+- **fullscreen** _[可选]_
 
    是否添加 [FullscreenControl][fullscreencontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
-- **width** *[可选]*
+- **width** _[可选]_
 
     地图的宽度，默认值是 `100%`。
 
-- **height** *[可选]*
+- **height** _[可选]_
 
     地图的高度，默认值是 `20rem`。
 

@@ -404,11 +404,11 @@ The `echarts` shortcode has also the following named parameters:
 
 - **width** _[optional]_ (**first** positional parameter)
 
-    {{< version 0.2.0 >}} Width of the data visualization, default value is `100%`.
+    Width of the data visualization, default value is `100%`.
 
 - **height** _[optional]_ (**second** positional parameter)
 
-    {{< version 0.2.0 >}} Height of the data visualization, default value is `30rem`.
+    Height of the data visualization, default value is `30rem`.
 
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/en/option.html#series-line

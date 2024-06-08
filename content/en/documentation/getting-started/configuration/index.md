@@ -1109,24 +1109,24 @@ mDevtools
   [params.page]
     # {{< version 0.2.18 >}} whether to enable the author's avatar of the post
     authorAvatar = true
-    # {{< version 0.2.0 >}} whether to hide a page from home page
+    # whether to hide a page from home page
     hiddenFromHomePage = false
-    # {{< version 0.2.0 >}} whether to hide a page from search results
+    # whether to hide a page from search results
     hiddenFromSearch = false
     # {{< version 0.2.18-lts.5 >}} whether to hide a page from RSS feed
     hiddenFromRss = false
     # {{< version 0.3.0 >}} whether to hide a page from related posts
     hiddenFromRelated = false
-    # {{< version 0.2.0 >}} whether to enable twemoji
+    # whether to enable twemoji
     twemoji = false
     # whether to enable lightgallery
     # {{< version 0.2.18 changed >}} if set to "force", images in the content will be forced to shown as the gallery.
     lightgallery = false
-    # {{< version 0.2.0 >}} whether to enable the ruby extended syntax
+    # whether to enable the ruby extended syntax
     ruby = true
-    # {{< version 0.2.0 >}} whether to enable the fraction extended syntax
+    # whether to enable the fraction extended syntax
     fraction = true
-    # {{< version 0.2.0 >}} whether to enable the fontawesome extended syntax
+    # whether to enable the fontawesome extended syntax
     fontawesome = true
     # license info (HTML format is supported)
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
@@ -1138,7 +1138,7 @@ mDevtools
     linkToEdit = true
     # {{< version 0.3.0 >}} whether to show link to report issue for the post
     linkToReport = true
-    # {{< version 0.2.4 >}} whether to show the full text content in RSS
+    # whether to show the full text content in RSS
     rssFullText = false
     # {{< version 0.2.13 >}} Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
@@ -1162,11 +1162,11 @@ mDevtools
     [params.page.repost]
       enable = false
       url = ""
-    # {{< version 0.2.0 >}} Table of the contents config
+    # Table of the contents config
     [params.page.toc]
       # whether to enable the table of the contents
       enable = true
-      # {{< version 0.2.9 >}} whether to keep the static table of the contents in front of the post
+      # whether to keep the static table of the contents in front of the post
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
       auto = true
@@ -1209,7 +1209,7 @@ mDevtools
       copyTex = true
       # KaTeX extension mhchem
       mhchem = true
-    # {{< version 0.2.0 >}} Code config
+    # Code config
     [params.page.code]
       # whether to show the copy button of the code block
       copy = true
@@ -1217,7 +1217,7 @@ mDevtools
       edit = true
       # the maximum number of lines of displayed code by default
       maxShownLines = 10
-    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
+    # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS
       accessToken = ""
@@ -1256,7 +1256,7 @@ mDevtools
         # alipay = "/images/alipay.png"
         # paypal = "/images/paypal.png"
         # bitcoin = "/images/bitcoin.png"
-    # {{< version 0.2.0 changed >}} social share links in post page
+    # social share links in post page
     [params.page.share]
       enable = true
       Twitter = true
@@ -1341,7 +1341,7 @@ mDevtools
         highlight = true
         enableQQ = false
         serverURLs = ""
-        # {{< version 0.2.6 >}} emoji data file name, default is "google.yml"
+        # emoji data file name, default is "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
         # located in "themes/FixIt/assets/lib/valine/emoji/" directory
         # you can store your own data files in the same path under your project:
@@ -1374,7 +1374,7 @@ mDevtools
         numPosts = 10
         appId = ""
         languageCode = ""
-      # {{< version 0.2.0 >}} {{< link "https://comments.app/" "Telegram comments" >}} config (https://comments.app)
+      # {{< link "https://comments.app/" "Telegram comments" >}} config (https://comments.app)
       [params.page.comment.telegram]
         enable = false
         siteID = ""
@@ -1384,10 +1384,10 @@ mDevtools
         colorful = true
         dislikes = false
         outlined = false
-      # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} comment config (https://commento.io)
+      # {{< link "https://commento.io/" "Commento" >}} comment config (https://commento.io)
       [params.page.comment.commento]
         enable = false
-      # {{< version 0.2.5 >}} {{< link "https://utteranc.es/" "Utterances" >}} comment config (https://utteranc.es)
+      # {{< link "https://utteranc.es/" "Utterances" >}} comment config (https://utteranc.es)
       [params.page.comment.utterances]
         enable = false
         # owner/repo
@@ -1425,7 +1425,7 @@ mDevtools
         lightTheme = "light"
         darkTheme = "dark"
         lazyLoad = true
-    # {{< version 0.2.7 >}} Third-party library config
+    # Third-party library config
     [params.page.library]
       [params.page.library.css]
         # someCSS = "some.css"
@@ -1437,7 +1437,7 @@ mDevtools
         # located in "assets/"
         # Or
         # someJavascript = "https://cdn.example.com/some.js"
-    # {{< version 0.2.10 changed >}} Page SEO config
+    # Page SEO config
     [params.page.seo]
       # image URL
       images = []

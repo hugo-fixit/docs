@@ -406,11 +406,11 @@ data = [
 
 - **width** _[可选]_ (**第一个**位置参数)
 
-    {{< version 0.2.0 >}} 数据可视化的宽度，默认值是 `100%`
+    数据可视化的宽度，默认值是 `100%`
 
 - **height** _[可选]_ (**第二个**位置参数)
 
-    {{< version 0.2.0 >}} 数据可视化的高度，默认值是 `30rem`
+    数据可视化的高度，默认值是 `30rem`
 
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/zh/option.html#series-line

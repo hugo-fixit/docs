@@ -233,8 +233,6 @@ The rendered output looks like this:
 
 ## Fraction {#fraction}
 
-{{< version 0.2.0 >}}
-
 An extended Markdown syntax for **fraction** is supported in **FixIt** theme:
 
 ```markdown

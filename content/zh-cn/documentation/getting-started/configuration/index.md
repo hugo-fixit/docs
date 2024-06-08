@@ -1102,24 +1102,24 @@ mDevtools
   [params.page]
     # {{< version 0.2.18 >}} 是否启用文章作者头像
     authorAvatar = true
-    # {{< version 0.2.0 >}} 是否在主页隐藏一篇文章
+    # 是否在主页隐藏一篇文章
     hiddenFromHomePage = false
-    # {{< version 0.2.0 >}} 是否在搜索结果中隐藏一篇文章
+    # 是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
     # {{< version 0.2.18-lts.5 >}} 是否在 RSS 中隐藏一篇文章
     hiddenFromRss = false
     # {{< version 0.3.0 >}} 是否在相关文章中隐藏一篇文章
     hiddenFromRelated = false
-    # {{< version 0.2.0 >}} 是否使用 twemoji
+    # 是否使用 twemoji
     twemoji = false
     # 是否使用 lightgallery
     # {{< version 0.2.18 changed >}} 如果设为 "force"，文章中的图片将强制按照画廊形式呈现
     lightgallery = false
-    # {{< version 0.2.0 >}} 是否使用 ruby 扩展语法
+    # 是否使用 ruby 扩展语法
     ruby = true
-    # {{< version 0.2.0 >}} 是否使用 fraction 扩展语法
+    # 是否使用 fraction 扩展语法
     fraction = true
-    # {{< version 0.2.0 >}} 是否使用 fontawesome 扩展语法
+    # 是否使用 fontawesome 扩展语法
     fontawesome = true
     # 许可协议信息（支持 HTML 格式）
     license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
@@ -1131,7 +1131,7 @@ mDevtools
     linkToEdit = true
     # {{< version 0.3.0 >}} 是否显示报告文章问题的链接
     linkToReport = true
-    # {{< version 0.2.4 >}} 是否在 RSS 中显示全文内容
+    # 是否在 RSS 中显示全文内容
     rssFullText = false
     # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
@@ -1155,11 +1155,11 @@ mDevtools
     [params.page.repost]
       enable = false
       url = ""
-    # {{< version 0.2.0 >}} 目录配置
+    # 目录配置
     [params.page.toc]
       # 是否使用目录
       enable = true
-      # {{< version 0.2.9 >}} 是否保持使用文章前面的静态目录
+      # 是否保持使用文章前面的静态目录
       keepStatic = false
       # 是否使侧边目录自动折叠展开
       auto = true
@@ -1189,7 +1189,7 @@ mDevtools
           h4 = "{h2}.{h3}.{h4} {title}"
           h5 = "{h2}.{h3}.{h4}.{h5} {title}"
           h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-    # {{< version 0.2.0 >}} 代码配置
+    # 代码配置
     [params.page.code]
       # 是否显示代码块的复制按钮
       copy = true
@@ -1197,7 +1197,7 @@ mDevtools
       edit = true
       # 默认展开显示的代码行数
       maxShownLines = 10
-    # {{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} 数学公式 (https://katex.org)
+    # {{< link "https://katex.org/" KaTeX >}} 数学公式 (https://katex.org)
     [params.page.math]
       enable = true
       # 默认行内定界符是 $ ... $ 和 \( ... \)
@@ -1210,7 +1210,7 @@ mDevtools
       copyTex = true
       # KaTeX 插件 mhchem
       mhchem = true
-    # {{< version 0.2.0 >}} {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
+    # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # Mapbox GL JS 的 access token
       accessToken = ""
@@ -1249,7 +1249,7 @@ mDevtools
         # alipay = "/images/alipay.png"
         # paypal = "/images/paypal.png"
         # bitcoin = "/images/bitcoin.png"
-    # {{< version 0.2.0 changed >}} 文章页面的分享信息设置
+    # 文章页面的分享信息设置
     [params.page.share]
       enable = true
       Twitter = true
@@ -1333,7 +1333,7 @@ mDevtools
         highlight = true
         enableQQ = false
         serverURLs = ""
-        # {{< version 0.2.6 >}} emoji 数据文件名称，默认是 "google.yml"
+        # emoji 数据文件名称，默认是 "google.yml"
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
         # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
         # 可以在你的项目下相同路径存放你自己的数据文件：
@@ -1366,7 +1366,7 @@ mDevtools
         numPosts = 10
         appId = ""
         languageCode = "zh_CN"
-      # {{< version 0.2.0 >}} {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置 (https://comments.app)
+      # {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置 (https://comments.app)
       [params.page.comment.telegram]
         enable = false
         siteID = ""
@@ -1376,10 +1376,10 @@ mDevtools
         colorful = true
         dislikes = false
         outlined = false
-      # {{< version 0.2.0 >}} {{< link "https://commento.io/" "Commento" >}} 评论系统设置 (https://commento.io)
+      # {{< link "https://commento.io/" "Commento" >}} 评论系统设置 (https://commento.io)
       [params.page.comment.commento]
         enable = false
-      # {{< version 0.2.5 >}} {{< link "https://utteranc.es/" "Utterances" >}} 评论系统设置 (https://utteranc.es)
+      # {{< link "https://utteranc.es/" "Utterances" >}} 评论系统设置 (https://utteranc.es)
       [params.page.comment.utterances]
         enable = false
         # owner/repo
@@ -1417,7 +1417,7 @@ mDevtools
         lightTheme = "light"
         darkTheme = "dark"
         lazyLoad = true
-    # {{< version 0.2.7 >}} 第三方库配置
+    # 第三方库配置
     [params.page.library]
       [params.page.library.css]
         # someCSS = "some.css"
@@ -1429,7 +1429,7 @@ mDevtools
         # 位于 "assets/"
         # 或者
         # someJavascript = "https://cdn.example.com/some.js"
-    # {{< version 0.2.10 changed >}} 页面 SEO 配置
+    # 页面 SEO 配置
     [params.page.seo]
       # 图片 URL
       images = []

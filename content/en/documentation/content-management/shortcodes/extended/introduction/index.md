@@ -30,8 +30,6 @@ reward: true
 
 ## style
 
-{{< version 0.2.0 changed >}}
-
 {{< admonition >}}
 Hugo **extended** version is necessary for `style` shortcode.
 {{< /admonition >}}
@@ -62,11 +60,9 @@ This is a **right-aligned** paragraph.
 
 ## link
 
-{{< version 0.2.0 >}}
-
 `link` shortcode is an alternative to [Markdown link syntax][md-link]. `link` shortcode can provide some other features and can be used in code blocks.
 
-{{< version 0.2.10 >}} The complete usage of [local resource references][contents-organization] is supported.
+The complete usage of [local resource references][contents-organization] is supported.
 
 The `link` shortcode has the following named parameters:
 
@@ -178,7 +174,7 @@ The rendered output looks like this:
 
 `image` shortcode is an alternative to [`figure` shortcode][sc-figure]. `image` shortcode can take full advantage of the dependent library of [lightgallery][lightgallery].
 
-{{< version 0.2.10 >}} The complete usage of [local resource references][contents-organization] is supported.
+The complete usage of [local resource references][contents-organization] is supported.
 
 The `image` shortcode has the following named parameters:
 
@@ -308,7 +304,7 @@ The `admonition` shortcode has the following named parameters:
 
     Title of the `admonition` banner, default value is the value of **type** parameter. (markdown support) {{< version 0.2.14 changed >}}
 
-- **open** _[optional]_ (**third** positional parameter) {{< version 0.2.0 changed >}}
+- **open** _[optional]_ (**third** positional parameter)
 
     Whether the content will be expandable by default, default value is `true`.
 
@@ -354,11 +350,23 @@ The `music` shortcode embeds a responsive music player based on [APlayer][aplaye
 
 The full documentation is provided in [Extended Shortcode - music][sc-music].
 
+## spotify
+
+The `spotify` shortcode embeds a responsive music player for Spotify music.
+
+The full documentation is provided in [Extended Shortcode - spotify][sc-spotify].
+
 ## bilibili
 
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 
 The full documentation is provided in [Extended Shortcode - bilibili][sc-bilibili].
+
+## douyin
+
+The `douyin` shortcode embeds a responsive video player for douyin videos.
+
+The full documentation is provided in [Extended Shortcode - douyin][sc-douyin].
 
 ## typeit
 
@@ -367,8 +375,6 @@ The `typeit` shortcode provides typing animation based on [TypeIt][typeitjs].
 The full documentation is provided in [Extended Shortcode - typeit][sc-typeit].
 
 ## script
-
-{{< version 0.2.8 >}}
 
 `script` is a shortcode to insert custom **:(fa-brands fa-js fa-fw): Javascript** in your post.
 
@@ -528,6 +534,8 @@ The rendered output looks like this:
 [sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
 [sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}
 [sc-music]: {{< relref path="/documentation/content-management/shortcodes/extended/music" >}}
+[sc-spotify]: {{< relref path="/documentation/content-management/shortcodes/extended/spotify" >}}
 [sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
+[sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}

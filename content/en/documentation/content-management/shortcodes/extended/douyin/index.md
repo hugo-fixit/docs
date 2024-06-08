@@ -42,6 +42,8 @@ The rendered output looks like this:
 
 ## Options
 
+{{< version 0.3.7 >}}
+
 The `douyin` shortcode has the following named parameters:
 
 - **id** _[required]_ (**first** positional parameter)

@@ -232,8 +232,6 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 ## 分数 {#fraction}
 
-{{< version 0.2.0 >}}
-
 **FixIt** 主题支持一种 **分数** Markdown 扩展语法：
 
 ```markdown

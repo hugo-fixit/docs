@@ -66,7 +66,7 @@ reward: true
 {{< /admonition >}}
 
 - **title**: 文章标题
-- **subtitle**: {{< version 0.2.0 >}} 文章副标题
+- **subtitle**: 文章副标题
 - **date**: 这篇文章创建的日期时间它通常是从文章的前置参数中的 `date` 字段获取的，但是也可以在 [主题配置][theme-config] 中设置
 - **lastmod**: 上次修改内容的日期时间
 - **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
@@ -92,31 +92,31 @@ reward: true
 - **featuredImagePreview**: 用在主页预览的文章特色图片
 
 - **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上
-- **hiddenFromSearch**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章将不会显示在搜索结果中
+- **hiddenFromSearch**: 如果设为 `true`, 这篇文章将不会显示在搜索结果中
 - **hiddenFromRss**: {{< version 0.2.18-lts.5 >}} 如果设为 `true`, 这篇文章将不会显示在 RSS 中
 - **hiddenFromRelated**: {{< version 0.3.0 >}} 如果设为 `true`, 这篇文章将不会显示在相关文章中
-- **twemoji**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 twemoji
+- **twemoji**: 如果设为 `true`, 这篇文章会使用 twemoji
 - **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
-- **ruby**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]
-- **fraction**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [分数扩展语法][fraction-syntax]
-- **fontawesome**: {{< version 0.2.0 >}} 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法][fontawesome-syntax]
+- **ruby**: 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]
+- **fraction**: 如果设为 `true`, 这篇文章会使用 [分数扩展语法][fraction-syntax]
+- **fontawesome**: 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法][fontawesome-syntax]
 - **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接
 - **linkToSource**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向源码的链接
 - **linkToEdit**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向编辑页面的链接
 - **linkToReport**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向报告问题的链接
-- **rssFullText**: {{< version 0.2.4 >}} 如果设为 `true`, 在 RSS 中将会显示全文内容
+- **rssFullText**: 如果设为 `true`, 在 RSS 中将会显示全文内容
 - **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
 
-- **toc**: {{< version 0.2.9 changed >}} 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
+- **toc**: 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
 - **expirationReminder**: {{< version 0.2.13 >}} 和 [主题配置][theme-config] 中的 `params.page.expirationReminder` 部分相同
 - **heading**: {{< version 0.3.0 >}} 和 [主题配置][theme-config] 中的 `params.page.heading` 部分相同
-- **code**: {{< version 0.2.0 >}} 和 [主题配置][theme-config] 中的 `params.page.code` 部分相同
-- **math**: {{< version 0.2.0 changed >}} 和 [主题配置][theme-config] 中的 `params.page.math` 部分相同
-- **mapbox**: {{< version 0.2.0 >}} 和 [主题配置][theme-config] 中的 `params.page.mapbox` 部分相同
+- **code**: 和 [主题配置][theme-config] 中的 `params.page.code` 部分相同
+- **math**: 和 [主题配置][theme-config] 中的 `params.page.math` 部分相同
+- **mapbox**: 和 [主题配置][theme-config] 中的 `params.page.mapbox` 部分相同
 - **share**: 和 [主题配置][theme-config] 中的 `params.page.share` 部分相同
-- **comment**: {{< version 0.2.0 changed >}} 和 [主题配置][theme-config] 中的 `params.page.comment` 部分相同
-- **library**: {{< version 0.2.7 >}} 和 [主题配置][theme-config] 中的 `params.page.library` 部分相同
-- **seo**: {{< version 0.2.10 >}} 和 [主题配置][theme-config] 中的 `params.page.seo` 部分相同
+- **comment**: 和 [主题配置][theme-config] 中的 `params.page.comment` 部分相同
+- **library**: 和 [主题配置][theme-config] 中的 `params.page.library` 部分相同
+- **seo**: 和 [主题配置][theme-config] 中的 `params.page.seo` 部分相同
 - **type**: 页面渲染模板，详见 [页面模板](#templates)
 - **menu**: 详见 [添加内容到菜单][content-to-menu]
 
@@ -132,8 +132,6 @@ reward: true
 - **instantPage**: {{< version 0.2.18 >}} 和 [主题配置][theme-config] 中的 `params.page.instantPage` 部分相同
 
 {{< admonition tip >}}
-{{< version 0.2.10 >}}
-
 **featuredImage** 和 **featuredImagePreview** 支持 [本地资源引用](#contents-organization) 的完整用法。
 
 如果带有在前置参数中设置了 `name: featured-image` 或 `name: featured-image-preview` 属性的页面资源，
@@ -327,8 +325,6 @@ hugo new friends/index.md
 ![语言切换](/documentation/content-management/introduction/language-switch.gif '语言切换')
 
 ### 兼容性 {#language-compatibility}
-
-{{< version 0.2.10 changed >}}
 
 | 语言         | Hugo 代码 | HTML `lang` 属性 | 主题文档                             |
 | :----------- | :-------: | :--------------: | :----------------------------------: |

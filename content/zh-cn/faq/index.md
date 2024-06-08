@@ -28,7 +28,7 @@ lightgallery: true
 - `fuse`: 简单，无需同步 `index.json`, 没有 `contentLength` 的限制，性能高
 - `algolia`: 高性能并且占用带宽低，但需要同步 `index.json` 且有 `contentLength` 的限制
 
-{{< version 0.2.3 >}} 文章内容被 `h2` 和 `h3` HTML 标签切分来提高查询效果并且基本实现全文搜索。
+文章内容被 `h2` 和 `h3` HTML 标签切分来提高查询效果并且基本实现全文搜索。
 `contentLength` 用来限制 `h2` 和 `h3` HTML 标签开头的内容部分的最大长度。
 {{< /admonition >}}
 

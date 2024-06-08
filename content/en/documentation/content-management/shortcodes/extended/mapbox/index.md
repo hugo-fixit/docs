@@ -19,8 +19,6 @@ categories:
   - Documentation
 ---
 
-{{< version 0.2.0 >}}
-
 The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.
 
 <!--more-->
@@ -53,27 +51,27 @@ The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
 
     Style for the dark theme, default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-- **navigation** *[optional]*
+- **navigation** _[optional]_
 
     Whether to add [NavigationControl][navigationcontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-- **geolocate** *[optional]*
+- **geolocate** _[optional]_
 
     Whether to add [GeolocateControl][geolocatecontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-- **scale** *[optional]*
+- **scale** _[optional]_
 
     Whether to add [ScaleControl][scalecontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-- **fullscreen** *[optional]*
+- **fullscreen** _[optional]_
 
     Whether to add [FullscreenControl][fullscreencontrol], default value is the value set in the [front matter][front-matter] or the [theme configuration][theme-config].
 
-- **width** *[optional]*
+- **width** _[optional]_
 
     Width of the map, default value is `100%`.
 
-- **height** *[optional]*
+- **height** _[optional]_
 
     Height of the map, default value is `20rem`.
 

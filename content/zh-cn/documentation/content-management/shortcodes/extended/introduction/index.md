@@ -30,8 +30,6 @@ reward: true
 
 ## style
 
-{{< version 0.2.0 changed >}}
-
 {{< admonition >}}
 Hugo **extended** 版本对于 `style` shortcode 是必需的。
 {{< /admonition >}}
@@ -61,12 +59,10 @@ This is a **right-aligned** paragraph.
 
 ## link
 
-{{< version 0.2.0 >}}
-
 `link` shortcode 是 [Markdown 链接语法][md-link] 的替代。
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用。
 
-{{< version 0.2.10 >}} 支持 [本地资源引用][contents-organization] 的完整用法。
+支持 [本地资源引用][contents-organization] 的完整用法。
 
 `link` shortcode 有以下命名参数：
 
@@ -178,7 +174,7 @@ This is a **right-aligned** paragraph.
 
 `image` shortcode 是 [`figure` shortcode][figure] 的替代。`image` shortcode 可以充分利用 [lightgallery][lightgallery]。
 
-{{< version 0.2.10 >}} 支持 [本地资源引用][contents-organization] 的完整用法。
+支持 [本地资源引用][contents-organization] 的完整用法。
 
 `image` shortcode 有以下命名参数：
 
@@ -308,7 +304,7 @@ _支持 Markdown 或者 HTML 格式。_
 
     `admonition` 横幅的标题，默认值是 **type** 参数的值。（支持 markdown）{{< version 0.2.14 changed >}}
 
-- **open** _[可选]_（**第三个**位置参数） {{< version 0.2.0 changed >}}
+- **open** _[可选]_（**第三个**位置参数）
 
     横幅内容是否默认展开，默认值是 `true`。
 
@@ -354,11 +350,23 @@ _支持 Markdown 或者 HTML 格式。_
 
 完整文档请查看页面 [扩展 Shortcode - music][sc-music]。
 
+## spotify
+
+`spotify` shortcode 提供了一个内嵌的用来播放 Spotify 音乐的响应式播放器。
+
+完整文档请查看页面 [扩展 Shortcode - spotify][sc-spotify]。
+
 ## bilibili
 
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 
 完整文档请查看页面 [扩展 Shortcode - bilibili][sc-bilibili]。
+
+## douyin
+
+`douyin` shortcode 提供了一个内嵌的用来播放抖音视频的响应式播放器。
+
+完整文档请查看页面 [扩展 Shortcode - douyin][sc-douyin]。
 
 ## typeit
 
@@ -367,8 +375,6 @@ _支持 Markdown 或者 HTML 格式。_
 完整文档请查看页面 [扩展 Shortcode - typeit][sc-typeit]。
 
 ## script
-
-{{< version 0.2.8 >}}
 
 `script` shortcode 用来在你的文章中插入 **:(fa-brands fa-js fa-fw): Javascript** 脚本。
 
@@ -528,6 +534,8 @@ this is a center-quote shortcode example.
 [sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
 [sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}
 [sc-music]: {{< relref path="/documentation/content-management/shortcodes/extended/music" >}}
+[sc-spotify]: {{< relref path="/documentation/content-management/shortcodes/extended/spotify" >}}
 [sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
+[sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}

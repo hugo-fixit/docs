@@ -34,8 +34,6 @@ Discover advanced usage of the Hugo - **FixIt** theme.
 
 ## Style Customization
 
-{{< version 0.2.8 changed >}}
-
 {{< admonition >}}
 Hugo **extended** version is necessary for the style customization.
 {{< /admonition >}}

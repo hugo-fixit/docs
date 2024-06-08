@@ -36,6 +36,8 @@ The rendered output looks like this:
 
 ## Options
 
+{{< version 0.3.8 >}}
+
 The `spotify` shortcode has the following named parameters:
 
 - **type** _[required]_ (**first** positional parameter)

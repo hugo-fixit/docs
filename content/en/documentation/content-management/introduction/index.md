@@ -34,8 +34,6 @@ A few suggestions to help you get a good looking site quickly:
 - Local resources organization
 
 {{< admonition note "Local Resource Reference" >}}
-{{< version 0.2.10 >}}
-
 There are three ways to reference local resources such as **images** and **music**:
 
 1. Using [page resources][page-resources] in [page bundles][page-bundles].
@@ -69,7 +67,7 @@ It is necessary only if the front matters and the `page` part in your [theme con
 {{< /admonition >}}
 
 - **title**: the title for the content.
-- **subtitle**: {{< version 0.2.0 >}} the subtitle for the content.
+- **subtitle**: the subtitle for the content.
 - **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [theme configuration][theme-config].
 - **lastmod**: the datetime at which the content was last modified.
 - **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
@@ -95,31 +93,31 @@ It is necessary only if the front matters and the `page` part in your [theme con
 - **featuredImagePreview**: the featured image for the content preview in the home page.
 
 - **hiddenFromHomePage**: if `true`, the content will not be shown in the home page.
-- **hiddenFromSearch**: {{< version 0.2.0 >}} if `true`, the content will not be shown in the search results.
+- **hiddenFromSearch**: if `true`, the content will not be shown in the search results.
 - **hiddenFromRss**: {{< version 0.2.18-lts.5 >}} if `true`, the content will not be shown in the RSS feed.
 - **hiddenFromRelated**: {{< version 0.3.0 >}} if `true`, the content will not be shown in the related posts.
-- **twemoji**: {{< version 0.2.0 >}} if `true`, the content will enable the twemoji.
+- **twemoji**: if `true`, the content will enable the twemoji.
 - **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [theme configuration][theme-config].
-- **ruby**: {{< version 0.2.0 >}} if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].
-- **fraction**: {{< version 0.2.0 >}} if `true`, the content will enable the [fraction extended syntax][fraction-syntax].
-- **fontawesome**: {{< version 0.2.0 >}} if `true`, the content will enable the [Font Awesome extended syntax][fontawesome-syntax].
+- **ruby**: if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].
+- **fraction**: if `true`, the content will enable the [fraction extended syntax][fraction-syntax].
+- **fontawesome**: if `true`, the content will enable the [Font Awesome extended syntax][fontawesome-syntax].
 - **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
 - **linkToSource**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the source file.
 - **linkToEdit**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the edit page.
 - **linkToReport**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the report issue.
-- **rssFullText**: {{< version 0.2.4 >}} if `true`, the full text content will be shown in RSS.
+- **rssFullText**: if `true`, the full text content will be shown in RSS.
 - **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
 
-- **toc**: {{< version 0.2.9 changed >}} the same as the `params.page.toc` part in the [theme configuration][theme-config].
+- **toc**: the same as the `params.page.toc` part in the [theme configuration][theme-config].
 - **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [theme configuration][theme-config].
 - **heading**: {{< version 0.3.0 >}} the same as the `params.page.heading` part in the [theme configuration][theme-config].
-- **code**: {{< version 0.2.0 >}} the same as the `params.page.code` part in the [theme configuration][theme-config].
-- **math**: {{< version 0.2.0 changed >}} the same as the `params.page.math` part in the [theme configuration][theme-config].
-- **mapbox**: {{< version 0.2.0 >}} the same as the `params.page.mapbox` part in the [theme configuration][theme-config].
+- **code**: the same as the `params.page.code` part in the [theme configuration][theme-config].
+- **math**: the same as the `params.page.math` part in the [theme configuration][theme-config].
+- **mapbox**: the same as the `params.page.mapbox` part in the [theme configuration][theme-config].
 - **share**: the same as the `params.page.share` part in the [theme configuration][theme-config].
-- **comment**: {{< version 0.2.0 changed >}} the same as the `params.page.comment` part in the [theme configuration][theme-config].
-- **library**: {{< version 0.2.7 >}} the same as the `params.page.library` part in the [theme configuration][theme-config].
-- **seo**: {{< version 0.2.10 >}} the same as the `params.page.seo` part in the [theme configuration][theme-config].
+- **comment**: the same as the `params.page.comment` part in the [theme configuration][theme-config].
+- **library**: the same as the `params.page.library` part in the [theme configuration][theme-config].
+- **seo**: the same as the `params.page.seo` part in the [theme configuration][theme-config].
 - **type**: the rendering template of page, see [templates](#templates) for details.
 - **menu**: see [Add content to Menu][content-to-menu].
 
@@ -135,8 +133,6 @@ It is necessary only if the front matters and the `page` part in your [theme con
 - **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [theme configuration][theme-config].
 
 {{< admonition tip >}}
-{{< version 0.2.10 >}}
-
 **featuredImage** and **featuredImagePreview** support the complete usage of [local resource references](#contents-organization).
 
 If the page resource with `name: featured-image` or `name: featured-image-preview` is set in the front matter,

@@ -54,10 +54,10 @@ _All pages and graphics on this web site are the property of [FixIt](/)._
 
 ## Nested Shortcodes
 
-{{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
+{{< version 0.3.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
 
 ```code
-{{< version 0.2.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
+{{< version 0.3.0 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
 ```
 
 ## raw

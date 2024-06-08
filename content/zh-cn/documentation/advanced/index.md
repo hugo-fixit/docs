@@ -35,8 +35,6 @@ menu:
 
 ## 自定义样式
 
-{{< version 0.2.8 changed >}}
-
 {{< admonition >}}
 Hugo **extended** 版本对于自定义样式是必需的。
 {{< /admonition >}}
