@@ -6,6 +6,10 @@
 - title: 🧩 Layout components
   repos:
     - hugo-fixit/component-projects
+- title: 🧩 Other components
+  description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
+  repos:
+    - fixit-theme/hugo-shortcode-plugins-live2d
 - title: 🛠️ Templates & Tools
   repos:
     - hugo-fixit/hugo-fixit-starter
@@ -14,7 +18,3 @@
     - Lruihao/hugo-blog
     - hugo-fixit/fixit-cli
     - hugo-fixit/hugo-shell
-- title: 🧩 Other components
-  description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
-  repos:
-    - fixit-theme/hugo-shortcode-plugins-live2d
