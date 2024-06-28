@@ -3,3 +3,4 @@ go 1.20
 use .
 use ../FixIt
 use ../component-projects
+use ../shortcode-caniuse

@@ -51,6 +51,10 @@ Hugo 使用两种不同的算法来合并文件系统，取决于文件类型：
 
 访问 [此页面][components] 浏览由 Hugo FixIt 社区创建的主题组件合集。
 
+## 开发教程
+
+前往 [如何开发一个 Hugo 主题组件][dev-component] 页面查看详情。
+
 ## API 参考
 
 前往 [API 参考][references] 页面获取更多信息。
@@ -59,3 +63,4 @@ Hugo 使用两种不同的算法来合并文件系统，取决于文件类型：
 <!-- markdownlint-disable-file reference-links-images -->
 [components]: {{< relref "/components" >}}
 [references]: {{< relref "/references" >}}
+[dev-component]: {{< relref "/components/dev-component" >}}

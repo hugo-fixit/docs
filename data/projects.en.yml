@@ -1,6 +1,7 @@
 - title: 🧩 Shortcodes components
   repos:
     - hugo-fixit/component-projects
+    - hugo-fixit/shortcode-caniuse
     - hugo-fixit/shortcode-mmt-netease
     - hugo-fixit/shortcode-sponsor-log
 - title: 🧩 Layout components

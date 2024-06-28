@@ -51,6 +51,10 @@ To learn about theme components of hugo and how to use them, check out <https://
 
 Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community.
 
+## Development Tutorial
+
+Head to the [How to develop a Hugo theme component][dev-component] page for more details.
+
 ## References
 
 Head to the [References][references] page for more information.
@@ -58,4 +62,4 @@ Head to the [References][references] page for more information.
 <!-- link reference definition -->
 [components]: {{< relref "/components" >}}
 [references]: {{< relref "/references" >}}
-[hugo-themes]: https://themes.gohugo.io/
+[dev-component]: {{< relref "/components/dev-component" >}}
