@@ -31,7 +31,7 @@ type: posts
 hugo new theme shortcode-caniuse
 ```
 
-执行命令后，会在 `themes` 目录下创建一个名为 `shortcode-caniuse` 的目录，这个目录包含一个完整的 Hugo 主题框架。
+上述命令会在 `themes` 目录创建一个 `shortcode-caniuse` 的文件夹，它是一个完整的 Hugo 主题目录结构。
 
 由于我们只需要开发一个包含 shortcode 的组件，所以可以删除不需要的文件，删除后的目录结构如下：
 
@@ -56,46 +56,85 @@ git remote add origin git@github.com:hugo-fixit/shortcode-caniuse.git
 go mod init github.com/hugo-fixit/shortcode-caniuse
 ```
 
-> 这里我会将仓库地址放置到 [hugo-fixit][hugo-fixit] 组织下，你可以根据自己的需求修改。
+> 本例最终会上传仓库到 [hugo-fixit][hugo-fixit] 组织下。
 
 ## 创建 Shortcode
 
-在 `layouts/shortcodes` 目录下创建一个名为 `caniuse.html` 的文件，内容如下：
+在 `layouts/shortcodes` 目录下创建一个名为 `caniuse.html` 的文件。
+
+根据 [The CanIUse Embed][caniuse-embed] 的使用说明，编写 shortcode 内容如下：
 
 ```go-html-template {title="caniuse.html"}
-{{- /* reference https://caniuse.bitsofco.de/ */ -}}
+{{- /* 
+  reference https://github.com/pengzhanbo/caniuse-embed
+  <feature>: Feature name
+  <past>: Show the past N versions that match the feature, range is 0 - 5, default is 2
+  <future>: Show the future N versions that match the feature, range is 0 - 3, default is 1
+*/ -}}
 {{- $feature := cond .IsNamedParams (.Get "feature") (.Get 0) -}}
+{{- $past := cond .IsNamedParams (.Get "past") (.Get 1) | default 2 -}}
+{{- $future := cond .IsNamedParams (.Get "future") (.Get 2) | default 1 -}}
 
-<p
-  class="ciu_embed"
-  data-feature="{{ $feature }}"
-  data-periods="future_1,current,past_1,past_2"
-  data-accessible-colours="false"
->
-  <picture>
-    <source type="image/webp" srcset="https://caniuse.bitsofco.de/image/{{ $feature }}.webp" />
-    <source type="image/png" srcset="https://caniuse.bitsofco.de/image/{{ $feature }}.png" />
-    <img
-      src="https://caniuse.bitsofco.de/image/{{ $feature }}.jpg"
-      alt="Data on support for the {{ $feature }} feature across the major browsers from caniuse.com"
-    />
-  </picture>
-</p>
+<p class="ciu-embed" data-feature="{{ $feature }}" data-past="{{ $past }}" data-future="{{ $future }}" data-observer="true" data-theme=""></p>
 {{- /* EOF */ -}}
+```
+
+## 创建 JS 文件
+
+为了在 FixIt 主题切换黑白主题色的同时，shortcode 也跟着改变主题色，我们可以通过 JS 处理。
+
+在 `assets/js` 目录下创建一个名为 `shortcode-caniuse.js` 的文件，在里面写入切换主题逻辑处理：
+
+```js
+function setCanIUseEmbedsTheme(allCanIUseEmbeds, isDark) {
+  allCanIUseEmbeds.forEach(function (embed) {
+    embed.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  });
+}
+
+function CanIUseShortcodeInit() {
+  if (typeof window.fixit?.switchThemeEventSet === 'object') {
+    const allCanIUseEmbeds = document.querySelectorAll('.ciu-embed');
+    setCanIUseEmbedsTheme(allCanIUseEmbeds, window.fixit.isDark);
+    window.fixit?.switchThemeEventSet.add(function (isDark) {
+      setCanIUseEmbedsTheme(allCanIUseEmbeds, isDark);
+    })
+    return;
+  }
+}
+
+
+if (document.readyState !== 'loading') {
+  CanIUseShortcodeInit();
+} else {
+  document.addEventListener('DOMContentLoaded', caniuseShortcodeInit, false);
+}
 ```
 
 ## 创建 Partial
 
-在 `layouts/partials/inject` 目录下创建一个名为 `shortcode-caniuse.html` 的文件，引用第三方插件 [The CanIUse Embed][caniuse-embed] 的 JS 资源，内容如下：
+在 `layouts/partials/inject` 目录下创建一个名为 `shortcode-caniuse.html` 的文件。
+
+引用第三方插件和组件本身的 JS 资源，内容如下：
 
 ```go-html-template {title="shortcode-caniuse.html"}
-{{- /* caniuse-embed.min.js */ -}}
-{{- $fingerprint := .Scratch.Get "fingerprint" -}}
-{{- $source := resources.Get "lib/shortcode-caniuse/caniuse-embed.min.js" -}}
-{{- if hugo.IsProduction | and .Site.Params.cdn -}}
-  {{- $source = "https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js" -}}
+{{- if .HasShortcode "caniuse" -}}
+  {{- $fingerprint := .Scratch.Get "fingerprint" -}}
+
+  {{- /* embed.js */ -}}
+  {{- $source := resources.Get "lib/shortcode-caniuse/embed.js" -}}
+  {{- if hugo.IsProduction | and .Site.Params.cdn -}}
+    {{- $source = "https://caniuse.pengzhanbo.cn/embed.js" -}}
+  {{- end -}}
+  {{- dict "Source" $source "Fingerprint" $fingerprint "Attr" `type="module"` "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
+  {{- /* shortcode-caniuse.min.js */ -}}
+  {{- $options := dict "targetPath" "js/shortcode-caniuse.min.js" "minify" hugo.IsProduction -}}
+  {{- if not hugo.IsProduction -}}
+    {{- $options = dict "sourceMap" "inline" | merge $options -}}
+  {{- end -}}
+  {{- dict "Source" (resources.Get "js/shortcode-caniuse.js") "Build" $options "Fingerprint" $fingerprint "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}
-{{- dict "Source" $source "Fingerprint" $fingerprint "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 ```
 
 ## 发布组件
@@ -118,6 +157,8 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 
 ### 注入 Partial
 
+{{< version 0.3.9 >}}
+
 通过 FixIt 主题开放的自定义块，在 `layouts/partials/custom.html` 文件将 `shortcode-caniuse.html` 注入到 `custom-assets` 中：
 
 ```go-html-template
@@ -128,9 +169,17 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 
 ### 使用 Shortcode
 
-在需要使用的页面中调用 `caniuse` shortcode：
+`caniuse` shortcode 有以下命名参数：
 
-```md
+- **feature** _[必需]_（第一个位置参数）特性名称
+- **past** _[可选]_（第二个位置参数）显示过去 N 个版本，范围是 `0 - 5`，默认为 `2`
+- **future** _[可选]_（第三个位置参数）显示未来 N 个版本，范围是 `0 - 3`，默认为 `1`
+
+> 点击 `caniuse.com` 网站上功能左边 `#` 号，URL 中的 `pathname` 即为 `feature` 参数。
+
+这是一个用法示例：
+
+```markdown
 {{</* caniuse feature="flexbox" */>}}
 或者
 {{</* caniuse "flexbox" */>}}
@@ -140,18 +189,25 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 
 {{< caniuse "flexbox" >}}
 
-> 点击 `caniuse.com` 网站上功能左边 `#` 号，URL 中的 `path-name` 即为 `feature` 参数。
-
 ## 参考
 
 - [Can I use... Support tables for HTML5, CSS3, etc][caniuse]
 - [The CanIUse Embed — Add support tables to your site][caniuse-embed]
 - [贡献指南 / 开发组件][components]
 
+## 致谢
+
+- [mdn-browser-compat-data][mdn-browser-compat-data]
+- [Fyrd/caniuse][Fyrd/caniuse]
+- [pengzhanbo/caniuse-embed][caniuse-embed-repo]
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
 [components]: {{< relref "/contributing/components" >}}
 [hugo-fixit]: https://github.com/hugo-fixit
-[caniuse-embed]: https://caniuse.bitsofco.de/
+[caniuse-embed]: https://caniuse-embed.vercel.app/
+[caniuse-embed-repo]: https://github.com/pengzhanbo/caniuse-embed
 [installation]: {{< relref "/documentation/installation" >}}
 [caniuse]: https://caniuse.com/
+[mdn-browser-compat-data]: https://github.com/mdn/browser-compat-data
+[Fyrd/caniuse]: https://github.com/Fyrd/caniuse
