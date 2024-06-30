@@ -15,6 +15,7 @@
   repos:
     - hugo-fixit/hugo-fixit-starter
     - hugo-fixit/hugo-fixit-starter1
+    - hugo-fixit/component-skeleton
     - hugo-fixit/docs
     - Lruihao/hugo-blog
     - hugo-fixit/fixit-cli
