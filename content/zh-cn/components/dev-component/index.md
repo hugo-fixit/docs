@@ -23,6 +23,12 @@ type: posts
 
 本文旨在阐述从 0 到 1 开发一个组件的过程，而不会过度解读组件的概念和原理。关于 Hugo 主题组件的更多信息，请参阅 [贡献指南 / 开发组件][components] 页面。
 
+本文案例开源在 GitHub [hugo-fixit][hugo-fixit] 组织下。
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/shortcode-caniuse" >}}
+{{< /gh-repo-card-container >}}
+
 ## 创建组件骨架
 
 创建组件和创建主题是一样的，可以通过 `hugo new theme` 命令来创建一个新的主题组件。
@@ -55,8 +61,6 @@ git init
 git remote add origin git@github.com:hugo-fixit/shortcode-caniuse.git
 go mod init github.com/hugo-fixit/shortcode-caniuse
 ```
-
-> 本例最终会上传仓库到 [hugo-fixit][hugo-fixit] 组织下。
 
 ## 创建 Shortcode
 
