@@ -2,7 +2,7 @@
 title: Contribute to the FixIt project
 linkTitle: Overview of contributing
 date: 2024-04-25T20:30:42+08:00
-collections:
+categories:
   - Contributing
 resources:
   - name: featured-image

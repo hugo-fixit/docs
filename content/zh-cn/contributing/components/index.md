@@ -1,7 +1,7 @@
 ---
 title: 开发组件
 date: 2024-04-25T20:30:45+08:00
-collections:
+categories:
   - Contributing
 type: posts
 hiddenFromHomePage: true

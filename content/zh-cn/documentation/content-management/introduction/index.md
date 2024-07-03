@@ -11,12 +11,14 @@ author:
 description: 了解如何在 FixIt 主题中快速，直观地创建和组织内容。
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.webp
 tags:
   - Content
   - Basics
 categories:
   - Documentation
+collections:
+  - Content Management
 lightgallery: true
 reward: true
 ---
@@ -31,12 +33,13 @@ reward: true
 
 - 保持博客文章存放在 `content/posts` 目录，例如：`content/posts/my-first-post.md`
 - 保持简单的静态页面存放在 `content` 目录，例如：`content/about.md`
+- 使用 `_index.md` 翻译列表页面标题等，例如：`content/posts/_index.md`
 - 本地资源组织
 
 {{< admonition note "本地资源引用" >}}
-有三种方法来引用**图片**和**音乐**等本地资源：
+有三种方法来引用 **图片** 和 **音乐** 等本地资源：
 
-1. 使用 [页面包][page-bundles] 中的 [页面资源][page-resources]。
+1. 使用 [捆绑页面 (Page bundles)][page-bundles] 中的 [页面资源][page-resources]。
    你可以使用适用于 `Resources.GetMatch` 的值或者直接使用相对于当前页面目录的文件路径来引用页面资源。
 2. 将本地资源放在 **assets** 目录中，默认路径是 `/assets`。
    引用资源的文件路径是相对于 assets 目录的。
@@ -45,15 +48,50 @@ reward: true
 
 引用的**优先级**符合以上的顺序。
 
-在这个主题中的很多地方可以使用上面的本地资源引用，
-例如 **链接**, **图片**, `image` shortcode, `music` shortcode 和**前置参数**中的部分参数。
-
-页面资源或者 **assets** 目录中的 [图片处理][image-processing] 会在未来的版本中得到支持。
-非常酷的功能！:(fa-regular fa-grin-squint fa-fw):
-
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
-[image-processing]: https://gohugo.io/content-management/image-processing/
+{{< /admonition >}}
+
+## 页面模板 {#templates}
+
+一般情况，你不需要设置 **type** 或 **layout** 参数，因为 **Hugo** 和 **FixIt** 会帮你选择。但是一些特殊情况你需要明确指定模板。
+
+### 其他目录的文章
+
+有时候你可能需要把一些文章单独放在一个目录中，而不是 `content/posts` 目录。这时你需要在文章的前置参数中设置 `type: posts` 参数。
+
+例如，把所有文档的文章放在 `content/documentation` 目录，这里面的文章都使用 `posts` 模板：
+
+```markdown
+---
+title: 内容管理概述
+date: 2024-04-06T12:57:26+08:00
+type: posts
+---
+```
+
+### 友情链接
+
+{{< version 0.2.12 >}}
+
+在前置参数中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
+
+```yml
+# 朋友/站点信息例子
+- nickname: 朋友名字
+  avatar: 朋友头像
+  url: 站点链接
+  description: 对朋友或其站点的说明
+```
+
+{{< admonition tip "" false >}}
+
+你可以使用以下命令快速创建友情链接页面：
+
+```bash
+hugo new friends/index.md
+```
+
 {{< /admonition >}}
 
 ## Front matter {#front-matter}
@@ -63,6 +101,17 @@ reward: true
 {{< admonition >}}
 **不是所有**的以下前置参数都必须在你的每篇文章中设置。
 只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 中的 `page` 部分不一致时才有必要这么做。
+{{< /admonition >}}
+
+{{< admonition tip "" false >}}
+**FixIt** 主题内嵌了一些 [原型 (Archetypes)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的前置参数：
+
+```bash
+hugo new posts/foo.md
+# 或
+hugo new --kind post-bundle posts/bar/
+```
+
 {{< /admonition >}}
 
 - **title**: 文章标题
@@ -118,6 +167,7 @@ reward: true
 - **library**: 和 [主题配置][theme-config] 中的 `params.page.library` 部分相同
 - **seo**: 和 [主题配置][theme-config] 中的 `params.page.seo` 部分相同
 - **type**: 页面渲染模板，详见 [页面模板](#templates)
+- **layout**: 页面渲染模板，详见 [页面模板](#templates)
 - **menu**: 详见 [添加内容到菜单][content-to-menu]
 
 - **password**: {{< version 0.2.15 >}} 加密页面内容的密码，详见 [内容加密](#content-encryption)
@@ -131,11 +181,16 @@ reward: true
 - **reward**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.reward` 部分相同
 - **instantPage**: {{< version 0.2.18 >}} 和 [主题配置][theme-config] 中的 `params.page.instantPage` 部分相同
 
-{{< admonition tip >}}
+<!-- front matter for section only -->
+
+- **titleIcon**: {{< version 0.3.5 >}} 用于页面标题的图标，仅在 `_index.md` 中有效
+
+---
+
 **featuredImage** 和 **featuredImagePreview** 支持 [本地资源引用](#contents-organization) 的完整用法。
 
 如果带有在前置参数中设置了 `name: featured-image` 或 `name: featured-image-preview` 属性的页面资源，
-没有必要在设置 `featuredImage` 或 `featuredImagePreview`:
+没有必要再设置 `featuredImage` 或 `featuredImagePreview`:
 
 ```yaml
 resources:
@@ -144,17 +199,6 @@ resources:
   - name: featured-image-preview
     src: featured-image-preview.jpg
 ```
-
-{{< version 0.2.12 >}}
-
-**FixIt** 主题内嵌了一些 [原型](https://gohugo.io/content-management/archetypes/)，在使用以下命令创建新内容时生效，会自动带入常用的前置参数：
-
-```bash
-hugo new posts/foo.md
-hugo new --kind post-bundle posts/bar/
-```
-
-{{< /admonition >}}
 
 这是一个前置参数例子：
 
@@ -235,7 +279,7 @@ seo:
 
 **FixIt** 主题使用内容摘要在主页中显示大致文章信息。Hugo 支持生成文章的摘要。
 
-![文章摘要预览](summary.zh-cn.png "文章摘要预览")
+![文章摘要预览](summary.zh-cn.webp "文章摘要预览")
 
 ### 自动摘要拆分
 
@@ -252,7 +296,7 @@ seo:
 摘要分隔符之前的内容将用作该文章的摘要。
 
 {{< admonition >}}
-请小心输入`<!--more-->` ; 即全部为小写且没有空格。
+请小心输入 `<!--more-->`，即全部为小写且没有空格。
 {{< /admonition >}}
 
 ### 前置参数摘要
@@ -274,41 +318,9 @@ seo:
 3. 如果文章前置参数中有摘要变量，那么将以该值作为摘要。
 4. 按照自动摘要拆分方法。
 
-{{< admonition >}}
+{{< admonition warning >}}
 不建议在摘要内容中包含富文本块元素，这会导致渲染错误。例如代码块，图片，表格等。
 {{< /admonition >}}
-
-## 页面模板 {#templates}
-
-一般情况，你不需要设置 **type** 或 **layout** 参数，因为 **Hugo** 和 **FixIt** 会帮你选择。但是 **FixIt** 主题提供了一些特殊的模板给用户使用。
-
-### 友情链接
-
-{{< version 0.2.12 >}}
-
-在前置参数中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
-
-```yml
-# 朋友/站点信息例子
-- nickname: 朋友名字
-  avatar: 朋友头像
-  url: 站点链接
-  description: 对朋友或其站点的说明
-```
-
-{{< admonition tip >}}
-
-你可以使用以下命令快速创建友情链接页面：
-
-```bash
-hugo new friends/index.md
-```
-
-{{< /admonition >}}
-
-## 内容加密
-
-这部分内容在 [内容加密页面][content-encryption] 中介绍。
 
 ## Markdown 语法
 
@@ -317,6 +329,10 @@ hugo new friends/index.md
 ## Shortcodes
 
 这部分内容在 [Shortcodes 页面][shortcodes] 中介绍。
+
+## 内容加密 {#content-encryption}
+
+这部分内容在 [内容加密页面][content-encryption] 中介绍。
 
 ## 多语言和 I18n
 
@@ -456,19 +472,17 @@ defaultContentLanguage = "zh-cn"
 - 中文：`my-page.zh-cn.md`
 - 法语：`my-page.fr.md`
 
-{{< admonition tip >}}
-也可以使用 [文章前置参数](https://gohugo.io/content-management/multilingual#translate-your-content) 来翻译网址。
-{{< /admonition >}}
-
 #### 修改默认的翻译字符串
 
 翻译字符串用于在主题中使用的常见默认值。
 目前提供 [一些语言](#language-compatibility) 的翻译，但你可能自定义其他语言或覆盖默认值。
 
-要覆盖默认值，请在你项目的 I18n 目录 `i18n/<languageCode>.toml` 中创建一个新文件，并从 `themes/FixIt/i18n/en.toml` 中获得提示。
+要覆盖默认值，请在你项目的 `i18n` 目录中创建一个新文件 `i18n/<languageCode>.toml`，并从 `themes/FixIt/i18n/en.toml` 中获得提示。
 
 另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):][pulls] 来贡献主题翻译，谢谢！
 
+<!-- footnote reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}

@@ -11,7 +11,7 @@ author:
 description: Find out how to create and organize your content quickly and intuitively in FixIt theme.
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.webp
 tags:
   - Content
   - Basics
@@ -235,7 +235,7 @@ seo:
 
 **FixIt** theme uses the summary of the content to display abstract information in the home page. Hugo can generate summaries of your content.
 
-![Summary Preview](summary.png "Summary Preview")
+![Summary Preview](summary.webp "Summary Preview")
 
 ### Automatic Summary Splitting
 
