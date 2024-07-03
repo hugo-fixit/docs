@@ -33,5 +33,5 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 {{< link "../components" "🧩 开发组件" "为 Hugo FixIt 主题组件的开发做贡献。" true "fa-solid fa-puzzle-piece" >}}
 
 {{< admonition quote "作者说" >}}
-Lruihao：现在 FixIt 主题的开发以及文档编辑等工作几乎都是由我完成，这花费了我大量的精力且完全免费和大家分享！如果你想要长期参与 FixIt 社区的开发和维护欢迎和我联系，感谢大家！
+Lruihao：现在 FixIt 主题的开发以及文档编辑等工作几乎都由我独自完成，这花费了我大量的精力且完全免费和大家分享！如果你想要长期参与 FixIt 社区的开发和维护欢迎和我联系，感谢大家！
 {{< /admonition >}}
