@@ -36,7 +36,6 @@ reward: true
 - 使用 `_index.md` 翻译列表页面标题等，例如：`content/posts/_index.md`
 - 本地资源组织
 
-{{< admonition note "本地资源引用" >}}
 有三种方法来引用 **图片** 和 **音乐** 等本地资源：
 
 1. 使用 [捆绑页面 (Page bundles)][page-bundles] 中的 [页面资源][page-resources]。
@@ -48,8 +47,11 @@ reward: true
 
 引用的**优先级**符合以上的顺序。
 
-[page-resources]: https://gohugo.io/content-management/page-resources/
-[page-bundles]: https://gohugo.io/content-management/page-bundles/
+{{< admonition tip "封面图生成工具" false >}}
+
+- [CoverView](https://coverview.lruihao.cn/)
+- [apple-devices-preview](https://lruihao.github.io/vue-el-demo/#/apple-devices-preview)
+
 {{< /admonition >}}
 
 ## 页面模板 {#templates}
@@ -483,6 +485,8 @@ defaultContentLanguage = "zh-cn"
 
 <!-- footnote reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
+[page-resources]: https://gohugo.io/content-management/page-resources/
+[page-bundles]: https://gohugo.io/content-management/page-bundles/
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
