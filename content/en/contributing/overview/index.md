@@ -33,6 +33,6 @@ Hugo FixIt is eager for enthusiasm and participation from the open-source commun
 
 {{< link "../components" "🧩 Develop theme components" "Contribute to the development of Hugo FixIt components." true "fa-solid fa-puzzle-piece" >}}
 
-{{<administration quote "The author said">}
+{{< admonition quote "The author said" >}
 Lruihao: Nowadays, almost all the development of FixIt themes and document editing work are done by me alone, which has cost me a lot of energy and is completely free to share with everyone! If you want to participate in the development and maintenance of the FixIt community for the long term, please feel free to contact me. Thank you all!
 {{< /admonition >}}
