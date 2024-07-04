@@ -1,0 +1,160 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.panel.actions.disabled": [
+    "optimizeSlug"
+  ],
+  "frontMatter.dashboard.content.pagination": 50,
+  "frontMatter.content.autoUpdateDate": false,
+  "frontMatter.taxonomy.dateFormat": "YYYY-MM-DD'T'HH:mm:ss+08:00",
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "collections",
+      "options": [
+        "References",
+        "Content Management",
+        "Getting Started",
+        "Outline"
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Last Modified",
+          "name": "lastmod",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "string"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Collections",
+          "name": "collections",
+          "type": "taxonomy",
+          "taxonomyId": "collections"
+        },
+        {
+          "title": "Comment",
+          "name": "comment",
+          "type": "boolean"
+        },
+        {
+          "title": "Lightgallery",
+          "name": "lightgallery",
+          "type": "boolean"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.content.pageFolders": [
+    {
+      "path": "[[workspace]]/content/zh-cn/tests",
+      "title": "tests"
+    },
+    {
+      "path": "[[workspace]]/content/zh-cn/showcase",
+      "title": "showcase"
+    },
+    {
+      "title": "guides",
+      "path": "[[workspace]]/content/zh-cn/guides"
+    },
+    {
+      "path": "[[workspace]]/content/en/showcase",
+      "title": "showcase"
+    },
+    {
+      "title": "references",
+      "path": "[[workspace]]/content/en/references"
+    },
+    {
+      "title": "references",
+      "path": "[[workspace]]/content/zh-cn/references"
+    },
+    {
+      "title": "faq",
+      "path": "[[workspace]]/content/zh-cn/faq"
+    },
+    {
+      "title": "documentation",
+      "path": "[[workspace]]/content/zh-cn/documentation"
+    },
+    {
+      "title": "contributing",
+      "path": "[[workspace]]/content/zh-cn/contributing"
+    },
+    {
+      "title": "components",
+      "path": "[[workspace]]/content/zh-cn/components"
+    },
+    {
+      "title": "guides",
+      "path": "[[workspace]]/content/en/guides"
+    },
+    {
+      "title": "tests",
+      "path": "[[workspace]]/content/en/tests"
+    },
+    {
+      "title": "faq",
+      "path": "[[workspace]]/content/en/faq"
+    },
+    {
+      "title": "documentation",
+      "path": "[[workspace]]/content/en/documentation"
+    },
+    {
+      "title": "contributing",
+      "path": "[[workspace]]/content/en/contributing"
+    },
+    {
+      "title": "components",
+      "path": "[[workspace]]/content/en/components"
+    }
+  ],
+  "frontMatter.framework.startCommand": "hugo server -D --disableFastRender --navigateToChanged --bind 0.0.0.0",
+  "frontMatter.git.enabled": true
+}
