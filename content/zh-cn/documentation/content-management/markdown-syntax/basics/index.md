@@ -7,7 +7,7 @@ aliases:
 description: 这篇文章展示了基本的 Markdown 语法和格式。
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: featured-image.webp
 tags:
   - Markdown
   - Content
@@ -15,15 +15,16 @@ tags:
   - Basics
 categories:
   - Guides
+  - Documentation
+collections:
+  - Markdown Syntax
 lightgallery: true
-repost:
-  enable: true
-  url: http://learn.getgrav.org/content/markdown
 ---
 
 这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例。
 
 <!--more-->
+<!-- markdownlint-disable-file -->
 
 {{< admonition >}}
 这篇文章借鉴了一篇很棒的 [来自 Grav 的文章](http://learn.getgrav.org/content/markdown)。
@@ -102,16 +103,12 @@ John Gruber, Markdown 的作者如是说：
 注释是和 HTML 兼容的：
 
 ```html
-<!--
-这是一段注释
--->
+<!-- 这是一段注释 -->
 ```
 
 **不能**看到以下的注释：
 
-<!--
-这是一段注释
--->
+<!-- 这是一段注释 -->
 
 ## 水平线
 
@@ -221,15 +218,15 @@ _渲染为斜体_
 加粗，斜体，和删除线可以 组合使用。
 
 ```markdown
-***加粗和斜体***
+_**加粗和斜体**_
 ~~**删除线和加粗**~~
-~~*删除线和斜体*~~
-~~***加粗，斜体和删除线***~~
+~~_删除线和斜体_~~
+~~_**加粗，斜体和删除线**_~~
 ```
 
 呈现的输出效果如下：
 
-***加粗和斜体***
+_**加粗和斜体**_
 
 ~~**删除线和加粗**~~
 
@@ -462,6 +459,8 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
 
 ### 缩进代码
 
+> ❌ 不推荐使用。
+
 将几行代码缩进至少四个空格，例如：
 
 ```markdown
@@ -493,15 +492,15 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
 
 ### 围栏代码块
 
+> ✅ 推荐使用。
+
 使用 "围栏" <code>```</code> 来生成一段带有语言属性的代码块。
 
-{{< highlight markdown >}}
-
+````markdown
 ```markdown
 Sample text here...
 ```
-
-{{< / highlight >}}
+````
 
 输出的 HTML 看起来像这样：
 
@@ -523,8 +522,7 @@ Sample text here...
 
 例如，在以下 JavaScript 代码中应用语法高亮：
 
-{{< highlight markdown >}}
-
+````markdown
 ```js
 grunt.initConfig({
   assemble: {
@@ -545,8 +543,7 @@ grunt.initConfig({
   }
 };
 ```
-
-{{< / highlight >}}
+````
 
 呈现的输出效果如下：
 
@@ -623,10 +620,8 @@ grunt.initConfig({
 </table>
 ```
 
-{{< admonition note "文本右对齐或居中对齐" >}}
-在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐。
-
-在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中。
+{{< admonition note "文本右对齐或居中对齐" false >}}
+在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐，在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中。
 
 ```markdown
 | Option | Description |
@@ -804,5 +799,5 @@ Content for chapter one.
 [id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 {{< admonition tip >}}
-**FixIt** 主题提供了一个包含更多功能的 [图片的 shortcode](./../theme-documentation-extended-shortcodes#image)。
+**FixIt** 主题提供了一个包含更多功能的 [图片的 shortcode]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}})。
 {{< /admonition >}}

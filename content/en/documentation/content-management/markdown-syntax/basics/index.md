@@ -7,7 +7,7 @@ aliases:
 description: This article shows the basic Markdown syntax and format.
 resources:
   - name: featured-image
-    src: featured-image.png
+    src: featured-image.webp
 tags:
   - Markdown
   - Content
@@ -15,15 +15,16 @@ tags:
   - Basics
 categories:
   - Guides
+  - Documentation
+collections:
+  - Markdown Syntax
 lightgallery: true
-repost:
-  enable: true
-  url: http://learn.getgrav.org/content/markdown
 ---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files.
 
 <!--more-->
+<!-- markdownlint-disable-file -->
 
 {{< admonition >}}
 This article is a shameful copy of the great [Grav original page](http://learn.getgrav.org/content/markdown).
@@ -102,16 +103,12 @@ The HTML looks like this:
 Comments should be HTML compatible.
 
 ```html
-<!--
-This is a comment
--->
+<!-- This is a comment -->
 ```
 
 Comment below should **NOT** be seen:
 
-<!--
-This is a comment
--->
+<!-- This is a comment -->
 
 ## Horizontal Rules
 
@@ -221,15 +218,15 @@ The HTML looks like this:
 Bold, italics, and strikethrough can be used in combination.
 
 ```markdown
-***bold and italics***
+_**bold and italics**_
 ~~**strikethrough and bold**~~
-~~*strikethrough and italics*~~
-~~***bold, italics and strikethrough***~~
+~~_strikethrough and italics_~~
+~~_**bold, italics and strikethrough**_~~
 ```
 
 The rendered output looks like this:
 
-***bold and italics***
+_**bold and italics**_
 
 ~~**strikethrough and bold**~~
 
@@ -461,6 +458,8 @@ The HTML looks like this:
 
 ### Indented Code
 
+> ❌ Not recommended.
+
 Or indent several lines of code by at least four spaces, as in:
 
 ```markdown
@@ -492,15 +491,15 @@ The HTML looks like this:
 
 ### Block Fenced Code
 
+> ✅ Recommended.
+
 Use "fences" <code>```</code> to block in multiple lines of code with a language attribute.
 
-{{< highlight markdown >}}
-
+````markdown
 ```markdown
 Sample text here...
 ```
-
-{{< / highlight >}}
+````
 
 The HTML looks like this:
 
@@ -522,8 +521,7 @@ To activate it, simply add the file extension of the language you want to use di
 
 For example, to apply syntax highlighting to JavaScript code:
 
-{{< highlight markdown >}}
-
+````markdown
 ```js
 grunt.initConfig({
   assemble: {
@@ -544,8 +542,7 @@ grunt.initConfig({
   }
 };
 ```
-
-{{< / highlight >}}
+````
 
 The rendered output looks like this:
 
@@ -797,5 +794,5 @@ With a reference later in the document defining the URL location:
 [id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
 
 {{< admonition tip >}}
-**FixIt** theme has [special shortcode for image](../theme-documentation-extended-shortcodes#image), which provides more features.
+**FixIt** theme has [special shortcode for image]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}}), which provides more features.
 {{< /admonition >}}
