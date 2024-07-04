@@ -17,6 +17,8 @@ tags:
   - Basics
 categories:
   - Documentation
+collections:
+  - Content Management
 lightgallery: true
 reward: true
 ---
@@ -31,9 +33,9 @@ A few suggestions to help you get a good looking site quickly:
 
 - Keep post pages in the `content/posts` directory, for example: `content/posts/my-first-post.md`
 - Keep other pages in the `content` directory, for example: `content/about.md`
+- Use `_index.md` to translate list page titles, for example: `content/posts/_index.md`
 - Local resources organization
 
-{{< admonition note "Local Resource Reference" >}}
 There are three ways to reference local resources such as **images** and **music**:
 
 1. Using [page resources][page-resources] in [page bundles][page-bundles].
@@ -45,22 +47,52 @@ There are three ways to reference local resources such as **images** and **music
 
 The **priority** of references is also in the above order.
 
-There are many places in the theme where the above local resource references can be used,
-such as **links**, **images**, `image` shortcode, `music` shortcode and some params in the **front matter**.
-
-Images in page resources or assets directory [processing][image-processing]
-will be supported in the future.
-It's really cool! :(fa-regular fa-grin-squint fa-fw):
-
-[page-resources]: https://gohugo.io/content-management/page-resources/
-[page-bundles]: https://gohugo.io/content-management/page-bundles/
-[image-processing]: https://gohugo.io/content-management/image-processing/
-{{< /admonition >}}
-
 {{< admonition tip "Powerful Tools" false >}}
 
 - [CoverView](https://coverview.lruihao.cn/)
 - [apple-devices-preview](https://lruihao.github.io/vue-el-demo/#/apple-devices-preview)
+
+{{< /admonition >}}
+
+## Templates {#templates}
+
+Generally, you don't need to set the **type** or **layout** parameter, because Hugo and **FixIt** will help you choose. However, in some special cases, you need to specify the template explicitly.
+
+### Posts in Other Directories
+
+Sometimes you may need to put some posts in a separate directory, rather than the `content/posts` directory. In this case, you need to set the `type: posts` parameter in the front matter of the post.
+
+For example, put all the documentation posts in the `content/documentation` directory, and all the posts in this directory use the `posts` template:
+
+```markdown
+---
+title: Content Management Overview
+date: 2024-04-06T12:57:26+08:00
+type: posts
+---
+```
+
+### Friends
+
+{{< version 0.2.12 >}}
+
+Set `layout: friends` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows:
+
+```yml
+# Friend/Site info of one
+- nickname: friend's name
+  avatar: friend's avatar
+  url: site link
+  description: description of friend/site
+```
+
+{{< admonition tip "" false >}}
+
+You can use the following command to quickly create a friends page:
+
+```bash
+hugo new friends/index.md
+```
 
 {{< /admonition >}}
 
@@ -71,6 +103,17 @@ It's really cool! :(fa-regular fa-grin-squint fa-fw):
 {{< admonition >}}
 **Not all** of the below front matters need to be set in each of your posts.
 It is necessary only if the front matters and the `page` part in your [theme configuration]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) are inconsistent.
+{{< /admonition >}}
+
+{{< admonition tip "" false >}}
+Some [archetypes](https://gohugo.io/content-management/archetypes/) are embedded in the **FixIt** theme, which will take effect when creating new content with the following commands, and the front matter will be automatically brought in.
+
+```bash
+hugo new posts/foo.md
+# Or
+hugo new --kind post-bundle posts/bar/
+```
+
 {{< /admonition >}}
 
 - **title**: the title for the content.
@@ -139,7 +182,12 @@ It is necessary only if the front matters and the `page` part in your [theme con
 - **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [theme configuration][theme-config].
 - **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [theme configuration][theme-config].
 
-{{< admonition tip >}}
+<!-- front matter for section only -->
+
+- **titleIcon**: {{< version 0.3.5 >}} the icon for the page title, only valid in `_index.md`.
+
+---
+
 **featuredImage** and **featuredImagePreview** support the complete usage of [local resource references](#contents-organization).
 
 If the page resource with `name: featured-image` or `name: featured-image-preview` is set in the front matter,
@@ -152,17 +200,6 @@ resources:
   - name: featured-image-preview
     src: featured-image-preview.jpg
 ```
-
-{{< version 0.2.12 >}}
-
-Some [archetypes](https://gohugo.io/content-management/archetypes/) are embedded in the **FixIt** theme, which will take effect when creating new content with the following commands, and the front matter will be automatically brought in.
-
-```bash
-hugo new posts/foo.md
-hugo new --kind post-bundle posts/bar/
-```
-
-{{< /admonition >}}
 
 Here is a front matter example:
 
@@ -272,9 +309,15 @@ You might want your description in the `description` variable of the article fro
 
 You may add the `<!--more-->` summary divider at the start of the article. Keep content that comes before the summary divider empty. Then **FixIt** theme will use your description as the summary.
 
-### Priority Order of Summary Selection
+### Comparison
 
 Because there are multiple ways in which a summary can be specified it is useful to understand the order. It is as follows:
+
+| Type              | Precedence | Renders markdown | Renders shortcodes | Strips HTML tags | Wraps single lines with `<p>` |
+| :---------------- | :--------: | :--------------: | :----------------: | :--------------: | :---------------------------: |
+| Manual            | 1          | ✔️             | ✔️               | ❌               | ✔️                          |
+| Front&nbsp;matter | 2          | ✔️             | ❌                 | ❌               | ❌                            |
+| Automatic         | 3          | ✔️             | ✔️               | ✔️             | ❌                            |
 
 1. If there is a `<!--more-->` summary divider present in the article but no content is before the divider, the description will be used as the summary.
 2. If there is a `<!--more-->` summary divider present in the article the text up to the divider will be provided as per the manual summary split method.
@@ -285,38 +328,6 @@ Because there are multiple ways in which a summary can be specified it is useful
 It is not recommended to include rich text block elements in the summary, which will cause typographic errors. Such as code blocks, pictures, tables, etc.
 {{< /admonition >}}
 
-## Templates {#templates}
-
-Generally, you don't need to set the **type** or **layout** parameter, because Hugo and fixit will help you choose. However, the **FixIt** theme provides some special templates for users to use.
-
-### Friends
-
-{{< version 0.2.12 >}}
-
-Set `layout: friends` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows:
-
-```yml
-# Friend/Site info of one
-- nickname: friend's name
-  avatar: friend's avatar
-  url: site link
-  description: description of friend/site
-```
-
-{{< admonition tip >}}
-
-You can use the following command to quickly create a friends page:
-
-```bash
-hugo new friends/index.md
-```
-
-{{< /admonition >}}
-
-## Content Encryption
-
-This part is shown in the [content encryption page][content-encryption].
-
 ## Markdown Syntax
 
 This part is shown in the [basic markdown syntax page][basic-markdown-syntax] and the [extended markdown syntax page][extended-markdown-syntax].
@@ -324,6 +335,14 @@ This part is shown in the [basic markdown syntax page][basic-markdown-syntax] an
 ## Shortcodes
 
 This part is shown in the [shortcodes page][shortcodes].
+
+## Content Encryption
+
+This part is shown in the [content encryption page][content-encryption].
+
+## URL management
+
+**Hugo** has a powerful URL management system, see [Hugo URL management][hugo-url-management].
 
 ## Multilingual and I18n
 
@@ -475,6 +494,10 @@ To override these values, create a new file in your local I18n folder `i18n/<lan
 
 By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):][pulls] to the theme!
 
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
+[page-resources]: https://gohugo.io/content-management/page-resources/
+[page-bundles]: https://gohugo.io/content-management/page-bundles/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
@@ -482,6 +505,7 @@ By the way, as these translations could be used by other people, please take the
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
 [page-style]: {{< relref path="/documentation/advanced#page-style" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[hugo-url-management]: https://gohugo.io/content-management/urls/
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}

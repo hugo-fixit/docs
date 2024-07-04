@@ -47,27 +47,27 @@ mapbox:
 
 - **light-style** _[可选]_（**第五个**位置参数）
 
-    浅色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
+    浅色主题的地图样式，默认值是 [Front matter][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 - **dark-style** _[可选]_（**第六个**位置参数）
 
-    深色主题的地图样式，默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
+    深色主题的地图样式，默认值是 [Front matter][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 - **navigation** _[可选]_
 
-    是否添加 [NavigationControl][navigationcontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
+    是否添加 [NavigationControl][navigationcontrol], 默认值是 [Front matter][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 - **geolocate** _[可选]_
 
-    是否添加 [GeolocateControl][geolocatecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
+    是否添加 [GeolocateControl][geolocatecontrol], 默认值是 [Front matter][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 - **scale** _[可选]_
 
-    是否添加 [ScaleControl][scalecontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
+    是否添加 [ScaleControl][scalecontrol], 默认值是 [Front matter][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 - **fullscreen** _[可选]_
 
-   是否添加 [FullscreenControl][fullscreencontrol], 默认值是 [前置参数][front-matter] 或者 [主题配置][theme-config] 中设置的值。
+   是否添加 [FullscreenControl][fullscreencontrol], 默认值是 [Front matter][front-matter] 或者 [主题配置][theme-config] 中设置的值。
 
 - **width** _[可选]_
 

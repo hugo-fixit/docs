@@ -12,6 +12,8 @@ tags:
 categories:
   - Documentation
   - Guides
+collections:
+  - Content Management
 resources:
   - name: featured-image
     src: cover.webp

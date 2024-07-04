@@ -60,7 +60,7 @@ reward: true
 
 ### 其他目录的文章
 
-有时候你可能需要把一些文章单独放在一个目录中，而不是 `content/posts` 目录。这时你需要在文章的前置参数中设置 `type: posts` 参数。
+有时候你可能需要把一些文章单独放在一个目录中，而不是 `content/posts` 目录。这时你需要在文章的 Front matter 中设置 `type: posts` 参数。
 
 例如，把所有文档的文章放在 `content/documentation` 目录，这里面的文章都使用 `posts` 模板：
 
@@ -76,7 +76,7 @@ type: posts
 
 {{< version 0.2.12 >}}
 
-在前置参数中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
+在 Front matter 中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
 
 ```yml
 # 朋友/站点信息例子
@@ -98,15 +98,15 @@ hugo new friends/index.md
 
 ## Front matter {#front-matter}
 
-**Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的前置参数，详见 [Front matter][front-matter]。
+**Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的 Front matter，详见 [Front matter][front-matter]。
 
 {{< admonition >}}
-**不是所有**的以下前置参数都必须在你的每篇文章中设置。
+**不是所有**的以下 Front matter 都必须在你的每篇文章中设置。
 只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 中的 `page` 部分不一致时才有必要这么做。
 {{< /admonition >}}
 
 {{< admonition tip "" false >}}
-**FixIt** 主题内嵌了一些 [原型 (Archetypes)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的前置参数：
+**FixIt** 主题内嵌了一些 [原型 (Archetypes)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的 Front matter：
 
 ```bash
 hugo new posts/foo.md
@@ -118,7 +118,7 @@ hugo new --kind post-bundle posts/bar/
 
 - **title**: 文章标题
 - **subtitle**: 文章副标题
-- **date**: 这篇文章创建的日期时间它通常是从文章的前置参数中的 `date` 字段获取的，但是也可以在 [主题配置][theme-config] 中设置
+- **date**: 这篇文章创建的日期时间它通常是从文章的 Front matter 中的 `date` 字段获取的，但是也可以在 [主题配置][theme-config] 中设置
 - **lastmod**: 上次修改内容的日期时间
 - **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
 - **author**: {{< version 0.2.18 changed >}} 文章作者配置，和 [主题配置][theme-config] 中的 `params.author` 部分相同
@@ -191,7 +191,7 @@ hugo new --kind post-bundle posts/bar/
 
 **featuredImage** 和 **featuredImagePreview** 支持 [本地资源引用](#contents-organization) 的完整用法。
 
-如果带有在前置参数中设置了 `name: featured-image` 或 `name: featured-image-preview` 属性的页面资源，
+如果带有在 Front matter 中设置了 `name: featured-image` 或 `name: featured-image-preview` 属性的页面资源，
 没有必要再设置 `featuredImage` 或 `featuredImagePreview`:
 
 ```yaml
@@ -202,7 +202,7 @@ resources:
     src: featured-image-preview.jpg
 ```
 
-这是一个前置参数例子：
+这是一个 Front matter 例子：
 
 ```yaml
 ---
@@ -301,23 +301,29 @@ seo:
 请小心输入 `<!--more-->`，即全部为小写且没有空格。
 {{< /admonition >}}
 
-### 前置参数摘要
+### Front matter 摘要
 
-你可能希望摘要不是文章开头的文字。在这种情况下，你可以在文章前置参数的 `summary` 变量中设置单独的摘要。
+你可能希望摘要不是文章开头的文字。在这种情况下，你可以在文章 Front matter 的 `summary` 变量中设置单独的摘要。
 
 ### 使用文章描述作为摘要
 
-你可能希望将文章前置参数中的 `description` 变量的内容作为摘要。
+你可能希望将文章 Front matter 中的 `description` 变量的内容作为摘要。
 
 你仍然需要在文章开头添加 `<!--more-->` 摘要分割符。将摘要分隔符之前的内容保留为空。然后 **FixIt** 主题会将你的文章描述作为摘要。
 
-### 摘要选择的优先级顺序
+### 比较
 
 由于可以通过多种方式指定摘要，因此了解顺序很有用。如下：
 
+| 类型         | 优先级 | 渲染 Markdown | 渲染 Shortcodes | 删除 HTML 标签 | 使用 `<p>` 换行 |
+| :----------- | :----: | :-----------: | :-------------: | :------------: | :-------------: |
+| 手动摘要     | 1      | ✔️          | ✔️            | ❌             | ✔️            |
+| Front&nbsp;matter | 2      | ✔️          | ❌              | ❌             | ❌              |
+| 自动摘要     | 3      | ✔️          | ✔️            | ✔️           | ❌              |
+
 1. 如果文章中有 `<!--more-->` 摘要分隔符，但分隔符之前没有内容，则使用描述作为摘要。
 2. 如果文章中有 `<!--more-->` 摘要分隔符，则将按照手动摘要拆分的方法获得摘要。
-3. 如果文章前置参数中有摘要变量，那么将以该值作为摘要。
+3. 如果文章 Front matter 中有摘要变量，那么将以该值作为摘要。
 4. 按照自动摘要拆分方法。
 
 {{< admonition warning >}}
@@ -335,6 +341,10 @@ seo:
 ## 内容加密 {#content-encryption}
 
 这部分内容在 [内容加密页面][content-encryption] 中介绍。
+
+## URL 管理 {#url-management}
+
+**Hugo** 有一个强大的 URL 管理系统，详见 [Hugo URL 管理][hugo-url-management]。
 
 ## 多语言和 I18n
 
@@ -495,6 +505,7 @@ defaultContentLanguage = "zh-cn"
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
 [page-style]: {{< relref path="/documentation/advanced#page-style" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[hugo-url-management]: https://gohugo.io/content-management/urls/
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}

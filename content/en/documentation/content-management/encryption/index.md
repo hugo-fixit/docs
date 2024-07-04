@@ -23,6 +23,8 @@ tags:
   - Advanced
 categories:
   - Documentation
+collections:
+  - Content Management
 reward: true
 ---
 

@@ -109,7 +109,7 @@ FixIt 主题的作者是 ++Lruihao++。
 **FixIt** 基于 [$\KaTeX$][katex] 提供数学公式的支持。
 
 在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `enable = true`,
-并在文章的前置参数中设置属性 `math: true`来启用数学公式的自动渲染。
+并在文章的 Front matter 中设置属性 `math: true`来启用数学公式的自动渲染。
 
 {{< admonition tip >}}
 有一份 [$\KaTeX$ 中支持的 $\TeX$ 函数](https://katex.org/docs/supported.html) 清单。
