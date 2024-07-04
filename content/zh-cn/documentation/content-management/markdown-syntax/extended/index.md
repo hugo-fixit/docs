@@ -26,6 +26,78 @@ math: true
 
 <!--more-->
 
+## 下划线 {#inserted-text}
+
+**Hugo** 支持一种 **下划线** Markdown 扩展语法：
+
+```markdown
+FixIt 主题的作者是 ++Lruihao++。
+```
+
+呈现的输出效果如下：
+
+FixIt 主题的作者是 ++Lruihao++。
+
+## 标记文本 {#marked-text}
+
+**Hugo** 支持一种 **标记文本** Markdown 扩展语法：
+
+```markdown
+==FixIt== 是一个很棒的 Hugo 主题！
+```
+
+呈现的输出效果如下：
+
+==FixIt== 是一个很棒的 Hugo 主题！
+
+## 下标 {#subscript}
+
+**Hugo** 支持一种 **下标** Markdown 扩展语法：
+
+```markdown
+水的化学式是 H~2~O。
+```
+
+呈现的输出效果如下：
+
+水的化学式是 H~2~O。
+
+## 上标 {#superscript}
+
+**Hugo** 支持一种 **上标** Markdown 扩展语法：
+
+```markdown
+2^10^ 等于 1024。
+```
+
+呈现的输出效果如下：
+
+2^10^ 等于 1024。
+
+{{< admonition info "如何开启 Hugo 扩展语法" >}}
+[下划线](#inserted-text)、[标记文本](#marked-text)、[下标](#subscript) 和 [上标](#superscript) 语法默认关闭，需更新 Hugo 版本到 `0.128.0` 以上且开启以下的配置：
+
+```toml {title="hugo.toml"}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      # https://gohugo.io/getting-started/configuration-markup/#extras
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+```
+
+{{< /admonition >}}
+
 ## Emoji 支持
 
 这部分内容在 [Emoji 支持页面][emoji-support] 中介绍。
@@ -43,13 +115,14 @@ math: true
 有一份 [$\KaTeX$ 中支持的 $\TeX$ 函数](https://katex.org/docs/supported.html) 清单。
 {{< /admonition >}}
 
-{{< admonition >}}
-由于 Hugo 在渲染 Markdown 文档时会根据 `_`/`*`/`>>` 之类的语法生成 HTML 文档，
-并且有些转义字符形式的文本内容 (如 `\(`/`\)`/`\[`/`\]`/`\\`) 会自动进行转义处理，
+{{< admonition note "关于转义字符相关的注意事项" false >}}
+由于 Hugo 在渲染 Markdown 文档时会根据 `_`、`*`、`^`、`>>` 之类的语法生成 HTML 文档，
+并且有些转义字符形式的文本内容 (如 `\(`、`\)`、`\[`、`\]`、`\\`) 会自动进行转义处理，
 因此需要对这些地方进行额外的转义字符表达来实现自动渲染：
 
 - `_` -> `\_`
 - `*` -> `\*`
+- `^` -> `\^` （如果你开启了[上标语法](#superscript)）
 - `>>` -> `\>>`
 - `\(` -> `\\(`
 - `\)` -> `\\)`
@@ -57,7 +130,7 @@ math: true
 - `\]` -> `\\]`
 - `\\` -> `\\\\`
 
-**FixIt** 主题支持 [`raw` shortcode]({{< relref path="/documentation/content-management/shortcodes/extended/introduction#raw" >}}) 以避免这些转义字符，
+如果你不想写这些转义字符，**FixIt** 主题支持 [`raw` shortcode]({{< relref path="/documentation/content-management/shortcodes/extended/introduction#raw" >}})，
 它可以帮助你编写原始数学公式内容。
 
 一个 `raw` 示例：
@@ -68,6 +141,7 @@ math: true
 {?{}{?{}< raw >}}
 公式块：
 \[ a=b+c \\ d+e=f \]
+\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
 {?{}{?{}< /raw >}}
 ```
 
@@ -78,6 +152,7 @@ math: true
 {{< raw >}}
 公式块：
 \[ a=b+c \\ d+e=f \]
+\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
 {{< /raw >}}
 {{< /admonition >}}
 
@@ -91,12 +166,12 @@ math: true
 例如：
 
 ```tex
-$c = \pm\sqrt{a^2 + b^2}$ 和 \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
 ```
 
 呈现的输出效果如下：
 
-$c = \pm\sqrt{a^2 + b^2}$ 和 \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
 
 ### 公式块
 
@@ -117,9 +192,9 @@ $c = \pm\sqrt{a^2 + b^2}$ 和 \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 
 例如：
 
 ```tex
-$$ c = \pm\sqrt{a^2 + b^2} $$
+$$ c = \pm\sqrt{a\^2 + b\^2} $$
 
-\\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\]
+\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
 
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
@@ -153,9 +228,9 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 
 呈现的输出效果如下：
 
-$$ c = \pm\sqrt{a^2 + b^2} $$
+$$ c = \pm\sqrt{a\^2 + b\^2} $$
 
-\\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\]
+\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
 
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
@@ -211,14 +286,14 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 ```
 
 呈现的输出效果如下：
 
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 
 ## 字符注音或者注释 {#ruby}
 
@@ -304,7 +379,7 @@ $$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
 
 ## 自定义属性
 
-> 前提是你设置了 `goldmark.parser.attribute.block` 为 `true`。
+> 默认关闭，需设置 `goldmark.parser.attribute.block` 为 `true`。
 
 Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、列表、段落等。
 

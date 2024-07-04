@@ -26,6 +26,79 @@ math: true
 
 <!--more-->
 
+## Inserted Text {#inserted-text}
+
+**Hugo** supports an **inserted text** Markdown extension:
+
+```markdown
+The author of FixIt theme is ++Lruihao++.
+```
+
+The rendered output looks like this:
+
+The author of FixIt theme is ++Lruihao++.
+
+## Marked Text {#marked-text}
+
+**Hugo** supports a **marked text** Markdown extension:
+
+```markdown
+==FixIt== is an awesome Hugo theme!
+```
+
+The rendered output looks like this:
+
+==FixIt== is an awesome Hugo theme!
+
+## Subscript {#subscript}
+
+**Hugo** supports a **subscript** Markdown extension:
+
+```markdown
+The chemical formula of water is H~2~O.
+```
+
+The rendered output looks like this:
+
+The chemical formula of water is H~2~O.
+
+## Superscript {#superscript}
+
+**Hugo** supports a **superscript** Markdown extension:
+
+```markdown
+2^10^ equals 1024.
+```
+
+The rendered output looks like this:
+
+2^10^ equals 1024.
+
+{{< admonition info "How to enable Hugo extended syntax" >}}
+
+[Inserted Text](#inserted-text), [Marked Text](#marked-text), [Subscript](#subscript), and [Superscript](#superscript) syntax are disabled by default. You need to update Hugo to version `0.128.0` or later and enable the following configuration:
+
+```toml {title="hugo.toml"}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      # https://gohugo.io/getting-started/configuration-markup/#extras
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+```
+
+{{< /admonition >}}
+
 ## Emoji Support
 
 This part is shown in the [emoji support page][emoji-support].
@@ -43,14 +116,14 @@ and the property `math: true` of the article front matter to enable the automati
 Here is a list of [$\TeX$ functions supported by $\KaTeX$](https://katex.org/docs/supported.html).
 {{< /admonition >}}
 
-{{< admonition >}}
-Since Hugo generates HTML documents according to the syntax such as `_`/`*`/`>>` when rendering Markdown documents,
-and some text content in the form of escape characters
-(such as `\(`/`\)`/`\[`/`\]`/`\\`) escape processing will be performed automatically,
+{{< admonition note "Notes on Escape Characters" false >}}
+Since Hugo generates HTML documents according to the syntax such as `_`, `*`, `^`, `>>` when rendering Markdown documents,
+and some text content in the form of escape characters (such as `\(`, `\)`, `\[`, `\]`, `\\`) escape processing will be performed automatically,
 therefore, additional escape character expressions are required for these places to achieve automatic rendering:
 
 - `_` -> `\_`
 - `*` -> `\*`
+- `^` -> `\^` (If you have enabled [superscript syntax](#superscript))
 - `>>` -> `\>>`
 - `\(` -> `\\(`
 - `\)` -> `\\)`
@@ -58,8 +131,7 @@ therefore, additional escape character expressions are required for these places
 - `\]` -> `\\]`
 - `\\` -> `\\\\`
 
-**FixIt** theme supports [`raw` shortcode][raw-shortcode] to avoid these escape characters,
-which helps you write raw mathematical formula content.
+If you don't want to write these escape characters, **FixIt** theme supports [`raw` shortcode]({{< relref path="/documentation/content-management/shortcodes/extended/introduction#raw" >}}) to help you write raw mathematical formula content.
 
 Example `raw` input:
 
@@ -69,6 +141,7 @@ Example `raw` input:
 {?{}{?{}< raw >}}
 Block Formula:
 \[ a=b+c \\ d+e=f \]
+\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
 {?{}{?{}< /raw >}}
 ```
 
@@ -79,6 +152,7 @@ The rendered output looks like this:
 {{< raw>}}
 Block Formula:
 \[ a=b+c \\ d+e=f \]
+\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
 {{< /raw >}}
 {{< /admonition >}}
 
@@ -92,12 +166,12 @@ The default inline delimiters are:
 For example:
 
 ```tex
-$c = \pm\sqrt{a^2 + b^2}$ and \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
 ```
 
 The rendered output looks like this:
 
-$c = \pm\sqrt{a^2 + b^2}$ and \\(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
 
 ### Block Formula
 
@@ -118,9 +192,9 @@ When there are newlines in the block formula, please turn on `goldmark.renderer.
 For example:
 
 ```tex
-$$ c = \pm\sqrt{a^2 + b^2} $$
+$$ c = \pm\sqrt{a\^2 + b\^2} $$
 
-\\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\]
+\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
 
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
@@ -154,9 +228,9 @@ $$ c = \pm\sqrt{a^2 + b^2} $$
 
 The rendered output looks like this:
 
-$$ c = \pm\sqrt{a^2 + b^2} $$
+$$ c = \pm\sqrt{a\^2 + b\^2} $$
 
-\\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \\]
+\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
 
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
@@ -212,14 +286,14 @@ Set the property `mhchem = true` under `[params.math]` in your [theme configurat
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 ```
 
 The rendered output looks like this:
 
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 
 ## Ruby Annotation {#ruby}
 
@@ -305,7 +379,7 @@ The rendered output looks like this:
 
 ## Custom attribute
 
-> The premise is that you set `goldmark.parser.attribute.block` to `true`.
+> Default off, need to set `goldmark.parser.attribute.block` to `true`.
 
 Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tables, lists, paragraphs etc.
 
@@ -421,7 +495,6 @@ This part is shown in the [diagrams support page][diagrams-support].
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
-[raw-shortcode]: {{< relref path="/documentation/content-management/shortcodes/extended#raw" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
 [fontawesome]: https://fontawesome.com/

@@ -22,10 +22,22 @@
     definitionList = true
     footnote = true
     linkify = true
-    strikethrough = true
+    strikethrough = false
     table = true
     taskList = true
     typographer = true
+  # https://gohugo.io/getting-started/configuration-markup/#extras
+  [goldmark.extensions.extras]
+    [goldmark.extensions.extras.delete]
+      enable = true
+    [goldmark.extensions.extras.insert]
+      enable = true
+    [goldmark.extensions.extras.mark]
+      enable = true
+    [goldmark.extensions.extras.subscript]
+      enable = true
+    [goldmark.extensions.extras.superscript]
+      enable = true
     # TODO passthrough refactor https://gohugo.io/getting-started/configuration-markup/#parserattributeblock
     # TODO hugo 0.122.0 https://gohugo.io/content-management/mathematics/
   [goldmark.parser]
