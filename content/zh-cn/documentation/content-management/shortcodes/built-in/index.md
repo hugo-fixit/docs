@@ -36,7 +36,7 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 
 除了更干净的 Markdown，shortcodes 可以随时更新以反映新的类、技术或标准。在站点生成时，Hugo shortcodes 将轻松合并你的更改。你避免了可能复杂的搜索和替换操作。
 
-## Use Shortcodes
+## 使用 Shortcodes
 
 {{< youtube 2xkNJL4gJ9E >}}
 
