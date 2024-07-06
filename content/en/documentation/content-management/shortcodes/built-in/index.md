@@ -7,7 +7,7 @@ aliases:
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: Hugo provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
+description: Shortcodes are simple snippets inside your content files calling built-in or custom templates.
 resources:
   - name: featured-image
     src: featured-image.webp
@@ -17,35 +17,46 @@ tags:
   - Basics
 categories:
   - Documentation
+collections:
+  - Shortcodes
 lightgallery: true
 ---
 
-**Hugo** provides multiple built-in shortcodes for author convenience and to keep your markdown content clean.
+Shortcodes are simple snippets inside your content files calling built-in or custom templates.
 
 <!--more-->
 
-Hugo uses Markdown for its simple content format. However, there are a lot of things that Markdown doesn’t support well. You could use pure HTML to expand possibilities.
+## What a shortcode is
 
-But this happens to be a bad idea. Everyone uses Markdown because it’s pure and simple to read even non-rendered. You should avoid HTML to keep it as simple as possible.
+Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video `<iframe>`’s) to Markdown content. We think this contradicts the beautiful simplicity of Markdown’s syntax.
 
-To avoid this limitations, Hugo created [shortcodes][shortcodes].
-A shortcode is a simple snippet that can generate reasonable HTML code and conforms to Markdown's design philosophy.
+Hugo created **[shortcodes][shortcodes]** to circumvent these limitations.
 
-Hugo ships with a set of predefined shortcodes that represent very common usage. These shortcodes are provided for author convenience and to keep your markdown content clean.
+A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a [partial template][partial-template] instead.
 
-{{< admonition tip "Use Shortcodes" >}}
+In addition to cleaner Markdown, shortcodes can be updated any time to reflect new classes, techniques, or standards. At the point of site generation, Hugo shortcodes will easily merge in your changes. You avoid a possibly complicated search and replace operation.
+
+## Use Shortcodes
+
+{{< youtube 2xkNJL4gJ9E >}}
 
 1. Shortcodes with raw string parameters \` \`
 2. Shortcodes with Markdown `% %`
 3. Shortcodes without Markdown `< >`
 
-See detail [shortcodes/#use-shortcodes](https://gohugo.io/content-management/shortcodes/#use-shortcodes)
+See more details in the [Use Shortcodes][use-shortcodes] section.
 
+## Embedded shortcodes
+
+Use these Hugo's embedded shortcodes as needed.
+
+{{< admonition tip >}}
+To override Hugo’s embedded shortcode, copy the [source code](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
 {{< /admonition >}}
 
-## figure {#figure}
+### figure {#figure}
 
-[Documentation of `figure`][figure]
+> [Documentation of `figure`][figure].
 
 Example `figure` input:
 
@@ -68,9 +79,9 @@ The HTML looks like this:
 </figure>
 ```
 
-## gist
+### gist
 
-[Documentation of `gist`][gist]
+> [Documentation of `gist`][gist].
 
 Example `gist` input:
 
@@ -88,9 +99,9 @@ The HTML looks like this:
 <script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
 ```
 
-## highlight
+### highlight
 
-[Documentation of `highlight`][highlight]
+> [Documentation of `highlight`][highlight].
 
 Example `highlight` input:
 
@@ -120,9 +131,23 @@ The rendered output looks like this:
 </section>
 {{< /highlight >}}
 
-## param
+### instagram
 
-[Documentation of `param`][param]
+> [Documentation of `instagram`][instagram].
+
+Example `instagram` input:
+
+```markdown
+{{</* instagram CxOWiQNP2MO */>}}
+```
+
+The rendered output looks like this:
+
+{{< instagram CxOWiQNP2MO >}}
+
+### param
+
+> [Documentation of `param`][param].
 
 Example `param` input:
 
@@ -134,25 +159,75 @@ The rendered output looks like this:
 
 {{< param description >}}
 
-## ref and relref {#ref-and-relref}
+### ref
 
-[Documentation of `ref` and `relref`][ref-and-relref]
+> [Documentation of `ref`][ref].
+>
+> Always use the `{{%/* */%}}` notation when calling this shortcode.
 
-## tweet
-
-[Documentation of `tweet`][tweet]
-
-Example `tweet` input:
+Example `ref` input:
 
 ```markdown
-{{</* tweet user="SanDiegoZoo" id="1453110110599868418" */>}}
+- [Built-in Shortcodes]({{%/* ref "/documentation/content-management/shortcodes/built-in" */%}})
+- [Extended Shortcodes]({{%/* ref "/documentation/content-management/shortcodes/extended" */%}})
 ```
 
 The rendered output looks like this:
 
-{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
+- [Built-in Shortcodes]({{% ref "/documentation/content-management/shortcodes/built-in" %}})
+- [Extended Shortcodes]({{% ref "/documentation/content-management/shortcodes/extended" %}})
 
-## vimeo
+The HTML looks like this:
+
+```html
+<ul>
+  <li><a href="http://example.org/documentation/content-management/shortcodes/built-in">Built-in Shortcodes</a></li>
+  <li><a href="http://example.org/documentation/content-management/shortcodes/extended">Extended Shortcodes</a></li>
+</ul>
+```
+
+### relref
+
+> [Documentation of `relref`][relref].
+>
+> Always use the `{{%/* */%}}` notation when calling this shortcode.
+
+Example `relref` input:
+
+```markdown
+- [Built-in Shortcodes]({{%/* relref "/documentation/content-management/shortcodes/built-in" */%}})
+- [Extended Shortcodes]({{%/* relref "/documentation/content-management/shortcodes/extended" */%}})
+```
+
+The rendered output looks like this:
+
+- [Built-in Shortcodes]({{% relref "/documentation/content-management/shortcodes/built-in" %}})
+- [Extended Shortcodes]({{% relref "/documentation/content-management/shortcodes/extended" %}})
+
+The HTML looks like this:
+
+```html
+<ul>
+  <li><a href="/documentation/content-management/shortcodes/built-in">Built-in Shortcodes</a></li>
+  <li><a href="/documentation/content-management/shortcodes/extended">Extended Shortcodes</a></li>
+</ul>
+```
+
+### twitter
+
+[Documentation of `twitter`][twitter]
+
+Example `twitter` input:
+
+```markdown
+{{</* twitter user="SanDiegoZoo" id="1453110110599868418" */>}}
+```
+
+The rendered output looks like this:
+
+{{< twitter user="SanDiegoZoo" id="1453110110599868418" >}}
+
+### vimeo
 
 [Documentation of `vimeo`][vimeo]
 
@@ -166,26 +241,36 @@ The rendered output looks like this:
 
 {{< vimeo 146022717 >}}
 
-## youtube
+### youtube
 
 [Documentation of `youtube`][youtube]
 
 Example `youtube` input:
 
 ```markdown
-{{</* youtube w7Ft2ymGmfc */>}}
+{{</* youtube 0RKpf3rK57I */>}}
 ```
 
 The rendered output looks like this:
 
-{{< youtube w7Ft2ymGmfc >}}
+{{< youtube 0RKpf3rK57I >}}
 
-[shortcodes]: https://gohugo.io/extras/shortcodes/
-[figure]: https://gohugo.io/content-management/shortcodes#figure
-[gist]: https://gohugo.io/content-management/shortcodes#gist
-[highlight]: https://gohugo.io/content-management/shortcodes#highlight
-[param]: https://gohugo.io/content-management/shortcodes#param
-[ref-and-relref]: https://gohugo.io/content-management/shortcodes#ref-and-relref
-[tweet]: https://gohugo.io/content-management/shortcodes#tweet
-[vimeo]: https://gohugo.io/content-management/shortcodes#vimeo
-[youtube]: https://gohugo.io/content-management/shortcodes#youtube
+## Privacy configuration
+
+To learn how to configure your Hugo site to meet the new EU privacy regulation, see [privacy protections][privacy-protections].
+
+<!-- link reference definition -->
+<!-- markdownlint-disable-file no-inline-html -->
+[shortcodes]: https://gohugo.io/content-management/shortcodes/
+[use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
+[partial-template]: https://gohugo.io/templates/partial/
+[figure]: https://gohugo.io/content-management/shortcodes/#figure
+[gist]: https://gohugo.io/content-management/shortcodes/#gist
+[highlight]: https://gohugo.io/content-management/shortcodes/#highlight
+[instagram]: https://gohugo.io/content-management/shortcodes/#instagram
+[param]: https://gohugo.io/content-management/shortcodes/#param
+[ref]: https://gohugo.io/content-management/shortcodes/#ref
+[twitter]: https://gohugo.io/content-management/shortcodes/#twitter
+[vimeo]: https://gohugo.io/content-management/shortcodes/#vimeo
+[youtube]: https://gohugo.io/content-management/shortcodes/#youtube
+[privacy-protections]: https://gohugo.io/about/privacy/

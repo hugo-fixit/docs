@@ -7,7 +7,7 @@ aliases:
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: Hugo 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。
+description: Shortcodes 是在内容文件中调用内置或自定义模板的简单片段。
 resources:
   - name: featured-image
     src: featured-image.webp
@@ -17,36 +17,46 @@ tags:
   - Basics
 categories:
   - Documentation
+collections:
+  - Shortcodes
 lightgallery: true
 ---
 
-**Hugo** 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。
+Shortcodes 是在内容文件中调用内置或自定义模板的简单片段。
 
 <!--more-->
 
-Hugo 使用 Markdown 为其简单的内容格式。但是，Markdown 在很多方面都无法很好地支持。你可以使用纯 HTML 来扩展可能性。
+## 什么是 Shortcode
 
-但这恰好是一个坏主意。大家使用 Markdown, 正是因为它即使不经过渲染也可以轻松阅读。应该尽可能避免使用 HTML 以保持内容简洁。
+Hugo 喜欢 Markdown，因为它的内容格式简单，但有时 Markdown 会有局限性。通常，内容作者被迫向 Markdown 内容中添加原始 HTML（例如，视频 `<iframe>`）。我们认为这与 Markdown 语法的美丽简洁相矛盾。
 
-为了避免这种限制，Hugo 创建了 [shortcodes][shortcodes]。
-shortcode 是一个简单代码段，可以生成合理的 HTML 代码，并且符合 Markdown 的设计哲学。
+Hugo 为了避免这些限制创建了 **[shortcodes][shortcodes]**。
 
-Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见的用法。
-提供这些 shortcodes 是为了方便保持你的 Markdown 内容简洁。
+shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预定义的模板进行渲染。请注意，shortcode 在模板文件中不起作用。如果你需要模板中 shortcodes 提供的插入功能，你很可能需要一个 [partial template][partial-template]。
 
-{{< admonition tip "使用 Shortcodes" >}}
+除了更干净的 Markdown，shortcodes 可以随时更新以反映新的类、技术或标准。在站点生成时，Hugo shortcodes 将轻松合并你的更改。你避免了可能复杂的搜索和替换操作。
+
+## Use Shortcodes
+
+{{< youtube 2xkNJL4gJ9E >}}
 
 1. 带有原始字体串格式的 Shortcodes \` \`
 2. 带有 Markdown 的 Shortcodes `% %`
 3. 不带有 Markdown 的 Shortcodes `< >`
 
-详见 [shortcodes/#use-shortcodes](https://gohugo.io/content-management/shortcodes/#use-shortcodes)
+在 [Use Shortcodes][use-shortcodes] 部分查看更多细节。
 
+## 内置 Shortcodes
+
+根据需要使用这些 Hugo 内置 Shortcodes。
+
+{{< admonition tip >}}
+要覆盖 Hugo 内置 Shortcodes，请将 [源代码](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
 {{< /admonition >}}
 
-## figure {#figure}
+### figure {#figure}
 
-[`figure` 的文档][figure]
+> [`figure` shortcode 的文档][figure]。
 
 一个 `figure` 示例：
 
@@ -69,9 +79,9 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 </figure>
 ```
 
-## gist
+### gist
 
-[`gist` 的文档][gist]
+> [`gist` shortcode 的文档][gist]。
 
 一个 `gist` 示例：
 
@@ -89,9 +99,9 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 <script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
 ```
 
-## highlight
+### highlight
 
-[`highlight` 的文档][highlight]
+> [`highlight` shortcode 的文档][highlight]。
 
 一个 `highlight` 示例：
 
@@ -121,9 +131,23 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 </section>
 {{< /highlight >}}
 
-## param
+### instagram
 
-[`param` 的文档][param]
+> [`instagram` shortcode 的文档](https://gohugo.io/content-management/shortcodes#instagram)。
+
+一个 `instagram` 示例：
+
+```markdown
+{{</* instagram CxOWiQNP2MO */>}}
+```
+
+呈现的输出效果如下：
+
+{{< instagram CxOWiQNP2MO >}}
+
+### param
+
+> [`param` shortcode 的文档][param]。
 
 一个 `param` 示例：
 
@@ -135,27 +159,77 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< param description >}}
 
-## ref 和 relref {#ref-and-relref}
+### ref
 
-[`ref` 和 `relref` 的文档][ref-and-relref]
+> [`ref` shortcode 的文档][ref]。
+>
+> 调用此 shortcode 时始终使用 `{{%/* */%}}` 符号。
 
-## tweet
-
-[`tweet` 的文档][tweet]
-
-一个 `tweet` 示例：
+一个 `ref` 示例：
 
 ```markdown
-{{</* tweet user="SanDiegoZoo" id="1453110110599868418" */>}}
+- [内置 Shortcodes]({{%/* ref "/documentation/content-management/shortcodes/built-in" */%}})
+- [扩展 Shortcodes]({{%/* ref "/documentation/content-management/shortcodes/extended" */%}})
 ```
 
 呈现的输出效果如下：
 
-{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
+- [内置 Shortcodes]({{% ref "/documentation/content-management/shortcodes/built-in" %}})
+- [扩展 Shortcodes]({{% ref "/documentation/content-management/shortcodes/extended" %}})
 
-## vimeo
+输出的 HTML 看起来像这样：
 
-[`vimeo` 的文档][vimeo]
+```html
+<ul>
+  <li><a href="http://example.org/documentation/content-management/shortcodes/built-in">内置 Shortcodes</a></li>
+  <li><a href="http://example.org/documentation/content-management/shortcodes/extended">扩展 Shortcodes</a></li>
+</ul>
+```
+
+### relref
+
+> [`relref` shortcode 的文档][relref]。
+>
+> 调用此 shortcode 时始终使用 `{{%/* */%}}` 符号。
+
+一个 `relref` 示例：
+
+```markdown
+- [内置 Shortcodes]({{%/* relref "/documentation/content-management/shortcodes/built-in" */%}})
+- [扩展 Shortcodes]({{%/* relref "/documentation/content-management/shortcodes/extended" */%}})
+```
+
+呈现的输出效果如下：
+
+- [内置 Shortcodes]({{% relref "/documentation/content-management/shortcodes/built-in" %}})
+- [扩展 Shortcodes]({{% relref "/documentation/content-management/shortcodes/extended" %}})
+
+输出的 HTML 看起来像这样：
+
+```html
+<ul>
+  <li><a href="/documentation/content-management/shortcodes/built-in">内置 Shortcodes</a></li>
+  <li><a href="/documentation/content-management/shortcodes/extended">扩展 Shortcodes</a></li>
+</ul>
+```
+
+### twitter
+
+> [`twitter` shortcode 的文档][twitter]。
+
+一个 `twitter` 示例：
+
+```markdown
+{{</* twitter user="SanDiegoZoo" id="1453110110599868418" */>}}
+```
+
+呈现的输出效果如下：
+
+{{< twitter user="SanDiegoZoo" id="1453110110599868418" >}}
+
+### vimeo
+
+> [`vimeo` shortcode 的文档][vimeo]。
 
 一个 `vimeo` 示例：
 
@@ -167,26 +241,35 @@ Hugo 附带了一组预定义的 shortcodes, 它们实现了一些非常常见�
 
 {{< vimeo 146022717 >}}
 
-## youtube
+### youtube
 
-[`youtube` 的文档][youtube]
+> [`youtube` shortcode 的文档][youtube]。
 
 一个 `youtube` 示例：
 
 ```markdown
-{{</* youtube w7Ft2ymGmfc */>}}
+{{</* youtube 0RKpf3rK57I */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< youtube w7Ft2ymGmfc >}}
+{{< youtube 0RKpf3rK57I >}}
 
-[shortcodes]: https://gohugo.io/extras/shortcodes/
-[figure]: https://gohugo.io/content-management/shortcodes#figure
-[gist]: https://gohugo.io/content-management/shortcodes#gist
-[highlight]: https://gohugo.io/content-management/shortcodes#highlight
-[param]: https://gohugo.io/content-management/shortcodes#param
-[ref-and-relref]: https://gohugo.io/content-management/shortcodes#ref-and-relref
-[tweet]: https://gohugo.io/content-management/shortcodes#tweet
-[vimeo]: https://gohugo.io/content-management/shortcodes#vimeo
-[youtube]: https://gohugo.io/content-management/shortcodes#youtube
+## 隐私配置
+
+要了解如何配置你的 Hugo 网站以满足新的欧盟隐私法规，请参阅 [隐私保护][privacy-protections]。
+
+<!-- link reference definition -->
+<!-- markdownlint-disable-file no-inline-html -->
+[shortcodes]: https://gohugo.io/content-management/shortcodes/
+[use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
+[partial-template]: https://gohugo.io/templates/partial/
+[figure]: https://gohugo.io/content-management/shortcodes/#figure
+[gist]: https://gohugo.io/content-management/shortcodes/#gist
+[highlight]: https://gohugo.io/content-management/shortcodes/#highlight
+[param]: https://gohugo.io/content-management/shortcodes/#param
+[ref]: https://gohugo.io/content-management/shortcodes/#ref
+[twitter]: https://gohugo.io/content-management/shortcodes/#twitter
+[vimeo]: https://gohugo.io/content-management/shortcodes/#vimeo
+[youtube]: https://gohugo.io/content-management/shortcodes/#youtube
+[privacy-protections]: https://gohugo.io/about/privacy/
