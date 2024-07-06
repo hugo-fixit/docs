@@ -25,15 +25,6 @@ reward: true
 
 <!--more-->
 
-{{< admonition note >}}
-你需要使用 Hugo [**v0.93.0**][hugo-release] 或更新的版本来创建自定义图表。
-
-如果你不得不使用旧版的 Hugo，你可以使用 [`mermaid` shortcode][mermaid-shortcode]。
-
-[hugo-release]: https://github.com/gohugoio/hugo/releases/tag/v0.93.0
-[mermaid-shortcode]: {{< relref "/documentation/content-management/shortcodes/extended/mermaid" >}}
-{{< /admonition >}}
-
 ## GoAT
 
 [[GoAT][goat]]^(Go ASCII Tool) 是 [markdeep.mini.js][markdeep] 图像生成器的 Go 语言实现。

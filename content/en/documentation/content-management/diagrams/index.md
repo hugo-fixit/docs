@@ -25,15 +25,6 @@ reward: true
 
 <!--more-->
 
-{{< admonition note >}}
-Hugo [**v0.93.0**][hugo-release] or later is required for using fenced code blocks and markdown render hooks to display diagrams.
-
-Check out the [`mermaid` shortcode][mermaid-shortcode] if you have to use an older version of Hugo.
-
-[hugo-release]: https://github.com/gohugoio/hugo/releases/tag/v0.93.0
-[mermaid-shortcode]: {{< relref "/documentation/content-management/shortcodes/extended/mermaid" >}}
-{{< /admonition >}}
-
 ## GoAT
 
 [[GoAT][goat]]^(Go ASCII Tool) is a Go implementation of [markdeep.mini.js][markdeep]'s ASCII diagram generator.
