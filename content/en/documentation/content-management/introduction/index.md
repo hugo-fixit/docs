@@ -287,7 +287,7 @@ By default, Hugo automatically takes the first 70 words of your content as its s
 
 You may customize the summary length by setting `summaryLength` in the site configuration.
 
-If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo’s automatic summary splitting, set `hasCJKLanguage` to `true` in your site configuration.
+If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and want to use Hugo's automatic summary splitting, set `hasCJKLanguage` to `true` in your site configuration.
 
 ### Manual Summary Splitting
 

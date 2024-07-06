@@ -23,12 +23,20 @@ lightgallery: true
 math: true
 reward: true
 ---
-<!-- markdownlint-disable-file reference-links-images no-inline-html -->
+
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
 
 <!--more-->
 
-## style
+Use these Hugo's embedded shortcodes as needed.
+
+{{< admonition tip >}}
+To override FixIt's embedded shortcode, copy the [source code](https://github.com/hugo-fixit/FixIt/tree/master/layouts/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
+{{< /admonition >}}
+
+## Embedded in FixIt Theme
+
+### style
 
 {{< admonition >}}
 Hugo **extended** version is necessary for `style` shortcode.
@@ -58,7 +66,7 @@ The rendered output looks like this:
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
-## link
+### link
 
 `link` shortcode is an alternative to [Markdown link syntax][md-link]. `link` shortcode can provide some other features and can be used in code blocks.
 
@@ -168,7 +176,7 @@ The rendered output looks like this:
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
-## image {#image}
+### image {#image}
 
 {{< version 0.2.18 changed >}}
 
@@ -240,7 +248,7 @@ The rendered output looks like this:
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 
-## admonition
+### admonition
 
 The `admonition` shortcode supports **12** types of banners to help you put notice in your page.
 
@@ -326,55 +334,55 @@ The rendered output looks like this:
 A **tip** banner
 {{< /admonition >}}
 
-## mermaid
+### mermaid
 
 The `mermaid` shortcode supports diagrams in Hugo with [Mermaid][mermaidjs] library.
 
 The full documentation is provided in [Extended Shortcode - mermaid][sc-mermaid].
 
-## echarts
+### echarts
 
 The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
 
 The full documentation is provided in [Extended Shortcode - echarts][sc-echarts].
 
-## mapbox
+### mapbox
 
 The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.
 
 The full documentation is provided in [Extended Shortcode - mapbox][sc-mapbox].
 
-## music
+### music
 
 The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs] library.
 
 The full documentation is provided in [Extended Shortcode - music][sc-music].
 
-## spotify
+### spotify
 
 The `spotify` shortcode embeds a responsive music player for Spotify music.
 
 The full documentation is provided in [Extended Shortcode - spotify][sc-spotify].
 
-## bilibili
+### bilibili
 
 The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 
 The full documentation is provided in [Extended Shortcode - bilibili][sc-bilibili].
 
-## douyin
+### douyin
 
 The `douyin` shortcode embeds a responsive video player for douyin videos.
 
 The full documentation is provided in [Extended Shortcode - douyin][sc-douyin].
 
-## typeit
+### typeit
 
 The `typeit` shortcode provides typing animation based on [TypeIt][typeitjs].
 
 The full documentation is provided in [Extended Shortcode - typeit][sc-typeit].
 
-## script
+### script
 
 `script` is a shortcode to insert custom **:(fa-brands fa-js fa-fw): Javascript** in your post.
 
@@ -396,7 +404,7 @@ You can see the output in the console of the developer tool.
 console.log('Hello FixIt!');
 {{< /script >}}
 
-## details
+### details
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
@@ -426,7 +434,7 @@ The rendered output looks like this:
 _All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
-## center-quote
+### center-quote
 
 {{< version 0.2.13 >}}
 
@@ -448,7 +456,7 @@ The rendered output looks like this:
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
-## fixit-encryptor
+### fixit-encryptor
 
 {{< version 0.2.15 >}}
 
@@ -456,7 +464,7 @@ You can use `fixit-encryptor` shortcode to encrypt partial content.
 
 The full documentation is provided in [Content Encryption][content-encryption].
 
-## raw
+### raw
 
 {{< version 0.2.16 >}}
 
@@ -493,7 +501,7 @@ Block Formula:
 
 Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
-## reward
+### reward
 
 {{< version 0.2.17 >}}
 
@@ -519,6 +527,12 @@ The rendered output looks like this:
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="Buy me a coffee~" >}}
 
+## Standalone Plugins
+
+TODO
+
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html -->
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}

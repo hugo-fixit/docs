@@ -51,7 +51,7 @@ See more details in the [Use Shortcodes][use-shortcodes] section.
 Use these Hugo's embedded shortcodes as needed.
 
 {{< admonition tip >}}
-To override Hugo’s embedded shortcode, copy the [source code](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
+To override Hugo's embedded shortcode, copy the [source code](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
 {{< /admonition >}}
 
 ### figure {#figure}

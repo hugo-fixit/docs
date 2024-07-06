@@ -7,7 +7,7 @@ aliases:
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
+description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 Shortcodes。
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -23,12 +23,20 @@ lightgallery: true
 math: true
 reward: true
 ---
-<!-- markdownlint-disable-file reference-links-images no-inline-html -->
-**FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode。
+
+**FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 Shortcodes。
 
 <!--more-->
 
-## style
+根据需要使用这些 FixIt 主题扩展的 Shortcodes。
+
+{{< admonition tip >}}
+要覆盖 FixIt 主题扩展的 Shortcodes，请将 [源代码](https://github.com/hugo-fixit/FixIt/tree/master/layouts/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
+{{< /admonition >}}
+
+## 内置在 FixIt 主题
+
+### style
 
 {{< admonition >}}
 Hugo **extended** 版本对于 `style` shortcode 是必需的。
@@ -57,7 +65,7 @@ This is a **right-aligned** paragraph.
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
-## link
+### link
 
 `link` shortcode 是 [Markdown 链接语法][md-link] 的替代。
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用。
@@ -168,7 +176,7 @@ This is a **right-aligned** paragraph.
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
-## image {#image}
+### image {#image}
 
 {{< version 0.2.18 changed >}}
 
@@ -240,7 +248,7 @@ This is a **right-aligned** paragraph.
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
 
-## admonition
+### admonition
 
 `admonition` shortcode 支持 **12** 种 帮助你在页面中插入提示的横幅。
 
@@ -326,55 +334,55 @@ _支持 Markdown 或者 HTML 格式。_
 一个 **技巧** 横幅
 {{< /admonition >}}
 
-## mermaid
+### mermaid
 
 `mermaid` shortcode 使用 [Mermaid][mermaidjs] 库提供绘制图表和流程图的功能。
 
 完整文档请查看页面 [扩展 Shortcode - mermaid][sc-mermaid]。
 
-## echarts
+### echarts
 
 `echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
 
 完整文档请查看页面 [扩展 Shortcode - echarts][sc-echarts]。
 
-## mapbox
+### mapbox
 
 `mapbox` shortcode 使用 [Mapbox GL JS][mapbox] 库提供互动式地图的功能。
 
 完整文档请查看页面 [扩展 Shortcode - mapbox][sc-mapbox]。
 
-## music
+### music
 
 `music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 库提供了一个内嵌的响应式音乐播放器。
 
 完整文档请查看页面 [扩展 Shortcode - music][sc-music]。
 
-## spotify
+### spotify
 
 `spotify` shortcode 提供了一个内嵌的用来播放 Spotify 音乐的响应式播放器。
 
 完整文档请查看页面 [扩展 Shortcode - spotify][sc-spotify]。
 
-## bilibili
+### bilibili
 
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 
 完整文档请查看页面 [扩展 Shortcode - bilibili][sc-bilibili]。
 
-## douyin
+### douyin
 
 `douyin` shortcode 提供了一个内嵌的用来播放抖音视频的响应式播放器。
 
 完整文档请查看页面 [扩展 Shortcode - douyin][sc-douyin]。
 
-## typeit
+### typeit
 
 `typeit` shortcode 基于 [TypeIt][typeitjs] 提供了打字动画。
 
 完整文档请查看页面 [扩展 Shortcode - typeit][sc-typeit]。
 
-## script
+### script
 
 `script` shortcode 用来在你的文章中插入 **:(fa-brands fa-js fa-fw): Javascript** 脚本。
 
@@ -397,7 +405,7 @@ console.log('Hello FixIt!');
 console.log('Hello FixIt!');
 {{< /script >}}
 
-## details
+### details
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
@@ -427,7 +435,7 @@ console.log('Hello FixIt!');
 _All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
-## center-quote
+### center-quote
 
 {{< version 0.2.13 >}}
 
@@ -449,7 +457,7 @@ this is a center-quote shortcode example.
 this is a center-quote shortcode example.
 {{< /center-quote >}}
 
-## fixit-encryptor
+### fixit-encryptor
 
 {{< version 0.2.15 >}}
 
@@ -457,7 +465,7 @@ this is a center-quote shortcode example.
 
 完整文档请查看页面 [内容加密][content-encryption]。
 
-## raw
+### raw
 
 {{< version 0.2.16 >}}
 
@@ -493,7 +501,7 @@ this is a center-quote shortcode example.
 
 原始的带有 Markdown 和 HTML 语法的内容：{{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
-## reward
+### reward
 
 {{< version 0.2.18 changed >}}
 
@@ -519,6 +527,12 @@ this is a center-quote shortcode example.
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
 
+## 独立的组件
+
+TODO
+
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html -->
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
