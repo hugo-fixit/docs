@@ -45,7 +45,7 @@ Hugo 使用两种不同的算法来合并文件系统，取决于文件类型：
 
 这里也适用相同的规则：具有相同 ID 的最左边的参数/菜单等将获胜。上述内容中还存在一些隐藏的和实验性的命名空间支持，Hugo 将努力在未来改进，但鼓励主题作者创建自己的命名空间，以避免命名冲突。
 
-要了解 hugo 的主题组件以及如何使用它们，请访问 <https://gohugo.io/hugo-modules/theme-components/>。
+要了解 Hugo 主题组件以及如何使用它们，请访问 <https://gohugo.io/hugo-modules/theme-components/>。
 
 ## 案例展示
 
@@ -53,7 +53,13 @@ Hugo 使用两种不同的算法来合并文件系统，取决于文件类型：
 
 ## 开发教程
 
-前往 [如何开发一个 Hugo 主题组件][dev-component] 页面查看详情。
+> 前往 [如何开发一个 Hugo 主题组件][dev-component] 页面查看详情。
+
+如果你对组件有了一定的认知，并打算开启一个新的组件开发之旅，不妨试试用下面这个 GitHub 模板仓库创建你的组件骨架。
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/component-skeleton" >}}
+{{< /gh-repo-card-container >}}
 
 ## API 参考
 

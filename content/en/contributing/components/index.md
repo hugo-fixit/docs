@@ -45,7 +45,7 @@ Also note that a component that is part of a theme can have its own configuratio
 
 The same rules apply here: The left-most parameter/menu etc. with the same ID will win. There are some hidden and experimental namespace support in the above, which Hugo will work to improve in the future, but theme authors are encouraged to create their own namespaces to avoid naming conflicts.
 
-To learn about theme components of hugo and how to use them, check out <https://gohugo.io/hugo-modules/theme-components/>.
+To learn about theme components of Hugo and how to use them, check out <https://gohugo.io/hugo-modules/theme-components/>.
 
 ## Showcases
 
@@ -53,7 +53,13 @@ Visit [this page][components] to browse a collection of themes components create
 
 ## Development Tutorial
 
-Head to the [How to develop a Hugo theme component][dev-component] page for more details.
+> Head to the [How to develop a Hugo theme component][dev-component] page for more details.
+
+If you have a good understanding of components and are ready to start a new component development journey, you can try using the GitHub template repository below to create your component skeleton.
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/component-skeleton" >}}
+{{< /gh-repo-card-container >}}
 
 ## References
 
