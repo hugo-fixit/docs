@@ -25,20 +25,20 @@ The `douyin` shortcode embeds a responsive video player for douyin videos.
 Getting Video ID from PC at the video playing address, e.g.:
 
 ```code
-https://www.douyin.com/video/7370344193077644584
+https://www.douyin.com/video/7388149561765760266
 ```
 
 Example `douyin` input:
 
 ```go-html-template
-{{</* douyin 7370344193077644584 */>}}
+{{</* douyin 7388149561765760266 */>}}
 Or
-{{</* douyin id=7370344193077644584 */>}}
+{{</* douyin id=7388149561765760266 */>}}
 ```
 
 The rendered output looks like this:
 
-{{< douyin id=7370344193077644584 >}}
+{{< douyin id=7388149561765760266 >}}
 
 ## Options
 

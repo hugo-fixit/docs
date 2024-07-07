@@ -27,39 +27,39 @@ The `bilibili` shortcode embeds a responsive video player for bilibili videos.
 When the video only has one part, only the BV `id` of the video is required, e.g.:
 
 ```code
-https://www.bilibili.com/video/BV1Sx411T7QQ
+https://www.bilibili.com/video/BV19S411c7Wu
 ```
 
 Example `bilibili` input:
 
 ```go-html-template
-{{</* bilibili BV1Sx411T7QQ */>}}
+{{</* bilibili BV19S411c7Wu */>}}
 Or
-{{</* bilibili id=BV1Sx411T7QQ */>}}
+{{</* bilibili id=BV19S411c7Wu */>}}
 ```
 
 The rendered output looks like this:
 
-{{< bilibili id=BV1Sx411T7QQ >}}
+{{< bilibili id=BV19S411c7Wu >}}
 
 When the video has multiple parts, in addition to the BV `id` of the video,
 `p` is also required, whose default value is `1`, e.g.:
 
 ```code
-https://www.bilibili.com/video/BV1TJ411C7An?p=3
+https://www.bilibili.com/video/BV1kt411k7Rq?p=3
 ```
 
 Example `bilibili` input with `p`:
 
 ```go-html-template
-{{</* bilibili BV1TJ411C7An 3 */>}}
+{{</* bilibili BV1kt411k7Rq 3 */>}}
 Or
-{{</* bilibili id=BV1TJ411C7An p=3 */>}}
+{{</* bilibili id=BV1kt411k7Rq p=3 */>}}
 ```
 
 The rendered output looks like this:
 
-{{< bilibili id=BV1TJ411C7An p=3 >}}
+{{< bilibili id=BV1kt411k7Rq p=3 >}}
 
 ## Options
 

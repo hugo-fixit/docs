@@ -26,5 +26,5 @@ comment:
   description: <description of your site>
 ```
 
-> :(fa-solid fa-exclamation-triangle): *网站失效、停止维护、不当内容都可能被取消链接！*
+> :(fa-solid fa-exclamation-triangle): _网站失效、停止维护、不当内容都可能被取消链接！_
 {{< /admonition >}}
