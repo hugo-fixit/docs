@@ -28,13 +28,13 @@ reward: true
 
 <!--more-->
 
+## FixIt 主题内置
+
 根据需要使用这些 FixIt 主题扩展的 Shortcodes。
 
 {{< admonition tip >}}
 要覆盖 FixIt 主题扩展的 Shortcodes，请将 [源代码](https://github.com/hugo-fixit/FixIt/tree/master/layouts/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
 {{< /admonition >}}
-
-## 内置在 FixIt 主题
 
 ### style
 
@@ -445,16 +445,14 @@ _All pages and graphics on this web site are the property of FixIt._
 
 ```go-html-template
 {{</* center-quote */>}}
-**hello** *world*
-this is a center-quote shortcode example.
+this is a **center-quote** _shortcode_ example.
 {{</* /center-quote */>}}
 ```
 
 呈现的输出效果如下：
 
 {{< center-quote >}}
-**hello** _world_
-this is a center-quote shortcode example.
+this is a **center-quote** _shortcode_ example.
 {{< /center-quote >}}
 
 ### fixit-encryptor
@@ -527,9 +525,93 @@ this is a center-quote shortcode example.
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
 
-## 独立的组件
+## 额外的主题组件
 
-TODO
+FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。
+
+根据需要安装和使用这些额外的 Shortcodes。
+
+### gh-repo-card
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/component-projects" >}}
+{{< /gh-repo-card-container >}}
+
+`gh-repo-card-container` 和 `gh-repo-card` shortcodes 的文档见上面的 GitHub 仓库。
+
+一个 `gh-repo-card-container` 和 `gh-repo-card` 示例：
+
+```go-html-template
+{{</* gh-repo-card-container */>}}
+  {{</* gh-repo-card repo="hugo-fixit/FixIt" */>}}
+{{</* /gh-repo-card-container */>}}
+```
+
+呈现的输出效果如下：
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/FixIt" >}}
+{{< /gh-repo-card-container >}}
+
+### caniuse
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/shortcode-caniuse" >}}
+{{< /gh-repo-card-container >}}
+
+`caniuse` shortcode 的文档见上面的 GitHub 仓库。
+
+一个 `caniuse` 示例：
+
+```go-html-template
+{{</* caniuse "css-grid" */>}}
+```
+
+呈现的输出效果如下：
+
+{{< caniuse "css-grid" >}}
+
+### sponsor-log
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/shortcode-sponsor-log" >}}
+{{< /gh-repo-card-container >}}
+
+`sponsor-log` shortcode 的文档见上面的 GitHub 仓库。
+
+一个 `sponsor-log` 示例：
+
+```go-html-template
+{{</* sponsor-log */>}}
+```
+
+呈现的输出效果如下：
+
+{{< details summary="The rendered output looks like this:" >}}
+  {{< sponsor-log >}}
+{{< /details >}}
+
+### mmt-netease
+
+{{< gh-repo-card-container >}}
+  {{< gh-repo-card repo="hugo-fixit/shortcode-mmt-netease" >}}
+{{< /gh-repo-card-container >}}
+
+`mmt-netease` shortcode 的文档见上面的 GitHub 仓库。
+
+一个 `mmt-netease` 示例：
+
+```go-html-template
+{{</* mmt-netease mid="2280569152" autoplay="false" */>}}
+```
+
+呈现的输出效果如下（[demo][lruihao-guestbook]）：
+
+![mmt-netease preview](https://user-images.githubusercontent.com/33419593/221810055-bf78de27-8f5d-4ffa-bf02-f60c0939f169.png)
+
+---
+
+访问 [此页面][components] 浏览由 Hugo FixIt 社区创建的主题组件合集。
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html -->
@@ -553,3 +635,5 @@ TODO
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[lruihao-guestbook]: https://lruihao.cn/guestbook/
+[components]: {{< relref path="/components" >}}

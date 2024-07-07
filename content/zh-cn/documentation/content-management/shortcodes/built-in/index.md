@@ -269,6 +269,7 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [param]: https://gohugo.io/content-management/shortcodes/#param
 [ref]: https://gohugo.io/content-management/shortcodes/#ref
+[relref]: https://gohugo.io/content-management/shortcodes/#relref
 [twitter]: https://gohugo.io/content-management/shortcodes/#twitter
 [vimeo]: https://gohugo.io/content-management/shortcodes/#vimeo
 [youtube]: https://gohugo.io/content-management/shortcodes/#youtube

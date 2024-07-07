@@ -56,7 +56,7 @@ To override Hugo's embedded shortcode, copy the [source code](https://github.com
 
 ### figure {#figure}
 
-> [Documentation of `figure`][figure].
+> [Documentation of `figure` shortcode][figure].
 
 Example `figure` input:
 
@@ -81,7 +81,7 @@ The HTML looks like this:
 
 ### gist
 
-> [Documentation of `gist`][gist].
+> [Documentation of `gist` shortcode][gist].
 
 Example `gist` input:
 
@@ -101,7 +101,7 @@ The HTML looks like this:
 
 ### highlight
 
-> [Documentation of `highlight`][highlight].
+> [Documentation of `highlight` shortcode][highlight].
 
 Example `highlight` input:
 
@@ -133,7 +133,7 @@ The rendered output looks like this:
 
 ### instagram
 
-> [Documentation of `instagram`][instagram].
+> [Documentation of `instagram` shortcode][instagram].
 
 Example `instagram` input:
 
@@ -147,7 +147,7 @@ The rendered output looks like this:
 
 ### param
 
-> [Documentation of `param`][param].
+> [Documentation of `param` shortcode][param].
 
 Example `param` input:
 
@@ -161,7 +161,7 @@ The rendered output looks like this:
 
 ### ref
 
-> [Documentation of `ref`][ref].
+> [Documentation of `ref` shortcode][ref].
 >
 > Always use the `{{%/* */%}}` notation when calling this shortcode.
 
@@ -188,7 +188,7 @@ The HTML looks like this:
 
 ### relref
 
-> [Documentation of `relref`][relref].
+> [Documentation of `relref` shortcode][relref].
 >
 > Always use the `{{%/* */%}}` notation when calling this shortcode.
 
@@ -215,7 +215,7 @@ The HTML looks like this:
 
 ### twitter
 
-[Documentation of `twitter`][twitter]
+[Documentation of `twitter` shortcode][twitter]
 
 Example `twitter` input:
 
@@ -229,7 +229,7 @@ The rendered output looks like this:
 
 ### vimeo
 
-[Documentation of `vimeo`][vimeo]
+[Documentation of `vimeo` shortcode][vimeo]
 
 Example `vimeo` input:
 
@@ -243,7 +243,7 @@ The rendered output looks like this:
 
 ### youtube
 
-[Documentation of `youtube`][youtube]
+[Documentation of `youtube` shortcode][youtube]
 
 Example `youtube` input:
 
@@ -270,6 +270,7 @@ To learn how to configure your Hugo site to meet the new EU privacy regulation, 
 [instagram]: https://gohugo.io/content-management/shortcodes/#instagram
 [param]: https://gohugo.io/content-management/shortcodes/#param
 [ref]: https://gohugo.io/content-management/shortcodes/#ref
+[relref]: https://gohugo.io/content-management/shortcodes/#relref
 [twitter]: https://gohugo.io/content-management/shortcodes/#twitter
 [vimeo]: https://gohugo.io/content-management/shortcodes/#vimeo
 [youtube]: https://gohugo.io/content-management/shortcodes/#youtube
