@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - music
+linkTitle: Music Shortcode
 date: 2023-02-24T22:50:50+08:00
 type: posts
 aliases:

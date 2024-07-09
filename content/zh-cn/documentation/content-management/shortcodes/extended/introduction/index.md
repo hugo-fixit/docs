@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcodes 概述
+linkTitle: 概述
 date: 2023-02-24T22:11:39+08:00
 type: posts
 aliases:

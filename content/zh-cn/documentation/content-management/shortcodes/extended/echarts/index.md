@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - echarts
+linkTitle: Echarts Shortcode
 date: 2023-02-24T22:40:40+08:00
 type: posts
 aliases:

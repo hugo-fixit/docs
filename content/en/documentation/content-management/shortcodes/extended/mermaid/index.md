@@ -1,5 +1,6 @@
 ---
 title: Extended Shortcode - mermaid
+linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
 type: posts
 aliases:
