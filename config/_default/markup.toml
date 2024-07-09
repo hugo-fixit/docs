@@ -6,54 +6,13 @@
 # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
 # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
 [highlight]
-  ######## 必要配置 necessary configuration ########
-  # https://github.com/hugo-fixit/FixIt/issues/43
-  codeFences = true
-  lineNos = true
-  lineNumbersInTable = true
-  noClasses = false
-  ######## 必要配置 necessary configuration ########
-  guessSyntax = true
+  _merge = "shallow"
 
 # Goldmark is from Hugo 0.60 the default library used for Markdown
 # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+# https://gohugo.io/getting-started/configuration-markup/#goldmark
 [goldmark]
-  [goldmark.extensions]
-    definitionList = true
-    footnote = true
-    linkify = true
-    strikethrough = false
-    table = true
-    taskList = true
-    typographer = true
-  # https://gohugo.io/getting-started/configuration-markup/#extras
-  [goldmark.extensions.extras]
-    [goldmark.extensions.extras.delete]
-      enable = true
-    [goldmark.extensions.extras.insert]
-      enable = true
-    [goldmark.extensions.extras.mark]
-      enable = true
-    [goldmark.extensions.extras.subscript]
-      enable = true
-    [goldmark.extensions.extras.superscript]
-      enable = true
-    # TODO passthrough refactor https://gohugo.io/getting-started/configuration-markup/#parserattributeblock
-    # TODO hugo 0.122.0 https://gohugo.io/content-management/mathematics/
-  [goldmark.parser]
-    autoHeadingID = true
-    autoHeadingIDType = "github"
-    wrapStandAloneImageWithinParagraph = true
-    [goldmark.parser.attribute]
-      block = true
-      title = true
-  [goldmark.renderer]
-    # By default, Goldmark ignores newlines within a paragraph. Set to true to render newlines as <br> elements.
-    # 默认情况下，Goldmark 会忽略段落中的换行符。设置为 true 将换行符呈现为 <br> 元素。
-    hardWraps = false
-    # whether to use HTML tags directly in the document
-    # 是否在文档中直接使用 HTML 标签
-    unsafe = true
+  _merge = "shallow"
 
 # Table Of Contents settings
 # 目录设置

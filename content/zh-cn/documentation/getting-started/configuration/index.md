@@ -45,6 +45,32 @@ echo "theme = 'FixIt'" >> hugo.toml
 
 更多细节可以在 [配置 Hugo][hugo-config] 页面找到。
 
+## 合并配置 {#merge-configuration}
+
+如果你不需要像上面的默认设置那样那么详细，你也可以 [从主题中合并配置][merge-config-from-themes]。
+
+例如，从 FixIt 主题中合并 `markup.highlight` 和 `markup.goldmark` 配置：
+
+```toml
+[markup]
+  [markup.highlight]
+    _merge = "shallow"
+
+  [markup.goldmark]
+    _merge = "shallow"
+```
+
+`_merge` 的配置值可以是以下之一：
+
+none
+: 不合并。
+
+shallow
+: 只为新键添加值。
+
+deep
+: 为新键添加值，合并现有值。
+
 ## 菜单配置 {#menu-configuration}
 
 Hugo 有一个简单而强大的 [菜单系统][menu-system]。
@@ -1538,9 +1564,11 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 
 ![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
 
+<!-- link reference definition -->
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/getting-started/configuration/
+[merge-config-from-themes]: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html

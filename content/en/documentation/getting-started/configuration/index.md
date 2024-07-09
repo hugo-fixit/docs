@@ -45,6 +45,32 @@ For advanced use, you can also split your configuration by environment, root con
 
 More details can be found in the [Configure Hugo][hugo-config] page.
 
+## Merge configuration
+
+If you don’t need to be so verbose as in the default setup above, you can also [merge configuration from themes][merge-config-from-themes].
+
+For example, merge the `markup.highlight` and `markup.goldmark` configuration from the FixIt theme:
+
+```toml
+[markup]
+  [markup.highlight]
+    _merge = "shallow"
+
+  [markup.goldmark]
+    _merge = "shallow"
+```
+
+The configuration value for `_merge` can be one of:
+
+none
+: No merge.
+
+shallow
+: Only add values for new keys.
+
+deep
+: Add values for new keys, merge existing.
+
 ## Menu Configuration {#menu-configuration}
 
 Hugo has a simple yet powerful [menu system][menu-system].
@@ -1545,9 +1571,11 @@ They're easily created via <https://realfavicongenerator.net/>.
 
 ![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
 
+<!-- link reference definition -->
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/getting-started/configuration/
+[merge-config-from-themes]: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
