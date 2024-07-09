@@ -1,0 +1,15 @@
+# Translations for Simplified Chinese
+# 简体中文的翻译
+# 对于页面的翻译，可以在 Front Matter 中设置 `translationKey`
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === Translations for pages ===
+["/documentation/content-management/shortcodes/extended"]
+breadcrumbTitle = "扩展"
+["/documentation/content-management/shortcodes/built-in"]
+breadcrumbTitle = "内置"
+["/documentation/content-management/markdown-syntax/basics"]
+breadcrumbTitle = "基本语法"
+["/documentation/content-management/markdown-syntax/extended"]
+breadcrumbTitle = "扩展语法"
+# === Translations for pages ===
