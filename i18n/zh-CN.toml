@@ -6,6 +6,8 @@
 # === Translations for pages ===
 ["/documentation/content-management/shortcodes/extended"]
 breadcrumbTitle = "扩展"
+["/documentation/content-management/shortcodes/extended/introduction"]
+breadcrumbTitle = "概述"
 ["/documentation/content-management/shortcodes/built-in"]
 breadcrumbTitle = "内置"
 ["/documentation/content-management/markdown-syntax/basics"]
