@@ -1,5 +1,5 @@
 ---
-title: 如何开发一个 Hugo 主题组件
+title: How to Develop a Hugo Theme Component
 date: 2024-06-27T17:35:29+08:00
 categories:
   - Guides
@@ -8,38 +8,38 @@ tags:
   - Customization
   - Shortcodes
   - Components
-description: 本文将通过开发一个 caniuse shortcode 来演示如何创建一个 Hugo 主题组件。
+description: This article will demonstrate how to create a Hugo theme component by developing a caniuse shortcode.
 resources:
   - name: featured-image
     src: featured-image.webp
 type: posts
 ---
 
-本文将通过开发一个 `caniuse` shortcode 来演示如何创建一个 Hugo 主题组件。
+This article will demonstrate how to create a Hugo theme component by developing a caniuse shortcode.
 
 <!--more-->
 
-## 简介
+## Introduction
 
-本文旨在阐述从 0 到 1 开发一个组件的过程，而不会过度解读组件的概念和原理。关于 Hugo 主题组件的更多信息，请参阅 [贡献指南 / 开发组件][components] 页面。
+This article aims to outline the process of developing a component from scratch without delving too deeply into the concept and principles of components. For more information on Hugo theme components, please refer to the [Contributing / Develop Theme Components][components] page.
 
-本文案例开源在 GitHub [hugo-fixit][hugo-fixit] 组织下。
+This case study is open-sourced on GitHub under the [hugo-fixit][hugo-fixit] organization.
 
 {{< gh-repo-card-container >}}
   {{< gh-repo-card repo="hugo-fixit/shortcode-caniuse" >}}
 {{< /gh-repo-card-container >}}
 
-## 创建组件骨架
+## Creating Component Skeleton
 
-创建组件和创建主题是一样的，可以通过 `hugo new theme` 命令来创建一个新的主题组件。
+Creating a component is similar to creating a theme, and you can use the `hugo new theme` command to create a new theme component.
 
 ```bash
 hugo new theme shortcode-caniuse
 ```
 
-上述命令会在 `themes` 目录创建一个 `shortcode-caniuse` 的文件夹，它是一个完整的 Hugo 主题目录结构。
+The above command creates a folder named `shortcode-caniuse` in the `themes` directory, which has a complete Hugo theme directory structure.
 
-由于我们只需要开发一个包含 shortcode 的组件，所以可以删除不需要的文件，删除后的目录结构如下：
+Since we only need to develop a component that includes a shortcode, you can delete unnecessary files. The directory structure after deletion is as follows:
 
 ```plaintext
 ./
@@ -54,7 +54,7 @@ hugo new theme shortcode-caniuse
 └── theme.toml
 ```
 
-为了之后能同时兼容 Git submodule 和 Hugo Modules 的安装方式，还需初始化 Git 仓库和 `go.mod` 文件：
+To be compatible with both Git submodule and Hugo Modules installation methods later on, you also need to initialize a Git repository and a `go.mod` file:
 
 ```bash
 git init
@@ -62,11 +62,11 @@ git remote add origin git@github.com:hugo-fixit/shortcode-caniuse.git
 go mod init github.com/hugo-fixit/shortcode-caniuse
 ```
 
-## 创建 Shortcode
+## Creating Shortcode
 
-在 `layouts/shortcodes` 目录下创建一个名为 `caniuse.html` 的文件。
+Create a file named `caniuse.html` in the `layouts/shortcodes` directory.
 
-根据 [The CanIUse Embed][caniuse-embed] 的使用说明，编写 shortcode 内容如下：
+According to the usage instructions of [The CanIUse Embed][caniuse-embed], write the shortcode content as follows:
 
 ```go-html-template {title="caniuse.html"}
 {{- /* 
@@ -83,11 +83,11 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 {{- /* EOF */ -}}
 ```
 
-## 创建 JS 文件
+## Creating JS File
 
-为了在 FixIt 主题切换黑白主题色的同时，shortcode 也跟着改变主题色，我们可以通过 JS 处理。
+In order to change the theme color of the FixIt theme to black and light, we can also change the theme color of the shortcode by using JS.
 
-在 `assets/js` 目录下创建一个名为 `shortcode-caniuse.js` 的文件，在里面写入切换主题逻辑处理：
+Create a file named `shortcode-caniuse.js` in the `assets/js` directory and write the theme switch logic as follows:
 
 ```js
 function setCanIUseEmbedsTheme(allCanIUseEmbeds, isDark) {
@@ -115,11 +115,11 @@ if (document.readyState !== 'loading') {
 }
 ```
 
-## 创建 Partial
+## Creating Partial
 
-在 `layouts/partials/inject` 目录下创建一个名为 `shortcode-caniuse.html` 的文件。
+Create a file named `shortcode-caniuse.html` in the `layouts/partials/inject` directory.
 
-引用第三方插件和组件本身的 JS 资源，内容如下：
+Reference third-party plugins and the JS resources of the component itself, with the content as follows:
 
 ```go-html-template {title="shortcode-caniuse.html"}
 {{- if .HasShortcode "caniuse" -}}
@@ -141,17 +141,17 @@ if (document.readyState !== 'loading') {
 {{- end -}}
 ```
 
-## 发布组件
+## Publishing Component
 
-发布之前，更新一下 `LICENSE`、`README.md` 和 `theme.toml` 文件，然后提交到远程仓库即可。
+Before publishing, update the `LICENSE`, `README.md`, and `theme.toml` files, then commit to the remote repository.
 
-## 如何使用
+## How to Use
 
-### 安装组件
+### Install Component
 
-和 [安装主题][installation] 一样，安装方式有多种，选择其一即可，例如通过 Hugo Modules 安装：
+The installation method is the same as [installing a theme][installation]. There are several ways to install, choose one, for example, install through Hugo Modules:
 
-```diff {title="hugo.toml"}
+```diff
 [module]
   [[module.imports]]
     path = "github.com/hugo-fixit/FixIt"
@@ -159,11 +159,11 @@ if (document.readyState !== 'loading') {
 +   path = "github.com/hugo-fixit/shortcode-caniuse"
 ```
 
-### 注入 Partial
+### Inject Partial
 
 {{< version 0.3.9 >}}
 
-通过 FixIt 主题开放的自定义块，在 `layouts/partials/custom.html` 文件将 `shortcode-caniuse.html` 注入到 `custom-assets` 中：
+Inject the `shortcode-caniuse.html` into the `custom-assets` through the custom block opened by the FixIt theme in the `layouts/partials/custom.html` file:
 
 ```go-html-template
 {{- define "custom-assets" -}}
@@ -171,35 +171,37 @@ if (document.readyState !== 'loading') {
 {{- end -}}
 ```
 
-### 使用 Shortcode
+### Use Shortcode
 
-`caniuse` shortcode 有以下命名参数：
+The `caniuse` shortcode has the following named parameters:
 
-- **feature** _[必需]_（**第一个**位置参数）特性名称
-- **past** _[可选]_（**第二个**位置参数）显示过去 N 个版本，范围是 `0 - 5`，默认为 `2`
-- **future** _[可选]_（**第三个**位置参数）显示未来 N 个版本，范围是 `0 - 3`，默认为 `1`
+- **feature** _[required]_ (**first** positional parameter) Feature name
+- **past** _[optional]_ (**second** positional parameter) Show the past N versions that match the feature, range is `0 - 5`, default is `2`
+- **future** _[optional]_ (**third** positional parameter) Show the future N versions that match the feature, range is `0 - 3`, default is `1`
 
-> 点击 `caniuse.com` 网站上功能左边 `#` 号，URL 中的 `pathname` 即为 `feature` 参数。
+> Click on the `#` next to a feature on the `caniuse.com` website, and the `pathname` in the URL is the `feature` parameter.
 
-这是一个用法示例：
+Here is an example of usage:
 
 ```markdown
 {{</* caniuse feature="css-grid" */>}}
-或者
+or
 {{</* caniuse "css-grid" */>}}
 ```
 
-呈现效果如下：
+The presentation effect is as follows:
 
+```
 {{< caniuse "css-grid" >}}
+```
 
-## 参考
+## References
 
 - [Can I use... Support tables for HTML5, CSS3, etc][caniuse]
 - [The CanIUse Embed — Add support tables to your site][caniuse-embed]
-- [贡献指南 / 开发组件][components]
+- [Contributing / Develop Theme Components][components]
 
-## 致谢
+## Acknowledgements
 
 - [mdn-browser-compat-data][mdn-browser-compat-data]
 - [Fyrd/caniuse][Fyrd/caniuse]
