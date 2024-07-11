@@ -9,7 +9,7 @@
   enable = false
   # Check for updates
   c4u = true
-  # Mobile Devtools confi
+  # Mobile Devtools config
   [dev.mDevtools]
     enable = false
     # "vConsole", "eruda" supported

@@ -9,7 +9,7 @@ math: true
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.123.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.127.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 [![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
 [![GitHub forks](https://img.shields.io/github/forks/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt/fork)
