@@ -74,7 +74,7 @@ categories:
 
 ### Advanced use
 
-FixIt Dcryptor has two lifecycle hooks, see [Class FixItDecryptor API](#fixit-decryptor-api)
+FixIt Dcryptor has two lifecycle hooks, see [Class FixItDecryptor API]({{< relref "/references/fixIt-decryptor" >}}).
 
 For example, after unlocking the article, output the text:
 
@@ -176,72 +176,3 @@ Compared with encrypting content through script batch processing such as golang/
 > "The simplest password is enough to prevent 90% of people!"
 >
 > There is no trivial matter about privacy. Please do not upload important and private contents, and keep them properly!
-
----
-
-<!-- move to references -->
-
-## Class FixItDecryptor API {#fixit-decryptor-api}
-
-FixIt decryptor for encrypted pages
-
-### new FixItDecryptor(options)
-
-| Name    | Type   | Description                                          |
-| ------- | ------ | ---------------------------------------------------- |
-| options | Object | The options of FixItDecryptor（[Options](#options)） |
-
-#### Options
-
-| Name              | Type     | Attributes   | Default | Description                                               |
-| ----------------- | -------- | ------------ | ------- | --------------------------------------------------------- |
-| decrypted         | Function | \<optional\> |         | [Lifecycle Hooks] handler after decrypting                |
-| partialDecrypted | Function | \<optional\> |         | [Lifecycle Hooks] handler after partially decrypting      |
-| reset             | Function | \<optional\> |         | [Lifecycle Hooks] handler after encrypting again          |
-| duration          | Number   | \<optional\> | 86400   | number of seconds to cache decryption statistics. unit: s |
-
-### Methods
-
-#### init()
-
-initialize FixIt decryptor
-
-#### initShortcodes()
-
-initialize fixit-encryptor shortcodes
-
-#### validateCache()
-
-validate the cached decryption statistics in localStorage
-
-#### addEventListener(event, listener)
-
-add event listener for FixIt Decryptor
-
-| Name     | Type     | Description   |
-| -------- | -------- | ------------- |
-| event    | String   | event name    |
-| listener | Function | event handler |
-
-#### removeEventListener(event, listener)
-
-remove event listener for FixIt Decryptor
-
-| Name     | Type     | Description   |
-| -------- | -------- | ------------- |
-| event    | String   | event name    |
-| listener | Function | event handler |
-
-### Events
-
-#### decrypted
-
-after decrypting
-
-#### partial-decrypted
-
-after partially decrypting
-
-#### reset
-
-after encrypting again

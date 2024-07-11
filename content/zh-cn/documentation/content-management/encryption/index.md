@@ -72,7 +72,7 @@ categories:
 
 ### 进阶使用
 
-FixIt Dcryptor 有两个生命周期钩子函数，详见 [Class FixItDecryptor API]({{< relref path="/documentation/content-management/encryption#fixit-decryptor-api" lang="en" >}})
+FixIt Dcryptor 有两个生命周期钩子函数，详见 [Class FixItDecryptor API]({{< relref path="/references/fixIt-decryptor" lang="en" >}})。
 
 例如在解锁文章后，输出文本：
 
