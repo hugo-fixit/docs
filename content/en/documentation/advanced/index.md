@@ -19,13 +19,6 @@ tags:
 reward: true
 toc:
   auto: false
-menu:
-  main:
-    title: Discover advanced usage of the Hugo - FixIt theme.
-    parent: documentation
-    weight: 4
-    params:
-      icon: fa-brands fa-readme
 ---
 <!-- markdownlint-disable-file MD052 -->
 Discover advanced usage of the Hugo - **FixIt** theme.

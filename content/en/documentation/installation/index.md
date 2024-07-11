@@ -12,13 +12,6 @@ tags:
 resources:
   - name: featured-image
     src: cover.webp
-menu:
-  main:
-    title: Install FixIt Theme for your Hugo site in a few steps.
-    parent: documentation
-    weight: 1
-    params:
-      icon: fa-brands fa-readme
 ---
 
 Install **FixIt** theme for your Hugo site in a few steps.

@@ -104,6 +104,8 @@ The following is a complete menu item configuration:
       icon = ""
       # {{< version 0.2.16 >}} set menu item type, optional values: ["mobile", "desktop"]
       type = ""
+      # {{< version 0.3.9 >}} whether to show the submenu item divider line
+      divided = false
 ```
 
 {{< admonition note "Sub Menu" >}}

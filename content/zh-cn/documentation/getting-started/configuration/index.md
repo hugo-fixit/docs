@@ -104,6 +104,8 @@ Hugo 有一个简单而强大的 [菜单系统][menu-system]。
       icon = ""
       # {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
       type = ""
+      # {{< version 0.3.9 >}} 是否显示子菜单项分割线
+      divided = false
 ```
 
 {{< admonition note "子菜单" >}}
