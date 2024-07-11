@@ -116,10 +116,6 @@
       "path": "[[workspace]]/content/zh-cn/references"
     },
     {
-      "title": "faq",
-      "path": "[[workspace]]/content/zh-cn/faq"
-    },
-    {
       "title": "documentation",
       "path": "[[workspace]]/content/zh-cn/documentation"
     },
@@ -138,10 +134,6 @@
     {
       "title": "tests",
       "path": "[[workspace]]/content/en/tests"
-    },
-    {
-      "title": "faq",
-      "path": "[[workspace]]/content/en/faq"
     },
     {
       "title": "documentation",

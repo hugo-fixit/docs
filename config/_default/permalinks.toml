@@ -5,5 +5,4 @@
 
 # posts = ":year/:month/:filename"
 documentation = ":sections[0:]/:slugorfilename"
-faq = "faq/:slugorfilename"
 guides = "guides/:slugorfilename"
