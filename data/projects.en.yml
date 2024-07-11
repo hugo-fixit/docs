@@ -1,3 +1,7 @@
+- title: ❤️‍🔥 Core & Docs
+  repos:
+    - hugo-fixit/FixIt
+    - hugo-fixit/docs
 - title: 🧩 Shortcodes components
   repos:
     - hugo-fixit/component-projects
@@ -7,16 +11,13 @@
 - title: 🧩 Layout components
   repos:
     - hugo-fixit/component-projects
-- title: 🧩 Other components
+- title: 🛠️ Tools
+  repos:
+    - hugo-fixit/component-skeleton
+    - hugo-fixit/fixit-cli
+    - hugo-fixit/hugo-shell
+    - hugo-fixit/.tools
+- title: 👾 Third party
   description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d
-- title: 🛠️ Templates & Tools
-  repos:
-    - hugo-fixit/hugo-fixit-starter
-    - hugo-fixit/hugo-fixit-starter1
-    - hugo-fixit/component-skeleton
-    - hugo-fixit/docs
-    - Lruihao/hugo-blog
-    - hugo-fixit/fixit-cli
-    - hugo-fixit/hugo-shell

@@ -1,3 +1,7 @@
+- title: ❤️‍🔥 核心主题 & 文档
+  repos:
+    - hugo-fixit/FixIt
+    - hugo-fixit/docs
 - title: 🧩 Shortcodes 组件
   repos:
     - hugo-fixit/component-projects
@@ -7,16 +11,13 @@
 - title: 🧩 布局组件
   repos:
     - hugo-fixit/component-projects
-- title: 🧩 其他组件
+- title: 🛠️ 工具
+  repos:
+    - hugo-fixit/component-skeleton
+    - hugo-fixit/fixit-cli
+    - hugo-fixit/hugo-shell
+    - hugo-fixit/.tools
+- title: 👾 第三方
   description: "欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。"
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d
-- title: 🛠️ 模板 & 工具
-  repos:
-    - hugo-fixit/hugo-fixit-starter
-    - hugo-fixit/hugo-fixit-starter1
-    - hugo-fixit/component-skeleton
-    - hugo-fixit/docs
-    - Lruihao/hugo-blog
-    - hugo-fixit/fixit-cli
-    - hugo-fixit/hugo-shell
