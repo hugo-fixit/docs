@@ -8,6 +8,9 @@ hiddenFromHomePage: true
 reward: true
 related:
   enable: false
+menu:
+  main:
+    parent: contributing
 ---
 <!-- markdownlint-disable-file reference-links-images -->
 If you've built a Hugo theme components and want to contribute back to the Hugo FixIt Community, please share it with us.

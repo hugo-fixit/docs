@@ -7,4 +7,7 @@ keywords:
   - hugo-fixit
   - FixIt
   - Contribution
+menu:
+  main:
+    parent: contributing
 ---

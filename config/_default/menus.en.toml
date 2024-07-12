@@ -12,32 +12,6 @@
   [main.params]
     icon = "fa-regular fa-newspaper"
 [[main]]
-  identifier = "guides"
-  parent = "documentation"
-  name = "Guides"
-  url = "guides/"
-  weight = 2
-  [main.params]
-    icon = "fa-regular fa-compass"
-[[main]]
-  identifier = "references"
-  parent = "documentation"
-  name = "References"
-  url = "references/"
-  weight = 3
-  [main.params]
-    icon = "fa-solid fa-microchip"
-[[main]]
-  identifier = "contributing"
-  parent = "documentation"
-  name = "Contributing"
-  title = "Contribute to the FixIt project"
-  url = "contributing/overview/"
-  weight = 4
-  [main.params]
-    icon = "fa-solid fa-heart-circle-bolt text-danger fa-beat"
-    # class = "fa-bounce"
-[[main]]
   identifier = "releases"
   parent = "documentation"
   name = "Releases"

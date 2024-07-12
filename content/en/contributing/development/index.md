@@ -8,6 +8,9 @@ hiddenFromHomePage: true
 reward: true
 related:
   enable: false
+menu:
+  main:
+    parent: contributing
 ---
 
 Contribute to the development of FixIt.
