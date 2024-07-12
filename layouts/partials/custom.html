@@ -3,14 +3,7 @@
 {{- end -}}
 
 {{- define "custom-profile" -}}
-  <div class="profile-custom">
-    {{- if .Site.BuildDrafts -}}
-      {{- $title := cond (eq .Language.Lang "zh-cn") "前往预览环境" "Go to Preview Environment" -}}
-      <a href="https://pre.fixit.lruihao.cn" target="_blank" rel="external" title="{{ $title }}">
-        <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
-      </a>
-    {{- end -}}
-  </div>
+  {{- partial "custom/profile.html" . -}}
 {{- end -}}
 
 {{- define "custom-aside" -}}

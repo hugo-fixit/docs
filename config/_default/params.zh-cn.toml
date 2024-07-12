@@ -3,7 +3,7 @@
 # See: https://fixit.lruihao.cn/zh-cn/documentation/basics/#theme-configuration
 # -------------------------------------------------------------------------------------
 
-description = "Hugo 主题 - FixIt"
+description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"
 
 [gitInfo]
   dir = "content/zh-cn"
