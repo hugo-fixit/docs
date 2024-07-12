@@ -19,14 +19,6 @@ tags:
 reward: true
 toc:
   auto: false
-menu:
-  main:
-    name: 进阶篇
-    title: 探索 Hugo - FixIt 主题的的进阶使用。
-    parent: documentation
-    weight: 4
-    params:
-      icon: fa-brands fa-readme
 ---
 <!-- markdownlint-disable-file MD052 -->
 探索 Hugo - **FixIt** 主题的的进阶使用。

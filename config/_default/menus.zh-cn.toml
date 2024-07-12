@@ -4,123 +4,74 @@
 # -------------------------------------------------------------------------------------
 
 [[main]]
-  identifier = "documentation"
-  name = "文档"
-  url = "/categories/documentation/"
-  title = "主题文档"
-  weight = 1
+  identifier = "releases"
+  parent = "documentation"
+  name = "版本发布"
+  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
+  url = "https://github.com/hugo-fixit/FixIt/releases"
+  weight = 5
   [main.params]
-    icon = "fa-regular fa-newspaper"
+    icon = "fa-solid fa-code-branch"
+[[main]]
+  identifier = "archives"
+  parent = "documentation"
+  name = "归档"
+  url = "archives/"
+  weight = 20
+  [main.params]
+    icon = "fa-solid fa-archive"
+    divided = true
+[[main]]
+  identifier = "categories"
+  parent = "documentation"
+  name = "分类"
+  url = "categories/"
+  weight = 21
+  [main.params]
+    icon = "fa-solid fa-folder-tree"
+[[main]]
+  identifier = "collections"
+  parent = "documentation"
+  name = "合集"
+  url = "collections/"
+  weight = 22
+  [main.params]
+    icon = "fa-solid fa-layer-group"
+[[main]]
+  identifier = "tags"
+  parent = "documentation"
+  name = "标签"
+  url = "tags/"
+  weight = 23
+  [main.params]
+    icon = "fa-solid fa-tags"
+
+[[main]]
+  identifier = "showcase"
+  name = "案例展示"
+  url = "showcase/"
+  weight = 31
+  [main.params]
+    icon = "fa-solid fa-blog"
+
+# TODO 新增 Community 页面（Hugo FixIt README、讨论、QQ 群、知识星球），开启评论
+[[main]]
+  identifier = "community"
+  name = "社区支持"
+  url = "https://github.com/hugo-fixit/FixIt/discussions"
+  weight = 40
+  [main.params]
+    icon = "fa-regular fa-comments"
 
 [[main]]
   identifier = "tests"
   name = "测试"
   url = "tests/"
   title = "FixIt 测试文章"
-  weight = 3
+  weight = 90
   [main.params]
     draft = true
     icon = "fa-solid fa-flask text-success"
-
-[[main]]
-  identifier = "archives"
-  name = "归档"
-  url = "archives/"
-  weight = 10
-  [main.params]
-    icon = "fa-solid fa-archive"
-[[main]]
-  identifier = "categories"
-  parent = "archives"
-  name = "分类"
-  url = "categories/"
-  weight = 11
-  [main.params]
-    icon = "fa-solid fa-folder-tree"
-[[main]]
-  identifier = "collections"
-  parent = "archives"
-  name = "合集"
-  url = "collections/"
-  weight = 12
-  [main.params]
-    icon = "fa-solid fa-layer-group"
-[[main]]
-  identifier = "tags"
-  parent = "archives"
-  name = "标签"
-  url = "tags/"
-  weight = 13
-  [main.params]
-    icon = "fa-solid fa-tags"
-
-[[main]]
-  identifier = "about"
-  name = "关于"
-  url = "about/"
-  weight = 20
-  [main.params]
-    icon = "fa-solid fa-signature"
-[[main]]
-  identifier = "releases"
-  parent = "about"
-  name = "版本发布"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
-  url = "https://github.com/hugo-fixit/FixIt/releases"
-  weight = 21
-  [main.params]
-    icon = "fa-solid fa-code-branch"
-[[main]]
-  identifier = "community"
-  parent = "about"
-  name = "社区讨论"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
-  url = "https://github.com/hugo-fixit/FixIt/discussions"
-  weight = 22
-  [main.params]
-    icon = "fa-regular fa-comments"
-[[main]]
-  identifier = "guides"
-  parent = "about"
-  name = "相关教程"
-  url = "guides/"
-  weight = 23
-  [main.params]
-    icon = "fa-regular fa-compass"
-[[main]]
-  identifier = "components"
-  parent = "about"
-  name = "主题组件"
-  url = "components/"
-  weight = 24
-  [main.params]
-    icon = "fa-solid fa-puzzle-piece"
-[[main]]
-  identifier = "showcase"
-  parent = "about"
-  name = "案例展示"
-  url = "showcase/"
-  weight = 25
-  [main.params]
-    icon = "fa-solid fa-blog"
-[[main]]
-  identifier = "references"
-  parent = "about"
-  name = "API 参考"
-  url = "references/"
-  weight = 26
-  [main.params]
-    icon = "fa-solid fa-microchip"
-[[main]]
-  identifier = "contributing"
-  parent = "about"
-  name = "贡献指南"
-  title = "为 FixIt 项目做贡献"
-  url = "contributing/overview/"
-  weight = 27
-  [main.params]
-    icon = "fa-solid fa-heart-circle-bolt text-danger fa-beat"
-    class = "fa-bounce"
 
 [[main]]
   identifier = "github"

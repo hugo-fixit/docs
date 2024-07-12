@@ -10,6 +10,13 @@ keyword:
   - Hugo
   - FixIt
   - theme components
+menu:
+  main:
+    identifier: components
+    name: 主题组件
+    weight: 30
+    params:
+      icon: fa-solid fa-puzzle-piece
 ---
 
 ![Hugo FixIt Components](/images/components-cover.webp)

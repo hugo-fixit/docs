@@ -12,13 +12,6 @@ tags:
 resources:
   - name: featured-image
     src: cover.webp
-menu:
-  main:
-    title: 只需几个步骤即可为你的 Hugo 站点安装 FixIt 主题。
-    parent: documentation
-    weight: 1
-    params:
-      icon: fa-brands fa-readme
 ---
 
 只需几个步骤即可为你的 Hugo 站点安装 **FixIt** 主题。

@@ -8,6 +8,9 @@ hiddenFromHomePage: true
 reward: true
 related:
   enable: false
+menu:
+  main:
+    parent: contributing
 ---
 
 通过发现问题并提出更改来帮助我们改进文档。

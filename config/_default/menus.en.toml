@@ -4,14 +4,6 @@
 # -------------------------------------------------------------------------------------
 
 [[main]]
-  identifier = "documentation"
-  name = "Docs"
-  url = "/documentation/"
-  title = "Theme Documentation"
-  weight = 1
-  [main.params]
-    icon = "fa-regular fa-newspaper"
-[[main]]
   identifier = "releases"
   parent = "documentation"
   name = "Releases"
@@ -55,15 +47,6 @@
     icon = "fa-solid fa-tags"
 
 [[main]]
-  identifier = "components"
-  name = "Components"
-  title = "Hugo FixIt Components"
-  url = "components/"
-  weight = 30
-  [main.params]
-    icon = "fa-solid fa-puzzle-piece"
-
-[[main]]
   identifier = "showcase"
   name = "Showcase"
   url = "showcase/"
@@ -75,7 +58,6 @@
 [[main]]
   identifier = "community"
   name = "Community"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
   url = "https://github.com/hugo-fixit/FixIt/discussions"
   weight = 40
   [main.params]

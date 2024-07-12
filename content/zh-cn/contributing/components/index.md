@@ -8,6 +8,9 @@ hiddenFromHomePage: true
 reward: true
 related:
   enable: false
+menu:
+  main:
+    parent: contributing
 ---
 
 如果你已经构建了一个 Hugo 主题组件，并希望贡献给 Hugo FixIt 社区，请与我们分享。

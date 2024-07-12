@@ -11,7 +11,7 @@ menu:
     identifier: guides
     parent: documentation
     name: Guides
-    title: All Guides
+    title: Related Guides
     weight: 2
     params:
       icon: fa-regular fa-compass

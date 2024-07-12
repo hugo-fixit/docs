@@ -6,4 +6,12 @@ keywords:
   - Hugo
   - FixIt
   - 教程
+menu:
+  main:
+    identifier: guides
+    parent: documentation
+    name: 相关教程
+    weight: 2
+    params:
+      icon: fa-regular fa-compass
 ---
