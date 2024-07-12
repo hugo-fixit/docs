@@ -98,7 +98,6 @@
     icon = "fa-solid fa-blog"
 
 # TODO 新增 Community 页面（Hugo FixIt README、讨论、QQ 群、知识星球），开启评论
-# Sponsor 打赏记录迁移至此
 [[main]]
   identifier = "community"
   name = "Community"
@@ -107,15 +106,6 @@
   weight = 40
   [main.params]
     icon = "fa-regular fa-comments"
-
-# TODO 删除 about 页面，以 README 为准
-# [[main]]
-#   identifier = "about"
-#   name = "About"
-#   url = "about/"
-#   weight = 20
-#   [main.params]
-#     icon = "fa-solid fa-signature"
 
 [[main]]
   identifier = "tests"

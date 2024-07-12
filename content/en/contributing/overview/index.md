@@ -23,16 +23,23 @@ Hugo FixIt is eager for enthusiasm and participation from the open-source commun
 
 <!--more-->
 
-{{< link "../development" "🔧 Develop FixIt theme" "Contribute to the development of FixIt." true "fa-solid fa-code" >}}
+## How to contribute
 
----
+{{< style "text-align: center; img { height: 1.25em; vertical-align: text-bottom; }" "p" >}}
+Don't forget to leave a ⭐️ if you like this theme, thanks! [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
+{{< /style >}}
+
+{{< link "../development" "🔧 Develop FixIt theme" "Contribute to the development of FixIt." true "fa-solid fa-code" >}}
 
 {{< link "../documentation" "📝 Improve documentation" "Help us to improve the documentation by identifying issues and suggesting changes." true "fa-regular fa-newspaper" >}}
 
----
-
 {{< link "../components" "🧩 Develop theme components" "Contribute to the development of Hugo FixIt components." true "fa-solid fa-puzzle-piece" >}}
 
-{{< admonition quote "The author said" >}}
-Lruihao: Nowadays, almost all the development of FixIt themes and document editing work are done by me alone, which has cost me a lot of energy and is completely free to share with everyone! If you want to participate in the development and maintenance of the FixIt community for the long term, please feel free to contact me. Thank you all!
-{{< /admonition >}}
+## Sponsor
+
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)
+
+{{< details "If you enjoy the theme, please consider buying me a coffee ☕️." >}}
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love, Thanks all! ❤️" mode="fixed" >}}
+{{< sponsor-log >}}
+{{< /details >}}

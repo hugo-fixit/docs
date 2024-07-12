@@ -30,6 +30,11 @@ related:
 
 ## 先决条件
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.127.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
+{style="font-size: 1.25em;"}
+
 给 FixIt 主题的开发做出贡献，你需要：
 
 - 安装 [Hugo][hugo] 的扩展版本

@@ -30,6 +30,11 @@ For a complete guide to contributing to FixIt, see the [Contribution Guide][cont
 
 ## Prerequisites
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.127.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
+{style="font-size: 1.25em;"}
+
 To contribute to the development of the FixIt theme, you need to:
 
 - Install [Hugo][hugo] with the extended version
