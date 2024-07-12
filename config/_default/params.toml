@@ -413,13 +413,13 @@ disableThemeInject = false
   RSS = true
   # custom social links like the following
   # 自定义社交链接如下
-  # [social.twitter]
-  #   id = "lruihao"
-  #   weight = 3
-  #   prefix = "https://twitter.com/"
-  #   Title = "Twitter"
-  #   [social.twitter.icon]
-  #     class = "fa-brands fa-x-twitter fa-fw"
+  [social.FixItDemo]
+    id = "demo.fixit"
+    weight = 900
+    Template = "https://%v.lruihao.cn/"
+    Title = "FixIt Demo"
+    [social.FixItDemo.icon]
+      Src = "images/hugo-fixit.svg"
 
 # TypeIt config
 # TypeIt 配置
