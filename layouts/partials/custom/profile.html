@@ -5,6 +5,23 @@
       <img src="https://img.shields.io/github/deployments/hugo-fixit/docs/Preview?style=flat&label=Preview&logo=vercel" alt="Preview environment">
     </a>
   {{- end -}}
-  {{- /* TODO 加上文档大纲以及快速开始按钮 */ -}}
+
+  {{/*  {{- $installationPage := relref . "/documentation/installation" -}}  */}}
+  {{- $page1 := .GetPage "/documentation/installation" -}}
+  {{- $page2 := .GetPage "/documentation/getting-started" -}}
+  {{- $page3 := .GetPage "/documentation/content-management" -}}
+  {{- $page4 := .GetPage "/documentation/advanced" -}}
+  {{- $quickStartPage := .GetPage "/documentation/getting-started/quick-start" -}}
+  {{- $icon := `<i class="fa-regular fa-bookmark fa-beat-fade fa-xs fa-fw"></i>` -}}
+  <div class="docs-navigation">
+    <ul class="docs-outline">
+      <li><a href="{{ $page1.Permalink }}" title="{{ $page1.Description }}">{{ $icon | safeHTML }} {{ $page1.LinkTitle }}</a></li>
+      <li><a href="{{ $page2.Permalink }}" title="{{ $page2.Description }}">{{ $icon | safeHTML }} {{ $page2.LinkTitle }}</a></li>
+      <li><a href="{{ $page3.Permalink }}" title="{{ $page3.Description }}">{{ $icon | safeHTML }} {{ $page3.LinkTitle }}</a></li>
+      <li><a href="{{ $page4.Permalink }}" title="{{ $page4.Description }}">{{ $icon | safeHTML }} {{ $page4.LinkTitle }}</a></li>
+    </ul>
+    <div class="docs-preview"></div>
+  </div>
+  <a href="{{ $quickStartPage.Permalink }}" title="{{ $quickStartPage.Description }}" class="quick-start-btn">{{ $quickStartPage.LinkTitle }} <i class="fa-solid fa-arrow-right fa-sm fa-fw"></i></a>
 </div>
 {{- /* EOF */ -}}

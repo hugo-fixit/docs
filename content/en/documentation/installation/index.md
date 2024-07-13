@@ -3,6 +3,7 @@ title: Installation Theme
 linkTitle: Installation
 date: 2024-01-18T10:29:25+08:00
 type: posts
+description: Install FixIt theme for your Hugo site in a few steps.
 categories:
   - Documentation
 collections:
