@@ -529,86 +529,6 @@ The rendered output looks like this:
 
 The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.
 
-Install and use these extra shortcodes as needed.
-
-### gh-repo-card
-
-{{< gh-repo-card-container >}}
-  {{< gh-repo-card repo="hugo-fixit/component-projects" >}}
-{{< /gh-repo-card-container >}}
-
-Documentation of `gh-repo-card-container` and `gh-repo-card` shortcodes can be found in the repository above.
-
-Example `gh-repo-card-container` and `gh-repo-card` input:
-
-```go-html-template
-{{</* gh-repo-card-container */>}}
-  {{</* gh-repo-card repo="hugo-fixit/FixIt" */>}}
-{{</* /gh-repo-card-container */>}}
-```
-
-The rendered output looks like this:
-
-{{< gh-repo-card-container >}}
-  {{< gh-repo-card repo="hugo-fixit/FixIt" >}}
-{{< /gh-repo-card-container >}}
-
-### caniuse
-
-{{< gh-repo-card-container >}}
-  {{< gh-repo-card repo="hugo-fixit/shortcode-caniuse" >}}
-{{< /gh-repo-card-container >}}
-
-Documentation of `caniuse` shortcode can be found in the repository above.
-
-Example `caniuse` input:
-
-```go-html-template
-{{</* caniuse "css-grid" */>}}
-```
-
-The rendered output looks like this:
-
-{{< caniuse "css-grid" >}}
-
-### sponsor-log
-
-{{< gh-repo-card-container >}}
-  {{< gh-repo-card repo="hugo-fixit/shortcode-sponsor-log" >}}
-{{< /gh-repo-card-container >}}
-
-Documentation of `sponsor-log` shortcode can be found in the repository above.
-
-Example `sponsor-log` input:
-
-```go-html-template
-{{</* sponsor-log */>}}
-```
-
-{{< details summary="The rendered output looks like this:" >}}
-  {{< sponsor-log >}}
-{{< /details >}}
-
-### mmt-netease
-
-{{< gh-repo-card-container >}}
-  {{< gh-repo-card repo="hugo-fixit/shortcode-mmt-netease" >}}
-{{< /gh-repo-card-container >}}
-
-Documentation of `mmt-netease` shortcode can be found in the repository above.
-
-Example `mmt-netease` input:
-
-```go-html-template
-{{</* mmt-netease mid="2280569152" autoplay="false" */>}}
-```
-
-The rendered output looks like [this][lruihao-guestbook].
-
-![mmt-netease preview](https://user-images.githubusercontent.com/33419593/221810055-bf78de27-8f5d-4ffa-bf02-f60c0939f169.png)
-
----
-
 Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community.
 
 <!-- link reference definition -->
@@ -633,5 +553,4 @@ Visit [this page][components] to browse a collection of themes components create
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
-[lruihao-guestbook]: https://lruihao.cn/guestbook/
 [components]: {{< relref path="/components" >}}
