@@ -29,6 +29,7 @@
       list-style: none;
       margin-inline: auto;
       flex-shrink: 0;
+
       li {
         position: relative;
         padding: 0.5rem 1.5rem;
@@ -37,19 +38,50 @@
         --timeline-cyclic-color: #FF735A;
         --timeline-cyclic-size: 10px;
         --timeline-width: 2px;
+
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            --timeline-index: #{$i};
+
+            &::before {
+              content: '#{$i}';
+            }
+          }
+        }
         
         &::before {
-          content: '';
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
           left: 0;
           width: var(--timeline-cyclic-size);
           height: var(--timeline-cyclic-size);
+          font-size: var(--timeline-cyclic-size);
+          line-height: var(--timeline-cyclic-size);
+          text-align: center;
           border-radius: 50%;
-          border: var(--timeline-width) solid var(--timeline-cyclic-color);
+          border: var(--timeline-width) solid var(--timeline-color);
           background-color: $global-background-color;
+          color: transparent;
           z-index: 1;
+          animation-name: border-color-fade;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-delay: calc(var(--timeline-index) * 0.3s);
+
+          @keyframes border-color-fade {
+            0% {
+              border-color: var(--timeline-color);
+            }
+            50% {
+              border-color: var(--timeline-cyclic-color);
+              // 显示序号
+              // color: #358C3C;
+            }
+            100% {
+              border-color: var(--timeline-color);
+            }
+          }
 
           [data-theme='dark'] & {
             background-color: $global-background-color-dark;

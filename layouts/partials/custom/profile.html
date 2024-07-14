@@ -12,13 +12,12 @@
   {{- $page3 := .GetPage "/documentation/content-management" -}}
   {{- $page4 := .GetPage "/documentation/advanced" -}}
   {{- $quickStartPage := .GetPage "/documentation/getting-started/quick-start" -}}
-  {{- $icon := `<i class="fa-regular fa-bookmark fa-beat-fade fa-xs fa-fw"></i>` -}}
   <div class="docs-navigation">
     <ul class="docs-outline">
-      <li><a href="{{ $page1.Permalink }}" title="{{ $page1.Description }}">{{ $icon | safeHTML }} {{ $page1.LinkTitle }}</a></li>
-      <li><a href="{{ $page2.Permalink }}" title="{{ $page2.Description }}">{{ $icon | safeHTML }} {{ $page2.LinkTitle }}</a></li>
-      <li><a href="{{ $page3.Permalink }}" title="{{ $page3.Description }}">{{ $icon | safeHTML }} {{ $page3.LinkTitle }}</a></li>
-      <li><a href="{{ $page4.Permalink }}" title="{{ $page4.Description }}">{{ $icon | safeHTML }} {{ $page4.LinkTitle }}</a></li>
+      <li><a href="{{ $page1.Permalink }}" title="{{ $page1.Description }}">{{ $page1.LinkTitle }}</a></li>
+      <li><a href="{{ $page2.Permalink }}" title="{{ $page2.Description }}">{{ $page2.LinkTitle }}</a></li>
+      <li><a href="{{ $page3.Permalink }}" title="{{ $page3.Description }}">{{ $page3.LinkTitle }}</a></li>
+      <li><a href="{{ $page4.Permalink }}" title="{{ $page4.Description }}">{{ $page4.LinkTitle }}</a></li>
     </ul>
     <div class="docs-preview"></div>
   </div>
