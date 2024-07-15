@@ -415,11 +415,11 @@ disableThemeInject = false
   # 自定义社交链接如下
   [social.FixItDemo]
     id = "demo.fixit"
-    weight = 900
+    weight = 1000
     Template = "https://%v.lruihao.cn/"
     Title = "FixIt Demo"
     [social.FixItDemo.icon]
-      Src = "images/hugo-fixit.svg"
+      Src = "images/icons/demo.svg"
 
 # TypeIt config
 # TypeIt 配置
