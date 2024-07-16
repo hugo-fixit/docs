@@ -122,7 +122,7 @@ hugo new --kind post-bundle posts/bar/
 - **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
 - **author**: {{< version 0.2.18 changed >}} the author config for the content, the same as the `params.author` part in the [theme configuration][theme-config].
 
-    ```yaml
+    ```yaml {data-open=false}
     author:
       name: "" # the author's name
       link: "" # the link of the author

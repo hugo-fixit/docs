@@ -18,9 +18,6 @@ tags:
   - Content
 categories:
   - Documentation
-
-code:
-  maxShownLines: 70
 ---
 
 `echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
@@ -35,7 +32,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 
 一个 `JSON` 格式的 `echarts` 示例：
 
-```json
+```json {data-open=true}
 {{</* echarts */>}}
 {
   "title": {

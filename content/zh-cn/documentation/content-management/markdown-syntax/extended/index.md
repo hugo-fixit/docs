@@ -463,7 +463,7 @@ some Markdown content
 
 ---
 
-请注意，[code fences][code-fences] 中的属性和其他高亮处理指令必须位于开始标记之，例如：
+请注意，[code fences][code-fences] 中的属性和其他高亮处理指令必须位于开始标记之后，例如：
 
 ```md
 {?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
@@ -482,6 +482,20 @@ console.log('hello FixIt!');
 呈现的输出效果如下：
 
 ```js {title="test.js"}
+console.log('hello FixIt!');
+```
+
+给代码块添加 `data-open` 属性，强制展开或者折叠代码块，例如：
+
+````markdown
+```js {data-open=false}
+console.log('hello FixIt!');
+```
+````
+
+呈现的输出效果如下：
+
+```js {data-open=false}
 console.log('hello FixIt!');
 ```
 

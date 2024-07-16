@@ -122,7 +122,7 @@ hugo new --kind post-bundle posts/bar/
 - **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
 - **author**: {{< version 0.2.18 changed >}} 文章作者配置，和 [主题配置][theme-config] 中的 `params.author` 部分相同
 
-    ```yaml
+    ```yaml {data-open=false}
     author:
       name: "" # 文章作者
       link: "" # 文章作者的链接

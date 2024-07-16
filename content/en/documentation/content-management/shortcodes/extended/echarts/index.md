@@ -17,8 +17,6 @@ tags:
   - Content
 categories:
   - Documentation
-code:
-  maxShownLines: 70
 ---
 
 The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
@@ -33,7 +31,7 @@ Just insert your ECharts option in `JSON`/`YAML`/`TOML` format in the `echarts` 
 
 Example `echarts` input in `JSON` format:
 
-```json
+```json {data-open=true}
 {{</* echarts */>}}
 {
   "title": {

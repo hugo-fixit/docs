@@ -471,7 +471,7 @@ Note that attributes in [code fences][code-fences] must come after the opening t
 {?`}{?`}{?`}
 ```
 
-Add `title` attributes to a code block, for example:
+Add `title` attribute to a code block, for example:
 
 ````markdown
 ```js {title="test.js"}
@@ -482,6 +482,20 @@ console.log('hello FixIt!');
 The rendered output looks like this:
 
 ```js {title="test.js"}
+console.log('hello FixIt!');
+```
+
+Add `data-open` attribute to a code block to force expand or collapse the code block, for example:
+
+````markdown
+```js {data-open=false}
+console.log('hello FixIt!');
+```
+````
+
+The rendered output looks like this:
+
+```js {data-open=false}
 console.log('hello FixIt!');
 ```
 
