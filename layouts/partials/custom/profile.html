@@ -14,13 +14,13 @@
   {{- $quickStartPage := .GetPage "/documentation/getting-started/quick-start" -}}
   <div class="docs-navigation">
     <ul class="docs-outline">
-      <li><a href="{{ $page1.Permalink }}" title="{{ $page1.Description }}">{{ $page1.LinkTitle }}</a></li>
-      <li><a href="{{ $page2.Permalink }}" title="{{ $page2.Description }}">{{ $page2.LinkTitle }}</a></li>
-      <li><a href="{{ $page3.Permalink }}" title="{{ $page3.Description }}">{{ $page3.LinkTitle }}</a></li>
-      <li><a href="{{ $page4.Permalink }}" title="{{ $page4.Description }}">{{ $page4.LinkTitle }}</a></li>
+      <li><a href="{{ $page1.RelPermalink }}" title="{{ $page1.Description }}">{{ $page1.LinkTitle }}</a></li>
+      <li><a href="{{ $page2.RelPermalink }}" title="{{ $page2.Description }}">{{ $page2.LinkTitle }}</a></li>
+      <li><a href="{{ $page3.RelPermalink }}" title="{{ $page3.Description }}">{{ $page3.LinkTitle }}</a></li>
+      <li><a href="{{ $page4.RelPermalink }}" title="{{ $page4.Description }}">{{ $page4.LinkTitle }}</a></li>
     </ul>
     <div class="docs-preview"></div>
   </div>
-  <a href="{{ $quickStartPage.Permalink }}" title="{{ $quickStartPage.Description }}" class="quick-start-btn">{{ $quickStartPage.LinkTitle }} <i class="fa-solid fa-arrow-right fa-sm fa-fw"></i></a>
+  <a href="{{ $quickStartPage.RelPermalink }}" title="{{ $quickStartPage.Description }}" class="quick-start-btn">{{ $quickStartPage.LinkTitle }} <i class="fa-solid fa-arrow-right fa-sm fa-fw"></i></a>
 </div>
 {{- /* EOF */ -}}
