@@ -1,23 +1,21 @@
 ---
-title: 'Highlight Test'
+title: Highlight Test
 date: 2022-02-27T18:45:22+08:00
+draft: true
 description: 'Test for code highlight feature'
-type: 'posts'
-
+type: posts
 tags:
   - Tests
   - Content
   - highlight
 categories:
   - Tests
-
-
 menu:
   main:
-    title: 'Test for code highlight feature'
-    parent: 'tests'
+    title: Test for code highlight feature
+    parent: tests
     params:
-      icon: 'fa-solid fa-vial text-success'
+      icon: fa-solid fa-vial text-success
 ---
 
 > [List of Chroma Highlighting Languages](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)

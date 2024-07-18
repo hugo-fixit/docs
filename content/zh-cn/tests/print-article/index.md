@@ -2,6 +2,7 @@
 title: 重新认识 JavaScript
 subtitle: 学习 JavaScript 新特性
 date: 2022-05-01T10:59:36+08:00
+draft: true
 description: 这是一篇测试 FixIt 主题在打印视图表现的测试文章
 type: posts
 tags:
@@ -10,7 +11,7 @@ tags:
   - JavaScript
   - ES6
 categories:
-- Tests
+  - Tests
 code:
   maxShownLines: 30
 menu:
@@ -68,7 +69,7 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 
 `every()` 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试，它返回一个布尔值。
 
-*在这个位置使用 `page-break-before` 进行了强制分页*
+_在这个位置使用 `page-break-before` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 如果回调函数的每一次返回都为 [truthy](https://developer.mozilla.org/zh-CN/docs/Glossary/Truthy) 值，返回 `true` ，否则返回 `false`。
@@ -123,7 +124,7 @@ console.log(found);
 `filter()` 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。
 {.page-break-after}
 
-*在这个位置使用 `page-break-after` 进行了强制分页*
+_在这个位置使用 `page-break-after` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 返回值是一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
@@ -175,7 +176,7 @@ console.log(p1.hasOwnProperty('age')) // true
 console.log(p1.hasOwnProperty('name')) // fasle  注意这里
 ```
 
-*在这个位置使用 `page-break-after` 进行了强制分页*
+_在这个位置使用 `page-break-after` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 `obj.hasOwnProperty` 已经可以过滤掉原型链上的属性，但在某些情况下，它还是不安全。
@@ -225,7 +226,7 @@ console.log(p1.money) // 2
 console.log(p1._money) // 2
 ```
 
-*在这个位置使用 `page-break-after` 进行了强制分页*
+_在这个位置使用 `page-break-after` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 **使用 `#` 实现真正私有属性**
@@ -278,7 +279,7 @@ const sum = 1000 + 6000_000_000
 {{< /admonition >}}
 {.page-break-after}
 
-*在这个位置使用 `page-break-after` 进行了强制分页*
+_在这个位置使用 `page-break-after` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 ## "?.", "??", "??=" 的使用
@@ -327,7 +328,7 @@ let bar = foo !== undefined ? foo : 2
 console.log(bar) // 0
 ```
 
-*在这个位置使用 `page-break-after` 进行了强制分页*
+_在这个位置使用 `page-break-after` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 现在使用 `??` 可以使代码更加优雅
@@ -357,7 +358,7 @@ console.log(foo) // 1
 很好理解，这里的 `foo ??= 2` 等价于 `foo = foo ?? 2`
 {.page-break-after}
 
-*在这个位置使用 `page-break-after` 进行了强制分页*
+_在这个位置使用 `page-break-after` 进行了强制分页_
 {.text-danger .text-center .print-d-none}
 
 ## 使用 BigInt 支持大数计算
@@ -390,4 +391,4 @@ console.log(foo > bar) // false
 console.log(1n > 2n) // false
 ```
 
-*学无止境，与未来的自己共勉*
+_学无止境，与未来的自己共勉_

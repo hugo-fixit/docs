@@ -1,6 +1,7 @@
 ---
 title: Encrypt Test
 date: 2022-05-21T22:31:22+08:00
+draft: true
 description: Test for encrypting content
 type: posts
 password: 1212
@@ -12,7 +13,7 @@ tags:
   - Tests
   - Encryption
 categories:
-- Tests
+  - Tests
 menu:
   main:
     title: Test for encrypting content
@@ -236,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ### 12 details
 
 {{< details "**Copyright** 2022." >}}
-*All pages and graphics on this web site are the property of FixIt.*
+_All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
 ### 13 center-quote
@@ -258,7 +259,7 @@ This is a `fixit-encryptor` shortcode example.
 
 **hello**
 {{% fixit-encryptor "1212" %}}
-*world*
+_world_
 
 {{< admonition >}}
 <!-- markdownlint-disable-next-line MD037 -->
