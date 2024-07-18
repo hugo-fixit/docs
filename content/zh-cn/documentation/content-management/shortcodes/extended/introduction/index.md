@@ -315,7 +315,7 @@ _支持 Markdown 或者 HTML 格式。_
 {{< /admonition >}}
 
 {{< admonition >}}
-使用`admonition`时，必须以`{{< admonition **type** >}}开头，必须以{{< /admonition >}}结尾
+使用`admonition`时，必须以`{{< admonition **type** >}}开头，必须以`{{< /admonition >}}`结尾
 {{< /admonition >}}
 
 `admonition` shortcode 有以下命名参数：
