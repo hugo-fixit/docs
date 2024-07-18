@@ -33,7 +33,7 @@ https://www.bilibili.com/video/BV19S411c7Wu
 
 一个 `bilibili` 示例：
 
-```go-html-template
+```markdown
 {{</* bilibili BV19S411c7Wu */>}}
 或者
 {{</* bilibili id=BV19S411c7Wu */>}}
@@ -51,7 +51,7 @@ https://www.bilibili.com/video/BV1kt411k7Rq?p=3
 
 一个带有 `p` 参数的 `bilibili` 示例：
 
-```go-html-template
+```markdown
 {{</* bilibili BV1kt411k7Rq 3 */>}}
 或者
 {{</* bilibili id=BV1kt411k7Rq p=3 */>}}

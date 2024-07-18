@@ -53,7 +53,7 @@ Simple content is allowed in `Markdown` format and **without** rich block conten
 
 Example `typeit` input:
 
-```go-html-template
+```markdown
 {{</* typeit */>}}
 This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{</* /typeit */>}}
@@ -69,7 +69,7 @@ Alternatively, you can use custom **HTML tags**.
 
 Example `typeit` input with `h4` tag:
 
-```go-html-template
+```markdown
 {{</* typeit tag=h4 */>}}
 This is a *paragraph* with **typing animation** based on [TypeIt](https://typeitjs.com/)...
 {{</* /typeit */>}}
@@ -87,7 +87,7 @@ Code content is allowed and will be highlighted by named parameter `code` for th
 
 Example `typeit` input with `code`:
 
-```go-html-template
+```markdown
 {{</* typeit code=java */>}}
 public class HelloWorld {
     public static void main(String []args) {
@@ -116,7 +116,7 @@ A set of `typeit` contents with the same value of named parameter `group` will s
 
 Example `typeit` input with `group`:
 
-```go-html-template
+```markdown
 {{</* typeit group=paragraph */>}}
 **First** this paragraph begins
 {{</* /typeit */>}}
@@ -142,7 +142,7 @@ By default, the typing animation will stop after completion.
 
 Example `typeit` input with `loop`:
 
-```go-html-template
+```markdown
 {{</* typeit loop=true */>}}
 This content will continue to loop after the typing animation is complete.
 {{</* /typeit */>}}

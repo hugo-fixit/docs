@@ -25,7 +25,7 @@ The `spotify` shortcode embeds a responsive music player for Spotify music.
 
 Example `spotify` input:
 
-```go-html-template
+```markdown
 {{</* spotify type=artist id=74ASZWbe4lXaubB36ztrGX */>}}
 Or
 {{</* spotify artist 74ASZWbe4lXaubB36ztrGX */>}}

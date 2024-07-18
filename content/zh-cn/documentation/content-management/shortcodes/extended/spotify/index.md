@@ -25,7 +25,7 @@ categories:
 
 一个 `spotify` 示例：
 
-```go-html-template
+```markdown
 {{</* spotify type=artist id=74ASZWbe4lXaubB36ztrGX */>}}
 Or
 {{</* spotify artist 74ASZWbe4lXaubB36ztrGX */>}}

@@ -49,7 +49,7 @@ The `music` shortcode has the following named parameters by custom music URL:
 
 Example `music` input by custom music URL:
 
-```go-html-template
+```markdown
 {{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" */>}}
 ```
 
@@ -68,7 +68,7 @@ The `music` shortcode has one named parameter by music platform URL automatic id
 
 Example `music` input by music platform URL automatic identification:
 
-```go-html-template
+```markdown
 {{</* music auto="https://music.163.com/#/playlist?id=60198" */>}}
 Or
 {{</* music "https://music.163.com/#/playlist?id=60198" */>}}
@@ -100,7 +100,7 @@ The `music` shortcode has the following named parameters by custom music platfor
 
 Example `music` input by custom music platform:
 
-```go-html-template
+```markdown
 {{</* music server="netease" type="song" id="1868553" */>}}
 Or
 {{</* music netease song 1868553 */>}}

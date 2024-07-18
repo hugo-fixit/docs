@@ -49,7 +49,7 @@ categories:
 
 一个使用自定义音乐 URL 的 `music` 示例：
 
-```go-html-template
+```markdown
 {{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" */>}}
 ```
 
@@ -67,7 +67,7 @@ categories:
 
 一个使用音乐平台 URL 的自动识别的 `music` 示例：
 
-```go-html-template
+```markdown
 {{</* music auto="https://music.163.com/#/playlist?id=60198" */>}}
 或者
 {{</* music "https://music.163.com/#/playlist?id=60198" */>}}
@@ -99,7 +99,7 @@ categories:
 
 一个使用自定义音乐平台的 `music` 示例：
 
-```go-html-template
+```markdown
 {{</* music server="netease" type="song" id="1868553" */>}}
 或者
 {{</* music netease song 1868553 */>}}

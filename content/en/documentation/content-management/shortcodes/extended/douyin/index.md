@@ -31,7 +31,7 @@ https://www.douyin.com/video/7388149561765760266
 
 Example `douyin` input:
 
-```go-html-template
+```markdown
 {{</* douyin 7388149561765760266 */>}}
 Or
 {{</* douyin id=7388149561765760266 */>}}

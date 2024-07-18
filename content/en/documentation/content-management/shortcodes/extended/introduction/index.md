@@ -54,7 +54,7 @@ And the **second** one is the tag name of the HTML element wrapping the content 
 
 Example `style` input:
 
-```go-html-template
+```markdown
 {{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
 This is a **right-aligned** paragraph.
 {{</* /style */>}}
@@ -118,7 +118,7 @@ The `link` shortcode has the following named parameters:
 
 Example `link` input:
 
-```go-html-template
+```markdown
 {{</* link "https://assemble.io" */>}}
 Or
 {{</* link href="https://assemble.io" */>}}
@@ -140,7 +140,7 @@ The rendered output looks like this:
 
 Example `link` input with a title:
 
-```go-html-template
+```markdown
 {{</* link "https://github.com/upstage/" Upstage "Visit Upstage!" */>}}
 Or
 {{</* link href="https://github.com/upstage/" content=Upstage title="Visit Upstage!" */>}}
@@ -152,7 +152,7 @@ The rendered output looks like this (hover over the link, there should be a tool
 
 Example `link` input for card type:
 
-```go-html-template
+```markdown
 {{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
@@ -166,7 +166,7 @@ The rendered output looks like this:
 
 Example `link` input with download attribute:
 
-```go-html-template
+```markdown
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" */>}}
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true */>}}
 ```
@@ -240,7 +240,7 @@ The `image` shortcode has the following named parameters:
 
 Example `image` input:
 
-```go-html-template
+```markdown
 {{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
 ```
 
@@ -250,9 +250,92 @@ The rendered output looks like this:
 
 ### admonition
 
-The `admonition` shortcode supports **12** types of banners to help you put notice in your page.
+The `admonition` shortcode has the following named parameters:
 
-_Markdown or HTML format in the content is supported._
+- **type** _[optional]_ (**first** positional parameter)
+
+    Type of the `admonition` banner, default value is `note`. (total **12** types, see [complete example](#admonition-types))
+
+- **title** _[optional]_ (**second** positional parameter)
+
+    Title of the `admonition` banner, default value is the value of **type** parameter. (Markdown and HTML support) {{< version 0.2.14 changed >}}
+
+- **open** _[optional]_ (**third** positional parameter)
+
+    Whether the content will be expandable by default, default value is `true`. (Markdown and HTML support)
+
+Example `admonition` input:
+
+```markdown
+{{</* admonition type=quote title="[FixIt](https://github.com/hugo-fixit/FixIt)" open=true */>}}
+A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
+{{</* /admonition */>}}
+Or
+{{</* admonition quote "[FixIt](https://github.com/hugo-fixit/FixIt)" true */>}}
+A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
+{{</* /admonition */>}}
+```
+
+The rendered output looks like this:
+
+{{< admonition quote "[FixIt](https://github.com/hugo-fixit/FixIt)" true >}}
+A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
+{{< /admonition >}}
+
+---
+
+The `admonition` shortcode supports **12** types of banners, the complete example is as follows:
+{#admonition-types}
+
+```markdown {title="View Source", data-open=false}
+{{</* admonition */>}}
+A **note** banner
+{{</* /admonition */>}}
+
+{{</* admonition abstract */>}}
+An **abstract** banner
+{{</* /admonition */>}}
+
+{{</* admonition info */>}}
+A **info** banner
+{{</* /admonition */>}}
+
+{{</* admonition tip */>}}
+A **tip** banner
+{{</* /admonition */>}}
+
+{{</* admonition success */>}}
+A **success** banner
+{{</* /admonition */>}}
+
+{{</* admonition question */>}}
+A **question** banner
+{{</* /admonition */>}}
+
+{{</* admonition warning */>}}
+A **warning** banner
+{{</* /admonition */>}}
+
+{{</* admonition failure */>}}
+A **failure** banner
+{{</* /admonition */>}}
+
+{{</* admonition danger */>}}
+A **danger** banner
+{{</* /admonition */>}}
+
+{{</* admonition bug */>}}
+A **bug** banner
+{{</* /admonition */>}}
+
+{{</* admonition example */>}}
+An **example** banner
+{{</* /admonition */>}}
+
+{{</* admonition quote */>}}
+A **quote** banner
+{{</* /admonition */>}}
+```
 
 {{< admonition >}}
 A **note** banner
@@ -300,38 +383,6 @@ An **example** banner
 
 {{< admonition quote >}}
 A **quote** banner
-{{< /admonition >}}
-
-The `admonition` shortcode has the following named parameters:
-
-- **type** _[optional]_ (**first** positional parameter)
-
-    Type of the `admonition` banner, default value is `note`.
-
-- **title** _[optional]_ (**second** positional parameter)
-
-    Title of the `admonition` banner, default value is the value of **type** parameter. (markdown support) {{< version 0.2.14 changed >}}
-
-- **open** _[optional]_ (**third** positional parameter)
-
-    Whether the content will be expandable by default, default value is `true`.
-
-Example `admonition` input:
-
-```go-html-template
-{{</* admonition type=tip title="This is a tip" open=false */>}}
-A **tip** banner
-{{</* /admonition */>}}
-Or
-{{</* admonition tip "This is a tip" false */>}}
-A **tip** banner
-{{</* /admonition */>}}
-```
-
-The rendered output looks like this:
-
-{{< admonition tip "This is a tip" false >}}
-A **tip** banner
 {{< /admonition >}}
 
 ### mermaid
@@ -392,7 +443,7 @@ The script content can be guaranteed to be executed in order after all third-par
 
 Example `script` input:
 
-```go-html-template
+```markdown
 {{</* script */>}}
 console.log('Hello FixIt!');
 {{</* /script */>}}
@@ -418,7 +469,7 @@ The `details` shortcode has only one parameter:
 
 Example `details` input:
 
-```go-html-template
+```markdown
 {{</* details "**Copyright** 2022." */>}}
 *All pages and graphics on this web site are the property of FixIt.*
 {{</* /details */>}}
@@ -442,7 +493,7 @@ _All pages and graphics on this web site are the property of FixIt._
 
 Example `center-quote` input:
 
-```go-html-template
+```markdown
 {{</* center-quote */>}}
 this is a **center-quote** _shortcode_ example.
 {{</* /center-quote */>}}
@@ -477,7 +528,7 @@ The `raw` shortcode has only one parameter:
 
 Example `raw` input:
 
-```go-html-template
+```markdown
 {{</* raw */>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
 
 {{</* raw */>}}
@@ -517,7 +568,7 @@ The `reward` shortcode has the following named parameters:
 
 Example `reward` input:
 
-```go-html-template
+```markdown
 {{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="Buy me a coffee~" */>}}
 ```
 
@@ -532,7 +583,7 @@ The FixIt theme balances **simplicity** and **extensibility** with extra Hugo th
 Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community.
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images no-inline-html -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}

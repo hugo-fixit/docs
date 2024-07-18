@@ -1,7 +1,7 @@
 github.com/Lruihao/hugo-shortcode-sponsor-log v1.0.0 h1:HN1tKv3xYVZRSz+xt2Wr3hLbqxi5yK6OZRecYj22yyU=
 github.com/Lruihao/hugo-shortcode-sponsor-log v1.0.0/go.mod h1:B0v1x6BWWp5g6w82hBfZkJNPTyTw8Cvt6ccZ7BllA20=
-github.com/hugo-fixit/FixIt v0.3.9-0.20240716071553-419ade9c7380 h1:jS8Cw2Kq2ezn8OmhwcLzi3fhU7kG3eoL2yB8LUNbB/o=
-github.com/hugo-fixit/FixIt v0.3.9-0.20240716071553-419ade9c7380/go.mod h1:3XIRedrqakO7/a4ZnhE46haMRF8HgsT0N0B5j5D2iRU=
+github.com/hugo-fixit/FixIt v0.3.9-0.20240718074551-b3b0e6a4e0a4 h1:LpV0+TS9bLI8SsQmjsLQRcn30BX8kOnlwdihTP3GLKY=
+github.com/hugo-fixit/FixIt v0.3.9-0.20240718074551-b3b0e6a4e0a4/go.mod h1:3XIRedrqakO7/a4ZnhE46haMRF8HgsT0N0B5j5D2iRU=
 github.com/hugo-fixit/component-projects v1.1.2 h1:hKJ+1CM6Y0wEdA8Pnn8MSZel+ukYtUvzC3VQk+AFSl4=
 github.com/hugo-fixit/component-projects v1.1.2/go.mod h1:nXW0R37REwpfwUD1I4RtB5QW71vw66nRyB9uEpYxr+c=
 github.com/hugo-fixit/shortcode-caniuse v1.1.2 h1:YWBg6oPZucmPnQyBiPLFJHlueG+gy7hyNlxCGTka59s=

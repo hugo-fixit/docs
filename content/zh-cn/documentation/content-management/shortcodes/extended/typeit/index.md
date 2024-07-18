@@ -53,7 +53,7 @@ categories:
 
 一个 `typeit` 示例：
 
-```go-html-template
+```markdown
 {{</* typeit */>}}
 这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{</* /typeit */>}}
@@ -69,7 +69,7 @@ categories:
 
 一个带有 `h4` 标签的 `typeit` 示例：
 
-```go-html-template
+```markdown
 {{</* typeit tag=h4 */>}}
 这一个带有基于 [TypeIt](https://typeitjs.com/) 的 **打字动画** 的 *段落*……
 {{</* /typeit */>}}
@@ -87,7 +87,7 @@ categories:
 
 一个带有 `code` 参数的 `typeit` 示例：
 
-```go-html-template
+```markdown
 {{</* typeit code=java */>}}
 public class HelloWorld {
     public static void main(String []args) {
@@ -116,7 +116,7 @@ public class HelloWorld {
 
 一个带有 `group` 参数的 `typeit` 示例：
 
-```go-html-template
+```markdown
 {{</* typeit group=paragraph */>}}
 **首先**, 这个段落开始
 {{</* /typeit */>}}
@@ -144,7 +144,7 @@ public class HelloWorld {
 
 一个带有 `loop` 参数的 `typeit` 示例：
 
-```go-html-template
+```markdown
 {{</* typeit loop=true */>}}
 这个段落将会循环……
 {{</* /typeit */>}}

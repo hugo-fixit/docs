@@ -78,7 +78,7 @@ The `mapbox` shortcode has the following named parameters to use Mapbox GL JS:
 
 Example simple `mapbox` input:
 
-```go-html-template
+```markdown
 {{</* mapbox 113.953277 22.559102 11 */>}}
 Or
 {{</* mapbox lng=113.953277 lat=22.559102 zoom=11 */>}}
@@ -90,7 +90,7 @@ The rendered output looks like this:
 
 Example `mapbox` input with the custom style:
 
-```go-html-template
+```markdown
 {{</* mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/navigation-preview-day-v4" "mapbox://styles/mapbox/navigation-preview-night-v4" */>}}
 Or
 {{</* mapbox lng=-122.252 lat=37.453 zoom=10 marked=false light-style="mapbox://styles/mapbox/navigation-preview-day-v4" dark-style="mapbox://styles/mapbox/navigation-preview-night-v4" */>}}

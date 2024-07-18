@@ -33,7 +33,7 @@ https://www.bilibili.com/video/BV19S411c7Wu
 
 Example `bilibili` input:
 
-```go-html-template
+```markdown
 {{</* bilibili BV19S411c7Wu */>}}
 Or
 {{</* bilibili id=BV19S411c7Wu */>}}
@@ -52,7 +52,7 @@ https://www.bilibili.com/video/BV1kt411k7Rq?p=3
 
 Example `bilibili` input with `p`:
 
-```go-html-template
+```markdown
 {{</* bilibili BV1kt411k7Rq 3 */>}}
 Or
 {{</* bilibili id=BV1kt411k7Rq p=3 */>}}

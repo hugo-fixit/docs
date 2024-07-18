@@ -53,7 +53,7 @@ Hugo **extended** 版本对于 `style` shortcode 是必需的。
 
 一个 `style` 示例：
 
-```go-html-template
+```markdown
 {{</* style "text-align:right; strong{color:#00b1ff;}" */>}}
 This is a **right-aligned** paragraph.
 {{</* /style */>}}
@@ -118,7 +118,7 @@ This is a **right-aligned** paragraph.
 
 一个 `link` 示例：
 
-```go-html-template
+```markdown
 {{</* link "https://assemble.io" */>}}
 或者
 {{</* link href="https://assemble.io" */>}}
@@ -140,7 +140,7 @@ This is a **right-aligned** paragraph.
 
 一个带有标题的 `link` 示例：
 
-```go-html-template
+```markdown
 {{</* link "https://github.com/upstage/" Upstage "Visit Upstage!" */>}}
 或者
 {{</* link href="https://github.com/upstage/" content=Upstage title="Visit Upstage!" */>}}
@@ -152,7 +152,7 @@ This is a **right-aligned** paragraph.
 
 一个卡片式 `link` 示例：
 
-```go-html-template
+```markdown
 {{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
@@ -166,7 +166,7 @@ This is a **right-aligned** paragraph.
 
 一个可下载的 `link` 示例：
 
-```go-html-template
+```markdown
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" */>}}
 {{</* link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true */>}}
 ```
@@ -240,7 +240,7 @@ This is a **right-aligned** paragraph.
 
 一个 `image` 示例：
 
-```go-html-template
+```markdown
 {{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
 ```
 
@@ -250,104 +250,139 @@ This is a **right-aligned** paragraph.
 
 ### admonition
 
-`admonition` shortcode 支持 **12** 种 帮助你在页面中插入提示的横幅。
-
-_支持 Markdown 或者 HTML 格式。_
-
-{{< admonition >}}
-一个 **注意** 横幅
-使用`{{< admonition >}}`即可
-{{< /admonition >}}
-
-{{< admonition abstract >}}
-一个 **摘要** 横幅
-使用`{{< admoition abstract >}}`即可
-{{< /admonition >}}
-
-{{< admonition info >}}
-一个 **信息** 横幅
-使用`{{< admonition info >}}`即可
-{{< /admonition >}}
-
-{{< admonition tip >}}
-一个 **技巧** 横幅
-使用`{{< admonition tip >}}`即可
-{{< /admonition >}}
-
-{{< admonition success >}}
-一个 **成功** 横幅
-使用`{{< admonition success >}}`即可
-{{< /admonition >}}
-
-{{< admonition question >}}
-一个 **问题** 横幅
-使用`{{< admonition question >}}`即可
-{{< /admonition >}}
-
-{{< admonition warning >}}
-一个 **警告** 横幅
-使用`{{< admonition warning >}}`即可
-{{< /admonition >}}
-
-{{< admonition failure >}}
-一个 **失败** 横幅
-使用`{{< admonition failure >}}`即可
-{{< /admonition >}}
-
-{{< admonition danger >}}
-一个 **危险** 横幅
-使用`{{< admonition danger >}}`即可
-{{< /admonition >}}
-
-{{< admonition bug >}}
-一个 **Bug** 横幅
-使用`{{< admonition bug >}}`即可
-{{< /admonition >}}
-
-{{< admonition example >}}
-一个 **示例** 横幅
-使用`{{< admonition example >}}`即可
-{{< /admonition >}}
-
-{{< admonition quote >}}
-一个 **引用** 横幅
-使用`{{< admonition quote >}}`即可
-{{< /admonition >}}
-
-{{< admonition >}}
-使用`admonition`时，必须以`{{< admonition **type** >}}`开头，必须以`{{< /admonition >}}`结尾
-{{< /admonition >}}
-
 `admonition` shortcode 有以下命名参数：
 
-- **type** _[必需]_（**第一个**位置参数）
+- **type** _[可选]_（**第一个**位置参数）
 
-    `admonition` 横幅的类型，默认值是 `note`。
+    `admonition` 横幅的类型，默认值是 `note`。（共 **12** 种类型，见 [完整示例](#admonition-types)）
 
 - **title** _[可选]_（**第二个**位置参数）
 
-    `admonition` 横幅的标题，默认值是 **type** 参数的值。（支持 markdown）{{< version 0.2.14 changed >}}
+    `admonition` 横幅的标题，默认值是 **type** 参数的值。（支持 Markdown 和 HTML 格式）{{< version 0.2.14 changed >}}
 
 - **open** _[可选]_（**第三个**位置参数）
 
-    横幅内容是否默认展开，默认值是 `true`。
+    横幅内容是否默认展开，默认值是 `true`。（支持 Markdown 和 HTML 格式）
 
 一个 `admonition` 示例：
 
-```go-html-template
-{{</* admonition type=tip title="This is a tip" open=false */>}}
-一个 **技巧** 横幅
+```markdown
+{{</* admonition type=quote title="[FixIt](https://github.com/hugo-fixit/FixIt)" open=true */>}}
+一个**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 {{</* /admonition */>}}
 或者
-{{</* admonition tip "This is a tip" false */>}}
-一个 **技巧** 横幅
+{{</* admonition quote "[FixIt](https://github.com/hugo-fixit/FixIt)" true */>}}
+一个**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
 {{</* /admonition */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< admonition tip "This is a tip" false >}}
+{{< admonition quote "[FixIt](https://github.com/hugo-fixit/FixIt)" true >}}
+一个**简洁**、**优雅**且**高效**的 [Hugo](https://gohugo.io/) 博客主题。
+{{< /admonition >}}
+
+---
+
+`admonition` shortcode 支持 **12** 种类型的横幅，完整示例如下：
+{#admonition-types}
+
+```markdown {title="查看源码", data-open=false}
+{{</* admonition */>}}
+一个 **注意** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition abstract */>}}
+一个 **摘要** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition info */>}}
+一个 **信息** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition tip */>}}
 一个 **技巧** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition success */>}}
+一个 **成功** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition question */>}}
+一个 **问题** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition warning */>}}
+一个 **警告** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition failure */>}}
+一个 **失败** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition danger */>}}
+一个 **危险** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition bug */>}}
+一个 **Bug** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition example */>}}
+一个 **示例** 横幅
+{{</* /admonition */>}}
+
+{{</* admonition quote */>}}
+一个 **引用** 横幅
+{{</* /admonition */>}}
+```
+
+{{< admonition >}}
+一个 **注意** 横幅
+{{< /admonition >}}
+
+{{< admonition abstract >}}
+一个 **摘要** 横幅
+{{< /admonition >}}
+
+{{< admonition info >}}
+一个 **信息** 横幅
+{{< /admonition >}}
+
+{{< admonition tip >}}
+一个 **技巧** 横幅
+{{< /admonition >}}
+
+{{< admonition success >}}
+一个 **成功** 横幅
+{{< /admonition >}}
+
+{{< admonition question >}}
+一个 **问题** 横幅
+{{< /admonition >}}
+
+{{< admonition warning >}}
+一个 **警告** 横幅
+{{< /admonition >}}
+
+{{< admonition failure >}}
+一个 **失败** 横幅
+{{< /admonition >}}
+
+{{< admonition danger >}}
+一个 **危险** 横幅
+{{< /admonition >}}
+
+{{< admonition bug >}}
+一个 **Bug** 横幅
+{{< /admonition >}}
+
+{{< admonition example >}}
+一个 **示例** 横幅
+{{< /admonition >}}
+
+{{< admonition quote >}}
+一个 **引用** 横幅
 {{< /admonition >}}
 
 ### mermaid
@@ -409,7 +444,7 @@ _支持 Markdown 或者 HTML 格式。_
 
 一个 `script` 示例：
 
-```go-html-template
+```markdown
 {{</* script */>}}
 console.log('Hello FixIt!');
 {{</* /script */>}}
@@ -435,7 +470,7 @@ console.log('Hello FixIt!');
 
 一个 `details` 示例：
 
-```go-html-template
+```markdown
 {{</* details "**Copyright** 2022." */>}}
 *All pages and graphics on this web site are the property of FixIt.*
 {{</* /details */>}}
@@ -459,7 +494,7 @@ _All pages and graphics on this web site are the property of FixIt._
 
 一个 `center-quote` 示例：
 
-```go-html-template
+```markdown
 {{</* center-quote */>}}
 this is a **center-quote** _shortcode_ example.
 {{</* /center-quote */>}}
@@ -493,7 +528,7 @@ this is a **center-quote** _shortcode_ example.
 
 一个 `raw` 示例：
 
-```go-html-template
+```markdown
 {{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
 
 {{</* raw */>}}
@@ -533,7 +568,7 @@ this is a **center-quote** _shortcode_ example.
 
 一个 `reward` 示例：
 
-```go-html-template
+```markdown
 {{</* reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" */>}}
 ```
 
@@ -548,7 +583,7 @@ FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为�
 访问 [此页面][components] 浏览由 Hugo FixIt 社区创建的主题组件合集。
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images no-inline-html -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}

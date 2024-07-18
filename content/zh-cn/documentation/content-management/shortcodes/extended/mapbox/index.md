@@ -80,7 +80,7 @@ mapbox:
 
 一个简单的 `mapbox` 示例：
 
-```go-html-template
+```markdown
 {{</* mapbox 113.953277 22.559102 11 */>}}
 或者
 {{</* mapbox lng=113.953277 lat=22.559102 zoom=11 */>}}
@@ -92,7 +92,7 @@ mapbox:
 
 一个带有自定义样式的 `mapbox` 示例：
 
-```go-html-template
+```markdown
 {{</* mapbox -122.252 37.453 10 false "mapbox://styles/mapbox/streets-zh-v1" */>}}
 或者
 {{</* mapbox lng=-122.252 lat=37.453 zoom=10 marked=false light-style="mapbox://styles/mapbox/streets-zh-v1" */>}}
