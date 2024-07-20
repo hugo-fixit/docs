@@ -460,13 +460,23 @@ console.log('Hello FixIt!');
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
-`details` shortcode 用来在你的文章中插入 **:(fa-brands fa-html5 fa-fw): HTML5 标签** details 和 summary。
+`details` shortcode 用来在你的文章中插入 **:(fa-brands fa-html5 fa-fw): HTML5 标签** `details` 和 `summary`。
 
-`details` shortcode 只有一个参数：
+`details` shortcode 有以下命名参数：
 
 - **summary** _[可选]_ (**第一个**位置参数）
 
-    summary 标签的内容（支持 markdown）
+    `summary` 标签的内容。
+
+    _支持 Markdown 或者 HTML 格式。_
+
+- **open** _[可选]_ (**第二个**位置参数）{{< version 0.3.9 >}}
+
+    是否默认展开 `details` 标签，默认值是 `false`。
+
+- **center** _[可选]_ (**第三个**位置参数）{{< version 0.3.9 >}}
+
+    是否居中显示 `summary` 标签的内容，默认值是 `false`。
 
 一个 `details` 示例：
 

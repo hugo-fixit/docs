@@ -511,6 +511,8 @@ console.log('hello FixIt!');
 
 ### Timeline
 
+这部分内容在 [时间线支持][timeline-support] 页面中介绍。
+
 <!-- link reference definition -->
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
@@ -522,3 +524,4 @@ console.log('hello FixIt!');
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
+[timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

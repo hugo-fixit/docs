@@ -45,20 +45,22 @@ Ut reiciendis sit optio autem fugit porro tempora maiores debitis aliquam! Perfe
 
 ## timeline
 
-```timeline {reverse=false, placement=bottom, animation=false, nodeType=circle}
-- timestamp: 2024-04-03 17:10:15
-  hideTimestamp: true
-  type: primary
-  color: "#0bbd87"
-  size: normal
-  content: 测试内容 1111
-  placement: top
-- timestamp: 2024-07-17 00:09:47
-  content: 测试内容 3333
-  type: primary
-  nodeType: dot
-- timestamp: 2024-07-16 00:09:47
-  content: 测试内容 2222
+```timeline {reverse=false, placement=bottom, animation=false, node=circle}
+events:
+  - timestamp: 2024-04-03 17:10:15
+    hideTimestamp: true
+    type: primary
+    color: "#0bbd87"
+    content: 测试内容 1111
+    placement: top
+    size: small
+  - timestamp: 2024-07-17 00:09:47
+    content: 测试内容 3333
+    type: primary
+    node: dot
+    size: large
+  - timestamp: 2024-07-16 00:09:47
+    content: 测试内容 2222
 ```
 
 ## line break

@@ -459,13 +459,23 @@ console.log('Hello FixIt!');
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
-`details` is a shortcode to insert **:(fa-brands fa-html5 fa-fw): HTML5 tag** details and summary in your post.
+`details` is a shortcode to insert **:(fa-brands fa-html5 fa-fw): HTML5 tag** `details` and `summary` in your post.
 
-The `details` shortcode has only one parameter:
+The `details` shortcode has the following named parameters:
 
 - **summary** _[optional]_ (**first** positional parameter)
 
-    summary of details. (markdown support)
+    `summary` of details.
+
+    _Markdown or HTML format is supported._
+
+- **open** _[optional]_ (**second** positional parameter) {{< version 0.3.9 >}}
+
+    Whether the content will be expandable by default, default value is `false`.
+
+- **center** _[optional]_ (**third** positional parameter) {{< version 0.3.9 >}}
+
+    Whether to center the details `summary`, default value is `false`.
 
 Example `details` input:
 

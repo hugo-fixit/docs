@@ -503,13 +503,15 @@ console.log('hello FixIt!');
 
 ### GoAT
 
-This part is shown in the [diagrams support page][diagrams-support-goat].
+This part is shown in the [diagrams support][diagrams-support-goat] page.
 
 ### Mermaid
 
-This part is shown in the [diagrams support page][diagrams-support-mermaid].
+This part is shown in the [diagrams support][diagrams-support-mermaid] page.
 
 ### Timeline
+
+This part is shown in the [Timeline support][timeline-support] page.
 
 <!-- link reference definition -->
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
@@ -522,3 +524,4 @@ This part is shown in the [diagrams support page][diagrams-support-mermaid].
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
+[timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 `fixit-encryptor` shortcode 具有以下命名参数：
 
-- **password** _[必选]_（**第一个**位置参数）
+- **password** _[必需]_（**第一个**位置参数）
 
     部分加密内容的密码。
 
