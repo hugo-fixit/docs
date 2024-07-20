@@ -43,6 +43,24 @@ Qui eaque rerum minus, aperiam dignissimos enim, unde non natus modi, sapiente r
 
 Ut reiciendis sit optio autem fugit porro tempora maiores debitis aliquam! Perferendis cumque dolore quas. Possimus corporis earum commodi vel similique eius quis incidunt veritatis voluptatibus, tenetur, consequatur, repellendus magni.
 
+## timeline
+
+```timeline {reverse=false, placement=bottom, animation=false, nodeType=circle}
+- timestamp: 2024-04-03 17:10:15
+  hideTimestamp: true
+  type: primary
+  color: "#0bbd87"
+  size: normal
+  content: 测试内容 1111
+  placement: top
+- timestamp: 2024-07-17 00:09:47
+  content: 测试内容 3333
+  type: primary
+  nodeType: dot
+- timestamp: 2024-07-16 00:09:47
+  content: 测试内容 2222
+```
+
 ## line break
 
 `FixIt is a clean, elegant but advanced blog theme for Hugo developed by Lruihao. It is based on the original LoveIt Theme, KeepIt Theme and LeaveIt Theme.`

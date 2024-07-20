@@ -35,8 +35,8 @@
         padding: 0.5rem 1.5rem;
         font-size: 18px;
         --timeline-color: #{darken($global-border-color, 5%)};
-        --timeline-cyclic-color: #FF735A;
-        --timeline-cyclic-size: 10px;
+        --timeline-circle-color: #FF735A;
+        --timeline-circle-size: 10px;
         --timeline-width: 2px;
 
         @for $i from 1 through 4 {
@@ -54,10 +54,10 @@
           top: 50%;
           transform: translateY(-50%);
           left: 0;
-          width: var(--timeline-cyclic-size);
-          height: var(--timeline-cyclic-size);
-          font-size: var(--timeline-cyclic-size);
-          line-height: var(--timeline-cyclic-size);
+          width: var(--timeline-circle-size);
+          height: var(--timeline-circle-size);
+          font-size: var(--timeline-circle-size);
+          line-height: var(--timeline-circle-size);
           text-align: center;
           border-radius: 50%;
           border: var(--timeline-width) solid var(--timeline-color);
@@ -74,7 +74,7 @@
               border-color: var(--timeline-color);
             }
             50% {
-              border-color: var(--timeline-cyclic-color);
+              border-color: var(--timeline-circle-color);
               // 显示序号
               // color: #358C3C;
             }
@@ -91,7 +91,7 @@
           content: '';
           position: absolute;
           top: 0;
-          left: calc(var(--timeline-cyclic-size) / 2 + var(--timeline-width) / 2);
+          left: calc(var(--timeline-circle-size) / 2 + var(--timeline-width) / 2);
           width: var(--timeline-width);
           height: 100%;
           background-color: var(--timeline-color);
