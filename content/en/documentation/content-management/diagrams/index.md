@@ -1,5 +1,6 @@
 ---
-title: Diagrams Support
+title: Code Fences Extended - Diagrams Support
+linkTitle: Diagrams Support
 subtitle: Create SVG diagrams using GoAT or Mermaid in FixIt
 date: 2023-03-22T10:51:22+08:00
 type: posts
@@ -11,7 +12,6 @@ tags:
   - Advanced
 categories:
   - Documentation
-  - Guides
 collections:
   - Content Management
 resources:

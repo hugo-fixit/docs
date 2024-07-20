@@ -1,5 +1,6 @@
 ---
-title: 图表支持
+title: 代码块扩展语法 - 图表支持
+linkTitle: 图表支持
 subtitle: 使用 GoAT 与 Mermaid 在 FixIt 中创建 SVG 图表
 date: 2023-03-22T10:51:22+08:00
 type: posts
@@ -11,7 +12,6 @@ tags:
   - Advanced
 categories:
   - Documentation
-  - Guides
 collections:
   - Content Management
 resources:

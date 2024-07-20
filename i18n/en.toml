@@ -3,6 +3,8 @@
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === Translations for pages ===
+["/documentation/content-management/introduction"]
+breadcrumbTitle = "Overview"
 ["/documentation/content-management/shortcodes/extended"]
 breadcrumbTitle = "Extended"
 ["/documentation/content-management/shortcodes/extended/introduction"]

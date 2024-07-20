@@ -501,9 +501,15 @@ console.log('hello FixIt!');
 
 ## Code Fences Extended
 
-### Diagrams Support
+### GoAT
 
-This part is shown in the [diagrams support page][diagrams-support].
+This part is shown in the [diagrams support page][diagrams-support-goat].
+
+### Mermaid
+
+This part is shown in the [diagrams support page][diagrams-support-mermaid].
+
+### Timeline
 
 <!-- link reference definition -->
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
@@ -514,4 +520,5 @@ This part is shown in the [diagrams support page][diagrams-support].
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
-[diagrams-support]: {{< relref path="/documentation/content-management/diagrams" >}}
+[diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
+[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}

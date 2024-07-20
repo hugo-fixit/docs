@@ -501,9 +501,15 @@ console.log('hello FixIt!');
 
 ## 代码块扩展语法
 
-### 图表支持
+### GoAT
 
-这部分内容在 [图表支持页面][diagrams-support] 中介绍。
+这部分内容在 [图表支持][diagrams-support-goat] 页面中介绍。
+
+### Mermaid
+
+这部分内容在 [图表支持][diagrams-support-mermaid] 页面中介绍。
+
+### Timeline
 
 <!-- link reference definition -->
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
@@ -514,4 +520,5 @@ console.log('hello FixIt!');
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
-[diagrams-support]: {{< relref path="/documentation/content-management/diagrams" >}}
+[diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
+[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
