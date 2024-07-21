@@ -304,7 +304,7 @@ events:
 
 {{< details "查看源码" false true >}}
 
-````markdown {data-open=true}
+````markdown
 ```timeline
 events:
   - timestamp: 2024-07-11
