@@ -134,7 +134,7 @@ events:
 
 {{< details "查看源码" false true >}}
 
-````markdown
+````markdown {data-open=true}
 ```timeline
 events:
   - timestamp: 2024-07-19 20:30
@@ -213,7 +213,7 @@ events:
 
 {{< details "查看源码" false true >}}
 
-````markdown
+````markdown {data-open=true}
 ```timeline {reverse=true}
 events:
   - timestamp: 2021-12-18T16:15:22+08:00
@@ -267,7 +267,7 @@ events:
 
 {{< details "查看源码" false true >}}
 
-````markdown
+````markdown {data-open=true}
 ```timeline
 {
   "events": [
@@ -304,7 +304,7 @@ events:
 
 {{< details "查看源码" false true >}}
 
-````markdown
+````markdown {data-open=true}
 ```timeline
 events:
   - timestamp: 2024-07-11
@@ -336,7 +336,7 @@ content = "活动按期开始"
 
 {{< details "查看源码" false true >}}
 
-````markdown
+````markdown {data-open=true}
 ```timeline
 [[events]]
 timestamp = "2024-07-11"
