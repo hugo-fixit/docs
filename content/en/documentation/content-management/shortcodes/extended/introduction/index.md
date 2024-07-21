@@ -287,7 +287,7 @@ A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.i
 The `admonition` shortcode supports **12** types of banners, the complete example is as follows:
 {#admonition-types}
 
-```markdown {title="View Source", data-open=false}
+```markdown {title="View source", data-open=false}
 {{</* admonition */>}}
 A **note** banner
 {{</* /admonition */>}}

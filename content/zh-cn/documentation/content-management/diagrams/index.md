@@ -1,12 +1,14 @@
 ---
 title: 代码块扩展语法 - 图表支持
 linkTitle: 图表支持
-subtitle: 使用 GoAT 与 Mermaid 在 FixIt 中创建 SVG 图表
+subtitle: 使用 GoAT、Mermaid 或 Echarts 在 FixIt 中创建 SVG 和 Canvas 图表。
 date: 2023-03-22T10:51:22+08:00
 type: posts
-description: 这篇文档将展示如何在 FixIt 中使用 GoAT 和 Mermaid 创建 SVG 图表。
 tags:
   - Diagram
+  - GoAT
+  - Mermaid
+  - Echarts
   - Markdown
   - Content
   - Advanced
@@ -17,11 +19,9 @@ collections:
 resources:
   - name: featured-image
     src: cover.webp
-toc:
-  enable: true
-  auto: false
-reward: true
 ---
+
+这篇文档将展示如何在 FixIt 中使用代码块扩展语法创建 SVG 和 Canvas 图表。
 
 <!--more-->
 
@@ -831,6 +831,214 @@ Mermaid 的 C4 图语法与 PlantUML 兼容。以下是示例：
     a --> b
 ```
 
+## ECharts
+
+{{< version 0.3.9 >}}
+
+[ECharts][echarts] 是一个帮助你生成交互式数据可视化的库，完整文档请查看页面 [扩展 Shortcode - echarts][sc-echarts]。
+
+相比于 `echarts` Shortcode，代码块扩展语法支持的 ECharts 在 Markdown 中兼容性更好。
+
+```echarts {width="100%", height="30rem"}
+title:
+  text: 折线统计图
+  top: 2%
+  left: center
+tooltip:
+  trigger: axis
+legend:
+  data:
+    - 邮件营销
+    - 联盟广告
+    - 视频广告
+    - 直接访问
+    - 搜索引擎
+  top: 10%
+grid:
+  left: 5%
+  right: 5%
+  bottom: 5%
+  top: 20%
+  containLabel: true
+toolbox:
+  feature:
+    saveAsImage:
+      title: 保存为图片
+xAxis:
+  type: category
+  boundaryGap: false
+  data:
+    - 周一
+    - 周二
+    - 周三
+    - 周四
+    - 周五
+    - 周六
+    - 周日
+yAxis:
+  type: value
+series:
+  - name: 邮件营销
+    type: line
+    stack: 总量
+    data:
+      - 120
+      - 132
+      - 101
+      - 134
+      - 90
+      - 230
+      - 210
+  - name: 联盟广告
+    type: line
+    stack: 总量
+    data:
+      - 220
+      - 182
+      - 191
+      - 234
+      - 290
+      - 330
+      - 310
+  - name: 视频广告
+    type: line
+    stack: 总量
+    data:
+      - 150
+      - 232
+      - 201
+      - 154
+      - 190
+      - 330
+      - 410
+  - name: 直接访问
+    type: line
+    stack: 总量
+    data:
+      - 320
+      - 332
+      - 301
+      - 334
+      - 390
+      - 330
+      - 320
+  - name: 搜索引擎
+    type: line
+    stack: 总量
+    data:
+      - 820
+      - 932
+      - 901
+      - 934
+      - 1290
+      - 1330
+      - 1320
+```
+
+{{< details "查看源码" false true >}}
+
+````markdown {data-open=true}
+```echarts {width="100%", height="30rem"}
+title:
+  text: 折线统计图
+  top: 2%
+  left: center
+tooltip:
+  trigger: axis
+legend:
+  data:
+    - 邮件营销
+    - 联盟广告
+    - 视频广告
+    - 直接访问
+    - 搜索引擎
+  top: 10%
+grid:
+  left: 5%
+  right: 5%
+  bottom: 5%
+  top: 20%
+  containLabel: true
+toolbox:
+  feature:
+    saveAsImage:
+      title: 保存为图片
+xAxis:
+  type: category
+  boundaryGap: false
+  data:
+    - 周一
+    - 周二
+    - 周三
+    - 周四
+    - 周五
+    - 周六
+    - 周日
+yAxis:
+  type: value
+series:
+  - name: 邮件营销
+    type: line
+    stack: 总量
+    data:
+      - 120
+      - 132
+      - 101
+      - 134
+      - 90
+      - 230
+      - 210
+  - name: 联盟广告
+    type: line
+    stack: 总量
+    data:
+      - 220
+      - 182
+      - 191
+      - 234
+      - 290
+      - 330
+      - 310
+  - name: 视频广告
+    type: line
+    stack: 总量
+    data:
+      - 150
+      - 232
+      - 201
+      - 154
+      - 190
+      - 330
+      - 410
+  - name: 直接访问
+    type: line
+    stack: 总量
+    data:
+      - 320
+      - 332
+      - 301
+      - 334
+      - 390
+      - 330
+      - 320
+  - name: 搜索引擎
+    type: line
+    stack: 总量
+    data:
+      - 820
+      - 932
+      - 901
+      - 934
+      - 1290
+      - 1330
+      - 1320
+```
+````
+
+{{< /details >}}
+
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [goat]: https://github.com/bep/goat
 [markdeep]: https://casual-effects.com/markdeep/
 [goat-examples]: https://github.com/bep/goat/tree/master/examples
@@ -851,3 +1059,5 @@ Mermaid 的 C4 图语法与 PlantUML 兼容。以下是示例：
 [theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
 [theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
 [mermaid-theming]: https://mermaid.js.org/config/theming.html
+[echarts]: https://echarts.apache.org/
+[sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}

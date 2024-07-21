@@ -1,12 +1,14 @@
 ---
 title: Code Fences Extended - Diagrams Support
 linkTitle: Diagrams Support
-subtitle: Create SVG diagrams using GoAT or Mermaid in FixIt
+subtitle: Create SVG and Canvas diagrams in FixIt using GoAT, Mermaid or Echarts.
 date: 2023-03-22T10:51:22+08:00
 type: posts
-description: This post explains how you can create custom SVG diagrams in FixIt using GoAT or Mermaid.
 tags:
   - Diagram
+  - GoAT
+  - Mermaid
+  - Echarts
   - Markdown
   - Content
   - Advanced
@@ -17,11 +19,9 @@ collections:
 resources:
   - name: featured-image
     src: cover.webp
-toc:
-  enable: true
-  auto: false
-reward: true
 ---
+
+This document will demonstrate how to use code fences extended syntax to create SVG and Canvas diagrams in FixIt.
 
 <!--more-->
 
@@ -831,6 +831,216 @@ Example of `init` directive setting the `theme` to `forest`:
     a --> b
 ```
 
+## ECharts
+
+{{< version 0.3.9 >}}
+
+[ECharts][echarts] is a library helping you to generate interactive data visualization.
+
+The full documentation is provided in [Extended Shortcode - echarts][sc-echarts].
+
+Compared to `echarts` Shortcode, the code fences extended syntax supports ECharts better in Markdown.
+
+```echarts {width="100%", height="30rem"}
+title:
+  text: Summary Line Chart
+  top: 2%
+  left: center
+tooltip:
+  trigger: axis
+legend:
+  data:
+    - Email Marketing
+    - Affiliate Advertising
+    - Video Advertising
+    - Direct View
+    - Search Engine
+  top: 10%
+grid:
+  left: 5%
+  right: 5%
+  bottom: 5%
+  top: 20%
+  containLabel: true
+toolbox:
+  feature:
+    saveAsImage:
+      title: Save as Image
+xAxis:
+  type: category
+  boundaryGap: false
+  data:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+yAxis:
+  type: value
+series:
+  - name: Email Marketing
+    type: line
+    stack: Total
+    data:
+      - 120
+      - 132
+      - 101
+      - 134
+      - 90
+      - 230
+      - 210
+  - name: Affiliate Advertising
+    type: line
+    stack: Total
+    data:
+      - 220
+      - 182
+      - 191
+      - 234
+      - 290
+      - 330
+      - 310
+  - name: Video Advertising
+    type: line
+    stack: Total
+    data:
+      - 150
+      - 232
+      - 201
+      - 154
+      - 190
+      - 330
+      - 410
+  - name: Direct View
+    type: line
+    stack: Total
+    data:
+      - 320
+      - 332
+      - 301
+      - 334
+      - 390
+      - 330
+      - 320
+  - name: Search Engine
+    type: line
+    stack: Total
+    data:
+      - 820
+      - 932
+      - 901
+      - 934
+      - 1290
+      - 1330
+      - 1320
+```
+
+{{< details "View source" false true >}}
+
+````markdown {data-open=true}
+```echarts {width="100%", height="30rem"}
+title:
+  text: Summary Line Chart
+  top: 2%
+  left: center
+tooltip:
+  trigger: axis
+legend:
+  data:
+    - Email Marketing
+    - Affiliate Advertising
+    - Video Advertising
+    - Direct View
+    - Search Engine
+  top: 10%
+grid:
+  left: 5%
+  right: 5%
+  bottom: 5%
+  top: 20%
+  containLabel: true
+toolbox:
+  feature:
+    saveAsImage:
+      title: Save as Image
+xAxis:
+  type: category
+  boundaryGap: false
+  data:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+yAxis:
+  type: value
+series:
+  - name: Email Marketing
+    type: line
+    stack: Total
+    data:
+      - 120
+      - 132
+      - 101
+      - 134
+      - 90
+      - 230
+      - 210
+  - name: Affiliate Advertising
+    type: line
+    stack: Total
+    data:
+      - 220
+      - 182
+      - 191
+      - 234
+      - 290
+      - 330
+      - 310
+  - name: Video Advertising
+    type: line
+    stack: Total
+    data:
+      - 150
+      - 232
+      - 201
+      - 154
+      - 190
+      - 330
+      - 410
+  - name: Direct View
+    type: line
+    stack: Total
+    data:
+      - 320
+      - 332
+      - 301
+      - 334
+      - 390
+      - 330
+      - 320
+  - name: Search Engine
+    type: line
+    stack: Total
+    data:
+      - 820
+      - 932
+      - 901
+      - 934
+      - 1290
+      - 1330
+      - 1320
+```
+````
+
+{{< /details >}}
+
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [goat]: https://github.com/bep/goat
 [markdeep]: https://casual-effects.com/markdeep/
 [goat-examples]: https://github.com/bep/goat/tree/master/examples
@@ -851,3 +1061,5 @@ Example of `init` directive setting the `theme` to `forest`:
 [theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
 [theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
 [mermaid-theming]: https://mermaid.js.org/config/theming.html
+[echarts]: https://echarts.apache.org/
+[sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
