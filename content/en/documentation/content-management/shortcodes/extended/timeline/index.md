@@ -1,21 +1,17 @@
 ---
-title: Code Fences Extended - Timeline
-linkTitle: Timeline support
-date: 2024-07-20T19:25:31+08:00
+title: Extended Shortcode - Timeline
+linkTitle: Timeline Shortcode
+date: 2024-07-21T10:44:31+08:00
 type: posts
-description: This document will show you how to create a Timeline in FixIt using the code fences extended syntax.
+description: This document will show you how to create a Timeline in FixIt using Shortcode.
 categories:
   - Documentation
-collections:
-  - Content Management
 tags:
   - Timeline
   - Diagram
-  - Markdown
+  - Shortcodes
   - Content
-resources:
-  - name: featured-image
-    src: featured-image.webp
+featuredImage: /documentation/content-management/timeline-support/featured-image.webp
 ---
 
 <!--more-->
@@ -28,7 +24,7 @@ Timeline can be split into multiple events in ascending or descending. Timestamp
 
 An example of a Timeline arranged in ascending order:
 
-```timeline
+{{< timeline >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -36,12 +32,12 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline
+```markdown
+{?{}{?{}< timeline >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -49,14 +45,14 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
 An example of a Timeline arranged in descending order:
 
-```timeline {reverse=true}
+{{< timeline reverse=true >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -64,12 +60,12 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline {reverse=true}
+```markdown
+{?{}{?{}< timeline reverse=true >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -77,8 +73,8 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
@@ -86,7 +82,7 @@ events:
 
 Timeline supports animation, and you can enable or disable it using the `animation` parameter.
 
-```timeline {animation=true}
+{{< timeline animation=true >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -94,12 +90,12 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline {animation=true}
+```markdown
+{?{}{?{}< timeline animation=true >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -107,8 +103,8 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
@@ -116,7 +112,7 @@ events:
 
 Size, color, type and style can be customized in node.
 
-```timeline
+{{< timeline >}}
 events:
   - timestamp: 2024-07-19 20:30
     content: Custom type and style
@@ -130,12 +126,12 @@ events:
     size: large
   - timestamp: 2024-07-20 20:30
     content: Default node
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline
+```markdown
+{?{}{?{}< timeline >}}
 events:
   - timestamp: 2024-07-19 20:30
     content: Custom type and style
@@ -149,8 +145,8 @@ events:
     size: large
   - timestamp: 2024-07-20 20:30
     content: Default node
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
@@ -158,7 +154,7 @@ events:
 
 Timestamp can be placed on top of content when content is too high.
 
-```timeline {placement=top}
+{{< timeline placement=top >}}
 events:
   - timestamp: 2024-07-19 20:30
     content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint impedit magni soluta esse placeat facilis porro vitae facere explicabo. Architecto exercitationem accusamus omnis reiciendis beatae et inventore deserunt sequi recusandae.
@@ -166,12 +162,12 @@ events:
     content: Id amet sapiente quod temporibus molestiae? Quasi officia placeat magnam sapiente! Esse iure ipsam quia laboriosam dolorem at dolor est porro placeat, sequi magni maxime vel sint architecto. Placeat, laboriosam?
   - timestamp: 2024-07-19 20:30
     content: Expedita delectus rerum vitae consequuntur quam, tempore fugit debitis voluptatem praesentium maiores dolorem possimus illum adipisci facere veniam voluptatibus aliquam ipsa ducimus nam impedit cumque! Rerum molestias praesentium expedita! Itaque.
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline {placement=top}
+```markdown
+{?{}{?{}< timeline placement=top >}}
 events:
   - timestamp: 2024-07-19 20:30
     content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint impedit magni soluta esse placeat facilis porro vitae facere explicabo. Architecto exercitationem accusamus omnis reiciendis beatae et inventore deserunt sequi recusandae.
@@ -179,8 +175,8 @@ events:
     content: Id amet sapiente quod temporibus molestiae? Quasi officia placeat magnam sapiente! Esse iure ipsam quia laboriosam dolorem at dolor est porro placeat, sequi magni maxime vel sint architecto. Placeat, laboriosam?
   - timestamp: 2024-07-19 20:30
     content: Expedita delectus rerum vitae consequuntur quam, tempore fugit debitis voluptatem praesentium maiores dolorem possimus illum adipisci facere veniam voluptatibus aliquam ipsa ducimus nam impedit cumque! Rerum molestias praesentium expedita! Itaque.
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
@@ -188,7 +184,7 @@ events:
 
 Markdown or HTML format is supported in content.
 
-```timeline {reverse=true}
+{{< timeline reverse=true >}}
 events:
   - timestamp: 2021-12-18T16:15:22+08:00
     content: "Feat: [LoveIt](https://github.com/dillonzq/LoveIt) => [FixIt](https://github.com/hugo-fixit/FixIt)"
@@ -209,12 +205,12 @@ events:
   - timestamp: 2024-07-20T22:28:19+08:00
     content: ":tada: Feat: add timeline support for code blocks"
     type: danger
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline {reverse=true}
+```markdown
+{?{}{?{}< timeline reverse=true >}}
 events:
   - timestamp: 2021-12-18T16:15:22+08:00
     content: "Feat: [LoveIt](https://github.com/dillonzq/LoveIt) => [FixIt](https://github.com/hugo-fixit/FixIt)"
@@ -235,8 +231,8 @@ events:
   - timestamp: 2024-07-20T22:28:19+08:00
     content: ":tada: Feat: add timeline support for code blocks"
     type: danger
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
@@ -246,7 +242,7 @@ The Timeline data supports three formats: `JSON`, `YAML`, and `TOML`.
 
 Example Timeline input in `JSON` format:
 
-```timeline
+{{< timeline >}}
 {
   "events": [
     {
@@ -263,12 +259,12 @@ Example Timeline input in `JSON` format:
     }
   ]
 }
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline
+```markdown
+{?{}{?{}< timeline >}}
 {
   "events": [
     {
@@ -285,14 +281,14 @@ Example Timeline input in `JSON` format:
     }
   ]
 }
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
 Example Timeline input in `YAML` format:
 
-```timeline
+{{< timeline >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -300,12 +296,12 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline
+```markdown
+{?{}{?{}< timeline >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -313,14 +309,14 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
 Example Timeline input in `TOML` format:
 
-```timeline
+{{< timeline >}}
 [[events]]
 timestamp = "2024-07-11"
 content = "Success"
@@ -332,12 +328,12 @@ content = "Approved"
 [[events]]
 timestamp = "2024-07-15"
 content = "Event start"
-```
+{{< /timeline >}}
 
 {{< details "View source" false true >}}
 
-````markdown
-```timeline
+```markdown
+{?{}{?{}< timeline >}}
 [[events]]
 timestamp = "2024-07-11"
 content = "Success"
@@ -349,8 +345,8 @@ content = "Approved"
 [[events]]
 timestamp = "2024-07-15"
 content = "Event start"
+{?{}{?{}< /timeline >}}
 ```
-````
 
 {{< /details >}}
 
@@ -378,3 +374,5 @@ content = "Event start"
 | optional | type          | node type                 | string  | primary / secondary / success / info / warning / danger | -       |
 | optional | size          | node size                 | string  | small / medium / large                                  | medium  |
 | optional | node          | node style                | string  | circle / dot                                            | circle  |
+
+<!-- markdownlint-disable-file blanks-around-lists ul-indent -->
