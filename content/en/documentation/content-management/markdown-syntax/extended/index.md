@@ -325,7 +325,7 @@ The rendered output looks like this:
 
 ## Font Awesome {#fontawesome}
 
-**FixIt** theme uses [Font Awesome][fontawesome] as the icon library.
+**FixIt** theme uses [Font Awesome V6][fontawesome] as the icon library.
 You can easily use these icons in your articles.
 
 Get the `class` of icons you wanted from the [Font Awesome website][fontawesome-icons].

@@ -325,7 +325,7 @@ $$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 
 ## Font Awesome {#fontawesome}
 
-**FixIt** 主题使用 [Font Awesome][fontawesome] 作为图标库。
+**FixIt** 主题使用 [Font Awesome V6][fontawesome] 作为图标库。
 你同样可以在文章中轻松使用这些图标。
 
 从 [Font Awesome 网站][fontawesome-icons] 上获取所需的图标 `class`。
