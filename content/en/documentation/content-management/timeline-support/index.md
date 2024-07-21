@@ -354,7 +354,7 @@ content = "Event start"
 
 {{< /details >}}
 
-## Parameter Setup
+## Parameters
 
 ### Timeline
 
