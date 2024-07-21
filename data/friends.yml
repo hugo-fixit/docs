@@ -57,6 +57,11 @@
   url: https://iling.me/blog/
   description: 小翎哥的博客
 
+- nickname: 逐水寻源
+  avatar: https://www.zair.top/img/logo.png
+  description: 分享我的学习笔记、经验与有趣的小玩意。
+  url: https://www.zair.top/  
+
 - nickname: ADD
   avatar: /images/hugo-fixit.webp
   url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
