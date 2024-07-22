@@ -332,7 +332,7 @@ content = "Event start"
 
 {{< details "View source" false true >}}
 
-```markdown
+```markdown {data-open=true}
 {?{}{?{}< timeline >}}
 [[events]]
 timestamp = "2024-07-11"
@@ -350,9 +350,11 @@ content = "Event start"
 
 {{< /details >}}
 
-## Parameter Setup
+## Parameters
 
 ### Timeline
+
+The `timeline` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
 | Parameter | Description                                                       | Type    | Optional values        | Default |
 | :-------- | :---------------------------------------------------------------- | :------ | :--------------------- | :------ |
@@ -361,6 +363,11 @@ content = "Event start"
 | animation | whether to enable animation                                       | boolean | -                      | false   |
 | size      | node size                                                         | string  | small / medium / large | medium  |
 | node      | node style                                                        | string  | circle / dot           | circle  |
+| width     | ==#== container width                                             | string  | -                      | -       |
+| height    | ==#== container height                                            | string  | -                      | -       |
+| class     | ==#== container classname                                         | string  | -                      | -       |
+
+> Parameters marked with ==#== only support named parameters.
 
 ### Timeline Events
 

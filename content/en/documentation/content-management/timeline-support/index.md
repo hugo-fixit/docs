@@ -365,6 +365,9 @@ content = "Event start"
 | animation | whether to enable animation                                       | boolean | -                      | false   |
 | size      | node size                                                         | string  | small / medium / large | medium  |
 | node      | node style                                                        | string  | circle / dot           | circle  |
+| width     | container width                                                   | string  | -                      | -       |
+| height    | container height                                                  | string  | -                      | -       |
+| class     | container classname                                               | string  | -                      | -       |
 
 ### Timeline Events
 

@@ -183,7 +183,7 @@ Example `echarts` input in `JSON` format:
 
 {{< /details >}}
 
-The same in `YAML` format:
+Example `echarts` input in `YAML` format:
 
 {{< echarts >}}
 title:
@@ -383,7 +383,7 @@ series:
 
 {{< /details >}}
 
-The same in `TOML` format:
+Example `echarts` input in `TOML` format:
 
 {{< echarts >}}
 [title]
@@ -629,11 +629,11 @@ data = [
 
 ## Parameters
 
-The `echarts` shortcode has the following named parameters:
+The `echarts` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description | Type | Default |
-| :-------- | :---------- | :--- | :------ |
-| width     | Width of the data visualization | string | `100%` |
+| Parameter | Description                      | Type   | Default |
+| :-------- | :------------------------------- | :----- | :------ |
+| width     | Width of the data visualization  | string | `100%`  |
 | height    | Height of the data visualization | string | `30rem` |
 
 <!-- link reference definition -->

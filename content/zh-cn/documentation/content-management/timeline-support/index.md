@@ -364,7 +364,10 @@ content = "活动按期开始"
 | placement | 时间戳位置                   | string  | top / bottom           | bottom |
 | animation | 是否开启动画                 | boolean | -                      | false  |
 | size      | 节点尺寸                     | string  | small / medium / large | medium |
-| node  | 节点风格                     | string  | circle / dot           | circle |
+| node      | 节点风格                     | string  | circle / dot           | circle |
+| width     | 容器宽度                     | string  | -                      | -      |
+| height    | 容器高度                     | string  | -                      | -      |
+| class     | 容器类名                     | string  | -                      | -      |
 
 ### Timeline Events
 
@@ -377,4 +380,4 @@ content = "活动按期开始"
 | 可选 | color         | 节点颜色       | string  | hsl / hsv / hex / rgb                                   | -      |
 | 可选 | type          | 节点类型       | string  | primary / secondary / success / info / warning / danger | -      |
 | 可选 | size          | 节点尺寸       | string  | small / medium / large                                  | medium |
-| 可选 | node      | 节点风格       | string  | circle / dot                                            | circle |
+| 可选 | node          | 节点风格       | string  | circle / dot                                            | circle |
