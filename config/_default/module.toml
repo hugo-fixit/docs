@@ -5,15 +5,12 @@
 
 [[imports]]
   path = "github.com/hugo-fixit/FixIt"
-
 [[imports]]
   path = "github.com/hugo-fixit/component-projects"
-
 [[imports]]
   path = "github.com/hugo-fixit/shortcode-caniuse"
-
 [[imports]]
-  path = "github.com/Lruihao/hugo-shortcode-sponsor-log"
+  path = "github.com/hugo-fixit/shortcode-rewards"
 
 [hugoVersion]
   extended = true

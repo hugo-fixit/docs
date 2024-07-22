@@ -8,7 +8,7 @@
     - hugo-fixit/shortcode-caniuse
     - hugo-fixit/shortcode-docs-bookmark
     - hugo-fixit/shortcode-mmt-netease
-    - hugo-fixit/shortcode-sponsor-log
+    - hugo-fixit/shortcode-rewards
 - title: 🧩 Layout components
   repos:
     - hugo-fixit/component-projects

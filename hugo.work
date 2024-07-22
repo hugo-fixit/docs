@@ -4,3 +4,4 @@ use .
 use ../FixIt
 use ../component-projects
 use ../shortcode-caniuse
+use ../shortcode-rewards

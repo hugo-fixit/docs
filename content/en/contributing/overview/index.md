@@ -47,9 +47,7 @@ Don't forget to leave a ⭐️ if you like this theme, thanks! [![GitHub stars](
 
 ## Sponsor
 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)
+If you enjoy the theme, please consider buying me a coffee ☕️.
 
-{{< details "If you enjoy the theme, please consider buying me a coffee ☕️." >}}
 {{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love, Thanks all! ❤️" mode="fixed" >}}
-{{< sponsor-log >}}
-{{< /details >}}
+{{< reward-log >}}

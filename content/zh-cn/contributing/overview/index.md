@@ -46,9 +46,7 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 
 ## 赞助支持
 
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)
+如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。
 
-{{< details "如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。" >}}
 {{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ 为爱发电，谢谢大家！❤️" mode="fixed" >}}
-{{< sponsor-log >}}
-{{< /details >}}
+{{< reward-log >}}
