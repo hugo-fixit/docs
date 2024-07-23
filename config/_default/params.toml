@@ -666,10 +666,12 @@ disableThemeInject = false
   # whether to enable twemoji
   # 是否使用 twemoji
   twemoji = false
-  # whether to enable lightgallery
-  # FixIt 0.2.18 | CHANGED if set to "force", images in the content will be forced to shown as the gallery.
-  # 是否使用 lightgallery
-  # FixIt 0.2.18 | 更改 如果设为 "force"，文章中的图片将强制按照画廊形式呈现
+  # FixIt 0.2.18 | CHANGED whether to enable lightgallery
+  # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
+  # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
+  # FixIt 0.2.18 | 更改 是否使用 lightgallery
+  # 设为 true，且图片设置标题时，文章中的图片将以画廊形式呈现，例如：![alt](src "title")
+  # 设为 "force"，无论图片是否设置标题文章中的图片都将强制按照画廊形式呈现，例如：![alt](src)
   lightgallery = false
   # whether to enable the ruby extended syntax
   # 是否使用 ruby 扩展语法

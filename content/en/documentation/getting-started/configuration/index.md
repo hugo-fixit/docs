@@ -1147,8 +1147,9 @@ mDevtools
     hiddenFromRelated = false
     # whether to enable twemoji
     twemoji = false
-    # whether to enable lightgallery
-    # {{< version 0.2.18 changed >}} if set to "force", images in the content will be forced to shown as the gallery.
+    # {{< version 0.2.18 changed >}} whether to enable lightgallery
+    # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
+    # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
     lightgallery = false
     # whether to enable the ruby extended syntax
     ruby = true

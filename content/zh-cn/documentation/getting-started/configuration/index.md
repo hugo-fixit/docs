@@ -1140,8 +1140,9 @@ mDevtools
     hiddenFromRelated = false
     # 是否使用 twemoji
     twemoji = false
-    # 是否使用 lightgallery
-    # {{< version 0.2.18 changed >}} 如果设为 "force"，文章中的图片将强制按照画廊形式呈现
+    # {{< version 0.2.18 changed >}} 是否使用 lightgallery
+    # 设为 true，图片设置标题时，文章中的图片将以画廊形式呈现，例如：![alt](src "title")
+    # 设为 "force"，无论图片是否设置标题文章中的图片都将强制按照画廊形式呈现，例如：![alt](src)
     lightgallery = false
     # 是否使用 ruby 扩展语法
     ruby = true
