@@ -405,6 +405,8 @@ some Markdown content
 
 ### 例子
 
+#### 分割线
+
 带有 CSS 类的分割线：
 
 ```md
@@ -416,6 +418,8 @@ some Markdown content
 
 ---
 {.awesome-hr}
+
+#### 引用
 
 带有 CSS 类的块引用：
 
@@ -431,7 +435,7 @@ some Markdown content
 > bar
 {#test-id .text-danger}
 
----
+#### 表格 & 列表
 
 目前有一些限制：对于表格，你目前只能将其应用于完整表格，而对于列表，仅适用于 `ul`/`ol` 节点，例如：
 
@@ -461,15 +465,15 @@ some Markdown content
   {.text-warning}
 {.text-primary}
 
----
+#### 代码块
 
 请注意，[code fences][code-fences] 中的属性和其他高亮处理指令必须位于开始标记之后，例如：
 
-```md
-{?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
-// ... 代码
-{?`}{?`}{?`}
+````markdown
+```go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
+// ... code
 ```
+````
 
 给代码块添加 `title` 属性，例如：
 
@@ -484,6 +488,34 @@ console.log('hello FixIt!');
 ```js {title="test.js"}
 console.log('hello FixIt!');
 ```
+
+{{< version 0.3.9 >}}
+
+给代码块添加 `no-header` 类，隐藏代码块的标题，例如：
+
+````markdown
+```js {.no-header}
+function forEach(elements, handler) {
+  elements = elements || [];
+  for (let i = 0; i < elements.length; i++) {
+    handler(elements[i]);
+  }
+}
+```
+````
+
+呈现的输出效果如下：
+
+```js {.no-header}
+function forEach(elements, handler) {
+  elements = elements || [];
+  for (let i = 0; i < elements.length; i++) {
+    handler(elements[i]);
+  }
+}
+```
+
+{{< version 0.3.9 >}}
 
 给代码块添加 `data-open` 属性，强制展开或者折叠代码块，例如：
 

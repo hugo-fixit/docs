@@ -405,6 +405,8 @@ In most cases, place the attribute list beneath the markup element. For headings
 
 ### Examples
 
+#### horizontal rule
+
 A horizontal rule with a CSS class:
 
 ```md
@@ -416,6 +418,8 @@ The rendered output looks like this:
 
 ---
 {.awesome-hr}
+
+#### blockquote
 
 A blockquote with a CSS class:
 
@@ -431,7 +435,7 @@ The rendered output looks like this:
 > bar
 {.text-danger}
 
----
+#### table & list
 
 There are some current limitations: For tables you can currently only apply it to the full table, and for lists the `ul`/`ol`-nodes only, e.g.:
 
@@ -461,15 +465,15 @@ The rendered output looks like this:
   {.text-warning}
 {.text-primary}
 
----
+#### code fences
 
 Note that attributes in [code fences][code-fences] must come after the opening tag, with any other highlighting processing instruction, e.g.:
 
-```md
-{?`}{?`}{?`}go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
+````markdown
+```go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
 // ... code
-{?`}{?`}{?`}
 ```
+````
 
 Add `title` attribute to a code block, for example:
 
@@ -484,6 +488,34 @@ The rendered output looks like this:
 ```js {title="test.js"}
 console.log('hello FixIt!');
 ```
+
+{{< version 0.3.9 >}}
+
+Add `no-header` class to a code block to hide the header, for example:
+
+````markdown
+```js {.no-header}
+function forEach(elements, handler) {
+  elements = elements || [];
+  for (let i = 0; i < elements.length; i++) {
+    handler(elements[i]);
+  }
+}
+```
+````
+
+The rendered output looks like this:
+
+```js {.no-header}
+function forEach(elements, handler) {
+  elements = elements || [];
+  for (let i = 0; i < elements.length; i++) {
+    handler(elements[i]);
+  }
+}
+```
+
+{{< version 0.3.9 >}}
 
 Add `data-open` attribute to a code block to force expand or collapse the code block, for example:
 
