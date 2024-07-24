@@ -25,7 +25,7 @@ The `music` shortcode embeds a responsive music player based on [APlayer][aplaye
 
 There are three ways to use it the `music` shortcode.
 
-## 1 Custom Music URL {#custom-music-url}
+## Custom Music URL {#custom-music-url}
 
 The complete usage of [local resource references][contents-organization] is supported.
 
@@ -57,7 +57,7 @@ The rendered output looks like this:
 
 {{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
 
-## 2 Music Platform URL Automatic Identification {#automatic-identification}
+## Music Platform URL Automatic Identification {#automatic-identification}
 
 The `music` shortcode has one named parameter by music platform URL automatic identification:
 
@@ -78,7 +78,7 @@ The rendered output looks like this:
 
 {{< music auto="https://music.163.com/#/playlist?id=60198" >}}
 
-## 3 Custom Server, Type and ID {#custom-server}
+## Custom Server, Type and ID {#custom-server}
 
 The `music` shortcode has the following named parameters by custom music platform:
 
@@ -110,7 +110,7 @@ The rendered output looks like this:
 
 {{< music netease song 1868553 >}}
 
-## 4 Other Parameters {#other-parameters}
+## Other Parameters {#other-parameters}
 
 The `music` shortcode has other named parameters applying to the above three ways:
 
@@ -160,6 +160,8 @@ The `music` shortcode has the following named parameters only applying to the ty
 
     Max height of the music list, default value is `340px`.
 
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [aplayer]: https://github.com/MoePlayer/APlayer
 [metingjs]: https://github.com/metowolf/MetingJS
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}

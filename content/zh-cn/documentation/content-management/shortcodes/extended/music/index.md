@@ -25,7 +25,7 @@ categories:
 
 有三种方式使用 `music` shortcode。
 
-## 1 自定义音乐 URL {#custom-music-url}
+## 自定义音乐 URL {#custom-music-url}
 
 支持 [本地资源引用][contents-organization] 的完整用法。
 
@@ -57,7 +57,7 @@ categories:
 
 {{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
 
-## 2 音乐平台 URL 的自动识别 {#automatic-identification}
+## 音乐平台 URL 的自动识别 {#automatic-identification}
 
 `music` shortcode 有一个命名参数来使用音乐平台 URL 的自动识别：
 
@@ -77,7 +77,7 @@ categories:
 
 {{< music auto="https://music.163.com/#/playlist?id=60198" >}}
 
-## 3 自定义音乐平台，类型和 ID {#custom-server}
+## 自定义音乐平台，类型和 ID {#custom-server}
 
 `music` shortcode 有以下命名参数来使用自定义音乐平台：
 
@@ -109,7 +109,7 @@ categories:
 
 {{< music netease song 1868553 >}}
 
-## 4 其它参数 {#other-parameters}
+## 其它参数 {#other-parameters}
 
 `music` shortcode 有一些可以应用于以上三种方式的其它命名参数：
 
@@ -159,6 +159,8 @@ categories:
 
     音乐列表的最大高度，默认值是 `340px`。
 
+<!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [aplayer]: https://github.com/MoePlayer/APlayer
 [metingjs]: https://github.com/metowolf/MetingJS
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
