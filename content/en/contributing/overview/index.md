@@ -33,11 +33,9 @@ Hugo FixIt is eager for enthusiasm and participation from the open-source commun
 
 <!--more-->
 
-## How to contribute
+## Contributing
 
-{{< style "text-align: center; img { height: 1.25em; vertical-align: text-bottom; }" "p" >}}
-Don't forget to leave a ⭐️ if you like this theme, thanks! [![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
-{{< /style >}}
+Welcome to join Hugo FixIt development and maintenance, contact us via `fixit@lruihao.cn`.
 
 {{< link "../development" "🔧 Develop FixIt theme" "Contribute to the development of FixIt." true "fa-solid fa-code" >}}
 

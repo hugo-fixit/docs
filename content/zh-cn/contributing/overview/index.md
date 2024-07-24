@@ -32,11 +32,9 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 
 <!--more-->
 
-## 如何贡献
+## 贡献指南
 
-{{< style "text-align: center; img { height: 1.25em; vertical-align: text-bottom; }" "p" >}}
-如果你喜欢这个主题，别忘了留下一颗 ⭐️ 哦，谢谢！[![GitHub stars](https://img.shields.io/github/stars/hugo-fixit/FixIt?style=social)](https://github.com/hugo-fixit/FixIt)
-{{< /style >}}
+欢迎加入 Hugo FixIt 的开发和维护，通过以下方式联系我们 `fixit@lruihao.cn`.
 
 {{< link "../development" "🔧 开发 FixIt 主题" "为 FixIt 的开发做贡献。" true "fa-solid fa-code" >}}
 

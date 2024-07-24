@@ -54,11 +54,10 @@
   [main.params]
     icon = "fa-solid fa-blog"
 
-# TODO 新增 Community 页面（Hugo FixIt README、讨论、QQ 群、知识星球），开启评论
 [[main]]
   identifier = "community"
   name = "社区支持"
-  url = "https://github.com/hugo-fixit/FixIt/discussions"
+  url = "community/"
   weight = 40
   [main.params]
     icon = "fa-regular fa-comments"
