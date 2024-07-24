@@ -1218,11 +1218,13 @@ mDevtools
           h4 = "{h2}.{h3}.{h4} {title}"
           h5 = "{h2}.{h3}.{h4}.{h5} {title}"
           h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-    # 代码配置
+    # 代码块包装器配置
     [params.page.code]
-      # 是否显示代码块的复制按钮
+      # {{< version 0.3.9 >}} 是否启用代码块包装器
+      enable = true
+      # 是否显示代码块包装器的复制按钮
       copy = true
-      # {{< version 0.2.13 >}} 是否显示代码块的编辑按钮
+      # {{< version 0.2.13 >}} 是否显示代码块包装器的编辑按钮
       edit = true
       # 默认展开显示的代码行数
       maxShownLines = 10

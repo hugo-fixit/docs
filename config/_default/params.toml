@@ -781,14 +781,17 @@ disableThemeInject = false
         h4 = "{h2}.{h3}.{h4} {title}"
         h5 = "{h2}.{h3}.{h4}.{h5} {title}"
         h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-  # Code config
-  # 代码配置
+  # Code wrapper config
+  # 代码块包装器配置
   [page.code]
-    # whether to show the copy button of the code block
-    # 是否显示代码块的复制按钮
+    # FixIt 0.3.9 | NEW whether to enable the code wrapper
+    # FixIt 0.3.9 | 新增 是否启用代码块包装器
+    enable = true
+    # whether to show the copy button of the code wrapper
+    # 是否显示代码块包装器的复制按钮
     copy = true
-    # FixIt 0.2.13 | NEW whether to show the edit button of the code block
-    # FixIt 0.2.13 | 新增 是否显示代码块的编辑按钮
+    # FixIt 0.2.13 | NEW whether to show the edit button of the code wrapper
+    # FixIt 0.2.13 | 新增 是否显示代码块包装器的编辑按钮
     edit = true
     # the maximum number of lines of displayed code by default
     # 默认展开显示的代码行数

@@ -1238,11 +1238,13 @@ mDevtools
       copyTex = true
       # KaTeX extension mhchem
       mhchem = true
-    # Code config
+    # Code wrapper config
     [params.page.code]
-      # whether to show the copy button of the code block
+      # {{< version 0.3.9 >}} whether to enable the code wrapper
+      enable = true
+      # whether to show the copy button of the code wrapper
       copy = true
-      # {{< version 0.2.13 >}} whether to show the edit button of the code block
+      # {{< version 0.2.13 >}} whether to show the edit button of the code wrapper
       edit = true
       # the maximum number of lines of displayed code by default
       maxShownLines = 10
