@@ -21,7 +21,6 @@ categories:
   - Documentation
 lightgallery: true
 math: true
-reward: true
 ---
 
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 Shortcodes。

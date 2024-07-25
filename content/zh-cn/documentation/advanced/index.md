@@ -16,7 +16,6 @@ collections:
 tags:
   - Advanced
   - Customization
-reward: true
 toc:
   auto: false
 ---

@@ -2,6 +2,7 @@
 title: PWA Support
 date: 2022-01-26T09:32:56+08:00
 type: posts
+reward: false
 aliases:
   - /pwa-support/
 description: Guide to setup PWA in FixIt.

@@ -5,7 +5,6 @@ type: posts
 categories:
   - Contributing
 hiddenFromHomePage: true
-reward: true
 related:
   enable: false
 menu:

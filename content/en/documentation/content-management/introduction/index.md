@@ -19,7 +19,6 @@ categories:
 collections:
   - Content Management
 lightgallery: true
-reward: true
 ---
 
 Find out how to create and organize your content quickly and intuitively in **FixIt** theme.

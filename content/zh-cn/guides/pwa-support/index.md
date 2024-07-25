@@ -2,6 +2,7 @@
 title: PWA 支持
 date: 2022-01-26T11:10:56+08:00
 type: posts
+reward: false
 aliases:
   - /pwa-support/
 description: 在 FixIt 中设置 PWA 的指南。
@@ -46,19 +47,19 @@ repost:
 
 以下是必填参数。
 
-- **name** *[必须]*
+- **name** _[必须]_
 
     你的 PWA 的名称。
 
-- **short_name** *[必须]*
+- **short_name** _[必须]_
 
     你的 PWA 的简称。
 
-- **start_url** *[必须]*
+- **start_url** _[必须]_
 
     你的 PWA 的起始地址。请默认填写`"/"`。
 
-- **icons** *[必须]*
+- **icons** _[必须]_
 
     你的 PWA 的图标。你可以将网站的 favicon 作为图标。
 

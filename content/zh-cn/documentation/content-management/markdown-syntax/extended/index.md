@@ -18,7 +18,6 @@ categories:
   - Documentation
 collections:
   - Markdown Syntax
-reward: true
 math: true
 ---
 <!-- markdownlint-disable-file reference-links-images -->

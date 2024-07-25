@@ -22,7 +22,6 @@ categories:
 collections:
   - Getting Started
 lightgallery: true
-reward: true
 ---
 
 了解如何配置你的 Hugo **FixIt** 站点。

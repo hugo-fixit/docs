@@ -25,7 +25,6 @@ categories:
   - Documentation
 collections:
   - Content Management
-reward: true
 ---
 
 Find out how to encrypt content in FixIt theme.

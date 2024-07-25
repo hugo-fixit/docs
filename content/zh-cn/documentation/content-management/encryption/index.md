@@ -25,7 +25,6 @@ categories:
   - Documentation
 collections:
   - Content Management
-reward: true
 ---
 
 了解如何在 FixIt 主题中加密内容。

@@ -21,7 +21,6 @@ categories:
   - Documentation
 lightgallery: true
 math: true
-reward: true
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.

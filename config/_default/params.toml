@@ -853,7 +853,7 @@ disableThemeInject = false
   # Donate (Sponsor) settings
   # 赞赏设置
   [page.reward]
-    enable = false
+    enable = true
     animation = true
     # position relative to post footer, optional values: ["before", "after"]
     # 相对于页脚的位置，可选值：["before", "after"]

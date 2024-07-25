@@ -19,7 +19,6 @@ categories:
 collections:
   - Content Management
 lightgallery: true
-reward: true
 ---
 
 了解如何在 **FixIt** 主题中快速，直观地创建和组织内容。

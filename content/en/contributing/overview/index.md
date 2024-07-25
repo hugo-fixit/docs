@@ -9,7 +9,6 @@ resources:
     src: cover.webp
 type: posts
 pageStyle: wide
-reward: true
 related:
   enable: false
 description: Hugo FixIt is eager for enthusiasm and participation from the open-source community. We need your support!

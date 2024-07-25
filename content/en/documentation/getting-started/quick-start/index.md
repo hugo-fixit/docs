@@ -18,7 +18,6 @@ categories:
 collections:
   - Getting Started
 lightgallery: true
-reward: true
 toc:
   auto: false
 ---
