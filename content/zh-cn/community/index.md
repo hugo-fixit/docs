@@ -44,4 +44,4 @@ _~作者：[Lruihao][author]~_
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
-[zsxq]: https://t.zsxq.com/oZYCt
+[zsxq]: https://t.zsxq.com/CE3GF

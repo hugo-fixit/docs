@@ -21,6 +21,13 @@ description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"
   Weibo = "liahao"
   Email = "fixit@lruihao.cn"
   RSS = true
+  [social.zsxq]
+    id = "CE3GF"
+    weight = 70
+    Prefix = "https://t.zsxq.com/"
+    Title = "Hugo FixIt 知识星球"
+    [social.zsxq.icon]
+      Src = "images/icons/zsxq.svg"
   [social.QQGroup]
     id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
     Title = "FixIt 主题交流群"

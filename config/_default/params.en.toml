@@ -19,9 +19,16 @@
   Twitter = "lruihao"
   Email = "fixit@lruihao.cn"
   RSS = true
+  [social.zsxq]
+    id = "CE3GF"
+    Weight = 70
+    Prefix = "https://t.zsxq.com/"
+    Title = "Hugo FixIt Planet"
+    [social.zsxq.icon]
+      Src = "images/icons/zsxq.svg"
   [social.QQGroup]
     id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
-    Title = "Join FixIt related discussion on QQ Group"
+    Title = "FixIt QQ group"
 
 [watermark]
   content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt Theme'
