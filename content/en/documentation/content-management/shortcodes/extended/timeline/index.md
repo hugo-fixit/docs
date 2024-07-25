@@ -130,7 +130,7 @@ events:
 
 {{< details "View source" false true >}}
 
-```markdown
+```markdown {data-open=true}
 {?{}{?{}< timeline >}}
 events:
   - timestamp: 2024-07-19 20:30
@@ -209,7 +209,7 @@ events:
 
 {{< details "View source" false true >}}
 
-```markdown
+```markdown {data-open=true}
 {?{}{?{}< timeline reverse=true >}}
 events:
   - timestamp: 2021-12-18T16:15:22+08:00
@@ -263,7 +263,7 @@ Example Timeline input in `JSON` format:
 
 {{< details "View source" false true >}}
 
-```markdown
+```markdown {data-open=true}
 {?{}{?{}< timeline >}}
 {
   "events": [
