@@ -198,7 +198,7 @@ events:
   - timestamp: 2024-01-01T14:54:19+08:00
     content: ":bookmark: Chore(release): 0.3.0"
     type: success
-  - timestamp: 2024-01-01T14:54:19+08:00
+  - timestamp: 2024-05-20T14:54:19+08:00
     content: "<span class=\"text-secondary\">:(fa-regular fa-comment-dots): Half a year later...</span>"
     hideTimestamp: true
     type: secondary
@@ -224,7 +224,7 @@ events:
   - timestamp: 2024-01-01T14:54:19+08:00
     content: ":bookmark: Chore(release): 0.3.0"
     type: success
-  - timestamp: 2024-01-01T14:54:19+08:00
+  - timestamp: 2024-05-20T14:54:19+08:00
     content: "<span class=\"text-secondary\">:(fa-regular fa-comment-dots): Half a year later...</span>"
     hideTimestamp: true
     type: secondary
