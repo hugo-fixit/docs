@@ -35,13 +35,15 @@ All feedback is welcome! Head over to the [discussions][discussions], [Pull requ
 | [Hugo FixIt Planet][zsxq]  | Official Knowledge Planet[^1]    |
 
 <!-- footnote reference definition -->
-[^1]: Knowledge Planet is a paid community platform for knowledge sharing and communication. If you need more help and support, you can join our Knowledge Planet. ([Newcomer Coupon～](https://t.zsxq.com/BQcpe))
+[^1]: Knowledge Planet is a paid community platform for knowledge sharing and communication. If you need more help and support, you can join our Knowledge Planet. ([Newcomer Coupon～][promotion_coupon])
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [fixit]: https://github.com/hugo-fixit/FixIt
 [author]: https://github.com/Lruihao
 [discussions]: https://github.com/orgs/hugo-fixit/discussions
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
-[zsxq]: https://t.zsxq.com/CE3GF
+[zsxq]: {{< param planet.invite >}}
+[promotion_coupon]: {{< param planet.promotion_coupon >}}

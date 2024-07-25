@@ -172,6 +172,12 @@
   }
 }
 
+.aside-custom {
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
 [lang='en'] {
   .collection-details .collection-summary .collection-name::before {
     content: '';

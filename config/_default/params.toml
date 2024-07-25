@@ -645,6 +645,12 @@ disableThemeInject = false
     # 支持 "vConsole", "eruda"
     type = "vConsole"
 
+# FixIt Docs config
+[planet]
+  invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF
+  promotion_coupon = "https://t.zsxq.com/BQcpe"
+  renewal_coupon = ""
+
 # Page config
 # 文章页面配置
 [page]
