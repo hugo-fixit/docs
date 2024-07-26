@@ -9,7 +9,7 @@ keywords:
 ---
 
 Clean, Elegant but Advanced
-{.text-center, style="font-size: 28px;padding-bottom: 0.3em;border-bottom: 1px solid #f0f0f0;font-weight: bold;margin-bottom: 16px;"}
+{.text-center, style="font-size: 2em;line-height: 1.25;padding-bottom: 0.3em;border-bottom: 1px solid #f0f0f0;font-weight: bold;margin-bottom: 16px;"}
 
 {{< image src="/images/hugo-fixit.webp" alt="Hugo FixIt logo" width="140" linked=false >}}
 {.text-center}
@@ -28,11 +28,12 @@ Don't forget to leave a ⭐️ if you like this theme, thanks! [![GitHub stars](
 
 All feedback is welcome! Head over to the [discussions][discussions], [Pull requests][pulls] and [issues][issues] tracker.
 
-| Community                  | Description                      |
-| :------------------------- | :------------------------------- |
-| [Discussions][discussions] | Official GitHub discussion forum |
-| [FixIt QQ group][qq-group] | Official QQ group: `814031017`   |
-| [Hugo FixIt Planet][zsxq]  | Official Knowledge Planet[^1]    |
+| Official Community          | Description                     |
+| :-------------------------- | :------------------------------ |
+| [Discussions][discussions]  | GitHub discussion forum         |
+| [FixIt WeChat group][wx-mp] | Follow and reply "FixIt" to get |
+| [FixIt QQ group][qq-group]  | QQ group: `814031017`           |
+| [Hugo FixIt Planet][zsxq]   | Paid knowledge Planet[^1]       |
 
 <!-- footnote reference definition -->
 [^1]: Knowledge Planet is a paid community platform for knowledge sharing and communication. If you need more help and support, you can join our Knowledge Planet. ([Newcomer Coupon～][promotion_coupon])
@@ -45,5 +46,6 @@ All feedback is welcome! Head over to the [discussions][discussions], [Pull requ
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
+[wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
 [zsxq]: {{< param planet.invite >}}
 [promotion_coupon]: {{< param planet.promotion_coupon >}}

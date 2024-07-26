@@ -191,7 +191,7 @@ We strongly recommend that you read the full documentation for the FixIt theme t
 
 ## Ask for help
 
-All feedback is welcome! Head over to the [issues][issues] or [discussions][discussions] tracker.
+if you encounter any problems or have any questions, please go to our [community][community] for help.
 
 <!-- link reference definition -->
 [hugo-installing]: https://gohugo.io/getting-started/installing/
@@ -212,13 +212,12 @@ All feedback is welcome! Head over to the [issues][issues] or [discussions][disc
 [deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
-[issues]: https://github.com/hugo-fixit/FixIt/issues
-[discussions]: https://github.com/hugo-fixit/FixIt/discussions
 <!-- markdownlint-disable-file reference-links-images -->
 [installation]: {{< relref path="/documentation/installation" >}}
 [getting-started]: {{< relref path="/documentation/getting-started" >}}
 [content-management]: {{< relref path="/documentation/content-management" >}}
 [advanced]: {{< relref path="/documentation/advanced" >}}
+[community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->
 [^1]: The Git repository contains the entire project directory, typically excluding the public directory because the site is built after the push.

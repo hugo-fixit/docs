@@ -9,7 +9,7 @@ keywords:
 ---
 
 简洁、优雅 但 高效
-{.text-center, style="font-size: 28px;padding-bottom: 0.3em;border-bottom: 1px solid #f0f0f0;font-weight: bold;margin-bottom: 16px;"}
+{.text-center, style="font-size: 2em;line-height: 1.25;padding-bottom: 0.3em;border-bottom: 1px solid #f0f0f0;font-weight: bold;margin-bottom: 16px;"}
 
 {{< image src="/images/hugo-fixit.webp" alt="Hugo FixIt logo" width="140" linked=false >}}
 {.text-center}
@@ -28,11 +28,12 @@ _~作者：[Lruihao][author]~_
 
 所有的反馈都是欢迎的！详见 [Discussions][discussions]、[Pull requests][pulls] 和 [Issues][issues]。
 
-| 社区                         | 说明                    |
-| :--------------------------- | :---------------------- |
-| [Discussions][discussions]   | 官方 GitHub 讨论区      |
-| [FixIt 主题交流群][qq-group] | 官方 QQ 群：`814031017` |
-| [Hugo FixIt 星球][zsxq]      | 官方知识星球[^1]        |
+| 官方社区                           | 说明                            |
+| :--------------------------------- | :------------------------------ |
+| [Discussions][discussions]         | GitHub 讨论区                   |
+| [FixIt 主题交流群（微信）][wx-mp]  | 关注「菠菜眾長」回复“FixIt”获取 |
+| [FixIt 主题交流群（QQ）][qq-group] | QQ 群：`814031017`              |
+| [Hugo FixIt 星球][zsxq]            | 付费知识星球[^1]                |
 
 <!-- footnote reference definition -->
 [^1]: 知识星球是一个付费的知识分享和交流社区平台。如果你需要更多的帮助和支持，可以加入我们的知识星球。（[新人优惠券～][promotion_coupon]）
@@ -45,5 +46,6 @@ _~作者：[Lruihao][author]~_
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [issues]: https://github.com/hugo-fixit/FixIt/issues
 [qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
+[wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
 [zsxq]: {{< param planet.invite >}}
 [promotion_coupon]: {{< param planet.promotion_coupon >}}

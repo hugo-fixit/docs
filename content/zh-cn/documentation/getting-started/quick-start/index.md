@@ -197,7 +197,7 @@ hugo
 
 ## 寻求帮助
 
-所有的反馈都是欢迎的！详见 [议题][issues]、[讨论][discussions] 或者加入 QQ 群：`814031017`。
+如果你遇到问题或有任何疑问，请前往我们的 [社区][community] 寻求帮助。
 
 <!-- link reference definition -->
 [hugo-installing]: https://gohugo.io/getting-started/installing/
@@ -218,13 +218,12 @@ hugo
 [deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
-[issues]: https://github.com/hugo-fixit/FixIt/issues
-[discussions]: https://github.com/hugo-fixit/FixIt/discussions
 <!-- markdownlint-disable-file reference-links-images -->
 [installation]: {{< relref path="/documentation/installation" >}}
 [getting-started]: {{< relref path="/documentation/getting-started" >}}
 [content-management]: {{< relref path="/documentation/content-management" >}}
 [advanced]: {{< relref path="/documentation/advanced" >}}
+[community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->
 [^1]: Git 存储库包含整个项目目录，通常不包括 public 目录，因为站点是在推送后构建的。
