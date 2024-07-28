@@ -18,9 +18,16 @@ description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"
 
 [social]
   GitHub = "hugo-fixit"
-  Weibo = "liahao"
+  # Weibo = "liahao"
   Email = "fixit@lruihao.cn"
   RSS = true
+  [social.weixin]
+    id = "qr-wx-mp_s.webp"
+    weight = 20
+    Template = "https://lruihao.cn/images/%v"
+    Title = "FixIt 主题交流群"
+    [social.weixin.icon]
+      Class = "fa-brands fa-weixin fa-fw"
   [social.zsxq]
     id = "CE3GF"
     weight = 70
