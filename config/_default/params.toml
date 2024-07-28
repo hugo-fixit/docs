@@ -489,13 +489,21 @@ disableThemeInject = false
   # 水印字体
   fontFamily = "inherit"
 
-# FixIt 0.2.12 | NEW Busuanzi count
-# FixIt 0.2.12 | 新增 不蒜子统计
-[ibruce]
+# FixIt 0.3.10 | NEW Busuanzi count
+# FixIt 0.3.10 | 新增 不蒜子计数
+[busuanzi]
+  # whether to enable busuanzi count
+  # 是否启用不蒜子计数
   enable = false
-  # Enable in post meta
-  # 在文章中开启
-  enablePost = false
+  # busuanzi count core ["vercount", "busuanzi"], default: "vercount"
+  # 不蒜子计数核心 ["vercount", "busuanzi"]，默认："vercount"
+  core = "vercount"
+  # whether to show the site views
+  # 是否显示网站访问量
+  siteViews = true
+  # whether to show the page views
+  # 是否显示页面访问量
+  pageViews = true
 
 # Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
 # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou

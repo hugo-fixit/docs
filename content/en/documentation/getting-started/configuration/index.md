@@ -828,24 +828,32 @@ selector
     fontFamily = "inherit"
 ```
 
-### ibruce
+### busuanzi
 
-{{< version 0.2.12 >}}
+{{< version 0.3.10 >}}
 
 `map` Busuanzi count Configuration.
 
 ```toml
 [params]
-  [params.ibruce]
+  [params.busuanzi]
     enable = false
-    enablePost = false
+    core = "vercount"
+    siteViews = true
+    pageViews = true
 ```
 
 enable
 : `bool` Whether to enable Busuanzi count. Default is `false`.
 
-enablePost
-: `bool` Whether to enable Busuanzi count in post meta. Default is `false`.
+core
+: `string` Busuanzi count core. The configuration value for `core` can be one of `vercount`, `busuanzi`. Default is `vercount`.
+
+siteViews
+: `bool` Whether to show the site views. Default is `true`.
+
+pageViews
+: `bool` Whether to show the page views. Default is `true`.
 
 ### verification
 

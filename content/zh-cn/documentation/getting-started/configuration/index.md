@@ -823,24 +823,32 @@ selector
     fontFamily = "inherit"
 ```
 
-### ibruce
+### busuanzi
 
-{{< version 0.2.12 >}}
+{{< version 0.3.10 >}}
 
 `map` 不蒜子计数器配置。
 
 ```toml
 [params]
-  [params.ibruce]
+  [params.busuanzi]
     enable = false
-    enablePost = false
+    core = "vercount"
+    siteViews = true
+    pageViews = true
 ```
 
 enable
 : `bool` 是否启用不蒜子计数器，默认：`false`。
 
-enablePost
-: `bool` 是否在文章中启用不蒜子计数器，默认：`false`。
+core
+: `string` 不蒜子计数器核心，可选值：`vercount`、`busuanzi`，默认：`vercount`。
+
+siteViews
+: `bool` 是否显示网站访问量，默认：`true`。
+
+pageViews
+: `bool` 是否显示页面访问量，默认：`true`。
 
 ### verification
 
