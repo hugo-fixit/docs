@@ -22,6 +22,8 @@ categories:
 collections:
   - Getting Started
 lightgallery: true
+heading:
+  capitalize: false
 ---
 
 Find out how to configure your Hugo **FixIt** site.
