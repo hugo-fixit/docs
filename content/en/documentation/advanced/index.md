@@ -59,23 +59,23 @@ In addition, you can also customize the `pageStyle` value in `assets/css/_custom
 
 For example: `pageStyle="custom"`
 
-```scss
+```scss {data-open=true}
 [data-page-style='custom'] {
   @media only screen and (min-width: 1441px) {
     %page-style {
-      width: 70%;
+      width: Round(70%, 2px);
     }
   }
 
   @media only screen and (min-width: 1440px) {
     %page-style {
-      width: 60%;
+      width: Round(60%, 2px);
     }
   }
 
   @media only screen and (min-width: 1200px) {
     %page-style {
-      width: 56%;
+      width: Round(56%, 2px);
     }
   }
 }
