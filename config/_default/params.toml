@@ -714,8 +714,8 @@ disableThemeInject = false
   # whether to show the full text content in RSS
   # 是否在 RSS 中显示全文内容
   rssFullText = false
-  # FixIt 0.2.13 | NEW Page style ["narrow", "normal", "wide", ...)
-  # FixIt 0.2.13 | 新增 页面样式 ["narrow", "normal", "wide", ...)
+  # FixIt 0.3.10 | CHANGED Page style ["narrow", "normal", "wide", ...)
+  # FixIt 0.3.10 | 更改 页面样式 ["narrow", "normal", "wide", ...)
   pageStyle = "normal"
   # FixIt 0.2.17 | CHANGED Auto Bookmark Support
   # If true, save the reading progress when closing the page.

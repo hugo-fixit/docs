@@ -1171,7 +1171,7 @@ mDevtools
     linkToReport = true
     # 是否在 RSS 中显示全文内容
     rssFullText = false
-    # {{< version 0.2.13 >}} 页面样式 ["narrow", "normal", "wide", ...]
+    # {{< version 0.3.10 changed >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.17 changed >}} 开启自动书签支持
     # 如果为 true，则在关闭页面时保存阅读进度

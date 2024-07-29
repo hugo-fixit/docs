@@ -47,7 +47,7 @@ In `assets/css/_custom.scss`, you can add some css style code to customize the s
 
 ### Page Style {#page-style}
 
-{{< version 0.2.13 >}}
+{{< version 0.3.10 changed >}}
 
 The FixIt theme provides a page width configuration option `pageStyle` and three values.
 

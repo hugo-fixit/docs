@@ -1178,7 +1178,7 @@ mDevtools
     linkToReport = true
     # whether to show the full text content in RSS
     rssFullText = false
-    # {{< version 0.2.13 >}} Page style ["narrow", "normal", "wide", ...]
+    # {{< version 0.3.10 changed >}} Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.17 changed >}} Auto Bookmark Support
     # If true, save the reading progress when closing the page.
