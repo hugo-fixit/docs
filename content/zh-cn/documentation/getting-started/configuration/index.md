@@ -835,7 +835,7 @@ selector
 [params]
   [params.busuanzi]
     enable = false
-    core = "vercount"
+    source = "https://vercount.one/js"
     siteViews = true
     pageViews = true
 ```
@@ -843,8 +843,9 @@ selector
 enable
 : `bool` 是否启用不蒜子计数器，默认：`false`。
 
-core
-: `string` 不蒜子计数器核心，可选值：`vercount`、`busuanzi`，默认：`vercount`。
+source
+: `string` 不蒜子计数器核心脚本地址。默认：`https://vercount.one/js`。\
+支持 [Vercount][vercount], [不蒜子][busuanzi], etc.
 
 siteViews
 : `bool` 是否显示网站访问量，默认：`true`。
@@ -1588,6 +1589,8 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 [fusejs-options]: https://fusejs.io/api/options.html
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
+[vercount]: https://vercount.one/
+[busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

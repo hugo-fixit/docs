@@ -840,7 +840,7 @@ selector
 [params]
   [params.busuanzi]
     enable = false
-    core = "vercount"
+    source = "https://vercount.one/js"
     siteViews = true
     pageViews = true
 ```
@@ -848,8 +848,9 @@ selector
 enable
 : `bool` Whether to enable Busuanzi count. Default is `false`.
 
-core
-: `string` Busuanzi count core. The configuration value for `core` can be one of `vercount`, `busuanzi`. Default is `vercount`.
+source
+: `string` Busuanzi count core script source. Default is `https://vercount.one/js`.\
+Support [Vercount][vercount], [Busuanzi][busuanzi], etc.
 
 siteViews
 : `bool` Whether to show the site views. Default is `true`.
@@ -1595,6 +1596,8 @@ They're easily created via <https://realfavicongenerator.net/>.
 [fusejs-options]: https://fusejs.io/api/options.html
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
+[vercount]: https://vercount.one/
+[busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

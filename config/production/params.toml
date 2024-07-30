@@ -169,9 +169,9 @@
   # whether to enable busuanzi count
   # 是否启用不蒜子计数
   enable = true
-  # busuanzi count core ["vercount", "busuanzi"], default: "vercount"
-  # 不蒜子计数核心 ["vercount", "busuanzi"]，默认："vercount"
-  core = "vercount"
+  # busuanzi count core script source. Default is https://vercount.one/js
+  # 不蒜子计数器核心脚本地址。默认为 https://vercount.one/js
+  source = "https://vercount.one/js"
   # whether to show the site views
   # 是否显示网站访问量
   siteViews = true
