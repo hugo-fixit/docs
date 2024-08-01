@@ -2,7 +2,11 @@
 - nickname: Lruihao
   avatar: https://lruihao.cn/images/avatar.jpg
   url: https://lruihao.cn
-  description: Share programming experience and learning experience.
+  description: Hugo FixIt 作者，喜欢瞎折腾、造轮子、写东西，分享一些前端开发中的所见、所闻、所思。
+- nickname: FixIt
+  avatar: /images/hugo-fixit.webp
+  url: https://fixit.lruihao.cn
+  description: FixIt Theme Official Documentation
 # -------------------------------------------------------------------------------------
 # Single Friend Link Information
 # 单个友情链接信息
@@ -29,7 +33,7 @@
 
 - nickname: forDece
   avatar: https://www.fordece.cn/images/avatar.jpg
-  url: https://www.fordece.cn/
+  url: https://www.fordece.cn
   description: 某人的小栈
 
 - nickname: hiifong
@@ -37,10 +41,25 @@
   url: https://hiif.ong
   description: Hi 👋, I'm hiifong!
 
+- nickname: mailcow
+  avatar: https://mailcow.email/images/cow_mailcow.svg
+  url: https://mailcow.email
+  description: The official blog of excellent open-source project mailcow-dockerized.
+
 - nickname: Niku
   avatar: https://www.nikunokoya.com/images/avatar.jpg
   url: https://www.nikunokoya.com
   description: Niku's blog
+
+- nickname: pagezen
+  avatar: https://clearsky.me/avatar.jpg
+  url: https://clearsky.me
+  description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
+
+- nickname: SHUFly
+  avatar: https://shuosc.github.io/fly/shufly.webp
+  url: https://shuosc.github.io/fly/
+  description: 上海大学开源社区出品的上海大学溯源手册。
 
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
@@ -60,9 +79,4 @@
 - nickname: 逐水寻源
   avatar: https://www.zair.top/img/logo.png
   description: 分享我的学习笔记、经验与有趣的小玩意。
-  url: https://www.zair.top/  
-
-- nickname: ADD
-  avatar: /images/hugo-fixit.webp
-  url: https://github.com/hugo-fixit/docs/edit/main/data/friends.yml
-  description: Create a pull request to add a new site.
+  url: https://www.zair.top
