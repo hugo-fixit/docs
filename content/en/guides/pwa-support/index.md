@@ -17,6 +17,7 @@ resources:
     src: cover.webp
 toc:
   auto: false
+lightgallery: true
 repost:
   enable: true
   url: https://hugodoit.com/pwa-support/
@@ -47,19 +48,19 @@ Under the `/static/` folder, you need to create a file named `site.webmanifest`.
 
 Here are the key values required.
 
-- **name** *[required]*
+- **name** _[required]_
 
     The name of your web app.
 
-- **short_name** *[required]*
+- **short_name** _[required]_
 
     A shorter name for your web app.
 
-- **start_url** *[required]*
+- **start_url** _[required]_
 
     The start URL of your web app. Please fill in `"/"` by default.
 
-- **icons** *[required]*
+- **icons** _[required]_
 
     An array of objects representing image files will be served as application icons. You can reuse the favicon of your site as the icons.
 

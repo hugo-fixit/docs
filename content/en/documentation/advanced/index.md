@@ -133,4 +133,4 @@ This part is shown in the [pwa support page][pwa-support].
 
 <!-- link reference definition -->
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
-[block]: {{< relref path="/references/block" >}}
+[block]: {{< relref path="/references/blocks" >}}

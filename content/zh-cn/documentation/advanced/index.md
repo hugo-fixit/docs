@@ -133,4 +133,4 @@ Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建
 
 <!-- link reference definition -->
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
-[block]: {{< relref path="/references/block" >}}
+[block]: {{< relref path="/references/blocks" >}}

@@ -17,6 +17,7 @@ resources:
     src: cover.webp
 toc:
   auto: false
+lightgallery: true
 repost:
   enable: true
   url: https://hugodoit.com/zh-cn/pwa-support/
@@ -142,7 +143,7 @@ repost:
 
 如果一切顺利，现在当你访问你的网站时，浏览器将显示一个安装按钮，单击“安装”后，你的网站将被安装为一个本地的原生应用程序。
 
-![Installed PWA](install-pwa.jpg "Installed PWA")
+![Installed PWA](/guides/pwa-support/install-pwa.jpg "Installed PWA")
 
 大功告成！你已成功将你的静态网站配置为了一个 PWA 🎉
 
