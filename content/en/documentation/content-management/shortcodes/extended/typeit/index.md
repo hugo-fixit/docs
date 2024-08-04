@@ -43,9 +43,25 @@ The `typeit` shortcode has the following named parameters:
 
     Grouping of content, the content of the same group will start typing animation in order.
 
+- **speed** _[optional]_
+
+    {{< version 0.3.10 >}} Typing speed between each step (measured in milliseconds), default: `100`.
+
+- **cursorSpeed** _[optional]_
+
+    {{< version 0.3.10 >}} Blinking speed of the cursor (measured in milliseconds), default: `1000`.
+
+- **cursorChar** _[optional]_
+
+    {{< version 0.3.10 >}} Character used for the cursor (HTML format is supported), default: `|`.
+
+- **duration** _[optional]_
+
+    {{< version 0.3.10 >}} Cursor duration after typing finishing (measured in milliseconds, `-1` means unlimited), default: `-1`.
+
 - **loop** _[optional]_
 
-    Whether your content will continuously loop after completing.
+    {{< version 0.2.18 >}} Whether your content will continuously loop after completing.
 
 ## Simple Content {#simple-content}
 
