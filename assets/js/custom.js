@@ -27,7 +27,7 @@ class FixItDocs {
     // set header subtitle with theme version (desktop and mobile)
     const headerSubtitles = document.querySelectorAll('.header-subtitle');
     headerSubtitles.forEach((subtitle) => {
-      subtitle.textContent = `${themeVersion}`;
+      subtitle.textContent = `${themeVersion.replace(/-.*$/, '*')}`;
     });
     return this;
   }
