@@ -202,12 +202,6 @@ auto
 
 `bool` Whether to add external Icon for external links automatically. Default is `false`.
 
-### navigationReverse
-
-{{< version 0.3.0 >}}
-
-`bool` Whether to reverse the order of the navigation menu. Default is `false`.
-
 ### withSiteTitle
 
 {{< version 0.3.0 >}}
@@ -478,6 +472,25 @@ sticky
 
 showHome
 : `bool` Whether to show the home link in the breadcrumb. Default is `false`.
+
+### navigation
+
+{{< version 0.3.10 >}}
+
+`map` The Post navigation Configuration.
+
+```toml
+[params]
+  [params.navigation]
+    inSection = false
+    reverse = false
+```
+
+inSection
+: `bool` Whether to show the post navigation in section pages scope. Default is `false`.
+
+reverse
+: `bool` Whether to reverse the next/previous post navigation order. Default is `false`.
 
 ### footer
 

@@ -204,12 +204,6 @@ auto
 
 `bool` 是否自动显示外链图标，默认：`false`。
 
-### navigationReverse
-
-{{< version 0.3.0 >}}
-
-`bool` 是否反转导航菜单的顺序，默认：`false`。
-
 ### withSiteTitle
 
 {{< version 0.3.0 >}}
@@ -472,6 +466,25 @@ sticky
 
 showHome
 : `bool` 是否显示主页链接。
+
+### navigation
+
+{{< version 0.3.10 >}}
+
+`map` 文章导航配置。
+
+```toml
+[params]
+  [params.navigation]
+    inSection = false
+    reverse = false
+```
+
+inSection
+: `bool` 是否在 section 页面范围内显示文章导航，默认为 `false`。
+
+reverse
+: `bool` 是否反转 下一篇/上一篇 文章导航顺序，默认为 `false`。
 
 ### footer
 
