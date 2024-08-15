@@ -21,6 +21,7 @@
 {{- end -}}
 
 {{- define "custom-assets" -}}
+  {{- partial "custom/use-assets.html" . -}}
   {{- partial "inject/shortcode-caniuse.html" . -}}
 {{- end -}}
 
