@@ -397,11 +397,11 @@ fuse
 
 Based on [algolia][algolia] or [Fuse.js][fusejs], searching is supported in **FixIt** theme.
 
-In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your site configuration.
+In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
 
 ```toml
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["html", "rss", "archives", "search"]
 ```
 
 {{< link href="/guides/algolia-atomic" content="Tips about algolia" card=true >}}
@@ -603,7 +603,9 @@ dateFormat
   [params.section]
     paginate = 20
     dateFormat = "01-02"
-    rss = 10
+    [params.section.feed]
+      limit = -1
+      fullText = false
     [params.section.recentlyUpdated]
       enable = false
       rss = false
@@ -617,8 +619,9 @@ paginate
 dateFormat
 : `string` Date format (month and day). Default is `01-02`.
 
-rss
-: `int` Amount of RSS pages. Default is `10`.
+feed
+: {{< version 0.3.10 >}}\
+`map` Section feed config for RSS, Atom and JSON feed. See [Feed config](#feed).
 
 recentlyUpdated
 : {{< version 0.2.13 >}}\
@@ -638,7 +641,9 @@ recentlyUpdated
   [params.list]
     paginate = 20
     dateFormat = "01-02"
-    rss = 10
+    [params.list.feed]
+      limit = -1
+      fullText = false
 ```
 
 paginate
@@ -647,8 +652,9 @@ paginate
 dateFormat
 : `string` Date format (month and day). Default is `01-02`.
 
-rss
-: `int` Amount of RSS pages. Default is `10`.
+feed
+: {{< version 0.3.10 >}}\
+`map` Term list feed config for RSS, Atom and JSON feed. See [Feed config](#feed).
 
 ### tagcloud
 
@@ -1098,6 +1104,21 @@ dark
 height
 : `string` The height of reading progress bar. Default is `2px`.
 
+### feed
+
+{{< version 0.3.10 >}}
+
+`map` Global Feed config for RSS, Atom and JSON feed. Default is as follows:
+
+```toml
+[params]
+  [params.feed]
+    # The number of posts to include in the feed. If set to -1, all posts.
+    limit = 10
+    # whether to show the full text content in feed.
+    fullText = true
+```
+
 ### pace
 
 {{< version 0.2.17 >}}
@@ -1164,10 +1185,10 @@ mDevtools
     hiddenFromHomePage = false
     # whether to hide a page from search results
     hiddenFromSearch = false
-    # {{< version 0.2.18-lts.5 >}} whether to hide a page from RSS feed
-    hiddenFromRss = false
     # {{< version 0.3.0 >}} whether to hide a page from related posts
     hiddenFromRelated = false
+    # {{< version 0.3.10 >}} whether to hide a page from RSS, Atom and JSON feed
+    hiddenFromFeed = false
     # whether to enable twemoji
     twemoji = false
     # {{< version 0.2.18 changed >}} whether to enable lightgallery
@@ -1190,8 +1211,6 @@ mDevtools
     linkToEdit = true
     # {{< version 0.3.0 >}} whether to show link to report issue for the post
     linkToReport = true
-    # whether to show the full text content in RSS
-    rssFullText = false
     # {{< version 0.3.10 changed >}} Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.17 changed >}} Auto Bookmark Support

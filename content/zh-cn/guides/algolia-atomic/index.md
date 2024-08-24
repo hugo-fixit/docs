@@ -51,19 +51,19 @@ description: 在 FixIt 主题中使用 algolia 的技巧。
     searchKey = "" # algolia Search-Only API Key
 ```
 
-为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
+为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
 ```toml
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["html", "rss", "archives", "search"]
 ```
 
 ## 上传索引
 
-然后你需要上传 `index.json` 到 algolia 来激活搜索功能。你可以使用浏览器来上传 `index.json` 文件，但是一个自动化的脚本可能效果更好，[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) 是一个不错的选择。
+然后你需要上传 `search.json` 到 algolia 来激活搜索功能。你可以使用浏览器来上传 `search.json` 文件，但是一个自动化的脚本可能效果更好，[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) 是一个不错的选择。
 
 {{< admonition tip "你的站点是多语言模式？" false >}}
-为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `index.json` 文件到对应的 algolia index, 例如 `zh-cn/index.json` 或 `fr/index.json`……
+为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `search.json` 文件到对应的 algolia index, 例如 `zh-cn/search.json` 或 `fr/search.json`……
 {{< /admonition >}}
 
 ### 准备
@@ -96,7 +96,7 @@ npm install atomic-algolia
 
 ### 使用
 
-当你执行 `hugo` 命令生成站点后，你可以使用以下命令上传 `index.json` 文件到 algolia 来更新索引。
+当你执行 `hugo` 命令生成站点后，你可以使用以下命令上传 `search.json` 文件到 algolia 来更新索引。
 
 ```bash
 ALGOLIA_APP_ID={{ YOUR_APP_ID }} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }} ALGOLIA_INDEX_FILE={{ YOUR_FILE_PATH }} npm run algolia
@@ -105,11 +105,11 @@ ALGOLIA_APP_ID={{ YOUR_APP_ID }} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} ALGOLIA_
 - ALGOLIA_APP_ID：algolia Application ID
 - ALGOLIA_ADMIN_KEY：algolia Admin API Key
 - ALGOLIA_INDEX_NAME：algolia 索引名称
-- ALGOLIA_INDEX_FILE：本地 `index.json` 文件路径
+- ALGOLIA_INDEX_FILE：本地 `search.json` 文件路径
 
 ## 自动化更新索引
 
-One more thing，你可以使用 [GitHub Actions](https://github.com/features/actions) 自动执行将 `index.json` 上传到 algolia 的过程。
+One more thing，你可以使用 [GitHub Actions](https://github.com/features/actions) 自动执行将 `search.json` 上传到 algolia 的过程。
 
 1. 在你的 GitHub 仓库中添加一个 `ALGOLIA_ADMIN_KEY` 的 [secret](https://docs.github.com/en/actions/reference/encrypted-secrets)，值为 algolia Admin API Key。
 2. 在你的 GitHub 仓库中添加一个 `.github/workflows/algolia-atomic.yml` 文件，内容如下。
@@ -151,7 +151,7 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
               ALGOLIA_APP_ID: YKOxxxxLUY # algolia Application ID
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }} # algolia Admin API Key
               ALGOLIA_INDEX_NAME: "index.en" # algolia index name
-              ALGOLIA_INDEX_FILE: './public/index.json' # local index.json file path
+              ALGOLIA_INDEX_FILE: './public/search.json' # local search.json file path
             run: |
               npm run algolia
 
@@ -160,11 +160,11 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
               ALGOLIA_APP_ID: YKOxxxxLUY
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
               ALGOLIA_INDEX_NAME: "index.zh-cn"
-              ALGOLIA_INDEX_FILE: "./public/zh-cn/index.json"
+              ALGOLIA_INDEX_FILE: "./public/zh-cn/search.json"
             run: |
               npm run algolia
     ```
 
-3. 当你将你的站点推送到 GitHub 仓库的 `master` 分支时，GitHub Actions 将自动执行 `hugo` 命令生成站点，并将 `index.json` 上传到 algolia。
+3. 当你将你的站点推送到 GitHub 仓库的 `master` 分支时，GitHub Actions 将自动执行 `hugo` 命令生成站点，并将 `search.json` 上传到 algolia。
 
 🎉 现在，一切准备就绪了！

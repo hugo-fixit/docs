@@ -399,11 +399,11 @@ fuse
 
 基于 [algolia][algolia] 或 [Fuse.js][fusejs]，**FixIt** 主题支持搜索功能。
 
-为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
+为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
 ```toml
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["html", "rss", "archives", "search"]
 ```
 
 {{< link href="/zh-cn/guides/algolia-atomic/" content="关于 algolia 的使用技巧" card=true >}}
@@ -596,7 +596,9 @@ dateFormat
   [params.section]
     paginate = 20
     dateFormat = "01-02"
-    rss = 10
+    [params.section.feed]
+      limit = -1
+      fullText = false
     [params.section.recentlyUpdated]
       enable = false
       rss = false
@@ -610,8 +612,9 @@ paginate
 dateFormat
 : `string` 日期格式，默认：`01-02`。
 
-rss
-: `int` RSS 文章数目，默认：`10`。
+feed
+: {{< version 0.3.10 >}}\
+`map` Section feed 配置用于 RSS, Atom 和 JSON feed，详见 [Feed 配置](#feed)。
 
 recentlyUpdated
 : {{< version 0.2.13 >}}\
@@ -631,7 +634,9 @@ recentlyUpdated
   [params.list]
     paginate = 20
     dateFormat = "01-02"
-    rss = 10
+    [params.list.feed]
+      limit = -1
+      fullText = false
 ```
 
 paginate
@@ -640,8 +645,9 @@ paginate
 dateFormat
 : `string` 日期格式，默认：`01-02`。
 
-rss
-: `int` RSS 文章数目，默认：`10`。
+feed
+: {{< version 0.3.10 >}}\
+`map` Term list feed 配置用于 RSS, Atom 和 JSON feed，详见 [Feed 配置](#feed)。
 
 ### tagcloud
 
@@ -1091,6 +1097,19 @@ dark
 height
 : `string` 阅读进度条高度，默认：`2px`。
 
+### feed
+
+`map` 全局 Feed 配置用于 RSS, Atom 和 JSON feed，默认配置如下：
+
+```toml
+[params]
+  [params.feed]
+    # 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+    limit = 10
+    # 是否在 feed 中显示全文内容。
+    fullText = true
+```
+
 ### pace
 
 {{< version 0.2.17 >}}
@@ -1157,10 +1176,10 @@ mDevtools
     hiddenFromHomePage = false
     # 是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
-    # {{< version 0.2.18-lts.5 >}} 是否在 RSS 中隐藏一篇文章
-    hiddenFromRss = false
     # {{< version 0.3.0 >}} 是否在相关文章中隐藏一篇文章
     hiddenFromRelated = false
+    # {{< version 0.3.10 >}} 是否在 RSS、Atom 和 JSON feed 中隐藏一篇文章
+    hiddenFromFeed = false
     # 是否使用 twemoji
     twemoji = false
     # {{< version 0.2.18 changed >}} 是否使用 lightgallery
@@ -1183,8 +1202,6 @@ mDevtools
     linkToEdit = true
     # {{< version 0.3.0 >}} 是否显示报告文章问题的链接
     linkToReport = true
-    # 是否在 RSS 中显示全文内容
-    rssFullText = false
     # {{< version 0.3.10 changed >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.17 changed >}} 开启自动书签支持

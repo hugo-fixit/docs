@@ -142,8 +142,8 @@ hugo new --kind post-bundle posts/bar/
 
 - **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上
 - **hiddenFromSearch**: 如果设为 `true`, 这篇文章将不会显示在搜索结果中
-- **hiddenFromRss**: {{< version 0.2.18-lts.5 >}} 如果设为 `true`, 这篇文章将不会显示在 RSS 中
 - **hiddenFromRelated**: {{< version 0.3.0 >}} 如果设为 `true`, 这篇文章将不会显示在相关文章中
+- **hiddenFromFeed**: {{< version 0.3.10 >}} 如果设为 `true`, 这篇文章将不会显示在 RSS、ATOM 和 JSON Feed 中
 - **twemoji**: 如果设为 `true`, 这篇文章会使用 twemoji
 - **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
 - **ruby**: 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]
@@ -153,7 +153,6 @@ hugo new --kind post-bundle posts/bar/
 - **linkToSource**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向源码的链接
 - **linkToEdit**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向编辑页面的链接
 - **linkToReport**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向报告问题的链接
-- **rssFullText**: 如果设为 `true`, 在 RSS 中将会显示全文内容
 - **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
 
 - **toc**: 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
@@ -180,6 +179,7 @@ hugo new --kind post-bundle posts/bar/
 - **endFlag**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.endFlag` 部分相同
 - **reward**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.reward` 部分相同
 - **instantPage**: {{< version 0.2.18 >}} 和 [主题配置][theme-config] 中的 `params.page.instantPage` 部分相同
+- **feed**: {{< version 0.3.10 >}} 和 [主题配置][theme-config] 中的 `params.feed` 部分相同
 
 <!-- front matter for section only -->
 
@@ -224,14 +224,13 @@ featuredImagePreview: ""
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
-hiddenFromRss: false
+hiddenFromFeed: false
 twemoji: false
 lightgallery: true
 ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true
-rssFullText: false
 pageStyle: "normal"
 
 toc:
