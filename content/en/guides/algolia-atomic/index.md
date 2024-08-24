@@ -51,24 +51,22 @@ Based on the API Keys obtained in the previous step, to configure the algolia se
     searchKey = "" # algolia Search-Only API Key
 ```
 
-为了生成搜索功能所需要的 `index.json`, 请在你的站点配置中添加 `JSON` 输出文件类型到 `outputs` 部分的 `home` 字段中。
-
-In order to generate `index.json` for searching, add `JSON` output file type to the `home` of the `outputs` part in your site configuration.
+In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
 
 ```toml
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["html", "rss", "archives", "search"]
 ```
 
 ## Upload Index
 
-Then, you need to upload `index.json` files to algolia to activate searching.
-You could upload the `index.json` files by browsers but a CLI tool may be better.
+Then, you need to upload `search.json` files to algolia to activate searching.
+You could upload the `search.json` files by browsers but a CLI tool may be better.
 [Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) is a good choice.
 
 {{< admonition tip "Is your site multilingual?" false >}}
 To be compatible with Hugo multilingual mode,
-you need to upload different `index.json` for each language to the different index of algolia, such as `zh-cn/index.json` or `fr/index.json`...
+you need to upload different `search.json` for each language to the different index of algolia, such as `zh-cn/search.json` or `fr/search.json`...
 {{< /admonition >}}
 
 ### Preparation
@@ -101,7 +99,7 @@ Add the following content to the `package.json` file.
 
 ### Usage
 
-After you execute the `hugo` command to generate the site, you can use the following command to upload the `index.json` file to algolia to update the index.
+After you execute the `hugo` command to generate the site, you can use the following command to upload the `search.json` file to algolia to update the index.
 
 ```bash
 ALGOLIA_APP_ID={{ YOUR_APP_ID }} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }} ALGOLIA_INDEX_FILE={{ YOUR_FILE_PATH }} npm run algolia
@@ -110,11 +108,11 @@ ALGOLIA_APP_ID={{ YOUR_APP_ID }} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} ALGOLIA_
 - ALGOLIA_APP_ID: algolia Application ID
 - ALGOLIA_ADMIN_KEY: algolia Admin API Key
 - ALGOLIA_INDEX_NAME: algolia index name
-- ALGOLIA_INDEX_FILE: local `index.json` file path
+- ALGOLIA_INDEX_FILE: local `search.json` file path
 
 ## Automation
 
-One more thing, you can automate the process of uploading `index.json` to algolia by using [GitHub Actions](https://github.com/features/actions)
+One more thing, you can automate the process of uploading `search.json` to algolia by using [GitHub Actions](https://github.com/features/actions)
 
 1. Add a `ALGOLIA_ADMIN_KEY` [secret](https://docs.github.com/en/actions/reference/encrypted-secrets) to your GitHub repository, the value is your algolia Admin API Key.
 2. Add a `.github/workflows/algolia-atomic.yml` file to your GitHub repository, the content is as follows.
@@ -156,7 +154,7 @@ One more thing, you can automate the process of uploading `index.json` to algoli
               ALGOLIA_APP_ID: YKOxxxxLUY # algolia Application ID
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }} # algolia Admin API Key
               ALGOLIA_INDEX_NAME: "index.en" # algolia index name
-              ALGOLIA_INDEX_FILE: './public/index.json' # local index.json file path
+              ALGOLIA_INDEX_FILE: './public/search.json' # local search.json file path
             run: |
               npm run algolia
 
@@ -165,11 +163,11 @@ One more thing, you can automate the process of uploading `index.json` to algoli
               ALGOLIA_APP_ID: YKOxxxxLUY
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
               ALGOLIA_INDEX_NAME: "index.zh-cn"
-              ALGOLIA_INDEX_FILE: "./public/zh-cn/index.json"
+              ALGOLIA_INDEX_FILE: "./public/zh-cn/search.json"
             run: |
               npm run algolia
     ```
 
-3. When you push your site to the `master` branch of the GitHub repository, GitHub Actions will automatically execute the `hugo` command to generate the site, and upload the `index.json` to algolia.
+3. When you push your site to the `master` branch of the GitHub repository, GitHub Actions will automatically execute the `hugo` command to generate the site, and upload the `search.json` to algolia.
 
 🎉 Now, everything is ready!

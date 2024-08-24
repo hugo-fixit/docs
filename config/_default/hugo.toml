@@ -59,7 +59,9 @@ capitalizeListTitles = false
 ignoreLogs = [
   "error-get-remote-image",
   "error-get-remote-json",
+  "error-get-gh-repo",
   "error-remote-getjson",
   "error-missing-instagram-accesstoken",
-  "err-youtube-remote"
+  "err-youtube-remote",
+  "warning-dev-version"
 ]

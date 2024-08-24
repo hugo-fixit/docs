@@ -30,9 +30,6 @@ enablePWA = true
 # FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
 # FixIt 0.2.14 | 新增 是否自动显示外链图标
 externalIcon = true
-# FixIt 0.3.0 | NEW whether to reverse the order of the navigation menu
-# FixIt 0.3.0 | 新增 是否反转导航菜单的顺序
-navigationReverse = true
 # FixIt 0.3.0 | NEW whether to add site title to the title of every page
 # remember to set up your site title in `hugo.toml` (e.g. title = "title")
 # FixIt 0.3.0 | 新增 是否在每个页面标题中添加网站标题
@@ -45,7 +42,7 @@ titleDelimiter = "|"
 # remember to set up your site subtitle by `params.header.subtitle.name`
 # FixIt 0.3.0 | 新增 是否在主页标题中添加网站副标题
 # 请记得通过 `params.header.subtitle.name` 设置网站副标题
-indexWithSubtitle = false
+indexWithSubtitle = true
 # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
 # FixIt 0.2.14 | 新增 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。
@@ -171,7 +168,7 @@ disableThemeInject = false
   [header.subtitle]
     # subtitle name
     # 副标题名称
-    name = ""
+    name = "Theme for Hugo"
     # whether to use typeit animation for subtitle name
     # 是否为副标题显示打字机动画
     typeit = false
@@ -182,6 +179,16 @@ disableThemeInject = false
   enable = true
   sticky = true
   showHome = false
+
+# FixIt 0.3.10 | NEW Post navigation config
+# FixIt 0.3.10 | 新增 文章导航配置
+[navigation]
+  # whether to show the post navigation in section pages scope
+  # 是否在 section 页面范围内显示文章导航
+  inSection = false
+  # whether to reverse the next/previous post navigation order
+  # 是否反转 下一篇/上一篇 文章导航顺序
+  reverse = false
 
 # Footer config
 # 页面底部信息配置
@@ -240,9 +247,15 @@ disableThemeInject = false
   # date format (month and day)
   # 日期格式 (月和日)
   dateFormat = "01-02"
-  # amount of RSS pages
-  # RSS 文章数目
-  rss = 10
+  # FixIt 0.3.10 | NEW Section feed config for RSS, Atom and JSON feed.
+  # FixIt 0.3.10 | 新增 Section feed 配置用于 RSS, Atom 和 JSON feed。
+  [section.feed]
+    # The number of posts to include in the feed. If set to -1, all posts.
+    # 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+    limit = -1
+    # whether to show the full text content in feed.
+    # 是否在 feed 中显示全文内容。
+    fullText = false
   # FixIt 0.2.13 | NEW recently updated posts settings
   # FixIt 0.2.13 | 新增 最近更新文章设置
   [section.recentlyUpdated]
@@ -260,9 +273,15 @@ disableThemeInject = false
   # date format (month and day)
   # 日期格式 (月和日)
   dateFormat = "01-02"
-  # amount of RSS pages
-  # RSS 文章数目
-  rss = 10
+  # FixIt 0.3.10 | NEW Term list feed config for RSS, Atom and JSON feed.
+  # FixIt 0.3.10 | 新增 Term list feed 配置用于 RSS, Atom 和 JSON feed。
+  [list.feed]
+    # The number of posts to include in the feed. If set to -1, all posts.
+    # 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+    limit = -1
+    # whether to show the full text content in feed.
+    # 是否在 feed 中显示全文内容。
+    fullText = false
 
 # TagCloud config for tags page
 # 标签云配置
@@ -634,6 +653,16 @@ disableThemeInject = false
   # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
   theme = "minimal"
 
+# FixIt 0.3.10 | NEW Global Feed config for RSS, Atom and JSON feed.
+# FixIt 0.3.10 | 新增 全局 Feed 配置用于 RSS, Atom 和 JSON feed。
+[feed]
+  # The number of posts to include in the feed. If set to -1, all posts.
+  # 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+  limit = 10
+  # whether to show the full text content in feed.
+  # 是否在 feed 中显示全文内容。
+  fullText = true
+
 # FixIt 0.2.15 | NEW Developer options
 # FixIt 0.2.15 | 新增 开发者选项
 # Select the scope named `public_repo` to generate personal access token,
@@ -673,7 +702,7 @@ disableThemeInject = false
   hiddenFromSearch = false
   # FixIt 0.3.0 | NEW whether to hide a page from RSS feed
   # FixIt 0.3.0 | 新增 是否在 RSS 中隐藏一篇文章
-  hiddenFromRss = false
+  hiddenFromFeed = false
   # FixIt 0.3.0 | NEW whether to hide a page from related posts
   # FixIt 0.3.0 | 新增 是否在相关文章中隐藏一篇文章
   hiddenFromRelated = false
@@ -711,9 +740,6 @@ disableThemeInject = false
   # whether to show link to report issue for the post
   # 是否显示报告文章问题的链接
   linkToReport = true
-  # whether to show the full text content in RSS
-  # 是否在 RSS 中显示全文内容
-  rssFullText = false
   # FixIt 0.3.10 | CHANGED Page style ["narrow", "normal", "wide", ...)
   # FixIt 0.3.10 | 更改 页面样式 ["narrow", "normal", "wide", ...)
   pageStyle = "normal"

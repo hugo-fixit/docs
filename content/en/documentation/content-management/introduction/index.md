@@ -142,8 +142,8 @@ hugo new --kind post-bundle posts/bar/
 
 - **hiddenFromHomePage**: if `true`, the content will not be shown in the home page.
 - **hiddenFromSearch**: if `true`, the content will not be shown in the search results.
-- **hiddenFromRss**: {{< version 0.2.18-lts.5 >}} if `true`, the content will not be shown in the RSS feed.
 - **hiddenFromRelated**: {{< version 0.3.0 >}} if `true`, the content will not be shown in the related posts.
+- **hiddenFromFeed**: {{< version 0.3.10 >}} if `true`, the content will not be shown in the RSS, Atom and JSON feed.
 - **twemoji**: if `true`, the content will enable the twemoji.
 - **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [theme configuration][theme-config].
 - **ruby**: if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].
@@ -153,7 +153,6 @@ hugo new --kind post-bundle posts/bar/
 - **linkToSource**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the source file.
 - **linkToEdit**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the edit page.
 - **linkToReport**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the report issue.
-- **rssFullText**: if `true`, the full text content will be shown in RSS.
 - **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
 
 - **toc**: the same as the `params.page.toc` part in the [theme configuration][theme-config].
@@ -179,6 +178,7 @@ hugo new --kind post-bundle posts/bar/
 - **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [theme configuration][theme-config].
 - **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [theme configuration][theme-config].
 - **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [theme configuration][theme-config].
+- **feed**: {{< version 0.3.10 >}} the same as the `params.feed` part in the [theme configuration][theme-config].
 
 <!-- front matter for section only -->
 
@@ -229,7 +229,6 @@ ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true
-rssFullText: false
 pageStyle: "normal"
 
 toc:
