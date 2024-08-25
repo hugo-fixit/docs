@@ -134,6 +134,120 @@ menu:
 ---
 ```
 
+## 解析配置 {#markup-configuration}
+
+通过根配置键 `markup` 配置将标记语言转为 HTML。
+
+本节仅记录**FixIt**主题的一些 [必要配置][necessary-configuration-for-theme]。有关更多详细信息，请参阅 [Configure markup][configuration-markup] 页面。
+
+```toml
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+```
+
+## 分类法配置 {#taxonomies-configuration}
+
+FixIt 主题内置了三个维度的 [分类法][configure-taxonomies]：分类、标签和合集。主题默认 `taxonomies` 配置如下：
+
+```toml
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  collection = "collections"
+```
+
+如果你希望 `taxonomies` 配置始终保持和主题一致，你可以设置 `taxonomies._merge` 为 `shallow`。
+
+之后，你可以对文章进行分类，例如：
+
+```yaml
+---
+title: 配置 FixIt
+date: 2024-03-07T15:37:59+08:00
+tags:
+  - Configuration
+  - Installation
+  - Basics
+categories:
+  - Documentation
+collections:
+  - Getting Started
+---
+```
+
+## 自定义输出格式
+
+Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能。为了完全配置主题，请将以下选项配置到 `hugo.toml` 中。
+
+有关输出格式配置的更多详细信息，请参阅 [自定义输出格式][hugo-output-formats] 页面。
+
+```toml
+[mediaTypes]
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+
+[outputFormats]
+  # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
+  [outputFormats.archives]
+    path = "archives"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+  # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
+  [outputFormats.offline]
+    path = "offline"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+  # {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
+  [outputFormats.readme]
+    baseName = "readme"
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.0 changed >}} 用于输出 baidu_urls.txt 文件的设置
+  [outputFormats.baidu_urls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.10 >}} 用于输出 search.json 文件的设置
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
+```
+
+基本上你无需配置 `mediaTypes` 和 `outputFormats` 的配置，因为 **FixIt** 主题已经为你配置好了。你只需要配置 `outputs` 部分即可。
+
+```toml
+# 用于 Hugo 输出文档的设置，可选值如下：
+# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# page = ["html", "markdown"]
+# section = ["html", "rss"]
+# taxonomy = ["html"]
+# term = ["html", "rss"]
+[outputs]
+  home = ["html", "rss", "archives", "offline", "search"]
+  page = ["html", "markdown"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html", "rss"]
+```
+
+如果你希望 `outputs` 配置始终保持和主题一致，你可以设置 `outputs._merge` 为 `shallow`。
+
 ## 主题配置 {#theme-configuration}
 
 除了 Hugo 全局配置外，FixIt 还通过根配置键 `params` 提供了一些主题配置。
@@ -1511,92 +1625,6 @@ mDevtools
 
 ```
 
-## 解析配置 {#markup-configuration}
-
-通过根配置键 `markup` 配置将标记语言转为 HTML。
-
-本节仅记录**FixIt**主题的一些 [必要配置][necessary-configuration-for-theme]。有关更多详细信息，请参阅 [Configure markup][configuration-markup] 页面。
-
-```toml
-[markup]
-  [markup.highlight]
-    codeFences = true
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
-```
-
-## 自定义输出格式
-
-Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能。为了完全配置主题，请将以下选项配置到 `hugo.toml` 中。
-
-有关输出格式配置的更多详细信息，请参阅 [自定义输出格式][hugo-output-formats] 页面。
-
-```toml
-[mediaTypes]
-  [mediaTypes."text/markdown"]
-    suffixes = ["md"]
-
-[outputFormats]
-  # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
-  [outputFormats.archives]
-    path = "archives"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
-  [outputFormats.offline]
-    path = "offline"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
-  [outputFormats.readme]
-    baseName = "readme"
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.0 changed >}} 用于输出 baidu_urls.txt 文件的设置
-  [outputFormats.baidu_urls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.10 >}} 用于输出 search.json 文件的设置
-  [outputFormats.search]
-    baseName = "search"
-    mediaType = "application/json"
-    rel = "search"
-    isPlainText = true
-    isHTML = false
-    permalinkable = true
-```
-
-基本上你无需配置 `mediaTypes` 和 `outputFormats` 的配置，因为 **FixIt** 主题已经为你配置好了。你只需要配置 `outputs` 部分即可。
-
-```toml
-# 用于 Hugo 输出文档的设置，可选值如下：
-# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
-# page = ["html", "markdown"]
-# section = ["html", "rss"]
-# taxonomy = ["html"]
-# term = ["html", "rss"]
-[outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
-  page = ["html", "markdown"]
-  section = ["html", "rss"]
-  taxonomy = ["html"]
-  term = ["html", "rss"]
-```
-
-{{< admonition tip >}}
-如果你希望 `outputs` 配置始终保持和主题一致，你可以设置 `outputs._merge` 为 `shallow`。
-{{< /admonition >}}
-
 ## Favicon 生成
 
 强烈建议你把你自己的网站图标，`browserconfig.xml` 和 `site.webmanifest` 文件放在 `/static` 目录。
@@ -1631,3 +1659,4 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/templates/output-formats/
+[configure-taxonomies]: https://gohugo.io/content-management/taxonomies/#configure-taxonomies

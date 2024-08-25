@@ -134,6 +134,120 @@ menu:
 ---
 ```
 
+## Markup Configuration
+
+Configure rendering of markup to HTML via the root configuration keys `markup`.
+
+This section only records some [necessary configuration][necessary-configuration-for-theme] for the **FixIt** theme. For more details, see the [Configure markup][configuration-markup] page.
+
+```toml
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+```
+
+## Taxonomies Configuration
+
+The FixIt theme has three built-in [taxonomies][configure-taxonomies]: categories, tags, and collections. The default `taxonomies` configuration of the theme is as follows:
+
+```toml
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  collection = "collections"
+```
+
+If you want the `taxonomies` configuration to always be consistent with the theme, you can set `taxonomies._merge` to `shallow`.
+
+After that, you can categorize your posts, for example:
+
+```yaml
+---
+title: Configure FixIt
+date: 2024-03-07T15:37:59+08:00
+tags:
+  - Configuration
+  - Installation
+  - Basics
+categories:
+  - Documentation
+collections:
+  - Getting Started
+---
+```
+
+## Custom output formats
+
+Hugo can output content in multiple formats. The **FixIt** theme takes advantage of this feature. In order to fully configure the theme, configure the following options into `hugo.toml`.
+
+More details about the configuration of output formats can be found in the [Custom output formats][hugo-output-formats] page.
+
+```toml
+[mediaTypes]
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+
+[outputFormats]
+  # {{< version 0.3.0 >}} Options to make output /archives/index.html file
+  [outputFormats.archives]
+    path = "archives"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+  # {{< version 0.3.0 >}} Options to make output /offline/index.html file
+  [outputFormats.offline]
+    path = "offline"
+    baseName = "index"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+    permalinkable = true
+  # {{< version 0.3.0 >}} Options to make output readme.md file
+  [outputFormats.readme]
+    baseName = "readme"
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.0 changed >}} Options to make output baidu_urls.txt file
+  [outputFormats.baidu_urls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+  # {{< version 0.3.10 >}} Options to make output search.json file
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
+```
+
+You only need to configure the root configuration key `outputs`, because the **FixIt** theme has already configured the `mediaTypes` and `outputFormats` for you.
+
+```toml
+# Options to make hugo output files, the optional values are below:
+# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# page = ["html", "markdown"]
+# section = ["html", "rss"]
+# taxonomy = ["html"]
+# term = ["html", "rss"]
+[outputs]
+  home = ["html", "rss", "archives", "offline", "search"]
+  page = ["html", "markdown"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html", "rss"]
+```
+
+If you want the `outputs` configuration to always be consistent with the theme, you can set `outputs._merge` to `shallow`.
+
 ## Theme Configuration {#theme-configuration}
 
 In addition to Hugo global configuration, **FixIt** provides some theme configuration via the root configuration keys `params`.
@@ -1520,92 +1634,6 @@ mDevtools
         logoUrl = ""
 ```
 
-## Markup Configuration
-
-Configure rendering of markup to HTML via the root configuration keys `markup`.
-
-This section only records some [necessary configuration][necessary-configuration-for-theme] for the **FixIt** theme. For more details, see the [Configure markup][configuration-markup] page.
-
-```toml
-[markup]
-  [markup.highlight]
-    codeFences = true
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
-```
-
-## Custom output formats
-
-Hugo can output content in multiple formats. The **FixIt** theme takes advantage of this feature. In order to fully configure the theme, configure the following options into `hugo.toml`.
-
-More details about the configuration of output formats can be found in the [Custom output formats][hugo-output-formats] page.
-
-```toml
-[mediaTypes]
-  [mediaTypes."text/markdown"]
-    suffixes = ["md"]
-
-[outputFormats]
-  # {{< version 0.3.0 >}} Options to make output /archives/index.html file
-  [outputFormats.archives]
-    path = "archives"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} Options to make output /offline/index.html file
-  [outputFormats.offline]
-    path = "offline"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} Options to make output readme.md file
-  [outputFormats.readme]
-    baseName = "readme"
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.0 changed >}} Options to make output baidu_urls.txt file
-  [outputFormats.baidu_urls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.10 >}} Options to make output search.json file
-  [outputFormats.search]
-    baseName = "search"
-    mediaType = "application/json"
-    rel = "search"
-    isPlainText = true
-    isHTML = false
-    permalinkable = true
-```
-
-You only need to configure the root configuration key `outputs`, because the **FixIt** theme has already configured the `mediaTypes` and `outputFormats` for you.
-
-```toml
-# Options to make hugo output files, the optional values are below:
-# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
-# page = ["html", "markdown"]
-# section = ["html", "rss"]
-# taxonomy = ["html"]
-# term = ["html", "rss"]
-[outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
-  page = ["html", "markdown"]
-  section = ["html", "rss"]
-  taxonomy = ["html"]
-  term = ["html", "rss"]
-```
-
-{{< admonition tip >}}
-If you want the `outputs` configuration to always be consistent with the theme, you can set `outputs._merge` to `shallow`.
-{{< /admonition >}}
-
 ## Favicon Generation
 
 It is recommended to put your own favicons, `browserconfig.xml` and `site.webmanifest` files into the `/static` directory.
@@ -1640,3 +1668,4 @@ They're easily created via <https://realfavicongenerator.net/>.
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/templates/output-formats/
+[configure-taxonomies]: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
