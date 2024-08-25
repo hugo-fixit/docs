@@ -55,7 +55,7 @@ description: 在 FixIt 主题中使用 algolia 的技巧。
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "search"]
+  home = ["html", "rss", "archives", "offline", "search"]
 ```
 
 ## 上传索引

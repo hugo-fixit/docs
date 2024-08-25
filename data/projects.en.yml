@@ -12,6 +12,8 @@
 - title: 🧩 Layout components
   repos:
     - hugo-fixit/component-projects
+    - hugo-fixit/hugo-atom-feed
+    - hugo-fixit/hugo-json-feed
 - title: 🛠️ Tools
   repos:
     - hugo-fixit/component-skeleton

@@ -50,7 +50,7 @@ Node.js 用于：
 
 请参考相关文档以获取安装说明：
 
-- [Hugo][hugo-install]（扩展版，v0.127.0 或更高版本）
+- [Hugo][hugo-install]（扩展版，v0.129.0 或更高版本）
 - [Git][git-install]
 - [Go][go-install]
 - _[Dart Sass][dart-sass-install]（尚未使用）_

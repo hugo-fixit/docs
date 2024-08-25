@@ -102,33 +102,15 @@ Here is a sample `site.webmanifest` file from this documentation site.
 
 The offline page will be served to your visitor when they are offline.
 
-You only need to follow a few steps to configure the offline page.
+You only need to add "offline" in `outputs.home` as below:
 
-1. Add `outputFormats.offline` as below:
-
-    ```toml
-    [outputFormats]
-      # ...
-      # {{< version 0.3.0 >}} Options to make output /offline/index.html file
-      [offline]
-        path = "offline"
-        baseName = "index"
-        mediaType = "text/html"
-        isPlainText = false
-        isHTML = true
-        permalinkable = true
-    ```
-
-2. Add "offline" in `outputs.home` as below:
-
-    ```toml
-    [outputs]
-      home = ["HTML", "RSS", "JSON", "BaiduUrls", "offline"]
-      # ...
-    ```
+```toml
+[outputs]
+  home = ["html", "rss", "archives", "offline", "search"]
+```
 
 {{< admonition type=tip title="I18n" open=true >}}
-Currently, i18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
+Currently, I18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
 {{< /admonition >}}
 
 ### Enable the `enablePWA` option {#enable-pwa}

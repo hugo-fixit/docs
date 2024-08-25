@@ -100,33 +100,15 @@ repost:
 
 ### 配置离线页面 {#offline-page}
 
-离线页面将在访客离线访问未缓存的页面时显示，你只需要简单几步就可以配置离线页面。
+离线页面将在访客离线访问未缓存的页面时显示，你只需要添加 "offline" 到 `outputs.home` 配置中：
 
-1. 增加 `outputFormats.offline` 配置：
-
-    ```toml
-    [outputFormats]
-      # ...
-      # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
-      [offline]
-        path = "offline"
-        baseName = "index"
-        mediaType = "text/html"
-        isPlainText = false
-        isHTML = true
-        permalinkable = true
-    ```
-
-2. 添加 "offline" 到 `outputs.home` 配置中：
-
-    ```toml
-    [outputs]
-      home = ["HTML", "RSS", "JSON", "BaiduUrls", "offline"]
-      # ...
-    ```
+```toml
+[outputs]
+  home = ["html", "rss", "archives", "offline", "search"]
+```
 
 {{< admonition type=tip title="I18n" open=true >}}
-目前，离线页面支持 i18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
+目前，离线页面支持 I18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
 {{< /admonition >}}
 
 ### 开启 `enablePWA` 选项 {#enable-pwa}

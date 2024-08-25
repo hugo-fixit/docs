@@ -12,6 +12,8 @@
 - title: 🧩 布局组件
   repos:
     - hugo-fixit/component-projects
+    - hugo-fixit/hugo-atom-feed
+    - hugo-fixit/hugo-json-feed
 - title: 🛠️ 工具
   repos:
     - hugo-fixit/component-skeleton

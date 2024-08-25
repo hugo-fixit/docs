@@ -55,7 +55,7 @@ In order to generate `search.json` for searching, add `search` output file type 
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "search"]
+  home = ["html", "rss", "archives", "offline", "search"]
 ```
 
 ## Upload Index

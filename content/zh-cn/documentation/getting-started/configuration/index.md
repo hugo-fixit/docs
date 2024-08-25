@@ -403,7 +403,7 @@ fuse
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "search"]
+  home = ["html", "rss", "archives", "offline", "search"]
 ```
 
 {{< link href="/zh-cn/guides/algolia-atomic/" content="关于 algolia 的使用技巧" card=true >}}
@@ -1533,21 +1533,11 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 有关输出格式配置的更多详细信息，请参阅 [自定义输出格式][hugo-output-formats] 页面。
 
 ```toml
-# {{< version 0.2.15 changed >}}
 [mediaTypes]
-  # 用于输出 Markdown 格式文档的设置
   [mediaTypes."text/markdown"]
     suffixes = ["md"]
-  # 用于输出 txt 格式文档的设置
-  [mediaTypes."text/plain"]
-    suffixes = ["txt"]
 
 [outputFormats]
-  # 用于输出 Markdown 格式文档的设置
-  [outputFormats.MarkDown]
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
   # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
   [outputFormats.archives]
     path = "archives"
@@ -1565,7 +1555,7 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
     isHTML = true
     permalinkable = true
   # {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
-  [outputFormats.README]
+  [outputFormats.readme]
     baseName = "readme"
     mediaType = "text/markdown"
     isPlainText = true
@@ -1576,20 +1566,36 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
     mediaType = "text/plain"
     isPlainText = true
     isHTML = false
-
-# 用于 Hugo 输出文档的设置，可选值如下：
-# home: ["HTML", "RSS", "JSON", "archives", "offline", "README", "baidu_urls"]
-# page: ["HTML", "MarkDown"]
-# section: ["HTML", "RSS"]
-# taxonomy: ["HTML", "RSS"]
-# term: ["HTML", "RSS"]
-[outputs]
-  home = ["HTML", "RSS", "JSON", "archives", "offline"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "RSS"]
+  # {{< version 0.3.10 >}} 用于输出 search.json 文件的设置
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
 ```
+
+基本上你无需配置 `mediaTypes` 和 `outputFormats` 的配置，因为 **FixIt** 主题已经为你配置好了。你只需要配置 `outputs` 部分即可。
+
+```toml
+# 用于 Hugo 输出文档的设置，可选值如下：
+# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# page = ["html", "markdown"]
+# section = ["html", "rss"]
+# taxonomy = ["html"]
+# term = ["html", "rss"]
+[outputs]
+  home = ["html", "rss", "archives", "offline", "search"]
+  page = ["html", "markdown"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html", "rss"]
+```
+
+{{< admonition tip >}}
+如果你希望 `outputs` 配置始终保持和主题一致，你可以设置 `outputs._merge` 为 `shallow`。
+{{< /admonition >}}
 
 ## Favicon 生成
 

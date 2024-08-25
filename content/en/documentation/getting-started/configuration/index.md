@@ -401,7 +401,7 @@ In order to generate `search.json` for searching, add `search` output file type 
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "search"]
+  home = ["html", "rss", "archives", "offline", "search"]
 ```
 
 {{< link href="/guides/algolia-atomic" content="Tips about algolia" card=true >}}
@@ -1542,21 +1542,11 @@ Hugo can output content in multiple formats. The **FixIt** theme takes advantage
 More details about the configuration of output formats can be found in the [Custom output formats][hugo-output-formats] page.
 
 ```toml
-# {{< version 0.2.15 changed >}}
 [mediaTypes]
-  # Options to make output .md files
   [mediaTypes."text/markdown"]
     suffixes = ["md"]
-  # Options to make output .txt files
-  [mediaTypes."text/plain"]
-    suffixes = ["txt"]
 
 [outputFormats]
-  # Options to make output .md files
-  [outputFormats.MarkDown]
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
   # {{< version 0.3.0 >}} Options to make output /archives/index.html file
   [outputFormats.archives]
     path = "archives"
@@ -1574,7 +1564,7 @@ More details about the configuration of output formats can be found in the [Cust
     isHTML = true
     permalinkable = true
   # {{< version 0.3.0 >}} Options to make output readme.md file
-  [outputFormats.README]
+  [outputFormats.readme]
     baseName = "readme"
     mediaType = "text/markdown"
     isPlainText = true
@@ -1585,20 +1575,36 @@ More details about the configuration of output formats can be found in the [Cust
     mediaType = "text/plain"
     isPlainText = true
     isHTML = false
-
-# Options to make hugo output files, the optional values are below:
-# home: ["HTML", "RSS", "JSON", "archives", "offline", "README", "baidu_urls"]
-# page: ["HTML", "MarkDown"]
-# section: ["HTML", "RSS"]
-# taxonomy: ["HTML", "RSS"]
-# term: ["HTML", "RSS"]
-[outputs]
-  home = ["HTML", "RSS", "JSON", "archives", "offline"]
-  page = ["HTML", "MarkDown"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "RSS"]
+  # {{< version 0.3.10 >}} Options to make output search.json file
+  [outputFormats.search]
+    baseName = "search"
+    mediaType = "application/json"
+    rel = "search"
+    isPlainText = true
+    isHTML = false
+    permalinkable = true
 ```
+
+You only need to configure the root configuration key `outputs`, because the **FixIt** theme has already configured the `mediaTypes` and `outputFormats` for you.
+
+```toml
+# Options to make hugo output files, the optional values are below:
+# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# page = ["html", "markdown"]
+# section = ["html", "rss"]
+# taxonomy = ["html"]
+# term = ["html", "rss"]
+[outputs]
+  home = ["html", "rss", "archives", "offline", "search"]
+  page = ["html", "markdown"]
+  section = ["html", "rss"]
+  taxonomy = ["html"]
+  term = ["html", "rss"]
+```
+
+{{< admonition tip >}}
+If you want the `outputs` configuration to always be consistent with the theme, you can set `outputs._merge` to `shallow`.
+{{< /admonition >}}
 
 ## Favicon Generation
 
