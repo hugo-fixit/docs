@@ -25,33 +25,11 @@ math: true
 
 <!--more-->
 
-## Inserted Text {#inserted-text}
-
-**Hugo** supports an **inserted text** Markdown extension:
-
-```markdown
-The author of FixIt theme is ++Lruihao++.
-```
-
-The rendered output looks like this:
-
-The author of FixIt theme is ++Lruihao++.
-
-## Marked Text {#marked-text}
-
-**Hugo** supports a **marked text** Markdown extension:
-
-```markdown
-==FixIt== is an awesome Hugo theme!
-```
-
-The rendered output looks like this:
-
-==FixIt== is an awesome Hugo theme!
-
 ## Alerts {#alerts}
 
 {{< version 0.3.10 >}}
+
+> This syntax is compatible with the [GitHub Alert][github-alert] Markdown extension.
 
 Also known as callouts or admonitions, alerts are blockquotes used to emphasize critical information. An example of all five types:
 
@@ -89,7 +67,29 @@ Here is how they are displayed:
 > [!CAUTION]
 > Negative potential consequences of an action.
 
-> This syntax is compatible with the [GitHub Alert][github-alert] Markdown extension.
+## Inserted Text {#inserted-text}
+
+**Hugo** supports an **inserted text** Markdown extension:
+
+```markdown
+The author of FixIt theme is ++Lruihao++.
+```
+
+The rendered output looks like this:
+
+The author of FixIt theme is ++Lruihao++.
+
+## Marked Text {#marked-text}
+
+**Hugo** supports a **marked text** Markdown extension:
+
+```markdown
+==FixIt== is an awesome Hugo theme!
+```
+
+The rendered output looks like this:
+
+==FixIt== is an awesome Hugo theme!
 
 ## Subscript {#subscript}
 

@@ -25,33 +25,11 @@ math: true
 
 <!--more-->
 
-## 下划线 {#inserted-text}
-
-**Hugo** 支持一种 **下划线** Markdown 扩展语法：
-
-```markdown
-FixIt 主题的作者是 ++Lruihao++。
-```
-
-呈现的输出效果如下：
-
-FixIt 主题的作者是 ++Lruihao++。
-
-## 标记文本 {#marked-text}
-
-**Hugo** 支持一种 **标记文本** Markdown 扩展语法：
-
-```markdown
-==FixIt== 是一个很棒的 Hugo 主题！
-```
-
-呈现的输出效果如下：
-
-==FixIt== 是一个很棒的 Hugo 主题！
-
 ## 警示 {#alerts}
 
 {{< version 0.3.10 >}}
+
+> 这种语法与 [GitHub Alert][github-alert] Markdown 扩展语法兼容。
 
 警示（Alerts）也被称为 **callouts** 或 **admonitions**，是用于强调关键信息的引用块。以下是所有五种类型的示例：
 
@@ -89,7 +67,29 @@ FixIt 主题的作者是 ++Lruihao++。
 > [!CAUTION]
 > 操作的潜在负面后果。
 
-> 这种语法与 [GitHub Alert][github-alert] Markdown 扩展语法兼容。
+## 下划线 {#inserted-text}
+
+**Hugo** 支持一种 **下划线** Markdown 扩展语法：
+
+```markdown
+FixIt 主题的作者是 ++Lruihao++。
+```
+
+呈现的输出效果如下：
+
+FixIt 主题的作者是 ++Lruihao++。
+
+## 标记文本 {#marked-text}
+
+**Hugo** 支持一种 **标记文本** Markdown 扩展语法：
+
+```markdown
+==FixIt== 是一个很棒的 Hugo 主题！
+```
+
+呈现的输出效果如下：
+
+==FixIt== 是一个很棒的 Hugo 主题！
 
 ## 下标 {#subscript}
 
