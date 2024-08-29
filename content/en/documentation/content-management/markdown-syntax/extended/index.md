@@ -49,6 +49,48 @@ The rendered output looks like this:
 
 ==FixIt== is an awesome Hugo theme!
 
+## Alerts {#alerts}
+
+{{< version 0.3.10 >}}
+
+Also known as callouts or admonitions, alerts are blockquotes used to emphasize critical information. An example of all five types:
+
+```markdown {data-open=true}
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+```
+
+Here is how they are displayed:
+
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> This syntax is compatible with the [GitHub Alert][github-alert] Markdown extension.
+
 ## Subscript {#subscript}
 
 **Hugo** supports a **subscript** Markdown extension:
@@ -376,11 +418,11 @@ The rendered output looks like this:
 
 **[link{?]}(#escape-character)** instead of **[link](#escape-character)**.
 
-## Custom attribute
+## Markdown attributes
 
-> Default off, need to set `goldmark.parser.attribute.block` to `true`.
+> Update your site configuration to enable [Markdown attributes][markdown-attributes] for block-level elements.
 
-Hugo supports adding attributes (e.g. CSS classes) to Markdown blocks, e.g. tables, lists, paragraphs etc.
+Hugo supports Markdown attributes on images and block elements including blockquotes, fenced code blocks, headings, horizontal rules, lists, paragraphs, and tables.
 
 ### Syntax
 
@@ -423,16 +465,14 @@ The rendered output looks like this:
 A blockquote with a CSS class:
 
 ```md
-> foo\
-> bar
-{.text-danger}
+> The quick brown fox jumps over the lazy dog.
+{.blockquote-center}
 ```
 
 The rendered output looks like this:
 
-> foo\
-> bar
-{.text-danger}
+> The quick brown fox jumps over the lazy dog.
+{.blockquote-center}
 
 #### table & list
 
@@ -545,6 +585,7 @@ This part is shown in the [diagrams support][diagrams-support-mermaid] page.
 This part is shown in the [Timeline support][timeline-support] page.
 
 <!-- link reference definition -->
+[github-alert]: https://github.com/orgs/community/discussions/16925
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
@@ -552,6 +593,7 @@ This part is shown in the [Timeline support][timeline-support] page.
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
+[markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}

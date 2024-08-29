@@ -49,6 +49,48 @@ FixIt 主题的作者是 ++Lruihao++。
 
 ==FixIt== 是一个很棒的 Hugo 主题！
 
+## 警示 {#alerts}
+
+{{< version 0.3.10 >}}
+
+警示（Alerts）也被称为 **callouts** 或 **admonitions**，是用于强调关键信息的引用块。以下是所有五种类型的示例：
+
+```markdown {data-open=true}
+> [!NOTE]
+> 突出显示用户应考虑的信息，即使只是浏览也应考虑。
+
+> [!TIP]
+> 可选信息，可帮助用户取得更大的成功。
+
+> [!IMPORTANT]
+> 用户成功所需的关键信息。
+
+> [!WARNING]
+> 由于存在潜在风险，需要用户立即关注的关键内容。
+
+> [!CAUTION]
+> 操作的潜在负面后果。
+```
+
+它们的显示方式如下：
+
+> [!NOTE]
+> 突出显示用户应考虑的信息，即使只是浏览也应考虑。
+
+> [!TIP]
+> 可选信息，可帮助用户取得更大的成功。
+
+> [!IMPORTANT]
+> 用户成功所需的关键信息。
+
+> [!WARNING]
+> 由于存在潜在风险，需要用户立即关注的关键内容。
+
+> [!CAUTION]
+> 操作的潜在负面后果。
+
+> 这种语法与 [GitHub Alert][github-alert] Markdown 扩展语法兼容。
+
 ## 下标 {#subscript}
 
 **Hugo** 支持一种 **下标** Markdown 扩展语法：
@@ -376,11 +418,11 @@ $$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 
 **[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**。
 
-## 自定义属性
+## Markdown 属性
 
-> 默认关闭，需设置 `goldmark.parser.attribute.block` 为 `true`。
+> 更新你的站点配置以启用块级元素的 [Markdown 属性][markdown-attributes]。
 
-Hugo 支持向 Markdown 块添加属性（例如 CSS 类），例如 表格、列表、段落等。
+Hugo 支持图像和块元素上的 Markdown 属性，包括块引用、围栏代码块、标题、水平线、列表、段落和表格。
 
 ### 语法
 
@@ -423,16 +465,14 @@ some Markdown content
 带有 CSS 类的块引用：
 
 ```md
-> foo\
-> bar
-{#test-id .text-danger}
+> The quick brown fox jumps over the lazy dog.
+{.blockquote-center}
 ```
 
 呈现的输出如下所示：
 
-> foo\
-> bar
-{#test-id .text-danger}
+> The quick brown fox jumps over the lazy dog.
+{.blockquote-center}
 
 #### 表格 & 列表
 
@@ -545,6 +585,7 @@ console.log('hello FixIt!');
 这部分内容在 [时间线支持][timeline-support] 页面中介绍。
 
 <!-- link reference definition -->
+[github-alert]: https://github.com/orgs/community/discussions/16925
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
@@ -552,6 +593,7 @@ console.log('hello FixIt!');
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
+[markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}

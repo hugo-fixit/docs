@@ -23,6 +23,28 @@ menu:
 ---
 <!-- markdownlint-disable-file MD045 -->
 
+## Alerts
+
+哈哈哈哈哈哈 nformation that users should take into accou
+
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> 哈哈哈哈哈哈哈哈
+{.blockquote-center}
+
 ## 二级标题
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deleniti natus sint velit ut, dolorem optio vero odio repellat aliquam, at repellendus fuga nemo porro adipisci doloremque, amet inventore molestias.
