@@ -12,6 +12,10 @@ description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"
   [search.algolia]
     index = "index.zh-cn"
 
+[header]
+  [header.subtitle]
+    name = "Hugo 主题"
+
 [home]
   [home.profile]
     subtitle = "一个简洁、优雅且高效的 Hugo 主题"

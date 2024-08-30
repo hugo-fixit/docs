@@ -168,7 +168,7 @@ disableThemeInject = false
   [header.subtitle]
     # subtitle name
     # 副标题名称
-    name = "Theme for Hugo"
+    name = ""
     # whether to use typeit animation for subtitle name
     # 是否为副标题显示打字机动画
     typeit = false
