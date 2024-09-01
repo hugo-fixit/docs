@@ -1260,9 +1260,6 @@ theme
   [params.dev]
     enable = false
     c4u = false
-    [params.dev.mDevtools]
-      enable = false
-      type = "vConsole"
 ```
 
 enable
@@ -1270,12 +1267,6 @@ enable
 
 c4u
 : `bool` 是否启用检查功能，默认：`false`。
-
-mDevtools
-: `map` 移动端开发者工具。
-
-- enable: `bool` 是否启用移动端开发者工具，默认：`false`。
-- type: `string` 移动端开发者工具类型，可选值：`vConsole`、`eruda`，默认：`vConsole`。
 
 ### page
 

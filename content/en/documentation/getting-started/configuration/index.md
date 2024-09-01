@@ -1269,9 +1269,6 @@ Select the scope named `public_repo` to generate personal access token, Configur
   [params.dev]
     enable = false
     c4u = false
-    [params.dev.mDevtools]
-      enable = false
-      type = "vConsole"
 ```
 
 enable
@@ -1279,12 +1276,6 @@ enable
 
 c4u
 : `bool` Whether to check for updates. Default is `false`.
-
-mDevtools
-: `map` Mobile Devtools Configuration.
-
-- enable: `bool` Whether to enable mobile devtools. Default is `false`.
-- type: `string` The type of mobile devtools. The configuration value for `type` can be one of `vConsole`, `eruda`. Default is `vConsole`.
 
 ### page
 

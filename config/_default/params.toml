@@ -674,13 +674,6 @@ disableThemeInject = false
   # Check for updates
   # 检查更新
   c4u = false
-  # Mobile Devtools config
-  # 移动端开发者工具配置
-  [dev.mDevtools]
-    enable = false
-    # "vConsole", "eruda" supported
-    # 支持 "vConsole", "eruda"
-    type = "vConsole"
 
 # FixIt Docs config
 [planet]
