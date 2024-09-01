@@ -34,7 +34,7 @@
     "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.11.1",
     "cross-env": "^7.0.3",
-    "husky": "^9.1.4",
+    "husky": "^9.1.5",
     "lint-staged": "^15.2.7",
     "markdownlint-cli2": "^0.13.0",
     "markdownlint-rule-search-replace": "^1.2.0"
