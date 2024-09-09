@@ -18,6 +18,7 @@
   repos:
     - hugo-fixit/component-skeleton
     - hugo-fixit/fixit-cli
+    - hugo-fixit/fixit-releaser
     - hugo-fixit/hugo-shell
     - hugo-fixit/.tools
 - title: 👾 Third party
