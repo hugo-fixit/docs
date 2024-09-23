@@ -70,4 +70,4 @@ Head to the [References][references] page for more information.
 <!-- link reference definition -->
 [components]: {{< relref "/components" >}}
 [references]: {{< relref "/references" >}}
-[dev-component]: {{< relref path="/components/dev-component" lang="zh-cn" >}}
+[dev-component]: {{< relref path="/components/dev-component" >}}
