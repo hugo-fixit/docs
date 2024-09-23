@@ -1391,9 +1391,9 @@ c4u
       # Mapbox GL JS 的 access token
       accessToken = ""
       # 浅色主题的地图样式
-      lightStyle = "mapbox://styles/mapbox/light-v9"
+      lightStyle = "mapbox://styles/mapbox/light-v11"
       # 深色主题的地图样式
-      darkStyle = "mapbox://styles/mapbox/dark-v9"
+      darkStyle = "mapbox://styles/mapbox/dark-v11"
       # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
       navigation = true
       # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}

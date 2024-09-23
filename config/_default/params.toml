@@ -855,10 +855,10 @@ disableThemeInject = false
     accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
     # style for the light theme
     # 浅色主题的地图样式
-    lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+    lightStyle = "mapbox://styles/mapbox/light-v11?optimize=true"
     # style for the dark theme
     # 深色主题的地图样式
-    darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+    darkStyle = "mapbox://styles/mapbox/dark-v11?optimize=true"
     # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
     # 是否添加 导航控制 (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
     navigation = true
