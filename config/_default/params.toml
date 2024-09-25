@@ -663,10 +663,27 @@ disableThemeInject = false
   # 是否在 feed 中显示全文内容。
   fullText = true
 
+# FixIt 0.3.12 | NEW Custom partials options
+# Defined custom partials to be included in the /layouts/partials/ directory.
+# Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
+# FixIt 0.3.12 | 新增 自定义部分选项
+# 定义的自定义部分要包含在 /layouts/partials/ 目录中。
+# 依赖于开放的自定义块 https://fixit.lruihao.cn/references/blocks/
+[customPartials]
+  head = []
+  profile = []
+  aside = []
+  comment = []
+  footer = []
+  widgets = []
+  assets = []
+  postFooterBefore = []
+  postFooterAfter = []
+
 # FixIt 0.2.15 | NEW Developer options
-# FixIt 0.2.15 | 新增 开发者选项
 # Select the scope named `public_repo` to generate personal access token,
 # Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see https://gohugo.io/functions/os/getenv/#examples
+# FixIt 0.2.15 | 新增 开发者选项
 # 选择命名为 "public_repo" 的范围以生成个人访问令牌，
 # 配置环境变量 HUGO_PARAMS_GHTOKEN=xxx，详见 https://gohugo.io/functions/os/getenv/#examples
 [dev]
