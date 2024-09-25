@@ -14,13 +14,21 @@ lightgallery: true
 
 <!--more-->
 
+## 有何意义
+
+通过开放自定义块，FixIt 主题的可扩展性进一步提升。
+
+之后，我们可以充分利用主题的基础特性，构建更多上层组件，从而使博客充满无限的想象空间和创意！
+
+![主题、组件、博客 Venn 图](/references/blocks/featured-image.webp "以 FixIt 主题为核心构建多个上层组件，最后在最上层的博客中使用。")
+
 ## 入口文件
 
 {{< version 0.3.7 >}}
 
-FixIt 主题开放了统一的自定义模板入口文件 [`layouts/partials/custom.html`][custom-html]，你可以通过这个文件来实现自定义块或者更多的想法。
+FixIt 主题开放了统一的自定义模板入口文件 [`layouts/partials/custom.html`][custom-html]。
 
-为了避免升级冲突并方便引用主题组件，我们强烈建议你将此文件从主题复制到你的项目中并重写。
+在这个文件中，FixIt 主题已经定义了所有开放自定义块。如果你想进一步自定义，你可以将它从主题复制到你的项目中并重写。
 
 ```bash
 cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
@@ -42,35 +50,49 @@ cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
 | `custom-post__footer:before` | 文章页脚前自定义块 | `layouts/posts/single.html`            |
 | `custom-post__footer:after`  | 文章页脚后自定义块 | `layouts/posts/single.html`            |
 
-## 有何意义
+## 主题配置
 
-通过开放自定义块，FixIt 主题的可扩展性进一步提升。
+{{< version 0.3.12 >}}
 
-之后，我们可以充分利用主题的基础特性，构建更多上层组件，从而使博客充满无限的想象空间和创意！
+为了便于管理引入自定义模板，可以通过 `params.customPartials` 参数来指定自定义模板的路径。
 
-![主题、组件、博客 Venn 图](/references/blocks/featured-image.webp "以 FixIt 主题为核心构建多个上层组件，最后在最上层的博客中使用。")
+自定义模板必须存放在 `/layouts/partials/` 目录中。
+
+```toml
+[params]
+  [params.customPartials]
+    head = []
+    profile = []
+    aside = []
+    comment = []
+    footer = []
+    widgets = []
+    assets = []
+    postFooterBefore = []
+    postFooterAfter = []
+```
 
 ## 如何使用
 
-例如，FixIt 主题文档站点自定义了首页的 `custom-profile` 块。
+现在我们以自定义首页的 `custom-profile` 块为例，来演示如何使用自定义块。
 
-首先，创建自定义模板入口文件：
+首先，在 `layouts/partials/` 目录下创建自定义文件，例如 `layouts/partials/custom/profile.html`。
 
-```bash
-cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
+写入任意内容：
+
+```go-html-template
+The quick brown fox jumps over the lazy dog.
 ```
 
-然后，在自定义模板中定义 `custom-profile` 块：
+然后，在配置文件中指定自定义模板的路径即可。
 
-```go-html-template {title="layouts/partials/custom.html"}
-<!-- ... -->
-
-{{- define "custom-profile" -}}
-  {{- partial "custom/profile.html" . -}}
-{{- end -}}
-
-<!-- ... -->
+```toml
+[params]
+  [params.customPartials]
+    profile = ["custom/profile.html"]
 ```
+
+访问首页，你会看到在 `profile` 区域显示了模板中自定义的内容。
 
 <!-- link reference definition -->
 [custom-html]: https://github.com/hugo-fixit/FixIt/blob/master/layouts/partials/custom.html

@@ -1247,6 +1247,12 @@ color
 theme
 : `string` 进度条主题，可选值：`barber-shop`、`big-counter`、`bounce`、`center-atom`、`center-circle`、`center-radar`、`center-simple`、`corner-indicator`、`fill-left`、`flash`、`flat-top`、`loading-bar`、`mac-osx`、`material`、`minimal`，默认：`minimal`。
 
+### customPartials
+
+{{< version 0.3.12 >}}
+
+`map` 自定义部分配置。详见 [开放的自定义块][block]。
+
 ### dev
 
 {{< version 0.2.15 >}}
@@ -1635,6 +1641,7 @@ c4u
 ![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file MD052 -->
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/getting-started/configuration/
@@ -1647,6 +1654,7 @@ c4u
 [vercount]: https://vercount.one/
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
+[block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/templates/output-formats/

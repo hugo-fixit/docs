@@ -1256,6 +1256,12 @@ color
 theme
 : `string` The theme of pace. All available themes: `barber-shop`, `big-counter`, `bounce`, `center-atom`, `center-circle`, `center-radar`, `center-simple`, `corner-indicator`, `fill-left`, `flash`, `flat-top`, `loading-bar`, `mac-osx`, `material`, `minimal`. Default is `minimal`.
 
+### customPartials
+
+{{< version 0.3.12 >}}
+
+`map` Custom partials Configuration. See [Open Custom Blocks][block].
+
 ### dev
 
 {{< version 0.2.15 >}}
@@ -1644,6 +1650,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 ![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file MD052 -->
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/getting-started/configuration/
@@ -1656,6 +1663,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [vercount]: https://vercount.one/
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
+[block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/templates/output-formats/

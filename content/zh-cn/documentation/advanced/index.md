@@ -19,7 +19,7 @@ tags:
 toc:
   auto: false
 ---
-<!-- markdownlint-disable-file MD052 -->
+
 探索 Hugo - **FixIt** 主题的的进阶使用。
 
 <!--more-->
@@ -125,12 +125,15 @@ Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建
 
 但是，对于主题的大多数模板，我们通常不建议你这样做，因为这样可能会导致未来升级主题困难。
 
-{{< version 0.3.7 >}} 为了避免升级冲突问题，基于这一特性，FixIt 主题开放了统一的自定义模板入口文件，你可以通过 `define` 实现 [开放的自定义块][block]。
+{{< version 0.3.7 >}}
+
+为了避免升级冲突问题，基于这一特性，FixIt 主题开放了统一的自定义模板入口文件及配置，详见 [开放的自定义块][block]。
 
 ## PWA 支持
 
 这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file MD052 -->
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
 [block]: {{< relref path="/references/blocks" >}}

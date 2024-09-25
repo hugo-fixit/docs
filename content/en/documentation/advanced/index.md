@@ -19,7 +19,7 @@ tags:
 toc:
   auto: false
 ---
-<!-- markdownlint-disable-file MD052 -->
+
 Discover advanced usage of the Hugo - **FixIt** theme.
 
 <!--more-->
@@ -125,12 +125,15 @@ Hugo allows you to modify the theme by overriding the theme templates, for examp
 
 However, for most of the templates, FixIt theme generally doesn't recommend you do this, as it may make theme upgrades difficult in the future.
 
-{{< version 0.3.7 >}} In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens a unified custom template entry file, you can implement [Open Custom Blocks][block] through `define`.
+{{< version 0.3.7 >}}
+
+In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens a unified custom template entry file and configuration, see [Open Custom Blocks][block].
 
 ## PWA Support
 
 This part is shown in the [pwa support page][pwa-support].
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file MD052 -->
 [pwa-support]: {{< relref path="/guides/pwa-support" >}}
 [block]: {{< relref path="/references/blocks" >}}

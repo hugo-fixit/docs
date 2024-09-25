@@ -663,11 +663,11 @@ disableThemeInject = false
   # 是否在 feed 中显示全文内容。
   fullText = true
 
-# FixIt 0.3.12 | NEW Custom partials options
-# Defined custom partials to be included in the /layouts/partials/ directory.
+# FixIt 0.3.12 | NEW Custom partials config
+# Custom partials must be stored in the /layouts/partials/ directory.
 # Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
-# FixIt 0.3.12 | 新增 自定义部分选项
-# 定义的自定义部分要包含在 /layouts/partials/ 目录中。
+# FixIt 0.3.12 | 新增 自定义部分配置
+# 自定义模板必须存放在 /layouts/partials/ 目录中。
 # 依赖于开放的自定义块 https://fixit.lruihao.cn/references/blocks/
 [customPartials]
   head = [
