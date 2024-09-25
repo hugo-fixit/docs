@@ -670,13 +670,23 @@ disableThemeInject = false
 # 定义的自定义部分要包含在 /layouts/partials/ 目录中。
 # 依赖于开放的自定义块 https://fixit.lruihao.cn/references/blocks/
 [customPartials]
-  head = []
-  profile = []
-  aside = []
+  head = [
+    "inject/component-projects.html",
+    "inject/shortcode-rewards.html",
+  ]
+  profile = [
+    "custom/profile.html",
+  ]
+  aside = [
+    "custom/aside.html",
+  ]
   comment = []
   footer = []
   widgets = []
-  assets = []
+  assets = [
+    "custom/use-assets.html",
+    "inject/shortcode-caniuse.html",
+  ]
   postFooterBefore = []
   postFooterAfter = []
 
