@@ -24,6 +24,8 @@ collections:
 lightgallery: true
 heading:
   capitalize: false
+toc:
+  ordered: false
 ---
 
 了解如何配置你的 Hugo **FixIt** 站点。
