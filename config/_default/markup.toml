@@ -14,9 +14,3 @@
 [goldmark]
   _merge = "shallow"
 
-# Table Of Contents settings
-# 目录设置
-[tableOfContents]
-  ordered = false
-  startLevel = 2
-  endLevel = 6

@@ -1345,6 +1345,10 @@ c4u
       auto = true
       # {{< version 0.2.13 >}} 目录位置 ["left", "right"]
       position = "right"
+      # {{< version 0.3.12 >}} 取代 `markup.tableOfContents` 设置
+      ordered = false
+      startLevel = 2
+      endLevel = 6
     # {{< version 0.2.13 >}} 在文章开头显示提示信息，提醒读者文章内容可能过时
     [params.page.expirationReminder]
       enable = false
@@ -1358,7 +1362,7 @@ c4u
     [params.page.heading]
       # {{< version 0.3.6 >}} 是否自动大写标题
       capitalize = false
-      # 配合 `markup.tableOfContents.ordered` 参数使用
+      # {{< version 0.3.12 changed >}} 必须设置 `params.page.toc.ordered` 为 true
       [params.page.heading.number]
         # 是否启用自动标题编号
         enable = false

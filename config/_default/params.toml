@@ -806,6 +806,11 @@ disableThemeInject = false
     # FixIt 0.2.13 | NEW position of TOC ["left", "right"]
     # FixIt 0.2.13 | 新增 目录位置 ["left", "right"]
     position = "right"
+    # FixIt 0.3.12 | NEW supersede `markup.tableOfContents` settings
+    # FixIt 0.3.12 | 新增 取代 `markup.tableOfContents` 设置
+    ordered = false
+    startLevel = 2
+    endLevel = 6
   # FixIt 0.2.13 | NEW Display a message at the beginning of an article to warn the reader that its content might be expired.
   # FixIt 0.2.13 | 新增 在文章开头显示提示信息，提醒读者文章内容可能过时。
   [page.expirationReminder]
@@ -825,8 +830,8 @@ disableThemeInject = false
     # FixIt 0.3.3 | NEW whether to capitalize automatic text of headings
     # FixIt 0.3.3 | 新增 是否自动大写标题
     capitalize = true
-    # 配合 `markup.tableOfContents.ordered` 参数使用
-    # used with `markup.tableOfContents.ordered` parameter
+    # FixIt 0.3.12 | CHANGED must set `params.page.toc.ordered` to true
+    # FixIt 0.3.12 | 更改 必须设置 `params.page.toc.ordered` 为 true
     [page.heading.number]
       # whether to enable auto heading numbering
       # 是否启用自动标题编号

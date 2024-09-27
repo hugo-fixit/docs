@@ -1354,6 +1354,10 @@ c4u
       auto = true
       # {{< version 0.2.13 >}} position of TOC ["left", "right"]
       position = "right"
+      # {{< version 0.3.12 >}} supersede `markup.tableOfContents` settings
+      ordered = false
+      startLevel = 2
+      endLevel = 6
     # {{< version 0.2.13 >}} Display a message at the beginning of an article to warn the reader that its content might be expired
     [params.page.expirationReminder]
       enable = false
@@ -1367,7 +1371,7 @@ c4u
     [params.page.heading]
       # {{< version 0.3.6 >}} whether to capitalize automatic text of headings
       capitalize = false
-      # used with `markup.tableOfContents.ordered` parameter
+      # {{< version 0.3.12 changed >}} must set `params.page.toc.ordered` to true
       [params.page.heading.number]
         # whether to enable auto heading numbering
         enable = false
