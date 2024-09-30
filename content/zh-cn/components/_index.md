@@ -10,6 +10,9 @@ keyword:
   - Hugo
   - FixIt
   - theme components
+resources:
+  - name: featured-image
+    src: images/components-cover.webp
 menu:
   main:
     identifier: components
@@ -18,7 +21,5 @@ menu:
     params:
       icon: fa-solid fa-puzzle-piece
 ---
-
-![Hugo FixIt Components](/images/components-cover.webp)
 
 FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。
