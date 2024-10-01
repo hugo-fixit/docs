@@ -318,6 +318,12 @@ auto
 
 `bool` Whether to add external Icon for external links automatically. Default is `false`.
 
+### capitalizeTitles
+
+{{< version 0.3.13 >}}
+
+`bool` Whether to capitalize titles. Default is `true`.
+
 ### withSiteTitle
 
 {{< version 0.3.0 >}}

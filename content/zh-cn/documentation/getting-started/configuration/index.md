@@ -314,6 +314,12 @@ auto
 
 `bool` 开启 PWA 支持，默认：`false`。
 
+### capitalizeTitles
+
+{{< version 0.3.13 >}}
+
+`bool` 是否大写标题，默认：`true`。
+
 ### externalIcon
 
 {{< version 0.2.14 >}}
