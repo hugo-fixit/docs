@@ -574,6 +574,16 @@ subtitle
 
 `map` 面包屑导航配置。
 
+```toml
+[params]
+  [params.breadcrumb]
+    enable = false
+    sticky = false
+    showHome = false
+    separator = "/"
+    capitalize = false
+```
+
 enable
 : `bool` 是否启用面包屑导航。
 
@@ -582,6 +592,14 @@ sticky
 
 showHome
 : `bool` 是否显示主页链接。
+
+separator
+: {{< version 0.3.13 >}}\
+`string` 分隔符，默认：`/`。
+
+capitalize
+: {{< version 0.3.13 >}}\
+`bool` 是否大写面包屑导航。
 
 ### navigation
 

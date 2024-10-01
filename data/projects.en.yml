@@ -23,5 +23,6 @@
     - hugo-fixit/.tools
 - title: 👾 Third party
   description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
+  contentAdapters: false
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d

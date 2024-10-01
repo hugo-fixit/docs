@@ -23,5 +23,6 @@
     - hugo-fixit/.tools
 - title: 👾 第三方
   description: "欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。"
+  contentAdapters: false
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d
