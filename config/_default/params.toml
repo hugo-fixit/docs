@@ -617,7 +617,7 @@ disableThemeInject = false
   enable = true
   # Gravatar host, default: "www.gravatar.com"
   # Gravatar 主机，默认：“www.gravatar.com”
-  host = "gravatar.lruihao.cn" # ["cravatar.cn", "gravatar.loli.net", ...]
+  host = "gravatar.loli.net" # ["cravatar.cn", "gravatar.loli.net", ...]
   style = "mp" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
 
 # Back to top
