@@ -665,6 +665,10 @@ disableThemeInject = false
   # whether to show the full text content in feed.
   # 是否在 feed 中显示全文内容。
   fullText = true
+  # Site Challenge for Follow: https://follow.is/
+  [feed.follow]
+    feedId = ""
+    userId = ""
 
 # FixIt 0.3.12 | NEW Custom partials config
 # Custom partials must be stored in the /layouts/partials/ directory.

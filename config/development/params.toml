@@ -9,3 +9,12 @@
   enable = false
   # Check for updates
   c4u = true
+
+# -------------------------------------------------------------------------------------
+# Theme Components Configuration | 主题组件配置
+# -------------------------------------------------------------------------------------
+
+# Content adapters config for component projects
+# https://github.com/hugo-fixit/component-projects
+[projectsAdapters]
+  enable = false
