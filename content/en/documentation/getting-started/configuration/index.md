@@ -578,6 +578,8 @@ subtitle
     enable = false
     sticky = false
     showHome = false
+    separator = "/"
+    capitalize = false
 ```
 
 enable
@@ -588,6 +590,14 @@ sticky
 
 showHome
 : `bool` Whether to show the home link in the breadcrumb. Default is `false`.
+
+separator
+: {{< version 0.3.13 >}}\
+`string` The separator of the breadcrumb. Default is `/`.
+
+capitalize
+: {{< version 0.3.13 >}}\
+`bool` Whether to capitalize the breadcrumb. Default is `false`.
 
 ### navigation
 

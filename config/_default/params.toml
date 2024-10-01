@@ -179,6 +179,9 @@ disableThemeInject = false
   enable = true
   sticky = true
   showHome = false
+  # FixIt 0.3.13 | NEW
+  separator = "/"
+  capitalize = true
 
 # FixIt 0.3.10 | NEW Post navigation config
 # FixIt 0.3.10 | 新增 文章导航配置
@@ -702,12 +705,6 @@ disableThemeInject = false
   # 检查更新
   c4u = false
 
-# FixIt Docs config
-[planet]
-  invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF
-  promotion_coupon = "https://t.zsxq.com/BQcpe"
-  renewal_coupon = ""
-
 # Page config
 # 文章页面配置
 [page]
@@ -1145,3 +1142,29 @@ disableThemeInject = false
     [page.seo.publisher]
       name = "Lruihao"
       logoUrl = "/images/avatar.png"
+
+# -------------------------------------------------------------------------------------
+# Theme Components Configuration | 主题组件配置
+# -------------------------------------------------------------------------------------
+
+# Content adapters config for component projects
+# https://github.com/hugo-fixit/component-projects
+[projectsAdapters]
+  enable = true
+  # Whether to show only public repos
+  onlyPublic = true
+  # Default categories and collections
+  categories = ["README"]
+  collections = ["Components"]
+  # Ignore repos in the ignore list
+  ignoreList = [
+    "hugo-fixit/.tools",
+    "hugo-fixit/hugo-atom-feed",
+    "hugo-fixit/component-skeleton",
+  ]
+
+# FixIt Docs config
+[planet]
+  invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF
+  promotion_coupon = "https://t.zsxq.com/BQcpe"
+  renewal_coupon = ""

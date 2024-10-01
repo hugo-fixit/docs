@@ -191,9 +191,7 @@ or
 
 The presentation effect is as follows:
 
-```
 {{< caniuse "css-grid" >}}
-```
 
 ## References
 
