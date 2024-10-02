@@ -1162,7 +1162,7 @@ disableThemeInject = false
   onlyPublic = true
   # Default categories and collections
   categories = ["README"]
-  collections = ["Components"]
+  collections = []
   # Ignore repos in the ignore list
   ignoreList = [
     "hugo-fixit/.tools",

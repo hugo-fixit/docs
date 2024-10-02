@@ -3,6 +3,8 @@
     - hugo-fixit/FixIt
     - hugo-fixit/docs
 - title: 🧩 Shortcodes 组件
+  collections:
+    - Components
   repos:
     - hugo-fixit/component-projects
     - hugo-fixit/shortcode-caniuse
@@ -10,11 +12,15 @@
     - hugo-fixit/shortcode-mmt-netease
     - hugo-fixit/shortcode-rewards
 - title: 🧩 布局组件
+  collections:
+    - Components
   repos:
     - hugo-fixit/component-projects
     - hugo-fixit/hugo-atom-feed
     - hugo-fixit/hugo-json-feed
 - title: 🛠️ 工具
+  categories:
+    - FixIt Tools
   repos:
     - hugo-fixit/component-skeleton
     - hugo-fixit/fixit-cli
@@ -23,6 +29,8 @@
     - hugo-fixit/.tools
 - title: 👾 第三方
   description: "欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。"
-  contentAdapters: false
+  contentAdapters: true
+  collections:
+    - TP Components
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d

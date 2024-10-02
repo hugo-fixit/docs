@@ -3,6 +3,8 @@
     - hugo-fixit/FixIt
     - hugo-fixit/docs
 - title: 🧩 Shortcodes components
+  collections:
+    - Components
   repos:
     - hugo-fixit/component-projects
     - hugo-fixit/shortcode-caniuse
@@ -10,11 +12,15 @@
     - hugo-fixit/shortcode-mmt-netease
     - hugo-fixit/shortcode-rewards
 - title: 🧩 Layout components
+  collections:
+    - Components
   repos:
     - hugo-fixit/component-projects
     - hugo-fixit/hugo-atom-feed
     - hugo-fixit/hugo-json-feed
 - title: 🛠️ Tools
+  categories:
+    - FixIt Tools
   repos:
     - hugo-fixit/component-skeleton
     - hugo-fixit/fixit-cli
@@ -23,6 +29,8 @@
     - hugo-fixit/.tools
 - title: 👾 Third party
   description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
-  contentAdapters: false
+  contentAdapters: true
+  collections:
+    - TP Components
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d
