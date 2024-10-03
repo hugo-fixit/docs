@@ -1,4 +1,5 @@
 - title: ❤️‍🔥 核心主题 & 文档
+  totalStars: true
   repos:
     - hugo-fixit/FixIt
     - hugo-fixit/docs

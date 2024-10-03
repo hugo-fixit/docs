@@ -1,4 +1,5 @@
 - title: ❤️‍🔥 Core & Docs
+  totalStars: true
   repos:
     - hugo-fixit/FixIt
     - hugo-fixit/docs

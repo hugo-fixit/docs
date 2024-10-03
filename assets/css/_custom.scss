@@ -184,6 +184,15 @@
   }
 }
 
+// Content adapter generated posts style
+.single {
+  &[data-adapters='projects'] {
+    .single-subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+
 // ==============================
 // Mobile style
 // ==============================
