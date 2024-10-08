@@ -93,7 +93,7 @@ math: true
 > 一个简洁、优雅且高效的 Hugo 主题。
 ```
 
-> [!NOTE] FixIt
+> [!NOTE] [FixIt](https://fixit.lruihao.cn)
 > 一个简洁、优雅且高效的 Hugo 主题。
 
 你甚至可以省略正文来创建仅标题的警示：

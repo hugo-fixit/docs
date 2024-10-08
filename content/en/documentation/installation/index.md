@@ -50,7 +50,7 @@ Node.js is required to:
 
 Please refer to the relevant documentation for installation instructions:
 
-- [Hugo][hugo-install] (extended edition, v0.132.0 or later)
+- [Hugo][hugo-install] (extended edition, v{{< param docs.minHugoVersion >}} or later)
 - [Git][git-install]
 - [Go][go-install]
 - _[Dart Sass][dart-sass-install] (not used yet)_

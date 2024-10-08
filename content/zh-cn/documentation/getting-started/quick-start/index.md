@@ -42,7 +42,7 @@ toc:
 
 在开始本教程之前，你必须：
 
-1. [安装 Hugo][hugo-installing]（扩展版，v0.132.0 或更高版本）
+1. [安装 Hugo][hugo-installing]（扩展版，v{{< param docs.minHugoVersion >}} 或更高版本）
 2. [安装 Git][git-install]
 
 你还必须熟悉使用命令行。
@@ -51,7 +51,7 @@ toc:
 
 ### 命令
 
-验证你是否安装了 Hugo v0.132.0 或更高版本。
+验证你是否安装了 Hugo v{{< param docs.minHugoVersion >}} 或更高版本。
 
 ```bash
 hugo version
