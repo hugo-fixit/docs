@@ -45,6 +45,18 @@ menu:
 > 哈哈哈哈哈哈哈哈
 {.blockquote-center}
 
+> [!NOTE] [FixIt](https://fixit.lruihao.cn)
+> 一个简洁、优雅且高效的 Hugo 主题。
+
+> [!NOTE] Hugo
+
+> [!NOTE] _Hugo_
+> The world’s fastest framework for building websites
+
+> [!NOTE] **Hugo**
+
+> [!TIP] **Hugo** FixIt
+
 ## 二级标题
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deleniti natus sint velit ut, dolorem optio vero odio repellat aliquam, at repellendus fuga nemo porro adipisci doloremque, amet inventore molestias.

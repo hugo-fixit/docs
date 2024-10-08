@@ -77,7 +77,7 @@ math: true
 
 {{< version 0.3.13 >}}
 
-使用扩展 Markdown 语法，你可以选择包含警示符号和警示标题。警示符号是 `+` 或 `-` 之一。通常用于指示警示是否可以图形折叠。
+使用扩展 Markdown 语法，你可以选择包含警示符号或警示标题。警示符号是 `+` 或 `-` 之一。通常用于指示警示是否可以图形折叠。
 
 > Alert 扩展语法与 [Obsidian][obsidian-callouts] 和 Fixit [admonition shortcode][sc-admonition] 兼容。
 
@@ -93,7 +93,7 @@ math: true
 > 一个简洁、优雅且高效的 Hugo 主题。
 ```
 
-> [!NOTE] [FixIt](https://fixit.lruihao.cn)
+> [!NOTE] FixIt
 > 一个简洁、优雅且高效的 Hugo 主题。
 
 你甚至可以省略正文来创建仅标题的警示：

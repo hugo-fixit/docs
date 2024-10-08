@@ -19,17 +19,17 @@ The `admonition` shortcode allows you to add various types of callouts to your c
 <!--more-->
 
 > This is an extended shortcode provided by the FixIt theme.\
-> For better cross-platform compatibility, the [`Alerts` Markdown extension syntax][alerts-syntax] is recommended.
+> For better cross-platform compatibility, the [Alerts Markdown extension syntax][alerts-syntax] is recommended.
 
 ## Parameters
 
 The `admonition` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description                                                                                                           | Type    |
-| :-------- | :-------------------------------------------------------------------------------------------------------------------- | :------ |
-| type      | The type of the `admonition` banner, default value is `note`. See [Supported types](#supported-types)                 | string  |
-| title     | The title of the `admonition` banner, default value is its type identifier in title case. (Markdown and HTML support) | string  |
-| open      | Whether the content will be expandable by default, default value is `true`.                                           | boolean |
+| Parameter | Description                                                                  | Type    | Default         |
+| :-------- | :--------------------------------------------------------------------------- | :------ | :-------------- |
+| type      | The type of the `admonition` banner. See [Supported types](#supported-types) | string  | note            |
+| title     | The title of the `admonition` banner. (Markdown and HTML support)            | string  | type identifier |
+| open      | Whether the content will be expandable by default.                           | boolean | true            |
 
 ## Basic Usage
 
@@ -198,7 +198,8 @@ Alias: `cite`
 
 ## Customize admonitions
 
-TODO
+> [!todo]
+> Regular development, so stay tuned...
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->

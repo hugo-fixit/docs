@@ -19,17 +19,17 @@ categories:
 <!--more-->
 
 > 这是 FixIt 主题提供的扩展 shortcode。\
-> 为了更好的跨平台兼容性，推荐使用 [`alerts` Markdown 扩展语法][alerts-syntax]。
+> 为了更好的跨平台兼容性，推荐使用 [Alerts Markdown 扩展语法][alerts-syntax]。
 
 ## Parameters
 
 `admonition` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数  | 说明                                                                                | 类型    | 可选值 |
-| :---- | :---------------------------------------------------------------------------------- | :------ | :----- |
-| type  | `admonition` 横幅的类型，默认值是 `note`。见 [支持的类型](#supported-types)         | string  |        |
-| title | `admonition` 横幅的标题。默认值是 **type** 参数的值。（支持 Markdown 和 HTML 格式） | string  | -      |
-| open  | 横幅内容是否默认展开，默认值是 `true`。                                             | boolean | -      |
+| 参数  | 说明                                                       | 类型    | 默认值      |
+| :---- | :--------------------------------------------------------- | :------ | :---------- |
+| type  | `admonition` 横幅的类型。见 [支持的类型](#supported-types) | string  | note        |
+| title | `admonition` 横幅的标题。（支持 Markdown 和 HTML 格式）    | string  | type 参数值 |
+| open  | 横幅内容是否默认展开。                                     | boolean | true        |
 
 ## 基础用法
 
@@ -52,8 +52,6 @@ categories:
 {{< /admonition >}}
 
 ## 支持的类型 {#supported-types}
-
-The `admonition` shortcode supports **13** types of banners, Unless you [Customize admonitions](#customize-admonitions), any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
 
 `admonition` shortcode 支持 **13** 种类型的横幅，除非你 [自定义 admonitions](#customize-admonitions)，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
 
@@ -200,7 +198,8 @@ Alias: `cite`
 
 ## 自定义 admonitions {#customize-admonitions}
 
-TODO
+> [!todo]
+> 正则开发中，敬请期待……
 
 <!-- markdownlint-disable-file reference-links-images -->
 [alerts-syntax]: {{< relref "/documentation/content-management/markdown-syntax/extended#extended-syntax" >}}
