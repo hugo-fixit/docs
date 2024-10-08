@@ -20,6 +20,7 @@ collections:
 lightgallery: true
 toc:
   auto: false
+  ordered: true
 ---
 
 Learn to create a Hugo **FixIt** site in minutes.

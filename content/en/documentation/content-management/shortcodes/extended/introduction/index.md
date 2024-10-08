@@ -249,140 +249,9 @@ The rendered output looks like this:
 
 ### admonition
 
-The `admonition` shortcode has the following named parameters:
+The `admonition` shortcode allows you to add types of callout boxes to your content.
 
-- **type** _[optional]_ (**first** positional parameter)
-
-    Type of the `admonition` banner, default value is `note`. (total **12** types, see [complete example](#admonition-types))
-
-- **title** _[optional]_ (**second** positional parameter)
-
-    Title of the `admonition` banner, default value is the value of **type** parameter. (Markdown and HTML support) {{< version 0.2.14 changed >}}
-
-- **open** _[optional]_ (**third** positional parameter)
-
-    Whether the content will be expandable by default, default value is `true`. (Markdown and HTML support)
-
-Example `admonition` input:
-
-```markdown
-{{</* admonition type=quote title="[FixIt](https://github.com/hugo-fixit/FixIt)" open=true */>}}
-A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
-{{</* /admonition */>}}
-Or
-{{</* admonition quote "[FixIt](https://github.com/hugo-fixit/FixIt)" true */>}}
-A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
-{{</* /admonition */>}}
-```
-
-The rendered output looks like this:
-
-{{< admonition quote "[FixIt](https://github.com/hugo-fixit/FixIt)" true >}}
-A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.io/).
-{{< /admonition >}}
-
----
-
-The `admonition` shortcode supports **12** types of banners, the complete example is as follows:
-{#admonition-types}
-
-```markdown {title="View source", data-open=false}
-{{</* admonition */>}}
-A **note** banner
-{{</* /admonition */>}}
-
-{{</* admonition abstract */>}}
-An **abstract** banner
-{{</* /admonition */>}}
-
-{{</* admonition info */>}}
-A **info** banner
-{{</* /admonition */>}}
-
-{{</* admonition tip */>}}
-A **tip** banner
-{{</* /admonition */>}}
-
-{{</* admonition success */>}}
-A **success** banner
-{{</* /admonition */>}}
-
-{{</* admonition question */>}}
-A **question** banner
-{{</* /admonition */>}}
-
-{{</* admonition warning */>}}
-A **warning** banner
-{{</* /admonition */>}}
-
-{{</* admonition failure */>}}
-A **failure** banner
-{{</* /admonition */>}}
-
-{{</* admonition danger */>}}
-A **danger** banner
-{{</* /admonition */>}}
-
-{{</* admonition bug */>}}
-A **bug** banner
-{{</* /admonition */>}}
-
-{{</* admonition example */>}}
-An **example** banner
-{{</* /admonition */>}}
-
-{{</* admonition quote */>}}
-A **quote** banner
-{{</* /admonition */>}}
-```
-
-{{< admonition >}}
-A **note** banner
-{{< /admonition >}}
-
-{{< admonition abstract >}}
-An **abstract** banner
-{{< /admonition >}}
-
-{{< admonition info >}}
-A **info** banner
-{{< /admonition >}}
-
-{{< admonition tip >}}
-A **tip** banner
-{{< /admonition >}}
-
-{{< admonition success >}}
-A **success** banner
-{{< /admonition >}}
-
-{{< admonition question >}}
-A **question** banner
-{{< /admonition >}}
-
-{{< admonition warning >}}
-A **warning** banner
-{{< /admonition >}}
-
-{{< admonition failure >}}
-A **failure** banner
-{{< /admonition >}}
-
-{{< admonition danger >}}
-A **danger** banner
-{{< /admonition >}}
-
-{{< admonition bug >}}
-A **bug** banner
-{{< /admonition >}}
-
-{{< admonition example >}}
-An **example** banner
-{{< /admonition >}}
-
-{{< admonition quote >}}
-A **quote** banner
-{{< /admonition >}}
+The full documentation is provided in [Extended Shortcode - admonition][sc-admonition].
 
 ### mermaid
 
@@ -604,6 +473,7 @@ Visit [this page][components] to browse a collection of themes components create
 [aplayer]: https://github.com/MoePlayer/APlayer
 [metingjs]: https://github.com/metowolf/MetingJS
 [typeitjs]: https://typeitjs.com/
+[sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [sc-mermaid]: {{< relref path="/documentation/content-management/shortcodes/extended/mermaid" >}}
 [sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
 [sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}

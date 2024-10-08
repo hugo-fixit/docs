@@ -812,7 +812,7 @@ disableThemeInject = false
     position = "right"
     # FixIt 0.3.12 | NEW supersede `markup.tableOfContents` settings
     # FixIt 0.3.12 | 新增 取代 `markup.tableOfContents` 设置
-    ordered = true
+    ordered = false
     startLevel = 2
     endLevel = 6
   # FixIt 0.2.13 | NEW Display a message at the beginning of an article to warn the reader that its content might be expired.

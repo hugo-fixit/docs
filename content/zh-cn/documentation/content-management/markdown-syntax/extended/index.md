@@ -20,18 +20,24 @@ collections:
   - Markdown Syntax
 math: true
 ---
-<!-- markdownlint-disable-file reference-links-images -->
+
 **FixIt** 主题提供了一些扩展的语法便于你撰写文章。
 
 <!--more-->
 
 ## 警示 {#alerts}
 
+警示（Alerts）也被称为 **callouts** 或 **admonitions**，是用于强调关键信息的引用块。
+
+### 基本语法 {#basic-syntax}
+
 {{< version 0.3.10 >}}
 
-> 这种语法与 [GitHub Alert][github-alert] Markdown 扩展语法兼容。
+使用基本的 Markdown 语法，每个警示的第一行是一个警示指示符，由一个感叹号和警示类型组成，用中括号括起来。
 
-警示（Alerts）也被称为 **callouts** 或 **admonitions**，是用于强调关键信息的引用块。以下是所有五种类型的示例：
+> Alert 基本语法与 [GitHub][github-alert]、[Obsidian][obsidian-callouts] 和 [Typora][typora-alert] 兼容。
+
+以下是所有五种类型的示例：
 
 ```markdown {data-open=true}
 > [!NOTE]
@@ -50,7 +56,7 @@ math: true
 > 操作的潜在负面后果。
 ```
 
-它们的显示方式如下：
+呈现的输出效果如下：
 
 > [!NOTE]
 > 突出显示用户应考虑的信息，即使只是浏览也应考虑。
@@ -66,6 +72,73 @@ math: true
 
 > [!CAUTION]
 > 操作的潜在负面后果。
+
+### 扩展语法 {#extended-syntax}
+
+{{< version 0.3.13 >}}
+
+使用扩展 Markdown 语法，你可以选择包含警示符号和警示标题。警示符号是 `+` 或 `-` 之一。通常用于指示警示是否可以图形折叠。
+
+> Alert 扩展语法与 [Obsidian][obsidian-callouts] 和 Fixit [admonition shortcode][sc-admonition] 兼容。
+
+> [!Tip]
+> 扩展语法与 GitHub 或 Typora 不兼容。如果包含警示符号或警示标题，这些应用程序会将 Markdown 渲染为引用块。
+
+#### 更改标题
+
+默认警示标题是其类型标识符的标题大小写。你可以通过在类型标识符后添加文本来更改它：
+
+```markdown
+> [!NOTE] FixIt
+> 一个简洁、优雅且高效的 Hugo 主题。
+```
+
+> [!NOTE] FixIt
+> 一个简洁、优雅且高效的 Hugo 主题。
+
+你甚至可以省略正文来创建仅标题的警示：
+
+```markdown
+> [!TIP] 仅标题的警示
+```
+
+> [!TIP] 仅标题的警示
+
+#### 可折叠警示
+
+你可以通过在类型标识符后直接添加加号（+）或减号（-）来使警示可折叠。
+
+```markdown
+> [!WARNING]+ 辐射危害
+> 请勿在没有防护装备的情况下接近或操作。
+
+> [!QUESTION]- 警示可以折叠吗？
+> 是的！在可折叠警示中，内容在折叠时被隐藏。
+```
+
+> [!WARNING]+ 辐射危害
+> 请勿在没有防护装备的情况下接近或操作。
+
+> [!QUESTION]- 警示可以折叠吗？
+> 是的！在可折叠警示中，内容在折叠时被隐藏。
+
+#### 嵌套警示
+
+你可以在多个级别中嵌套警示。
+
+```markdown
+> [!question] 警示可以嵌套吗？
+> > [!todo] 可以！它们可以。
+> > > [!example] 你甚至可以使用多层嵌套。
+```
+
+> [!question] 警示可以嵌套吗？
+> > [!todo] 可以！它们可以。
+> > > [!example] 你甚至可以使用多层嵌套。
+
+#### 支持的类型 {#supported-types}
+
+Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义警示][customize-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
 
 ## 下划线 {#inserted-text}
 
@@ -177,13 +250,13 @@ FixIt 主题的作者是 ++Lruihao++。
 一个 `raw` 示例：
 
 ```markdown
-{?{}{?{}< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){?{}{?{}< /raw >}}
+{{?{}< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{?{}< /raw >}}
 
-{?{}{?{}< raw >}}
+{{?{}< raw >}}
 公式块：
 \[ a=b+c \\ d+e=f \]
 \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
-{?{}{?{}< /raw >}}
+{{?{}< /raw >}}
 ```
 
 呈现的输出效果如下：
@@ -585,7 +658,12 @@ console.log('hello FixIt!');
 这部分内容在 [时间线支持][timeline-support] 页面中介绍。
 
 <!-- link reference definition -->
-[github-alert]: https://github.com/orgs/community/discussions/16925
+<!-- markdownlint-disable-file reference-links-images -->
+[github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
+[obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
+[typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
+[customize-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#customize-admonitions" >}}
+[sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}

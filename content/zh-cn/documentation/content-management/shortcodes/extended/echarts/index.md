@@ -110,7 +110,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 {{< details "查看源码" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< echarts >}}
+{{?{}< echarts >}}
 {
   "title": {
     "text": "折线统计图",
@@ -179,7 +179,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
     }
   ]
 }
-{?{}{?{}< /echarts >}}
+{{?{}< /echarts >}}
 ```
 
 {{< /details >}}
@@ -285,7 +285,7 @@ series:
 {{< details "查看源码" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< echarts >}}
+{{?{}< echarts >}}
 title:
   text: 折线统计图
   top: 2%
@@ -379,7 +379,7 @@ series:
       - 1290
       - 1330
       - 1320
-{?{}{?{}< /echarts >}}
+{{?{}< /echarts >}}
 ```
 
 {{< /details >}}
@@ -507,7 +507,7 @@ data = [
 {{< details "查看源码" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< echarts >}}
+{{?{}< echarts >}}
 [title]
 text = "折线统计图"
 top = "2%"
@@ -623,7 +623,7 @@ data = [
   1330.0,
   1320.0
 ]
-{?{}{?{}< /echarts >}}
+{{?{}< /echarts >}}
 ```
 
 {{< /details >}}

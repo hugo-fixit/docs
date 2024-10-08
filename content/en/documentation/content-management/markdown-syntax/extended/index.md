@@ -20,18 +20,24 @@ collections:
   - Markdown Syntax
 math: true
 ---
-<!-- markdownlint-disable-file reference-links-images -->
+
 **FixIt** theme has some extended syntax elements for you to write articles.
 
 <!--more-->
 
 ## Alerts {#alerts}
 
+Also known as callouts or admonitions, alerts are blockquotes used to emphasize critical information.
+
+### Basic syntax
+
 {{< version 0.3.10 >}}
 
-> This syntax is compatible with the [GitHub Alert][github-alert] Markdown extension.
+With the basic Markdown syntax, the first line of each alert is an alert designator consisting of an exclamation point followed by the alert type, wrapped within brackets.
 
-Also known as callouts or admonitions, alerts are blockquotes used to emphasize critical information. An example of all five types:
+> The basic syntax is compatible with [GitHub][github-alert], [Obsidian][obsidian-callouts], and [Typora][typora-alert].
+
+An example of all five types:
 
 ```markdown {data-open=true}
 > [!NOTE]
@@ -50,7 +56,7 @@ Also known as callouts or admonitions, alerts are blockquotes used to emphasize 
 > Negative potential consequences of an action.
 ```
 
-Here is how they are displayed:
+The rendered output looks like this:
 
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
@@ -66,6 +72,73 @@ Here is how they are displayed:
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+
+### Extended syntax
+
+{{< version 0.3.13 >}}
+
+With the extended Markdown syntax, you may optionally include an alert sign and/or an alert title. The alert sign is one of `+` or `-`, typically used to indicate whether an alert is graphically foldable.
+
+> The extended syntax is compatible with [Obsidian][obsidian-callouts] and Fixit [admonition shortcode][sc-admonition].
+
+> [!Tip]
+> The extended syntax is not compatible with GitHub or Typora. If you include an alert sign or an alert title, these applications render the Markdown as a blockquote.
+
+#### Change the title
+
+By default, the title of the alert is its type identifier in title case. You can change it by adding text after the type identifier:
+
+```markdown
+> [!NOTE] FixIt
+> A Clean, Elegant but Advanced Hugo Theme.
+```
+
+> [!NOTE] FixIt
+> A Clean, Elegant but Advanced Hugo Theme.
+
+You can even omit the body to create title-only alerts:
+
+```markdown
+> [!TIP] Title-only alert
+```
+
+> [!TIP] Title-only alert
+
+#### Foldable Alerts
+
+You can make a Alert foldable by adding a plus (+) or a minus (-) directly after the type identifier.
+
+```markdown
+> [!WARNING]+ Radiation hazard
+> Do not approach or handle without protective gear.
+
+> [!QUESTION]- Are Alerts foldable?
+> Yes! In a foldable Alert, the contents are hidden when collapsed.
+```
+
+> [!WARNING]+ Radiation hazard
+> Do not approach or handle without protective gear.
+
+> [!QUESTION]- Are Alerts foldable?
+> Yes! In a foldable Alert, the contents are hidden when collapsed.
+
+#### Nested alerts
+
+You can nest alerts in multiple levels.
+
+```markdown
+> [!question] Can alerts be nested?
+> > [!todo] Yes!, they can.
+> > > [!example] You can even use multiple layers of nesting.
+```
+
+> [!question] Can alerts be nested?
+> > [!todo] Yes!, they can.
+> > > [!example] You can even use multiple layers of nesting.
+
+#### Supported types
+
+The extended alert syntax supports **13** types of admonition banners, Unless you [Customize admonitions][customize-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
 
 ## Inserted Text {#inserted-text}
 
@@ -177,13 +250,13 @@ If you don't want to write these escape characters, **FixIt** theme supports [`r
 Example `raw` input:
 
 ```markdown
-{?{}{?{}< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){?{}{?{}< /raw >}}
+{{?{}< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{?{}< /raw >}}
 
-{?{}{?{}< raw >}}
+{{?{}< raw >}}
 Block Formula:
 \[ a=b+c \\ d+e=f \]
 \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
-{?{}{?{}< /raw >}}
+{{?{}< /raw >}}
 ```
 
 The rendered output looks like this:
@@ -585,7 +658,12 @@ This part is shown in the [diagrams support][diagrams-support-mermaid] page.
 This part is shown in the [Timeline support][timeline-support] page.
 
 <!-- link reference definition -->
-[github-alert]: https://github.com/orgs/community/discussions/16925
+<!-- markdownlint-disable-file reference-links-images -->
+[github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
+[obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
+[typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
+[customize-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#customize-admonitions" >}}
+[sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}

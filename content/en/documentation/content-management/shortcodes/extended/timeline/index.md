@@ -37,7 +37,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown
-{?{}{?{}< timeline >}}
+{{?{}< timeline >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -45,7 +45,7 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -65,7 +65,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown
-{?{}{?{}< timeline reverse=true >}}
+{{?{}< timeline reverse=true >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -73,7 +73,7 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -95,7 +95,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown
-{?{}{?{}< timeline animation=true >}}
+{{?{}< timeline animation=true >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -103,7 +103,7 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -131,7 +131,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< timeline >}}
+{{?{}< timeline >}}
 events:
   - timestamp: 2024-07-19 20:30
     content: Custom type and style
@@ -145,7 +145,7 @@ events:
     size: large
   - timestamp: 2024-07-20 20:30
     content: Default node
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -167,7 +167,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown
-{?{}{?{}< timeline placement=top >}}
+{{?{}< timeline placement=top >}}
 events:
   - timestamp: 2024-07-19 20:30
     content: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint impedit magni soluta esse placeat facilis porro vitae facere explicabo. Architecto exercitationem accusamus omnis reiciendis beatae et inventore deserunt sequi recusandae.
@@ -175,7 +175,7 @@ events:
     content: Id amet sapiente quod temporibus molestiae? Quasi officia placeat magnam sapiente! Esse iure ipsam quia laboriosam dolorem at dolor est porro placeat, sequi magni maxime vel sint architecto. Placeat, laboriosam?
   - timestamp: 2024-07-19 20:30
     content: Expedita delectus rerum vitae consequuntur quam, tempore fugit debitis voluptatem praesentium maiores dolorem possimus illum adipisci facere veniam voluptatibus aliquam ipsa ducimus nam impedit cumque! Rerum molestias praesentium expedita! Itaque.
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -210,7 +210,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< timeline reverse=true >}}
+{{?{}< timeline reverse=true >}}
 events:
   - timestamp: 2021-12-18T16:15:22+08:00
     content: "Feat: [LoveIt](https://github.com/dillonzq/LoveIt) => [FixIt](https://github.com/hugo-fixit/FixIt)"
@@ -231,7 +231,7 @@ events:
   - timestamp: 2024-07-20T22:28:19+08:00
     content: ":tada: Feat: add timeline support for code blocks"
     type: danger
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -264,7 +264,7 @@ Example Timeline input in `JSON` format:
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< timeline >}}
+{{?{}< timeline >}}
 {
   "events": [
     {
@@ -281,7 +281,7 @@ Example Timeline input in `JSON` format:
     }
   ]
 }
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -301,7 +301,7 @@ events:
 {{< details "View source" false true >}}
 
 ```markdown
-{?{}{?{}< timeline >}}
+{{?{}< timeline >}}
 events:
   - timestamp: 2024-07-11
     content: Success
@@ -309,7 +309,7 @@ events:
     content: Approved
   - timestamp: 2024-07-15
     content: Event start
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}
@@ -333,7 +333,7 @@ content = "Event start"
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< timeline >}}
+{{?{}< timeline >}}
 [[events]]
 timestamp = "2024-07-11"
 content = "Success"
@@ -345,7 +345,7 @@ content = "Approved"
 [[events]]
 timestamp = "2024-07-15"
 content = "Event start"
-{?{}{?{}< /timeline >}}
+{{?{}< /timeline >}}
 ```
 
 {{< /details >}}

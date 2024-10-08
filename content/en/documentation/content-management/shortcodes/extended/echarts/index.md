@@ -109,7 +109,7 @@ Example `echarts` input in `JSON` format:
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< echarts >}}
+{{?{}< echarts >}}
 {
   "title": {
     "text": "Summary Line Chart",
@@ -178,7 +178,7 @@ Example `echarts` input in `JSON` format:
     }
   ]
 }
-{?{}{?{}< /echarts >}}
+{{?{}< /echarts >}}
 ```
 
 {{< /details >}}
@@ -284,7 +284,7 @@ series:
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< echarts >}}
+{{?{}< echarts >}}
 title:
   text: Summary Line Chart
   top: 2%
@@ -378,7 +378,7 @@ series:
       - 1290
       - 1330
       - 1320
-{?{}{?{}< /echarts >}}
+{{?{}< /echarts >}}
 ```
 
 {{< /details >}}
@@ -506,7 +506,7 @@ data = [
 {{< details "View source" false true >}}
 
 ```markdown {data-open=true}
-{?{}{?{}< echarts >}}
+{{?{}< echarts >}}
 [title]
 text = "Summary Line Chart"
 top = "2%"
@@ -622,7 +622,7 @@ data = [
   1330.0,
   1320.0
 ]
-{?{}{?{}< /echarts >}}
+{{?{}< /echarts >}}
 ```
 
 {{< /details >}}
