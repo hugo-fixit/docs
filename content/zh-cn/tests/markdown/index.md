@@ -57,6 +57,9 @@ menu:
 
 > [!TIP] **Hugo** FixIt
 
+> [!ban]+ ban admonition
+> Lorem ipsum dolor sit amet consectetur adipisicing
+
 ## 二级标题
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deleniti natus sint velit ut, dolorem optio vero odio repellat aliquam, at repellendus fuga nemo porro adipisci doloremque, amet inventore molestias.

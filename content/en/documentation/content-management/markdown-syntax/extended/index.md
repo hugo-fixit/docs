@@ -138,7 +138,7 @@ You can nest alerts in multiple levels.
 
 #### Supported types
 
-The extended alert syntax supports **13** types of admonition banners, Unless you [Customize admonitions][customize-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+The extended alert syntax supports **13** types of admonition banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
 
 ## Inserted Text {#inserted-text}
 
@@ -662,7 +662,7 @@ This part is shown in the [Timeline support][timeline-support] page.
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
-[customize-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#customize-admonitions" >}}
+[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/

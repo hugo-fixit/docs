@@ -926,6 +926,20 @@ loop
 : {{< version 0.2.18 >}}\
 `bool` 是否循环播放，默认：`false`。
 
+### admonition
+
+{{< version 0.3.13 >}}
+
+`map` Admonition 自定义配置。详见 [自定义 Admonition][custom-admonitions]
+
+```toml
+[params]
+  [params.admonition]
+    # ban = "fa-solid fa-ban"
+```
+
+格式为 `<type> = <icon>`，其中 `<type>` 是 Admonition 类型，`<icon>` 是 Font Awesome 图标类。
+
 ### mermaid
 
 {{< version 0.2.15 >}}
@@ -1677,6 +1691,7 @@ c4u
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
+[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
 [vercount]: https://vercount.one/

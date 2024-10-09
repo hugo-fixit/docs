@@ -53,7 +53,7 @@ categories:
 
 ## 支持的类型 {#supported-types}
 
-`admonition` shortcode 支持 **13** 种类型的横幅，除非你 [自定义 admonitions](#customize-admonitions)，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
+`admonition` shortcode 支持 **13** 种类型的横幅，除非你 [自定义 admonitions](#custom-admonitions)，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
 
 完整示例如下：
 
@@ -196,10 +196,62 @@ The quick brown fox jumps over the lazy dog.
 Alias: `cite`
 {{< /admonition >}}
 
-## 自定义 admonitions {#customize-admonitions}
+## 自定义 Admonition {#custom-admonitions}
 
-> [!todo]
-> 正则开发中，敬请期待……
+{{< version 0.3.13 >}}
+
+你可以自定义 Admonition，甚至可以覆盖默认 Admonition。
+
+要自定义 Admonition，请在站点配置文件中更改 `params.admonition`。例如：
+
+```toml
+[params]
+  [params.admonition]
+    ban = "fa-solid fa-ban"
+```
+
+然后在项目目录 `assets/css/_override.scss` 中创建以下 SCSS 块：
+
+```scss {title="_override.scss"}
+// Custom admonitions style
+$custom-admonition-map: (
+  ban: (
+    color: #ff3d00,
+    bg-color: rgba(255, 61, 0, 0.1),
+  ),
+);
+
+$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
+```
+
+如果你需要修改自定义 Admonition 的默认标题，你可以在对应的语言文件中添加以下内容：
+
+```toml
+[admonition]
+ban = "禁止"
+```
+
+之后，你可以在内容中使用自定义 Admonition：
+
+{{< admonition ban "" false >}}
+Shortcode 语法：
+
+```markdown {.no-header}
+{{?{}< admonition ban >}}
+这是一个带有禁止图标的自定义 Admonition 类型。
+{{?{}< /admonition >}}
+```
+
+Alerts Markdown 扩展语法：
+
+```markdown {.no-header}
+> [!ban]
+> 这是一个带有禁止图标的自定义 Admonition 类型。
+```
+
+> [!TIP]
+> 这只是主题文档的一个示例，并不包含在主题中。
+{{< /admonition >}}
 
 <!-- markdownlint-disable-file reference-links-images -->
 [alerts-syntax]: {{< relref "/documentation/content-management/markdown-syntax/extended#extended-syntax" >}}

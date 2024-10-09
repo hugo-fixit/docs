@@ -17,3 +17,8 @@ breadcrumbTitle = "基本语法"
 ["/documentation/content-management/markdown-syntax/extended"]
 breadcrumbTitle = "扩展语法"
 # === Translations for pages ===
+
+# === shortcodes/admonition.html ===
+[admonition]
+ban = "禁止"
+# === shortcodes/admonition.html ===

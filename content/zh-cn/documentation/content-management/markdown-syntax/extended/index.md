@@ -138,7 +138,7 @@ math: true
 
 #### 支持的类型 {#supported-types}
 
-Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义警示][customize-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
+Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 Admonition][custom-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
 
 ## 下划线 {#inserted-text}
 
@@ -662,7 +662,7 @@ console.log('hello FixIt!');
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
-[customize-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#customize-admonitions" >}}
+[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/

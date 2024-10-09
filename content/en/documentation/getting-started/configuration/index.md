@@ -923,6 +923,20 @@ loop
 : {{< version 0.2.18 >}}\
 `bool` Whether your strings will continuously loop after completing. Default is `false`.
 
+### admonition
+
+{{< version 0.3.13 >}}
+
+`map` Admonition custom Configuration. See [Custom Admonitions][custom-admonitions]
+
+```toml
+[params]
+  [params.admonition]
+    # ban = "fa-solid fa-ban"
+```
+
+The syntax is `<type> = <icon>`, where `<type>` is the type of the admonition and `<icon>` is the Font Awesome icon class.
+
 ### mermaid
 
 {{< version 0.2.15 >}}
@@ -1678,6 +1692,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
+[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
 [vercount]: https://vercount.one/
