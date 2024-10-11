@@ -262,13 +262,6 @@ disableThemeInject = false
     # whether to show the full text content in feed.
     # 是否在 feed 中显示全文内容。
     fullText = false
-  # FixIt 0.2.13 | NEW recently updated posts settings
-  # FixIt 0.2.13 | 新增 最近更新文章设置
-  [section.recentlyUpdated]
-    enable = true
-    rss = true
-    days = 30
-    maxCount = 10
 
 # List (category or tag) page config
 # List (目录或标签) 页面配置
@@ -288,6 +281,15 @@ disableThemeInject = false
     # whether to show the full text content in feed.
     # 是否在 feed 中显示全文内容。
     fullText = false
+
+# FixIt 0.3.13 | NEW recently updated pages config for archives, section and term list
+# FixIt 0.3.13 | 新增 最近更新页面配置用于归档、section 和 term 列表
+[recentlyUpdated]
+  archives = true
+  section = true
+  term = true
+  days = 30
+  maxCount = 10
 
 # TagCloud config for tags page
 # 标签云配置

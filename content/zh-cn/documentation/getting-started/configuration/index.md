@@ -737,11 +737,6 @@ dateFormat
     [params.section.feed]
       limit = -1
       fullText = false
-    [params.section.recentlyUpdated]
-      enable = false
-      rss = false
-      days = 30
-      maxCount = 10
 ```
 
 paginate
@@ -753,15 +748,6 @@ dateFormat
 feed
 : {{< version 0.3.10 >}}\
 `map` Section feed 配置用于 RSS, Atom 和 JSON feed，详见 [Feed 配置](#feed)。
-
-recentlyUpdated
-: {{< version 0.2.13 >}}\
-`map` 最近更新文章设置。
-
-- enable: `bool` 是否启用最近更新文章，默认：`false`。
-- rss: `bool` 是否在 RSS 中显示最近更新文章，默认：`false`。
-- days: `int` 最近更新文章的天数，默认：`30`。
-- maxCount: `int` 最大文章数目，默认：`10`。
 
 ### list
 
@@ -786,6 +772,37 @@ dateFormat
 feed
 : {{< version 0.3.10 >}}\
 `map` Term list feed 配置用于 RSS, Atom 和 JSON feed，详见 [Feed 配置](#feed)。
+
+### recentlyUpdated
+
+{{< version 0.3.13 >}}
+
+`map` 最近更新文章设置。
+
+```toml
+[params]
+  [params.recentlyUpdated]
+    archives = true
+    section = true
+    list = true
+    days = 30
+    maxCount = 10
+```
+
+archives
+: `bool` 是否在归档页面显示最近更新文章，默认：`true`。
+
+section
+: `bool` 是否在 section 页面显示最近更新文章，默认：`true`。
+
+list
+: `bool` 是否在 list 页面显示最近更新文章，默认：`true`。
+
+days
+: `int` 最近更新文章的天数，默认：`30`。
+
+maxCount
+: `int` 最大文章数目，默认：`10`。
 
 ### tagcloud
 

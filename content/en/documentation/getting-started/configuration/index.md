@@ -736,11 +736,6 @@ dateFormat
     [params.section.feed]
       limit = -1
       fullText = false
-    [params.section.recentlyUpdated]
-      enable = false
-      rss = false
-      days = 30
-      maxCount = 10
 ```
 
 paginate
@@ -752,15 +747,6 @@ dateFormat
 feed
 : {{< version 0.3.10 >}}\
 `map` Section feed config for RSS, Atom and JSON feed. See [Feed config](#feed).
-
-recentlyUpdated
-: {{< version 0.2.13 >}}\
-`map` The Recently Updated posts Configuration.
-
-- enable: `bool` Whether to enable recently updated posts. Default is `false`.
-- rss: `bool` Whether to enable recently updated posts in RSS. Default is `false`.
-- days: `int` The days of recently updated posts. Default is `30`.
-- maxCount: `int` The max count of recently updated posts. Default is `10`.
 
 ### list
 
@@ -785,6 +771,37 @@ dateFormat
 feed
 : {{< version 0.3.10 >}}\
 `map` Term list feed config for RSS, Atom and JSON feed. See [Feed config](#feed).
+
+### recentlyUpdated
+
+{{< version 0.3.13 >}}
+
+`map` The Recently Updated posts Configuration.
+
+```toml
+[params]
+  [params.recentlyUpdated]
+    archives = true
+    section = true
+    list = true
+    days = 30
+    maxCount = 10
+```
+
+archives
+: `bool` Whether to enable recently updated posts in archives. Default is `true`.
+
+section
+: `bool` Whether to enable recently updated posts in section. Default is `true`.
+
+list
+: `bool` Whether to enable recently updated posts in list. Default is `true`.
+
+days
+: `int` The days of recently updated posts. Default is `30`.
+
+maxCount
+: `int` The max count of recently updated posts. Default is `10`.
 
 ### tagcloud
 
