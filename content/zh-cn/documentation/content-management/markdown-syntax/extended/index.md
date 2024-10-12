@@ -27,7 +27,7 @@ math: true
 
 ## 警示 {#alerts}
 
-警示（Alerts）也被称为 **callouts** 或 **admonitions**，是用于强调关键信息的引用块。
+警示（Alert）也被称为 **Callout** 或 **Admonition**，是用于强调关键信息的引用块。
 
 ### 基本语法 {#basic-syntax}
 

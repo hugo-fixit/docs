@@ -19,7 +19,7 @@ categories:
 <!--more-->
 
 > 这是 FixIt 主题提供的扩展 shortcode。\
-> 为了更好的跨平台兼容性，推荐使用 [Alerts Markdown 扩展语法][alerts-syntax]。
+> 为了更好的跨平台兼容性，推荐使用 [Alert Markdown 扩展语法][alerts-syntax]。
 
 ## Parameters
 
@@ -242,7 +242,7 @@ Shortcode 语法：
 {{?{}< /admonition >}}
 ```
 
-Alerts Markdown 扩展语法：
+Alert Markdown 扩展语法：
 
 ```markdown {.no-header, linenos=false}
 > [!ban]
