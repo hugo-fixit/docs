@@ -342,6 +342,12 @@ auto
 
 `bool` 是否在主页标题中添加网站副标题，默认：`false`。请记得通过 `params.header.subtitle.name` 设置网站副标题。
 
+### summaryPlainify
+
+{{< version 0.3.13 >}}
+
+`bool` 是否显示纯文本摘要，默认：`false`。
+
 ### disableThemeInject
 
 {{< version 0.2.14 >}}

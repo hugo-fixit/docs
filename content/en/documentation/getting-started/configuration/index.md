@@ -340,6 +340,12 @@ auto
 
 `bool` Whether to add site subtitle to the title of index page. Default is `false`. Remember to set up your site subtitle by `params.header.subtitle.name`.
 
+### summaryPlainify
+
+{{< version 0.3.13 >}}
+
+`bool` Whether to show summary in plain text. Default is `false`.
+
 ### disableThemeInject
 
 {{< version 0.2.14 >}}

@@ -134,6 +134,8 @@ hugo new --kind post-bundle posts/bar/
 - **keywords**: the keywords for the content.
 - **license**: the special lisence for this content.
 - **images**: page images for Open Graph and Twitter Cards.
+- **summary**: the summary for the content.
+- **summaryPlainify**: {{< version 0.3.13 >}} whether to show summary in plain text, default: `false`. The same as the `params.summaryPlainify` in the [theme configuration][theme-config].
 
 - **tags**: the tags for the content.
 - **categories**: the categories for the content.
@@ -308,22 +310,21 @@ You may add the `<!--more-->` summary divider at the start of the article. Keep 
 
 ### Comparison
 
-Because there are multiple ways in which a summary can be specified it is useful to understand the order. It is as follows:
+Each summary type has different characteristics:
 
-| Type              | Precedence | Renders markdown | Renders shortcodes | Strips HTML tags | Wraps single lines with `<p>` |
-| :---------------- | :--------: | :--------------: | :----------------: | :--------------: | :---------------------------: |
-| Manual            | 1          | ✔️             | ✔️               | ❌               | ✔️                          |
-| Front&nbsp;matter | 2          | ✔️             | ❌                 | ❌               | ❌                            |
-| Automatic         | 3          | ✔️             | ✔️               | ✔️             | ❌                            |
+| Type              | Precedence | Renders markdown | Renders shortcodes | Wraps single lines with `<p>` |
+| :---------------- | :--------: | :--------------: | :----------------: | :---------------------------: |
+| Manual            | 1          | ✔️             | ✔️               | ✔️                          |
+| Front&nbsp;matter | 2          | ✔️             | ❌                 | ❌                            |
+| Automatic         | 3          | ✔️             | ✔️               | ❌                            |
 
 1. If there is a `<!--more-->` summary divider present in the article but no content is before the divider, the description will be used as the summary.
 2. If there is a `<!--more-->` summary divider present in the article the text up to the divider will be provided as per the manual summary split method.
 3. If there is a summary variable in the article front matter the value of the variable will be provided as per the front matter summary method.
 4. The text at the start of the article will be provided as per the automatic summary split method.
 
-{{< admonition >}}
-It is not recommended to include rich text block elements in the summary, which will cause typographic errors. Such as code blocks, pictures, tables, etc.
-{{< /admonition >}}
+> [!TIP]
+> If you want plain text summaries, you can set `params.summaryPlainify` or Front matter `summaryPlainify`.
 
 ## Markdown Syntax
 

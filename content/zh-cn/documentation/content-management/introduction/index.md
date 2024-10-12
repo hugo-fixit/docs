@@ -104,7 +104,7 @@ hugo new friends/index.md
 {{< /admonition >}}
 
 {{< admonition tip "" false >}}
-**FixIt** 主题内嵌了一些 [原型 (Archetypes)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的 Front matter：
+**FixIt** 主题内嵌了一些 [原型 (Archetype)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的 Front matter：
 
 ```bash
 hugo new posts/foo.md
@@ -134,6 +134,8 @@ hugo new --kind post-bundle posts/bar/
 - **keywords**: 文章内容的关键词
 - **license**: 这篇文章特殊的许可
 - **images**: 页面图片，用于 Open Graph 和 Twitter Cards
+- **summary**: 文章的摘要
+- **summaryPlainify**: {{< version 0.3.13 >}} 是否显示纯文本摘要，默认：`false`。和 [主题配置][theme-config] 中的 `params.summaryPlainify` 相同
 
 - **tags**: 文章的标签
 - **categories**: 文章所属的类别
@@ -310,22 +312,21 @@ seo:
 
 ### 比较
 
-由于可以通过多种方式指定摘要，因此了解顺序很有用。如下：
+每种摘要类型都有不同的特点：
 
-| 类型         | 优先级 | 渲染 Markdown | 渲染 Shortcodes | 删除 HTML 标签 | 使用 `<p>` 换行 |
-| :----------- | :----: | :-----------: | :-------------: | :------------: | :-------------: |
-| 手动摘要     | 1      | ✔️          | ✔️            | ❌             | ✔️            |
-| Front&nbsp;matter | 2      | ✔️          | ❌              | ❌             | ❌              |
-| 自动摘要     | 3      | ✔️          | ✔️            | ✔️           | ❌              |
+| 类型              | 优先级 | 渲染 Markdown | 渲染 Shortcodes | 使用 `<p>` 换行 |
+| :---------------- | :----: | :-----------: | :-------------: | :-------------: |
+| 手动摘要          | 1      | ✔️          | ✔️            | ✔️            |
+| Front&nbsp;matter | 2      | ✔️          | ❌              | ❌              |
+| 自动摘要          | 3      | ✔️          | ✔️            | ✔️            |
 
 1. 如果文章中有 `<!--more-->` 摘要分隔符，但分隔符之前没有内容，则使用描述作为摘要。
 2. 如果文章中有 `<!--more-->` 摘要分隔符，则将按照手动摘要拆分的方法获得摘要。
 3. 如果文章 Front matter 中有摘要变量，那么将以该值作为摘要。
 4. 按照自动摘要拆分方法。
 
-{{< admonition warning >}}
-不建议在摘要内容中包含富文本块元素，这会导致渲染错误。例如代码块，图片，表格等。
-{{< /admonition >}}
+> [!TIP]
+> 如果你想要纯文本摘要，可以设置 `params.summaryPlainify` 或者 Front matter `summaryPlainify`。
 
 ## Markdown 语法
 
