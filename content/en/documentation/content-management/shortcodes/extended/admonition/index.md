@@ -59,7 +59,7 @@ The complete examples are as follows:
 
 {{< admonition >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -69,7 +69,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition abstract "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition abstract >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -80,7 +80,7 @@ Aliases: `summary`, `tldr`
 
 {{< admonition info "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition info >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -91,7 +91,7 @@ The quick brown fox jumps over the lazy dog.
 {{< admonition todo "" false >}}
 {{< version 0.3.13 >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition todo >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -101,7 +101,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition tip "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition tip >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -112,7 +112,7 @@ Aliases: `hint`, `important`
 
 {{< admonition success "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition success >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -123,7 +123,7 @@ Aliases: `check`, `done`
 
 {{< admonition question "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition question >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -134,7 +134,7 @@ Aliases: `help`, `faq`
 
 {{< admonition warning "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition warning >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -145,7 +145,7 @@ Aliases: `caution`, `attention`
 
 {{< admonition failure "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition failure >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -156,7 +156,7 @@ Aliases: `fail`, `missing`
 
 {{< admonition danger "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition danger >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -167,7 +167,7 @@ Alias: `error`
 
 {{< admonition bug "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition bug >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -177,7 +177,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition example "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition example >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -187,7 +187,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition quote "" false >}}
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition quote >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -236,7 +236,7 @@ After that, you can use the custom admonition in your content:
 {{< admonition ban "" false >}}
 Shortcode syntax:
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 {{?{}< admonition ban >}}
 This is a custom admonition type with a ban icon.
 {{?{}< /admonition >}}
@@ -244,7 +244,7 @@ This is a custom admonition type with a ban icon.
 
 Alerts Markdown extension syntax:
 
-```markdown {.no-header}
+```markdown {.no-header, linenos=false}
 > [!ban]
 > This is a custom admonition type with a ban icon.
 ```

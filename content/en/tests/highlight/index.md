@@ -176,6 +176,22 @@ var _str2Array = (str) => {
 };
 ```
 
+```js {linenos=false, .no-header}
+/**
+ * 把字符串的文件後綴轉成數組
+ * @param {String} str 待轉化字符串
+ * @returns {Array|null} 轉化后的數組
+ */
+var _str2Array = (str) => {
+  if (typeof (str) !== String && !Array.isArray(str)) {
+    return null;
+  }
+  if (!Array.isArray(str)) {
+    return str.split(',');
+  }
+};
+```
+
 Highlighting in shortcode highlight.
 
 {{< highlight javascript "linenos=table,hl_lines=11 6-9,linenostart=287" >}}
