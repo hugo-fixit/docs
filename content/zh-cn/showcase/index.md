@@ -18,8 +18,6 @@ comment:
 {.text-center}
 
 {{< gh-repo-card-container >}}
-  {{< gh-repo-card repo="hugo-fixit/hugo-fixit-starter" >}}
-  {{< gh-repo-card repo="hugo-fixit/hugo-fixit-starter1" >}}
   {{< gh-repo-card repo="hugo-fixit/docs" >}}
   {{< gh-repo-card repo="Lruihao/hugo-blog" >}}
 {{< /gh-repo-card-container >}}

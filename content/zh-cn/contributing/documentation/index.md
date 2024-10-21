@@ -86,4 +86,4 @@ HUGO_MODULE_WORKSPACE=hugo.work hugo server --ignoreVendorPaths "**"
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/
 [showcase]: {{< relref path="/showcase" >}}
-[components]: {{< relref "/components" >}}
+[components]: {{< relref "/ecosystem" >}}

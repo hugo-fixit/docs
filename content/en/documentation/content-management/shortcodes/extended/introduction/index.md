@@ -483,4 +483,4 @@ Visit [this page][components] to browse a collection of themes components create
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
-[components]: {{< relref path="/components" >}}
+[components]: relref "/ecosystem"

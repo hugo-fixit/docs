@@ -69,6 +69,6 @@ Hugo 使用两种不同的算法来合并文件系统，取决于文件类型：
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
-[components]: {{< relref "/components" >}}
+[components]: {{< relref "/ecosystem" >}}
 [references]: {{< relref "/references" >}}
-[dev-component]: {{< relref "/components/dev-component" >}}
+[dev-component]: {{< relref "/ecosystem/dev-component" >}}

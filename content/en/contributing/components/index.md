@@ -68,6 +68,6 @@ If you have a good understanding of components and are ready to start a new comp
 Head to the [References][references] page for more information.
 
 <!-- link reference definition -->
-[components]: {{< relref "/components" >}}
+[components]: {{< relref "/ecosystem" >}}
 [references]: {{< relref "/references" >}}
-[dev-component]: {{< relref path="/components/dev-component" >}}
+[dev-component]: {{< relref "/ecosystem/dev-component" >}}

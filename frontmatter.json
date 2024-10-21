@@ -124,10 +124,6 @@
       "path": "[[workspace]]/content/zh-cn/contributing"
     },
     {
-      "title": "components",
-      "path": "[[workspace]]/content/zh-cn/components"
-    },
-    {
       "title": "guides",
       "path": "[[workspace]]/content/en/guides"
     },
@@ -144,8 +140,12 @@
       "path": "[[workspace]]/content/en/contributing"
     },
     {
-      "title": "components",
-      "path": "[[workspace]]/content/en/components"
+      "path": "[[workspace]]/content/en/ecosystem",
+      "title": "ecosystem"
+    },
+    {
+      "title": "ecosystem",
+      "path": "[[workspace]]/content/zh-cn/ecosystem"
     }
   ],
   "frontMatter.framework.startCommand": "hugo server -D --disableFastRender --navigateToChanged --bind 0.0.0.0",

@@ -1,31 +1,34 @@
-- title: ❤️‍🔥 Core & Docs
+- title: ❤️‍🔥 Core
   totalStars: true
   repos:
     - hugo-fixit/FixIt
-    - hugo-fixit/docs
-- title: 🧩 Shortcodes components
-  collections:
-    - Components
-  repos:
-    - hugo-fixit/component-projects
-    - hugo-fixit/shortcode-caniuse
-    - hugo-fixit/shortcode-docs-bookmark
-    - hugo-fixit/shortcode-mmt-netease
-    - hugo-fixit/shortcode-rewards
-- title: 🧩 Layout components
+    - hugo-fixit/fixit-bundle
+- title: 🧩 Components
+  description: "The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization."
   collections:
     - Components
   repos:
     - hugo-fixit/component-projects
     - hugo-fixit/hugo-atom-feed
     - hugo-fixit/hugo-json-feed
+    - hugo-fixit/shortcode-caniuse
+    - hugo-fixit/shortcode-docs-bookmark
+    - hugo-fixit/shortcode-mmt-netease
+    - hugo-fixit/shortcode-rewards
+- title: 📄 Templates
+  repos:
+    - hugo-fixit/hugo-fixit-starter
+    - hugo-fixit/hugo-fixit-starter1
+    - hugo-fixit/docs
+    - Lruihao/hugo-blog
+    - hugo-fixit/bundle-test
 - title: 🛠️ Tools
   categories:
     - FixIt Tools
   repos:
-    - hugo-fixit/component-skeleton
     - hugo-fixit/fixit-cli
     - hugo-fixit/fixit-releaser
+    - hugo-fixit/component-skeleton
     - hugo-fixit/hugo-shell
     - hugo-fixit/.tools
 - title: 👾 Third party

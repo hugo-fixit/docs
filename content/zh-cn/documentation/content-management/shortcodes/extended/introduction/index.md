@@ -483,4 +483,4 @@ FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为�
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
-[components]: {{< relref path="/components" >}}
+[components]: relref "/ecosystem"

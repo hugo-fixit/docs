@@ -197,6 +197,16 @@
       "source": "/zh-cn/friends/",
       "destination": "/zh-cn/showcase/",
       "statusCode": 301
+    },
+    {
+      "source": "/components/:path",
+      "destination": "/ecosystem/:path",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh-cn/components/:path",
+      "destination": "/zh-cn/ecosystem/:path",
+      "statusCode": 301
     }
   ]
 }
