@@ -50,15 +50,11 @@ More details can be found in the [Configure Hugo][hugo-config] page.
 
 If you don’t need to be so verbose as in the default setup above, you can also [merge configuration from themes][merge-config-from-themes].
 
-For example, merge the `markup.highlight` and `markup.goldmark` configuration from the FixIt theme:
+For example, merge the `markup` configuration from the FixIt theme:
 
 ```toml
 [markup]
-  [markup.highlight]
-    _merge = "shallow"
-
-  [markup.goldmark]
-    _merge = "shallow"
+  _merge = "shallow"
 ```
 
 The configuration value for `_merge` can be one of:
@@ -71,6 +67,18 @@ shallow
 
 deep
 : Add values for new keys, merge existing.
+
+> [!important]
+> If you want to simplify your configuration files, make sure the following configuration must be merged from the theme:
+>
+> ```toml
+> [markup]
+>   _merge = "shallow"
+> [outputs]
+>   _merge = "shallow"
+> [taxonomies]
+>   _merge = "shallow"
+> ```
 
 ## Menu Configuration {#menu-configuration}
 

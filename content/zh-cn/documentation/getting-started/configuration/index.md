@@ -50,15 +50,11 @@ echo "theme = 'FixIt'" >> hugo.toml
 
 如果你不需要像上面的默认设置那样那么详细，你也可以 [从主题中合并配置][merge-config-from-themes]。
 
-例如，从 FixIt 主题中合并 `markup.highlight` 和 `markup.goldmark` 配置：
+例如，从 FixIt 主题中合并 `markup` 配置：
 
 ```toml
 [markup]
-  [markup.highlight]
-    _merge = "shallow"
-
-  [markup.goldmark]
-    _merge = "shallow"
+  _merge = "shallow"
 ```
 
 `_merge` 的配置值可以是以下之一：
@@ -71,6 +67,18 @@ shallow
 
 deep
 : 为新键添加值，合并现有值。
+
+> [!important]
+> 如果你希望简化配置文件，请确保以下配置必须从主题合并：
+>
+> ```toml
+> [markup]
+>   _merge = "shallow"
+> [outputs]
+>   _merge = "shallow"
+> [taxonomies]
+>   _merge = "shallow"
+> ```
 
 ## 菜单配置 {#menu-configuration}
 
