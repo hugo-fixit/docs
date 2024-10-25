@@ -6,7 +6,7 @@ type: posts
 description: admonition shortcode 允许你在内容中添加各种类型的标注。
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.webp
 tags:
   - Shortcodes
   - Content

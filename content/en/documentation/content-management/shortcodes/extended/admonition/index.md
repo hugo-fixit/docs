@@ -6,7 +6,7 @@ type: posts
 description: The admonition shortcode allows you to add various types of callouts to your content.
 resources:
   - name: featured-image
-    src: featured-image.jpg
+    src: featured-image.webp
 tags:
   - Shortcodes
   - Content
