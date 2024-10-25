@@ -549,6 +549,50 @@ pie
     "Rats" : 15
 ```
 
+### Quadrant Chart
+
+A [quadrant chart][mermaid-quadrant] is a visual representation of data that is divided into four quadrants. It is used to plot data points on a two-dimensional grid, with one variable represented on the x-axis and another variable represented on the y-axis. The quadrants are determined by dividing the chart into four equal parts based on a set of criteria that is specific to the data being analyzed. Quadrant charts are often used to identify patterns and trends in data, and to prioritize actions based on the position of data points within the chart. They are commonly used in business, marketing, and risk management, among other fields.
+
+Example **quadrant chart** `mermaid` input:
+
+````markdown
+```mermaid
+quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+```
+
 ### Requirement Diagram
 
 A [Requirement diagram][mermaid-requirementDiagram] provides a visualization for requirements and their connections, to each other and other documented elements. The modeling specs follow those defined by SysML v1.6.
@@ -593,9 +637,11 @@ type: simulation
 test_entity - satisfies -> test_req
 ```
 
-### Git graph
+### Gitgraph Diagram
 
 A [Git Graph][mermaid-gitgraph] is a pictorial representation of git commits and git actions(commands) on various branches.
+
+Example **gitgraph diagram** `mermaid` input:
 
 ````markdown
 ```mermaid
@@ -643,6 +689,8 @@ gitGraph
     merge release
 ```
 ````
+
+The rendered output looks like this:
 
 ```mermaid
 gitGraph
@@ -691,7 +739,8 @@ gitGraph
 
 ### C4 Diagrams :warning:
 
-> C4 Diagram: This is an experimental diagram for now. The syntax and properties can change in future releases. Proper documentation will be provided when the syntax is stable.
+> [!WARNING]
+> [C4 Diagram][mermaid-c4]: This is an experimental diagram for now. The syntax and properties can change in future releases. Proper documentation will be provided when the syntax is stable.
 
 Mermaid's c4 diagram syntax is compatible with plantUML. See example below:
 
@@ -742,6 +791,8 @@ Mermaid's c4 diagram syntax is compatible with plantUML. See example below:
 ```
 ````
 
+The rendered output looks like this:
+
 ```mermaid
     C4Context
       title System Context diagram for Internet Banking System
@@ -787,13 +838,429 @@ Mermaid's c4 diagram syntax is compatible with plantUML. See example below:
       UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
 ```
 
-### Mindmap :warning:
+### Mindmap
 
-- [ ] Bump Mermaid from 9.x to 10.x
+> [!WARNING]
+> [Mindmap][mermaid-mindmap]: This is an experimental diagram for now. The syntax and properties can change in future releases. The syntax is stable except for the icon integration which is the experimental part.
 
-### Timeline Diagram :warning:
+Example **mindmap** `mermaid` input:
 
-- [ ] Bump Mermaid from 9.x to 10.x
+````markdown
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+
+### Timeline
+
+> [!WARNING]
+> [Timeline][mermaid-timeline]: This is an experimental diagram for now. The syntax and properties can change in future releases. The syntax is stable except for the icon integration which is the experimental part.
+
+Example **timeline** `mermaid` input:
+
+````markdown
+```mermaid
+timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter
+```
+
+<!--
+### ZenUML
+
+A Sequence diagram is an interaction diagram that shows how processes operate with one another and in what order.
+
+Mermaid can render sequence diagrams with [ZenUML][zemuml]. Note that ZenUML uses a different syntax than the original Sequence Diagram in mermaid.
+
+Example **ZenUML** `mermaid` input:
+
+````markdown
+```mermaid
+zenuml
+    title Demo
+    Alice->John: Hello John, how are you?
+    John->Alice: Great!
+    Alice->John: See you later!
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+zenuml
+    title Demo
+    Alice->John: Hello John, how are you?
+    John->Alice: Great!
+    Alice->John: See you later!
+```
+-->
+
+### Sankey diagram :fire: {#sankey-diagram}
+
+A [sankey diagram][mermaid-sankey] is a visualization used to depict a flow from one set of values to another.
+
+> [!WARNING]
+> This is an experimental diagram. Its syntax are very close to plain CSV, but it is to be extended in the nearest future.
+
+Example **sankey diagram** `mermaid` input:
+
+````markdown
+```mermaid
+---
+config:
+  sankey:
+    showValues: false
+---
+sankey-beta
+
+Agricultural 'waste',Bio-conversion,124.729
+Bio-conversion,Liquid,0.597
+Bio-conversion,Losses,26.862
+Bio-conversion,Solid,280.322
+Bio-conversion,Gas,81.144
+Biofuel imports,Liquid,35
+Biomass imports,Solid,35
+Coal imports,Coal,11.606
+Coal reserves,Coal,63.965
+Coal,Solid,75.571
+District heating,Industry,10.639
+District heating,Heating and cooling - commercial,22.505
+District heating,Heating and cooling - homes,46.184
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14
+Electricity grid,Industry,342.165
+Electricity grid,Road transport,37.797
+Electricity grid,Agriculture,4.412
+Electricity grid,Heating and cooling - commercial,40.858
+Electricity grid,Losses,56.691
+Electricity grid,Rail transport,7.863
+Electricity grid,Lighting & appliances - commercial,90.008
+Electricity grid,Lighting & appliances - homes,93.494
+Gas imports,Ngas,40.719
+Gas reserves,Ngas,82.233
+Gas,Heating and cooling - commercial,0.129
+Gas,Losses,1.401
+Gas,Thermal generation,151.891
+Gas,Agriculture,2.096
+Gas,Industry,48.58
+Geothermal,Electricity grid,7.013
+H2 conversion,H2,20.897
+H2 conversion,Losses,6.242
+H2,Road transport,20.897
+Hydro,Electricity grid,6.995
+Liquid,Industry,121.066
+Liquid,International shipping,128.69
+Liquid,Road transport,135.835
+Liquid,Domestic aviation,14.458
+Liquid,International aviation,206.267
+Liquid,Agriculture,3.64
+Liquid,National navigation,33.218
+Liquid,Rail transport,4.413
+Marine algae,Bio-conversion,4.375
+Ngas,Gas,122.952
+Nuclear,Thermal generation,839.978
+Oil imports,Oil,504.287
+Oil reserves,Oil,107.703
+Oil,Liquid,611.99
+Other waste,Solid,56.587
+Other waste,Bio-conversion,77.81
+Pumped heat,Heating and cooling - homes,193.026
+Pumped heat,Heating and cooling - commercial,70.672
+Solar PV,Electricity grid,59.901
+Solar Thermal,Heating and cooling - homes,19.263
+Solar,Solar Thermal,19.263
+Solar,Solar PV,59.901
+Solid,Agriculture,0.882
+Solid,Thermal generation,400.12
+Solid,Industry,46.477
+Thermal generation,Electricity grid,525.531
+Thermal generation,Losses,787.129
+Thermal generation,District heating,79.329
+Tidal,Electricity grid,9.452
+UK land based bioenergy,Bio-conversion,182.01
+Wave,Electricity grid,19.013
+Wind,Electricity grid,289.366
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+---
+config:
+  sankey:
+    showValues: false
+---
+sankey-beta
+
+Agricultural 'waste',Bio-conversion,124.729
+Bio-conversion,Liquid,0.597
+Bio-conversion,Losses,26.862
+Bio-conversion,Solid,280.322
+Bio-conversion,Gas,81.144
+Biofuel imports,Liquid,35
+Biomass imports,Solid,35
+Coal imports,Coal,11.606
+Coal reserves,Coal,63.965
+Coal,Solid,75.571
+District heating,Industry,10.639
+District heating,Heating and cooling - commercial,22.505
+District heating,Heating and cooling - homes,46.184
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14
+Electricity grid,Industry,342.165
+Electricity grid,Road transport,37.797
+Electricity grid,Agriculture,4.412
+Electricity grid,Heating and cooling - commercial,40.858
+Electricity grid,Losses,56.691
+Electricity grid,Rail transport,7.863
+Electricity grid,Lighting & appliances - commercial,90.008
+Electricity grid,Lighting & appliances - homes,93.494
+Gas imports,Ngas,40.719
+Gas reserves,Ngas,82.233
+Gas,Heating and cooling - commercial,0.129
+Gas,Losses,1.401
+Gas,Thermal generation,151.891
+Gas,Agriculture,2.096
+Gas,Industry,48.58
+Geothermal,Electricity grid,7.013
+H2 conversion,H2,20.897
+H2 conversion,Losses,6.242
+H2,Road transport,20.897
+Hydro,Electricity grid,6.995
+Liquid,Industry,121.066
+Liquid,International shipping,128.69
+Liquid,Road transport,135.835
+Liquid,Domestic aviation,14.458
+Liquid,International aviation,206.267
+Liquid,Agriculture,3.64
+Liquid,National navigation,33.218
+Liquid,Rail transport,4.413
+Marine algae,Bio-conversion,4.375
+Ngas,Gas,122.952
+Nuclear,Thermal generation,839.978
+Oil imports,Oil,504.287
+Oil reserves,Oil,107.703
+Oil,Liquid,611.99
+Other waste,Solid,56.587
+Other waste,Bio-conversion,77.81
+Pumped heat,Heating and cooling - homes,193.026
+Pumped heat,Heating and cooling - commercial,70.672
+Solar PV,Electricity grid,59.901
+Solar Thermal,Heating and cooling - homes,19.263
+Solar,Solar Thermal,19.263
+Solar,Solar PV,59.901
+Solid,Agriculture,0.882
+Solid,Thermal generation,400.12
+Solid,Industry,46.477
+Thermal generation,Electricity grid,525.531
+Thermal generation,Losses,787.129
+Thermal generation,District heating,79.329
+Tidal,Electricity grid,9.452
+UK land based bioenergy,Bio-conversion,182.01
+Wave,Electricity grid,19.013
+Wind,Electricity grid,289.366
+```
+
+### XY Chart :fire: {#xy-chart}
+
+In the context of mermaid-js, the [XY chart][mermaid-xy-chart] is a comprehensive charting module that encompasses various types of charts that utilize both x-axis and y-axis for data representation. Presently, it includes two fundamental chart types: the bar chart and the line chart. These charts are designed to visually display and analyze data that involve two numerical variables.
+
+> [!NOTE]
+> It's important to note that while the current implementation of mermaid-js includes these two chart types, the framework is designed to be dynamic and adaptable. Therefore, it has the capacity for expansion and the inclusion of additional chart types in the future. This means that users can expect an evolving suite of charting options within the XY chart module, catering to various data visualization needs as new chart types are introduced over time.
+
+Example **XY chart** `mermaid` input:
+
+````markdown
+```mermaid
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
+
+### Block Diagram :fire: {#block-diagram}
+
+See the [block diagram][mermaid-block-diagram] documentation for more information.
+
+Example **block diagram** `mermaid` input:
+
+````markdown
+```mermaid
+block-beta
+columns 1
+  db(("DB"))
+  blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
+  block:ID
+    A
+    B["A wide one in the middle"]
+    C
+  end
+  space
+  D
+  ID --> D
+  C --> D
+  style B fill:#969,stroke:#333,stroke-width:4px
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+block-beta
+columns 1
+  db(("DB"))
+  blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
+  block:ID
+    A
+    B["A wide one in the middle"]
+    C
+  end
+  space
+  D
+  ID --> D
+  C --> D
+  style B fill:#969,stroke:#333,stroke-width:4px
+```
+
+### Packet :fire: {#packet}
+
+A [packet diagram][mermaid-packet] is a visual representation used to illustrate the structure and contents of a network packet. Network packets are the fundamental units of data transferred over a network.
+
+Example **packet diagram** `mermaid` input:
+
+````markdown
+```mermaid
+packet-beta
+title UDP Packet
+0-15: "Source Port"
+16-31: "Destination Port"
+32-47: "Length"
+48-63: "Checksum"
+64-95: "Data (variable length)"
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+packet-beta
+title UDP Packet
+0-15: "Source Port"
+16-31: "Destination Port"
+32-47: "Length"
+48-63: "Checksum"
+64-95: "Data (variable length)"
+```
+
+### Architecture :fire: {#architecture}
+
+In the context of mermaid-js, the [architecture diagram[mermaid-architecture]] is used to show the relationship between services and resources commonly found within the Cloud or CI/CD deployments. In an architecture diagram, services (nodes) are connected by edges. Related services can be placed within groups to better illustrate how they are organized.
+
+Example **architecture diagram** `mermaid` input:
+
+````markdown
+```mermaid
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
+````
+
+The rendered output looks like this:
+
+```mermaid
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
 
 ### Mermaid Themes
 
@@ -1053,8 +1520,18 @@ series:
 [mermaid-user-journey]: https://mermaid.js.org/syntax/userJourney.html
 [mermaid-gantt]: https://mermaid.js.org/syntax/gantt.html
 [mermaid-pie]: https://mermaid.js.org/syntax/pie.html
+[mermaid-quadrant]: https://mermaid.js.org/syntax/quadrantChart.html
 [mermaid-requirementDiagram]: https://mermaid.js.org/syntax/requirementDiagram.html
 [mermaid-gitgraph]: https://mermaid.js.org/syntax/gitgraph.html
+[mermaid-c4]: https://mermaid.js.org/syntax/c4.html
+[mermaid-mindmap]: https://mermaid.js.org/syntax/mindmap.html
+[mermaid-timeline]: https://mermaid.js.org/syntax/timeline.html
+<!-- [zemuml]: https://zenuml.com/ -->
+[mermaid-sankey]: https://mermaid.js.org/syntax/sankey.html
+[mermaid-xy-chart]: https://mermaid.js.org/syntax/xyChart.html
+[mermaid-block-diagram]: https://mermaid.js.org/syntax/block.html
+[mermaid-packet]: https://mermaid.js.org/syntax/packet.html
+[mermaid-architecture]: https://mermaid.js.org/syntax/architecture.html
 [theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
 [theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
 [theme-dark]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-dark.js
@@ -1062,4 +1539,4 @@ series:
 [theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
 [mermaid-theming]: https://mermaid.js.org/config/theming.html
 [echarts]: https://echarts.apache.org/
-[sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
+[sc-echarts]: {{< relref "/documentation/content-management/shortcodes/extended/echarts" >}}
