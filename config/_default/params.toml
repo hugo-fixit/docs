@@ -1181,6 +1181,8 @@ disableThemeInject = false
     "hugo-fixit/hugo-atom-feed",
     "hugo-fixit/component-skeleton",
   ]
+  [projectsAdapters.params]
+    hiddenFromHomePage = true
 
 # FixIt Docs config
 [docs]
