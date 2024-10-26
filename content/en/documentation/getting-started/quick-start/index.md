@@ -110,6 +110,24 @@ hugo server
 
 Press `Ctrl + C` to stop Hugo's development server.
 
+## Necessary Configuration
+
+To fully utilize all the features of the FixIt theme, add the following content to the site configuration file.
+
+```toml
+[markup]
+  _merge = "shallow"
+[outputs]
+  _merge = "shallow"
+[taxonomies]
+  _merge = "shallow"
+```
+
+The above configuration inherits the `markup`, `outputs`, and `taxonomies` configurations of the FixIt theme.
+
+> [!TIP]
+> After reading this quick start guide, you can refer to the [configuration section][configuration] to learn about the complete theme configuration.
+
 ## Add Content
 
 Add a new page to your site.
@@ -195,6 +213,7 @@ We strongly recommend that you read the full documentation for the FixIt theme t
 if you encounter any problems or have any questions, please go to our [community][community] for help.
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [hugo-installing]: https://gohugo.io/getting-started/installing/
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
@@ -213,9 +232,9 @@ if you encounter any problems or have any questions, please go to our [community
 [deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
-<!-- markdownlint-disable-file reference-links-images -->
 [installation]: {{< relref path="/documentation/installation" >}}
 [getting-started]: {{< relref path="/documentation/getting-started" >}}
+[configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
 [content-management]: {{< relref path="/documentation/content-management" >}}
 [advanced]: {{< relref path="/documentation/advanced" >}}
 [community]: {{< relref path="/community" >}}

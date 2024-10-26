@@ -117,6 +117,24 @@ hugo server
 
 按 `Ctrl + C` 停止 Hugo 的开发服务器。
 
+## 必要配置
+
+为了能完整地使用 FixIt 主题的所有功能，务必在站点配置文件中添加以下内容。
+
+```toml
+[markup]
+  _merge = "shallow"
+[outputs]
+  _merge = "shallow"
+[taxonomies]
+  _merge = "shallow"
+```
+
+以上配置表示继承 FixIt 主题的 `markup`，`outputs` 和 `taxonomies` 配置。
+
+> [!TIP]
+> 在阅读完本文快速上手后，你可以参考 [配置篇][configuration] 来了解完整的主题配置。
+
 ## 添加内容
 
 给你的网站添加新页面。
@@ -201,6 +219,7 @@ hugo
 如果你遇到问题或有任何疑问，请前往我们的 [社区][community] 寻求帮助。
 
 <!-- link reference definition -->
+<!-- markdownlint-disable-file reference-links-images -->
 [hugo-installing]: https://gohugo.io/getting-started/installing/
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
@@ -219,9 +238,9 @@ hugo
 [deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
-<!-- markdownlint-disable-file reference-links-images -->
 [installation]: {{< relref path="/documentation/installation" >}}
 [getting-started]: {{< relref path="/documentation/getting-started" >}}
+[configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
 [content-management]: {{< relref path="/documentation/content-management" >}}
 [advanced]: {{< relref path="/documentation/advanced" >}}
 [community]: {{< relref path="/community" >}}
