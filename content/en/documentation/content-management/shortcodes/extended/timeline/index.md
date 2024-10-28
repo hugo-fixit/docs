@@ -4,6 +4,7 @@ linkTitle: Timeline Shortcode
 date: 2024-07-21T10:44:31+08:00
 type: posts
 description: This document will show you how to create a Timeline in FixIt using Shortcode.
+hiddenFromHomePage: true
 categories:
   - Documentation
 tags:
