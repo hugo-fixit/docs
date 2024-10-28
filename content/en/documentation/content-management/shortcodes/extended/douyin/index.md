@@ -15,6 +15,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `douyin` shortcode embeds a responsive video player for douyin videos.

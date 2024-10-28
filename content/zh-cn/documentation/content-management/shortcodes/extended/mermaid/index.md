@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 {{< version 0.2.15 changed >}}

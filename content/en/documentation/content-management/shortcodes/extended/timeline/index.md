@@ -11,6 +11,8 @@ tags:
   - Diagram
   - Shortcodes
   - Content
+collections:
+  - Extended Shortcodes
 featuredImage: /documentation/content-management/timeline-support/featured-image.webp
 ---
 

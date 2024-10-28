@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `typeit` shortcode provides typing animation based on [TypeIt](https://typeitjs.com/) library.

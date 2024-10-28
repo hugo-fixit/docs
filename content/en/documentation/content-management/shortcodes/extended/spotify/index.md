@@ -15,6 +15,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `spotify` shortcode embeds a responsive music player for Spotify music.

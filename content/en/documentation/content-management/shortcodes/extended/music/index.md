@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs].

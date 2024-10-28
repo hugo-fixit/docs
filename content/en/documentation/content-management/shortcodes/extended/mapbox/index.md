@@ -18,6 +18,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.

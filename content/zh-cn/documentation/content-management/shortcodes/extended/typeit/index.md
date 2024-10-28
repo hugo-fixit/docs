@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 `typeit` shortcode 基于 [TypeIt](https://typeitjs.com/) 提供了打字动画。

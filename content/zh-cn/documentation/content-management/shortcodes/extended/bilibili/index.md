@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 `bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。

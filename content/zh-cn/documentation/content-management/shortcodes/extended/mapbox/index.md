@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 mapbox:
   lightStyle: mapbox://styles/mapbox/light-zh-v1?optimize=true
   darkStyle: mapbox://styles/mapbox/dark-zh-v1?optimize=true

@@ -15,6 +15,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 `douyin` shortcode 提供了一个内嵌的用来播放抖音视频的响应式播放器。

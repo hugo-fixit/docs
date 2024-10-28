@@ -1,7 +1,7 @@
 ---
 title: Extended Shortcode - admonition
 linkTitle: Admonition Shortcode
-date: 2024-10-08T09:52:26+08:00
+date: 2023-02-24T22:11:45+08:00
 type: posts
 description: The admonition shortcode allows you to add various types of callouts to your content.
 resources:
@@ -12,6 +12,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `admonition` shortcode allows you to add various types of callouts to your content.

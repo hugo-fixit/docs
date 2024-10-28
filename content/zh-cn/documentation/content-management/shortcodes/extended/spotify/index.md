@@ -15,6 +15,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 `spotify` shortcode 提供了一个内嵌的响应式音乐播放器。

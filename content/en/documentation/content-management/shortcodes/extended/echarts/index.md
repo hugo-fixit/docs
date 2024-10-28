@@ -17,6 +17,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.

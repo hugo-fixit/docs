@@ -19,6 +19,8 @@ tags:
   - Advanced
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 lightgallery: true
 math: true
 ---

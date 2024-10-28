@@ -18,6 +18,8 @@ tags:
   - Content
 categories:
   - Documentation
+collections:
+  - Extended Shortcodes
 ---
 
 `echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
