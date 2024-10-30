@@ -1,0 +1,7 @@
+{{- $edit := printf "https://github.com/hugo-fixit/docs/edit/main/%v/%v" .Site.Params.gitInfo.Dir .Page.File.Path -}}
+{{- $tip := "> [!help]+ Missing translation\n> This page is not yet translated. You can [help translate](%v) it." -}}
+{{- if eq .Page.Lang "zh-cn" -}}
+  {{- $tip = "> [!help]+ 缺少翻译\n> 本文尚未翻译完成，欢迎 [参与翻译](%v)。" -}}
+{{- end -}}
+{{- $tip = printf $tip $edit -}}
+{{- $tip | .Page.RenderString -}}

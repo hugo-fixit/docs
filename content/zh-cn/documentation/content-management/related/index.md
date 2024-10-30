@@ -16,10 +16,7 @@ resources:
     src: featured-image.webp
 ---
 
-> [!help]+ 中文文档翻译
-> 本文尚未翻译完成，欢迎 [参与翻译](https://github.com/hugo-fixit/docs/pulls)。
-
----
+{{< missing-translation >}}
 
 List related content in "Related content" sections.
 
