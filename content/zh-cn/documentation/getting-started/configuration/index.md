@@ -86,9 +86,13 @@ Hugo 有一个简单而强大的 [菜单系统][menu-system]。
 
 根据 Hugo 提供的接口，FixIt 主题只实现了部分功能，这足以满足大多数人的需求，也让用户在使用上更加简单。
 
+> [!NOTE]
+> 考虑到实用性和排版问题，FixIt 主题只支持两层嵌套的菜单，通过在菜单配置中的 `parent` 字段即可。\
+> 一个菜单项的父项应该是另一个菜单项的标识符（`identifier`），在菜单中标识符应该是唯一的。
+
 下面是一个完整的菜单项配置：
 
-```toml
+```toml {data-open=true}
 [menu]
   [[menu.main]]
     identifier = ""
@@ -117,17 +121,16 @@ Hugo 有一个简单而强大的 [菜单系统][menu-system]。
       divided = false
 ```
 
-{{< admonition note "子菜单" >}}
-考虑到实用性和排版问题，FixIt 主题只支持两层嵌套的菜单，通过在菜单配置中的 `parent` 字段即可。
-
-一个菜单项的父项应该是另一个菜单项的标识符（`identifier`），在菜单中标识符应该是唯一的。
-{{< /admonition >}}
+> [!TIP]
+> {{< version 0.3.14 >}}\
+> 菜单项的链接（`url`）支持内部链接、外部链接或者为空。\
+> 为空时点击菜单项不会跳转，这对于一些有子菜单的菜单项非常有用。
 
 另外，也可以通过配置页面（即 `.md` 文件）的 `front matter` 添加内容到菜单中。
 
 这是一个 `yaml` 示例：
 
-```yaml
+```yaml {data-open=true}
 ---
 title: 配置 Fixit
 author: Lruihao

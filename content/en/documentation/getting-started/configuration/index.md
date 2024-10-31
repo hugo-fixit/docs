@@ -86,9 +86,13 @@ Hugo has a simple yet powerful [menu system][menu-system].
 
 According to the interface provided by Hugo, FixIt theme only realizes some functions, it is enough to meet the needs of most people and make users easier to use.
 
+> [!NOTE]
+> In consideration of practicability and typesetting, the FixIt theme only supports two-tier nested menus, which can be configured through the `parent` field in the menu configuration.
+> The parent item of a menu item should be the `identifier` of another menu item, and the identifier should be unique in the menu.
+
 The following is a complete menu item configuration:
 
-```toml
+```toml {data-open=true}
 [menu]
   [[menu.main]]
     identifier = ""
@@ -117,17 +121,16 @@ The following is a complete menu item configuration:
       divided = false
 ```
 
-{{< admonition note "Sub Menu" >}}
-In consideration of practicability and typesetting, the FixIt theme only supports two-tier nested menus, which can be configured through the `parent` field in the menu configuration.
-
-The parent item of a menu item should be the `identifier` of another menu item, and the identifier should be unique in the menu.
-{{< /admonition >}}
+> [!TIP]
+> {{< version 0.3.14 >}}\
+> The link (`url`) of the menu item supports internal links, external links, or empty.
+> When it is empty, clicking the menu item will not jump, which is very useful for some menu items with submenus.
 
 In addition, you can also add content to the menu through the `front matter` of the configuration page (i.e. the `.md`-file).
 
 Here is a `yaml` example:
 
-```yaml
+```yaml {data-open=true}
 ---
 title: Configure FixIt
 author: Lruihao
