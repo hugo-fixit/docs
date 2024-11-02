@@ -5,7 +5,7 @@ type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: 这篇文章展示了扩展的 Markdown 语法和格式。
+description: 这篇文章展示了 FixIt 风格的 Markdown 扩展语法。
 resources:
   - name: featured-image
     src: featured-image.webp
@@ -21,7 +21,7 @@ collections:
 math: true
 ---
 
-**FixIt** 主题提供了一些扩展的语法便于你撰写文章。
+这篇文章展示了 [**FixIt 风格的 Markdown**]^(FixIt Flavored Markdown) 扩展语法。
 
 <!--more-->
 
@@ -459,12 +459,12 @@ $$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 **FixIt** 主题支持一种 **字符注音或者注释** Markdown 扩展语法：
 
 ```markdown
-[Hugo]{?^}(一个开源的静态网站生成工具）
+[FixIt]{?^}(一个简洁、优雅且高效的 Hugo 主题)
 ```
 
 呈现的输出效果如下：
 
-[Hugo]^(一个开源的静态网站生成工具)
+[FixIt]^(一个简洁、优雅且高效的 Hugo 主题)
 
 ## 分数 {#fraction}
 

@@ -5,7 +5,7 @@ type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: This article shows the extended Markdown syntax and format in FixIt theme.
+description: This article shows the FixIt Flavored Markdown extended syntax.
 resources:
   - name: featured-image
     src: featured-image.webp
@@ -21,7 +21,7 @@ collections:
 math: true
 ---
 
-**FixIt** theme has some extended syntax elements for you to write articles.
+This article shows the **FixIt Flavored Markdown** extended syntax.
 
 <!--more-->
 
@@ -457,12 +457,12 @@ $$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
 An extended Markdown syntax for **ruby annotation** is supported in **FixIt** theme:
 
 ```markdown
-[Hugo]{?^}(An open-source static site generator)
+[FixIt]{?^}(A Clean, Elegant but Advanced Hugo Theme)
 ```
 
 The rendered output looks like this:
 
-[Hugo]^(An open-source static site generator)
+[FixIt]^(A Clean, Elegant but Advanced Hugo Theme)
 
 ## Fraction {#fraction}
 
