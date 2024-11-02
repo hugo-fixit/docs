@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "atomic-algolia": "^0.3.19",
-    "autocorrect-node": "^2.11.1",
+    "autocorrect-node": "^2.13.0",
     "cross-env": "^7.0.3",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
