@@ -138,7 +138,50 @@ You can nest alerts in multiple levels.
 
 #### Supported types
 
-The extended alert syntax supports **13** types of admonition banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+The extended alert syntax supports **13** types of [admonition][admonition-types] banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+
+## Task lists {#task-lists}
+
+{{< version 0.3.14 changed >}}
+
+To create a task list, start each list item with a hyphen and space followed by `[ ]`.
+
+```markdown
+- [x] This is a completed task.
+- [ ] This is an incomplete task.
+```
+
+The rendered output looks like this:
+
+- [x] This is a completed task.
+- [ ] This is an incomplete task.
+
+You can use any character inside the brackets to mark it as completed or otherwise.
+
+```markdown {.no-header}
+- [ ] Unchecked
+- [x] Checked
+- [/] In Progress
+- [-] Cancelled
+- [<] Scheduled
+- [>] Rescheduled
+- [!] Important
+- [?] Question
+```
+
+The rendered output looks like this:
+
+- [ ] Unchecked
+- [x] Checked
+- [/] In Progress
+- [-] Cancelled
+- [<] Scheduled
+- [>] Rescheduled
+- [!] Important
+- [?] Question
+
+> [!TIP]
+> If you want more types of task lists, please see the [Advanced - Custom Task Lists][custom-task-lists] section.
 
 ## Inserted Text {#inserted-text}
 
@@ -662,8 +705,10 @@ This part is shown in the [Timeline support][timeline-support] page.
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
-[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
+[admonition-types]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#supported-types" >}}
+[custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
+[custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}

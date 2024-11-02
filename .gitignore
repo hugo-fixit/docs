@@ -26,3 +26,6 @@ jsconfig.json
 !.vscode/
 !frontmatter.json
 !.frontmatter/
+
+# Obsidian
+.obsidian/

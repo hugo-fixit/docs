@@ -418,23 +418,6 @@ odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac 
 1. Eget porttitor lorem
 {{< /admonition >}}
 
-### 任务列表
-
-任务列表使你可以创建带有复选框的列表。
-要创建任务列表，请在任务列表项之前添加破折号 (`-`) 和带有空格的方括号 (`[ ]`)，要选择一个复选框，请在方括号之间添加 x (`[x]`)。
-
-```markdown
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-```
-
-呈现的输出效果如下：
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
 ## 代码
 
 ### 行内代码

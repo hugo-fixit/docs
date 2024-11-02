@@ -55,7 +55,7 @@ A **clean**, **elegant** but **advanced** blog theme for [Hugo](https://gohugo.i
 
 ## Supported types
 
-The `admonition` shortcode supports **13** types of banners, Unless you [Customize admonitions](#custom-admonitions), any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+The `admonition` shortcode supports **13** types of banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
 
 The complete examples are as follows:
 
@@ -198,63 +198,7 @@ The quick brown fox jumps over the lazy dog.
 Alias: `cite`
 {{< /admonition >}}
 
-## Custom Admonitions
-
-{{< version 0.3.13 >}}
-
-You can define custom admonitions, or even overwrite the default admonitions.
-
-To define a custom admonition, change `params.admonition` in your site configuration file. For example:
-
-```toml
-[params]
-  [params.admonition]
-    ban = "fa-solid fa-ban"
-```
-
-Then create the following SCSS block in your project directory `assets/css/_override.scss`:
-
-```scss {title="_override.scss"}
-// Custom admonition style
-$custom-admonition-map: (
-  ban: (
-    color: #ff3d00,
-    bg-color: rgba(255, 61, 0, 0.1),
-  ),
-);
-
-$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
-```
-
-If you need to change the default title of a custom admonition, you can add the following content to the corresponding language file:
-
-```toml
-[admonition]
-ban = "Forbidden"
-```
-
-After that, you can use the custom admonition in your content:
-
-{{< admonition ban "" false >}}
-Shortcode syntax:
-
-```markdown {.no-header, linenos=false}
-{{?{}< admonition ban >}}
-This is a custom admonition type with a ban icon.
-{{?{}< /admonition >}}
-```
-
-Alerts Markdown extension syntax:
-
-```markdown {.no-header, linenos=false}
-> [!ban]
-> This is a custom admonition type with a ban icon.
-```
-
-> [!TIP]
-> This is just an example of the theme documentation and is not included in the theme.
-{{< /admonition >}}
-
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
 [alerts-syntax]: {{< relref "/documentation/content-management/markdown-syntax/extended#extended-syntax" >}}
+[custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}

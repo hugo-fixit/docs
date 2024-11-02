@@ -129,11 +129,118 @@ Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建
 
 为了避免升级冲突问题，基于这一特性，FixIt 主题开放了统一的自定义模板入口文件及配置，详见 [开放的自定义块][block]。
 
+## 自定义 Admonition {#custom-admonitions}
+
+{{< version 0.3.13 >}}
+
+你可以自定义 [Admonition][sc-admonition]，甚至可以覆盖默认 Admonition。
+
+要自定义 Admonition，请在站点配置文件中更改 `params.admonition`。例如：
+
+```toml
+[params]
+  [params.admonition]
+    ban = "fa-solid fa-ban"
+```
+
+然后在项目目录 `assets/css/_override.scss` 中创建以下 SCSS 块：
+
+```scss {title="_override.scss"}
+// Custom admonitions style
+$custom-admonition-map: (
+  ban: (
+    color: #ff3d00,
+    bg-color: rgba(255, 61, 0, 0.1),
+  ),
+);
+
+$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
+```
+
+如果你需要修改自定义 Admonition 的默认标题，你可以在对应的语言文件中添加以下内容：
+
+```toml
+[admonition]
+ban = "禁止"
+```
+
+之后，你可以在内容中使用自定义 Admonition：
+
+{{< admonition ban "" false >}}
+Shortcode 语法：
+
+```markdown {.no-header, linenos=false}
+{{?{}< admonition ban >}}
+这是一个带有禁止图标的自定义 Admonition 类型。
+{{?{}< /admonition >}}
+```
+
+Alert Markdown 扩展语法：
+
+```markdown {.no-header, linenos=false}
+> [!ban]
+> 这是一个带有禁止图标的自定义 Admonition 类型。
+```
+
+> [!TIP]
+> 这只是主题文档的一个示例，并不包含在主题中。
+{{< /admonition >}}
+
+## 自定义任务列表 {#custom-task-lists}
+
+{{< version 0.3.14 >}}
+
+你可以自定义 [任务列表][task-list]，甚至可以覆盖默认任务列表。
+
+要自定义任务列表，请在站点配置文件中更改 `params.taskList`。例如：
+
+```toml
+[params]
+  [params.taskList]
+    tip = "fa-regular fa-lightbulb"
+```
+
+如果你需要修改自定义任务列表的默认标题，你可以在对应的语言文件中添加以下内容：
+
+```toml
+[task-list]
+tip = "提示"
+```
+
+之后，你可以在内容中使用自定义任务列表：
+
+```markdown
+- [tip] 这是一个带有提示图标的自定义任务列表类型。
+```
+
+呈现的输出效果如下：
+
+- [tip] 这是一个带有提示图标的自定义任务列表类型。
+
+如果你想修改任务列表默认样式，你可以在项目目录 `assets/css/_custom.scss` 中添加以下 SCSS 块：
+
+```scss {title="_custom.scss"}
+li[data-task='tip'] {
+  --fi-task-color: #9974F7;
+  --fi-checkbox-color: #EA9E36;
+}
+```
+
+上面的例子将改变任务列表的颜色，如下所示：
+
+- [tip] 这是一个带有提示图标的自定义任务列表类型。
+{style="--fi-task-color: #9974F7;--fi-checkbox-color: #EA9E36;"}
+
+> [!TIP]
+> 这只是主题文档的一个示例，并不包含在主题中。
+
 ## PWA 支持
 
 这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
-[pwa-support]: {{< relref path="/guides/pwa-support" >}}
-[block]: {{< relref path="/references/blocks" >}}
+[block]: {{< relref "/references/blocks" >}}
+[sc-admonition]: {{< relref "/documentation/content-management/shortcodes/extended/admonition" >}}
+[task-list]: {{< relref "/documentation/content-management/markdown-syntax/extended#task-lists" >}}
+[pwa-support]: {{< relref "/guides/pwa-support" >}}

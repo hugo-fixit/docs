@@ -138,7 +138,52 @@ math: true
 
 #### 支持的类型 {#supported-types}
 
-Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 Admonition][custom-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
+Alert 扩展语法支持 **13** 种类型的 [警示横幅][admonition-types]，除非你 [自定义 Admonition][custom-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
+
+## 任务列表 {#task-lists}
+
+{{< version 0.3.14 changed >}}
+
+To create a task list, start each list item with a hyphen and space followed by `[ ]`.
+
+要创建任务列表，请在每个列表项前添加一个短横线和空格，然后跟上 `[ ]`。
+
+```markdown
+- [x] 这是一个已完成的任务。
+- [ ] 这是一个未完成的任务。
+```
+
+呈现的输出效果如下：
+
+- [x] 这是一个已完成的任务。
+- [ ] 这是一个未完成的任务。
+
+你可以在括号内使用任何字符来标记任务为已完成或其他状态。
+
+```markdown {.no-header}
+- [ ] 未完成
+- [x] 已完成
+- [/] 进行中
+- [-] 已取消
+- [<] 已计划
+- [>] 已重新计划
+- [!] 重要
+- [?] 问题
+```
+
+呈现的输出效果如下：
+
+- [ ] 未完成
+- [x] 已完成
+- [/] 进行中
+- [-] 已取消
+- [<] 已计划
+- [>] 已重新计划
+- [!] 重要
+- [?] 问题
+
+> [!TIP]
+> 如果你想要更多类型的任务列表，请查看 [进阶篇 - 自定义任务列表][custom-task-lists] 章节。
 
 ## 下划线 {#inserted-text}
 
@@ -662,8 +707,10 @@ console.log('hello FixIt!');
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
-[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
+[admonition-types]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#supported-types" >}}
+[custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
+[custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}

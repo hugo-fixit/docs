@@ -129,11 +129,118 @@ However, for most of the templates, FixIt theme generally doesn't recommend you 
 
 In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens a unified custom template entry file and configuration, see [Open Custom Blocks][block].
 
+## Custom Admonitions {#custom-admonitions}
+
+{{< version 0.3.13 >}}
+
+You can define custom [admonitions][sc-admonition], or even overwrite the default admonitions.
+
+To define a custom admonition, change `params.admonition` in your site configuration file. For example:
+
+```toml
+[params]
+  [params.admonition]
+    ban = "fa-solid fa-ban"
+```
+
+Then create the following SCSS block in your project directory `assets/css/_override.scss`:
+
+```scss {title="_override.scss"}
+// Custom admonition style
+$custom-admonition-map: (
+  ban: (
+    color: #ff3d00,
+    bg-color: rgba(255, 61, 0, 0.1),
+  ),
+);
+
+$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
+```
+
+If you need to change the default title of a custom admonition, you can add the following content to the corresponding language file:
+
+```toml
+[admonition]
+ban = "Forbidden"
+```
+
+After that, you can use the custom admonition in your content:
+
+{{< admonition ban "" false >}}
+Shortcode syntax:
+
+```markdown {.no-header, linenos=false}
+{{?{}< admonition ban >}}
+This is a custom admonition type with a ban icon.
+{{?{}< /admonition >}}
+```
+
+Alerts Markdown extension syntax:
+
+```markdown {.no-header, linenos=false}
+> [!ban]
+> This is a custom admonition type with a ban icon.
+```
+
+> [!TIP]
+> This is just an example of the theme documentation and is not included in the theme.
+{{< /admonition >}}
+
+## Custom Task lists {#custom-task-lists}
+
+{{< version 0.3.14 >}}
+
+You can define custom [task lists][task-list], or even overwrite the default task lists.
+
+To define a custom task list, change `params.taskList` in your site configuration file. For example:
+
+```toml
+[params]
+  [params.taskList]
+    tip = "fa-regular fa-lightbulb"
+```
+
+If you need to change the default title of a custom task list, you can add the following content to the corresponding language file:
+
+```toml
+[task-list]
+tip = "Tip"
+```
+
+After that, you can use the custom task list in your content:
+
+```markdown
+- [tip] This is a custom task list type with a tip icon.
+```
+
+The rendered output looks like this:
+
+- [tip] This is a custom task list type with a tip icon.
+
+If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/css/_custom.scss`:
+
+```scss {title="_custom.scss"}
+li[data-task='tip'] {
+  --fi-task-color: #9974F7;
+  --fi-checkbox-color: #EA9E36;
+}
+```
+
+Above example will change the color of the task list, like this:
+
+- [tip] This is a custom task list type with a tip icon.
+{style="--fi-task-color: #9974F7;--fi-checkbox-color: #EA9E36;"}
+
+> [!TIP]
+> This is just an example of the theme documentation and is not included in the theme.
+
 ## PWA Support
 
 This part is shown in the [pwa support page][pwa-support].
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
-[pwa-support]: {{< relref path="/guides/pwa-support" >}}
-[block]: {{< relref path="/references/blocks" >}}
+[block]: {{< relref "/references/blocks" >}}
+[sc-admonition]: {{< relref "/documentation/content-management/shortcodes/extended/admonition" >}}
+[task-list]: {{< relref "/documentation/content-management/markdown-syntax/extended#task-lists" >}}
+[pwa-support]: {{< relref "/guides/pwa-support" >}}

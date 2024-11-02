@@ -478,11 +478,18 @@ disableThemeInject = false
   themes = ["default", "dark"]
 
 # FixIt 0.3.13 | NEW Admonitions custom config
-# FixIt 0.3.13 | 新增 自定义 admonitions 配置
+# FixIt 0.3.13 | 新增 自定义 Admonition 配置
 # See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions
 # syntax: <type> = <icon>
 [admonition]
   ban = "fa-solid fa-ban"
+
+# FixIt 0.3.14 | NEW Task lists custom config
+# FixIt 0.3.14 | 新增 自定义任务列表配置
+# See https://fixit.lruihao.cn/documentation/content-management/advanced/#custom-task-lists
+# syntax: <sign> = <icon>
+[taskList]
+  tip = "fa-regular fa-lightbulb"
 
 # FixIt 0.2.12 | NEW PanguJS config
 # FixIt 0.2.12 | 新增 盘古之白配置

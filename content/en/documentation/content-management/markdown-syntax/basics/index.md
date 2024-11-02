@@ -418,22 +418,6 @@ The rendered output looks like this:
 1. Eget porttitor lorem
 {{< /admonition >}}
 
-### Task Lists
-
-Task lists allow you to create a list of items with checkboxes. To create a task list, add dashes (`-`) and brackets with a space (`[ ]`) before task list items. To select a checkbox, add an x in between the brackets (`[x]`).
-
-```markdown
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-```
-
-The rendered output looks like this:
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
 ## Code
 
 ### Inline Code
