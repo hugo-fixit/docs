@@ -207,6 +207,55 @@ The rendered output looks like this:
 
 ==FixIt== is an awesome Hugo theme!
 
+The extended marked text syntax supports **6** types of Marked Text.
+
+> [!WARNING]
+> {{< version 0.3.14 >}}\
+> This is experimental syntax highlighting for the marked texts.
+
+```markdown
+==Primary==[primary]
+==Secondary==[secondary]
+==Success==[success]
+==Info==[info]
+==Warning==[warning]
+==Danger==[danger]
+```
+
+The rendered output looks like this:
+
+==Primary==[primary]
+==Secondary==[secondary]
+==Success==[success]
+==Info==[info]
+==Warning==[warning]
+==Danger==[danger]
+
+Unless you customize marked text, any unsupported type defaults to the `default` type.
+
+```markdown
+==This is a custom type with pink color.==[pink]
+```
+
+Customize the marked text by adding the following CSS in your project directory `assets/css/_custom.scss`:
+
+```scss {title="_custom.scss"}
+.mark-pink {
+  --fi-mark-background-color: pink;
+}
+```
+
+The rendered output looks like this:
+
+==This is a custom type with pink color.==[pink]
+{style="--fi-mark-background-color: pink;"}
+
+The HTML looks like this:
+
+```html
+<mark class="mark-pink">This is a custom type with pink color.</mark>
+```
+
 ## Subscript {#subscript}
 
 **Hugo** supports a **subscript** Markdown extension:

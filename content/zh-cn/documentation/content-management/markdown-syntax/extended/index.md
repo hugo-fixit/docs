@@ -144,8 +144,6 @@ Alert 扩展语法支持 **13** 种类型的 [警示横幅][admonition-types]，
 
 {{< version 0.3.14 changed >}}
 
-To create a task list, start each list item with a hyphen and space followed by `[ ]`.
-
 要创建任务列表，请在每个列表项前添加一个短横线和空格，然后跟上 `[ ]`。
 
 ```markdown
@@ -208,6 +206,55 @@ FixIt 主题的作者是 ++Lruihao++。
 呈现的输出效果如下：
 
 ==FixIt== 是一个很棒的 Hugo 主题！
+
+扩展的标记文本语法支持**6**种类型的标记文本。
+
+> [!WARNING]
+> {{< version 0.3.14 >}}\
+> 这是标记文本的实验性语法高亮。
+
+```markdown
+==Primary==[primary]
+==Secondary==[secondary]
+==Success==[success]
+==Info==[info]
+==Warning==[warning]
+==Danger==[danger]
+```
+
+呈现的输出效果如下：
+
+==Primary==[primary]
+==Secondary==[secondary]
+==Success==[success]
+==Info==[info]
+==Warning==[warning]
+==Danger==[danger]
+
+除非你自定义标记文本，否则任何不支持的类型都会默认为 `default` 类型。
+
+```markdown
+==这是一个带有粉色的自定义类型。==[pink]
+```
+
+在你的项目目录 `assets/css/_custom.scss` 中添加以下 CSS 来自定义标记文本：
+
+```scss {title="_custom.scss"}
+.mark-pink {
+  --fi-mark-background-color: pink;
+}
+```
+
+呈现的输出效果如下：
+
+==这是一个带有粉色的自定义类型。==[pink]
+{style="--fi-mark-background-color: pink;"}
+
+输出的 HTML 看起来像这样：
+
+```html
+<mark class="mark-pink">这是一个带有粉色的自定义类型。</mark>
+```
 
 ## 下标 {#subscript}
 

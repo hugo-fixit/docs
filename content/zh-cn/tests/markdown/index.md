@@ -60,6 +60,12 @@ menu:
 > [!ban]+ ban admonition
 > Lorem ipsum dolor sit amet consectetur adipisicing
 
+## Marked Text
+
+臣亮言：==先帝==[secondary]創業未半，而==中道崩殂==[info]。今天下三分，益州疲敝，此誠==危急存亡之秋==[danger]也！然侍衞之臣，不懈於內；==忠志之士==[primary]，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。
+
+宮中、府中，俱為一體；陟罰臧否，不宜異同。若有==作奸==[warning]、==犯科==[success]，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。
+
 ## 二级标题
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime deleniti natus sint velit ut, dolorem optio vero odio repellat aliquam, at repellendus fuga nemo porro adipisci doloremque, amet inventore molestias.
