@@ -19,6 +19,11 @@ tags:
 
 ## 实现步骤
 
+> [!TIP]
+> **2024.11.05 更新**：已独立为一个主题组件，可通过 Hugo 配置相关参数，详情请查看 [flyfish 主题组件](https://github.com/hugo-fixit/cmpt-flyfish)。
+>
+> 以下为原教程内容：
+
 1. 在你的站点目录下创建文件 `assets/js/flyfish.js`，内容如下：
 
     ```javascript {title="flyfish.js"}

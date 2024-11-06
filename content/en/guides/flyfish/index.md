@@ -1,6 +1,6 @@
 ---
-title: 分享一个 canvas 实现的小鱼游动动画效果
-linktitle: 小鱼游动动画效果
+title: Canvas implementation of small fish swimming animation
+linktitle: Fly Fish Animation
 date: 2024-05-22T10:12:11+08:00
 type: posts
 categories:
