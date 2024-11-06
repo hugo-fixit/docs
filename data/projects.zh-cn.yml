@@ -10,6 +10,8 @@
   repos:
     - hugo-fixit/component-projects
     - hugo-fixit/hugo-atom-feed
+    - hugo-fixit/cmpt-mdevtools
+    - hugo-fixit/cmpt-flyfish
     - hugo-fixit/hugo-json-feed
     - hugo-fixit/shortcode-caniuse
     - hugo-fixit/shortcode-docs-bookmark
