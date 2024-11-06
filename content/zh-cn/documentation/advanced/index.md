@@ -16,8 +16,6 @@ collections:
 tags:
   - Advanced
   - Customization
-toc:
-  auto: false
 ---
 
 探索 Hugo - **FixIt** 主题的的进阶使用。
@@ -234,6 +232,75 @@ li[data-task='tip'] {
 > [!TIP]
 > 这只是主题文档的一个示例，并不包含在主题中。
 
+## 引入主题组件 {#import-theme-components}
+
+> 本章节不对主题组件的概念或者开发进行赘述，如果你对此感兴趣，可以查看 [贡献指南 - 开发组件][components]。
+
+> **为什么都是基于 FixIt 主题，别人博客的某些功能我却没有？**
+{.blockquote-center}
+
+在此之前，或许你也会有类似的疑问。其实，很有可能他们引入了额外的主题组件。
+
+接下来以 [component-projects] 组件为例介绍如何引入一个主题组件，大多数组件引入方式类似。
+
+1. **首先，安装组件**
+
+    安装方式与 [安装主题][installation] 相同，有多种安装方式，任选一种即可，这里介绍两种主流方式。
+
+    - 作为 Hugo 模块安装
+
+        首先确保你的项目本身是一个 [Hugo 模块][use-modules]。
+
+        然后将此主题组件添加到你的 `hugo.toml` 配置文件中：
+
+        ```toml
+        [module]
+          [[module.imports]]
+            path = "github.com/hugo-fixit/FixIt"
+          [[module.imports]]
+            path = "github.com/hugo-fixit/component-projects"
+        ```
+
+        在 Hugo 的第一次启动时，它将下载所需的文件。
+
+    - 作为 Git 子模块安装
+
+        将 FixIt 和此 git 存储库克隆到你的主题文件夹中，并将其作为网站目录的子模块添加。
+
+        ```bash
+        git submodule add https://github.com/hugo-fixit/component-projects.git themes/component-projects
+        ```
+
+        接下来编辑项目的 `hugo.toml` 并将此主题组件添加到你的主题中：
+
+        ```toml
+        theme = ["FixIt", "component-projects"]
+        ```
+
+2. **注入 Partial**
+
+    主题组件通常需要一些第三方资源，例如 CSS 或 JavaScript 等。一般来说，每个组件都会在 `layouts/partials` 目录下提供一个初始化文件，如：`inject/component-projects.html`。
+
+    通过 FixIt 主题开放的 [自定义块][block]，我们能通过配置轻松地注入组件的初始化文件：
+
+    ```toml {data-open=true}
+    [params]
+    [params.customPartials]
+      head = []
+      profile = []
+      aside = []
+      comment = []
+      footer = []
+      widgets = []
+      assets = [
+        "inject/component-projects.html",
+      ]
+      postFooterBefore = []
+      postFooterAfter = []
+    ```
+
+3. **主题组件引入完成**，根据不同组件文档使用组件功能即可。
+
 ## PWA 支持
 
 这部分内容在 [PWA 支持页面][pwa-support] 中介绍。
@@ -243,4 +310,8 @@ li[data-task='tip'] {
 [block]: {{< relref "/references/blocks" >}}
 [sc-admonition]: {{< relref "/documentation/content-management/shortcodes/extended/admonition" >}}
 [task-list]: {{< relref "/documentation/content-management/markdown-syntax/extended#task-lists" >}}
+[components]: {{< relref "/contributing/components" >}}
+[installation]: {{< relref "/documentation/installation" >}}
+[component-projects]: https://github.com/hugo-fixit/component-projects
+[use-modules]: https://gohugo.io/hugo-modules/use-modules/#initialize-a-new-module
 [pwa-support]: {{< relref "/guides/pwa-support" >}}

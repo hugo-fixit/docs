@@ -197,7 +197,7 @@ if (document.readyState !== 'loading') {
 
 - [Can I use... Support tables for HTML5, CSS3, etc][caniuse]
 - [The CanIUse Embed — Add support tables to your site][caniuse-embed]
-- [贡献指南 / 开发组件][components]
+- [贡献指南 - 开发组件][components]
 
 ## 致谢
 

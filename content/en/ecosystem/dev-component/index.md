@@ -197,7 +197,7 @@ The presentation effect is as follows:
 
 - [Can I use... Support tables for HTML5, CSS3, etc][caniuse]
 - [The CanIUse Embed — Add support tables to your site][caniuse-embed]
-- [Contributing / Develop Theme Components][components]
+- [Contributing - Develop Theme Components][components]
 
 ## Acknowledgements
 

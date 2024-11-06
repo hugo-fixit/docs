@@ -16,8 +16,6 @@ collections:
 tags:
   - Advanced
   - Customization
-toc:
-  auto: false
 ---
 
 Discover advanced usage of the Hugo - **FixIt** theme.
@@ -234,6 +232,75 @@ Above example will change the color of the task list, like this:
 > [!TIP]
 > This is just an example of the theme documentation and is not included in the theme.
 
+## Import Theme Components {#import-theme-components}
+
+> This section does not elaborate on the concept or development of theme components. If you are interested, you can check the [Contributing - Develop Theme Components][components].
+
+> **Why do others have certain features on their blogs based on the FixIt theme, but I don't?**
+{.blockquote-center}
+
+Before this, you might have had similar questions. Actually, it is very likely that they have introduced additional theme components.
+
+Next, taking the [component-projects] component as an example, we will introduce how to import a theme component. Most components are imported in a similar way.
+
+1. **First, install the component**
+
+    The installation method is the same as [installing the theme][installation]. There are several ways to install, choose one, Here are two mainstream ways.
+
+    - Install as a Hugo module
+
+        First, make sure your project itself is a [Hugo module][use-modules].
+
+        Then add this theme component to your `hugo.toml` configuration file:
+
+        ```toml
+        [module]
+          [[module.imports]]
+            path = "github.com/hugo-fixit/FixIt"
+          [[module.imports]]
+            path = "github.com/hugo-fixit/component-projects"
+        ```
+
+        On the first start of Hugo it will download the required files.
+
+    - Install as a Git submodule
+
+        Clone FixIt and this git repository into your theme folder and add it as a submodule to the site directory.
+
+        ```bash
+        git submodule add https://github.com/hugo-fixit/component-projects.git themes/component-projects
+        ```
+
+        Next edit `hugo.toml` of your project and add this theme component to your themes:
+
+        ```toml
+        theme = ["FixIt", "component-projects"]
+        ```
+
+2. **Inject Partial**
+
+    Theme components usually require some third-party resources, such as CSS or JavaScript. Generally, each component will provide an initialization file in the `layouts/partials` directory, such as: `inject/component-projects.html`.
+
+    Through the [custom blocks][block] opened by the FixIt theme, we can easily inject the initialization file of the component through configuration:
+
+    ```toml {data-open=true}
+    [params]
+    [params.customPartials]
+      head = []
+      profile = []
+      aside = []
+      comment = []
+      footer = []
+      widgets = []
+      assets = [
+        "inject/component-projects.html",
+      ]
+      postFooterBefore = []
+      postFooterAfter = []
+    ```
+
+3. **Theme component import completed**, use the component features according to different component documents.
+
 ## PWA Support
 
 This part is shown in the [pwa support page][pwa-support].
@@ -243,4 +310,8 @@ This part is shown in the [pwa support page][pwa-support].
 [block]: {{< relref "/references/blocks" >}}
 [sc-admonition]: {{< relref "/documentation/content-management/shortcodes/extended/admonition" >}}
 [task-list]: {{< relref "/documentation/content-management/markdown-syntax/extended#task-lists" >}}
+[components]: {{< relref "/contributing/components" >}}
+[installation]: {{< relref "/documentation/installation" >}}
+[component-projects]: https://github.com/hugo-fixit/component-projects
+[use-modules]: https://gohugo.io/hugo-modules/use-modules/#initialize-a-new-module
 [pwa-support]: {{< relref "/guides/pwa-support" >}}
