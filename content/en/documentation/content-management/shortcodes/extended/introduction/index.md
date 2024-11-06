@@ -456,6 +456,32 @@ The rendered output looks like this:
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="Buy me a coffee~" >}}
 
+### version
+
+> [!NOTE]
+> The `version` shortcode is used to display the version of the specified project. This was originally a shortcode used internally by FixIt. Starting from the {{< version 0.3.15 changed >}} version, the restriction has been relaxed and the specified repository can be configured through `params.repoVersion`.
+
+The `version` shortcode has the following positional parameters:
+
+- first positional parameter _[required]_ **release tag**
+- second positional parameter _[optional]_ **type**，optional values: ["new", "changed", "deleted"], default: `new`
+- third positional parameter _[optional]_ **URL prefix for the release tag**, default: `https://github.com/hugo-fixit/FixIt/releases/tag/v`
+- fourth positional parameter _[optional]_ **project name**, default: `FixIt`
+
+Example `version` input:
+
+```markdown
+{{</* version 0.3.15 */>}}
+{{</* version 0.3.15 changed */>}}
+{{</* version 0.3.15 deleted */>}}
+```
+
+The rendered output looks like this:
+
+{{< version 0.3.15 >}}\
+{{< version 0.3.15 changed >}}\
+{{< version 0.3.15 deleted >}}
+
 ## Extra Components
 
 The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.

@@ -491,6 +491,16 @@ disableThemeInject = false
 [taskList]
   tip = "fa-regular fa-lightbulb"
 
+# FixIt 0.3.15 | NEW version shortcode config
+# FixIt 0.3.15 | 新增 version shortcode 配置
+[repoVersion]
+  # url prefix for the release tag
+  # 发行标签的 URL 前缀
+  url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+  # project name
+  # 项目名称
+  name = "FixIt"
+
 # FixIt 0.2.12 | NEW PanguJS config
 # FixIt 0.2.12 | 新增 盘古之白配置
 [pangu]

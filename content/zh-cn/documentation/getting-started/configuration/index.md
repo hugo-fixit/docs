@@ -964,7 +964,7 @@ loop
 
 {{< version 0.3.13 >}}
 
-`map` Admonition 自定义配置。详见 [自定义 Admonition][custom-admonitions]
+`map` Admonition 自定义配置。详见 [进阶篇 - 自定义 Admonition][custom-admonitions]
 
 ```toml
 [params]
@@ -973,6 +973,39 @@ loop
 ```
 
 格式为 `<type> = <icon>`，其中 `<type>` 是 Admonition 类型，`<icon>` 是 Font Awesome 图标类。
+
+### taskList
+
+{{< version 0.3.14 >}}
+
+`map` 自定义任务列表配置。详见 [进阶篇 - 自定义任务列表][custom-task-list]
+
+```toml
+[params]
+  [params.taskList]
+    # tip = "fa-regular fa-lightbulb"
+```
+
+格式为 `<type> = <icon>`，其中 `<type>` 是任务列表类型，`<icon>` 是 Font Awesome 图标类。
+
+### repoVersion
+
+{{< version 0.3.15 >}}
+
+`version` `version` shortcode 配置。
+
+```toml
+[params]
+  [params.repoVersion]
+    url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+    name = "FixIt"
+```
+
+url
+: `string` 发行标签的 URL 前缀。
+
+name
+: `string` 项目名称。
 
 ### mermaid
 
@@ -1725,7 +1758,8 @@ c4u
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
-[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
+[custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
+[custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
 [vercount]: https://vercount.one/

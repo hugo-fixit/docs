@@ -961,7 +961,7 @@ loop
 
 {{< version 0.3.13 >}}
 
-`map` Admonition custom Configuration. See [Custom Admonitions][custom-admonitions]
+`map` Admonition custom Configuration. See [Advanced - Custom Admonitions][custom-admonitions]
 
 ```toml
 [params]
@@ -970,6 +970,39 @@ loop
 ```
 
 The syntax is `<type> = <icon>`, where `<type>` is the type of the admonition and `<icon>` is the Font Awesome icon class.
+
+### taskList
+
+{{< version 0.3.14 >}}
+
+`map` Task lists custom Configuration. See [Advanced - Custom Task Lists][custom-task-lists]
+
+```toml
+[params]
+  [params.taskList]
+    # tip = "fa-regular fa-lightbulb"
+```
+
+The syntax is `<type> = <icon>`, where `<type>` is the type of the task list and `<icon>` is the Font Awesome icon class.
+
+### repoVersion
+
+{{< version 0.3.15 >}}
+
+`map` The `version` shortcode Configuration.
+
+```toml
+[params]
+  [params.repoVersion]
+    url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+    name = "FixIt"
+```
+
+url
+: `string` The URL prefix for the release tag.
+
+name
+: `string` The project name.
 
 ### mermaid
 
@@ -1726,7 +1759,8 @@ They're easily created via <https://realfavicongenerator.net/>.
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
-[custom-admonitions]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#custom-admonitions" >}}
+[custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
+[custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
 [vercount]: https://vercount.one/

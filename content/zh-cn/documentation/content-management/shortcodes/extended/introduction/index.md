@@ -456,6 +456,32 @@ this is a **center-quote** _shortcode_ example.
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
 
+### version
+
+> [!NOTE]
+> `version` shortcode 用来显示指定项目的版本，这本来是 FixIt 内部使用的 shortcode，从 {{< version 0.3.15 changed >}} 版本开始放开了限制，可以通过 `params.repoVersion` 配置指定仓库。
+
+`version` shortcode 有以下位置参数：
+
+- 第一个位置参数 _[必选]_ **版本号**
+- 第二个位置参数 _[可选]_ **类型**，可选值：["new", "changed", "deleted"]，默认：`new`
+- 第三个位置参数 _[可选]_ **发行标签的 URL 前缀**，默认：`https://github.com/hugo-fixit/FixIt/releases/tag/v`
+- 第四个位置参数 _[可选]_ **项目名称**，默认：`FixIt`
+
+一个 `version` 示例：
+
+```markdown
+{{</* version 0.3.15 */>}}
+{{</* version 0.3.15 changed */>}}
+{{</* version 0.3.15 deleted */>}}
+```
+
+呈现的输出效果如下：
+
+{{< version 0.3.15 >}}\
+{{< version 0.3.15 changed >}}\
+{{< version 0.3.15 deleted >}}
+
 ## 额外的主题组件
 
 FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。
