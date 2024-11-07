@@ -318,6 +318,12 @@ get remote images test:
 {{< image src="https://fixit.lruihao.cn/images/fixit.min.svg" height="64px" width="64px" linked=false >}}
 ![gravatar](https://gravatar.loli.net/avatar/fee47a2f4f2cc71f99a02b0a73ecfee0?s=32&d=mp)
 
+<img src="https://gravatar.loli.net/avatar/fee47a2f4f2cc71f99a02b0a73ecfee0?s=32&d=mp">
+
+base64 图片测试
+
+![base64 img](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAY1BMVEUAAADJF37JF37JF37HGIDJF37JGH7JF3/JF37JF37/QIjyNobkLIP1OIb/XJn/////c1nQHH//7PPNGn//uaz/loP/qJfz+PO01Lb/n401jDyBt4WOvpH4O4fdJ4LhKYPoLoS16W5KAAAACXRSTlMAv2DvEN8gQI+78hMBAAAAAWJLR0QPGLoA2QAAAAd0SU1FB+gEAxAhATZIvGQAAADvSURBVDjLhZPXFoMgDIa1G9oSSx21+/2fsmaAAmL/C4+QL+OEpCgCKaXKIi/FWmXMJRr1Eb9Zd406zSJ4edYiPKwD80bcDQwygqTRASoSQIQMvxetrZgJsVpfPbFl97qaqJYgEmA4WLQ3QGqRsESMAHByEf6HgC+v6wBujgiBHm/vJMoSAIbjCyFJzAQAKcDFkBwpwMQDcsCTiWcOcLFnUkiR4ExJkRiipRBC9DN9qKhDHfg3TVs97XTcan6slu1N8lh/nluIeGBe4UgtjhwT73howxXzW+HGPtmMnUc+ud0iP/3Nrt64vPvl/T6ENz+R2iTlyKdrBQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNC0wNC0wM1QxNjozMzowMSswMDowMHnVpP8AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjQtMDQtMDNUMTY6MzM6MDErMDA6MDAIiBxDAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC)
+
 ## custom attribute
 
 Enable custom attribute support for titles and blocks by adding attribute lists inside single curly brackets (`{.myclass class="class1 class2" }`) and placing it after the Markdown element it decorates, on the same line for titles and on a new line directly below for blocks.
