@@ -69,6 +69,18 @@ type: posts
 ---
 ```
 
+> [!TIP]
+> 你可以在 `content/documentation/_index.md` 中设置 `cascade.params.type` 参数为 `posts`，这样 `content/documentation` 目录下的所有文章都会使用 `posts` 模板。
+>
+> ```markdown
+> ---
+> title: 主题文档
+> cascade:
+>   params:
+>     type: posts
+> ---
+> ```
+
 ### 友情链接
 
 {{< version 0.2.12 >}}
@@ -83,15 +95,16 @@ type: posts
   description: 对朋友或其站点的说明
 ```
 
-{{< admonition tip "" false >}}
+> [!TIP]-
+> 你可以使用以下命令快速创建友情链接页面：
+>
+> ```bash
+> hugo new friends/index.md
+> ```
 
-你可以使用以下命令快速创建友情链接页面：
+### 项目页面
 
-```bash
-hugo new friends/index.md
-```
-
-{{< /admonition >}}
+这是一个额外的主题组件，具体请查看 [hugo-fixit/component-projects]。
 
 ## Front matter {#front-matter}
 
@@ -495,6 +508,7 @@ defaultContentLanguage = "zh-cn"
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [front-matter]: https://gohugo.io/content-management/front-matter/
+[hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}

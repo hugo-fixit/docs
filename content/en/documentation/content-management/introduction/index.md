@@ -68,6 +68,18 @@ date: 2024-04-06T12:57:26+08:00
 ---
 ```
 
+> [!TIP]
+> You can set the `cascade.params.type` parameter to `posts` in `content/documentation/_index.md`, so that all posts in the `content/documentation` directory will use the `posts` template.
+>
+> ```markdown
+> ---
+> title: Documentation
+> cascade:
+>   params:
+>     type: posts
+> ---
+> ```
+
 ### Friends
 
 {{< version 0.2.12 >}}
@@ -82,19 +94,20 @@ Set `layout: friends` in the front matter and create data file named `friends.ym
   description: description of friend/site
 ```
 
-{{< admonition tip "" false >}}
+> [!TIP]-
+> You can use the following command to quickly create a friends page:
+>
+> ```bash
+> hugo new friends/index.md
+> ```
 
-You can use the following command to quickly create a friends page:
+### Projects
 
-```bash
-hugo new friends/index.md
-```
-
-{{< /admonition >}}
+This is an additional theme component, please refer to [hugo-fixit/component-projects].
 
 ## Front matter {#front-matter}
 
-**Hugo** allows you to add front matter in `yaml`, `toml` or `json` to your content files.
+**Hugo** allows you to add front matter in `yaml`, `toml` or `json` to your content files, see [Front matter][front-matter].
 
 {{< admonition >}}
 **Not all** of the below front matters need to be set in each of your posts.
@@ -494,6 +507,8 @@ By the way, as these translations could be used by other people, please take the
 <!-- markdownlint-disable-file reference-links-images -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
+[front-matter]: https://gohugo.io/content-management/front-matter/
+[hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
