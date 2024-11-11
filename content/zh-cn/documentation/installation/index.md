@@ -2,7 +2,6 @@
 title: 安装主题
 linkTitle: 安装篇
 date: 2024-01-18T10:29:25+08:00
-type: posts
 description: 只需几个步骤即可为你的 Hugo 站点安装 FixIt 主题。
 categories:
   - Documentation

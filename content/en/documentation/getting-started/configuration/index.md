@@ -2,7 +2,6 @@
 title: Configure FixIt
 linkTitle: Configuration
 date: 2024-03-07T15:37:59+08:00
-type: posts
 aliases:
   - /theme-documentation-basics/
   - /documentation/basics/

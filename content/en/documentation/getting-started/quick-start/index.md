@@ -2,7 +2,6 @@
 weight: 1
 title: Quick Start
 date: 2024-03-01T15:18:19+08:00
-type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn

@@ -1,7 +1,6 @@
 ---
 title: Content Encryption
 date: 2023-02-24T22:32:41+08:00
-type: posts
 aliases:
   - /theme-documentation-content-encryption/
 author:

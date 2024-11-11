@@ -1,7 +1,6 @@
 ---
 title: Open Custom Blocks
 date: 2024-05-09T10:28:58+08:00
-type: posts
 collections:
   - References
 resources:

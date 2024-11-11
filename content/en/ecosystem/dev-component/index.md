@@ -12,7 +12,6 @@ description: This article will demonstrate how to create a Hugo theme component 
 resources:
   - name: featured-image
     src: featured-image.webp
-type: posts
 ---
 
 This article will demonstrate how to create a Hugo theme component by developing a caniuse shortcode.

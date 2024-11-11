@@ -1,7 +1,6 @@
 ---
 title: Extended Markdown Syntax
 date: 2023-02-24T21:42:22+08:00
-type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn

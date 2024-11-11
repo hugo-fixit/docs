@@ -1,7 +1,6 @@
 ---
 title: 关于 algolia 的使用技巧
 date: 2023-12-01T10:20:16+08:00
-type: posts
 categories:
   - Guides
   - Documentation

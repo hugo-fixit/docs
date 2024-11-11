@@ -12,7 +12,6 @@ description: 本文将通过开发一个 caniuse shortcode 来演示如何创建
 resources:
   - name: featured-image
     src: featured-image.webp
-type: posts
 ---
 
 本文将通过开发一个 `caniuse` shortcode 来演示如何创建一个 Hugo 主题组件。

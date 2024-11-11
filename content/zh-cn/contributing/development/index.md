@@ -3,7 +3,6 @@ title: 开发 FixIt 主题
 date: 2024-04-25T20:30:43+08:00
 categories:
   - Contributing
-type: posts
 hiddenFromHomePage: true
 related:
   enable: false

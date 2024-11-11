@@ -3,7 +3,6 @@ title: 完善文档
 date: 2024-04-25T20:30:44+08:00
 categories:
   - Contributing
-type: posts
 hiddenFromHomePage: true
 related:
   enable: false

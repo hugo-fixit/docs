@@ -1,7 +1,6 @@
 ---
 title: Content Management Overview
 date: 2023-02-24T17:27:22+08:00
-type: posts
 aliases:
   - /theme-documentation-content/
 author:
@@ -66,7 +65,6 @@ For example, put all the documentation posts in the `content/documentation` dire
 ---
 title: Content Management Overview
 date: 2024-04-06T12:57:26+08:00
-type: posts
 ---
 ```
 

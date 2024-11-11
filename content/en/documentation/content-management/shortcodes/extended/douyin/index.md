@@ -2,7 +2,6 @@
 title: Extended Shortcode - douyin
 linkTitle: douyin Shortcode
 date: 2024-05-20T11:06:24+08:00
-type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn

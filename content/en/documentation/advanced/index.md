@@ -1,7 +1,6 @@
 ---
 title: Advanced Usage
 date: 2024-04-06T12:59:28+08:00
-type: posts
 author:
   name: Lruihao
   link: https://lruihao.cn

@@ -2,7 +2,6 @@
 title: 扩展 Shortcode - typeit
 linkTitle: Typeit Shortcode
 date: 2023-02-24T22:59:50+08:00
-type: posts
 aliases:
   - /zh-cn/extended-shortcode-typeit/
 author:

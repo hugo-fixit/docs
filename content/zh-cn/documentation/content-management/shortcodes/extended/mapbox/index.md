@@ -2,7 +2,6 @@
 title: 扩展 Shortcode - mapbox
 linkTitle: Mapbox Shortcode
 date: 2023-02-24T22:45:45+08:00
-type: posts
 aliases:
   - /zh-cn/extended-shortcode-mapbox/
 author:

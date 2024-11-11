@@ -2,7 +2,6 @@
 title: Code Fences Extended - Timeline
 linkTitle: Timeline support
 date: 2024-07-20T19:25:31+08:00
-type: posts
 description: This document will show you how to create a Timeline in FixIt using the code fences extended syntax.
 categories:
   - Documentation

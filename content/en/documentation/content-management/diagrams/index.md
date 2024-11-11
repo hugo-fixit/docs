@@ -3,7 +3,6 @@ title: Code Fences Extended - Diagrams Support
 linkTitle: Diagrams Support
 subtitle: Create SVG and Canvas diagrams in FixIt using GoAT, Mermaid or Echarts.
 date: 2023-03-22T10:51:22+08:00
-type: posts
 tags:
   - Diagram
   - GoAT

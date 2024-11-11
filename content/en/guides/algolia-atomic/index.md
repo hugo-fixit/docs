@@ -1,7 +1,6 @@
 ---
 title: Tips about algolia
 date: 2023-12-01T10:20:16+08:00
-type: posts
 categories:
   - Guides
   - Documentation

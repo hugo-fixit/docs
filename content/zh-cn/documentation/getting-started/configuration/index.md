@@ -2,7 +2,6 @@
 title: 配置 FixIt
 linkTitle: 配置篇
 date: 2024-03-07T15:37:59+08:00
-type: posts
 aliases:
   - /zh-cn/theme-documentation-basics/
   - /zh-cn/documentation/basics/

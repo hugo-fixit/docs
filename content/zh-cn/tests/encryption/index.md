@@ -3,7 +3,6 @@ title: 内容加密解密测试
 date: 2022-05-28T00:24:22+08:00
 draft: true
 description: 内容加密解密测试
-type: posts
 password: 1212
 message: 密码是 1212
 lightgallery: true

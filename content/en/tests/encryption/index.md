@@ -3,7 +3,6 @@ title: Encrypt Test
 date: 2022-05-21T22:31:22+08:00
 draft: true
 description: Test for encrypting content
-type: posts
 password: 1212
 message: Password is 1212
 lightgallery: true

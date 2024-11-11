@@ -2,7 +2,6 @@
 title: Related content
 date: 2024-10-27T01:05:43+08:00
 description: List related content in "Related content" sections.
-type: posts
 tags:
   - Related
   - Content

@@ -1,7 +1,6 @@
 ---
 title: Basic Markdown Syntax
 date: 2021-12-18T16:15:22+08:00
-type: posts
 aliases:
   - /basic-markdown-syntax/
 description: This article shows the basic Markdown syntax and format.

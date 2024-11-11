@@ -3,6 +3,9 @@ title: 主题文档
 aliases:
   - /zh-cn/posts/
 description: Hugo FixIt 主题文档
+cascade:
+  params:
+    type: posts
 keywords:
   - Hugo
   - FixIt

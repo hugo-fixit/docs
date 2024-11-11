@@ -2,6 +2,9 @@
 title: All References
 titleIcon: fa-solid fa-microchip
 description: API references for the FixIt project.
+cascade:
+  params:
+    type: posts
 keywords: 
   - hugo-fixit
   - FixIt

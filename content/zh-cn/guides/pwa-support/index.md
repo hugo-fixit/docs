@@ -1,7 +1,6 @@
 ---
 title: PWA 支持
 date: 2022-01-26T11:10:56+08:00
-type: posts
 reward: false
 aliases:
   - /pwa-support/

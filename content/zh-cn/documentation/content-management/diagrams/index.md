@@ -3,7 +3,6 @@ title: 代码块扩展语法 - 图表支持
 linkTitle: 图表支持
 subtitle: 使用 GoAT、Mermaid 或 Echarts 在 FixIt 中创建 SVG 和 Canvas 图表。
 date: 2023-03-22T10:51:22+08:00
-type: posts
 tags:
   - Diagram
   - GoAT

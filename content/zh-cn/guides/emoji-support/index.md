@@ -1,7 +1,6 @@
 ---
 title: Emoji 支持
 date: 2019-10-01T17:55:28+08:00
-type: posts
 reward: false
 aliases:
   - /zh-cn/emoji-support/

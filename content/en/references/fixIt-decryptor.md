@@ -1,7 +1,6 @@
 ---
 title: Class FixItDecryptor API
 date: 2023-02-24T22:32:41+08:00
-type: posts
 collections:
   - References
 ---

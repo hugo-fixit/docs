@@ -2,7 +2,6 @@
 title: 代码块扩展语法 - 时间线（Timeline）
 linkTitle: 时间线支持
 date: 2024-07-20T19:25:31+08:00
-type: posts
 description: 这篇文档将展示如何在 FixIt 中使用代码块扩展语法创建时间线。
 categories:
   - Documentation

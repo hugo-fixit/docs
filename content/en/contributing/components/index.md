@@ -1,7 +1,6 @@
 ---
 title: Develop theme components
 date: 2024-04-25T20:30:45+08:00
-type: posts
 categories:
   - Contributing
 hiddenFromHomePage: true
