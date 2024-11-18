@@ -1,7 +1,6 @@
 ---
 title: Markdown 测试
 date: 2022-04-20T17:50:22+08:00
-draft: true
 description: Test for Markdown rendering
 tags:
   - Tests
@@ -28,7 +27,7 @@ menu:
 
 ```
 {{- /* Comments for Markdown */ -}}
-{{- $content = replaceRE "%%(.|\n)*?%%" "" $content -}}
+{{- $content = replaceRE "{?%}{?%}(.|\n)*?{?%}{?%}" "" $content -}}
 {{- $content = replace $content "<p></p>" "" -}}
 ```
 
@@ -37,13 +36,13 @@ menu:
 
 This is an {{</* comment */>}}inline{{</* /comment */>}} comment.
 
-This is an %%inline%% comment.
+This is an {?%}{?%}inline{?%}{?%} comment.
 
-%%
+{?%}{?%}
 This is a block comment.
 
 Block comments can span multiple lines.
-%%
+{?%}{?%}
 ```
 
 <!-- This is a comment. -->
@@ -86,6 +85,12 @@ Block comments can span multiple lines.
 > Lorem ipsum dolor sit amet consectetur adipisicing
 
 ## Marked Text
+
+```
+臣亮言：==先帝==[secondary]創業未半，而==中道崩殂==[info]。今天下三分，益州疲敝，此誠==危急存亡之秋==[danger]也！然侍衞之臣，不懈於內；==忠志之士==[primary]，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。
+
+宮中、府中，俱為一體；陟罰臧否，不宜異同。若有==作奸==[warning]、==犯科==[success]，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外異法也。
+```
 
 臣亮言：==先帝==[secondary]創業未半，而==中道崩殂==[info]。今天下三分，益州疲敝，此誠==危急存亡之秋==[danger]也！然侍衞之臣，不懈於內；==忠志之士==[primary]，忘身於外者，蓋追先帝之殊遇，欲報之於陛下也。誠宜開張聖聽，以光先帝遺德，恢弘志士之氣；不宜妄自菲薄，引喻失義，以塞忠諫之路也。
 
