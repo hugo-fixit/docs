@@ -157,7 +157,7 @@ Alert 扩展语法支持 **13** 种类型的 [警示横幅][admonition-types]，
 
 你可以在括号内使用任何字符来标记任务为已完成或其他状态。
 
-```markdown {.no-header}
+```markdown
 - [ ] 未完成
 - [x] 已完成
 - [/] 进行中

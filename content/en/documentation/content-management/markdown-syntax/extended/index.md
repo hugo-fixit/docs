@@ -157,7 +157,7 @@ The rendered output looks like this:
 
 You can use any character inside the brackets to mark it as completed or otherwise.
 
-```markdown {.no-header}
+```markdown
 - [ ] Unchecked
 - [x] Checked
 - [/] In Progress
