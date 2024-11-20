@@ -13,7 +13,7 @@
     max-width: 100%;
     position: relative;
     border-radius: 2.5px;
-    margin-block: 2rem;
+    margin-block: 1.5rem;
     background: linear-gradient($global-background-color, $global-background-color) padding-box, linear-gradient(45deg, #42d392, #FF7359) border-box;
     border: 0.25rem solid transparent;
     transition: background-color 0.5s, border-color 0.5s;
@@ -141,14 +141,41 @@
     }
   }
 
+  .banner-start-commands {
+    width: 230px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    line-height: 1.45em;
+    font-size: $code-font-size;
+    font-family: $code-font-family;
+    background-color: $code-background-color;
+    @include border-radius($global-border-radius);
+
+    [data-theme='dark'] & {
+      background-color: $code-background-color-dark;
+    }
+    // command line
+    span {
+      display: block;
+      &::before {
+        content: "$";
+        opacity: 0.5;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
   .quick-start-btn {
     display: inline-block;
+    width: 230px;
     border-radius: 8px;
     transition: background-color 0.5s, color 0.5s;
     font-weight: 600;
+    font-size: 18px;
     padding: 8px 1rem;
     margin-block: 1rem;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     background-color: #42b883;
     color: #fff;
 
