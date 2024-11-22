@@ -1134,6 +1134,23 @@ thumbnailUrl
     [params.analytics.fathom]
       id = ""
       server = ""
+    [params.analytics.baidu]
+      id = ""
+    [params.analytics.umami]
+      data_website_id = ""
+      src = ""
+      data_host_url = ""
+      data_domains = ""
+    [params.analytics.plausible]
+      data_domain = ""
+      src = ""
+    [params.analytics.cloudflare]
+      token = ""
+    [params.analytics.splitbee]
+      enable = false
+      no_cookie = true
+      do_not_track = true
+      data_token = ""
 ```
 
 enable
@@ -1150,6 +1167,43 @@ fathom
 
 - id: `string` Fathom Analytics ID.
 - server: `string` Server URL for your tracker if you're self hosting.
+
+baidu
+: {{< version 0.3.16 >}}\
+`map` Baidu Analytics Configuration.
+
+- id: `string` Baidu Analytics ID.
+
+umami
+: {{< version 0.3.16 >}}\
+`map` Umami Analytics Configuration.
+
+- data_website_id: `string` Umami Analytics website ID.
+- src: `string` The script URL of Umami Analytics.
+- data_host_url: `string` The host URL of Umami Analytics.
+- data_domains: `string` The domain of Umami Analytics.
+
+plausible
+: {{< version 0.3.16 >}}\
+`map` Plausible Analytics Configuration.
+
+- data_domain: `string` Plausible Analytics domain.
+- src: `string` The script URL of Plausible Analytics.
+
+cloudflare
+: {{< version 0.3.16 >}}\
+`map` Cloudflare Analytics Configuration.
+
+- token: `string` Cloudflare Analytics token.
+
+splitbee
+: {{< version 0.3.16 >}}\
+`map` Splitbee Analytics Configuration.
+
+- enable: `bool` Whether to enable Splitbee Analytics. Default is `false`.
+- no_cookie: `bool` Whether to use no cookie mode. Default is `true`.
+- do_not_track: `bool` Whether to respect the do not track setting of the browser. Default is `true`.
+- data_token: `string` Splitbee Analytics token.
 
 ### cookieconsent
 

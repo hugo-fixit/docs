@@ -1137,6 +1137,23 @@ thumbnailUrl
     [params.analytics.fathom]
       id = ""
       server = ""
+        [params.analytics.baidu]
+      id = ""
+    [params.analytics.umami]
+      data_website_id = ""
+      src = ""
+      data_host_url = ""
+      data_domains = ""
+    [params.analytics.plausible]
+      data_domain = ""
+      src = ""
+    [params.analytics.cloudflare]
+      token = ""
+    [params.analytics.splitbee]
+      enable = false
+      no_cookie = true
+      do_not_track = true
+      data_token = ""
 ```
 
 enable
@@ -1153,6 +1170,43 @@ fathom
 
 - id: `string` Fathom Analytics ID。
 - server: `string` Fathom Analytics 服务器地址。
+
+baidu
+: {{< version 0.3.16 >}}\
+`map` 百度统计配置。
+
+- id: `string` 百度分析 ID。
+
+umami
+: {{< version 0.3.16 >}}\
+`map` Umami Analytics 配置。
+
+- data_website_id: `string` Umami 分析网站 ID。
+- src: `string` Umami 分析脚本 URL。
+- data_host_url: `string` Umami 分析主机 URL。
+- data_domains: `string` Umami 分析域。
+
+plausible
+: {{< version 0.3.16 >}}\
+`map` Plausible Analytics 配置。
+
+- data_domain: `string` Plausible 分析域。
+- src: `string` Plausible 分析脚本 URL。
+
+cloudflare
+: {{< version 0.3.16 >}}\
+`map` Cloudflare Analytics 配置。
+
+- token: `string` Cloudflare Analytics 令牌。
+
+splitbee
+: {{< version 0.3.16 >}}\
+`map` Splitbee Analytics 配置。
+
+- enable: `bool` 是否启用 Splitbee Analytics。默认为 `false`。
+- no_cookie: `bool` 是否使用无 cookie 模式。默认为 `true`。
+- do_not_track: `bool` 是否尊重浏览器的不跟踪设置。默认为 `true`。
+- data_token: `string` Splitbee Analytics 令牌。
 
 ### cookieconsent
 
