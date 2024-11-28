@@ -105,8 +105,8 @@ disableThemeInject = false
 # 搜索配置
 [search]
   enable = true
-  # type of search engine ["algolia", "fuse"]
-  # 搜索引擎的类型 ["algolia", "fuse"]
+  # type of search engine ["algolia", "fuse", "cse"]
+  # 搜索引擎的类型 ["algolia", "fuse", "cse"]
   type = "algolia"
   # max index length of the chunked content
   # 文章内容最长索引长度
@@ -141,6 +141,23 @@ disableThemeInject = false
     ignoreLocation = false
     useExtendedSearch = false
     ignoreFieldNorm = false
+
+# FixIt 0.3.16 | NEW Custom Search Engine (CSE)
+# FixIt 0.3.16 | 新增 自定义搜索引擎 (CSE)
+[cse]
+  # Search Engine: ["google", "bing"]
+  # 搜索引擎：["google", "bing"]
+  engine = "google"
+  # Search results page URL (layout: search)
+  # 搜索结果页面 URL (layout: search)
+  resultsPage = "/search/"
+  # Google: https://programmablesearchengine.google.com/
+  # Google Custom Search Engine Context
+  # Google 自定义搜索引擎 ID
+  [cse.google]
+    cx = ""
+  # Bing (Unsupported): https://www.customsearch.ai/
+  [cse.bing]
 
 # Header config
 # 页面头部导航栏配置

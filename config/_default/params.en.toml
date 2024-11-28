@@ -10,6 +10,10 @@
   [search.algolia]
     index = "index.en"
 
+[cse]
+  [cse.google]
+    cx = "27010f0a2633d4da4"
+
 [header]
   [header.subtitle]
     name = "Theme for Hugo"
