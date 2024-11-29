@@ -26,19 +26,17 @@ Common search engines have their own CSE services, such as:
 - [Google Programmable Search Engine][google-cse]
 - [Bing Custom Search][bing-cse]
 
-## Google CSE
+## Configure CSE in FixIt
 
-Google CSE, also known as Google Programmable Search Engine, this section mainly introduces how to use Google CSE in FixIt. You can go to [Programmable Search Engine Tutorial][google-cse-tutorial] page to view the complete tutorial.
+{{< version 0.3.16 >}}
 
-1. Create a new search engine in [Google Programmable Search Engine][google-cse].
-2. Enter your search engine name, for example: `FixIt`.
-3. Select to search specific sites or pages, and enter your site URL, for example: `fixit.lruihao.cn`.
-4. Click the `Create` button.
-5. After a moment, the page will prompt you: "A new search engine has been created", then click the `Customize` button to enter the search engine customization page.
-6. Click Appearance and Style => Layout => Select `Two-column`. (**This step is crucial, do not ignore it!**)
-7. Finally, click Overview and copy your search engine ID.
+First, manually create a search result display page:
 
-In FixIt theme, configure Google CSE:
+```bash
+hugo new content search/index.md
+```
+
+To configure Google or Bing CSE in the FixIt theme:
 
 ```toml
 [params]
@@ -46,24 +44,48 @@ In FixIt theme, configure Google CSE:
     enable = true
     type = "cse"
   [params.cse]
+    # Search engine: ["google", "bing"]
     engine = "google"
     resultsPage = "/search/"
     [params.cse.google]
-      # Configure your search engine ID
       cx = ""
+    [params.cse.bing]
+      # Unsupported yet
 ```
 
-Then manually create a search result display page:
+## Google CSE
 
-```bash
-hugo new content search/index.md
+Google CSE, also known as Google Programmable Search Engine, this section mainly introduces how to use Google CSE in FixIt. You can go to [Programmable Search Engine Tutorial][google-cse-tutorial] page to view the complete tutorial.
+
+Follow the steps below to create a Google search engine:
+
+```timeline {animation=true}
+events:
+  - content: "Create a new search engine in [Google Programmable Search Engine](https://programmablesearchengine.google.com/)."
+  - content: "Enter your search engine name, for example: `FixIt`."
+  - content: "Select to search specific sites or pages, and enter your site URL. e.g. `fixit.lruihao.cn`."
+  - content: "Click the `Create` button."
+  - content: 'After a moment, the page will prompt you: "A new search engine has been created", then click the `Customize` button to enter the search engine customization page.'
+  - content: "**Click Appearance and Style => Layout => Select `Two-column`**. (==This step is crucial, do not ignore it!==)"
+    type: warning
+  - content: "Finally, click Overview and copy your search engine ID."
+    type: info
+  - content: "Paste the search engine ID into the `cx` field in the configuration file."
+    type: primary
+  - content: "🎉 Congratulations! Restart the Hugo server and try the search feature."
+    type: success
 ```
-
-🎉 Congratulations! You have successfully configured Google CSE in the FixIt theme, restart, and try the search feature.
 
 ## Bing CSE
 
-Unsupported.
+> [!WARNING]
+> Bing CSE is not supported in FixIt yet.
+
+<!--
+Bing Custom Search is similar to Google CSE, but the configuration is different. You can go to the [Bing Custom Search][bing-cse] page to view the complete tutorial.
+
+Follow these steps to create a new custom search instance:
+-->
 
 <!-- link reference definition -->
 [google-cse]: https://programmablesearchengine.google.com/
