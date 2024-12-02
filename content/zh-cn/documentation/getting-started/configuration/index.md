@@ -490,7 +490,7 @@ enable
 : `bool` 是否启用搜索。
 
 type
-: `string` 搜索引擎的类型，可选值：`algolia`、`fuse`，默认：`fuse`。
+: `string` 搜索引擎的类型，可选值：`algolia`、`fuse` 或 `cse`，默认：`fuse`。
 
 contentLength
 : `int` 文章内容最长索引长度。
@@ -533,7 +533,7 @@ fuse
 
 ---
 
-基于 [algolia][algolia] 或 [Fuse.js][fusejs]，**FixIt** 主题支持搜索功能。
+基于 [algolia][algolia]、[Fuse.js][fusejs] 或者 [自定义搜索引擎](#cse)，**FixIt** 主题支持搜索功能。
 
 为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
@@ -543,6 +543,36 @@ fuse
 ```
 
 {{< link href="/zh-cn/guides/algolia-atomic/" content="关于 algolia 的使用技巧" card=true >}}
+
+### cse
+
+{{< version 0.3.16 >}}
+
+`map` 自定义搜索引擎（CSE）配置，详见 [CSE 支持][cse-support]。
+
+```toml
+[params]
+  [params.cse]
+    engine = ""
+    resultsPage = "/search/"
+    [params.cse.google]
+      cx = ""
+    [params.cse.bing]
+```
+
+engine
+: `string` 搜索引擎。`engine` 的配置值可以是 `google` 或 `bing`。
+
+resultsPage
+: `string` 搜索结果页面 URL（`layout: search`）。默认为 `/search/`。
+
+google
+: `map` [Google 自定义搜索引擎][google-cse] 配置。
+
+- cx: `string` Google 自定义搜索引擎上下文 ID。
+
+bing
+: `map` [Bing 自定义搜索引擎][bing-cse] 配置。 (暂不支持)
 
 ### header
 
@@ -1811,6 +1841,9 @@ c4u
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
+[cse-support]: {{< relref path="/guides/cse-support" >}}
+[google-cse]: https://programmablesearchengine.google.com/
+[bing-cse]: https://www.customsearch.ai/
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes

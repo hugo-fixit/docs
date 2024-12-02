@@ -101,6 +101,12 @@ Set `layout: friends` in the front matter and create data file named `friends.ym
 > hugo new friends/index.md
 > ```
 
+### Search
+
+{{< version 0.3.16 >}}
+
+See [CSE Support][cse-support].
+
 ### Projects
 
 This is an additional theme component, please refer to [hugo-fixit/component-projects].
@@ -508,6 +514,7 @@ By the way, as these translations could be used by other people, please take the
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [front-matter]: https://gohugo.io/content-management/front-matter/
+[cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}

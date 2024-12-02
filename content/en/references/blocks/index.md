@@ -40,6 +40,8 @@ You can implement these blocks through `define`.
 | Block Name                   | Description                     | Location                               |
 | :--------------------------- | :------------------------------ | :------------------------------------- |
 | `custom-head`                | Head custom block               | `layouts/_default/baseof.html`         |
+| `custom-menu:desktop`        | Desktop menu custom block       | `layouts/partials/header.html`         |
+| `custom-menu:mobile`         | Mobile menu custom block        | `layouts/partials/header.html`         |
 | `custom-profile`             | Profile custom block            | `layouts/partials/home/profile.html`   |
 | `custom-comment`             | Comment system custom block     | `layouts/partials/single/comment.html` |
 | `custom-aside`               | Sidebar custom block            | `layouts/posts/single.html`            |

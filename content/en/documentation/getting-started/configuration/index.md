@@ -488,7 +488,7 @@ enable
 : `bool` Whether to enable search. Default is `false`.
 
 type
-: `string` The type of search engine. The configuration value for `type` can be one of `algolia`, `fuse`. Default is `fuse`.
+: `string` The type of search engine. The configuration value for `type` can be one of `algolia`, `fuse` or `cse`. Default is `fuse`.
 
 contentLength
 : `int` The max index length of the chunked content. Default is `4000`.
@@ -531,7 +531,7 @@ fuse
 
 ---
 
-Based on [algolia][algolia] or [Fuse.js][fusejs], searching is supported in **FixIt** theme.
+Based on [algolia][algolia], [Fuse.js][fusejs] or [Custom Search Engine](#cse), searching is supported in **FixIt** theme.
 
 In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
 
@@ -541,6 +541,36 @@ In order to generate `search.json` for searching, add `search` output file type 
 ```
 
 {{< link href="/guides/algolia-atomic" content="Tips about algolia" card=true >}}
+
+### cse
+
+{{< version 0.3.16 >}}
+
+`map` The Custom Search Engine (CSE) Configuration. See [CSE Support][cse-support].
+
+```toml
+[params]
+  [params.cse]
+    engine = ""
+    resultsPage = "/search/"
+    [params.cse.google]
+      cx = ""
+    [params.cse.bing]
+```
+
+engine
+: `string` The search engine. The configuration value for `engine` can be one of `google`, `bing`.
+
+resultsPage
+: `string` The search results page URL (`layout: search`). Default is `/search/`.
+
+google
+: `map` The [Google Custom Search Engine][google-cse] Configuration.
+
+- cx: `string` The Google Custom Search Engine Context ID.
+
+bing
+: `map` The [Bing Custom Search Engine][bing-cse] Configuration. (Unsupported)
 
 ### header
 
@@ -1812,6 +1842,9 @@ They're easily created via <https://realfavicongenerator.net/>.
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
+[cse-support]: {{< relref path="/guides/cse-support" >}}
+[google-cse]: https://programmablesearchengine.google.com/
+[bing-cse]: https://www.customsearch.ai/
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
