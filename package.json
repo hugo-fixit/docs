@@ -23,7 +23,7 @@
     "algolia": "atomic-algolia",
     "fix:md": "autocorrect content --fix && markdownlint-cli2 \"content/**/*.md\" --fix",
     "lint:md": "autocorrect content --lint && markdownlint-cli2 \"content/**/*.md\"",
-    "prepare": "husky install",
+    "prepare": "husky",
     "build": "hugo --gc --minify --logLevel info",
     "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory -O",
     "server:production": "npm run server -- -e production",
