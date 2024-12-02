@@ -286,6 +286,8 @@ Next, taking the [component-projects] component as an example, we will introduce
     [params]
     [params.customPartials]
       head = []
+      menuDesktop = []
+      menuMobile = []
       profile = []
       aside = []
       comment = []

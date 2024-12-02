@@ -755,6 +755,8 @@ disableThemeInject = false
     "inject/component-projects.html",
     "inject/shortcode-rewards.html",
   ]
+  menuDesktop = []
+  menuMobile = []
   profile = [
     "custom/profile.html",
   ]

@@ -286,6 +286,8 @@ li[data-task='tip'] {
     [params]
     [params.customPartials]
       head = []
+      menuDesktop = []
+      menuMobile = []
       profile = []
       aside = []
       comment = []

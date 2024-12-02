@@ -63,6 +63,8 @@ Custom partials must be stored in the `/layouts/partials/` directory.
 [params]
   [params.customPartials]
     head = []
+    menuDesktop = []
+    menuMobile = []
     profile = []
     aside = []
     comment = []

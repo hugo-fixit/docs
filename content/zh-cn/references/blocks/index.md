@@ -63,6 +63,8 @@ cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
 [params]
   [params.customPartials]
     head = []
+    menuDesktop = []
+    menuMobile = []
     profile = []
     aside = []
     comment = []
