@@ -5,3 +5,4 @@ use ../FixIt
 use ../component-projects
 use ../shortcode-caniuse
 use ../shortcode-rewards
+use ../cmpt-translate

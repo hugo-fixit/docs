@@ -6,6 +6,8 @@
 [[imports]]
   path = "github.com/hugo-fixit/FixIt"
 [[imports]]
+  path = "github.com/hugo-fixit/cmpt-translate"
+[[imports]]
   path = "github.com/hugo-fixit/component-projects"
 [[imports]]
   path = "github.com/hugo-fixit/shortcode-caniuse"

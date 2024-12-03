@@ -755,8 +755,12 @@ disableThemeInject = false
     "inject/component-projects.html",
     "inject/shortcode-rewards.html",
   ]
-  menuDesktop = []
-  menuMobile = []
+  menuDesktop = [
+    'inject/translate-menu-desktop.html',
+  ]
+  menuMobile = [
+    'inject/translate-menu-mobile.html',
+  ]
   profile = [
     "custom/profile.html",
   ]
@@ -768,6 +772,7 @@ disableThemeInject = false
   widgets = []
   assets = [
     "custom/use-assets.html",
+    "inject/cmpt-translate.html",
     "inject/shortcode-caniuse.html",
   ]
   postFooterBefore = []
@@ -1244,6 +1249,30 @@ disableThemeInject = false
   ]
   [projectsAdapters.params]
     hiddenFromHomePage = true
+
+# Auto translation configuration
+# See: https://github.com/xnx3/translate/
+[autoTranslate]
+  enable = true
+  # The translation service provider, ['client.edge', 'translate.service']
+  # See: https://translate.zvo.cn/43086.html
+  service = 'client.edge'
+  # List of language ID to translate to, e.g. ["english", "chinese_simplified", "chinese_traditional", ...]
+  # See the full language list: https://api.translate.zvo.cn/language.json
+  languages = [
+    'english',
+    'chinese_simplified',
+    'chinese_traditional',
+  ]
+  # Element IDs that needs to be ignored for translation
+  ignoreID = []
+  # Class names that need to be ignored for translation
+  ignoreClass = []
+  # Tag names that need to be ignored for translation
+  ignoreTag = ['title']
+  # Whether to detect the local language
+  # If your site itself is multilingual in Hugo, it is not recommended to enable this feature!
+  detectLocalLanguage = false
 
 # FixIt Docs config
 [docs]
