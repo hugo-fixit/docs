@@ -28,7 +28,7 @@
     "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory -O",
     "server:production": "npm run server -- -e production",
     "server:development": "cross-env HUGO_MODULE_WORKSPACE=hugo.work npm run server -- --ignoreVendorPaths \"**\"",
-    "update:theme": "hugo mod get -u github.com/hugo-fixit/FixIt@dev && hugo mod tidy"
+    "update": "hugo mod get -u && hugo mod tidy"
   },
   "devDependencies": {
     "atomic-algolia": "^0.3.19",
