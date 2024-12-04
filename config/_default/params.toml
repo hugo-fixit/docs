@@ -756,10 +756,10 @@ disableThemeInject = false
     "inject/shortcode-rewards.html",
   ]
   menuDesktop = [
-    'inject/translate-menu-desktop.html',
+    "inject/translate-menu-desktop.html",
   ]
   menuMobile = [
-    'inject/translate-menu-mobile.html',
+    "inject/translate-menu-mobile.html",
   ]
   profile = [
     "custom/profile.html",
