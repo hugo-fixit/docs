@@ -1264,6 +1264,10 @@ disableThemeInject = false
     'chinese_simplified',
     'chinese_traditional',
     'french',
+    'russian',
+    'spanish',
+    'hindi',
+    # 'arabic', # 阿拉伯语阅读顺序体验不佳
   ]
   # Element IDs that needs to be ignored for translation
   ignoreID = []
