@@ -509,6 +509,15 @@ To override these values, create a new file in your local I18n folder `i18n/<lan
 
 By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):][pulls] to the theme!
 
+### Auto Translation
+
+With the [Auto Translation][hugo-fixit/cmpt-translate] component, you can automatically translate a single-language site into multiple languages with minimal configuration.
+
+![Auto Translate](auto-translate.gif 'Auto Translate to Multiple Languages')
+
+> [!TIP]
+> This is an additional theme component, please refer to [hugo-fixit/cmpt-translate].
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
@@ -529,3 +538,4 @@ By the way, as these translations could be used by other people, please take the
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
+[hugo-fixit/cmpt-translate]: /ecosystem/hugo-fixit/cmpt-translate/

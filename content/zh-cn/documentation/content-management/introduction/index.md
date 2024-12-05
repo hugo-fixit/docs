@@ -509,7 +509,16 @@ defaultContentLanguage = "zh-cn"
 
 另外，由于你的翻译可能会帮助到其他人，请花点时间通过 [创建一个 PR :(fa-solid fa-code-branch fa-fw):][pulls] 来贡献主题翻译，谢谢！
 
-<!-- footnote reference definition -->
+### 自动翻译
+
+通过 [自动翻译][hugo-fixit/cmpt-translate] 组件，你只需少量的配置，就可以使单语言站点自动翻译为多种语言。
+
+![自动翻译](/documentation/content-management/introduction/auto-translate.gif '自动翻译为多种语言')
+
+> [!TIP]
+> 这是一个额外的主题组件，具体请查看 [hugo-fixit/cmpt-translate]。
+
+<!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
@@ -529,3 +538,4 @@ defaultContentLanguage = "zh-cn"
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
+[hugo-fixit/cmpt-translate]: /ecosystem/hugo-fixit/cmpt-translate/
