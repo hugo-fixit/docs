@@ -509,9 +509,9 @@ To override these values, create a new file in your local I18n folder `i18n/<lan
 
 By the way, as these translations could be used by other people, please take the time to propose a translation by [making a PR :(fa-solid fa-code-branch fa-fw):][pulls] to the theme!
 
-### Auto Translation
+### Automatic Translation
 
-With the [Auto Translation][hugo-fixit/cmpt-translate] component, you can automatically translate a single-language site into multiple languages with minimal configuration.
+With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automatically translate a single-language site into multiple languages with minimal configuration.
 
 ![Auto Translate](auto-translate.gif 'Auto Translate to Multiple Languages')
 
