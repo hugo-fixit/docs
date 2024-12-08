@@ -1235,7 +1235,7 @@ disableThemeInject = false
 # Content adapters config for component projects
 # https://github.com/hugo-fixit/component-projects
 [projectsAdapters]
-  enable = false
+  enable = true
   # Whether to show only public repos
   onlyPublic = true
   # Default categories and collections

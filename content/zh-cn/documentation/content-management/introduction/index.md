@@ -524,7 +524,7 @@ defaultContentLanguage = "zh-cn"
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [cse-support]: {{< relref path="/guides/cse-support" >}}
-[hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/
+[hugo-fixit/component-projects]: /zh-cn/ecosystem/hugo-fixit/component-projects/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
@@ -538,4 +538,4 @@ defaultContentLanguage = "zh-cn"
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
-[hugo-fixit/cmpt-translate]: /ecosystem/hugo-fixit/cmpt-translate/
+[hugo-fixit/cmpt-translate]: /zh-cn/ecosystem/hugo-fixit/cmpt-translate/
