@@ -1235,7 +1235,7 @@ disableThemeInject = false
 # Content adapters config for component projects
 # https://github.com/hugo-fixit/component-projects
 [projectsAdapters]
-  enable = true
+  enable = false
   # Whether to show only public repos
   onlyPublic = true
   # Default categories and collections
@@ -1269,14 +1269,20 @@ disableThemeInject = false
     'hindi',
     # 'arabic', # 阿拉伯语阅读顺序体验不佳
   ]
-  # Element IDs that needs to be ignored for translation
+  # Element IDs that needs to be ignored for translation, e.g. ["comment", ...]
   ignoreID = []
-  # Class names that need to be ignored for translation
+  # Class names that need to be ignored for translation, e.g. ["post-category", ...]
   ignoreClass = []
-  # Tag names that need to be ignored for translation
-  ignoreTag = ['title']
+  # Tag names that need to be ignored for translation, e.g. ["title", ...]
+  ignoreTag = []
+  # Texts that need to be ignored for translation, e.g. ["FixIt", "Lruihao", ...]
+  ignoreText = [
+    'Lruihao',
+  ]
   # Whether to detect the local language
   detectLocalLanguage = true
+  # translate.js CDN
+  cdn = ""
 
 # FixIt Docs config
 [docs]

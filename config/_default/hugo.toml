@@ -18,12 +18,7 @@ baseURL = "http://localhost:1313"
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 # 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "en"
-# language code ["en", "zh-CN", "fr", "pl", ...]
-# 网站语言，仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
-# language name ["English", "简体中文", "Français", "Polski", ...]
-# 语言名称 ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
+# disableLanguages = ["zh-cn"]
 # whether to include Chinese/Japanese/Korean
 # 是否包括中日韩文字
 hasCJKLanguage = false
