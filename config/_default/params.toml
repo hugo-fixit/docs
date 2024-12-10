@@ -1267,6 +1267,9 @@ disableThemeInject = false
     'russian',
     'spanish',
     'hindi',
+    'german',
+    'korean',
+    'japanese',
     # 'arabic', # 阿拉伯语阅读顺序体验不佳
   ]
   # Element IDs that needs to be ignored for translation, e.g. ["comment", ...]
