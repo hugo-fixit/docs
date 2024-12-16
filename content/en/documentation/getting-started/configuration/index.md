@@ -1700,8 +1700,8 @@ c4u
         appKey = ""
         placeholder = ""
         avatar = "mp"
-        meta = ""
-        requiredFields = ""
+        meta = ['nick','mail','link']
+        requiredFields = []
         pageSize = 10
         lang = ""
         visitor = true
