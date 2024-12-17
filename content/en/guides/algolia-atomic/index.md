@@ -140,7 +140,8 @@ One more thing, you can automate the process of uploading `search.json` to algol
           - name: Setup Hugo
             uses: peaceiris/actions-hugo@v2
             with:
-              hugo-version: "latest"
+              # use the environment variable HUGO_VERSION as the hugo version, if not set, use `latest`.
+              hugo-version: ${{ vars.HUGO_VERSION || 'latest' }}
               extended: true
 
           - name: Build

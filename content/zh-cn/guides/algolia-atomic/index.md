@@ -137,7 +137,8 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
           - name: Setup Hugo
             uses: peaceiris/actions-hugo@v2
             with:
-              hugo-version: "latest"
+              # use the environment variable HUGO_VERSION as the hugo version, if not set, use `latest`.
+              hugo-version: ${{ vars.HUGO_VERSION || 'latest' }}
               extended: true
 
           - name: Build
