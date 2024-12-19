@@ -488,7 +488,7 @@ enable
 : `bool` Whether to enable search. Default is `false`.
 
 type
-: `string` The type of search engine. The configuration value for `type` can be one of `algolia`, `fuse` or `cse`. Default is `fuse`.
+: `string` The type of search engine. The configuration value for `type` can be one of `algolia`, `fuse`, `cse` or `post-chat`. Default is `fuse`.
 
 contentLength
 : `int` The max index length of the chunked content. Default is `4000`.
@@ -531,7 +531,7 @@ fuse
 
 ---
 
-Based on [algolia][algolia], [Fuse.js][fusejs] or [Custom Search Engine](#cse), searching is supported in **FixIt** theme.
+Based on [algolia][algolia], [Fuse.js][fusejs], [Custom Search Engine](#cse) or [PostChat](#postchat), searching is supported in **FixIt** theme.
 
 In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
 
@@ -1436,6 +1436,72 @@ color
 theme
 : `string` The theme of pace. All available themes: `barber-shop`, `big-counter`, `bounce`, `center-atom`, `center-circle`, `center-radar`, `center-simple`, `corner-indicator`, `fill-left`, `flash`, `flat-top`, `loading-bar`, `mac-osx`, `material`, `minimal`. Default is `minimal`.
 
+### postChat
+
+{{< version 0.3.17 >}}
+
+`map` [PostChat][postchat] AI Configuration.
+
+> [!NOTE]
+> The `key` is required for the `postChat` to work. You can get the key from the [PostChat][postchat] website.
+
+```toml
+[params]
+  # PostChat: https://postchat.zhheo.com/addCode.html
+  [params.postChat]
+    enable = true
+    key = ""
+    # How users initiate chats: ["iframe", "magic"]
+    userMode = "magic"
+    addButton = true
+    defaultInput = false
+    left = ""
+    bottom = ""
+    width = ""
+    height = ""
+    fill = ""
+    backgroundColor = "#FF735A"
+    upLoadWeb = true
+    showInviteLink = true
+    userTitle = "Cell+"
+    userDesc = ""
+    # dom container to be blacked out, e.g. [".aplayer"]
+    blackDom = []
+    # Only for iframe mode
+    frameWidth = ""     # e.g. "375px"
+    frameHeight = ""    # e.g. "600px"
+    # only for magic mode
+    userIcon = ""
+    defaultChatQuestions = []
+    defaultSearchQuestions = []
+```
+
+### postSummary
+
+{{< version 0.3.17 >}}
+
+`map` PostSummary AI Configuration.
+
+> [!NOTE]
+> The `key` is required for the `postSummary` to work. You can get the key from the [PostChat][postchat] website.\
+> _If you set `params.postChat.key`, you don't need to set `params.postSummary.key`._
+
+```toml
+[params]
+  # PostSummary: https://postchat.zhheo.com/summary.html
+  [params.postSummary]
+    enable = true
+    key = ""
+    title = ""
+    # themes options: ["", "simple", "yanzhi"]
+    theme = ""
+    postURL = ""
+    blacklist = ""
+    wordLimit = 1000
+    typingAnimate = true
+    beginningText = ""
+```
+
 ### customPartials
 
 {{< version 0.3.12 >}}
@@ -1852,6 +1918,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [vercount]: https://vercount.one/
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
+[postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

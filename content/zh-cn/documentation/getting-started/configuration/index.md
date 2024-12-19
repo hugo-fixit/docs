@@ -490,7 +490,7 @@ enable
 : `bool` 是否启用搜索。
 
 type
-: `string` 搜索引擎的类型，可选值：`algolia`、`fuse` 或 `cse`，默认：`fuse`。
+: `string` 搜索引擎的类型，可选值：`algolia`、`fuse`、`cse` 或 `post-chat`，默认：`fuse`。
 
 contentLength
 : `int` 文章内容最长索引长度。
@@ -533,7 +533,7 @@ fuse
 
 ---
 
-基于 [algolia][algolia]、[Fuse.js][fusejs] 或者 [自定义搜索引擎](#cse)，**FixIt** 主题支持搜索功能。
+基于 [algolia][algolia]、[Fuse.js][fusejs]、[自定义搜索引擎](#cse) 或者 [PostChat](#postchat)，**FixIt** 主题支持搜索功能。
 
 为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
@@ -1435,6 +1435,72 @@ color
 theme
 : `string` 进度条主题，可选值：`barber-shop`、`big-counter`、`bounce`、`center-atom`、`center-circle`、`center-radar`、`center-simple`、`corner-indicator`、`fill-left`、`flash`、`flat-top`、`loading-bar`、`mac-osx`、`material`、`minimal`，默认：`minimal`。
 
+### postChat
+
+{{< version 0.3.17 >}}
+
+`map` [PostChat][postchat] AI 配置。
+
+> [!NOTE]
+> `key` 是 `postChat` 功能所必需的。你可以从 [PostChat][postchat] 网站获取该密钥。
+
+```toml
+[params]
+  # PostChat: https://postchat.zhheo.com/addCode.html
+  [params.postChat]
+    enable = true
+    key = ""
+    # 用户如何发起聊天：["iframe", "magic"]
+    userMode = "magic"
+    addButton = true
+    defaultInput = false
+    left = ""
+    bottom = ""
+    width = ""
+    height = ""
+    fill = ""
+    backgroundColor = ""
+    upLoadWeb = true
+    showInviteLink = true
+    userTitle = "Cell+"
+    userDesc = ""
+    # 需要屏蔽掉的 DOM 容器，例如：[".aplayer"]
+    blackDom = []
+    # 仅适用于 iframe 模式
+    frameWidth = ""     # 例如："375px"
+    frameHeight = ""    # 例如："600px"
+    # 仅适用于 magic 模式
+    userIcon = ""
+    defaultChatQuestions = []
+    defaultSearchQuestions = []
+```
+
+### postSummary
+
+{{< version 0.3.17 >}}
+
+`map` PostSummary AI 配置。
+
+> [!NOTE]
+> `key` 是 `postSummary` 功能所必需的。你可以从 [PostChat][postchat] 网站获取该密钥。\
+> _如果你设置了 `params.postChat.key`，则无需设置 `params.postSummary.key`。_
+
+```toml
+[params]
+  # PostSummary: https://postchat.zhheo.com/summary.html
+  [params.postSummary]
+    enable = true
+    key = ""
+    title = ""
+    # 主题选项：["", "simple", "yanzhi"]
+    theme = ""
+    postURL = ""
+    blacklist = ""
+    wordLimit = 1000
+    typingAnimate = true
+    beginningText = ""
+```
+
 ### customPartials
 
 {{< version 0.3.12 >}}
@@ -1851,6 +1917,7 @@ c4u
 [vercount]: https://vercount.one/
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
+[postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

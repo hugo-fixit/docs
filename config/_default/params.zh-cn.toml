@@ -17,6 +17,23 @@ description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"
   [cse.google]
     cx = "83ffebf0680ff4971"
 
+[postChat]
+  userDesc = "如果你对 FixIt 有任何疑问，可以来问我哦～"
+  defaultChatQuestions = [
+    "怎么安装 FixIt 主题？",
+    "FixIt 主题有哪些功能？",
+    "FixIt 主题生态系统",
+  ]
+  defaultSearchQuestions = [
+    "快速上手",
+    "配置 FixIt",
+    "内容管理",
+    "进阶使用"
+  ]
+
+[postSummary]
+  title = "AI 摘要"
+
 [header]
   [header.subtitle]
     name = "Hugo 主题"

@@ -14,6 +14,23 @@
   [cse.google]
     cx = "27010f0a2633d4da4"
 
+[postChat]
+  userDesc = "If you have any questions about FixIt, you can ask me~"
+  defaultChatQuestions = [
+    "How to install the FixIt theme?",
+    "What features does the FixIt theme have?",
+    "FixIt theme ecosystem"
+  ]
+  defaultSearchQuestions = [
+    "Quick Start",
+    "Configure FixIt",
+    "Content Management",
+    "Advanced Usage"
+  ]
+
+[postSummary]
+  title = "AI Summary"
+
 [header]
   [header.subtitle]
     name = "Theme for Hugo"
