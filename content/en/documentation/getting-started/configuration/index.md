@@ -1449,10 +1449,10 @@ theme
 [params]
   # PostChat: https://postchat.zhheo.com/addCode.html
   [params.postChat]
-    enable = true
+    enable = false
     key = ""
     # How users initiate chats: ["iframe", "magic"]
-    userMode = "magic"
+    userMode = "iframe"
     addButton = true
     defaultInput = false
     left = ""
@@ -1460,10 +1460,10 @@ theme
     width = ""
     height = ""
     fill = ""
-    backgroundColor = "#FF735A"
+    backgroundColor = ""
     upLoadWeb = true
     showInviteLink = true
-    userTitle = "Cell+"
+    userTitle = ""
     userDesc = ""
     # dom container to be blacked out, e.g. [".aplayer"]
     blackDom = []
@@ -1490,7 +1490,7 @@ theme
 [params]
   # PostSummary: https://postchat.zhheo.com/summary.html
   [params.postSummary]
-    enable = true
+    enable = false
     key = ""
     title = ""
     # themes options: ["", "simple", "yanzhi"]

@@ -1448,10 +1448,10 @@ theme
 [params]
   # PostChat: https://postchat.zhheo.com/addCode.html
   [params.postChat]
-    enable = true
+    enable = false
     key = ""
     # 用户如何发起聊天：["iframe", "magic"]
-    userMode = "magic"
+    userMode = "iframe"
     addButton = true
     defaultInput = false
     left = ""
@@ -1462,7 +1462,7 @@ theme
     backgroundColor = ""
     upLoadWeb = true
     showInviteLink = true
-    userTitle = "Cell+"
+    userTitle = ""
     userDesc = ""
     # 需要屏蔽掉的 DOM 容器，例如：[".aplayer"]
     blackDom = []
@@ -1489,7 +1489,7 @@ theme
 [params]
   # PostSummary: https://postchat.zhheo.com/summary.html
   [params.postSummary]
-    enable = true
+    enable = false
     key = ""
     title = ""
     # 主题选项：["", "simple", "yanzhi"]
