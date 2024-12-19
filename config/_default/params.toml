@@ -500,6 +500,7 @@ disableThemeInject = false
 # syntax: <type> = <icon>
 [admonition]
   ban = "fa-solid fa-ban"
+  sponsor = "fa-solid fa-hand-holding-usd"
 
 # FixIt 0.3.14 | NEW Task lists custom config
 # FixIt 0.3.14 | 新增 自定义任务列表配置

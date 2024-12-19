@@ -33,13 +33,37 @@ All feedback is welcome! Head over to the [discussions][discussions], [Pull requ
 | [Discussions][discussions]  | GitHub discussion forum         |
 | [FixIt WeChat group][wx-mp] | Follow and reply "FixIt" to get |
 | [FixIt QQ group][qq-group]  | QQ group: `814031017`           |
-| [Hugo FixIt Planet][zsxq]   | Paid knowledge Planet[^1]       |
+| [Hugo FixIt Planet][zsxq]   | Paid knowledge Planet           |
 
-<!-- footnote reference definition -->
-[^1]: Knowledge Planet is a paid community platform for knowledge sharing and communication. If you need more help and support, you can join our Knowledge Planet. ([Newcomer Coupon～][promotion_coupon])
+<!-- ## 💰 Paid support {#paid-support} -->
+
+## 💗 Sponsor {#sponsor}
+
+This is a project that relies on your support. Even a small donation can help us maintain the project in the long run.
+
+> [!Sponsor]+ The FixIt project is personally funded by the author, with annual expenses as follows:
+>
+> - **Domain fee**: ¥ 38 CNY
+> - **PostChat AI**: ¥ 128 CNY
+> - **Enterprise translation channel**: ¥ 50 CNY/month
+> - **Total**: ¥ 788 CNY/year
+>
+> <small class="text-secondary">Please click the author's [invitation link][postchat] to get the PostChat Key. Thanks for your support!</small><br>
+> <small class="text-secondary">If you need to use the translate.js enterprise translation channel, please contact the author for a discount~</small>
+
+Thanks to the following sponsors for their support:
+
+> [!Sponsor]+ Sponsoring
+>
+> - [translate.js] Sponsoring [Enterprise Translation Channel][enterprise-translation-channel].
+
+We hope for your support. If you enjoy the theme, please consider buying me a coffee ☕️.
+
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love, Thanks all! ❤️" mode="fixed" >}}
+{{< reward-log >}}
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html -->
 [fixit]: https://github.com/hugo-fixit/FixIt
 [author]: https://github.com/Lruihao
 [discussions]: https://github.com/orgs/hugo-fixit/discussions
@@ -49,3 +73,6 @@ All feedback is welcome! Head over to the [discussions][discussions], [Pull requ
 [wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
 [zsxq]: {{< param planet.invite >}}
 [promotion_coupon]: {{< param planet.promotion_coupon >}}
+[postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
+[translate.js]: https://github.com/xnx3/translate
+[enterprise-translation-channel]: https://translate.zvo.cn/4087.html

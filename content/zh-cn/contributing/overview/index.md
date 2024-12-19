@@ -9,6 +9,8 @@ resources:
 pageStyle: wide
 related:
   enable: false
+reward:
+  position: before
 description: Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你们的支持！
 keywords: 
   - hugo-fixit
@@ -40,9 +42,6 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 
 {{< link "../components" "🧩 开发组件" "为 Hugo FixIt 主题组件的开发做贡献。" true "fa-solid fa-puzzle-piece" >}}
 
-## 赞助支持
+## 赞助支持 {#sponsor}
 
 如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。
-
-{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ 为爱发电，谢谢大家！❤️" mode="fixed" >}}
-{{< reward-log >}}

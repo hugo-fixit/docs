@@ -28,18 +28,43 @@ _~作者：[Lruihao][author]~_
 
 所有的反馈都是欢迎的！详见 [Discussions][discussions]、[Pull requests][pulls] 和 [Issues][issues]。
 
-| 官方社区                           | 说明                            |
-| :--------------------------------- | :------------------------------ |
-| [Discussions][discussions]         | GitHub 讨论区                   |
-| [FixIt 主题交流群（微信）][wx-mp]  | 关注「菠菜眾長」回复“FixIt”获取 |
-| [FixIt 主题交流群（QQ）][qq-group] | QQ 群：`814031017`              |
-| [Hugo FixIt 星球][zsxq]            | 付费知识星球[^1]                |
+| 官方社区                           | 说明                                             |
+| :--------------------------------- | :----------------------------------------------- |
+| [Discussions][discussions]         | GitHub 讨论区                                    |
+| [FixIt 主题交流群（微信）][wx-mp]  | 关注「菠菜眾長」回复“FixIt”获取                  |
+| [FixIt 主题交流群（QQ）][qq-group] | QQ 群：`814031017`                               |
+| [Hugo FixIt 星球][zsxq]            | 付费知识星球（[新人优惠券～][promotion_coupon]） |
 
-<!-- footnote reference definition -->
-[^1]: 知识星球是一个付费的知识分享和交流社区平台。如果你需要更多的帮助和支持，可以加入我们的知识星球。（[新人优惠券～][promotion_coupon]）
+<!-- ## 💰 有偿支持 {#paid-support} -->
 
+## 💗 赞助支持 {#sponsor}
+<!-- markdownlint-disable search-replace -->
+这是一个为爱发电的项目，诚挚请求您的支持。即使是小额捐助，也能帮助我们维持项目的长期运转。
+
+> [!Sponsor]+ 目前，FixIt 项目的运营费用由作者个人承担，每年的支出明细如下：
+>
+> - **域名费用**：¥ 38 CNY
+> - **PostChat AI**：¥ 128 CNY
+> - **企业级翻译通道**：¥ 50 CNY * 12 个月
+> - **总计**：约 ¥ 788 CNY
+>
+> <small class="text-secondary">如果您需要使用 PostChat 服务，请考虑点击作者的 [邀请链接][postchat] 获取 PostChat Key，感谢您的支持！</small><br>
+> <small class="text-secondary">如果您需要使用 translate.js 企业级翻译通道，请联系作者获取优惠～</small>
+
+感谢以下赞助商的支持：
+
+> [!Sponsor]+ 赞助中
+>
+> - [translate.js] 赞助 [企业级翻译通道][enterprise-translation-channel]
+
+随着项目规模扩大，我希望能得到您的支持，或者如果您喜爱这个主题，也可以考虑给我买杯咖啡 ☕️。
+
+{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ 为爱发电，谢谢大家！❤️" mode="fixed" >}}
+{{< reward-log >}}
+
+<!-- markdownlint-enable search-replace -->
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file reference-links-images no-inline-html -->
 [fixit]: https://github.com/hugo-fixit/FixIt
 [author]: https://github.com/Lruihao
 [discussions]: https://github.com/orgs/hugo-fixit/discussions
@@ -49,3 +74,6 @@ _~作者：[Lruihao][author]~_
 [wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
 [zsxq]: {{< param planet.invite >}}
 [promotion_coupon]: {{< param planet.promotion_coupon >}}
+[postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
+[translate.js]: https://github.com/xnx3/translate
+[enterprise-translation-channel]: https://translate.zvo.cn/4087.html

@@ -10,6 +10,8 @@ resources:
 pageStyle: wide
 related:
   enable: false
+reward:
+  position: before
 description: Hugo FixIt is eager for enthusiasm and participation from the open-source community. We need your support!
 keywords: 
   - hugo-fixit
@@ -44,6 +46,3 @@ Welcome to join Hugo FixIt development and maintenance, contact us via `fixit@lr
 ## Sponsor
 
 If you enjoy the theme, please consider buying me a coffee ☕️.
-
-{{< reward wechatpay="/images/wechatpay.jpg" alipay="/images/alipay.jpg" comment="⚡️ Sponsor for Love, Thanks all! ❤️" mode="fixed" >}}
-{{< reward-log >}}
