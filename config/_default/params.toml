@@ -1298,6 +1298,10 @@ disableThemeInject = false
   [projectsAdapters.params]
     hiddenFromHomePage = true
     hiddenFromFeed = true
+    [projectsAdapters.params.postChat]
+      upLoadWeb = true
+    [projectsAdapters.params.postSummary]
+      enable = true
 
 # Auto translation configuration
 # See: https://github.com/xnx3/translate/
