@@ -777,6 +777,7 @@ disableThemeInject = false
   wordLimit = 5000
   typingAnimate = true
   beginningText = ""
+  loadingText = false
 
 # FixIt 0.3.10 | NEW Global Feed config for RSS, Atom and JSON feed.
 # FixIt 0.3.10 | 新增 全局 Feed 配置用于 RSS, Atom 和 JSON feed。
