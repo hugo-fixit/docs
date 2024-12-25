@@ -17,6 +17,9 @@ resources:
     src: images/components-cover.webp
 autoTranslate:
   onlyLocalLang: false
+cascade:
+  params:
+    type: posts
 menu:
   main:
     identifier: ecosystem
