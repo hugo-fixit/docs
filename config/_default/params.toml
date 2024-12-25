@@ -1351,7 +1351,7 @@ disableThemeInject = false
 
 # FixIt Docs config
 [docs]
-  minHugoVersion = "0.134.1"
+  minHugoVersion = "0.140.0"
 [planet]
   invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF
   promotion_coupon = "https://t.zsxq.com/BQcpe"
