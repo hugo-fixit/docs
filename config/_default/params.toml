@@ -824,6 +824,12 @@ disableThemeInject = false
     "inject/cmpt-translate.html",
     "inject/shortcode-caniuse.html",
   ]
+  postTocBefore = [
+    "custom/follow-me.html",
+  ]
+  postTocAfter = []
+  postContentBefore = []
+  postContentAfter = []
   postFooterBefore = []
   postFooterAfter = []
 

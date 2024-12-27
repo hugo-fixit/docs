@@ -37,19 +37,23 @@ cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
 
 你可以通过 `define` 来实现这些块。
 
-| 块名称                       | 描述               | 位置                                   |
-| :--------------------------- | :----------------- | :------------------------------------- |
-| `custom-head`                | 头部自定义块       | `layouts/_default/baseof.html`         |
-| `custom-menu:desktop`        | 桌面菜单自定义块   | `layouts/partials/header.html`         |
-| `custom-menu:mobile`         | 移动菜单自定义块   | `layouts/partials/header.html`         |
-| `custom-profile`             | 首页自定义块       | `layouts/partials/home/profile.html`   |
-| `custom-aside`               | 侧栏自定义块       | `layouts/posts/single.html`            |
-| `custom-comment`             | 评论系统自定义块   | `layouts/partials/single/comment.html` |
-| `custom-footer`              | 页脚自定义块       | `layouts/partials/footer.html`         |
-| `custom-widgets`             | 小部件自定义块     | `layouts/partials/widgets.html`        |
-| `custom-assets`              | 资源自定义块       | `layouts/partials/assets.html`         |
-| `custom-post__footer:before` | 文章页脚前自定义块 | `layouts/posts/single.html`            |
-| `custom-post__footer:after`  | 文章页脚后自定义块 | `layouts/posts/single.html`            |
+| 块名称                        | 描述                 | 位置                                   |
+| :---------------------------- | :------------------- | :------------------------------------- |
+| `custom-head`                 | 头部自定义块         | `layouts/_default/baseof.html`         |
+| `custom-menu:desktop`         | 桌面菜单自定义块     | `layouts/partials/header.html`         |
+| `custom-menu:mobile`          | 移动菜单自定义块     | `layouts/partials/header.html`         |
+| `custom-profile`              | 首页自定义块         | `layouts/partials/home/profile.html`   |
+| `custom-aside`                | 侧栏自定义块         | `layouts/posts/single.html`            |
+| `custom-comment`              | 评论系统自定义块     | `layouts/partials/single/comment.html` |
+| `custom-footer`               | 页脚自定义块         | `layouts/partials/footer.html`         |
+| `custom-widgets`              | 小部件自定义块       | `layouts/partials/widgets.html`        |
+| `custom-assets`               | 资源自定义块         | `layouts/partials/assets.html`         |
+| `custom-post__toc:before`     | 文章页目录前自定义块 | `layouts/posts/single.html`            |
+| `custom-post__toc:after`      | 文章页目录后自定义块 | `layouts/posts/single.html`            |
+| `custom-post__content:before` | 文章页内容前自定义块 | `layouts/posts/single.html`            |
+| `custom-post__content:after`  | 文章页内容后自定义块 | `layouts/posts/single.html`            |
+| `custom-post__footer:before`  | 文章页脚前自定义块   | `layouts/posts/single.html`            |
+| `custom-post__footer:after`   | 文章页脚后自定义块   | `layouts/posts/single.html`            |
 
 ## 主题配置
 
@@ -71,6 +75,10 @@ cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
     footer = []
     widgets = []
     assets = []
+    postTocBefore = []
+    postTocAfter = []
+    postContentBefore = []
+    postContentAfter = []
     postFooterBefore = []
     postFooterAfter = []
 ```

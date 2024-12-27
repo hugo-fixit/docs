@@ -48,6 +48,10 @@ You can implement these blocks through `define`.
 | `custom-footer`              | Footer custom block             | `layouts/partials/footer.html`         |
 | `custom-widgets`             | Widgets custom block            | `layouts/partials/widgets.html`        |
 | `custom-assets`              | Assets custom block             | `layouts/partials/assets.html`         |
+| `custom-post__toc:before`    | Custom block before post toc    | `layouts/posts/single.html`            |
+| `custom-post__toc:after`     | Custom block after post toc     | `layouts/posts/single.html`            |
+| `custom-post__content:before`| Custom block before post content| `layouts/posts/single.html`            |
+| `custom-post__content:after` | Custom block after post content | `layouts/posts/single.html`            |
 | `custom-post__footer:before` | Custom block before post footer | `layouts/posts/single.html`            |
 | `custom-post__footer:after`  | Custom block after post footer  | `layouts/posts/single.html`            |
 
@@ -71,6 +75,10 @@ Custom partials must be stored in the `/layouts/partials/` directory.
     footer = []
     widgets = []
     assets = []
+    postTocBefore = []
+    postTocAfter = []
+    postContentBefore = []
+    postContentAfter = []
     postFooterBefore = []
     postFooterAfter = []
 ```

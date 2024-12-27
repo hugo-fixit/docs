@@ -296,6 +296,10 @@ li[data-task='tip'] {
       assets = [
         "inject/component-projects.html",
       ]
+      postTocBefore = []
+      postTocAfter = []
+      postContentBefore = []
+      postContentAfter = []
       postFooterBefore = []
       postFooterAfter = []
     ```

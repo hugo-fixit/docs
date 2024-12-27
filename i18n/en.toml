@@ -17,3 +17,5 @@ breadcrumbTitle = "Basics Syntax"
 breadcrumbTitle = "Extended Syntax"
 # === Translations for pages ===
 
+[follow]
+other = "Follow"

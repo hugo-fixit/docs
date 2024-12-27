@@ -22,3 +22,6 @@ breadcrumbTitle = "扩展语法"
 [admonition]
 ban = "禁止"
 # === shortcodes/admonition.html ===
+
+[follow]
+other = "关注"

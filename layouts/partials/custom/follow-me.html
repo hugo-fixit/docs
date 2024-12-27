@@ -1,0 +1,16 @@
+{{- $author := partial "function/get-author-map.html" .Params.author -}}
+{{- $follows := slice 
+  "Lruihao"
+  "hugo-fixit"
+-}}
+
+{{- if in $follows $author.name -}}
+  <div class="follow-container">
+    <a href="{{ $author.link }}" class="author-link" target="_blank">
+      <img src="{{ $author.avatar }}" alt="{{ $author.name }}" class="author-avatar"> {{ $author.name }}
+    </a>
+    <a href="https://github.com/{{ $author.name }}" class="follow-btn" target="_blank">
+      <i class="fa-brands fa-github fa-fw" aria-hidden="true"></i> {{ T "follow" }}
+    </a>
+  </div>
+{{- end -}}

@@ -296,6 +296,10 @@ Next, taking the [component-projects] component as an example, we will introduce
       assets = [
         "inject/component-projects.html",
       ]
+      postTocBefore = []
+      postTocAfter = []
+      postContentBefore = []
+      postContentAfter = []
       postFooterBefore = []
       postFooterAfter = []
     ```
