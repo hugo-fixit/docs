@@ -1340,6 +1340,7 @@ disableThemeInject = false
     'https://github.com/hugo-fixit',
     'https://fixit.lruihao.cn',
     'CSE',
+    'Cell+',
   ]
   # Whether to detect the local language
   detectLocalLanguage = true
