@@ -18,4 +18,5 @@ breadcrumbTitle = "Extended Syntax"
 # === Translations for pages ===
 
 [follow]
-other = "Follow"
+btn = "Follow"
+title = "Follow me on GitHub!"

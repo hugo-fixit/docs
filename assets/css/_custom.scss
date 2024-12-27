@@ -45,6 +45,7 @@
 
             &::before {
               content: '#{$i}';
+              font-weight: 700;
             }
           }
         }
@@ -76,7 +77,9 @@
             50% {
               border-color: var(--timeline-circle-color);
               // 显示序号
-              // color: #358C3C;
+              background-color: var(--timeline-circle-color);
+              color: #fff;
+              // color: var(--timeline-circle-color);
             }
             100% {
               border-color: var(--timeline-color);
@@ -205,38 +208,25 @@
   }
 }
 
+.hr-edge-weak {
+  border: 0;
+  padding-top: 1px;
+  background: linear-gradient(to right, transparent, var(--hr-color, #d0d0d5), transparent);
+}
+
 #toc-auto {
   .follow-container {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid $global-border-color;
-
-    [data-theme='dark'] & {
-      border-color: $global-border-color-dark;
-    }
+    justify-content: space-between;
+    gap: 10px;
+    padding-inline: 10px;
 
     .author-link {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 8px;
       font-weight: 500;
-      color: $single-link-color;
-
-      [data-theme='dark'] & {
-        color: $single-link-color-dark;
-      }
-
-      &:active,
-      &:hover {
-        color: $single-link-hover-color;
-
-        [data-theme='dark'] & {
-          color: $single-link-hover-color-dark;
-        }
-      }
 
       .author-avatar {
         width: 34px;
@@ -249,14 +239,31 @@
       }
     }
     .follow-btn {
-      border: 1px solid #d1d9e0;
-      background-color: #f6f8fa;
+      border: 1px solid var(--follow-btn-border-color, #d1d9e0);
+      background-color: var(--follow-btn-bg-color, #f6f8fa);
       border-radius: 6px;
       padding: 4px 10px;
+      flex-shrink: 0;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--follow-btn-color, #25292e);
 
       [data-theme='dark'] & {
-        border-color: #3d444d;
-        background-color: #2a313c;
+        --follow-btn-color: #d1d7e0;
+        --follow-btn-border-color: #3d444d;
+        --follow-btn-bg-color: #2a313c;
+      }
+
+      &:active,
+      &:hover {
+        --follow-btn-border-color: #d1d9e0;
+        --follow-btn-bg-color: #eff2f5;
+        transition-duration: .1s;
+
+        [data-theme='dark'] & {
+          --follow-btn-border-color: #3d444d;
+          --follow-btn-bg-color: #2f3742;
+        }
       }
     }
   }
