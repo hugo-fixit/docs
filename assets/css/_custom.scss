@@ -258,7 +258,12 @@
       &:hover {
         --follow-btn-border-color: #d1d9e0;
         --follow-btn-bg-color: #eff2f5;
+        --fa-animation-iteration-count: 0;
         transition-duration: .1s;
+
+        i {
+          --fa: "\2b";
+        }
 
         [data-theme='dark'] & {
           --follow-btn-border-color: #3d444d;
