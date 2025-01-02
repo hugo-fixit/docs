@@ -759,7 +759,7 @@ disableThemeInject = false
   frameWidth = ""     # e.g. "375px"
   frameHeight = ""    # e.g. "600px"
   # only for magic mode
-  userIcon = ""
+  userIcon = "https://lruihao.cn/images/avatar.jpg"
   defaultChatQuestions = []
   defaultSearchQuestions = []
 
