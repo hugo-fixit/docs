@@ -143,17 +143,17 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 
 ## CLI
 
+{{< asciinema-embed 697494 >}}
+
 FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站点骨架。它提供了基于 Git 子模块和 Hugo 模块两种方式来快速搭建 Hugo FixIt 站点，并提供了查看 FixIt 主题最新版本的功能。有关更多详细信息，请参阅 [FixIt CLI 文档][fixit-cli]。
 
 ```bash
-npm install -g fixit-cli
-fixit create my-blog
+npx fixit-cli create my-blog
 ```
-
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "提醒" >}}
-CLI 假定你事先了解 Hugo 和 FixIt。如果你是 Hugo 或 FixIt 的新手，我们强烈建议你在使用 CLI 之前先阅读 [主题文档](../..)，不要使用任何脚手架工具。
+CLI 假定你事先了解 Hugo 和 FixIt。如果你是 Hugo 或 FixIt 的新手，我们强烈建议你在使用 CLI 之前先阅读 [主题文档](../)，不要使用任何脚手架工具。
 {{< /admonition >}}
 
 ## 比较

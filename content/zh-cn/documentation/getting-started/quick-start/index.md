@@ -48,6 +48,10 @@ toc:
 
 ## 创建网站
 
+> [!TIP]
+> 接下来的步骤将一步步指导你创建一个 Hugo 网站。\
+> 如果你已经熟悉 Hugo，可以跳过这些步骤，使用 [FixIt CLI][fixit-cli] 来快速创建一个网站。
+
 ### 命令
 
 验证你是否安装了 Hugo v{{< param docs.minHugoVersion >}} 或更高版本。
@@ -237,6 +241,7 @@ hugo
 [deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
+[fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
 [installation]: {{< relref path="/documentation/installation" >}}
 [getting-started]: {{< relref path="/documentation/getting-started" >}}
 [configuration]: {{< relref path="/documentation/getting-started/configuration" >}}

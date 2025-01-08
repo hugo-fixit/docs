@@ -143,17 +143,18 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 
 ## CLI
 
+{{< asciinema-embed 697494 >}}
+
 FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hugo FixIt site skeleton. It provides two ways to quickly scaffold Hugo FixIt site based on Git Submodule or Hugo Module, and provides the ability to check the latest version of the FixIt theme. See the [FixIt CLI docs][fixit-cli] for more details.
 
 ```bash
-npm install -g fixit-cli
-fixit create my-blog
+npx fixit-cli create my-blog
 ```
 
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "Tip" >}}
-The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../..) without any scaffold tools before using the CLI.
+The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
 {{< /admonition >}}
 
 ## Comparison

@@ -24,6 +24,7 @@
     - hugo-fixit/cmpt-flyfish
     - hugo-fixit/cmpt-translate
     - hugo-fixit/hugo-json-feed
+    - hugo-fixit/shortcode-asciinema
     - hugo-fixit/shortcode-caniuse
     - hugo-fixit/shortcode-docs-bookmark
     - hugo-fixit/shortcode-mmt-netease

@@ -48,6 +48,10 @@ You must also be comfortable working from the command line.
 
 ## Create a Site
 
+> [!TIP]
+> The following steps will guide you through creating a Hugo site step by step.\
+> If you are already familiar with Hugo, you can skip these steps and use the [FixIt CLI][fixit-cli] to quickly create a site.
+
 ### Commands
 
 Verify that you have installed Hugo v{{< param docs.minHugoVersion >}} or later.
@@ -231,6 +235,7 @@ if you encounter any problems or have any questions, please go to our [community
 [deploying-hugo-with-vercel]: https://vercel.com/guides/deploying-hugo-with-vercel
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
+[fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
 [installation]: {{< relref path="/documentation/installation" >}}
 [getting-started]: {{< relref path="/documentation/getting-started" >}}
 [configuration]: {{< relref path="/documentation/getting-started/configuration" >}}

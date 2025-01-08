@@ -4,6 +4,8 @@ github.com/hugo-fixit/cmpt-translate v1.5.2 h1:A9bldeJk+aaAkDvP6LmOpXnbkW2b53SbI
 github.com/hugo-fixit/cmpt-translate v1.5.2/go.mod h1:JZ0STubquTlRgyyGhGPlt2s0KJ1gCa99+P8ltTwQRM4=
 github.com/hugo-fixit/component-projects v1.5.3 h1:phKG//aW4sF9CSUn6kJry2ovBGSlJzxF5H7+ZSlemQw=
 github.com/hugo-fixit/component-projects v1.5.3/go.mod h1:nXW0R37REwpfwUD1I4RtB5QW71vw66nRyB9uEpYxr+c=
+github.com/hugo-fixit/shortcode-asciinema v1.0.0 h1:s+NcUeCzvM8sPAvU5KPirTULyRFN0vMK90burBd5jaU=
+github.com/hugo-fixit/shortcode-asciinema v1.0.0/go.mod h1:xSMC2YHX8KCM8EPPmn7PA6Cwg6X9UGsV8gA7+1WBPTw=
 github.com/hugo-fixit/shortcode-caniuse v1.2.2 h1:cuJVdJ1A0IgJnMQjifCDeRSRxIY0plTgs+wthCbrIls=
 github.com/hugo-fixit/shortcode-caniuse v1.2.2/go.mod h1:RoPLFt+7uLui5rjvkC/qFGeo4nly5AzzwIID9SoDKNc=
 github.com/hugo-fixit/shortcode-rewards v1.0.5 h1:Fudm/FoKt/K5rhTvOpHyvniAQFOAoQ1V/Z33TpReGkA=
