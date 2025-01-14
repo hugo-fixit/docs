@@ -78,3 +78,8 @@ logs:
     money: 10
     origin: wechatpay
     remark: "😘😘😘师傅的主题太棒了"
+  - date: 2025-01-14 12:01:34
+    sponsor: Liberal
+    money: 30
+    origin: FixIt 主题交流群微信红包
+    remark: "开源不易，小小支持一下"
