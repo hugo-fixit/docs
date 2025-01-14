@@ -334,17 +334,23 @@ The `details` shortcode has the following named parameters:
 
 - **summary** _[optional]_ (**first** positional parameter)
 
-    `summary` of details.
-
-    _Markdown or HTML format is supported._
+    The content of the child summary element rendered from Markdown to HTML. Default is `Details`.
 
 - **open** _[optional]_ (**second** positional parameter) {{< version 0.3.9 >}}
 
-    Whether the content will be expandable by default, default value is `false`.
+    Whether to initially display the content of the `details` element. Default is `false`.
 
-- **center** _[optional]_ (**third** positional parameter) {{< version 0.3.9 >}}
+- **class** _[optional]_ (**third** positional parameter) {{< version 0.3.17 >}}
 
-    Whether to center the details `summary`, default value is `false`.
+    The value of the element’s `class` attribute.
+
+- **name** _[optional]_ {{< version 0.3.17 >}}
+
+    The value of the element’s `name` attribute.
+
+- **title** _[optional]_ {{< version 0.3.17 >}}
+
+    The value of the element’s `title` attribute.
 
 Example `details` input:
 
@@ -360,7 +366,7 @@ Or
 
 The rendered output looks like this:
 
-{{< details "**Copyright** 2022." >}}
+{{< details "**Copyright** 2022." true >}}
 _All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 

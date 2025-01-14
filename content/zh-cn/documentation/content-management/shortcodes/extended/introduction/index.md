@@ -335,17 +335,23 @@ console.log('Hello FixIt!');
 
 - **summary** _[可选]_ (**第一个**位置参数）
 
-    `summary` 标签的内容。
-
-    _支持 Markdown 或者 HTML 格式。_
+    从 Markdown 渲染到 HTML 的子 `summary` 元素的内容。默认值是 `Details`。
 
 - **open** _[可选]_ (**第二个**位置参数）{{< version 0.3.9 >}}
 
-    是否默认展开 `details` 标签，默认值是 `false`。
+    是否初始显示 `details` 元素的内容，默认值是 `false`。
 
-- **center** _[可选]_ (**第三个**位置参数）{{< version 0.3.9 >}}
+- **class** _[optional]_ (**第三个**位置参数）{{< version 0.3.17 >}}
 
-    是否居中显示 `summary` 标签的内容，默认值是 `false`。
+    元素的 `class` 属性的值。
+
+- **name** _[optional]_ {{< version 0.3.17 >}}
+
+    元素的 `name` 属性的值。
+
+- **title** _[optional]_ {{< version 0.3.17 >}}
+
+    元素的 `title` 属性的值。
 
 一个 `details` 示例：
 

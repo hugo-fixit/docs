@@ -107,7 +107,7 @@ Example `echarts` input in `JSON` format:
 }
 {{< /echarts >}}
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ```markdown {data-open=true}
 {{?{}< echarts >}}
@@ -282,7 +282,7 @@ series:
       - 1320
 {{< /echarts >}}
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ```markdown {data-open=true}
 {{?{}< echarts >}}
@@ -504,7 +504,7 @@ data = [
 ]
 {{< /echarts >}}
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ```markdown {data-open=true}
 {{?{}< echarts >}}

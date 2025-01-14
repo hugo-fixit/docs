@@ -37,7 +37,7 @@ events:
     content: Event start
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown
 ```timeline
@@ -65,7 +65,7 @@ events:
     content: Event start
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown
 ```timeline {reverse=true}
@@ -95,7 +95,7 @@ events:
     content: Event start
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown
 ```timeline {animation=true}
@@ -131,7 +131,7 @@ events:
     content: Default node
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline
@@ -167,7 +167,7 @@ events:
     content: Expedita delectus rerum vitae consequuntur quam, tempore fugit debitis voluptatem praesentium maiores dolorem possimus illum adipisci facere veniam voluptatibus aliquam ipsa ducimus nam impedit cumque! Rerum molestias praesentium expedita! Itaque.
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown
 ```timeline {placement=top}
@@ -210,7 +210,7 @@ events:
     type: danger
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline {reverse=true}
@@ -264,7 +264,7 @@ Example Timeline input in `JSON` format:
 }
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline
@@ -301,7 +301,7 @@ events:
     content: Event start
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown
 ```timeline
@@ -333,7 +333,7 @@ timestamp = "2024-07-15"
 content = "Event start"
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline

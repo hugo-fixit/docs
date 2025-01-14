@@ -1403,7 +1403,7 @@ series:
       - 1320
 ```
 
-{{< details "View source" false true >}}
+{{< details "View source" false "center" >}}
 
 ````markdown {data-open=true}
 ```echarts {width="100%", height="30rem"}

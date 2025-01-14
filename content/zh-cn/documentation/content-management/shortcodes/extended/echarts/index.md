@@ -108,7 +108,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 }
 {{< /echarts >}}
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ```markdown {data-open=true}
 {{?{}< echarts >}}
@@ -283,7 +283,7 @@ series:
       - 1320
 {{< /echarts >}}
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ```markdown {data-open=true}
 {{?{}< echarts >}}
@@ -505,7 +505,7 @@ data = [
 ]
 {{< /echarts >}}
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ```markdown {data-open=true}
 {{?{}< echarts >}}

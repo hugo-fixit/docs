@@ -37,7 +37,7 @@ events:
     content: 活动按期开始
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown
 ```timeline
@@ -65,7 +65,7 @@ events:
     content: 活动按期开始
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown
 ```timeline {reverse=true}
@@ -95,7 +95,7 @@ events:
     content: 活动按期开始
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown
 ```timeline {animation=true}
@@ -131,7 +131,7 @@ events:
     content: 默认样式的节点
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline
@@ -167,7 +167,7 @@ events:
     content: Expedita delectus rerum vitae consequuntur quam, tempore fugit debitis voluptatem praesentium maiores dolorem possimus illum adipisci facere veniam voluptatibus aliquam ipsa ducimus nam impedit cumque! Rerum molestias praesentium expedita! Itaque.
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown
 ```timeline {placement=top}
@@ -210,7 +210,7 @@ events:
     type: danger
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline {reverse=true}
@@ -264,7 +264,7 @@ events:
 }
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline
@@ -301,7 +301,7 @@ events:
     content: 活动按期开始
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown
 ```timeline
@@ -333,7 +333,7 @@ timestamp = "2024-07-15"
 content = "活动按期开始"
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown {data-open=true}
 ```timeline

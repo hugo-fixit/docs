@@ -1400,7 +1400,7 @@ series:
       - 1320
 ```
 
-{{< details "查看源码" false true >}}
+{{< details "查看源码" false "center" >}}
 
 ````markdown {data-open=true}
 ```echarts {width="100%", height="30rem"}
