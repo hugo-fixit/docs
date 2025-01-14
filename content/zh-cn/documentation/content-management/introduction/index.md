@@ -362,7 +362,7 @@ seo:
 
 **Hugo** 有一个强大的 URL 管理系统，详见 [Hugo URL 管理][hugo-url-management]。
 
-## 多语言和 I18n
+## 多语言和 I18n {#multilingual}
 
 **FixIt** 主题完全兼容 Hugo 的多语言模式，并且支持在网页上切换语言。
 

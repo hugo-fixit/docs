@@ -359,7 +359,7 @@ This part is shown in the [content encryption page][content-encryption].
 
 **Hugo** has a powerful URL management system, see [Hugo URL management][hugo-url-management].
 
-## Multilingual and I18n
+## Multilingual and I18n {#multilingual}
 
 **FixIt** theme is fully compatible with Hugo multilingual mode, which provides in-browser language switching.
 
