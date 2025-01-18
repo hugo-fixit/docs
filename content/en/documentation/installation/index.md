@@ -98,7 +98,7 @@ To use the version on the `dev` branch, you can use the following command:
 ```bash
 git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 
-# Alternatively, switch the submodule branch from `master` to `dev`:
+# Alternatively, switch the submodule branch from `main` to `dev`:
 git submodule set-branch -b dev themes/FixIt
 ```
 
@@ -137,7 +137,7 @@ hugo mod get -u
 hugo mod get -u ./...
 # Update one module
 hugo mod get -u github.com/hugo-fixit/FixIt
-# Get a specific version (e.g. v0.3.2, @latest, @master, @dev)
+# Get a specific version (e.g. v0.3.2, @latest, @main)
 hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 ```
 

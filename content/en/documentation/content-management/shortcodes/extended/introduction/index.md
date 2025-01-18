@@ -33,7 +33,7 @@ math: true
 Use these Hugo's embedded shortcodes as needed.
 
 {{< admonition tip >}}
-To override FixIt's embedded shortcode, copy the [source code](https://github.com/hugo-fixit/FixIt/tree/master/layouts/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
+To override FixIt's embedded shortcode, copy the [source code](https://github.com/hugo-fixit/FixIt/tree/main/layouts/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
 {{< /admonition >}}
 
 ### style

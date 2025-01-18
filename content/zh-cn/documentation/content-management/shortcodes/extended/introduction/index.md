@@ -33,7 +33,7 @@ math: true
 根据需要使用这些 FixIt 主题扩展的 Shortcodes。
 
 {{< admonition tip >}}
-要覆盖 FixIt 主题扩展的 Shortcodes，请将 [源代码](https://github.com/hugo-fixit/FixIt/tree/master/layouts/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
+要覆盖 FixIt 主题扩展的 Shortcodes，请将 [源代码](https://github.com/hugo-fixit/FixIt/tree/main/layouts/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
 {{< /admonition >}}
 
 ### style

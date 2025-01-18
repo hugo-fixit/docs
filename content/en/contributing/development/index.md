@@ -33,7 +33,7 @@ For a complete guide to contributing to FixIt, see the [Contribution Guide][cont
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E{{< param docs.minHugoVersion >}}-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/blob/main/LICENSE)
 {style="font-size: 1.25em;"}
 
 To contribute to the development of the FixIt theme, you need to:
@@ -51,7 +51,7 @@ Head to the [References][references] page for more information.
 [discussions]: https://github.com/orgs/hugo-fixit/discussions
 [bugs]: https://github.com/hugo-fixit/FixIt/issues?q=is%3Aopen+is%3Aissue+label%3Abug
 [features]: https://github.com/hugo-fixit/FixIt/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement
-[contribution-guide]: https://github.com/hugo-fixit/FixIt/blob/master/CONTRIBUTING.md
+[contribution-guide]: https://github.com/hugo-fixit/FixIt/blob/main/CONTRIBUTING.md
 [hugo]: https://gohugo.io/installation/
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git

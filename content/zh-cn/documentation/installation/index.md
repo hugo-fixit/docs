@@ -98,7 +98,7 @@ git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```bash
 git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 
-# 或者，将子模块分支从 `master` 切换到 `dev`：
+# 或者，将子模块分支从 `main` 切换到 `dev`：
 git submodule set-branch -b dev themes/FixIt
 ```
 
@@ -137,7 +137,7 @@ hugo mod get -u
 hugo mod get -u ./...
 # 更新一个模块
 hugo mod get -u github.com/hugo-fixit/FixIt
-# 获取特定版本（例如 v0.3.2, @latest, @master, @dev）
+# 获取特定版本（例如 v0.3.2, @latest, @main）
 hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 ```
 

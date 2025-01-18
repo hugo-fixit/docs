@@ -36,6 +36,7 @@
     - hugo-fixit/fixit-cli
     - hugo-fixit/fixit-releaser
     - hugo-fixit/component-skeleton
+    - hugo-fixit/action-component-list
     - hugo-fixit/hugo-shell
     - hugo-fixit/.tools
 - title: 👾 第三方
