@@ -25,7 +25,7 @@
     "lint:md": "autocorrect content --lint && markdownlint-cli2 \"content/**/*.md\"",
     "prepare": "husky",
     "build": "hugo --gc --minify --logLevel info",
-    "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory -O",
+    "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory --noHTTPCache -O",
     "server:production": "npm run server -- -e production",
     "server:development": "cross-env HUGO_MODULE_WORKSPACE=hugo.work npm run server -- --ignoreVendorPaths \"**\"",
     "update": "hugo mod get -u && hugo mod tidy"
