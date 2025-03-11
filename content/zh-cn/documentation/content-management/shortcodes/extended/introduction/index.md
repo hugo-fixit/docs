@@ -92,9 +92,9 @@ This is a **right-aligned** paragraph.
 
     是否显示为卡片式链接，默认值 `false`。
 
-- **card-icon** _[可选]_ (**第五个**位置参数) {{< version 0.3.6 changed >}}
+- **card-icon** _[可选]_ (**第五个**位置参数) {{< version 0.3.17 changed >}}
 
-    卡片式链接的图标，支持图片链接和 Font Awesome 图标。设置为 `true`，自动从链接获取缩略图。
+    卡片式链接的图标，支持图片链接和 Font Awesome 图标。
 
 - **download** _[可选]_ {{< version 0.2.12 >}}
 
@@ -153,14 +153,12 @@ This is a **right-aligned** paragraph.
 一个卡片式 `link` 示例：
 
 ```markdown
-{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 
@@ -210,14 +208,6 @@ This is a **right-aligned** paragraph.
 
     HTML `figure` 标签的 `class` 属性。
 
-- **src_s** _[可选]_
-
-    图片缩略图的 URL, 用在画廊模式中，默认值是 **src** 参数的值。
-
-- **src_l** _[可选]_
-
-    高清图片的 URL, 用在画廊模式中，默认值是 **src** 参数的值。
-
 - **height** _[可选]_
 
     图片的 `height` 属性。
@@ -238,15 +228,23 @@ This is a **right-aligned** paragraph.
 
     HTML `a` 标签 的 `loading` 补充属性，可选值：`eager`、`lazy`，默认值是 `lazy`。
 
+- **optimise** _[可选]_ {{< version 0.3.17 >}}
+
+    图片是否需要被优化，覆盖全局配置。
+
+- **cacheRemote** _[可选]_ {{< version 0.3.17 >}}
+
+    是否缓存远程图片，覆盖全局配置。
+
 一个 `image` 示例：
 
 ```markdown
-{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
 
 ### admonition
 

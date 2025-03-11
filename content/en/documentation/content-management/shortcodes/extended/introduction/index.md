@@ -92,9 +92,9 @@ The `link` shortcode has the following named parameters:
 
     Whether to display as a card link, whose default value is `false`.
 
-- **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.6 changed >}}
+- **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.17 changed >}}
 
-    Icon of the card link, support Font Awesome class name or image URL. Set to `true` to get the shortcut from the link.
+    Icon of the card link, support Font Awesome class name or image URL.
 
 - **download** _[optional]_ {{< version 0.2.12 >}}
 
@@ -153,14 +153,12 @@ The rendered output looks like this (hover over the link, there should be a tool
 Example `link` input for card type:
 
 ```markdown
-{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true true >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 
@@ -210,14 +208,6 @@ The `image` shortcode has the following named parameters:
 
     `class` attribute of the HTML `figure` tag.
 
-- **src_s** _[optional]_
-
-    URL of the image thumbnail, used for lightgallery, default value is the value of **src** parameter.
-
-- **src_l** _[optional]_
-
-    URL of the HD image, used for lightgallery, default value is the value of **src** parameter.
-
 - **height** _[optional]_
 
     `height` attribute of the image.
@@ -238,15 +228,23 @@ The `image` shortcode has the following named parameters:
 
     Additional `loading` attribute of the HTML `a` tag, optional values: `eager`, `lazy`, default value is `lazy`.
 
+- **optimise** _[optional]_ {{< version 0.3.17 >}}
+
+    Whether to optimise the image, override the site configuration.
+
+- **cacheRemote** _[optional]_ {{< version 0.3.17 >}}
+
+    Whether to cache the remote image, override the site configuration.
+
 Example `image` input:
 
 ```markdown
-{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
 
 ### admonition
 

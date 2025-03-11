@@ -351,9 +351,9 @@ get remote images test:
 ![Lruihao](https://lruihao.cn/images/avatar.jpg?from=FixIt)
 ![logo](https://lruihao.cn/logo.webp)
 
-{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" src_s="/images/lighthouse-small.jpg" src_l="/images/lighthouse-large.jpg" >}}
+{{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
 
-不支持 `svg` 和 `avif` 等格式以及不支持请求式图片（如 gravatar），需要手动设置高度或设置为 `loading="eager"`
+`svg` 和 `avif` 等格式以及请求式图片（如 gravatar）
 
 {{< image src="https://fixit.lruihao.cn/images/fixit.min.svg" height="64px" width="64px" linked=false >}}
 ![gravatar](https://gravatar.loli.net/avatar/fee47a2f4f2cc71f99a02b0a73ecfee0?s=32&d=mp)
