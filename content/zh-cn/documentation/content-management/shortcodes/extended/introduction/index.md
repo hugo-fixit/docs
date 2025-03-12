@@ -487,6 +487,28 @@ this is a **center-quote** _shortcode_ example.
 {{< version 0.3.15 changed >}}\
 {{< version 0.3.15 deleted >}}
 
+### bluesky
+
+{{< version 0.3.17 >}}
+
+`bluesky` 是一个用来嵌入 [Bluesky][bluesky] 的帖子的 shortcode。
+
+`bluesky` shortcode 有以下命名参数：
+
+- **link** _[必选]_
+
+    Bluesky 帖子的 URL。
+
+一个 `bluesky` 示例：
+
+```markdown
+{{</* bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" */>}}
+```
+
+呈现的输出效果如下：
+
+{{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
+
 ## 额外的主题组件
 
 FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。
@@ -516,4 +538,5 @@ FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为�
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[bluesky]: https://bsky.app/
 [components]: relref "/ecosystem"

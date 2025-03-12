@@ -487,6 +487,28 @@ The rendered output looks like this:
 {{< version 0.3.15 changed >}}\
 {{< version 0.3.15 deleted >}}
 
+### bluesky
+
+{{< version 0.3.17 >}}
+
+`bluesky` is a shortcode to embed a post from [Bluesky][bluesky].
+
+The `bluesky` shortcode has the following named parameters:
+
+- **link** _[required]_
+
+    URL of the Bluesky post.
+
+Example `bluesky` input:
+
+```markdown
+{{</* bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" */>}}
+```
+
+The rendered output looks like this:
+
+{{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
+
 ## Extra Components
 
 The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.
@@ -516,4 +538,5 @@ Visit [this page][components] to browse a collection of themes components create
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
+[bluesky]: https://bsky.app/
 [components]: relref "/ecosystem"
