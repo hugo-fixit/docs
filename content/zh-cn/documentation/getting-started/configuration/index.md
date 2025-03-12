@@ -1399,19 +1399,6 @@ dark
 height
 : `string` 阅读进度条高度，默认：`2px`。
 
-### feed
-
-`map` 全局 Feed 配置用于 RSS, Atom 和 JSON feed，默认配置如下：
-
-```toml
-[params]
-  [params.feed]
-    # 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
-    limit = 10
-    # 是否在 feed 中显示全文内容。
-    fullText = true
-```
-
 ### pace
 
 {{< version 0.2.17 >}}
@@ -1500,6 +1487,51 @@ theme
     typingAnimate = true
     beginningText = ""
 ```
+
+### feed
+
+`map` 全局 Feed 配置用于 RSS, Atom 和 JSON feed，默认配置如下：
+
+```toml
+[params]
+  [params.feed]
+    limit = 10
+    fullText = true
+    [params.feed.follow]
+      feedId = ""
+      userId = ""
+```
+
+limit
+: `int` 包含在 feed 中的文章数目。如果设置为 `-1`，代表所有文章。默认：`10`。
+
+fullText
+: `bool` 是否在 feed 中显示全文内容，默认：`true`。
+
+follow
+: `map` Site Challenge for [Follow][follow] 配置。
+
+- feedId: `string` Follow 的 Feed ID。
+- userId: `string` Follow 的 User ID。
+
+### image
+
+{{< version 0.3.17 >}}
+
+`map` 图片配置。
+
+```toml
+[params]
+  [params.image]
+  cacheRemote = false
+  optimise = false
+```
+
+cacheRemote
+: `bool` 是否缓存远程图片以获得更好的优化效果，默认：`false`。
+
+optimise
+: `bool` 是否对图片进行缩放和优化，默认：`false`。
 
 ### customPartials
 
@@ -1918,6 +1950,7 @@ c4u
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
 [postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
+[follow]: https://follow.is/
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

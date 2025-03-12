@@ -1398,21 +1398,6 @@ dark
 height
 : `string` The height of reading progress bar. Default is `2px`.
 
-### feed
-
-{{< version 0.3.10 >}}
-
-`map` Global Feed config for RSS, Atom and JSON feed. Default is as follows:
-
-```toml
-[params]
-  [params.feed]
-    # The number of posts to include in the feed. If set to -1, all posts.
-    limit = 10
-    # whether to show the full text content in feed.
-    fullText = true
-```
-
 ### pace
 
 {{< version 0.2.17 >}}
@@ -1501,6 +1486,53 @@ theme
     typingAnimate = true
     beginningText = ""
 ```
+
+### feed
+
+{{< version 0.3.10 >}}
+
+`map` Global Feed config for RSS, Atom and JSON feed. Default is as follows:
+
+```toml
+[params]
+  [params.feed]
+    limit = 10
+    fullText = true
+    [params.feed.follow]
+      feedId = ""
+      userId = ""
+```
+
+limit
+: `int` The number of posts to include in the feed. If set to `-1`, all posts. Default is `10`.
+
+fullText
+: `bool` Whether to show the full text content in feed. Default is `true`.
+
+follow
+: `map` Site Challenge for [Follow][follow] Configuration.
+
+- feedId: `string` The Feed ID.
+- userId: `string` The User ID.
+
+### image
+
+{{< version 0.3.17 >}}
+
+`map` Image configuration.
+
+```toml
+[params]
+  [params.image]
+  cacheRemote = false
+  optimise = false
+```
+
+cacheRemote
+: `bool` Whether to cache remote images for better optimisations. Default is `false`.
+
+optimise
+: `bool` Whether to resize and optimise images. Default is `false`.
 
 ### customPartials
 
@@ -1919,6 +1951,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
 [postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
+[follow]: https://follow.is/
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

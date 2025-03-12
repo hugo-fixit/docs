@@ -94,7 +94,7 @@ The `link` shortcode has the following named parameters:
 
 - **card-icon** _[optional]_ (**fifth** positional parameter) {{< version 0.3.17 changed >}}
 
-    Icon of the card link, support Font Awesome class name or image URL.
+    Icon of the card link, support Font Awesome class name or image URL. If not specified, try to fetch the favicon from link.
 
 - **download** _[optional]_ {{< version 0.2.12 >}}
 
@@ -153,12 +153,14 @@ The rendered output looks like this (hover over the link, there should be a tool
 Example `link` input for card type:
 
 ```markdown
+{{</* link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" */>}}
 {{</* link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" */>}}
 ```
 
 The rendered output looks like this:
 
+{{< link "https://github.com/hugo-fixit/FixIt" "FixIt Theme" "source of FixIt Theme" true >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "https://lruihao.cn/images/avatar.jpg" >}}
 {{< link "https://lruihao.cn" "Lruihao Blog" "Lruihao Blog" true "fa-solid fa-blog" >}}
 

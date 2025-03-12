@@ -793,6 +793,16 @@ disableThemeInject = false
     feedId = ""
     userId = ""
 
+# FixIt 0.3.17 | NEW Image config
+# FixIt 0.3.17 | 新增 图片配置
+[image]
+  # cache remote images for better optimisations
+  # 缓存远程图片以获得更好的优化效果
+  cacheRemote = true
+  # Image resizing and optimisation
+  # 图片缩放和优化
+  optimise = true
+
 # FixIt 0.3.12 | NEW Custom partials config
 # Custom partials must be stored in the /layouts/partials/ directory.
 # Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
