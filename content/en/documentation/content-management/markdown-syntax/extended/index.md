@@ -184,6 +184,31 @@ The rendered output looks like this:
 
 ## Inserted Text {#inserted-text}
 
+{{< admonition info "How to enable Hugo extended syntax" >}}
+
+[Inserted Text](#inserted-text), [Marked Text](#marked-text), [Subscript](#subscript), and [Superscript](#superscript) syntax are disabled by default. You need to update Hugo to version `0.128.0` or later and enable the following configuration:
+
+```toml {title="hugo.toml"}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      # https://gohugo.io/getting-started/configuration-markup/#extras
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+```
+
+{{< /admonition >}}
+
 **Hugo** supports an **inserted text** Markdown extension:
 
 ```markdown
@@ -278,31 +303,6 @@ The chemical formula of water is H~2~O.
 The rendered output looks like this:
 
 2^10^ equals 1024.
-
-{{< admonition info "How to enable Hugo extended syntax" >}}
-
-[Inserted Text](#inserted-text), [Marked Text](#marked-text), [Subscript](#subscript), and [Superscript](#superscript) syntax are disabled by default. You need to update Hugo to version `0.128.0` or later and enable the following configuration:
-
-```toml {title="hugo.toml"}
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      strikethrough = false
-      # https://gohugo.io/getting-started/configuration-markup/#extras
-      [markup.goldmark.extensions.extras]
-        [markup.goldmark.extensions.extras.delete]
-          enable = true
-        [markup.goldmark.extensions.extras.insert]
-          enable = true
-        [markup.goldmark.extensions.extras.mark]
-          enable = true
-        [markup.goldmark.extensions.extras.subscript]
-          enable = true
-        [markup.goldmark.extensions.extras.superscript]
-          enable = true
-```
-
-{{< /admonition >}}
 
 ## Emoji Support
 

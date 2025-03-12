@@ -184,6 +184,30 @@ Alert 扩展语法支持 **13** 种类型的 [警示横幅][admonition-types]，
 
 ## 下划线 {#inserted-text}
 
+{{< admonition info "如何开启 Hugo 扩展语法" >}}
+[下划线](#inserted-text)、[标记文本](#marked-text)、[下标](#subscript) 和 [上标](#superscript) 语法默认关闭，需更新 Hugo 版本到 `0.128.0` 以上且开启以下的配置：
+
+```toml {title="hugo.toml"}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      # https://gohugo.io/getting-started/configuration-markup/#extras
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+```
+
+{{< /admonition >}}
+
 **Hugo** 支持一种 **下划线** Markdown 扩展语法：
 
 ```markdown
@@ -278,30 +302,6 @@ FixIt 主题的作者是 ++Lruihao++。
 呈现的输出效果如下：
 
 2^10^ 等于 1024。
-
-{{< admonition info "如何开启 Hugo 扩展语法" >}}
-[下划线](#inserted-text)、[标记文本](#marked-text)、[下标](#subscript) 和 [上标](#superscript) 语法默认关闭，需更新 Hugo 版本到 `0.128.0` 以上且开启以下的配置：
-
-```toml {title="hugo.toml"}
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      strikethrough = false
-      # https://gohugo.io/getting-started/configuration-markup/#extras
-      [markup.goldmark.extensions.extras]
-        [markup.goldmark.extensions.extras.delete]
-          enable = true
-        [markup.goldmark.extensions.extras.insert]
-          enable = true
-        [markup.goldmark.extensions.extras.mark]
-          enable = true
-        [markup.goldmark.extensions.extras.subscript]
-          enable = true
-        [markup.goldmark.extensions.extras.superscript]
-          enable = true
-```
-
-{{< /admonition >}}
 
 ## Emoji 支持
 
