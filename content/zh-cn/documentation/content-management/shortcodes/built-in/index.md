@@ -158,6 +158,28 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 
 {{< param description >}}
 
+### qr
+
+> [Documentation of `qr` shortcode][qr].
+
+使用自闭合语法将文本作为参数传递：
+
+```markdown
+{{</* qr text="https://lruihao.cn" */>}}
+```
+
+或者将文本插入在开放和关闭标签之间：
+
+```markdown
+{{</* qr */>}}
+https://lruihao.cn
+{{</* /qr */>}}
+```
+
+以上两种方法都会生成这个图片：
+
+{{< qr text="https://lruihao.cn" />}}
+
 ### ref
 
 > [`ref` shortcode 的文档][ref]。
@@ -212,19 +234,19 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 </ul>
 ```
 
-### twitter
+### x
 
-> [`twitter` shortcode 的文档][twitter]。
+> [`x` shortcode 的文档][x]。
 
-一个 `twitter` 示例：
+一个 `x` 示例：
 
 ```markdown
-{{</* twitter user="SanDiegoZoo" id="1453110110599868418" */>}}
+{{</* x user="SanDiegoZoo" id="1453110110599868418" */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< twitter user="SanDiegoZoo" id="1453110110599868418" >}}
+{{< x user="SanDiegoZoo" id="1453110110599868418" >}}
 
 ### vimeo
 
@@ -267,9 +289,10 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 [gist]: https://gohugo.io/content-management/shortcodes/#gist
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [param]: https://gohugo.io/content-management/shortcodes/#param
+[qr]: https://gohugo.io/content-management/shortcodes/#qr
 [ref]: https://gohugo.io/content-management/shortcodes/#ref
 [relref]: https://gohugo.io/content-management/shortcodes/#relref
-[twitter]: https://gohugo.io/content-management/shortcodes/#twitter
+[x]: https://gohugo.io/content-management/shortcodes/#twitter
 [vimeo]: https://gohugo.io/content-management/shortcodes/#vimeo
 [youtube]: https://gohugo.io/content-management/shortcodes/#youtube
 [privacy-protections]: https://gohugo.io/about/privacy/

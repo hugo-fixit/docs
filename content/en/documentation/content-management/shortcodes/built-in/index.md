@@ -158,6 +158,28 @@ The rendered output looks like this:
 
 {{< param description >}}
 
+### qr
+
+> [Documentation of `qr` shortcode][qr].
+
+Use the self-closing syntax to pass the text as an argument:
+
+```markdown
+{{</* qr text="https://lruihao.cn" */>}}
+```
+
+Or insert the text between the opening and closing tags:
+
+```markdown
+{{</* qr */>}}
+https://lruihao.cn
+{{</* /qr */>}}
+```
+
+Both of the above produce this image:
+
+{{< qr text="https://lruihao.cn" />}}
+
 ### ref
 
 > [Documentation of `ref` shortcode][ref].
@@ -212,23 +234,23 @@ The HTML looks like this:
 </ul>
 ```
 
-### twitter
+### x
 
-[Documentation of `twitter` shortcode][twitter]
+> [Documentation of `x` shortcode][x].
 
-Example `twitter` input:
+Example `x` input:
 
 ```markdown
-{{</* twitter user="SanDiegoZoo" id="1453110110599868418" */>}}
+{{</* x user="SanDiegoZoo" id="1453110110599868418" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< twitter user="SanDiegoZoo" id="1453110110599868418" >}}
+{{< x user="SanDiegoZoo" id="1453110110599868418" >}}
 
 ### vimeo
 
-[Documentation of `vimeo` shortcode][vimeo]
+[Documentation of `vimeo` shortcode][vimeo].
 
 Example `vimeo` input:
 
@@ -242,7 +264,7 @@ The rendered output looks like this:
 
 ### youtube
 
-[Documentation of `youtube` shortcode][youtube]
+> [Documentation of `youtube` shortcode][youtube].
 
 Example `youtube` input:
 
@@ -268,9 +290,10 @@ To learn how to configure your Hugo site to meet the new EU privacy regulation, 
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [instagram]: https://gohugo.io/content-management/shortcodes/#instagram
 [param]: https://gohugo.io/content-management/shortcodes/#param
+[qr]: https://gohugo.io/content-management/shortcodes/#qr
 [ref]: https://gohugo.io/content-management/shortcodes/#ref
 [relref]: https://gohugo.io/content-management/shortcodes/#relref
-[twitter]: https://gohugo.io/content-management/shortcodes/#twitter
+[x]: https://gohugo.io/content-management/shortcodes/#x
 [vimeo]: https://gohugo.io/content-management/shortcodes/#vimeo
 [youtube]: https://gohugo.io/content-management/shortcodes/#youtube
 [privacy-protections]: https://gohugo.io/about/privacy/
