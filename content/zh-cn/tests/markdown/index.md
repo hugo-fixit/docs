@@ -47,8 +47,6 @@ Block comments can span multiple lines.
 
 <!-- This is a comment. -->
 
-This is an {{< comment >}}inline{{< /comment >}} comment.
-
 This is an %%inline%% comment.
 
 %%
