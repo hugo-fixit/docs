@@ -509,6 +509,38 @@ this is a **center-quote** _shortcode_ example.
 
 {{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
 
+### gist
+
+> 使用 `gist` shortcode 在你的内容中嵌入 GitHub Gist。
+
+要显示这个 URL 的 GitHub Gist：
+
+```plain
+https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710
+```
+
+在 Markdown 中这样写：
+
+```markdown
+{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 */>}}
+```
+
+呈现的输出效果如下：
+
+{{< gist Lruihao fb8b2d0353465c4d40bf74818db80710 >}}
+
+输出的 HTML 看起来像这样：
+
+```html
+<script src="https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710.js"></script>
+```
+
+要显示 Gist 中的特定文件：
+
+```markdown
+{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 bilibili.html */>}}
+```
+
 ## 额外的主题组件
 
 FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。

@@ -78,26 +78,6 @@ The HTML looks like this:
 </figure>
 ```
 
-### gist
-
-> [Documentation of `gist` shortcode][gist].
-
-Example `gist` input:
-
-```markdown
-{{</* gist spf13 7896402 */>}}
-```
-
-The rendered output looks like this:
-
-{{< gist spf13 7896402 >}}
-
-The HTML looks like this:
-
-```html
-<script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
-```
-
 ### highlight
 
 > [Documentation of `highlight` shortcode][highlight].
@@ -286,7 +266,6 @@ To learn how to configure your Hugo site to meet the new EU privacy regulation, 
 [use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
 [partial-template]: https://gohugo.io/templates/partial/
 [figure]: https://gohugo.io/content-management/shortcodes/#figure
-[gist]: https://gohugo.io/content-management/shortcodes/#gist
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [instagram]: https://gohugo.io/content-management/shortcodes/#instagram
 [param]: https://gohugo.io/content-management/shortcodes/#param

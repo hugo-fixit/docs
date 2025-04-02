@@ -509,6 +509,38 @@ The rendered output looks like this:
 
 {{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
 
+### gist
+
+> Embed a GitHub Gist in your content using the `gist` shortcode.
+
+To display a GitHub gist with this URL:
+
+```plain
+https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710
+```
+
+Include this in your Markdown:
+
+```markdown
+{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 */>}}
+```
+
+The rendered output looks like this:
+
+{{< gist Lruihao fb8b2d0353465c4d40bf74818db80710 >}}
+
+The HTML looks like this:
+
+```html
+<script src="https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710.js"></script>
+```
+
+To display a specific file within the gist:
+
+```markdown
+{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 bilibili.html */>}}
+```
+
 ## Extra Components
 
 The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.

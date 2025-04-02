@@ -78,26 +78,6 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 </figure>
 ```
 
-### gist
-
-> [`gist` shortcode 的文档][gist]。
-
-一个 `gist` 示例：
-
-```markdown
-{{</* gist spf13 7896402 */>}}
-```
-
-呈现的输出效果如下：
-
-{{< gist spf13 7896402 >}}
-
-输出的 HTML 看起来像这样：
-
-```html
-<script type="application/javascript" src="https://gist.github.com/spf13/7896402.js"></script>
-```
-
 ### highlight
 
 > [`highlight` shortcode 的文档][highlight]。
@@ -286,7 +266,6 @@ https://lruihao.cn
 [use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
 [partial-template]: https://gohugo.io/templates/partial/
 [figure]: https://gohugo.io/content-management/shortcodes/#figure
-[gist]: https://gohugo.io/content-management/shortcodes/#gist
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [param]: https://gohugo.io/content-management/shortcodes/#param
 [qr]: https://gohugo.io/content-management/shortcodes/#qr
