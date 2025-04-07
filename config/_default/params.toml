@@ -1309,7 +1309,6 @@ disableThemeInject = false
   # Ignore repos in the ignore list
   ignoreList = [
     "hugo-fixit/.tools",
-    "hugo-fixit/hugo-atom-feed",
     "hugo-fixit/component-skeleton",
   ]
   [projectsAdapters.params]
