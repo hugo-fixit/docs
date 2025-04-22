@@ -744,6 +744,10 @@ console.log('hello FixIt!');
 
 这部分内容在 [图表支持][diagrams-support-mermaid] 页面中介绍。
 
+### ECharts
+
+这部分内容在 [图表支持][diagrams-support-echarts] 页面中介绍。
+
 ### Timeline
 
 这部分内容在 [时间线支持][timeline-support] 页面中介绍。
@@ -768,4 +772,5 @@ console.log('hello FixIt!');
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
+[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams#echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

@@ -744,6 +744,10 @@ This part is shown in the [diagrams support][diagrams-support-goat] page.
 
 This part is shown in the [diagrams support][diagrams-support-mermaid] page.
 
+### ECharts
+
+This part is shown in the [diagrams support][diagrams-support-echarts] page.
+
 ### Timeline
 
 This part is shown in the [Timeline support][timeline-support] page.
@@ -768,4 +772,5 @@ This part is shown in the [Timeline support][timeline-support] page.
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
+[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams#echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}
