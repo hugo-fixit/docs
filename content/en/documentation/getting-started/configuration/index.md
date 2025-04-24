@@ -1600,6 +1600,8 @@ c4u
     linkToEdit = true
     # {{< version 0.3.0 >}} whether to show link to report issue for the post
     linkToReport = true
+    # {{< version 0.3.20 >}} whether to show link to view the post in VSCode
+    linkToVscode = true
     # {{< version 0.3.10 changed >}} Page style ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.17 changed >}} Auto Bookmark Support

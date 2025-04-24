@@ -907,6 +907,9 @@ disableThemeInject = false
   # whether to show link to report issue for the post
   # 是否显示报告文章问题的链接
   linkToReport = true
+  # FixIt 0.3.20 | NEW whether to show link to view the post in VSCode
+  # FixIt 0.3.20 | 新增 是否显示在 VSCode 中查看文章的链接
+  linkToVscode = true
   # FixIt 0.3.10 | CHANGED Page style ["narrow", "normal", "wide", ...)
   # FixIt 0.3.10 | 更改 页面样式 ["narrow", "normal", "wide", ...)
   pageStyle = "normal"

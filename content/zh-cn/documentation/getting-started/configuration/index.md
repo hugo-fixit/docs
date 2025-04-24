@@ -1599,6 +1599,8 @@ c4u
     linkToEdit = true
     # {{< version 0.3.0 >}} 是否显示报告文章问题的链接
     linkToReport = true
+    # {{< version 0.3.20 >}} 是否显示在 VSCode 中查看文章的链接
+    linkToVscode = true
     # {{< version 0.3.10 changed >}} 页面样式 ["narrow", "normal", "wide", ...]
     pageStyle = "normal"
     # {{< version 0.2.17 changed >}} 开启自动书签支持

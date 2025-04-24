@@ -172,6 +172,7 @@ hugo new --kind post-bundle posts/bar/
 - **linkToSource**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the source file.
 - **linkToEdit**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the edit page.
 - **linkToReport**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the report issue.
+- **linkToVscode**: {{< version 0.3.20 >}} if `true`, the footer of the content will be shown the link to the edit page in VSCode.
 - **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
 
 - **toc**: the same as the `params.page.toc` part in the [theme configuration][theme-config].

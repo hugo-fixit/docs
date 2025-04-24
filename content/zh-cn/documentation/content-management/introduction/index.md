@@ -173,6 +173,7 @@ hugo new --kind post-bundle posts/bar/
 - **linkToSource**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向源码的链接
 - **linkToEdit**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向编辑页面的链接
 - **linkToReport**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向报告问题的链接
+- **linkToVscode**: {{< version 0.3.20 >}} 如果设为 `true`, 内容的页脚将显示指向在 VSCode 中打开的链接
 - **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
 
 - **toc**: 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
