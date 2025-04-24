@@ -33,6 +33,7 @@ The basic chart types ECharts supports include [line series][line], [bar series]
 ## How to Use
 
 Just insert your ECharts option in `JSON`, `YAML`, `TOML` or `JS Object literal` format in the `echarts` shortcode and that’s it.
+{.page-break-after}
 
 Example `echarts` input in `JSON` format:
 
@@ -385,6 +386,7 @@ series:
 {{< /details >}}
 
 Example `echarts` input in `TOML` format:
+{.page-break-before}
 
 {{< echarts >}}
 [title]
@@ -1014,7 +1016,7 @@ Example `echarts` input in `JS Object literal` format:
 
 {{< /details >}}
 
-## Parameters
+## Parameters {.page-break-before}
 
 The `echarts` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 

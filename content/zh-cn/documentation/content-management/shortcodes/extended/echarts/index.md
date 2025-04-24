@@ -34,6 +34,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 ## 如何使用
 
 只需在 `echarts` shortcode 中以 `JSON`、`YAML`、`TOML` 或 `JS 对象字面量` 格式插入 ECharts 选项即可。
+{.page-break-after}
 
 一个 `JSON` 格式的 `echarts` 示例：
 
@@ -386,6 +387,7 @@ series:
 {{< /details >}}
 
 一个 `TOML` 格式的 `echarts` 示例：
+{.page-break-before}
 
 {{< echarts >}}
 [title]
@@ -1015,7 +1017,7 @@ data = [
 
 {{< /details >}}
 
-## 参数配置
+## 参数配置 {.page-break-before}
 
 `echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
