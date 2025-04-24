@@ -33,14 +33,32 @@ Hugo **extended** 版本对于自定义样式是必需的。
 
 在 `assets/css/_override.scss` 中，你可以覆盖 `themes/FixIt/assets/css/_variables.scss` 中的变量以自定义样式。
 
-这是一个例子：
+在 `assets/css/_custom.scss` 中，你可以添加一些 CSS 样式代码以自定义样式。
+
+### 字体样式 {#font-style}
+
+以下字体样式均在 `assets/css/_override.scss` 中定义。
+
+自定义全局字体，以开源字体 [霞鹜文楷][LxgwWenKai] 为例：
+
+```scss
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+$global-font-family: 'LXGW WenKai', $global-font-family;
+```
+
+自定义代码字体，以开源字体 [Fira Mono][Fira] 为例：
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace;
+$code-font-family: Fira Mono, $code-font-family;
 ```
 
-在 `assets/css/_custom.scss` 中，你可以添加一些 CSS 样式代码以自定义样式。
+如果你想自定义的字体没有公共 CDN，你可以手动分包或 [在线分包][online-split] 发布到 NPM，以 [沐目体][MMT] 为例：
+
+```scss
+@import url('https://cdn.jsdelivr.net/npm/mmt-webfont/dist/result.css');
+$global-font-family: 'MMT', $global-font-family;
+```
 
 ### 页面宽度 {#page-style}
 
@@ -312,6 +330,10 @@ li[data-task='tip'] {
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
+[LxgwWenKai]: https://github.com/lxgw/LxgwWenKai
+[Fira]: https://github.com/mozilla/Fira
+[online-split]: https://chinese-font.netlify.app/zh-cn/online-split
+[MMT]: https://github.com/Lruihao/mmt-webfont
 [block]: {{< relref "/references/blocks" >}}
 [sc-admonition]: {{< relref "/documentation/content-management/shortcodes/extended/admonition" >}}
 [task-list]: {{< relref "/documentation/content-management/markdown-syntax/extended#task-lists" >}}

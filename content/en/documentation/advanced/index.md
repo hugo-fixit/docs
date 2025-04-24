@@ -33,14 +33,32 @@ The directory including the custom `.scss` style files is `assets/css` relative 
 
 In `assets/css/_override.scss`, you can override the variables in `themes/FixIt/assets/css/_variables.scss` to customize the style.
 
-Here is a example:
+In `assets/css/_custom.scss`, you can add some css style code to customize the style.
+
+### Fonts Style {#font-style}
+
+The following font styles are defined in `assets/css/_override.scss`.
+
+To customize the global font, take the open-source font [LXGW WenKai][LxgwWenKai] as an example:
+
+```scss
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+$global-font-family: 'LXGW WenKai', $global-font-family;
+```
+
+To customize the code font, take the open-source font [Fira Mono][Fira] as an example:
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, Source Code Pro, Menlo, Consolas, Monaco, monospace;
+$code-font-family: Fira Mono, $code-font-family;
 ```
 
-In `assets/css/_custom.scss`, you can add some css style code to customize the style.
+If you want to customize a font that does not have a public CDN, you can manually or [online split][online-split] it and publish it to NPM. Take the [MMT][MMT] typeface as an example:
+
+```scss
+@import url('https://cdn.jsdelivr.net/npm/mmt-webfont/dist/result.css');
+$global-font-family: 'MMT', $global-font-family;
+```
 
 ### Page Style {#page-style}
 
@@ -312,6 +330,10 @@ This part is shown in the [pwa support page][pwa-support].
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
+[LxgwWenKai]: https://github.com/lxgw/LxgwWenKai
+[Fira]: https://github.com/mozilla/Fira
+[online-split]: https://chinese-font.netlify.app/en/online-split
+[MMT]: https://github.com/Lruihao/mmt-webfont
 [block]: {{< relref "/references/blocks" >}}
 [sc-admonition]: {{< relref "/documentation/content-management/shortcodes/extended/admonition" >}}
 [task-list]: {{< relref "/documentation/content-management/markdown-syntax/extended#task-lists" >}}
