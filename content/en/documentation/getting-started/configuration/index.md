@@ -1710,6 +1710,8 @@ c4u
     [params.page.related]
       enable = false
       count = 5
+      # {{< version 0.3.20 >}} position of related content, optional values: ["aside", "footer"]
+      position = ["aside", "footer"]
     # {{< version 0.2.17 >}} Donate (Sponsor) settings
     [params.page.reward]
       enable = false

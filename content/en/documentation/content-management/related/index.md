@@ -31,6 +31,7 @@ To enable related content, set the `page.related.enable` parameter to `true` in 
     [params.page.related]
       enable = true
       count = 5
+      position = ["aside", "footer"]
 ```
 
 > [!NOTE]
