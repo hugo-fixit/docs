@@ -32,7 +32,7 @@ The basic chart types ECharts supports include [line series][line], [bar series]
 
 ## How to Use
 
-Just insert your ECharts option in `JSON`, `YAML`, `TOML` or `JS Object literal` format in the `echarts` shortcode and that’s it.
+Just insert your ECharts option in `JSON`, `YAML`, `TOML` or `JS` format in the `echarts` shortcode and that’s it.
 {.page-break-after}
 
 Example `echarts` input in `JSON` format:
@@ -630,7 +630,11 @@ data = [
 
 {{< /details >}}
 
-Example `echarts` input in `JS Object literal` format:
+Example `echarts` input in [JS Object literal][object-literals] format:
+
+> [!NOTE]+
+> - The `js` parameter must be set to `true`.
+> - Do not add a semicolon `;` at the end of the last line!
 
 {{< echarts js=true >}}
 {
@@ -824,7 +828,7 @@ Example `echarts` input in `JS Object literal` format:
 {{< details "View source" false "center" >}}
 
 ```markdown {data-open=true}
-{{?{}< echarts >}}
+{{?{}< echarts js=true >}}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
@@ -1016,18 +1020,106 @@ Example `echarts` input in `JS Object literal` format:
 
 {{< /details >}}
 
+{{< version 0.3.20 >}}
+
+Example `echarts` with JS code:
+
+> [!NOTE]+
+> - The `js` parameter must be set to `true`.
+> - The `option` variable must be exposed.
+
+{{< echarts js=true >}}
+const data = [];
+for (let i = 0; i <= 100; i++) {
+  let theta = (i / 100) * 360;
+  let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
+  data.push([r, theta]);
+}
+option = {
+  title: {
+    text: 'Two Value-Axes in Polar'
+  },
+  legend: {
+    data: ['line']
+  },
+  polar: {},
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    }
+  },
+  angleAxis: {
+    type: 'value',
+    startAngle: 0
+  },
+  radiusAxis: {},
+  series: [
+    {
+      coordinateSystem: 'polar',
+      name: 'line',
+      type: 'line',
+      data: data
+    }
+  ]
+};
+{{< /echarts >}}
+
+{{< details "View source" false "center" >}}
+
+```markdown {data-open=true}
+{{?{}< echarts js=true >}}
+const data = [];
+for (let i = 0; i <= 100; i++) {
+  let theta = (i / 100) * 360;
+  let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
+  data.push([r, theta]);
+}
+option = {
+  title: {
+    text: 'Two Value-Axes in Polar'
+  },
+  legend: {
+    data: ['line']
+  },
+  polar: {},
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    }
+  },
+  angleAxis: {
+    type: 'value',
+    startAngle: 0
+  },
+  radiusAxis: {},
+  series: [
+    {
+      coordinateSystem: 'polar',
+      name: 'line',
+      type: 'line',
+      data: data
+    }
+  ]
+};
+{{?{}< /echarts >}}
+```
+
+{{< /details >}}
+
 ## Parameters {.page-break-before}
 
 The `echarts` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description                                                                | Type   | Default |
-| :-------- | :------------------------------------------------------------------------- | :----- | :------ |
-| width     | Width of the data visualization                                            | string | `100%`  |
-| height    | Height of the data visualization                                           | string | `30rem` |
-| js        | {{< version 0.3.19 >}} Whether to use [JS Object literal][object-literals] | bool   | `false` |
+| Parameter | Description                                   | Type   | Default |
+| :-------- | :-------------------------------------------- | :----- | :------ |
+| width     | Width of the data visualization               | string | `100%`  |
+| height    | Height of the data visualization              | string | `30rem` |
+| js        | {{< version 0.3.19 >}} Whether to use JS code | bool   | `false` |
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file blanks-around-lists ul-indent -->
+<!-- markdownlint-disable-file MD032 MD007 MD037 -->
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/en/option.html#series-line
 [bar]: https://echarts.apache.org/en/option.html#series-bar

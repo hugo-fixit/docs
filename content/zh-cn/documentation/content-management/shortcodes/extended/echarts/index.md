@@ -33,7 +33,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 
 ## 如何使用
 
-只需在 `echarts` shortcode 中以 `JSON`、`YAML`、`TOML` 或 `JS 对象字面量` 格式插入 ECharts 选项即可。
+只需在 `echarts` shortcode 中以 `JSON`、`YAML`、`TOML` 或 `JS` 格式插入 ECharts 选项即可。
 {.page-break-after}
 
 一个 `JSON` 格式的 `echarts` 示例：
@@ -631,7 +631,11 @@ data = [
 
 {{< /details >}}
 
-一个 `JS 对象字面量` 格式的 `echarts` 示例：
+一个 [JS 对象字面量][object-literals] 格式的 `echarts` 示例：
+
+> [!NOTE]+
+> - `js` 参数必须设置为 `true`。
+> - 最后一行不要添加分号 `;`！
 
 {{< echarts js=true >}}
 {
@@ -825,7 +829,7 @@ data = [
 {{< details "查看源码" false "center" >}}
 
 ```markdown {data-open=true}
-{{?{}< echarts >}}
+{{?{}< echarts js=true >}}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
@@ -1017,18 +1021,106 @@ data = [
 
 {{< /details >}}
 
+{{< version 0.3.20 >}}
+
+一个包含 JS 代码的的 `echarts` 示例：
+
+> [!NOTE]+
+> - `js` 参数必须设置为 `true`。
+> - 必须暴露出 `option` 变量。
+
+{{< echarts js=true >}}
+const data = [];
+for (let i = 0; i <= 100; i++) {
+  let theta = (i / 100) * 360;
+  let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
+  data.push([r, theta]);
+}
+option = {
+  title: {
+    text: '极坐标中的两个值轴'
+  },
+  legend: {
+    data: ['line']
+  },
+  polar: {},
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    }
+  },
+  angleAxis: {
+    type: 'value',
+    startAngle: 0
+  },
+  radiusAxis: {},
+  series: [
+    {
+      coordinateSystem: 'polar',
+      name: 'line',
+      type: 'line',
+      data: data
+    }
+  ]
+};
+{{< /echarts >}}
+
+{{< details "查看源码" false "center" >}}
+
+```markdown {data-open=true}
+{{?{}< echarts js=true >}}
+const data = [];
+for (let i = 0; i <= 100; i++) {
+  let theta = (i / 100) * 360;
+  let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
+  data.push([r, theta]);
+}
+option = {
+  title: {
+    text: '极坐标中的两个值轴'
+  },
+  legend: {
+    data: ['line']
+  },
+  polar: {},
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    }
+  },
+  angleAxis: {
+    type: 'value',
+    startAngle: 0
+  },
+  radiusAxis: {},
+  series: [
+    {
+      coordinateSystem: 'polar',
+      name: 'line',
+      type: 'line',
+      data: data
+    }
+  ]
+};
+{{?{}< /echarts >}}
+```
+
+{{< /details >}}
+
 ## 参数配置 {.page-break-before}
 
 `echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数   | 类型   | 说明                                                                  | 默认值  |
-| :----- | :----- | :-------------------------------------------------------------------- | :------ |
-| width  | string | 数据可视化的宽度                                                      | `100%`  |
-| height | string | 数据可视化的高度                                                      | `30rem` |
-| js     | bool   | {{< version 0.3.19 >}} 是否使用 [JS 对象字面量][object-literals] 格式 | `false` |
+| 参数   | 类型   | 说明                                      | 默认值  |
+| :----- | :----- | :---------------------------------------- | :------ |
+| width  | string | 数据可视化的宽度                          | `100%`  |
+| height | string | 数据可视化的高度                          | `30rem` |
+| js     | bool   | {{< version 0.3.19 >}} 是否使用 `JS` 格式 | `false` |
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file blanks-around-lists ul-indent -->
+<!-- markdownlint-disable-file MD032 MD007 MD037 -->
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/zh/option.html#series-line
 [bar]: https://echarts.apache.org/zh/option.html#series-bar
