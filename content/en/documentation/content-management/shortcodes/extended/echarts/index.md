@@ -32,8 +32,9 @@ The basic chart types ECharts supports include [line series][line], [bar series]
 
 ## How to Use
 
-Just insert your ECharts option in `JSON`, `YAML`, `TOML` or `JS` format in the `echarts` shortcode and that’s it.
-{.page-break-after}
+Simply insert the ECharts option in formats such as `JSON`, `YAML`, or `TOML` in the `echarts` shortcode.
+
+### JSON Format
 
 Example `echarts` input in `JSON` format:
 
@@ -184,6 +185,8 @@ Example `echarts` input in `JSON` format:
 ```
 
 {{< /details >}}
+
+### YAML Format
 
 Example `echarts` input in `YAML` format:
 
@@ -385,8 +388,9 @@ series:
 
 {{< /details >}}
 
+### TOML Format
+
 Example `echarts` input in `TOML` format:
-{.page-break-before}
 
 {{< echarts >}}
 [title]
@@ -630,11 +634,11 @@ data = [
 
 {{< /details >}}
 
-Example `echarts` input in [JS Object literal][object-literals] format:
+### JS Object literal Format
 
-> [!NOTE]+
-> - The `js` parameter must be set to `true`.
-> - Do not add a semicolon `;` at the end of the last line!
+{{< version 0.3.19 >}}
+
+Set the `js` parameter to `true`, the example `echarts` input in [JS object literals][object-literals] format:
 
 {{< echarts js=true >}}
 {
@@ -1019,14 +1023,26 @@ Example `echarts` input in [JS Object literal][object-literals] format:
 ```
 
 {{< /details >}}
+
+### JS Code
 
 {{< version 0.3.20 >}}
 
-Example `echarts` with JS code:
+When the `js` parameter is set to `true` and the content format is JS code, at this time the content is equivalent to a JS function, you must return the ECharts option or a `Promise` object with the `return` keyword. The function description is as follows:
 
-> [!NOTE]+
-> - The `js` parameter must be set to `true`.
-> - The `option` variable must be exposed.
+```js
+/**
+ * Set ECharts option
+ * @param {Object} fixit FixIt instance
+ * @param {Object} chart ECharts instance
+ * @returns {Object|Promise} ECharts option or Promise
+ */
+function _setOption(fixit, chart) {
+  // your content
+}
+```
+
+Example `echarts` with JS code:
 
 {{< echarts js=true >}}
 const data = [];
@@ -1035,9 +1051,11 @@ for (let i = 0; i <= 100; i++) {
   let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
   data.push([r, theta]);
 }
-option = {
+const option = {
   title: {
-    text: 'Two Value-Axes in Polar'
+    text: 'Two Value-Axes in Polar',
+    top: 'bottom',
+    left: 'center'
   },
   legend: {
     data: ['line']
@@ -1063,6 +1081,7 @@ option = {
     }
   ]
 };
+return option;
 {{< /echarts >}}
 
 {{< details "View source" false "center" >}}
@@ -1075,9 +1094,11 @@ for (let i = 0; i <= 100; i++) {
   let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
   data.push([r, theta]);
 }
-option = {
+const option = {
   title: {
-    text: 'Two Value-Axes in Polar'
+    text: 'Two Value-Axes in Polar',
+    top: 'bottom',
+    left: 'center'
   },
   legend: {
     data: ['line']
@@ -1103,20 +1124,153 @@ option = {
     }
   ]
 };
+return option;
 {{?{}< /echarts >}}
 ```
 
 {{< /details >}}
 
-## Parameters {.page-break-before}
+JS code can also use the `async` parameter to load data asynchronously, for example:
+
+{{< echarts js=true async=true >}}
+return fetch('/echarts/les-miserables.json')
+  .then((response) => response.json())
+  .then((graph) => {
+    graph.nodes.forEach(function (node) {
+      node.label = {
+        show: node.symbolSize > 30
+      };
+    });
+    const option = {
+      title: {
+        text: 'Les Miserables',
+        subtext: 'Circular layout',
+        top: 'bottom',
+        left: 'right'
+      },
+      tooltip: {},
+      legend: [
+        {
+          data: graph.categories.map(function (a) {
+            return a.name;
+          })
+        }
+      ],
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [
+        {
+          name: 'Les Miserables',
+          type: 'graph',
+          layout: 'circular',
+          circular: {
+            rotateLabel: true
+          },
+          data: graph.nodes,
+          links: graph.links,
+          categories: graph.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}'
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3
+          }
+        }
+      ]
+    }
+    return option;
+});
+{{< /echarts >}}
+
+{{< details "View source" false "center" >}}
+
+```markdown {data-open=true}
+{{?{}< echarts js=true async=true >}}
+return fetch('/echarts/les-miserables.json')
+  .then((response) => response.json())
+  .then((graph) => {
+    graph.nodes.forEach(function (node) {
+      node.label = {
+        show: node.symbolSize > 30
+      };
+    });
+    const option = {
+      title: {
+        text: 'Les Miserables',
+        subtext: 'Circular layout',
+        top: 'bottom',
+        left: 'right'
+      },
+      tooltip: {},
+      legend: [
+        {
+          data: graph.categories.map(function (a) {
+            return a.name;
+          })
+        }
+      ],
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [
+        {
+          name: 'Les Miserables',
+          type: 'graph',
+          layout: 'circular',
+          circular: {
+            rotateLabel: true
+          },
+          data: graph.nodes,
+          links: graph.links,
+          categories: graph.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}'
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3
+          }
+        }
+      ]
+    }
+    return option;
+});
+{{?{}< /echarts >}}
+```
+
+{{< /details >}}
+
+### Site Data
+
+{{< version 0.3.20 >}}
+
+Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/echarts` directory, and the format supports `JSON`, `YAML`, and `TOML`.
+
+For example, if you have a file `data/echarts/round-cap.json`, you can use the `data` parameter to reference it:
+
+```markdown
+{{?{}< echarts data="round-cap" />}}
+```
+
+The rendered output looks like this:
+
+{{< echarts data="round-cap" />}}
+
+## Parameters
 
 The `echarts` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description                                   | Type   | Default |
-| :-------- | :-------------------------------------------- | :----- | :------ |
-| width     | Width of the data visualization               | string | `100%`  |
-| height    | Height of the data visualization              | string | `30rem` |
-| js        | {{< version 0.3.19 >}} Whether to use JS code | bool   | `false` |
+| Parameter | Description                                                     | Type   | Default |
+| :-------- | :-------------------------------------------------------------- | :----- | :------ |
+| width     | ==1== Width of the data visualization                           | string | `100%`  |
+| height    | ==2== Height of the data visualization                          | string | `30rem` |
+| js        | {{< version 0.3.19 >}} Whether to use JS code                   | bool   | `false` |
+| async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously  | bool   | `false` |
+| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope | string |         |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->
@@ -1137,3 +1291,4 @@ The `echarts` shortcode has the following named parameters, and the positional p
 [funnel]: https://echarts.apache.org/en/option.html#series-funnel
 [gauge]: https://echarts.apache.org/en/option.html#series-gauge
 [object-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
+[hugo-data]: https://gohugo.io/methods/site/data/

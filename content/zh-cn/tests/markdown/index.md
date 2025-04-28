@@ -146,6 +146,16 @@ events:
 
 ## echarts
 
+{{< echarts data="test" />}}
+
+```echarts {comment="空的配置"}
+
+```
+
+```echarts {js=true, comment="空的 JS 代码"}
+
+```
+
 ```echarts {width="100%", height="300px"}
 title:
   text: 折线统计图
@@ -241,6 +251,72 @@ series:
       - 1330
       - 1320
 ```
+
+echarts JS 代码块异步加载数据测试：
+
+```echarts {js=true async=true}
+return fetch('/echarts/les-miserables.json')
+  .then((response) => response.json())
+  .then((graph) => {
+    graph.nodes.forEach(function (node) {
+      node.label = {
+        show: node.symbolSize > 30
+      };
+    });
+    const option = {
+      title: {
+        text: 'Les Miserables',
+        subtext: 'Circular layout',
+        top: 'bottom',
+        left: 'right'
+      },
+      tooltip: {},
+      legend: [
+        {
+          data: graph.categories.map(function (a) {
+            return a.name;
+          })
+        }
+      ],
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [
+        {
+          name: 'Les Miserables',
+          type: 'graph',
+          layout: 'circular',
+          circular: {
+            rotateLabel: true
+          },
+          data: graph.nodes,
+          links: graph.links,
+          categories: graph.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}'
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3
+          }
+        }
+      ]
+    }
+    return option;
+});
+```
+
+Data 数据获取：
+
+TOML
+
+```echarts {data="t-round-cap"}
+```
+
+YAML
+
+{{< echarts data="y-round-cap" />}}
 
 ## line break
 

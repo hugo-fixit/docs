@@ -33,8 +33,9 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 
 ## 如何使用
 
-只需在 `echarts` shortcode 中以 `JSON`、`YAML`、`TOML` 或 `JS` 格式插入 ECharts 选项即可。
-{.page-break-after}
+只需在 `echarts` shortcode 中以 `JSON`、`YAML` 或 `TOML` 等格式插入 ECharts 选项即可。
+
+### JSON 格式
 
 一个 `JSON` 格式的 `echarts` 示例：
 
@@ -185,6 +186,8 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 ```
 
 {{< /details >}}
+
+### YAML 格式
 
 一个 `YAML` 格式的 `echarts` 示例：
 
@@ -386,8 +389,9 @@ series:
 
 {{< /details >}}
 
+### TOML 格式
+
 一个 `TOML` 格式的 `echarts` 示例：
-{.page-break-before}
 
 {{< echarts >}}
 [title]
@@ -631,11 +635,11 @@ data = [
 
 {{< /details >}}
 
-一个 [JS 对象字面量][object-literals] 格式的 `echarts` 示例：
+### JS 对象字面量格式
 
-> [!NOTE]+
-> - `js` 参数必须设置为 `true`。
-> - 最后一行不要添加分号 `;`！
+{{< version 0.3.19 >}}
+
+`js` 参数设置为 `true`，一个 [JS 对象字面量][object-literals] 格式的 `echarts` 示例：
 
 {{< echarts js=true >}}
 {
@@ -1020,14 +1024,26 @@ data = [
 ```
 
 {{< /details >}}
+
+### JS 代码
 
 {{< version 0.3.20 >}}
 
-一个包含 JS 代码的的 `echarts` 示例：
+`js` 参数设置为 `true`，内容格式为 JS 代码时，此时的内容相当于一个 JS 函数，你必须通过 `return` 关键词返回 ECharts option 或者一个 `Promise` 对象，函数说明如下：
 
-> [!NOTE]+
-> - `js` 参数必须设置为 `true`。
-> - 必须暴露出 `option` 变量。
+```js
+/**
+ * Set ECharts option
+ * @param {Object} fixit FixIt instance
+ * @param {Object} chart ECharts instance
+ * @returns {Object|Promise} ECharts option or Promise
+ */
+function _setOption(fixit, chart) {
+  // your content
+}
+```
+
+一个包含 JS 代码的的 `echarts` 示例：
 
 {{< echarts js=true >}}
 const data = [];
@@ -1036,9 +1052,11 @@ for (let i = 0; i <= 100; i++) {
   let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
   data.push([r, theta]);
 }
-option = {
+const option = {
   title: {
-    text: '极坐标中的两个值轴'
+    text: 'Two Value-Axes in Polar',
+    top: 'bottom',
+    left: 'center'
   },
   legend: {
     data: ['line']
@@ -1064,6 +1082,7 @@ option = {
     }
   ]
 };
+return option;
 {{< /echarts >}}
 
 {{< details "查看源码" false "center" >}}
@@ -1076,9 +1095,11 @@ for (let i = 0; i <= 100; i++) {
   let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
   data.push([r, theta]);
 }
-option = {
+const option = {
   title: {
-    text: '极坐标中的两个值轴'
+    text: 'Two Value-Axes in Polar',
+    top: 'bottom',
+    left: 'center'
   },
   legend: {
     data: ['line']
@@ -1104,20 +1125,153 @@ option = {
     }
   ]
 };
+return option;
 {{?{}< /echarts >}}
 ```
 
 {{< /details >}}
 
-## 参数配置 {.page-break-before}
+JS 代码也可以使用 `async` 参数来异步加载数据，例如：
+
+{{< echarts js=true async=true >}}
+return fetch('/echarts/les-miserables.json')
+  .then((response) => response.json())
+  .then((graph) => {
+    graph.nodes.forEach(function (node) {
+      node.label = {
+        show: node.symbolSize > 30
+      };
+    });
+    const option = {
+      title: {
+        text: 'Les Miserables',
+        subtext: 'Circular layout',
+        top: 'bottom',
+        left: 'right'
+      },
+      tooltip: {},
+      legend: [
+        {
+          data: graph.categories.map(function (a) {
+            return a.name;
+          })
+        }
+      ],
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [
+        {
+          name: 'Les Miserables',
+          type: 'graph',
+          layout: 'circular',
+          circular: {
+            rotateLabel: true
+          },
+          data: graph.nodes,
+          links: graph.links,
+          categories: graph.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}'
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3
+          }
+        }
+      ]
+    }
+    return option;
+});
+{{< /echarts >}}
+
+{{< details "查看源码" false "center" >}}
+
+```markdown {data-open=true}
+{{?{}< echarts js=true async=true >}}
+return fetch('/echarts/les-miserables.json')
+  .then((response) => response.json())
+  .then((graph) => {
+    graph.nodes.forEach(function (node) {
+      node.label = {
+        show: node.symbolSize > 30
+      };
+    });
+    const option = {
+      title: {
+        text: 'Les Miserables',
+        subtext: 'Circular layout',
+        top: 'bottom',
+        left: 'right'
+      },
+      tooltip: {},
+      legend: [
+        {
+          data: graph.categories.map(function (a) {
+            return a.name;
+          })
+        }
+      ],
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [
+        {
+          name: 'Les Miserables',
+          type: 'graph',
+          layout: 'circular',
+          circular: {
+            rotateLabel: true
+          },
+          data: graph.nodes,
+          links: graph.links,
+          categories: graph.categories,
+          roam: true,
+          label: {
+            position: 'right',
+            formatter: '{b}'
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3
+          }
+        }
+      ]
+    }
+    return option;
+});
+{{?{}< /echarts >}}
+```
+
+{{< /details >}}
+
+### Data 数据
+
+{{< version 0.3.20 >}}
+
+支持从 Hugo [站点数据][hugo-data] 中获取数据，数据文件定义在 `data/echarts` 目录下，格式支持 `JSON`、`YAML`、`TOML` 格式。
+
+例如，定义有 `data/echarts/round-cap.json` 文件，你可以 使用 `data` 参数来引用：
+
+```markdown
+{{?{}< echarts data="round-cap" />}}
+```
+
+呈现的输出效果如下：
+
+{{< echarts data="round-cap" />}}
+
+## 参数配置 {#parameters}
 
 `echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数   | 类型   | 说明                                      | 默认值  |
-| :----- | :----- | :---------------------------------------- | :------ |
-| width  | string | 数据可视化的宽度                          | `100%`  |
-| height | string | 数据可视化的高度                          | `30rem` |
-| js     | bool   | {{< version 0.3.19 >}} 是否使用 `JS` 格式 | `false` |
+| 参数   | 说明                                                       | 类型   | 默认值  |
+| :----- | :--------------------------------------------------------- | :----- | :------ |
+| width  | ==1== 数据可视化的宽度                                     | string | `100%`  |
+| height | ==2== 数据可视化的高度                                     | string | `30rem` |
+| js     | {{< version 0.3.19 >}} 是否使用 `JS` 格式                  | bool   | `false` |
+| async  | {{< version 0.3.20 >}} JS 代码是否异步执行                 | bool   | `false` |
+| data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围） | string |         |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->
@@ -1138,3 +1292,4 @@ option = {
 [funnel]: https://echarts.apache.org/zh/option.html#series-funnel
 [gauge]: https://echarts.apache.org/zh/option.html#series-gauge
 [object-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
+[hugo-data]: https://gohugo.io/methods/site/data/

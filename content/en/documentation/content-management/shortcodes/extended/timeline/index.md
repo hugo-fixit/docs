@@ -358,18 +358,16 @@ content = "Event start"
 
 The `timeline` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description                                                       | Type    | Optional values        | Default |
-| :-------- | :---------------------------------------------------------------- | :------ | :--------------------- | :------ |
-| reverse   | whether the node is ascending or descending, default is ascending | boolean | -                      | false   |
-| placement | position of timestamp                                             | string  | top / bottom           | bottom  |
-| animation | whether to enable animation                                       | boolean | -                      | false   |
-| size      | node size                                                         | string  | small / medium / large | medium  |
-| node      | node style                                                        | string  | circle / dot           | circle  |
-| width     | ==#== container width                                             | string  | -                      | -       |
-| height    | ==#== container height                                            | string  | -                      | -       |
-| class     | ==#== container classname                                         | string  | -                      | -       |
-
-> Parameters marked with ==#== only support named parameters.
+| Parameter | Description                                                             | Type    | Optional values        | Default |
+| :-------- | :---------------------------------------------------------------------- | :------ | :--------------------- | :------ |
+| reverse   | ==1== whether the node is ascending or descending, default is ascending | boolean | -                      | false   |
+| placement | ==2== position of timestamp                                             | string  | top / bottom           | bottom  |
+| animation | ==3== whether to enable animation                                       | boolean | -                      | false   |
+| size      | ==4== node size                                                         | string  | small / medium / large | medium  |
+| node      | ==5== node style                                                        | string  | circle / dot           | circle  |
+| width     | container width                                                         | string  | -                      | -       |
+| height    | container height                                                        | string  | -                      | -       |
+| class     | container classname                                                     | string  | -                      | -       |
 
 ### Timeline Events
 

@@ -358,18 +358,16 @@ content = "活动按期开始"
 
 `timeline` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数      | 说明                         | 类型    | 可选值                 | 默认值 |
-| :-------- | :--------------------------- | :------ | :--------------------- | :----- |
-| reverse   | 指定节点排序方向，默认为正序 | boolean | -                      | false  |
-| placement | 时间戳位置                   | string  | top / bottom           | bottom |
-| animation | 是否开启动画                 | boolean | -                      | false  |
-| size      | 节点尺寸                     | string  | small / medium / large | medium |
-| node      | 节点风格                     | string  | circle / dot           | circle |
-| width     | ==#== 容器宽度               | string  | -                      | -      |
-| height    | ==#== 容器高度               | string  | -                      | -      |
-| class     | ==#== 容器类名               | string  | -                      | -      |
-
-> 带 ==#== 标识的参数仅支持命名参数。
+| 参数      | 说明                               | 类型    | 可选值                 | 默认值 |
+| :-------- | :--------------------------------- | :------ | :--------------------- | :----- |
+| reverse   | ==1== 指定节点排序方向，默认为正序 | boolean | -                      | false  |
+| placement | ==2== 时间戳位置                   | string  | top / bottom           | bottom |
+| animation | ==3== 是否开启动画                 | boolean | -                      | false  |
+| size      | ==4== 节点尺寸                     | string  | small / medium / large | medium |
+| node      | ==5== 节点风格                     | string  | circle / dot           | circle |
+| width     | 容器宽度                           | string  | -                      | -      |
+| height    | 容器高度                           | string  | -                      | -      |
+| class     | 容器类名                           | string  | -                      | -      |
 
 ### Timeline Events
 
