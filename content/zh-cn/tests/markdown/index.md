@@ -146,15 +146,19 @@ events:
 
 ## echarts
 
-{{< echarts data="test" />}}
+````md
+异常数据测试
 
-```echarts {comment="空的配置"}
+{{?{}< echarts data="test" />}}
+
+```echarts
 
 ```
 
-```echarts {js=true, comment="空的 JS 代码"}
+```echarts {js=true}
 
 ```
+````
 
 ```echarts {width="100%", height="300px"}
 title:
