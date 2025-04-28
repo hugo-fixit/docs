@@ -11,7 +11,6 @@ description: echarts shortcode 使用 ECharts 库提供数据可视化的功能�
 resources:
   - name: featured-image
     src: featured-image.webp
-
 tags:
   - Shortcodes
   - Content
@@ -645,7 +644,7 @@ data = [
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
-    text: '渐变堆积面积图',
+    text: '渐变堆叠面积图',
     top: '2%',
     left: 'center'
   },
@@ -837,7 +836,7 @@ data = [
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
-    text: '渐变堆积面积图',
+    text: '渐变堆叠面积图',
     top: '2%',
     left: 'center'
   },
@@ -1054,7 +1053,7 @@ for (let i = 0; i <= 100; i++) {
 }
 const option = {
   title: {
-    text: 'Two Value-Axes in Polar',
+    text: '极坐标双数值轴',
     top: 'bottom',
     left: 'center'
   },
@@ -1097,7 +1096,7 @@ for (let i = 0; i <= 100; i++) {
 }
 const option = {
   title: {
-    text: 'Two Value-Axes in Polar',
+    text: '极坐标双数值轴',
     top: 'bottom',
     left: 'center'
   },
@@ -1261,18 +1260,57 @@ return fetch('/echarts/les-miserables.json')
 
 {{< echarts data="round-cap" />}}
 
+### File 数据
+
+{{< version 0.3.20 >}}
+
+支持从 Hugo [页面资源][page-resources] 或 `assets` 中的文件获取数据，格式支持 `JSON`、`YAML`、`TOML` 或 `JS` 格式。
+
+例如，当前页面结构如下：
+
+```plain
+echarts
+├── data/
+│   ├── chart.js
+│   ├── chart.json
+│   ├── chart.toml
+│   └── chart.yaml
+├── featured-image.webp
+└── index.md
+```
+
+你可以使用 `file` 参数来从文件中获取数据：
+
+```markdown
+{{?{}< echarts file="data/chart.yaml" />}}
+```
+
+呈现的输出效果如下：
+
+{{< echarts file="data/chart.yaml" />}}
+
+一个加载 `JS` 文件的示例：
+
+```markdown
+{{?{}< echarts file="data/chart.js" />}}
+```
+
+呈现的输出效果如下：
+
+{{< echarts file="data/chart.js" />}}
+
 ## 参数配置 {#parameters}
 
 `echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数   | 说明                                                       | 类型   | 默认值  |
-| :----- | :--------------------------------------------------------- | :----- | :------ |
-| width  | ==1== 数据可视化的宽度                                     | string | `100%`  |
-| height | ==2== 数据可视化的高度                                     | string | `30rem` |
-| js     | {{< version 0.3.19 >}} 是否使用 `JS` 格式                  | bool   | `false` |
-| async  | {{< version 0.3.20 >}} JS 代码是否异步执行                 | bool   | `false` |
-| data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围） | string |         |
-| file   | {{< version 0.3.20 >}} 数据文件路径，支持本地或 URL        | string |         |
+| 参数   | 说明                                                                       | 类型   | 默认值  |
+| :----- | :------------------------------------------------------------------------- | :----- | :------ |
+| width  | ==1== 数据可视化的宽度                                                     | string | `100%`  |
+| height | ==2== 数据可视化的高度                                                     | string | `30rem` |
+| js     | {{< version 0.3.19 >}} 是否使用 `JS` 格式                                  | bool   | `false` |
+| async  | {{< version 0.3.20 >}} JS 代码是否异步执行                                 | bool   | `false` |
+| data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围）                 | string |         |
+| file   | {{< version 0.3.20 >}} [页面资源][page-resources] 或 `assets` 中的数据文件 | string |         |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->
@@ -1294,3 +1332,4 @@ return fetch('/echarts/les-miserables.json')
 [gauge]: https://echarts.apache.org/zh/option.html#series-gauge
 [object-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
 [hugo-data]: https://gohugo.io/methods/site/data/
+[page-resources]: https://gohugo.io/content-management/page-resources/

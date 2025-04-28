@@ -1506,7 +1506,7 @@ series:
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
-    text: '渐变堆积面积图',
+    text: '渐变堆叠面积图',
     top: '2%',
     left: 'center'
   },
@@ -1698,7 +1698,7 @@ series:
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
-    text: '渐变堆积面积图',
+    text: '渐变堆叠面积图',
     top: '2%',
     left: 'center'
   },

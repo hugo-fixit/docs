@@ -1260,18 +1260,55 @@ The rendered output looks like this:
 
 {{< echarts data="round-cap" />}}
 
+### File Data
+
+{{< version 0.3.20 >}}
+
+Supports getting data from files in Hugo [page-resources] or `assets`, and the format supports `JSON`, `YAML`, `TOML` or `JS` format.
+
+For example, the current page structure is as follows:
+
+```plain
+echarts
+├── data/
+│   ├── chart.js
+│   ├── chart.json
+│   ├── chart.toml
+│   └── chart.yaml
+├── featured-image.webp
+└── index.md
+```
+
+You can use the `file` parameter to get data from the file:
+
+```markdown
+{{?{}< echarts file="data/chart.yaml" />}}
+```
+
+{{< echarts file="data/chart.yaml" />}}
+
+An example of loading a `JS` file:
+
+```markdown
+{{?{}< echarts file="data/chart.js" />}}
+```
+
+The rendered output looks like this:
+
+{{< echarts file="data/chart.js" />}}
+
 ## Parameters
 
 The `echarts` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description                                                     | Type   | Default |
-| :-------- | :-------------------------------------------------------------- | :----- | :------ |
-| width     | ==1== Width of the data visualization                           | string | `100%`  |
-| height    | ==2== Height of the data visualization                          | string | `30rem` |
-| js        | {{< version 0.3.19 >}} Whether to use JS code                   | bool   | `false` |
-| async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously  | bool   | `false` |
-| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope | string |         |
-| file      | {{< version 0.3.20 >}} Data file path, supports local or URL    | string |         |
+| Parameter | Description                                                                      | Type   | Default |
+| :-------- | :------------------------------------------------------------------------------- | :----- | :------ |
+| width     | ==1== Width of the data visualization                                            | string | `100%`  |
+| height    | ==2== Height of the data visualization                                           | string | `30rem` |
+| js        | {{< version 0.3.19 >}} Whether to use JS code                                    | bool   | `false` |
+| async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously                   | bool   | `false` |
+| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope                  | string |         |
+| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string |         |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->
@@ -1293,3 +1330,4 @@ The `echarts` shortcode has the following named parameters, and the positional p
 [gauge]: https://echarts.apache.org/en/option.html#series-gauge
 [object-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
 [hugo-data]: https://gohugo.io/methods/site/data/
+[page-resources]: https://gohugo.io/content-management/page-resources/
