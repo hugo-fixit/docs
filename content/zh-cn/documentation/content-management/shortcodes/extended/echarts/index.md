@@ -1033,12 +1033,12 @@ data = [
 
 ```js
 /**
- * Set ECharts option
+ * Get ECharts option
  * @param {Object} fixit FixIt instance
  * @param {Object} chart ECharts instance
  * @returns {Object|Promise} ECharts option or Promise
  */
-function _setOption(fixit, chart) {
+function _getOption(fixit, chart) {
   // your content
 }
 ```
@@ -1181,7 +1181,7 @@ return fetch('/echarts/les-miserables.json')
           }
         }
       ]
-    }
+    };
     return option;
 });
 {{< /echarts >}}
@@ -1237,7 +1237,7 @@ return fetch('/echarts/les-miserables.json')
           }
         }
       ]
-    }
+    };
     return option;
 });
 {{?{}< /echarts >}}
@@ -1272,6 +1272,7 @@ return fetch('/echarts/les-miserables.json')
 | js     | {{< version 0.3.19 >}} 是否使用 `JS` 格式                  | bool   | `false` |
 | async  | {{< version 0.3.20 >}} JS 代码是否异步执行                 | bool   | `false` |
 | data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围） | string |         |
+| file   | {{< version 0.3.20 >}} 数据文件路径，支持本地或 URL        | string |         |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->

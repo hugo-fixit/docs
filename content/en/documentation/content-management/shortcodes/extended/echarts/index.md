@@ -1032,12 +1032,12 @@ When the `js` parameter is set to `true` and the content format is JS code, at t
 
 ```js
 /**
- * Set ECharts option
+ * Get ECharts option
  * @param {Object} fixit FixIt instance
  * @param {Object} chart ECharts instance
  * @returns {Object|Promise} ECharts option or Promise
  */
-function _setOption(fixit, chart) {
+function _getOption(fixit, chart) {
   // your content
 }
 ```
@@ -1180,7 +1180,7 @@ return fetch('/echarts/les-miserables.json')
           }
         }
       ]
-    }
+    };
     return option;
 });
 {{< /echarts >}}
@@ -1236,7 +1236,7 @@ return fetch('/echarts/les-miserables.json')
           }
         }
       ]
-    }
+    };
     return option;
 });
 {{?{}< /echarts >}}
@@ -1271,6 +1271,7 @@ The `echarts` shortcode has the following named parameters, and the positional p
 | js        | {{< version 0.3.19 >}} Whether to use JS code                   | bool   | `false` |
 | async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously  | bool   | `false` |
 | data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope | string |         |
+| file      | {{< version 0.3.20 >}} Data file path, supports local or URL    | string |         |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->
