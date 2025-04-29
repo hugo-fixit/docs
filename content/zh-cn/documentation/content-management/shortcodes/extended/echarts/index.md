@@ -1309,8 +1309,8 @@ echarts
 | height | ==2== 数据可视化的高度                                                     | string | `30rem` |
 | js     | {{< version 0.3.19 >}} 是否使用 `JS` 格式                                  | bool   | `false` |
 | async  | {{< version 0.3.20 >}} JS 代码是否异步执行                                 | bool   | `false` |
-| data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围）                 | string |         |
-| file   | {{< version 0.3.20 >}} [页面资源][page-resources] 或 `assets` 中的数据文件 | string |         |
+| data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围）                 | string | -       |
+| file   | {{< version 0.3.20 >}} [页面资源][page-resources] 或 `assets` 中的数据文件 | string | -       |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->

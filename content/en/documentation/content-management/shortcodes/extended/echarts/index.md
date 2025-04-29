@@ -1307,8 +1307,8 @@ The `echarts` shortcode has the following named parameters, and the positional p
 | height    | ==2== Height of the data visualization                                           | string | `30rem` |
 | js        | {{< version 0.3.19 >}} Whether to use JS code                                    | bool   | `false` |
 | async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously                   | bool   | `false` |
-| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope                  | string |         |
-| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string |         |
+| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope                  | string | -       |
+| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string | -       |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 -->
