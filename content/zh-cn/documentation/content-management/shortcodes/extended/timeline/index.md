@@ -352,22 +352,66 @@ content = "活动按期开始"
 
 {{< /details >}}
 
+## Data 数据
+
+{{< version 0.3.20 >}}
+
+支持从 Hugo [站点数据][hugo-data] 中获取数据，数据文件定义在 `data/timeline` 目录下，格式支持 `JSON`、`YAML`、`TOML` 格式。
+
+例如，定义有 `data/echarts/example.yml` 文件，你可以 使用 `data` 参数来引用：
+
+```markdown
+{{?{}< timeline data="example" />}}
+```
+
+呈现的输出效果如下：
+
+{{< timeline data="example" />}}
+
+## File 数据
+
+{{< version 0.3.20 >}}
+
+支持从 Hugo [页面资源][page-resources] 或 `assets` 中的文件获取数据，格式支持 `JSON`、`YAML` 或 `TOML` 格式。
+
+例如，当前页面结构如下：
+
+```plain
+timeline/
+├── data/
+│   └── example.yml
+├── featured-image.webp
+└── index.md
+```
+
+你可以使用 `file` 参数来从文件中获取数据：
+
+```markdown
+{{?{}< timeline file="data/example.yml" />}}
+```
+
+呈现的输出效果如下：
+
+{{< timeline file="data/example.yml" />}}
+
 ## 参数配置
 
 ### Timeline
 
 `timeline` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数      | 说明                               | 类型    | 可选值                 | 默认值 |
-| :-------- | :--------------------------------- | :------ | :--------------------- | :----- |
-| reverse   | ==1== 指定节点排序方向，默认为正序 | boolean | -                      | false  |
-| placement | ==2== 时间戳位置                   | string  | top / bottom           | bottom |
-| animation | ==3== 是否开启动画                 | boolean | -                      | false  |
-| size      | ==4== 节点尺寸                     | string  | small / medium / large | medium |
-| node      | ==5== 节点风格                     | string  | circle / dot           | circle |
-| width     | 容器宽度                           | string  | -                      | -      |
-| height    | 容器高度                           | string  | -                      | -      |
-| class     | 容器类名                           | string  | -                      | -      |
+| 参数      | 说明                                                                       | 类型    | 可选值                 | 默认值 |
+| :-------- | :------------------------------------------------------------------------- | :------ | :--------------------- | :----- |
+| reverse   | ==1== 指定节点排序方向，默认为正序                                         | boolean | -                      | false  |
+| placement | ==2== 时间戳位置                                                           | string  | top / bottom           | bottom |
+| animation | ==3== 是否开启动画                                                         | boolean | -                      | false  |
+| size      | ==4== 节点尺寸                                                             | string  | small / medium / large | medium |
+| node      | ==5== 节点风格                                                             | string  | circle / dot           | circle |
+| width     | 容器宽度                                                                   | string  | -                      | -      |
+| height    | 容器高度                                                                   | string  | -                      | -      |
+| class     | 容器类名                                                                   | string  | -                      | -      |
+| data      | {{< version 0.3.20 >}} Hugo 站点数据键值（`timeline` 范围）                | string  | -                      | -      |
+| file      | {{< version 0.3.20 >}} [页面资源][page-resources] 或 `assets` 中的数据文件 | string  | -                      | -      |
 
 ### Timeline Events
 
@@ -382,4 +426,7 @@ content = "活动按期开始"
 | 可选 | size          | 节点尺寸       | string  | small / medium / large                                  | medium |
 | 可选 | node          | 节点风格       | string  | circle / dot                                            | circle |
 
-<!-- markdownlint-disable-file blanks-around-lists ul-indent -->
+<!-- link reference definition -->
+<!-- markdownlint-disable-file MD032 MD007 -->
+[hugo-data]: https://gohugo.io/methods/site/data/
+[page-resources]: https://gohugo.io/content-management/page-resources/

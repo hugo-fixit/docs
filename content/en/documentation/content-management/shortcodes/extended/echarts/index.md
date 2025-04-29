@@ -1269,7 +1269,7 @@ Supports getting data from files in Hugo [page-resources] or `assets`, and the f
 For example, the current page structure is as follows:
 
 ```plain
-echarts
+echarts/
 ├── data/
 │   ├── chart.js
 │   ├── chart.json

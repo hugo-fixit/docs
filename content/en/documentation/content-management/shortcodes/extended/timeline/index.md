@@ -352,22 +352,64 @@ content = "Event start"
 
 {{< /details >}}
 
+## Site Data
+
+{{< version 0.3.20 >}}
+
+Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/timeline` directory, and the format supports `JSON`, `YAML`, and `TOML`.
+
+For example, if you have a file `data/echarts/example.yml`, you can use the `data` parameter to reference it:
+
+```markdown
+{{?{}< timeline data="example" />}}
+```
+
+The rendered output looks like this:
+
+{{< timeline data="example" />}}
+
+## File Data
+
+{{< version 0.3.20 >}}
+
+Supports getting data from files in Hugo [page-resources] or `assets`, and the format supports `JSON`, `YAML` or `TOML` format.
+
+For example, the current page structure is as follows:
+
+```plain
+timeline/
+├── data/
+│   └── example.yml
+├── featured-image.webp
+└── index.md
+```
+
+You can use the `file` parameter to get data from the file:
+
+```markdown
+{{?{}< timeline file="data/example.yml" />}}
+```
+
+{{< timeline file="data/example.yml" />}}
+
 ## Parameters
 
 ### Timeline
 
 The `timeline` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter | Description                                                             | Type    | Optional values        | Default |
-| :-------- | :---------------------------------------------------------------------- | :------ | :--------------------- | :------ |
-| reverse   | ==1== whether the node is ascending or descending, default is ascending | boolean | -                      | false   |
-| placement | ==2== position of timestamp                                             | string  | top / bottom           | bottom  |
-| animation | ==3== whether to enable animation                                       | boolean | -                      | false   |
-| size      | ==4== node size                                                         | string  | small / medium / large | medium  |
-| node      | ==5== node style                                                        | string  | circle / dot           | circle  |
-| width     | container width                                                         | string  | -                      | -       |
-| height    | container height                                                        | string  | -                      | -       |
-| class     | container classname                                                     | string  | -                      | -       |
+| Parameter | Description                                                                      | Type    | Optional values        | Default |
+| :-------- | :------------------------------------------------------------------------------- | :------ | :--------------------- | :------ |
+| reverse   | ==1== whether the node is ascending or descending, default is ascending          | boolean | -                      | false   |
+| placement | ==2== position of timestamp                                                      | string  | top / bottom           | bottom  |
+| animation | ==3== whether to enable animation                                                | boolean | -                      | false   |
+| size      | ==4== node size                                                                  | string  | small / medium / large | medium  |
+| node      | ==5== node style                                                                 | string  | circle / dot           | circle  |
+| width     | container width                                                                  | string  | -                      | -       |
+| height    | container height                                                                 | string  | -                      | -       |
+| class     | container classname                                                              | string  | -                      | -       |
+| data      | {{< version 0.3.20 >}} Hugo Site data key below `timeline` scope                  | string  | -                      | -       |
+| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string  | -                      | -       |
 
 ### Timeline Events
 
@@ -382,4 +424,7 @@ The `timeline` shortcode has the following named parameters, and the positional 
 | optional | size          | node size                 | string  | small / medium / large                                  | medium  |
 | optional | node          | node style                | string  | circle / dot                                            | circle  |
 
-<!-- markdownlint-disable-file blanks-around-lists ul-indent -->
+<!-- link reference definition -->
+<!-- markdownlint-disable-file MD032 MD007 -->
+[hugo-data]: https://gohugo.io/methods/site/data/
+[page-resources]: https://gohugo.io/content-management/page-resources/

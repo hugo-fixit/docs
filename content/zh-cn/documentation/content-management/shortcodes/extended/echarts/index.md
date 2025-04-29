@@ -1269,7 +1269,7 @@ return fetch('/echarts/les-miserables.json')
 例如，当前页面结构如下：
 
 ```plain
-echarts
+echarts/
 ├── data/
 │   ├── chart.js
 │   ├── chart.json

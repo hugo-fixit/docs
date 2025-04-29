@@ -1,0 +1,7 @@
+events:
+  - timestamp: 2024-07-11
+    content: 创建成功
+  - timestamp: 2024-07-13
+    content: 通过审核
+  - timestamp: 2024-07-15
+    content: 活动按期开始
