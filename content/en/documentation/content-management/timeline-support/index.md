@@ -353,6 +353,52 @@ content = "Event start"
 
 {{< /details >}}
 
+## Site Data
+
+{{< version 0.3.20 >}}
+
+Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/timeline` directory, and the format supports `JSON`, `YAML`, and `TOML`.
+
+For example, if you have a file `data/timeline/example.yml`, you can use the `data` parameter to reference it:
+
+````markdown
+```timeline {data="example"}
+```
+````
+
+The rendered output looks like this:
+
+```timeline {data="example"}
+```
+
+## File Data
+
+{{< version 0.3.20 >}}
+
+Supports getting data from files in Hugo [page-resources] or `assets`, and the format supports `JSON`, `YAML` or `TOML` format.
+
+For example, the current page structure is as follows:
+
+```plain
+timeline/
+├── data/
+│   └── example.yml
+├── featured-image.webp
+└── index.md
+```
+
+You can use the `file` parameter to get data from the file:
+
+````markdown
+```timeline {file="data/example.yml"}
+```
+````
+
+The rendered output looks like this:
+
+```timeline {file="data/example.yml"}
+```
+
 ## Parameters
 
 ### Timeline
@@ -380,3 +426,7 @@ content = "Event start"
 | optional | type          | node type                 | string  | primary / secondary / success / info / warning / danger | -       |
 | optional | size          | node size                 | string  | small / medium / large                                  | medium  |
 | optional | node          | node style                | string  | circle / dot                                            | circle  |
+
+<!-- link reference definition -->
+[hugo-data]: https://gohugo.io/methods/site/data/
+[page-resources]: https://gohugo.io/content-management/page-resources/

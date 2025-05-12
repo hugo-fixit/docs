@@ -21,40 +21,6 @@ menu:
 ---
 <!-- markdownlint-disable-file MD045 -->
 
-## Comments
-
-尝试这样做，但是仍然有一些问题：
-
-```
-{{- /* Comments for Markdown */ -}}
-{{- $content = replaceRE "{?%}{?%}(.|\n)*?{?%}{?%}" "" $content -}}
-{{- $content = replace $content "<p></p>" "" -}}
-```
-
-```
-<!-- This is a comment. -->
-
-This is an {{</* comment */>}}inline{{</* /comment */>}} comment.
-
-This is an {?%}{?%}inline{?%}{?%} comment.
-
-{?%}{?%}
-This is a block comment.
-
-Block comments can span multiple lines.
-{?%}{?%}
-```
-
-<!-- This is a comment. -->
-
-This is an %%inline%% comment.
-
-%%
-This is a block comment.
-
-Block comments can span multiple lines.
-%%
-
 ## Alerts
 
 哈哈哈哈哈哈 nformation that users should take into accou

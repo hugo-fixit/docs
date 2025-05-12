@@ -358,7 +358,7 @@ content = "Event start"
 
 Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/timeline` directory, and the format supports `JSON`, `YAML`, and `TOML`.
 
-For example, if you have a file `data/echarts/example.yml`, you can use the `data` parameter to reference it:
+For example, if you have a file `data/timeline/example.yml`, you can use the `data` parameter to reference it:
 
 ```markdown
 {{?{}< timeline data="example" />}}
@@ -389,6 +389,8 @@ You can use the `file` parameter to get data from the file:
 ```markdown
 {{?{}< timeline file="data/example.yml" />}}
 ```
+
+The rendered output looks like this:
 
 {{< timeline file="data/example.yml" />}}
 

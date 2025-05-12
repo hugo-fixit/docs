@@ -358,7 +358,7 @@ content = "活动按期开始"
 
 支持从 Hugo [站点数据][hugo-data] 中获取数据，数据文件定义在 `data/timeline` 目录下，格式支持 `JSON`、`YAML`、`TOML` 格式。
 
-例如，定义有 `data/echarts/example.yml` 文件，你可以 使用 `data` 参数来引用：
+例如，定义有 `data/timeline/example.yml` 文件，你可以 使用 `data` 参数来引用：
 
 ```markdown
 {{?{}< timeline data="example" />}}

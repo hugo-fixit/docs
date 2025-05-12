@@ -939,7 +939,7 @@ posts
   Mastodon = "@xxxx"
 ```
 
-生成的社交链接是 `https://mastodon.technology/@xxxx`。
+生成的社交链接是 `https://mastodon.social/@xxxx`。
 
 或者你可以通过一个字典来设置更多的选项：
 
@@ -951,7 +951,7 @@ posts
     # 你的社交 ID
     id = "@xxxx"
     # 你的社交链接的前缀
-    prefix = "https://mastodon.social/"
+    prefix = "https://mastodon.gal/"
     # 当鼠标停留在图标上时的提示内容
     title = "Mastodon"
 ```

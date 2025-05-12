@@ -939,7 +939,7 @@ You can directly set your ID to get a default social link and its icon:
   Mastodon = "@xxxx"
 ```
 
-The social link generated is `https://mastodon.technology/@xxxx`.
+The social link generated is `https://mastodon.social/@xxxx`.
 
 Or You can set more options through a object:
 
@@ -951,7 +951,7 @@ Or You can set more options through a object:
     # your social ID
     id = "@xxxx"
     # prefix of your social link
-    prefix = "https://mastodon.social/"
+    prefix = "https://mastodon.gal/"
     # content hovering on the icon
     title = "Mastodon"
 ```
