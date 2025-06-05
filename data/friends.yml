@@ -56,10 +56,20 @@
   url: https://clearsky.me
   description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
 
+# - nickname: Scan’s Blog
+#   avatar: https://fastly.jsdelivr.net/gh/hack-scan/Blog-pic/posts/logo.png
+#   url: https://www.scan.work/
+#   description: Tracing the Freedom of Childhood.
+
 - nickname: SHUFly
   avatar: https://shuosc.github.io/fly/shufly.webp
   url: https://shuosc.github.io/fly/
   description: 上海大学开源社区出品的上海大学溯源手册。
+
+- nickname: TravisBikkle
+  avatar: https://github.com/travisbikkle.png?size=200
+  description: 分享我的学习笔记、经验与有趣的小玩意。
+  url: https://travisbikkle.pages.dev
 
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
@@ -71,12 +81,12 @@
   url: https://xidcn.com
   description: XIDCN's blog
 
+- nickname: 针草堂
+  avatar: https://acuherb.xyz/images/avatar.jpg
+  url: https://acuherb.xyz
+  description: 针通经络，草养气血。
+
 - nickname: 逐水寻源
   avatar: https://www.zair.top/img/logo.png
   description: 分享我的学习笔记、经验与有趣的小玩意。
   url: https://www.zair.top
-  
-- nickname: TravisBikkle
-  avatar: https://github.com/travisbikkle.png?size=200
-  description: 分享我的学习笔记、经验与有趣的小玩意。
-  url: https://travisbikkle.pages.dev
