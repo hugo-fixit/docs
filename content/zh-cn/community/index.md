@@ -74,6 +74,6 @@ _~作者：[Lruihao][author]~_
 [wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
 [zsxq]: {{< param planet.invite >}}
 [promotion_coupon]: {{< param planet.promotion_coupon >}}
-[postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
+[postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [translate.js]: https://github.com/xnx3/translate
 [enterprise-translation-channel]: https://translate.zvo.cn/4087.html

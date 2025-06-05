@@ -1433,7 +1433,7 @@ theme
 
 ```toml
 [params]
-  # PostChat: https://postchat.zhheo.com/addCode.html
+  # PostChat: https://ai.zhheo.com/docs/addCode.html
   [params.postChat]
     enable = false
     key = ""
@@ -1460,6 +1460,7 @@ theme
     userIcon = ""
     defaultChatQuestions = []
     defaultSearchQuestions = []
+    hotWords = true
 ```
 
 ### postSummary
@@ -1474,7 +1475,7 @@ theme
 
 ```toml
 [params]
-  # PostSummary: https://postchat.zhheo.com/summary.html
+  # PostSummary: https://ai.zhheo.com/docs/summary.html
   [params.postSummary]
     enable = false
     key = ""
@@ -1953,7 +1954,7 @@ c4u
 [vercount]: https://vercount.one/
 [busuanzi]: https://busuanzi.ibruce.info/
 [pacejs]: https://github.com/CodeByZach/pace
-[postchat]: https://ai.tianli0.top/?InviteID=IRE1S88Z
+[postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [follow]: https://follow.is/
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
