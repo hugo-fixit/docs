@@ -272,6 +272,10 @@
       }
     }
   }
+  // 临时修复高度计算错误的问题
+  .toc-content {
+    max-height: calc(100vh - 13rem);
+  }
 }
 
 [lang='en'] {
@@ -280,14 +284,12 @@
   }
 }
 
-.single {
-  // Content adapter generated posts style
-  &[data-adapters='projects'] {
-    .single-subtitle {
-      font-size: 1rem;
-    }
-  }
-}
+// .single {
+//   // Content adapter generated posts style
+//   &[data-adapters='projects'] {
+//     // write here
+//   }
+// }
 
 // ==============================
 // Mobile style
