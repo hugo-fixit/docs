@@ -1,0 +1,13 @@
+# The sponsor log data format is as follows
+# currency: [CNY, USD, EUR, ...] https://gohugo.io/functions/lang/formatcurrency/
+# origin: [alipay, bitcoin, paypal, wechatpay, ...]
+
+# message: "[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)"
+currency: USD
+symbol: $
+logs:
+  - date: 2025-06-18 08:30:00
+    sponsor: Song Inchan
+    money: 5.00
+    origin: paypal
+    remark: "Thank you for your support of the FixIt theme My site is It is the best HUGO theme."

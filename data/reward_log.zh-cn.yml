@@ -55,31 +55,36 @@ logs:
     remark: "歪瑞古德"
   - date: 2024-08-03 19:25:50
     sponsor: SuLis
-    money: 10
+    money: 10.00
     origin: wechatpay
     remark: "感谢作者对 FixIt 的付出！"
   - date: 2024-09-10 18:51:27
     sponsor: deequoique
-    money: 10
+    money: 10.00
     origin: wechatpay
     remark: "FixIt👍请佬喝杯蜜雪"
   - date: 2024-11-06 11:22:04
     sponsor: 王二愣子
-    money: 66
+    money: 66.00
     origin: wechatpay
     remark: "感谢大佬的答疑解惑！"
   - date: 2024-11-16 18:27:58
     sponsor: Z
-    money: 20
+    money: 20.00
     origin: wechatpay
     remark: "感谢作者的答疑解惑😋"
   - date: 2024-12-22 15:31:34
     sponsor: F10wers13eiCheng
-    money: 10
+    money: 10.00
     origin: wechatpay
     remark: "😘😘😘师傅的主题太棒了"
   - date: 2025-01-14 12:01:34
     sponsor: Liberal
-    money: 30
+    money: 30.00
     origin: FixIt 主题交流群微信红包
     remark: "开源不易，小小支持一下"
+  - date: 2025-06-18 08:55:43
+    sponsor: 洪洋
+    money: 20.00
+    origin: wechatpay
+    remark: "支持"
