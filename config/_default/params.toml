@@ -806,10 +806,10 @@ disableThemeInject = false
   optimise = true
 
 # FixIt 0.3.12 | NEW Custom partials config
-# Custom partials must be stored in the /layouts/partials/ directory.
+# Custom partials must be stored in the /layouts/_partials/ directory.
 # Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
 # FixIt 0.3.12 | 新增 自定义部分配置
-# 自定义模板必须存放在 /layouts/partials/ 目录中。
+# 自定义模板必须存放在 /layouts/_partials/ 目录中。
 # 依赖于开放的自定义块 https://fixit.lruihao.cn/references/blocks/
 [customPartials]
   head = [

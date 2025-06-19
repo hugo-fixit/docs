@@ -296,7 +296,7 @@ Next, taking the [component-projects] component as an example, we will introduce
 
 2. **Inject Partial**
 
-    Theme components usually require some third-party resources, such as CSS or JavaScript. Generally, each component will provide an initialization file in the `layouts/partials` directory, such as: `inject/component-projects.html`.
+    Theme components usually require some third-party resources, such as CSS or JavaScript. Generally, each component will provide an initialization file in the `layouts/_partials` directory, such as: `inject/component-projects.html`.
 
     Through the [custom blocks][block] opened by the FixIt theme, we can easily inject the initialization file of the component through configuration:
 

@@ -116,7 +116,7 @@ if (document.readyState !== 'loading') {
 
 ## 创建 Partial
 
-在 `layouts/partials/inject` 目录下创建一个名为 `shortcode-caniuse.html` 的文件。
+在 `layouts/_partials/inject` 目录下创建一个名为 `shortcode-caniuse.html` 的文件。
 
 引用第三方插件和组件本身的 JS 资源，内容如下：
 
@@ -162,7 +162,7 @@ if (document.readyState !== 'loading') {
 
 {{< version 0.3.9 >}}
 
-通过 FixIt 主题开放的自定义块，在 `layouts/partials/custom.html` 文件将 `shortcode-caniuse.html` 注入到 `custom-assets` 中：
+通过 FixIt 主题开放的自定义块，在 `layouts/_partials/custom.html` 文件将 `shortcode-caniuse.html` 注入到 `custom-assets` 中：
 
 ```go-html-template
 {{- define "custom-assets" -}}

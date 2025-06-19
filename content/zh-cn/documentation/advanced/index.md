@@ -296,7 +296,7 @@ li[data-task='tip'] {
 
 2. **注入 Partial**
 
-    主题组件通常需要一些第三方资源，例如 CSS 或 JavaScript 等。一般来说，每个组件都会在 `layouts/partials` 目录下提供一个初始化文件，如：`inject/component-projects.html`。
+    主题组件通常需要一些第三方资源，例如 CSS 或 JavaScript 等。一般来说，每个组件都会在 `layouts/_partials` 目录下提供一个初始化文件，如：`inject/component-projects.html`。
 
     通过 FixIt 主题开放的 [自定义块][block]，我们能通过配置轻松地注入组件的初始化文件：
 

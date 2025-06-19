@@ -25,35 +25,35 @@ After that, we can make full use of the basic features of the theme and build mo
 
 {{< version 0.3.7 >}}
 
-The FixIt theme opens a unified custom template entry file [`layouts/partials/custom.html`][custom-html].
+The FixIt theme opens a unified custom template entry file [`layouts/_partials/custom.html`][custom-html].
 
 In this file, the FixIt theme has defined all open custom blocks. If you want to further customize, you can copy it from the theme to your project and override it.
 
 ```bash
-cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
+cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 ```
 
 ## Custom Blocks
 
 You can implement these blocks through `define`.
 
-| Block Name                   | Description                     | Location                               |
-| :--------------------------- | :------------------------------ | :------------------------------------- |
-| `custom-head`                | Head custom block               | `layouts/_default/baseof.html`         |
-| `custom-menu:desktop`        | Desktop menu custom block       | `layouts/partials/header.html`         |
-| `custom-menu:mobile`         | Mobile menu custom block        | `layouts/partials/header.html`         |
-| `custom-profile`             | Profile custom block            | `layouts/partials/home/profile.html`   |
-| `custom-comment`             | Comment system custom block     | `layouts/partials/single/comment.html` |
-| `custom-aside`               | Sidebar custom block            | `layouts/posts/single.html`            |
-| `custom-footer`              | Footer custom block             | `layouts/partials/footer.html`         |
-| `custom-widgets`             | Widgets custom block            | `layouts/partials/widgets.html`        |
-| `custom-assets`              | Assets custom block             | `layouts/partials/assets.html`         |
-| `custom-post__toc:before`    | Custom block before post toc    | `layouts/posts/single.html`            |
-| `custom-post__toc:after`     | Custom block after post toc     | `layouts/posts/single.html`            |
-| `custom-post__content:before`| Custom block before post content| `layouts/posts/single.html`            |
-| `custom-post__content:after` | Custom block after post content | `layouts/posts/single.html`            |
-| `custom-post__footer:before` | Custom block before post footer | `layouts/posts/single.html`            |
-| `custom-post__footer:after`  | Custom block after post footer  | `layouts/posts/single.html`            |
+| Block Name                    | Description                      | Location                                |
+| :---------------------------- | :------------------------------- | :-------------------------------------- |
+| `custom-head`                 | Head custom block                | `layouts/_default/baseof.html`          |
+| `custom-menu:desktop`         | Desktop menu custom block        | `layouts/_partials/header.html`         |
+| `custom-menu:mobile`          | Mobile menu custom block         | `layouts/_partials/header.html`         |
+| `custom-profile`              | Profile custom block             | `layouts/_partials/home/profile.html`   |
+| `custom-comment`              | Comment system custom block      | `layouts/_partials/single/comment.html` |
+| `custom-aside`                | Sidebar custom block             | `layouts/posts/single.html`             |
+| `custom-footer`               | Footer custom block              | `layouts/_partials/footer.html`         |
+| `custom-widgets`              | Widgets custom block             | `layouts/_partials/widgets.html`        |
+| `custom-assets`               | Assets custom block              | `layouts/_partials/assets.html`         |
+| `custom-post__toc:before`     | Custom block before post toc     | `layouts/posts/single.html`             |
+| `custom-post__toc:after`      | Custom block after post toc      | `layouts/posts/single.html`             |
+| `custom-post__content:before` | Custom block before post content | `layouts/posts/single.html`             |
+| `custom-post__content:after`  | Custom block after post content  | `layouts/posts/single.html`             |
+| `custom-post__footer:before`  | Custom block before post footer  | `layouts/posts/single.html`             |
+| `custom-post__footer:after`   | Custom block after post footer   | `layouts/posts/single.html`             |
 
 ## Theme Configuration
 
@@ -61,7 +61,7 @@ You can implement these blocks through `define`.
 
 To facilitate the management of introducing custom templates, you can specify the path of custom templates through the `params.customPartials` parameter.
 
-Custom partials must be stored in the `/layouts/partials/` directory.
+Custom partials must be stored in the `/layouts/_partials/` directory.
 
 ```toml
 [params]
@@ -87,7 +87,7 @@ Custom partials must be stored in the `/layouts/partials/` directory.
 
 Now let's take the custom home page `custom-profile` block as an example to demonstrate how to use custom blocks.
 
-At first, create a custom file in the `layouts/partials/` directory, such as `layouts/partials/custom/profile.html`.
+At first, create a custom file in the `layouts/_partials/` directory, such as `layouts/_partials/custom/profile.html`.
 
 Write any content:
 
@@ -106,4 +106,4 @@ Then specify the path of the custom template in the configuration file.
 Visit the homepage, and you will see the custom content in the `profile` area.
 
 <!-- link reference definition -->
-[custom-html]: https://github.com/hugo-fixit/FixIt/blob/master/layouts/partials/custom.html
+[custom-html]: https://github.com/hugo-fixit/FixIt/blob/master/layouts/_partials/custom.html

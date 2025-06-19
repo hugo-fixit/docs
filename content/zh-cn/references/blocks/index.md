@@ -25,35 +25,35 @@ lightgallery: true
 
 {{< version 0.3.7 >}}
 
-FixIt 主题开放了统一的自定义模板入口文件 [`layouts/partials/custom.html`][custom-html]。
+FixIt 主题开放了统一的自定义模板入口文件 [`layouts/_partials/custom.html`][custom-html]。
 
 在这个文件中，FixIt 主题已经定义了所有开放自定义块。如果你想进一步自定义，你可以将它从主题复制到你的项目中并重写。
 
 ```bash
-cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
+cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 ```
 
 ## 自定义块
 
 你可以通过 `define` 来实现这些块。
 
-| 块名称                        | 描述                 | 位置                                   |
-| :---------------------------- | :------------------- | :------------------------------------- |
-| `custom-head`                 | 头部自定义块         | `layouts/_default/baseof.html`         |
-| `custom-menu:desktop`         | 桌面菜单自定义块     | `layouts/partials/header.html`         |
-| `custom-menu:mobile`          | 移动菜单自定义块     | `layouts/partials/header.html`         |
-| `custom-profile`              | 首页自定义块         | `layouts/partials/home/profile.html`   |
-| `custom-aside`                | 侧栏自定义块         | `layouts/posts/single.html`            |
-| `custom-comment`              | 评论系统自定义块     | `layouts/partials/single/comment.html` |
-| `custom-footer`               | 页脚自定义块         | `layouts/partials/footer.html`         |
-| `custom-widgets`              | 小部件自定义块       | `layouts/partials/widgets.html`        |
-| `custom-assets`               | 资源自定义块         | `layouts/partials/assets.html`         |
-| `custom-post__toc:before`     | 文章页目录前自定义块 | `layouts/posts/single.html`            |
-| `custom-post__toc:after`      | 文章页目录后自定义块 | `layouts/posts/single.html`            |
-| `custom-post__content:before` | 文章页内容前自定义块 | `layouts/posts/single.html`            |
-| `custom-post__content:after`  | 文章页内容后自定义块 | `layouts/posts/single.html`            |
-| `custom-post__footer:before`  | 文章页脚前自定义块   | `layouts/posts/single.html`            |
-| `custom-post__footer:after`   | 文章页脚后自定义块   | `layouts/posts/single.html`            |
+| 块名称                        | 描述                 | 位置                                    |
+| :---------------------------- | :------------------- | :-------------------------------------- |
+| `custom-head`                 | 头部自定义块         | `layouts/_default/baseof.html`          |
+| `custom-menu:desktop`         | 桌面菜单自定义块     | `layouts/_partials/header.html`         |
+| `custom-menu:mobile`          | 移动菜单自定义块     | `layouts/_partials/header.html`         |
+| `custom-profile`              | 首页自定义块         | `layouts/_partials/home/profile.html`   |
+| `custom-aside`                | 侧栏自定义块         | `layouts/posts/single.html`             |
+| `custom-comment`              | 评论系统自定义块     | `layouts/_partials/single/comment.html` |
+| `custom-footer`               | 页脚自定义块         | `layouts/_partials/footer.html`         |
+| `custom-widgets`              | 小部件自定义块       | `layouts/_partials/widgets.html`        |
+| `custom-assets`               | 资源自定义块         | `layouts/_partials/assets.html`         |
+| `custom-post__toc:before`     | 文章页目录前自定义块 | `layouts/posts/single.html`             |
+| `custom-post__toc:after`      | 文章页目录后自定义块 | `layouts/posts/single.html`             |
+| `custom-post__content:before` | 文章页内容前自定义块 | `layouts/posts/single.html`             |
+| `custom-post__content:after`  | 文章页内容后自定义块 | `layouts/posts/single.html`             |
+| `custom-post__footer:before`  | 文章页脚前自定义块   | `layouts/posts/single.html`             |
+| `custom-post__footer:after`   | 文章页脚后自定义块   | `layouts/posts/single.html`             |
 
 ## 主题配置
 
@@ -61,7 +61,7 @@ cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
 
 为了便于管理引入自定义模板，可以通过 `params.customPartials` 参数来指定自定义模板的路径。
 
-自定义模板必须存放在 `/layouts/partials/` 目录中。
+自定义模板必须存放在 `/layouts/_partials/` 目录中。
 
 ```toml
 [params]
@@ -87,7 +87,7 @@ cp themes/FixIt/layouts/partials/custom.html layouts/partials/custom.html
 
 现在我们以自定义首页的 `custom-profile` 块为例，来演示如何使用自定义块。
 
-首先，在 `layouts/partials/` 目录下创建自定义文件，例如 `layouts/partials/custom/profile.html`。
+首先，在 `layouts/_partials/` 目录下创建自定义文件，例如 `layouts/_partials/custom/profile.html`。
 
 写入任意内容：
 
@@ -106,4 +106,4 @@ The quick brown fox jumps over the lazy dog.
 访问首页，你会看到在 `profile` 区域显示了模板中自定义的内容。
 
 <!-- link reference definition -->
-[custom-html]: https://github.com/hugo-fixit/FixIt/blob/master/layouts/partials/custom.html
+[custom-html]: https://github.com/hugo-fixit/FixIt/blob/master/layouts/_partials/custom.html

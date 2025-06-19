@@ -116,7 +116,7 @@ if (document.readyState !== 'loading') {
 
 ## Creating Partial
 
-Create a file named `shortcode-caniuse.html` in the `layouts/partials/inject` directory.
+Create a file named `shortcode-caniuse.html` in the `layouts/_partials/inject` directory.
 
 Reference third-party plugins and the JS resources of the component itself, with the content as follows:
 
@@ -162,7 +162,7 @@ The installation method is the same as [installing a theme][installation]. There
 
 {{< version 0.3.9 >}}
 
-Inject the `shortcode-caniuse.html` into the `custom-assets` through the custom block opened by the FixIt theme in the `layouts/partials/custom.html` file:
+Inject the `shortcode-caniuse.html` into the `custom-assets` through the custom block opened by the FixIt theme in the `layouts/_partials/custom.html` file:
 
 ```go-html-template
 {{- define "custom-assets" -}}

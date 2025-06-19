@@ -51,10 +51,10 @@
   url: https://www.nikunokoya.com
   description: Niku's blog
 
-- nickname: pagezen
-  avatar: https://clearsky.me/avatar.jpg
-  url: https://clearsky.me
-  description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
+# - nickname: pagezen
+#   avatar: https://clearsky.me/avatar.jpg
+#   url: https://clearsky.me
+#   description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
 
 # - nickname: Scan’s Blog
 #   avatar: https://fastly.jsdelivr.net/gh/hack-scan/Blog-pic/posts/logo.png
