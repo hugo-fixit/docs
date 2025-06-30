@@ -13,8 +13,8 @@ resources:
   - name: featured-image
     src: featured-image.webp
 # 避免热词冲突
-postChat:
-  hotWords: false
+# postChat:
+#   hotWords: false
 math:
   type: mathjax
 ---
