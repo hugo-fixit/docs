@@ -12,9 +12,6 @@ description: 这篇文章介绍了如何在 FixIt 主题中使用 MathJax 来渲
 resources:
   - name: featured-image
     src: featured-image.webp
-# 避免热词冲突
-# postChat:
-#   hotWords: false
 math:
   type: mathjax
 ---
