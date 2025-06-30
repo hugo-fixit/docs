@@ -17,7 +17,6 @@ categories:
   - Documentation
 collections:
   - Markdown Syntax
-math: true
 ---
 
 This article shows the **FixIt Flavored Markdown** extended syntax.
@@ -308,197 +307,271 @@ The rendered output looks like this:
 
 This part is shown in the [emoji support page][emoji-support].
 
-## Mathematical Formula
+## Mathematical Formulas {#formula}
 
-{{< version 0.2.16 changed >}}
+{{< version 0.4.0 changed >}}
 
-**FixIt** theme supports mathematical formulas based on [$\KaTeX$][katex].
+**FixIt** supports mathematical formulas using [$\KaTeX$][katex] or [$\text{MathJax}$][mathjax], with $\KaTeX$ as the default engine.
 
-Set the property `enable = true` under `[params.math]` in your [theme configuration][theme-config]
-and the property `math: true` of the article front matter to enable the automatic rendering of mathematical formulas.
+You can modify the automatic rendering configuration for mathematical formulas in the [theme configuration][theme-config]:
 
-{{< admonition tip >}}
-Here is a list of [$\TeX$ functions supported by $\KaTeX$](https://katex.org/docs/supported.html).
-{{< /admonition >}}
+```toml {title="hugo.toml"}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
 
-{{< admonition note "Notes on Escape Characters" false >}}
-Since Hugo generates HTML documents according to the syntax such as `_`, `*`, `^`, `>>` when rendering Markdown documents,
-and some text content in the form of escape characters (such as `\(`, `\)`, `\[`, `\]`, `\\`) escape processing will be performed automatically,
-therefore, additional escape character expressions are required for these places to achieve automatic rendering:
-
-- `_` -> `\_`
-- `*` -> `\*`
-- `^` -> `\^` (If you have enabled [superscript syntax](#superscript))
-- `>>` -> `\>>`
-- `\(` -> `\\(`
-- `\)` -> `\\)`
-- `\[` -> `\\[`
-- `\]` -> `\\]`
-- `\\` -> `\\\\`
-
-If you don't want to write these escape characters, **FixIt** theme supports [`raw` shortcode]({{< relref path="/documentation/content-management/shortcodes/extended/introduction#raw" >}}) to help you write raw mathematical formula content.
-
-Example `raw` input:
-
-```markdown
-{{?{}< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{?{}< /raw >}}
-
-{{?{}< raw >}}
-Block Formula:
-\[ a=b+c \\ d+e=f \]
-\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
-{{?{}< /raw >}}
+[params]
+  [params.page]
+    [params.page.math]
+      enable = true
+      # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
+      type = "katex"
+      # KaTeX server-side rendering (https://katex.org)
+      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+      [params.page.math.katex]
+        # KaTeX extension copy-tex
+        copyTex = true
+        throwOnError = false
+        errorColor = "#ff4949"
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.katex.macros]
+          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+      # MathJax server-side rendering (https://www.mathjax.org)
+      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+      [params.page.math.mathjax]
+        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        [params.page.math.mathjax.packages]
+          # "[+]" = ['configmacros']
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.mathjax.macros]
+          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+        [params.page.math.mathjax.loader]
+          load = ["ui/safe"]
+          [params.page.math.mathjax.loader.paths]
+            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+          # more loader config e.g source, dependencies, provides etc.
+        [params.page.math.mathjax.options]
+          enableMenu = true
+          # more options e.g. skipHtmlTags, ignoreHtmlClass etc.
 ```
 
-The rendered output looks like this:
+### KaTeX
 
-{{< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+$\KaTeX$ uses Hugo's [`transform.ToMath`][tomath] function for **server-side rendering**, resulting in **faster client-side loading**.
 
-{{< raw>}}
-Block Formula:
-\[ a=b+c \\ d+e=f \]
-\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
-{{< /raw >}}
-{{< /admonition >}}
+> [!tip]
+> There is a list of [$\TeX$ functions supported by $\KaTeX$](https://katex.org/docs/supported.html).
 
-### Inline Formula
+#### Inline Formulas
 
-The default inline delimiters are:
+The default delimiters for inline formulas are:
 
 - `$ ... $`
-- `\( ... \)` (escaped: `\\( ... \\)`)
+- `\( ... \)`
 
 For example:
 
 ```tex
-$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a^2 + b^2}$ and \(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\)
 ```
 
-The rendered output looks like this:
+The rendered output is as follows:
 
-$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a^2 + b^2}$ and \(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\)
 
-### Block Formula
+#### Block Formulas
 
-The default block delimiters are:
+The default delimiters for formula blocks are:
 
 - `$$ ... $$`
-- `\[ ... \]` (escaped: `\\[ ... \\]`)
-- `\begin{equation} ... \end{equation}` (unnumbered: `\begin{equation*} ... \end{equation*}`)
-- `\begin{align} ... \end{align}` (unnumbered: `\begin{align*} ... \end{align*}`)
-- `\begin{alignat} ... \end{alignat}` (unnumbered: `\begin{alignat*} ... \end{alignat*}`)
-- `\begin{gather} ... \end{gather}` (unnumbered: `\begin{gather*} ... \end{gather*}`)
-- `\begin{CD} ... \end{CD}`
-
-{{< admonition warning >}}
-When there are newlines in the block formula, please turn on `goldmark.renderer.hardWraps` carefully, set it to true, Goldmark will render the newlines as `<br>` elements.
-{{< /admonition >}}
+- `\[ ... \]`
 
 For example:
 
 ```tex
-$$ c = \pm\sqrt{a\^2 + b\^2} $$
+$$ c = \pm\sqrt{a^2 + b^2} $$
 
-\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
+\[f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\]
 
+$$
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
 \end{equation*}
+$$
 
+$$
 \begin{equation}
   \mathbf{E}=\sum_{i} \mathbf{E}\_{i}=\mathbf{E}\_{1}+\mathbf{E}\_{2}+\mathbf{E}_{3}+\cdots
 \end{equation}
+$$
 
+$$
 \begin{align}
-  a&=b+c \\\\
+  a&=b+c \\
   d+e&=f
 \end{align}
+$$
 
+$$
 \begin{alignat}{2}
-   10&x+&3&y = 2 \\\\
+   10&x+&3&y = 2 \\
    3&x+&13&y = 4
 \end{alignat}
+$$
 
+$$
 \begin{gather}
-   a=b \\\\
+   a=b \\
    e=b+c
 \end{gather}
+$$
 
+$$
 \begin{CD}
-   A @>a\>> B \\\\
-@VbVV @AAcA \\\\
+   A @>a>> B \\
+@VbVV @AAcA \\
    C @= D
 \end{CD}
+$$
 ```
 
-The rendered output looks like this:
+The rendered output is as follows:
 
-$$ c = \pm\sqrt{a\^2 + b\^2} $$
+$$ c = \pm\sqrt{a^2 + b^2} $$
 
-\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
+\[f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\]
 
+$$
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
 \end{equation*}
+$$
 
+$$
 \begin{equation}
   \mathbf{E}=\sum_{i} \mathbf{E}\_{i}=\mathbf{E}\_{1}+\mathbf{E}\_{2}+\mathbf{E}_{3}+\cdots
 \end{equation}
+$$
 
+$$
 \begin{align}
-  a&=b+c \\\\
+  a&=b+c \\
   d+e&=f
 \end{align}
+$$
 
+$$
 \begin{alignat}{2}
-   10&x+&3&y = 2 \\\\
+   10&x+&3&y = 2 \\
    3&x+&13&y = 4
 \end{alignat}
+$$
 
+$$
 \begin{gather}
-   a=b \\\\
+   a=b \\
    e=b+c
 \end{gather}
+$$
 
+$$
 \begin{CD}
-   A @>a\>> B \\\\
-@VbVV @AAcA \\\\
+   A @>a>> B \\
+@VbVV @AAcA \\
    C @= D
 \end{CD}
+$$
 
-{{< admonition tip >}}
-You can add more inline and block delimiters in your [theme configuration]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}).
-{{< /admonition >}}
+#### Copying Formulas {#copy-tex}
 
-### Copy-tex
+**[Copy-tex][copy-tex]** is an extension of **$\KaTeX$**.
 
-**[Copy-tex][copy-tex]** is an extension for **$\KaTeX$**.
+With this extension, when you select and copy a $\KaTeX$-rendered formula, its $\LaTeX$ source code will be copied to the clipboard.
 
-By the extension, when selecting and copying $\KaTeX$ rendered elements, copies their $\LaTeX$ source to the clipboard.
+Enable Copy-tex by setting the `copyTex` attribute to `true` under `[params.page.math.katex]` in your [theme configuration][theme-config].
 
-Set the property `copyTex = true` under `[params.math]` in your [theme configuration][theme-config] to enable Copy-tex.
+Select and copy the rendered formulas from the previous section, and you will find that the copied content is the $\LaTeX$ source code.
 
-Select and copy the formula rendered in the previous section, and you can find that the copied content is the LaTeX source code.
+#### Chemical Equations {#chemistry}
 
-### mhchem
+**[mhchem][mhchem]** is an extension of **$\KaTeX$**, providing the `\ce` and `\pu` functions.
 
-**[mhchem][mhchem]** is an extension for **$\KaTeX$**.
-
-By the extension, you can write beautiful chemical equations easily in the article.
-
-Set the property `mhchem = true` under `[params.math]` in your [theme configuration][theme-config] to enable mhchem.
+With this extension, you can easily write beautiful chemical equations in your articles.
 
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
+$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+
+$$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 ```
 
-The rendered output looks like this:
+The rendered output is as follows:
 
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
+$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+
+$$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
+
+#### Custom Macros {#custom-macros}
+
+You can add custom macros in your [theme configuration][theme-config] under `[params.page.math.katex.macros]`.
+
+For example:
+
+```toml
+[params.page.math.katex.macros]
+  "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+```
+
+Then use it in your articles as follows:
+
+```tex
+$$
+\f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+```
+
+The rendered output is as follows:
+
+$$
+\f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+
+#### Error Messages {#error-message}
+
+If an error occurs while rendering a formula, $\KaTeX$ will display an error message on the page.
+
+For example:
+
+```tex
+$c = \pm\sqrt{a\^2 + b^2}$
+```
+
+The rendered output is as follows. Hovering the mouse over the error message will display detailed error information:
+
+$c = \pm\sqrt{a\^2 + b^2}$
+
+> [!CAUTION]
+> If you set `params.page.math.katex.throwOnError` to `true`, an error will be thrown and rendering will be stopped.
+
+### MathJax
+
+$\text{MathJax}$ performs **client-side rendering** using JavaScript after the page is loaded. It is **slower** but **more powerful**.
+
+This part is introduced on the [MathJax Support][docs-mathjax] page.
 
 ## Ruby Annotation {#ruby}
 
@@ -753,7 +826,7 @@ This part is shown in the [diagrams support][diagrams-support-echarts] page.
 This part is shown in the [Timeline support][timeline-support] page.
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file MD052 MD059 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
@@ -763,9 +836,12 @@ This part is shown in the [Timeline support][timeline-support] page.
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
+[mathjax]: https://www.mathjax.org/
+[tomath]: https://gohugo.io/functions/transform/tomath/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
+[docs-mathjax]: {{< relref path="/documentation/content-management/mathjax-support" >}}
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/

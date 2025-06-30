@@ -21,7 +21,6 @@ categories:
 collections:
   - Extended Shortcodes
 lightgallery: true
-math: true
 ---
 
 **FixIt** theme provides multiple shortcodes on top of built-in ones in Hugo.
@@ -414,24 +413,10 @@ The `raw` shortcode has only one parameter:
 Example `raw` input:
 
 ```markdown
-{{</* raw */>}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
-
-{{</* raw */>}}
-Block Formula:
-\[ a=b+c \\ d+e=f \]
-{{</* /raw */>}}
-
 Raw content using Markdown and HTML syntax: {{</* raw "span" */>}}**Hello** <strong>FixIt</strong>{{</* /raw */>}}
 ```
 
 The rendered output looks like this:
-
- {{< raw >}}Inline Formula: \(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
-
-{{< raw >}}
-Block Formula:
-\[ a=b+c \\ d+e=f \]
-{{< /raw >}}
 
 Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
@@ -571,4 +556,4 @@ Visit [this page][components] to browse a collection of themes components create
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [bluesky]: https://bsky.app/
-[components]: relref "/ecosystem"
+[components]: {{< relref path="/ecosystem" >}}

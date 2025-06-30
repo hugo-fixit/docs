@@ -45,7 +45,7 @@ npm run server:development
 
 ## Participate in translation
 
-Documents containing the `missing-translation` shortcode indicate that this part has not been translated yet. Click to view [documents with missing translations](https://github.com/search?q=repo%3Ahugo-fixit%2Fdocs+%7B%7B%3C+missing-translation+%3E%7D%7D&type=code).
+Documents containing the `missing-translation` shortcode indicate that this part has not been translated yet. Click to view [documents with missing translations](https://github.com/search?q=repo%3Ahugo-fixit%2Fdocs+missing-translation+path%3A%2F%5Econtent%5C%2F%2F&type=code).
 
 ## Edit the theme
 

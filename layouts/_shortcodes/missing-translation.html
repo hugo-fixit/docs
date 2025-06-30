@@ -4,4 +4,40 @@
   {{- $tip = "> [!help]+ 缺少翻译\n> 本文尚未翻译完成，欢迎 [参与翻译](%v)。" -}}
 {{- end -}}
 {{- $tip = printf $tip $edit -}}
+{{/*  {{- $tip | .Page.RenderString -}}  */}}
+
+{{- $translateMap := dict
+  "en" "zh-cn"
+  "zh-cn" "en"
+-}}
+{{- $translateFrom := index $translateMap .Page.Lang }}
+{{- if not $translateFrom }}
+  {{ errorf "The %q shortcode does not support the language %q. See %s" .Name .Page.Lang .Position }}
+{{- end }}
+{{- $base := strings.TrimSuffix "/" .Page.RelPermalink }}
+{{- $base = strings.TrimPrefix (add "/" .Page.Lang) $base }}
+{{- if not $base }}
+  {{ errorf "The %q shortcode requires a base URL. See %s" .Name .Position }}
+{{- end }}
+
+{{- $translateRefPage := "" }}
+{{- with where site.Sites "Language.Lang" "eq" $translateFrom }}
+  {{- with index . 0 }}
+    {{- with .GetPage $base }}
+      {{- $translateRefPage = . -}}
+      {{/*  <div class="missing-translation">{{- .RenderShortcodes -}}</div>  */}}
+    {{- else }}
+      {{ errorf "The %q shortcode was unable to find %q. See %s" $.Name . $.Position }}
+    {{- end }}
+  {{- end }}
+{{- end -}}
+
+{{- with $translateRefPage }}
+  {{- if eq $.Page.Lang "zh-cn" -}}
+    {{- $tip = add $tip (printf "请参考 [%q](%s) 的内容。" .Title .RelPermalink) -}}
+  {{- else -}}
+    {{- $tip = add $tip (printf "  \nPlease refer to the content of [%q](%s)." .Title .RelPermalink) -}}
+  {{- end -}}
+{{- end -}}
+
 {{- $tip | .Page.RenderString -}}

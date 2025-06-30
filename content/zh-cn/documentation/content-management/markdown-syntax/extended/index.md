@@ -13,11 +13,11 @@ tags:
   - Content
   - HTML
   - Advanced
+  - Math
 categories:
   - Documentation
 collections:
   - Markdown Syntax
-math: true
 ---
 
 这篇文章展示了 [**FixIt 风格的 Markdown**]^(FixIt Flavored Markdown) 扩展语法。
@@ -307,198 +307,271 @@ FixIt 主题的作者是 ++Lruihao++。
 
 这部分内容在 [Emoji 支持页面][emoji-support] 中介绍。
 
-## 数学公式
+## 数学公式 {#formula}
 
-{{< version 0.2.16 changed >}}
+{{< version 0.4.0 changed >}}
 
-**FixIt** 基于 [$\KaTeX$][katex] 提供数学公式的支持。
+**FixIt** 基于 [$\KaTeX$][katex] 或 [$\text{MathJax}$][mathjax] 提供数学公式的支持，默认引擎为 $\KaTeX$。
 
-在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `enable = true`,
-并在文章的 Front matter 中设置属性 `math: true`来启用数学公式的自动渲染。
+你可以在 [主题配置][theme-config] 中修改数学公式自动渲染的相关配置：
 
-{{< admonition tip >}}
-有一份 [$\KaTeX$ 中支持的 $\TeX$ 函数](https://katex.org/docs/supported.html) 清单。
-{{< /admonition >}}
+```toml {title="hugo.toml"}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
 
-{{< admonition note "关于转义字符相关的注意事项" false >}}
-由于 Hugo 在渲染 Markdown 文档时会根据 `_`、`*`、`^`、`>>` 之类的语法生成 HTML 文档，
-并且有些转义字符形式的文本内容 (如 `\(`、`\)`、`\[`、`\]`、`\\`) 会自动进行转义处理，
-因此需要对这些地方进行额外的转义字符表达来实现自动渲染：
-
-- `_` -> `\_`
-- `*` -> `\*`
-- `^` -> `\^` （如果你开启了[上标语法](#superscript)）
-- `>>` -> `\>>`
-- `\(` -> `\\(`
-- `\)` -> `\\)`
-- `\[` -> `\\[`
-- `\]` -> `\\]`
-- `\\` -> `\\\\`
-
-如果你不想写这些转义字符，**FixIt** 主题支持 [`raw` shortcode]({{< relref path="/documentation/content-management/shortcodes/extended/introduction#raw" >}})，
-它可以帮助你编写原始数学公式内容。
-
-一个 `raw` 示例：
-
-```markdown
-{{?{}< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{?{}< /raw >}}
-
-{{?{}< raw >}}
-公式块：
-\[ a=b+c \\ d+e=f \]
-\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
-{{?{}< /raw >}}
+[params]
+  [params.page]
+    [params.page.math]
+      enable = true
+      # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
+      type = "katex"
+      # KaTeX server-side rendering (https://katex.org)
+      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+      [params.page.math.katex]
+        # KaTeX extension copy-tex
+        copyTex = true
+        throwOnError = false
+        errorColor = "#ff4949"
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.katex.macros]
+          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+      # MathJax server-side rendering (https://www.mathjax.org)
+      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+      [params.page.math.mathjax]
+        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        [params.page.math.mathjax.packages]
+          # "[+]" = ['configmacros']
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.mathjax.macros]
+          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+        [params.page.math.mathjax.loader]
+          load = ["ui/safe"]
+          [params.page.math.mathjax.loader.paths]
+            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+          # more loader config e.g source, dependencies, provides etc.
+        [params.page.math.mathjax.options]
+          enableMenu = true
+          # more options e.g. skipHtmlTags, ignoreHtmlClass etc.
 ```
 
-呈现的输出效果如下：
+### KaTeX
 
-{{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+$\KaTeX$ 通过 Hugo 的 [`transform.ToMath`][tomath] 函数在 **服务器端渲染**，所以客户端加载 **速度更快**。
 
-{{< raw >}}
-公式块：
-\[ a=b+c \\ d+e=f \]
-\[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \]
-{{< /raw >}}
-{{< /admonition >}}
+> [!tip]
+> 有一份 [$\KaTeX$ 中支持的 $\TeX$ 函数](https://katex.org/docs/supported.html) 清单。
 
-### 行内公式
+#### 行内公式
 
 默认的行内公式分割符有：
 
 - `$ ... $`
-- `\( ... \)` (转义的：`\\( ... \\)`)
+- `\( ... \)`
 
 例如：
 
 ```tex
-$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a^2 + b^2}$ 和 \(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\)
 ```
 
 呈现的输出效果如下：
 
-$c = \pm\sqrt{a\^2 + b\^2}$ 和 \\(f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi\\)
+$c = \pm\sqrt{a^2 + b^2}$ 和 \(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\)
 
-### 公式块
+#### 公式块
 
 默认的公式块分割符有：
 
 - `$$ ... $$`
-- `\[ ... \]` (转义的：`\\[ ... \\]`)
-- `\begin{equation} ... \end{equation}` (不编号的：`\begin{equation*} ... \end{equation*}`)
-- `\begin{align} ... \end{align}` (不编号的：`\begin{align*} ... \end{align*}`)
-- `\begin{alignat} ... \end{alignat}` (不编号的：`\begin{alignat*} ... \end{alignat*}`)
-- `\begin{gather} ... \end{gather}` (不编号的：`\begin{gather*} ... \end{gather*}`)
-- `\begin{CD} ... \end{CD}`
-
-{{< admonition warning >}}
-当公式块中存在换行时，请谨慎开启 `goldmark.renderer.hardWraps`，设置为 true，Goldmark 会将换行符呈现为 `<br>` 元素。
-{{< /admonition >}}
+- `\[ ... \]`
 
 例如：
 
 ```tex
-$$ c = \pm\sqrt{a\^2 + b\^2} $$
+$$ c = \pm\sqrt{a^2 + b^2} $$
 
-\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
+\[f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\]
 
+$$
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
 \end{equation*}
+$$
 
+$$
 \begin{equation}
   \mathbf{E}=\sum_{i} \mathbf{E}\_{i}=\mathbf{E}\_{1}+\mathbf{E}\_{2}+\mathbf{E}_{3}+\cdots
 \end{equation}
+$$
 
+$$
 \begin{align}
-  a&=b+c \\\\
+  a&=b+c \\
   d+e&=f
 \end{align}
+$$
 
+$$
 \begin{alignat}{2}
-   10&x+&3&y = 2 \\\\
+   10&x+&3&y = 2 \\
    3&x+&13&y = 4
 \end{alignat}
+$$
 
+$$
 \begin{gather}
-   a=b \\\\
+   a=b \\
    e=b+c
 \end{gather}
+$$
 
+$$
 \begin{CD}
-   A @>a\>> B \\\\
-@VbVV @AAcA \\\\
+   A @>a>> B \\
+@VbVV @AAcA \\
    C @= D
 \end{CD}
+$$
 ```
 
 呈现的输出效果如下：
 
-$$ c = \pm\sqrt{a\^2 + b\^2} $$
+$$ c = \pm\sqrt{a^2 + b^2} $$
 
-\\[ f(x)=\int_{-\infty}\^{\infty} \hat{f}(\xi) e\^{2 \pi i \xi x} d \xi \\]
+\[f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\]
 
+$$
 \begin{equation*}
   \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
 \end{equation*}
+$$
 
+$$
 \begin{equation}
   \mathbf{E}=\sum_{i} \mathbf{E}\_{i}=\mathbf{E}\_{1}+\mathbf{E}\_{2}+\mathbf{E}_{3}+\cdots
 \end{equation}
+$$
 
+$$
 \begin{align}
-  a&=b+c \\\\
+  a&=b+c \\
   d+e&=f
 \end{align}
+$$
 
+$$
 \begin{alignat}{2}
-   10&x+&3&y = 2 \\\\
+   10&x+&3&y = 2 \\
    3&x+&13&y = 4
 \end{alignat}
+$$
 
+$$
 \begin{gather}
-   a=b \\\\
+   a=b \\
    e=b+c
 \end{gather}
+$$
 
+$$
 \begin{CD}
-   A @>a\>> B \\\\
-@VbVV @AAcA \\\\
+   A @>a>> B \\
+@VbVV @AAcA \\
    C @= D
 \end{CD}
+$$
 
-{{< admonition tip >}}
-你可以在 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 中自定义行内公式和公式块的分割符。
-{{< /admonition >}}
-
-### Copy-tex
+#### 复制公式 {#copy-tex}
 
 **[Copy-tex][copy-tex]** 是一个 **$\KaTeX$** 的插件。
 
 通过这个扩展，在选择并复制 $\KaTeX$ 渲染的公式时，会将其 $\LaTeX$ 源代码复制到剪贴板。
 
-在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `copyTex = true` 来启用 Copy-tex。
+在你的 [主题配置][theme-config] 中的 `[params.page.math.katex]` 下面设置属性 `copyTex = true` 来启用 Copy-tex。
 
-选择并复制上一节中渲染的公式，可以发现复制的内容为 LaTeX 源代码。
+选择并复制上一节中渲染的公式，可以发现复制的内容为 $\LaTeX$ 源代码。
 
-### mhchem
+#### 化学方程式 {#chemistry}
 
-**[mhchem][mhchem]** 是一个 **$\KaTeX$** 的插件。
+**[mhchem][mhchem]** 是一个 **$\KaTeX$** 的插件，提供了 `\ce` 和 `\pu` 函数。
 
 通过这个扩展，你可以在文章中轻松编写漂亮的化学方程式。
-
-在你的 [主题配置][theme-config] 中的 `[params.math]` 下面设置属性 `mhchem = true` 来启用 mhchem。
 
 ```markdown
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
+$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+
+$$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 ```
 
 呈现的输出效果如下：
 
 $$ \ce{CO2 + C -> 2 CO} $$
 
-$$ \ce{Hg\^2+ ->[I-] HgI2 ->[I-] [Hg\^{II}I4]\^2-} $$
+$$ \ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-} $$
+
+$$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
+
+#### 自定义宏 {#custom-macros}
+
+你可以在你的 [主题配置][theme-config] 中的 `[params.page.math.katex.macros]` 下面添加自定义宏。
+
+例如：
+
+```toml
+[params.page.math.katex.macros]
+  "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+```
+
+然后在文章中使用：
+
+```tex
+$$
+\f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+```
+
+呈现的输出效果如下：
+
+$$
+\f\relax{x} = \int_{-\infty}^\infty
+    \f\hat\xi\,e^{2 \pi i \xi x}
+    \,d\xi
+$$
+
+#### 错误信息 {#error-message}
+
+如果在渲染公式时遇到错误，$\KaTeX$ 会在页面上显示错误信息。
+
+例如：
+
+```tex
+$c = \pm\sqrt{a\^2 + b^2}$
+```
+
+呈现的输出效果如下，鼠标悬停在错误信息上可以查看详细的错误信息：
+
+$c = \pm\sqrt{a\^2 + b^2}$
+
+> [!CAUTION]
+> 如果你设置 `params.page.math.katex.throwOnError` 为 `true`，则会抛出错误并停止渲染。
+
+### MathJax
+
+$\text{MathJax}$ 在页面加载后通过 JavaScript 进行 **客户端渲染**，_速度较慢_ 但 **功能更加强大**。
+
+这部分内容在 [MathJax 支持][docs-mathjax] 页面中介绍。
 
 ## 字符注音或者注释 {#ruby}
 
@@ -753,7 +826,7 @@ console.log('hello FixIt!');
 这部分内容在 [时间线支持][timeline-support] 页面中介绍。
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file MD052 MD059 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
@@ -763,9 +836,12 @@ console.log('hello FixIt!');
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/
+[mathjax]: https://www.mathjax.org/
+[tomath]: https://gohugo.io/functions/transform/tomath/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
+[docs-mathjax]: {{< relref path="/documentation/content-management/mathjax-support" >}}
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/

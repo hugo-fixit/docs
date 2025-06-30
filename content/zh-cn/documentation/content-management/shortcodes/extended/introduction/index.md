@@ -21,7 +21,6 @@ categories:
 collections:
   - Extended Shortcodes
 lightgallery: true
-math: true
 ---
 
 **FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 Shortcodes。
@@ -414,24 +413,10 @@ this is a **center-quote** _shortcode_ example.
 一个 `raw` 示例：
 
 ```markdown
-{{</* raw */>}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{</* /raw */>}}
-
-{{</* raw */>}}
-公式块：
-\[ a=b+c \\ d+e=f \]
-{{</* /raw */>}}
-
 原始的带有 Markdown 和 HTML 语法的内容：{{</* raw "span" */>}}**Hello** <strong>FixIt</strong>{{</* /raw */>}}
 ```
 
 呈现的输出效果如下：
-
-{{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
-
-{{< raw >}}
-公式块：
-\[ a=b+c \\ d+e=f \]
-{{< /raw >}}
 
 原始的带有 Markdown 和 HTML 语法的内容：{{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
@@ -571,4 +556,4 @@ FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为�
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [bluesky]: https://bsky.app/
-[components]: relref "/ecosystem"
+[components]: {{< relref path="/ecosystem" >}}

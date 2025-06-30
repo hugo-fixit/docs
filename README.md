@@ -45,7 +45,7 @@ npm run server:development
 
 ## 参与翻译
 
-包含 `missing-translation` shortcode 的文档表示该部分尚未翻译，点击查看 [缺失翻译的文档](https://github.com/search?q=repo%3Ahugo-fixit%2Fdocs+%7B%7B%3C+missing-translation+%3E%7D%7D&type=code)。
+包含 `missing-translation` shortcode 的文档表示该部分尚未翻译，点击查看 [缺失翻译的文档](https://github.com/search?q=repo%3Ahugo-fixit%2Fdocs+missing-translation+path%3A%2F%5Econtent%5C%2F%2F&type=code)。
 
 ## 编辑主题
 
