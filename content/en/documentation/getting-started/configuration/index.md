@@ -1663,19 +1663,41 @@ c4u
           h4 = "{h2}.{h3}.{h4} {title}"
           h5 = "{h2}.{h3}.{h4}.{h5} {title}"
           h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-    # {{< version 0.2.16 changed >}} {{< link "https://katex.org/" KaTeX >}} mathematical formulas (https://katex.org)
+    # {{< version 0.4.0 changed >}} mathematical formulas configuration
+    # See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
     [params.page.math]
       enable = true
-      # default inline delimiter is $ ... $ and \( ... \)
-      inlineLeftDelimiter = ""
-      inlineRightDelimiter = ""
-      # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
-      blockLeftDelimiter = ""
-      blockRightDelimiter = ""
-      # KaTeX extension copy_tex
-      copyTex = true
-      # KaTeX extension mhchem
-      mhchem = true
+      # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
+      type = "katex"
+      # KaTeX server-side rendering (https://katex.org)
+      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+      [params.page.math.katex]
+        # KaTeX extension copy-tex
+        copyTex = true
+        throwOnError = false
+        errorColor = "#ff4949"
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.katex.macros]
+          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+      # MathJax server-side rendering (https://www.mathjax.org)
+      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+      [params.page.math.mathjax]
+        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        [params.page.math.mathjax.packages]
+          # "[+]" = ["configmacros"]
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.mathjax.macros]
+          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+        [params.page.math.mathjax.loader]
+          load = ["ui/safe"]
+          [params.page.math.mathjax.loader.paths]
+            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+          # more loader config e.g source, dependencies, provides etc.
+        [params.page.math.mathjax.options]
+          enableMenu = true
+          # more options config e.g. skipHtmlTags, ignoreHtmlClass etc.
     # Code wrapper config
     [params.page.code]
       # {{< version 0.3.9 >}} whether to enable the code wrapper

@@ -1672,19 +1672,41 @@ c4u
       edit = true
       # 默认展开显示的代码行数
       maxShownLines = 10
-    # {{< link "https://katex.org/" KaTeX >}} 数学公式 (https://katex.org)
+    # {{< version 0.4.0 changed >}} 数学公式配置
+    # See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
     [params.page.math]
       enable = true
-      # 默认行内定界符是 $ ... $ 和 \( ... \)
-      inlineLeftDelimiter = ""
-      inlineRightDelimiter = ""
-      # 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数
-      blockLeftDelimiter = ""
-      blockRightDelimiter = ""
-      # KaTeX 插件 copy_tex
-      copyTex = true
-      # KaTeX 插件 mhchem
-      mhchem = true
+      # 数学公式渲染引擎，可选值：["katex", "mathjax"]
+      type = "katex"
+      # KaTeX server-side rendering (https://katex.org)
+      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+      [params.page.math.katex]
+        # KaTeX extension copy-tex
+        copyTex = true
+        throwOnError = false
+        errorColor = "#ff4949"
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.katex.macros]
+          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+      # MathJax server-side rendering (https://www.mathjax.org)
+      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+      [params.page.math.mathjax]
+        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        [params.page.math.mathjax.packages]
+          # "[+]" = ["configmacros"]
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.mathjax.macros]
+          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+        [params.page.math.mathjax.loader]
+          load = ["ui/safe"]
+          [params.page.math.mathjax.loader.paths]
+            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+          # more loader config e.g source, dependencies, provides etc.
+        [params.page.math.mathjax.options]
+          enableMenu = true
+          # more options config e.g. skipHtmlTags, ignoreHtmlClass etc.
     # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # Mapbox GL JS 的 access token
