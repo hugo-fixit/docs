@@ -12,6 +12,9 @@ description: This article shows how to use MathJax to render mathematical formul
 resources:
   - name: featured-image
     src: featured-image.webp
+# avoid hot words conflict
+postChat:
+  hotWords: false
 math:
   type: mathjax
 ---
