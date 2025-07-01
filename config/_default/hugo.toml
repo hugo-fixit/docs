@@ -43,6 +43,17 @@ enableGitInfo = true
 # whether to use emoji code
 # 是否使用 emoji 代码
 enableEmoji = true
+# the main sections of a site
+# 主站点的主要部分
+mainSections = [
+  "contributing",
+  "documentation",
+  "ecosystem",
+  "guides",
+  "references",
+  "guides",
+  "tests",
+]
 
 # the editor to use when creating new content
 # 创建新内容时使用的编辑器
