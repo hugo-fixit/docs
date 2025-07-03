@@ -180,7 +180,7 @@ hugo server -D
 hugo server -D --disableFastRender
 ```
 
-由于本主题使用了 Hugo 中的 `.Scratch` 和 `.Store` 来实现一些特性，
+由于本主题使用了 Hugo 中的 `.Store` 来实现一些特性，
 非常建议你为 `hugo server` 命令添加 `--disableFastRender` 参数来实时预览你正在编辑的文章页面。
 
 ![基本配置下的预览](simple-preview.webp '基本配置下的预览')

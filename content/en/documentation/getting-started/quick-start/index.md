@@ -173,7 +173,7 @@ hugo server -D
 hugo server -D --disableFastRender
 ```
 
-Since the theme use `.Scratch` and `.Store` in Hugo to implement some features, it is highly recommended that you add `--disableFastRender` parameter.
+Since the theme use `.Store` in Hugo to implement some features, it is highly recommended that you add `--disableFastRender` parameter.
 
 ![Simple preview](simple-preview.webp 'Simple preview')
 

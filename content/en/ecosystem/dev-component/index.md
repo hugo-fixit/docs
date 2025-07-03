@@ -122,21 +122,27 @@ Reference third-party plugins and the JS resources of the component itself, with
 
 ```go-html-template {title="shortcode-caniuse.html"}
 {{- if .HasShortcode "caniuse" -}}
-  {{- $fingerprint := .Scratch.Get "fingerprint" -}}
+  {{- $fingerprint := .Site.Store.Get "fingerprint" -}}
+
+  {{- /* shortcode-caniuse.min.css */ -}}
+  {{- $options := dict "Source" "css/shortcode-caniuse/index.scss" "Fingerprint" $fingerprint -}}
+  {{- $toCSS := dict "targetPath" "css/shortcode-caniuse.min.css" "enableSourceMap" true -}}
+  {{- $options = dict "Context" . "ToCSS" $toCSS | merge $options -}}
+  {{- partial "plugin/style.html" $options -}}
 
   {{- /* embed.js */ -}}
   {{- $source := resources.Get "lib/shortcode-caniuse/embed.js" -}}
   {{- if hugo.IsProduction | and .Site.Params.cdn -}}
-    {{- $source = "https://caniuse.pengzhanbo.cn/embed.js" -}}
+    {{- $source = "https://caniuse.lruihao.cn/embed.js" -}}
   {{- end -}}
-  {{- dict "Source" $source "Fingerprint" $fingerprint "Attr" `type="module"` "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+  {{- dict "Source" $source "Fingerprint" $fingerprint "Defer" true | dict "Page" . "Data" | partial "store/script.html" -}}
 
   {{- /* shortcode-caniuse.min.js */ -}}
   {{- $options := dict "targetPath" "js/shortcode-caniuse.min.js" "minify" hugo.IsProduction -}}
   {{- if not hugo.IsProduction -}}
     {{- $options = dict "sourceMap" "inline" | merge $options -}}
   {{- end -}}
-  {{- dict "Source" (resources.Get "js/shortcode-caniuse.js") "Build" $options "Fingerprint" $fingerprint "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+  {{- dict "Source" (resources.Get "js/shortcode-caniuse.js") "Build" $options "Fingerprint" $fingerprint "Defer" true | dict "Page" . "Data" | partial "store/script.html" -}}
 {{- end -}}
 ```
 
