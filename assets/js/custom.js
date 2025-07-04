@@ -17,17 +17,15 @@ class FixItDocs {
    * @returns {FixItDocs}
    */
   themeInfo() {
-    const themeVersion = fixit.config?.version || 'unknown';
-    console.log(
-      `%c FixIt ${themeVersion} %c https://github.com/hugo-fixit %c`,
-      `background: #FF735A;border:1px solid #FF735A; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
-      `border:1px solid #FF735A; padding: 1px; border-radius: 0 2px 2px 0; color: #FF735A;`,
-      'background:transparent'
-    );
+    let subtitle = fixit.config?.version || 'unknown';
+
+    if (subtitle.split('-').length > 2) {
+      subtitle = subtitle.replace(/-.*$/, '*');
+    }
     // set header subtitle with theme version (desktop and mobile)
     const headerSubtitles = document.querySelectorAll('.header-subtitle');
-    headerSubtitles.forEach((subtitle) => {
-      subtitle.textContent = `${themeVersion.replace(/-.*$/, '*')}`;
+    headerSubtitles.forEach((el) => {
+      el.textContent = subtitle;
     });
     return this;
   }
