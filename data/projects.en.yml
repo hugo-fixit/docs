@@ -27,6 +27,7 @@
     - hugo-fixit/shortcode-asciinema
     - hugo-fixit/shortcode-caniuse
     - hugo-fixit/shortcode-docs-bookmark
+    - hugo-fixit/shortcode-missing-translation
     - hugo-fixit/shortcode-mmt-netease
     - hugo-fixit/shortcode-rewards
 - title: 🛠️ Tools

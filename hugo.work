@@ -5,5 +5,6 @@ use ../FixIt
 use ../component-projects
 use ../shortcode-asciinema
 use ../shortcode-caniuse
+use ../shortcode-missing-translation
 use ../shortcode-rewards
 use ../cmpt-translate

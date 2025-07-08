@@ -278,13 +278,6 @@
   }
 }
 
-#content {
-  .missing-translation {
-    border: 2px dashed $global-border-color;
-    padding-inline: 0.5rem;
-  }
-}
-
 [lang='en'] {
   .collection-details .collection-summary .collection-name::before {
     content: '';
