@@ -17,26 +17,26 @@ logs:
   - date: 2023-03-17 14:05:49
     sponsor: K*n
     money: 50.00
-    origin: wechatpay
+    origin: 微信赞赏码
   - date: 2023-03-17 14:57:41
     sponsor: D*n
     money: 11.11
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "加油"
   - date: 2023-04-03 17:49:12
     sponsor: 乐语
     money: 5.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "很好用的主题，谢谢作者💪"
   - date: 2023-04-17 10:35:26
     sponsor: 建议去世
     money: 20.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "主题不错"
   - date: 2023-05-24 15:49:46
     sponsor: 🐟
     money: 1.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "感谢 FixIt 作者"
   - date: 2023-11-03 22:35:07
     sponsor: 丰果 # 来自 `141****866`
@@ -46,37 +46,37 @@ logs:
   - date: 2024-02-05 15:42:42
     sponsor: 淮屿
     money: 10.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "非常棒的主题👍"
   - date: 2024-07-16 00:09:47
     sponsor: WindSun
     money: 20.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "歪瑞古德"
   - date: 2024-08-03 19:25:50
     sponsor: SuLis
     money: 10.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "感谢作者对 FixIt 的付出！"
   - date: 2024-09-10 18:51:27
     sponsor: deequoique
     money: 10.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "FixIt👍请佬喝杯蜜雪"
   - date: 2024-11-06 11:22:04
     sponsor: 王二愣子
     money: 66.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "感谢大佬的答疑解惑！"
   - date: 2024-11-16 18:27:58
     sponsor: Z
     money: 20.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "感谢作者的答疑解惑😋"
   - date: 2024-12-22 15:31:34
     sponsor: F10wers13eiCheng
     money: 10.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "😘😘😘师傅的主题太棒了"
   - date: 2025-01-14 12:01:34
     sponsor: Liberal
@@ -86,5 +86,15 @@ logs:
   - date: 2025-06-18 08:55:43
     sponsor: 洪洋
     money: 20.00
-    origin: wechatpay
+    origin: 微信赞赏码
     remark: "支持"
+  - date: 2025-07-19 18:12:56
+    sponsor: 黄河之水天上来
+    money: 20.00
+    origin: 微信赞赏码
+    remark: "deepshui"
+  - date: 2025-07-19 21:50:43
+    sponsor: "奋进"
+    money: 100.00
+    origin: 微信红包
+    remark: "大佬 喝杯咖啡 [抱拳]，FixIt 主题确实很好，我也一直在用，但是加密这块确实是个硬伤"

@@ -10,5 +10,5 @@ github.com/hugo-fixit/shortcode-caniuse v1.3.0 h1:tCGwYnBrwJC3BIyNXWVVg7yvLsuaFA
 github.com/hugo-fixit/shortcode-caniuse v1.3.0/go.mod h1:RoPLFt+7uLui5rjvkC/qFGeo4nly5AzzwIID9SoDKNc=
 github.com/hugo-fixit/shortcode-missing-translation v1.0.0 h1:GqGtQysYOLXrXAb1tjGh2x+zf4X1tazxmxE7gqo8NYg=
 github.com/hugo-fixit/shortcode-missing-translation v1.0.0/go.mod h1:yjDPW+mrZcaxM75vdbO2Z8jjZO93CW0IH1f8mlZgV08=
-github.com/hugo-fixit/shortcode-rewards v1.1.0 h1:3R/yLrb2nVEB7GP1YFVr/laMnu0ZSNkNw6opSYLQceg=
-github.com/hugo-fixit/shortcode-rewards v1.1.0/go.mod h1:+PA7wjtBgkQsI8s8bPOMJ6bNNfExUIWz4AxTearzZgw=
+github.com/hugo-fixit/shortcode-rewards v1.1.1 h1:IfKQ6oYEptzaAaqC4UBJ97HOMjubBV6jHNlr1wzENzE=
+github.com/hugo-fixit/shortcode-rewards v1.1.1/go.mod h1:+PA7wjtBgkQsI8s8bPOMJ6bNNfExUIWz4AxTearzZgw=
