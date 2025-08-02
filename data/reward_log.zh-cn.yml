@@ -98,3 +98,8 @@ logs:
     money: 100.00
     origin: 微信红包
     remark: "大佬 喝杯咖啡 [抱拳]，FixIt 主题确实很好，我也一直在用，但是加密这块确实是个硬伤"
+  - date: 2025-08-03 00:26:01
+    sponsor: "Hobby"
+    money: 50.00
+    origin: 微信赞赏码
+    remark: "hobby"
