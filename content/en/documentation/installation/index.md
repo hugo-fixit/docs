@@ -151,6 +151,14 @@ FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hu
 npx fixit-cli create my-blog
 ```
 
+The supported template presets are:
+
+| Module Type                    | Repository                                                               |
+| :----------------------------- | :----------------------------------------------------------------------- |
+| [Hugo Module][hugo-modules]    | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
+| [Git Submodule][git-submodule] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
+| Component Skeleton             | [component-skeleton](https://github.com/hugo-fixit/component-skeleton)   |
+
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "Tip" >}}

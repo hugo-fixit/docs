@@ -768,7 +768,7 @@ disableThemeInject = false
 # FixIt 0.3.17 | NEW Summary AI config
 # See https://ai.zhheo.com/docs/summary.html
 [postSummary]
-  enable = true
+  enable = false
   # If you set `params.postChat.key`, you don't need to set `params.postSummary.key`
   key = ""
   title = ""

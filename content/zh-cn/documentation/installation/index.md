@@ -150,6 +150,15 @@ FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站
 ```bash
 npx fixit-cli create my-blog
 ```
+
+目前支持的模板预设如下：
+
+| 模块类型                    | 仓库                                                                     |
+| :-------------------------- | :----------------------------------------------------------------------- |
+| [Hugo 模块][hugo-modules]   | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
+| [Git 子模块][git-submodule] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
+| 组件骨架                    | [component-skeleton](https://github.com/hugo-fixit/component-skeleton)   |
+
 <!-- markdownlint-disable search-replace -->
 
 {{< admonition danger "提醒" >}}
