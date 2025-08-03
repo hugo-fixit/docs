@@ -737,7 +737,7 @@ disableThemeInject = false
 # Get PostChat Key from my invitation link, thanks for your support!
 # https://ai.zhheo.com/console/login?InviteID=85041330
 [postChat]
-  enable = true
+  enable = false
   key = "ed872bf9336506bea545183089f5034f81fea6af"
   # How users initiate chats: ["iframe", "magic"]
   userMode = "magic"
