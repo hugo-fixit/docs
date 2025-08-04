@@ -35,6 +35,8 @@ Hugo FixIt is eager for enthusiasm and participation from the open-source commun
 
 ## Contributing
 
+You can learn more about the future plans and ongoing development by checking out the [Roadmap of FixIt][roadmapLink].
+
 Welcome to join Hugo FixIt development and maintenance, contact us via `fixit@lruihao.cn`.
 
 {{< link "../development" "🔧 Develop FixIt theme" "Contribute to the development of FixIt." true "fa-solid fa-code" >}}
@@ -46,3 +48,6 @@ Welcome to join Hugo FixIt development and maintenance, contact us via `fixit@lr
 ## Sponsor
 
 If you enjoy the theme, please consider buying me a coffee ☕️.
+
+<!-- link reference definition -->
+[roadmapLink]: https://github.com/orgs/hugo-fixit/projects/2

@@ -34,6 +34,8 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 
 ## 贡献指南
 
+你可以通过查看 [FixIt 的路线图][roadmapLink] 来了解未来的计划和正在进行的开发。
+
 欢迎加入 Hugo FixIt 的开发和维护，通过以下方式联系我们 `fixit@lruihao.cn`.
 
 {{< link "../development" "🔧 开发 FixIt 主题" "为 FixIt 的开发做贡献。" true "fa-solid fa-code" >}}
@@ -45,3 +47,6 @@ Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你
 ## 赞助支持 {#sponsor}
 
 如果你喜爱这个主题，请考虑给我买杯咖啡 ☕️。
+
+<!-- link reference definition -->
+[roadmapLink]: https://github.com/orgs/hugo-fixit/projects/2
