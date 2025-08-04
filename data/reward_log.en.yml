@@ -2,7 +2,7 @@
 # currency: [CNY, USD, EUR, ...] https://gohugo.io/functions/lang/formatcurrency/
 # origin: [alipay, bitcoin, paypal, wechatpay, ...]
 
-# message: "[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)"
+# message: "Open Source Love ❤️"
 currency: USD
 symbol: $
 logs:
