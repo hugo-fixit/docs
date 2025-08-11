@@ -1,12 +1,12 @@
 # 📌 Sticky author site in https://fixit.lruihao.cn
-- nickname: Lruihao
-  avatar: https://lruihao.cn/images/avatar.jpg
-  url: https://lruihao.cn
-  description: Hugo FixIt 作者，喜欢瞎折腾、造轮子、写东西，分享一些前端开发中的所见、所闻、所思。
 - nickname: FixIt
   avatar: /images/hugo-fixit.webp
   url: https://fixit.lruihao.cn
   description: FixIt Theme Official Documentation
+- nickname: Lruihao
+  avatar: https://lruihao.cn/images/avatar.jpg
+  url: https://lruihao.cn
+  description: Hugo FixIt 作者，喜欢瞎折腾、造轮子、写东西，分享一些前端开发中的所见、所闻、所思。
 # -------------------------------------------------------------------------------------
 # Single Friend Link Information
 # 单个友情链接信息
@@ -22,7 +22,7 @@
 # -------------------------------------------------------------------------------------
 
 - nickname: Ayang
-  avatar: https://ayang.ink/images/avatar.jpg
+  # avatar: https://ayang.ink/images/avatar.jpg
   url: https://ayang.ink
   description: Ayang's blog
 
@@ -51,10 +51,15 @@
   url: https://www.nikunokoya.com
   description: Niku's blog
 
-# - nickname: pagezen
-#   avatar: https://clearsky.me/avatar.jpg
-#   url: https://clearsky.me
-#   description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
+- nickname: pagezen
+  avatar: https://clearsky.me/avatar.jpg
+  url: https://clearsky.me
+  description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
+
+- nickname: Qomarul Hasan
+  avatar: https://blog.qomarhsn.com/profile.webp
+  description: Explore technologies with a Linux & tech enthusiast. This blog offers programming tutorials, open-source project insights, and practical tech tips.
+  url: https://blog.qomarhsn.com
 
 # - nickname: Scan’s Blog
 #   avatar: https://fastly.jsdelivr.net/gh/hack-scan/Blog-pic/posts/logo.png
