@@ -1,5 +1,6 @@
 ---
 title: Extended Markdown Syntax
+shortTitle: Extended Syntax
 date: 2023-02-24T21:42:22+08:00
 author:
   name: Lruihao

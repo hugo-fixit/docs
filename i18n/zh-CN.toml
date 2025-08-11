@@ -3,21 +3,6 @@
 # 对于页面的翻译，可以在 Front Matter 中设置 `translationKey`
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# === Translations for pages ===
-["/documentation/content-management/introduction"]
-breadcrumbTitle = "概述"
-["/documentation/content-management/shortcodes/extended"]
-breadcrumbTitle = "扩展"
-["/documentation/content-management/shortcodes/extended/introduction"]
-breadcrumbTitle = "概述"
-["/documentation/content-management/shortcodes/built-in"]
-breadcrumbTitle = "内置"
-["/documentation/content-management/markdown-syntax/basics"]
-breadcrumbTitle = "基本语法"
-["/documentation/content-management/markdown-syntax/extended"]
-breadcrumbTitle = "扩展语法"
-# === Translations for pages ===
-
 # === shortcodes/admonition.html ===
 [admonition]
 ban = "禁止"

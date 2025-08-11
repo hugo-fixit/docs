@@ -1,5 +1,6 @@
 ---
 title: Markdown 基本语法
+shortTitle: 基本语法
 date: 2021-12-18T16:15:22+08:00
 aliases:
   - /zh-cn/basic-markdown-syntax/

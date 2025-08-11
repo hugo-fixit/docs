@@ -1,5 +1,6 @@
 ---
 title: Basic Markdown Syntax
+shortTitle: Basics Syntax
 date: 2021-12-18T16:15:22+08:00
 aliases:
   - /basic-markdown-syntax/

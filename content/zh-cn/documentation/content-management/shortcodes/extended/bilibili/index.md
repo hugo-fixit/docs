@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - bilibili
+shortTitle: Bilibili
 linkTitle: Bilibili Shortcode
 date: 2023-02-24T22:52:50+08:00
 aliases:

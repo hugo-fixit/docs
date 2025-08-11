@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - spotify
+shortTitle: Spotify
 linkTitle: Spotify Shortcode
 date: 2024-05-20T11:06:24+08:00
 author:

@@ -2,21 +2,6 @@
 # For translations of pages, you can set `translationKey` in Front Matter
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-# === Translations for pages ===
-["/documentation/content-management/introduction"]
-breadcrumbTitle = "Overview"
-["/documentation/content-management/shortcodes/extended"]
-breadcrumbTitle = "Extended"
-["/documentation/content-management/shortcodes/extended/introduction"]
-breadcrumbTitle = "Overview"
-["/documentation/content-management/shortcodes/built-in"]
-breadcrumbTitle = "Built-in"
-["/documentation/content-management/markdown-syntax/basics"]
-breadcrumbTitle = "Basics Syntax"
-["/documentation/content-management/markdown-syntax/extended"]
-breadcrumbTitle = "Extended Syntax"
-# === Translations for pages ===
-
 [follow]
 btn = "Follow"
 title = "Follow me on GitHub!"

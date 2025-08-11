@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - admonition
+shortTitle: Admonition
 linkTitle: Admonition Shortcode
 date: 2023-02-24T22:11:45+08:00
 description: admonition shortcode 允许你在内容中添加各种类型的标注。

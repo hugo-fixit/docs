@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - mapbox
+shortTitle: Mapbox
 linkTitle: Mapbox Shortcode
 date: 2023-02-24T22:45:45+08:00
 aliases:

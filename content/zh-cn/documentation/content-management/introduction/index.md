@@ -1,5 +1,6 @@
 ---
 title: 内容管理概述
+shortTitle: 概述
 date: 2023-02-24T17:27:22+08:00
 aliases:
   - /zh-cn/theme-documentation-content/

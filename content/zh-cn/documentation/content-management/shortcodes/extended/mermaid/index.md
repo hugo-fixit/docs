@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - mermaid
+shortTitle: Mermaid
 linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
 aliases:
@@ -166,8 +167,8 @@ stateDiagram-v2
 
 {{< mermaid >}}
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
+    [_] --> Still
+    Still --> [_]
     Still --> Moving
     Moving --> Still
     Moving --> Crash

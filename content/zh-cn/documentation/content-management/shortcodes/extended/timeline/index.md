@@ -1,5 +1,6 @@
 ---
 title: 扩展 Shortcode - Timeline
+shortTitle: Timeline
 linkTitle: Timeline Shortcode
 date: 2024-07-21T10:44:31+08:00
 description: 这篇文档将展示如何在 FixIt 中使用 Shortcode 创建时间线。

@@ -1,5 +1,6 @@
 ---
 title: Markdown 扩展语法
+shortTitle: 扩展语法
 date: 2023-02-24T21:42:22+08:00
 author:
   name: Lruihao

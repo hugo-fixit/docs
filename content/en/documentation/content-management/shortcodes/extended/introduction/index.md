@@ -1,5 +1,6 @@
 ---
 title: Extended Shortcodes Overview
+shortTitle: Overview
 date: 2023-02-24T22:11:39+08:00
 aliases:
   - /theme-documentation-extended-shortcodes/

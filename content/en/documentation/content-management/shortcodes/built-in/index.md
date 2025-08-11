@@ -1,5 +1,6 @@
 ---
 title: Built-in Shortcodes
+shortTitle: Built-in
 date: 2023-02-24T22:11:22+08:00
 aliases:
   - /theme-documentation-built-in-shortcodes/
