@@ -812,15 +812,15 @@ console.log('hello FixIt!');
 
 ### GoAT
 
-这部分内容在 [图表支持][diagrams-support-goat] 页面中介绍。
+这部分内容在 [图表支持 - GoAT][diagrams-support-goat] 页面中介绍。
 
 ### Mermaid
 
-这部分内容在 [图表支持][diagrams-support-mermaid] 页面中介绍。
+这部分内容在 [图表支持 - Mermaid][diagrams-support-mermaid] 页面中介绍。
 
 ### ECharts
 
-这部分内容在 [图表支持][diagrams-support-echarts] 页面中介绍。
+这部分内容在 [图表支持 - ECharts][diagrams-support-echarts] 页面中介绍。
 
 ### Timeline
 
@@ -847,7 +847,7 @@ console.log('hello FixIt!');
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
-[diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
-[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
-[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams#echarts" >}}
+[diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
+[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
+[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

@@ -35,6 +35,9 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 
 只需在 `echarts` shortcode 中以 `JSON`、`YAML` 或 `TOML` 等格式插入 ECharts 选项即可。
 
+> [!TIP] 推荐使用 **代码块扩展语法** ` ```echarts` 代替 shortcode。
+> 你可以在 [图表支持 - ECharts][diagrams-support-echarts] 页面找到更多的例子和用法信息。
+
 ### JSON 格式
 
 一个 `JSON` 格式的 `echarts` 示例：
@@ -1314,7 +1317,7 @@ echarts/
 | file   | {{< version 0.3.20 >}} [页面资源][page-resources] 或 `assets` 中的数据文件 | string | -       |
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD032 MD007 MD037 -->
+<!-- markdownlint-disable-file MD032 MD007 MD037 MD052 -->
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/zh/option.html#series-line
 [bar]: https://echarts.apache.org/zh/option.html#series-bar
@@ -1334,3 +1337,4 @@ echarts/
 [object-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
 [hugo-data]: https://gohugo.io/methods/site/data/
 [page-resources]: https://gohugo.io/content-management/page-resources/
+[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}

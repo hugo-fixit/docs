@@ -1,48 +1,65 @@
 ---
-title: Extended Shortcode - echarts
-shortTitle: Echarts
-linkTitle: Echarts Shortcode
-date: 2023-02-24T22:40:40+08:00
-aliases:
-  - /extended-shortcode-echarts/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
-description: The echarts shortcode supports data visualization in Hugo with ECharts library.
-resources:
-  - name: featured-image
-    src: featured-image.webp
+title: Diagrams Support - ECharts
+shortTitle: ECharts
+date: 2023-03-24T22:40:40+08:00
 tags:
-  - Shortcodes
+  - Diagram
+  - ECharts
+  - Markdown
   - Content
+  - Advanced
 categories:
   - Documentation
 collections:
-  - Extended Shortcodes
+  - Diagrams Support
+resources:
+  - name: featured-image
+    src: featured-image.webp
 ---
 
-The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
+[**ECharts**][echarts] is a library helping you to generate interactive data visualization.
 
 <!--more-->
 
-## Introduction
-
-**ECharts** is a library helping you to generate interactive data visualization.
-
 The basic chart types ECharts supports include [line series][line], [bar series][bar], [scatter series][scatter], [pie charts][pie], [candle-stick series][candlestick], [boxplot series][boxplot] for statistics, [map series][map], [heatmap series][heatmap], [lines series][lines] for directional information, [graph series][graph] for relationships, [treemap series][treemap], [sunburst series][sunburst], [parallel series][parallel] for multi-dimensional data, [funnel series][funnel], [gauge series][gauge]. And it's extremely easy to create a combinition of them with ECharts.
 
-## How to Use
+## Usage
 
-Simply insert the ECharts option in formats such as `JSON`, `YAML`, or `TOML` in the `echarts` shortcode.
+### Syntax
 
-> [!TIP] The **Code Fences extended syntax** ` ```echarts` is recommended over the shortcode.
-> You can find more examples and usage information on the [Diagrams Support - ECharts][diagrams-support-echarts] page.
+To use ECharts, simply place the ECharts option in formats such as `JSON`, `YAML`, or `TOML` inside a code block with the language set to `echarts`.
 
-### JSON Format
+````markdown
+```echarts
+// echarts option in formats such as JSON, YAML, or TOML here
+```
+````
+
+> [!TIP]
+> You can also use the [`echarts` shortcode][sc-echarts] directly in your Markdown files.
+
+### Parameters
+
+The Code Fences extended syntax for ECharts supports the following parameters:
+
+| Parameter | Description                                                                      | Type   | Default |
+| :-------- | :------------------------------------------------------------------------------- | :----- | :------ |
+| width     | Width of the data visualization                                                  | string | `100%`  |
+| height    | Height of the data visualization                                                 | string | `30rem` |
+| js        | {{< version 0.3.19 >}} Whether to use JS code                                    | bool   | `false` |
+| async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously                   | bool   | `false` |
+| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope                  | string | -       |
+| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string | -       |
+
+---
+
+Here are some examples of generated SVGs using ECharts.
+
+## JSON Format
 
 Example `echarts` input in `JSON` format:
 
-{{< echarts >}}
+```echarts
 {
   "title": {
     "text": "Summary Line Chart",
@@ -111,12 +128,12 @@ Example `echarts` input in `JSON` format:
     }
   ]
 }
-{{< /echarts >}}
+```
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
-{{?{}< echarts >}}
+````markdown {data-open=true}
+```echarts
 {
   "title": {
     "text": "Summary Line Chart",
@@ -185,16 +202,16 @@ Example `echarts` input in `JSON` format:
     }
   ]
 }
-{{?{}< /echarts >}}
 ```
+````
 
 {{< /details >}}
 
-### YAML Format
+## YAML Format
 
 Example `echarts` input in `YAML` format:
 
-{{< echarts >}}
+```echarts
 title:
   text: Summary Line Chart
   top: 2%
@@ -288,12 +305,12 @@ series:
       - 1290
       - 1330
       - 1320
-{{< /echarts >}}
+```
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
-{{?{}< echarts >}}
+````markdown {data-open=true}
+```echarts
 title:
   text: Summary Line Chart
   top: 2%
@@ -387,16 +404,16 @@ series:
       - 1290
       - 1330
       - 1320
-{{?{}< /echarts >}}
 ```
+````
 
 {{< /details >}}
 
-### TOML Format
+## TOML Format
 
 Example `echarts` input in `TOML` format:
 
-{{< echarts >}}
+```echarts
 [title]
 text = "Summary Line Chart"
 top = "2%"
@@ -512,12 +529,12 @@ data = [
   1330.0,
   1320.0
 ]
-{{< /echarts >}}
+```
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
-{{?{}< echarts >}}
+````markdown {data-open=true}
+```echarts
 [title]
 text = "Summary Line Chart"
 top = "2%"
@@ -633,18 +650,18 @@ data = [
   1330.0,
   1320.0
 ]
-{{?{}< /echarts >}}
 ```
+````
 
 {{< /details >}}
 
-### JS Object literal Format
+## JS Object literal Format
 
 {{< version 0.3.19 >}}
 
 Set the `js` parameter to `true`, the example `echarts` input in [JS object literals][object-literals] format:
 
-{{< echarts js=true >}}
+```echarts {js=true}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
@@ -831,12 +848,12 @@ Set the `js` parameter to `true`, the example `echarts` input in [JS object lite
     }
   ]
 }
-{{< /echarts >}}
+```
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
-{{?{}< echarts js=true >}}
+````markdown {data-open=true}
+```echarts {js=true}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
@@ -1023,12 +1040,12 @@ Set the `js` parameter to `true`, the example `echarts` input in [JS object lite
     }
   ]
 }
-{{?{}< /echarts >}}
 ```
+````
 
 {{< /details >}}
 
-### JS Code
+## JS Code
 
 {{< version 0.3.20 >}}
 
@@ -1048,11 +1065,11 @@ function _getOption(fixit, chart) {
 
 Example `echarts` with JS code:
 
-{{< echarts js=true >}}
+```echarts {js=true}
 const data = [];
 for (let i = 0; i <= 100; i++) {
-  let theta = (i / 100) * 360;
-  let r = 5 * (1 + Math.sin((theta / 180) * Math.PI));
+  let theta = (i / 100) *360;
+  let r = 5* (1 + Math.sin((theta / 180) * Math.PI));
   data.push([r, theta]);
 }
 const option = {
@@ -1086,12 +1103,12 @@ const option = {
   ]
 };
 return option;
-{{< /echarts >}}
+```
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
-{{?{}< echarts js=true >}}
+````markdown {data-open=true}
+```echarts {js=true}
 const data = [];
 for (let i = 0; i <= 100; i++) {
   let theta = (i / 100) * 360;
@@ -1129,14 +1146,14 @@ const option = {
   ]
 };
 return option;
-{{?{}< /echarts >}}
 ```
+````
 
 {{< /details >}}
 
 JS code can also use the `async` parameter to load data asynchronously, for example:
 
-{{< echarts js=true async=true >}}
+```echarts {js=true,async=true}
 return fetch('/echarts/les-miserables.json')
   .then((response) => response.json())
   .then((graph) => {
@@ -1187,12 +1204,12 @@ return fetch('/echarts/les-miserables.json')
     };
     return option;
 });
-{{< /echarts >}}
+```
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
-{{?{}< echarts js=true async=true >}}
+````markdown {data-open=true}
+```echarts {js=true,async=true}
 return fetch('/echarts/les-miserables.json')
   .then((response) => response.json())
   .then((graph) => {
@@ -1243,12 +1260,12 @@ return fetch('/echarts/les-miserables.json')
     };
     return option;
 });
-{{?{}< /echarts >}}
 ```
+````
 
 {{< /details >}}
 
-### Site Data
+## Site Data
 
 {{< version 0.3.20 >}}
 
@@ -1256,15 +1273,17 @@ Support obtaining data from Hugo [site data][hugo-data], with data files defined
 
 For example, if you have a file `data/echarts/round-cap.json`, you can use the `data` parameter to reference it:
 
-```markdown
-{{?{}< echarts data="round-cap" />}}
+````markdown
+```echarts {data="round-cap"}
 ```
+````
 
 The rendered output looks like this:
 
-{{< echarts data="round-cap" />}}
+```echarts {data="round-cap"}
+```
 
-### File Data
+## File Data
 
 {{< version 0.3.20 >}}
 
@@ -1285,39 +1304,29 @@ echarts/
 
 You can use the `file` parameter to get data from the file:
 
-```markdown
-{{?{}< echarts file="data/chart.yaml" />}}
+````markdown
+```echarts {file="data/chart.yaml"}
 ```
+````
 
 The rendered output looks like this:
 
-{{< echarts file="data/chart.yaml" />}}
+```echarts {file="data/chart.yaml"}
+```
 
 An example of loading a `JS` file:
 
-```markdown
-{{?{}< echarts file="data/chart.js" />}}
+````markdown
+```echarts {file="data/chart.js"}
 ```
+````
 
 The rendered output looks like this:
 
-{{< echarts file="data/chart.js" />}}
-
-## Parameters
-
-The `echarts` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
-
-| Parameter | Description                                                                      | Type   | Default |
-| :-------- | :------------------------------------------------------------------------------- | :----- | :------ |
-| width     | ==1== Width of the data visualization                                            | string | `100%`  |
-| height    | ==2== Height of the data visualization                                           | string | `30rem` |
-| js        | {{< version 0.3.19 >}} Whether to use JS code                                    | bool   | `false` |
-| async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously                   | bool   | `false` |
-| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope                  | string | -       |
-| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string | -       |
+```echarts {file="data/chart.js"}
+```
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD032 MD007 MD037 MD052 -->
 [echarts]: https://echarts.apache.org/
 [line]: https://echarts.apache.org/en/option.html#series-line
 [bar]: https://echarts.apache.org/en/option.html#series-bar
@@ -1337,4 +1346,5 @@ The `echarts` shortcode has the following named parameters, and the positional p
 [object-literals]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals
 [hugo-data]: https://gohugo.io/methods/site/data/
 [page-resources]: https://gohugo.io/content-management/page-resources/
-[diagrams-support-echarts]: {{< relref "/documentation/content-management/diagrams-support/echarts" >}}
+<!-- markdownlint-disable-file reference-links-images -->
+[sc-echarts]: {{< relref "/documentation/content-management/shortcodes/extended/echarts" >}}

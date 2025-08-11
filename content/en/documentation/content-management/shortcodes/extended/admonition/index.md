@@ -1,5 +1,6 @@
 ---
 title: Extended Shortcode - admonition
+shortTitle: Admonition
 linkTitle: Admonition Shortcode
 date: 2023-02-24T22:11:45+08:00
 description: The admonition shortcode allows you to add various types of callouts to your content.

@@ -1035,15 +1035,23 @@ name
 
 ### mermaid
 
-{{< version 0.2.15 >}}
+{{< version 0.4.0 changed >}}
 
 `map` Mermaid Configuration.
 
 ```toml
 [params]
   [params.mermaid]
+    cdn = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
+    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
     themes = ["default", "dark"]
 ```
+
+cdn
+: `string` The Mermaid ESM module CDN source.
+
+zenuml
+: `string` The ZenUML ESM module CDN source.
 
 themes
 : `string array(2)` Themes for Mermaid. See [Mermaid Themes][mermaid-themes] for available values.

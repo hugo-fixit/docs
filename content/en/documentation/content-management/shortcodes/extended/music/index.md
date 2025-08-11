@@ -1,5 +1,6 @@
 ---
 title: Extended Shortcode - music
+shortTitle: Music
 linkTitle: Music Shortcode
 date: 2023-02-24T22:50:50+08:00
 aliases:

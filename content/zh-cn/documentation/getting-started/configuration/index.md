@@ -1045,11 +1045,19 @@ name
 ```toml
 [params]
   [params.mermaid]
+    cdn = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
+    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
     themes = ["default", "dark"]
 ```
 
+cdn
+: `string` Mermaid 核心脚本地址。
+
+zenuml
+: `string` Mermaid ZenUML 脚本地址。
+
 themes
-`string array(2)` Mermaid 主题，详见 [Mermaid Themes][mermaid-themes]。
+: `string array(2)` Mermaid 主题，详见 [Mermaid Themes][mermaid-themes]。
 
 ### pangu
 

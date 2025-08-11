@@ -812,19 +812,19 @@ console.log('hello FixIt!');
 
 ### GoAT
 
-This part is shown in the [diagrams support][diagrams-support-goat] page.
+This part is shown in the [Diagrams Support - GoAT][diagrams-support-goat] page.
 
 ### Mermaid
 
-This part is shown in the [diagrams support][diagrams-support-mermaid] page.
+This part is shown in the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
 
 ### ECharts
 
-This part is shown in the [diagrams support][diagrams-support-echarts] page.
+This part is shown in the [Diagrams Support - ECharts][diagrams-support-echarts] page.
 
 ### Timeline
 
-This part is shown in the [Timeline support][timeline-support] page.
+This part is shown in the [Timeline Support][timeline-support] page.
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 MD059 -->
@@ -847,7 +847,7 @@ This part is shown in the [Timeline support][timeline-support] page.
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
-[diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams#goat" >}}
-[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams#mermaid" >}}
-[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams#echarts" >}}
+[diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
+[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
+[diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

@@ -1,5 +1,6 @@
 ---
 title: Extended Shortcode - mermaid
+shortTitle: Mermaid
 linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
 aliases:
@@ -28,7 +29,65 @@ The `mermaid` shortcode supports diagrams in Hugo with [Mermaid][mermaid] librar
 
 **Mermaid** is a library helping you to generate diagram and flowcharts from text, in a similar manner as Markdown.
 
+## Usage
+
 Just insert your mermaid code in the `mermaid` shortcode and that’s it.
+
+> [!TIP] The **Code Fences extended syntax** ` ```mermaid` is recommended over the shortcode.
+> You can find more examples and usage information on the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
+
+### CDN
+
+You can use `params.mermaid` in your configuration file to specify the version of Mermaid and ZenUML you want to use. For example:
+
+```toml
+[params]
+  [params.mermaid]
+    cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
+    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
+```
+
+### Themes
+
+Available themes are as follows:
+
+1. [**default**][theme-default] - This is the default theme for all diagrams.
+2. [**neutral**][theme-neutral] - This theme is great for black and white documents that will be printed.
+3. [**dark**][theme-dark] - This theme goes well with dark-colored elements or dark-mode.
+4. [**forest**][theme-forest] - This theme contains shades of green.
+5. [**base**][theme-base] - This is the only theme that can be modified. Use this theme as the base for customizations.
+
+Head to the [Theme Configuration | Mermaid][mermaid-theming] page to learn more about dynamic and integrated theme configuration.
+
+#### Site-wide Themes
+
+You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid.themes` parameter.
+
+```toml
+[params]
+  [params.mermaid]
+    themes = ["default", "dark"]
+```
+
+#### Diagram-specific Themes
+
+To customize the theme of an individual diagram, use the `init` directive.
+
+Example of `init` directive setting the `theme` to `forest`:
+
+```markdown
+{{</* mermaid */>}}
+%%{init: {'theme':'forest'}}%%
+  graph TD
+    a --> b
+{{</* /mermaid */>}}
+```
+
+{{< mermaid >}}
+%%{init: {'theme':'forest'}}%%
+  graph TD
+    a --> b
+{{< /mermaid >}}
 
 ## Flowchart {#flowchart}
 
@@ -362,48 +421,8 @@ gitGraph
     commit
 {{< /mermaid >}}
 
-## Other examples
-
-You can find more examples on the [Diagrams Support | FixIt][diagrams-mermaid] page or the [Mermaid documentation][mermaid].
-
-## Mermaid Themes
-
-Available themes are as follows:
-
-1. [**default**][theme-default] - This is the default theme for all diagrams.
-2. [**neutral**][theme-neutral] - This theme is great for black and white documents that will be printed.
-3. [**dark**][theme-dark] - This theme goes well with dark-colored elements or dark-mode.
-4. [**forest**][theme-forest] - This theme contains shades of green.
-5. [**base**][theme-base] - This is the only theme that can be modified. Use this theme as the base for customizations.
-
-Head to the [Theme Configuration | Mermaid][mermaid-theming] page to learn more about dynamic and integrated theme configuration.
-
-### Site-wide Themes
-
-You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid` parameter.
-
-### Diagram-specific Themes
-
-To customize the theme of an individual diagram, use the `init` directive.
-
-Example of `init` directive setting the `theme` to `forest`:
-
-```markdown
-{{</* mermaid */>}}
-%%{init: {'theme':'forest'}}%%
-  graph TD
-    a --> b
-{{</* /mermaid */>}}
-```
-
-{{< mermaid >}}
-%%{init: {'theme':'forest'}}%%
-  graph TD
-    a --> b
-{{< /mermaid >}}
-
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file MD049 reference-links-images -->
 [mermaid]: https://mermaid.js.org/
 [theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
 [theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
@@ -411,4 +430,4 @@ Example of `init` directive setting the `theme` to `forest`:
 [theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
 [theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
 [mermaid-theming]: https://mermaid.js.org/config/theming.html
-[diagrams-mermaid]: {{< relref "/documentation/content-management/diagrams/#mermaid" >}}
+[diagrams-support-mermaid]: {{< relref "/documentation/content-management/diagrams-support/mermaid" >}}
