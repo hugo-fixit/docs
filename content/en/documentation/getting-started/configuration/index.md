@@ -1048,10 +1048,10 @@ name
 ```
 
 cdn
-: `string` The Mermaid ESM module CDN source.
+: `string` {{< version 0.4.0 >}} The Mermaid ESM module CDN source.
 
 zenuml
-: `string` The ZenUML ESM module CDN source.
+: `string` {{< version 0.4.0 >}} The ZenUML ESM module CDN source.
 
 themes
 : `string array(2)` Themes for Mermaid. See [Mermaid Themes][mermaid-themes] for available values.

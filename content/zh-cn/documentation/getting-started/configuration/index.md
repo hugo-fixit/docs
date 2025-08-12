@@ -1051,10 +1051,10 @@ name
 ```
 
 cdn
-: `string` Mermaid 核心脚本地址。
+: `string` {{< version 0.4.0 >}} Mermaid 核心脚本地址。
 
 zenuml
-: `string` Mermaid ZenUML 脚本地址。
+: `string` {{< version 0.4.0 >}} Mermaid ZenUML 脚本地址。
 
 themes
 : `string array(2)` Mermaid 主题，详见 [Mermaid Themes][mermaid-themes]。
