@@ -1038,23 +1038,25 @@ name
 
 ### mermaid
 
-{{< version 0.2.15 >}}
+{{< version 0.4.0 changed >}}
 
 `map` Mermaid 配置。
 
 ```toml
 [params]
   [params.mermaid]
-    cdn = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
-    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
+    cdn = ""
+    zenuml = ""
     themes = ["default", "dark"]
 ```
 
 cdn
-: `string` {{< version 0.4.0 >}} Mermaid 核心脚本地址。
+: `string` {{< version 0.4.0 >}} Mermaid 核心脚本地址。\
+默认：`https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs`。
 
 zenuml
-: `string` {{< version 0.4.0 >}} Mermaid ZenUML 脚本地址。
+: `string` {{< version 0.4.0 >}} Mermaid ZenUML 脚本地址。\
+默认为空，你可以将其设置为 CDN 源以启用 ZenUML 支持。
 
 themes
 : `string array(2)` Mermaid 主题，详见 [Mermaid Themes][mermaid-themes]。

@@ -1042,16 +1042,18 @@ name
 ```toml
 [params]
   [params.mermaid]
-    cdn = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"
-    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
+    cdn = ""
+    zenuml = ""
     themes = ["default", "dark"]
 ```
 
 cdn
-: `string` {{< version 0.4.0 >}} The Mermaid ESM module CDN source.
+: `string` {{< version 0.4.0 >}} The Mermaid ESM module CDN source.\
+Default is `https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs`.
 
 zenuml
-: `string` {{< version 0.4.0 >}} The ZenUML ESM module CDN source.
+: `string` {{< version 0.4.0 >}} The ZenUML ESM module CDN source.\
+Default is empty, you can set it to a CDN source to enable ZenUML support.
 
 themes
 : `string array(2)` Themes for Mermaid. See [Mermaid Themes][mermaid-themes] for available values.

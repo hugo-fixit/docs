@@ -490,8 +490,15 @@ disableThemeInject = false
 # FixIt 0.2.15 | NEW Mermaid config
 # FixIt 0.2.15 | 新增 Mermaid 配置
 [mermaid]
+  # FixIt 0.4.0 | NEW Mermaid ESM module CDN source
+  # default is https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs
+  cdn = ""
+  # FixIt 0.4.0 | NEW ZenUML ESM module CDN source
+  # default is empty, you can set it to a CDN source to enable ZenUML support
+  # 默认为空，你可以将其设置为 CDN 源以启用 ZenUML 支持
+  # e.g. https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs
+  zenuml = "https://unpkg.com/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
   # For values, see https://mermaid.js.org/config/theming.html#available-themes
-  # 取值详见 https://mermaid.js.org/config/theming.html#available-themes
   themes = ["default", "dark"]
 
 # FixIt 0.3.13 | NEW Admonitions custom config

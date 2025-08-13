@@ -129,7 +129,7 @@
 
       &::before {
         background-color: rgba(204, 204, 204, 0.1);
-        background-image: url(/images/loading.min.svg);
+        background-image: var(#{$rootPrefix}loading-img);
         background-size: 60px;
 
         [data-theme='dark'] & {

@@ -698,9 +698,12 @@ timeline
 
 ## ZenUML
 
-A Sequence diagram is an interaction diagram that shows how processes operate with one another and in what order.
+> A Sequence diagram is an interaction diagram that shows how processes operate with one another and in what order.
 
 Mermaid can render sequence diagrams with [ZenUML][zemuml]. Note that ZenUML uses a different syntax than the original Sequence Diagram in mermaid.
+
+> [!NOTE]
+> [Mermaid ZenUML][mermaid-zenuml] is disabled by default. You can enable it by setting `params.mermaid.zenuml` in your configuration file.
 
 Example **ZenUML** `mermaid` input:
 
@@ -1209,6 +1212,7 @@ treemap-beta
 [mermaid-mindmap]: https://mermaid.js.org/syntax/mindmap.html
 [mermaid-timeline]: https://mermaid.js.org/syntax/timeline.html
 [zemuml]: https://zenuml.com/
+[mermaid-zenuml]: https://mermaid.js.org/syntax/zenuml.html
 [mermaid-sankey]: https://mermaid.js.org/syntax/sankey.html
 [mermaid-xy-chart]: https://mermaid.js.org/syntax/xyChart.html
 [mermaid-block-diagram]: https://mermaid.js.org/syntax/block.html

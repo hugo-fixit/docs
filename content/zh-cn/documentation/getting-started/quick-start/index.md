@@ -187,10 +187,9 @@ hugo server -D --disableFastRender
 
 当对新内容感到满意时，将 front matter 中的 `draft` 值更改为 `false`，然后保存文件。
 
-{{< admonition >}}
-Hugo 的渲染引擎符合 Markdown 的 CommonMark [规范](https://spec.commonmark.org/)。\
-除此之外，FixIt 主题还支持一些 [扩展 Markdown 语法]({{< relref "/documentation/content-management/markdown-syntax/extended" >}})。
-{{< /admonition >}}
+> [!NOTE]+
+> Hugo 的渲染引擎符合 Markdown 的 [CommonMark 规范][commonmark-specification]。\
+> 除此之外，FixIt 主题还支持一些 [扩展 Markdown 语法][extended-markdown-syntax]。
 
 ## 发布网站
 
@@ -229,6 +228,8 @@ hugo
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [directory-structure]: https://gohugo.io/getting-started/directory-structure/
 [front-matter]: https://gohugo.io/content-management/front-matter/
+[commonmark-specification]: https://spec.commonmark.org/
+[extended-markdown-syntax]: {{< relref "/documentation/content-management/markdown-syntax/extended" >}}
 [draft-future-and-expired-content]: https://gohugo.io/getting-started/usage/#draft-future-and-expired-content
 [commonmark]: https://commonmark.org/help/
 [vercel]: https://vercel.com/

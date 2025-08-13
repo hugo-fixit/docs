@@ -181,10 +181,9 @@ View your site at the URL displayed in your terminal. Keep the development serve
 
 When satisfied with your new content, set the front matter `draft` parameter to `false`.
 
-{{< admonition >}}
-Hugo's rendering engine conforms to the CommonMark [specification](https://spec.commonmark.org/) for Markdown.\
-In addition, the FixIt theme supports some [extended Markdown syntax]({{< relref "/documentation/content-management/markdown-syntax/extended" >}}).
-{{< /admonition >}}
+> [!NOTE]+
+> Hugo's rendering engine conforms to the [CommonMark specification][commonmark-specification] for Markdown.\
+> In addition, the FixIt theme supports some [extended Markdown syntax][extended-markdown-syntax].
 
 ## Publish the Site
 
@@ -223,6 +222,8 @@ if you encounter any problems or have any questions, please go to our [community
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [directory-structure]: https://gohugo.io/getting-started/directory-structure/
 [front-matter]: https://gohugo.io/content-management/front-matter/
+[commonmark-specification]: https://spec.commonmark.org/
+[extended-markdown-syntax]: {{< relref "/documentation/content-management/markdown-syntax/extended" >}}
 [draft-future-and-expired-content]: https://gohugo.io/getting-started/usage/#draft-future-and-expired-content
 [commonmark]: https://commonmark.org/help/
 [vercel]: https://vercel.com/

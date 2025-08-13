@@ -704,9 +704,12 @@ timeline
 
 {{< version 0.4.0 >}}
 
-序列图是一种交互图，显示流程如何相互运行以及以什么顺序运行。
+> 序列图是一种交互图，显示流程如何相互运行以及以什么顺序运行。
 
 Mermaid 可以使用 [ZenUML][zemuml] 渲染序列图。请注意，ZenUML 使用的语法与原始的 Mermaid 序列图不同。
+
+> [!NOTE]
+> [Mermaid ZenUML][mermaid-zenuml] 默认禁用，你可以通过在配置文件中设置 `params.mermaid.zenuml` 来启用它。
 
 一个 **ZenUML** `mermaid` 示例：
 
@@ -1221,6 +1224,7 @@ treemap-beta
 [mermaid-mindmap]: https://mermaid.js.org/syntax/mindmap.html
 [mermaid-timeline]: https://mermaid.js.org/syntax/timeline.html
 [zemuml]: https://zenuml.com/
+[mermaid-zenuml]: https://mermaid.js.org/syntax/zenuml.html
 [mermaid-sankey]: https://mermaid.js.org/syntax/sankey.html
 [mermaid-xy-chart]: https://mermaid.js.org/syntax/xyChart.html
 [mermaid-block-diagram]: https://mermaid.js.org/syntax/block.html
