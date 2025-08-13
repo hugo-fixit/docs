@@ -64,6 +64,7 @@ Example `echarts` input in `JSON` format:
     "containLabel": true
   },
   "toolbox": {
+    "left": "left",
     "feature": {
       "saveAsImage": {
         "title": "Save as Image"
@@ -138,6 +139,7 @@ Example `echarts` input in `JSON` format:
     "containLabel": true
   },
   "toolbox": {
+    "left": "left",
     "feature": {
       "saveAsImage": {
         "title": "Save as Image"
@@ -216,6 +218,7 @@ grid:
   top: 20%
   containLabel: true
 toolbox:
+  left: left
   feature:
     saveAsImage:
       title: Save as Image
@@ -315,6 +318,7 @@ grid:
   top: 20%
   containLabel: true
 toolbox:
+  left: left
   feature:
     saveAsImage:
       title: Save as Image
@@ -423,6 +427,7 @@ top = "20%"
 containLabel = true
 
 [toolbox]
+left = "left"
 [toolbox.feature]
 [toolbox.feature.saveAsImage]
 title = "Save as Image"
@@ -544,6 +549,7 @@ top = "20%"
 containLabel = true
 
 [toolbox]
+left = "left"
 [toolbox.feature]
 [toolbox.feature.saveAsImage]
 title = "Save as Image"
@@ -666,6 +672,7 @@ Set the `js` parameter to `true`, the example `echarts` input in [JS object lite
     top: '10%'
   },
   toolbox: {
+    left: 'left',
     feature: {
       saveAsImage: {}
     }
@@ -858,6 +865,7 @@ Set the `js` parameter to `true`, the example `echarts` input in [JS object lite
     top: '10%'
   },
   toolbox: {
+    left: 'left',
     feature: {
       saveAsImage: {}
     }

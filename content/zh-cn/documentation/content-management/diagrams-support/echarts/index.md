@@ -81,9 +81,10 @@ ECharts 的代码块扩展语法支持以下参数：
     "containLabel": true
   },
   "toolbox": {
+    "left": "left",
     "feature": {
       "saveAsImage": {
-        "title": "Save as Image"
+        "title": "保存为图片"
       }
     }
   },
@@ -155,9 +156,10 @@ ECharts 的代码块扩展语法支持以下参数：
     "containLabel": true
   },
   "toolbox": {
+    "left": "left",
     "feature": {
       "saveAsImage": {
-        "title": "Save as Image"
+        "title": "保存为图片"
       }
     }
   },
@@ -233,9 +235,10 @@ grid:
   top: 20%
   containLabel: true
 toolbox:
+  left: left
   feature:
     saveAsImage:
-      title: Save as Image
+      title: 保存为图片
 xAxis:
   type: category
   boundaryGap: false
@@ -332,9 +335,10 @@ grid:
   top: 20%
   containLabel: true
 toolbox:
+  left: left
   feature:
     saveAsImage:
-      title: Save as Image
+      title: 保存为图片
 xAxis:
   type: category
   boundaryGap: false
@@ -440,9 +444,10 @@ top = "20%"
 containLabel = true
 
 [toolbox]
+left = "left"
 [toolbox.feature]
 [toolbox.feature.saveAsImage]
-title = "Save as Image"
+title = "保存为图片"
 
 [xAxis]
 type = "category"
@@ -561,9 +566,10 @@ top = "20%"
 containLabel = true
 
 [toolbox]
+left = "left"
 [toolbox.feature]
 [toolbox.feature.saveAsImage]
-title = "Save as Image"
+title = "保存为图片"
 
 [xAxis]
 type = "category"
@@ -683,6 +689,7 @@ data = [
     top: '10%'
   },
   toolbox: {
+    left: 'left',
     feature: {
       saveAsImage: {}
     }
@@ -875,6 +882,7 @@ data = [
     top: '10%'
   },
   toolbox: {
+    left: 'left',
     feature: {
       saveAsImage: {}
     }

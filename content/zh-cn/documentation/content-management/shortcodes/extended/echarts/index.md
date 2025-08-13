@@ -64,6 +64,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
     "containLabel": true
   },
   "toolbox": {
+    "left": "left",
     "feature": {
       "saveAsImage": {
         "title": "保存为图片"
@@ -138,6 +139,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
     "containLabel": true
   },
   "toolbox": {
+    "left": "left",
     "feature": {
       "saveAsImage": {
         "title": "保存为图片"
@@ -216,6 +218,7 @@ grid:
   top: 20%
   containLabel: true
 toolbox:
+  left: left,
   feature:
     saveAsImage:
       title: 保存为图片
@@ -315,6 +318,7 @@ grid:
   top: 20%
   containLabel: true
 toolbox:
+  left: left,
   feature:
     saveAsImage:
       title: 保存为图片
@@ -423,6 +427,7 @@ top = "20%"
 containLabel = true
 
 [toolbox]
+left = "left"
 [toolbox.feature]
 [toolbox.feature.saveAsImage]
 title = "保存为图片"
@@ -544,6 +549,7 @@ top = "20%"
 containLabel = true
 
 [toolbox]
+left = "left"
 [toolbox.feature]
 [toolbox.feature.saveAsImage]
 title = "保存为图片"
@@ -666,6 +672,7 @@ data = [
     top: '10%'
   },
   toolbox: {
+    left: 'left',
     feature: {
       saveAsImage: {}
     }
@@ -858,6 +865,7 @@ data = [
     top: '10%'
   },
   toolbox: {
+    left: 'left',
     feature: {
       saveAsImage: {}
     }

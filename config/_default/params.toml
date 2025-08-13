@@ -492,7 +492,7 @@ disableThemeInject = false
 [mermaid]
   # FixIt 0.4.0 | NEW Mermaid ESM module CDN source
   # default is https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs
-  cdn = ""
+  cdn = "https://unpkg.com/mermaid/dist/mermaid.esm.min.mjs"
   # FixIt 0.4.0 | NEW ZenUML ESM module CDN source
   # default is empty, you can set it to a CDN source to enable ZenUML support
   # 默认为空，你可以将其设置为 CDN 源以启用 ZenUML 支持
