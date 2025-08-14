@@ -36,15 +36,43 @@ To use Mermaid, simply place the mermaid code inside a code block with the langu
 > [!TIP]
 > You can also use the [`mermaid` shortcode][sc-mermaid] directly in your Markdown files.
 
-### CDN
+### Configuration
 
-You can use `params.mermaid` in your configuration file to specify the version of Mermaid and ZenUML you want to use. For example:
+You can configure Mermaid globally in your `hugo.toml` file.
+
+```toml
+[params]
+  [params.mermaid]
+    cdn = ""
+    zenuml = ""
+    themes = ["default", "dark"]
+    # optional values: ["strict", "loose", "antiscript", "sandbox"]
+    securityLevel = "loose"
+    # optional values: ["classic", "handDrawn"]
+    look = "handDrawn"
+    fontFamily = ""
+```
+
+CDN
+: You can use `params.mermaid` in your configuration file to specify the version of Mermaid and ZenUML you want to use. For example:
 
 ```toml
 [params]
   [params.mermaid]
     cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
     zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
+```
+
+> [!WARNING]
+> The ZenUML function can only be used if ZenUML CDN is set.
+
+look
+: Mermaid diagrams in the FixIt theme are set to hand-drawn style by default. If you prefer the classic style, you can change it in your configuration file:
+
+```toml
+[params]
+  [params.mermaid]
+    look = "classic"
 ```
 
 ### Themes
@@ -59,9 +87,8 @@ Available themes are as follows:
 
 Head to the [Theme Configuration | Mermaid][mermaid-theming] page to learn more about dynamic and integrated theme configuration.
 
-#### Site-wide Themes
-
-You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid.themes` parameter.
+Site-wide Themes
+: You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid.themes` parameter.
 
 ```toml
 [params]
@@ -69,9 +96,8 @@ You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid
     themes = ["default", "dark"]
 ```
 
-#### Diagram-specific Themes
-
-To customize the theme of an individual diagram, use the `init` directive.
+Diagram-specific Themes
+: To customize the theme of an individual diagram, use the `init` directive.
 
 Example of `init` directive setting the `theme` to `forest`:
 

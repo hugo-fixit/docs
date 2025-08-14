@@ -35,6 +35,12 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 
 只需在 `echarts` shortcode 中以 `JSON`、`YAML` 或 `TOML` 等格式插入 ECharts 选项即可。
 
+```markdown
+{{</* echarts */>}}
+// echarts option in formats such as JSON, YAML, or TOML here
+{{</* /echarts */>}}
+```
+
 > [!TIP] 推荐使用 **代码块扩展语法** ` ```echarts` 代替 shortcode。
 > 你可以在 [图表支持 - ECharts][diagrams-support-echarts] 页面找到更多的例子和用法信息。
 

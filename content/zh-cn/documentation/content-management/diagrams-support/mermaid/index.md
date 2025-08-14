@@ -36,15 +36,43 @@ resources:
 > [!TIP]
 > 你也可以直接在 Markdown 文件中使用 [`mermaid` 短代码][sc-mermaid]。
 
-### CDN
+### 配置 {#configuration}
 
-你可使用 `params.mermaid` 在配置文件中指定你想使用的 Mermaid 和 ZenUML 版本。例如：
+你可以在 `hugo.toml` 文件中全局配置 Mermaid。
+
+```toml
+[params]
+  [params.mermaid]
+    cdn = ""
+    zenuml = ""
+    themes = ["default", "dark"]
+    # optional values: ["strict", "loose", "antiscript", "sandbox"]
+    securityLevel = "loose"
+    # optional values: ["classic", "handDrawn"]
+    look = "handDrawn"
+    fontFamily = ""
+```
+
+CDN
+: 你可使用 `params.mermaid` 在配置文件中指定你想使用的 Mermaid 和 ZenUML 版本。例如：
 
 ```toml
 [params]
   [params.mermaid]
     cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
     zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
+```
+
+> [!WARNING]
+> 只有设置了 ZenUML CDN，才能使用 ZenUML 功能。
+
+look
+: Mermaid 图表在 FixIt 主题中默认是手绘样式，如果你更喜欢经典样式，可以在配置文件中修改：
+
+```toml
+[params]
+  [params.mermaid]
+    look = "classic"
 ```
 
 ### 主题 {#themes}
@@ -59,9 +87,8 @@ resources:
 
 请前往 [Theme Configuration | Mermaid][mermaid-theming] 页面，了解有关动态和集成主题配置的更多信息。
 
-#### 站点范围主题 {#site-wide-themes}
-
-你可以通过 `hugo.toml` 中的 `params.mermaid.themes` 参数全局配置 Mermaid 主题。
+站点范围主题
+: 你可以通过 `hugo.toml` 中的 `params.mermaid.themes` 参数全局配置 Mermaid 主题。
 
 ```toml
 [params]
@@ -69,9 +96,8 @@ resources:
     themes = ["default", "dark"]
 ```
 
-#### 图表特定主题 {#diagram-specific-themes}
-
-要自定义单个图表的主题，请使用 `init` 指令。
+图表特定主题
+: 要自定义单个图表的主题，请使用 `init` 指令。
 
 以下是使用 `init` 指令将主题设置为 `forest` 的示例代码：
 

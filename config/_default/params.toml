@@ -489,6 +489,7 @@ disableThemeInject = false
 
 # FixIt 0.2.15 | NEW Mermaid config
 # FixIt 0.2.15 | 新增 Mermaid 配置
+# See http://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/
 [mermaid]
   # FixIt 0.4.0 | NEW Mermaid ESM module CDN source
   # default is https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs
@@ -500,6 +501,17 @@ disableThemeInject = false
   zenuml = "https://unpkg.com/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
   # For values, see https://mermaid.js.org/config/theming.html#available-themes
   themes = ["default", "dark"]
+  # FixIt 0.4.0 | NEW the security level for Mermaid diagrams
+  # FixIt 0.4.0 | 新增 Mermaid 图表的安全级别
+  # optional value: ["strict", "loose", "antiscript", "sandbox"];
+  securityLevel = "loose"
+  # FixIt 0.4.0 | NEW the appearance style for Mermaid diagrams
+  # FixIt 0.4.0 | 新增 Mermaid 图表的外观样式
+  # optional value: ["classic", "handDrawn"]
+  look = "handDrawn"
+  # FixIt 0.4.0 | NEW the font family for Mermaid diagrams
+  # FixIt 0.4.0 | 新增 Mermaid 图表的字体
+  fontFamily = ""
 
 # FixIt 0.3.13 | NEW Admonitions custom config
 # FixIt 0.3.13 | 新增 自定义 Admonition 配置

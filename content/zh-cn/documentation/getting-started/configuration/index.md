@@ -1040,7 +1040,7 @@ name
 
 {{< version 0.4.0 changed >}}
 
-`map` Mermaid 配置。
+`map` Mermaid 配置，详见 [图表支持 - Mermaid][diagrams-support-mermaid]。
 
 ```toml
 [params]
@@ -1048,6 +1048,11 @@ name
     cdn = ""
     zenuml = ""
     themes = ["default", "dark"]
+    # optional values: ["strict", "loose", "antiscript", "sandbox"]
+    securityLevel = "loose"
+    # optional values: ["classic", "handDrawn"]
+    look = "handDrawn"
+    fontFamily = ""
 ```
 
 cdn
@@ -1060,6 +1065,15 @@ zenuml
 
 themes
 : `string array(2)` Mermaid 主题，详见 [Mermaid Themes][mermaid-themes]。
+
+securityLevel
+: `string` {{< version 0.4.0 >}} Mermaid 图表的安全级别。默认：`loose`。
+
+look
+: `string` {{< version 0.4.0 >}} Mermaid 图表的外观样式。默认：`handDrawn`。
+
+fontFamily
+: `string` {{< version 0.4.0 >}} Mermaid 图表的字体。
 
 ### pangu
 
@@ -1981,6 +1995,7 @@ c4u
 [bing-cse]: https://www.customsearch.ai/
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
+[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
 [vercount]: https://vercount.one/

@@ -21,6 +21,38 @@ menu:
 ---
 <!-- markdownlint-disable-file MD045 -->
 
+## Mermaid
+
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+
+ZenUML 测试：
+
+```mermaid
+zenuml
+    title Demo
+    Alice->John: Hello John, how are you?
+    John->Alice: Great!
+    Alice->John: See you later!
+```
+
 ## Alerts
 
 哈哈哈哈哈哈 nformation that users should take into accou

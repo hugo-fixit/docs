@@ -1037,7 +1037,7 @@ name
 
 {{< version 0.4.0 changed >}}
 
-`map` Mermaid Configuration.
+`map` Mermaid Configuration, see [Diagrams Support - Mermaid][diagrams-support-mermaid].
 
 ```toml
 [params]
@@ -1045,6 +1045,11 @@ name
     cdn = ""
     zenuml = ""
     themes = ["default", "dark"]
+    # optional values: ["strict", "loose", "antiscript", "sandbox"]
+    securityLevel = "loose"
+    # optional values: ["classic", "handDrawn"]
+    look = "handDrawn"
+    fontFamily = ""
 ```
 
 cdn
@@ -1057,6 +1062,15 @@ Default is empty, you can set it to a CDN source to enable ZenUML support.
 
 themes
 : `string array(2)` Themes for Mermaid. See [Mermaid Themes][mermaid-themes] for available values.
+
+securityLevel
+: `string` {{< version 0.4.0 >}} The security level for Mermaid diagrams. Default is `loose`.
+
+look
+: `string` {{< version 0.4.0 >}} The appearance style for Mermaid diagrams. Default is `handDrawn`.
+
+fontFamily
+: `string` {{< version 0.4.0 >}} The font family for Mermaid diagrams.
 
 ### pangu
 
@@ -1982,6 +1996,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [bing-cse]: https://www.customsearch.ai/
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
+[diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
 [mermaid-themes]: https://mermaid.js.org/config/theming.html#available-themes
 [watermark]: https://github.com/Lruihao/watermark#readme
 [vercount]: https://vercount.one/

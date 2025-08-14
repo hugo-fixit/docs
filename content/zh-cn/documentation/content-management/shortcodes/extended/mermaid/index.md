@@ -21,7 +21,7 @@ collections:
   - Extended Shortcodes
 ---
 
-{{< version 0.2.15 changed >}}
+{{< version 0.4.0 changed >}}
 
 `mermaid` shortcode 使用 [Mermaid][mermaid] 库提供绘制图表和流程图的功能。
 
@@ -31,14 +31,23 @@ collections:
 
 ## 用法
 
+### 语法 {#syntax}
+
 只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可。
+
+```markdown
+{{</* mermaid */>}}
+// mermaid diagram code here
+{{</* /mermaid */>}}
+```
 
 > [!TIP] 推荐使用 **代码块扩展语法** ` ```mermaid` 代替 shortcode。
 > 你可以在 [图表支持 - Mermaid][diagrams-support-mermaid] 页面找到更多的例子和用法信息。
 
-### CDN
+### 配置 {#configuration}
 
-你可使用 `params.mermaid` 在配置文件中指定你想使用的 Mermaid 和 ZenUML 版本。例如：
+CDN
+: 你可使用 `params.mermaid` 在配置文件中指定你想使用的 Mermaid 和 ZenUML 版本。例如：
 
 ```toml
 [params]
@@ -47,7 +56,19 @@ collections:
     zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
 ```
 
-### 主题
+> [!TIP]
+> 只有设置了 ZenUML CDN，才能使用 ZenUML 功能。
+
+look
+: Mermaid 图表在 FixIt 主题中默认是手绘样式，如果你更喜欢经典样式，可以在配置文件中修改：
+
+```toml
+[params]
+  [params.mermaid]
+    look = "classic"
+```
+
+### 主题 {#themes}
 
 以下是可用的主题：
 
@@ -59,9 +80,8 @@ collections:
 
 请前往 [Theme Configuration | Mermaid][mermaid-theming] 页面，了解有关动态和集成主题配置的更多信息。
 
-#### 站点范围主题
-
-你可以通过 `hugo.toml` 中的 `params.mermaid.themes` 参数全局配置 Mermaid 主题。
+站点范围主题
+: 你可以通过 `hugo.toml` 中的 `params.mermaid.themes` 参数全局配置 Mermaid 主题。
 
 ```toml
 [params]
@@ -69,9 +89,8 @@ collections:
     themes = ["default", "dark"]
 ```
 
-#### 图表特定主题
-
-要自定义单个图表的主题，请使用 `init` 指令。
+图表特定主题
+: 要自定义单个图表的主题，请使用 `init` 指令。
 
 以下是使用 `init` 指令将主题设置为 `forest` 的示例代码：
 

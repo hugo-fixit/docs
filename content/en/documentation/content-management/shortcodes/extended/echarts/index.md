@@ -35,6 +35,12 @@ The basic chart types ECharts supports include [line series][line], [bar series]
 
 Simply insert the ECharts option in formats such as `JSON`, `YAML`, or `TOML` in the `echarts` shortcode.
 
+```markdown
+{{</* echarts */>}}
+// echarts option in formats such as JSON, YAML, or TOML here
+{{</* /echarts */>}}
+```
+
 > [!TIP] The **Code Fences extended syntax** ` ```echarts` is recommended over the shortcode.
 > You can find more examples and usage information on the [Diagrams Support - ECharts][diagrams-support-echarts] page.
 
