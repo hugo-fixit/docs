@@ -28,7 +28,7 @@ mindmap
   root((mindmap))
     Origins
       Long history
-      ::icon(fa-solid fa-book)
+      ::icon(fa fa-book)
       Popularisation
         British popular psychology author Tony Buzan
     Research
@@ -41,16 +41,6 @@ mindmap
     Tools
       Pen and paper
       Mermaid
-```
-
-ZenUML 测试：
-
-```mermaid
-zenuml
-    title Demo
-    Alice->John: Hello John, how are you?
-    John->Alice: Great!
-    Alice->John: See you later!
 ```
 
 ## Alerts

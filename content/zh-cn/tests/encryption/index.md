@@ -62,12 +62,17 @@ admonition 测试
 
 ## 公式
 
-{{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+行内公式：
 
-{{< raw >}}
+$c = \pm\sqrt{a^2 + b^2}$ 和 \(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\)
+
 公式块：
-\[ a=b+c \\ d+e=f \]
-{{< /raw >}}
+
+$$
+\begin{equation*}
+  \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
+\end{equation*}
+$$
 
 ## mermaid
 
@@ -179,12 +184,17 @@ This is a _paragraph_ with **typing animation** based on [TypeIt](https://typeit
 | --- | --- |
 | 1   | 2   |
 
-{{< raw >}}行内公式：\(\mathbf{E}=\sum_{i} \mathbf{E}_{i}=\mathbf{E}_{1}+\mathbf{E}_{2}+\mathbf{E}_{3}+\cdots\){{< /raw >}}
+行内公式：
 
-{{< raw >}}
+$c = \pm\sqrt{a^2 + b^2}$ 和 \(f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi\)
+
 公式块：
-\[ a=b+c \\ d+e=f \]
-{{< /raw >}}
+
+$$
+\begin{equation*}
+  \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f}
+\end{equation*}
+$$
 
 ```mermaid
 graph TD;
