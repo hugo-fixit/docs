@@ -43,16 +43,6 @@ mindmap
       Mermaid
 ```
 
-ZenUML 测试：
-
-```mermaid
-zenuml
-    title Demo
-    Alice->John: Hello John, how are you?
-    John->Alice: Great!
-    Alice->John: See you later!
-```
-
 ## Alerts
 
 哈哈哈哈哈哈 nformation that users should take into accou
