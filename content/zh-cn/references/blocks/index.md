@@ -39,7 +39,7 @@ cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 
 | 块名称                        | 描述                 | 位置                                    |
 | :---------------------------- | :------------------- | :-------------------------------------- |
-| `custom-head`                 | 头部自定义块         | `layouts/_default/baseof.html`          |
+| `custom-head`                 | 头部自定义块         | `layouts/baseof.html`                   |
 | `custom-menu:desktop`         | 桌面菜单自定义块     | `layouts/_partials/header.html`         |
 | `custom-menu:mobile`          | 移动菜单自定义块     | `layouts/_partials/header.html`         |
 | `custom-profile`              | 首页自定义块         | `layouts/_partials/home/profile.html`   |

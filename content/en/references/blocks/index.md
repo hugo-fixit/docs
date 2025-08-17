@@ -39,7 +39,7 @@ You can implement these blocks through `define`.
 
 | Block Name                    | Description                      | Location                                |
 | :---------------------------- | :------------------------------- | :-------------------------------------- |
-| `custom-head`                 | Head custom block                | `layouts/_default/baseof.html`          |
+| `custom-head`                 | Head custom block                | `layouts/baseof.html`                   |
 | `custom-menu:desktop`         | Desktop menu custom block        | `layouts/_partials/header.html`         |
 | `custom-menu:mobile`          | Mobile menu custom block         | `layouts/_partials/header.html`         |
 | `custom-profile`              | Profile custom block             | `layouts/_partials/home/profile.html`   |
