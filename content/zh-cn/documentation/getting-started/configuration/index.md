@@ -1662,6 +1662,8 @@ c4u
       ordered = false
       startLevel = 2
       endLevel = 6
+      # {{< version 0.4.0 >}} 是否降低内容中的 H1 标题级别
+      decreaseH1 = false
     # {{< version 0.2.13 >}} 在文章开头显示提示信息，提醒读者文章内容可能过时
     [params.page.expirationReminder]
       enable = false

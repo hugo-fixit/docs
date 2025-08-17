@@ -139,6 +139,31 @@ You can nest alerts in multiple levels.
 
 The extended alert syntax supports **13** types of [admonition][admonition-types] banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
 
+## Color Preview
+
+{{< version 0.4.0 >}}
+
+In Content, you can call out colors within a sentence by using backticks. A supported color model within backticks will display a visualization of the color.
+
+```markdown
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+```
+
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+
+Here are the currently supported color models.
+
+| Color | Syntax             | Example                    | Output               |
+| ----- | ------------------ | -------------------------- | -------------------- |
+| HEX   | `` `#RRGGBB` ``    | `` `#0969DA` ``            | `#0969DA`            |
+| RGB   | `` `rgb(R,G,B)` `` | `` `rgb(9, 105, 218)` ``   | `rgb(9, 105, 218)`   |
+| HSL   | `` `hsl(H,S,L)` `` | `` `hsl(212, 92%, 45%)` `` | `hsl(212, 92%, 45%)` |
+
+> [!NOTE]
+>
+> - A supported color model cannot have any leading or trailing spaces within the backticks.
+> - The visualization of the color is compatible with GitHub [Supported color models][supported-color-models].
+
 ## Task lists {#task-lists}
 
 {{< version 0.3.14 changed >}}
@@ -834,6 +859,7 @@ This part is shown in the [Timeline Support][timeline-support] page.
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [admonition-types]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#supported-types" >}}
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
+[supported-color-models]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#supported-color-models
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/

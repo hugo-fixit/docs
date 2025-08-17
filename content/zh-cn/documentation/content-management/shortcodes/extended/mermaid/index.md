@@ -41,7 +41,7 @@ collections:
 {{</* /mermaid */>}}
 ```
 
-> [!TIP] 推荐使用 **代码块扩展语法** ` ```mermaid` 代替 shortcode。
+> [!TIP] 推荐使用 **代码块扩展语法** `` ```mermaid `` 代替 shortcode。
 > 你可以在 [图表支持 - Mermaid][diagrams-support-mermaid] 页面找到更多的例子和用法信息。
 
 ### 配置 {#configuration}

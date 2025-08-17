@@ -41,7 +41,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 {{</* /echarts */>}}
 ```
 
-> [!TIP] 推荐使用 **代码块扩展语法** ` ```echarts` 代替 shortcode。
+> [!TIP] 推荐使用 **代码块扩展语法** `` ```echarts `` 代替 shortcode。
 > 你可以在 [图表支持 - ECharts][diagrams-support-echarts] 页面找到更多的例子和用法信息。
 
 ### JSON 格式

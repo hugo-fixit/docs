@@ -140,6 +140,31 @@ collections:
 
 Alert 扩展语法支持 **13** 种类型的 [警示横幅][admonition-types]，除非你 [自定义 Admonition][custom-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
 
+## 颜色预览 {#color-preview}
+
+{{< version 0.4.0 >}}
+
+在文章内容中，可以使用反引号在句子中标注颜色。反引号内支持的颜色模型将显示颜色的可视化效果。
+
+```markdown
+对于 `Light` 模式，背景色为`#ffffff`，对于 `Dark` 模式，背景颜色为`#000000`。
+```
+
+对于 `Light` 模式，背景色为`#ffffff`，对于 `Dark` 模式，背景颜色为`#000000`。
+
+下面是当前支持的颜色模型。
+
+| Color | 语法               | 示例                       | 输出                 |
+| ----- | ------------------ | -------------------------- | -------------------- |
+| HEX   | `` `#RRGGBB` ``    | `` `#0969DA` ``            | `#0969DA`            |
+| RGB   | `` `rgb(R,G,B)` `` | `` `rgb(9, 105, 218)` ``   | `rgb(9, 105, 218)`   |
+| HSL   | `` `hsl(H,S,L)` `` | `` `hsl(212, 92%, 45%)` `` | `hsl(212, 92%, 45%)` |
+
+> [!NOTE]
+>
+> - 支持的颜色模型在反引号内不能有任何前导或尾随空格。
+> - 颜色的可视化效果兼容 GitHub [支持的颜色模型][supported-color-models]。
+
 ## 任务列表 {#task-lists}
 
 {{< version 0.3.14 changed >}}
@@ -834,6 +859,7 @@ console.log('hello FixIt!');
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
 [admonition-types]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#supported-types" >}}
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
+[supported-color-models]: https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#supported-color-models
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}
 [emoji-support]: {{< relref path="/guides/emoji-support" >}}
 [katex]: https://katex.org/

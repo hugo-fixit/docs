@@ -41,7 +41,7 @@ Just insert your mermaid code in the `mermaid` shortcode and that’s it.
 {{</* /mermaid */>}}
 ```
 
-> [!TIP] The **Code Fences extended syntax** ` ```mermaid` is recommended over the shortcode.
+> [!TIP] The **Code Fences extended syntax** `` ```mermaid `` is recommended over the shortcode.
 > You can find more examples and usage information on the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
 
 ### Configuration

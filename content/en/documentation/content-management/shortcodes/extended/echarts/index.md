@@ -41,7 +41,7 @@ Simply insert the ECharts option in formats such as `JSON`, `YAML`, or `TOML` in
 {{</* /echarts */>}}
 ```
 
-> [!TIP] The **Code Fences extended syntax** ` ```echarts` is recommended over the shortcode.
+> [!TIP] The **Code Fences extended syntax** `` ```echarts `` is recommended over the shortcode.
 > You can find more examples and usage information on the [Diagrams Support - ECharts][diagrams-support-echarts] page.
 
 ### JSON Format

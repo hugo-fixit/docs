@@ -1663,6 +1663,8 @@ c4u
       ordered = false
       startLevel = 2
       endLevel = 6
+      # {{< version 0.4.0 >}} whether to decrease the H1 heading level in content
+      decreaseH1 = false
     # {{< version 0.2.13 >}} Display a message at the beginning of an article to warn the reader that its content might be expired
     [params.page.expirationReminder]
       enable = false
