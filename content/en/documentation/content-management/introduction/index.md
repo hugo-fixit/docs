@@ -45,12 +45,15 @@ There are three ways to reference local resources such as **images** and **music
 
 The **priority** of references is also in the above order.
 
-{{< admonition tip "Powerful Tools" false >}}
-
-- [CoverView](https://coverview.lruihao.cn/)
-- [apple-devices-preview](https://lruihao.github.io/vue-el-demo/#/apple-devices-preview)
-
-{{< /admonition >}}
+> [!TIP]
+> It is recommended to use **[CoverView][coverview]** to generate beautiful cover images for your articles.
+>
+> - ✨ **Online Tool**: No software installation required, works in your browser
+> - 🎨 **Multiple Templates**: Various preset templates and customization options
+> - 📐 **Theme Compatible**: Perfectly adapted to FixIt theme design style
+> - 🚀 **Quick Generation**: One-click download and quick cover generation
+>
+> Project: [Lruihao/CoverView][coverview-repo]
 
 ## Templates {#templates}
 
@@ -524,6 +527,8 @@ With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automati
 <!-- markdownlint-disable-file reference-links-images -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
+[coverview]: https://coverview.lruihao.cn/
+[coverview-repo]: https://github.com/Lruihao/CoverView
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/

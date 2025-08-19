@@ -45,12 +45,15 @@ lightgallery: true
 
 引用的**优先级**符合以上的顺序。
 
-{{< admonition tip "封面图生成工具" false >}}
-
-- [CoverView](https://coverview.lruihao.cn/)
-- [apple-devices-preview](https://lruihao.github.io/vue-el-demo/#/apple-devices-preview)
-
-{{< /admonition >}}
+> [!TIP]
+> 推荐使用 **[CoverView][coverview]** 来为你的文章生成精美的封面图片。
+>
+> - ✨ **在线工具**：无需安装软件，在浏览器中即可使用
+> - 🎨 **多种模板**：提供多种预设模板和自定义选项
+> - 📐 **适配主题**：完美适配 FixIt 主题的设计风格
+> - 🚀 **快速生成**：一键下载快速生成封面
+>
+> 项目地址：[Lruihao/CoverView][coverview-repo]
 
 ## 页面模板 {#templates}
 
@@ -524,6 +527,8 @@ defaultContentLanguage = "zh-cn"
 <!-- markdownlint-disable-file reference-links-images -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
+[coverview]: https://coverview.lruihao.cn/
+[coverview-repo]: https://github.com/Lruihao/CoverView
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /zh-cn/ecosystem/hugo-fixit/component-projects/
