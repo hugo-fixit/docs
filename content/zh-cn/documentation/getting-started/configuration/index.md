@@ -358,6 +358,22 @@ auto
 
 `bool` 是否显示纯文本摘要，默认：`false`。
 
+### enableTranslationMerge
+
+{{< version 0.4.0 >}}
+
+`bool` 是否启用从其他语言合并缺失翻译的功能，默认：`false`。
+
+当设置为 `true` 时，缺失的翻译将被合并并显示。推荐用于多语言站点。
+
+| 设置    | 多语言站点  | 单语言站点    | 性能影响           |
+| :------ | :---------- | :------------ | :----------------- |
+| `true`  | ✅ 推荐     | ⚠️ 性能损失 | 需要额外的合并计算 |
+| `false` | ❌ 功能受限 | ✅ 推荐       | 无额外性能开销     |
+
+> [!NOTE]
+> 这不会创建新的页面，如果你需要空的占位页面，你可能需要 [shortcode-missing-translation][sc-missing-translation]。
+
 ### disableThemeInject
 
 {{< version 0.2.14 >}}
@@ -2008,5 +2024,6 @@ c4u
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
-[hugo-output-formats]: https://gohugo.io/templates/output-formats/
+[hugo-output-formats]: https://gohugo.io/configuration/output-formats/
 [configure-taxonomies]: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
+[sc-missing-translation]: https://github.com/hugo-fixit/shortcode-missing-translation

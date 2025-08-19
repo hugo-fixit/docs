@@ -356,6 +356,22 @@ auto
 
 `bool` Whether to show summary in plain text. Default is `false`.
 
+### enableTranslationMerge
+
+{{< version 0.4.0 >}}
+
+`bool` Whether to enable merging missing translations from other languages. Default is `false`.
+
+When set to `true`, missing translations will be merged and displayed. Recommended for multi-language sites.
+
+| Setting | Multi-language Sites | Single-language Sites | Performance Impact          |
+| :------ | :------------------- | :-------------------- | :-------------------------- |
+| `true`  | ✅ Recommended       | ⚠️ Performance Loss | Additional merging overhead |
+| `false` | ❌ Limited Function  | ✅ Recommended        | No additional overhead      |
+
+> [!NOTE]
+> This won't create new pages, if you need empty placeholder pages, you might need [shortcode-missing-translation][sc-missing-translation].
+
 ### disableThemeInject
 
 {{< version 0.2.14 >}}
@@ -2009,5 +2025,6 @@ They're easily created via <https://realfavicongenerator.net/>.
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
-[hugo-output-formats]: https://gohugo.io/templates/output-formats/
+[hugo-output-formats]: https://gohugo.io/configuration/output-formats/
 [configure-taxonomies]: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
+[sc-missing-translation]: https://github.com/hugo-fixit/shortcode-missing-translation
