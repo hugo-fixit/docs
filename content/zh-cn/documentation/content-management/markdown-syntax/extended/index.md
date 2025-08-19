@@ -835,21 +835,25 @@ console.log('hello FixIt!');
 
 ## 代码块扩展语法
 
-### GoAT
+**FixIt** 主题扩展了标准 Markdown 代码围栏，支持高级功能，包括图表、图形和交互式可视化。这些扩展的代码围栏使你能够直接在 Markdown 文件中创建丰富的动态内容。
 
-这部分内容在 [图表支持 - GoAT][diagrams-support-goat] 页面中介绍。
+扩展的代码围栏使用与标准 Markdown 相同的三重反引号语法，但使用特定的语言标识符来触发特殊的渲染引擎：
 
-### Mermaid
+````markdown
+```language
+// 在这里输入特定语言的内容
+// 支持的语言包括：goat, mermaid, echarts, timeline
+```
+````
 
-这部分内容在 [图表支持 - Mermaid][diagrams-support-mermaid] 页面中介绍。
+每种扩展代码围栏类型都提供独特的功能：
 
-### ECharts
+- **GoAT**：ASCII 艺术图表，渲染为可缩放的矢量图形（[了解更多][diagrams-support-goat]）
+- **Mermaid**：专业图表，包括流程图、时序图等（[了解更多][diagrams-support-mermaid]）
+- **ECharts**：交互式数据可视化图表和图形（[了解更多][diagrams-support-echarts]）
+- **Timeline**：具有丰富格式的时间线事件显示（[了解更多][timeline-support]）
 
-这部分内容在 [图表支持 - ECharts][diagrams-support-echarts] 页面中介绍。
-
-### Timeline
-
-这部分内容在 [时间线支持][timeline-support] 页面中介绍。
+这些功能在 FixIt 主题中自动启用，无需额外配置。只需在代码围栏中使用相应的语言标识符，内容就会使用相应的引擎进行渲染。
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 MD059 -->

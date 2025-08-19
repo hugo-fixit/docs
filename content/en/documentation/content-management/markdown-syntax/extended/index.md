@@ -835,21 +835,25 @@ console.log('hello FixIt!');
 
 ## Code Fences Extended
 
-### GoAT
+**FixIt** theme extends the standard Markdown code fences to support advanced features including diagrams, charts, and interactive visualizations. These extended code fences enable you to create rich, dynamic content directly within your Markdown files.
 
-This part is shown in the [Diagrams Support - GoAT][diagrams-support-goat] page.
+The extended code fences use the same triple backtick syntax as standard Markdown, but with specific language identifiers that trigger special rendering engines:
 
-### Mermaid
+````markdown
+```language
+// Enter content specific to the language here
+// Supported languages include: goat, mermaid, echarts, timeline
+```
+````
 
-This part is shown in the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
+Each extended code fence type offers unique capabilities:
 
-### ECharts
+- **GoAT**: ASCII art diagrams that render as scalable vector graphics ([learn more][diagrams-support-goat])
+- **Mermaid**: Professional diagrams including flowcharts, sequence diagrams, and more ([learn more][diagrams-support-mermaid])
+- **ECharts**: Interactive data visualization charts and graphs ([learn more][diagrams-support-echarts])
+- **Timeline**: Chronological event displays with rich formatting ([learn more][timeline-support])
 
-This part is shown in the [Diagrams Support - ECharts][diagrams-support-echarts] page.
-
-### Timeline
-
-This part is shown in the [Timeline Support][timeline-support] page.
+These features are automatically enabled in FixIt theme and require no additional configuration. Simply use the appropriate language identifier in your code fence, and the content will be rendered using the corresponding engine.
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 MD059 -->
