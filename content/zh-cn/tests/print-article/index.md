@@ -391,3 +391,5 @@ console.log(1n > 2n) // false
 ```
 
 _学无止境，与未来的自己共勉_
+
+<!-- markdownlint-disable-file MD036 -->

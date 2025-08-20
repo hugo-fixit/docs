@@ -17,6 +17,8 @@ menu:
       icon: fa-solid fa-vial text-success
 ---
 
+<!-- markdownlint-disable-file MD033 -->
+
 normal content
 
 > normal blockquote content

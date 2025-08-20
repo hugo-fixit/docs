@@ -97,20 +97,26 @@ look
 ```
 
 图表特定主题
-: 要自定义单个图表的主题，请使用 `init` 指令。
+: 要自定义单个图表的主题，请使用 frontmatter 配置。
 
-以下是使用 `init` 指令将主题设置为 `forest` 的示例代码：
+以下是使用 frontmatter 配置将主题设置为 `forest` 的示例代码：
 
 ````markdown
 ```mermaid
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 ```
 ````
 
 ```mermaid
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 ```
@@ -444,7 +450,7 @@ type: simulation
 test_entity - satisfies -> test_req
 ```
 
-## Git 图 {#gitgraph-diagram}
+## Git 图 {#git-graph}
 
 [Git 图][mermaid-gitgraph]是 git 提交和 git 操作（命令）在各个分支上的图形表示。
 

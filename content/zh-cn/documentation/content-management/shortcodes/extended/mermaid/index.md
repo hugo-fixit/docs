@@ -90,20 +90,26 @@ look
 ```
 
 图表特定主题
-: 要自定义单个图表的主题，请使用 `init` 指令。
+: 要自定义单个图表的主题，请使用 frontmatter 配置。
 
-以下是使用 `init` 指令将主题设置为 `forest` 的示例代码：
+以下是使用 frontmatter 配置将主题设置为 `forest` 的示例代码：
 
 ```markdown
 {{</* mermaid */>}}
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 {{</* /mermaid */>}}
 ```
 
 {{< mermaid >}}
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 {{< /mermaid >}}
@@ -441,7 +447,7 @@ gitGraph
 {{< /mermaid >}}
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file MD003 MD022 MD049 reference-links-images -->
 [mermaid]: https://mermaid.js.org/
 [theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
 [theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js

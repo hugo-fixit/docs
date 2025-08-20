@@ -105,20 +105,26 @@ Site-wide Themes
 ```
 
 Diagram-specific Themes
-: To customize the theme of an individual diagram, use the `init` directive.
+: To customize the theme of an individual diagram, use frontmatter config.
 
-Example of `init` directive setting the `theme` to `forest`:
+Example of frontmatter config setting the `theme` to `forest`:
 
 ```markdown
 {{</* mermaid */>}}
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 {{</* /mermaid */>}}
 ```
 
 {{< mermaid >}}
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 {{< /mermaid >}}
@@ -456,7 +462,7 @@ gitGraph
 {{< /mermaid >}}
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD049 reference-links-images -->
+<!-- markdownlint-disable-file MD003 MD022 MD049 reference-links-images -->
 [mermaid]: https://mermaid.js.org/
 [theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
 [theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js

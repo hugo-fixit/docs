@@ -97,20 +97,26 @@ Site-wide Themes
 ```
 
 Diagram-specific Themes
-: To customize the theme of an individual diagram, use the `init` directive.
+: To customize the theme of an individual diagram, use frontmatter config.
 
-Example of `init` directive setting the `theme` to `forest`:
+Example of frontmatter config setting the `theme` to `forest`:
 
 ````markdown
 ```mermaid
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 ```
 ````
 
 ```mermaid
-%%{init: {'theme':'forest'}}%%
+---
+config:
+  theme: 'forest'
+---
   graph TD
     a --> b
 ```
@@ -439,7 +445,7 @@ type: simulation
 test_entity - satisfies -> test_req
 ```
 
-## Gitgraph Diagram
+## Git Graph
 
 A [Git Graph][mermaid-gitgraph] is a pictorial representation of git commits and git actions(commands) on various branches.
 

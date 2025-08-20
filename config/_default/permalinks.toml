@@ -3,6 +3,10 @@
 # See: https://gohugo.io/content-management/urls/#permalinks
 # -------------------------------------------------------------------------------------
 
-# posts = ":year/:month/:filename"
-documentation = ":sections[0:]/:slugorcontentbasename"
-guides = "guides/:slugorcontentbasename"
+documentation = "/:sections[0:]/:slugorcontentbasename"
+guides = "/guides/:slugorcontentbasename"
+
+# [page]
+# [section]
+# [taxonomy]
+# [term]
