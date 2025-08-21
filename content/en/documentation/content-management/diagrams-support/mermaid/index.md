@@ -51,6 +51,8 @@ You can configure Mermaid globally in your `hugo.toml` file.
     # optional values: ["classic", "handDrawn"]
     look = "handDrawn"
     fontFamily = ""
+    layoutLoaders = []
+    layout = "dagre"
 ```
 
 CDN
@@ -74,6 +76,41 @@ look
   [params.mermaid]
     look = "classic"
 ```
+
+layoutLoaders
+: Layout loaders allow you to load additional layout engines from ESM module CDN sources. This is particularly useful for enabling advanced layout algorithms like ELK (Eclipse Layout Kernel). You can specify an array of CDN URLs for layout modules:
+
+```toml
+[params]
+  [params.mermaid]
+    layoutLoaders = [
+      "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs"
+    ]
+```
+
+> [!NOTE]
+> When `layoutLoaders` is configured with the ELK layout engine, additional layout options become available: `"elk"`, `"elk.layered"`, `"elk.stress"`, `"elk.force"`, and `"elk.mrtree"`.
+
+layout
+: The default layout algorithm for rendering diagrams. The default value is `"dagre"`, which works well for most diagram types. When you have configured `layoutLoaders` with additional layout engines, you can choose from extended layout options:
+
+```toml
+[params]
+  [params.mermaid]
+    layout = "elk.layered"  # Requires ELK layout loader to be configured
+```
+
+Available layout algorithms:
+
+- `"dagre"` (default) - The standard Dagre layout algorithm
+- `"elk"` - Basic ELK layout, equivalent to `"elk.layered"` (requires ELK layout loader)
+- `"elk.layered"` - ELK layered layout algorithm (requires ELK layout loader)
+- `"elk.stress"` - ELK stress layout algorithm (requires ELK layout loader)
+- `"elk.force"` - ELK force-directed layout algorithm (requires ELK layout loader)
+- `"elk.mrtree"` - ELK multi-root tree layout algorithm (requires ELK layout loader)
+
+> [!WARNING]
+> ELK layout algorithms require `layoutLoaders` to be configured first. Using ELK layouts without the corresponding layout loader will fall back to the default Dagre layout.
 
 ### Themes
 

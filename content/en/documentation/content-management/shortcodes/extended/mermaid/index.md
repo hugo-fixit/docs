@@ -31,6 +31,9 @@ The `mermaid` shortcode supports diagrams in Hugo with [Mermaid][mermaid] librar
 
 ## Usage
 
+> [!TIP] The **Code Fences extended syntax** `` ```mermaid `` is recommended over the shortcode.
+> You can find more examples and usage information on the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
+
 ### Syntax
 
 Just insert your mermaid code in the `mermaid` shortcode and that’s it.
@@ -41,93 +44,9 @@ Just insert your mermaid code in the `mermaid` shortcode and that’s it.
 {{</* /mermaid */>}}
 ```
 
-> [!TIP] The **Code Fences extended syntax** `` ```mermaid `` is recommended over the shortcode.
-> You can find more examples and usage information on the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
-
 ### Configuration
 
-You can configure Mermaid globally in your `hugo.toml` file.
-
-```toml
-[params]
-  [params.mermaid]
-    cdn = ""
-    zenuml = ""
-    themes = ["default", "dark"]
-    # optional values: ["strict", "loose", "antiscript", "sandbox"]
-    securityLevel = "loose"
-    # optional values: ["classic", "handDrawn"]
-    look = "handDrawn"
-    fontFamily = ""
-```
-
-CDN
-: You can use `params.mermaid` in your configuration file to specify the version of Mermaid and ZenUML you want to use. For example:
-
-```toml
-[params]
-  [params.mermaid]
-    cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
-    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
-```
-
-> [!WARNING]
-> The ZenUML function can only be used if ZenUML CDN is set.
-
-look
-: Mermaid diagrams in the FixIt theme are set to hand-drawn style by default. If you prefer the classic style, you can change it in your configuration file:
-
-```toml
-[params]
-  [params.mermaid]
-    look = "classic"
-```
-
-### Themes
-
-Available themes are as follows:
-
-1. [**default**][theme-default] - This is the default theme for all diagrams.
-2. [**neutral**][theme-neutral] - This theme is great for black and white documents that will be printed.
-3. [**dark**][theme-dark] - This theme goes well with dark-colored elements or dark-mode.
-4. [**forest**][theme-forest] - This theme contains shades of green.
-5. [**base**][theme-base] - This is the only theme that can be modified. Use this theme as the base for customizations.
-
-Head to the [Theme Configuration | Mermaid][mermaid-theming] page to learn more about dynamic and integrated theme configuration.
-
-Site-wide Themes
-: You can configure mermaid themes globally in `hugo.toml` via the `params.mermaid.themes` parameter.
-
-```toml
-[params]
-  [params.mermaid]
-    themes = ["default", "dark"]
-```
-
-Diagram-specific Themes
-: To customize the theme of an individual diagram, use frontmatter config.
-
-Example of frontmatter config setting the `theme` to `forest`:
-
-```markdown
-{{</* mermaid */>}}
----
-config:
-  theme: 'forest'
----
-  graph TD
-    a --> b
-{{</* /mermaid */>}}
-```
-
-{{< mermaid >}}
----
-config:
-  theme: 'forest'
----
-  graph TD
-    a --> b
-{{< /mermaid >}}
+For detailed configuration options and themes, please refer to the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.
 
 ## Flowchart {#flowchart}
 
@@ -464,10 +383,4 @@ gitGraph
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD003 MD022 MD049 reference-links-images -->
 [mermaid]: https://mermaid.js.org/
-[theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
-[theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
-[theme-dark]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-dark.js
-[theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
-[theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
-[mermaid-theming]: https://mermaid.js.org/config/theming.html
 [diagrams-support-mermaid]: {{< relref "/documentation/content-management/diagrams-support/mermaid" >}}

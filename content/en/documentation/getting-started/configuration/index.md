@@ -1066,6 +1066,8 @@ name
     # optional values: ["classic", "handDrawn"]
     look = "handDrawn"
     fontFamily = ""
+    layoutLoaders = []
+    layout = "dagre"
 ```
 
 cdn
@@ -1087,6 +1089,12 @@ look
 
 fontFamily
 : `string` {{< version 0.4.0 >}} The font family for Mermaid diagrams.
+
+layoutLoaders
+: `string array` {{< version 0.4.0 >}} The layout loaders for Mermaid diagrams. Default is empty.
+
+layout
+: `string` {{< version 0.4.0 >}} The default layout algorithm for rendering diagrams. Default is `dagre`.
 
 ### pangu
 

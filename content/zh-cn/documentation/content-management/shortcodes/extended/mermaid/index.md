@@ -31,6 +31,9 @@ collections:
 
 ## 用法
 
+> [!TIP] 推荐使用 **代码块扩展语法** `` ```mermaid `` 代替 shortcode。
+> 你可以在 [图表支持 - Mermaid][diagrams-support-mermaid] 页面找到更多的例子和用法信息。
+
 ### 语法 {#syntax}
 
 只需将你的 mermaid 代码插入 `mermaid` shortcode 中即可。
@@ -41,78 +44,9 @@ collections:
 {{</* /mermaid */>}}
 ```
 
-> [!TIP] 推荐使用 **代码块扩展语法** `` ```mermaid `` 代替 shortcode。
-> 你可以在 [图表支持 - Mermaid][diagrams-support-mermaid] 页面找到更多的例子和用法信息。
-
 ### 配置 {#configuration}
 
-CDN
-: 你可使用 `params.mermaid` 在配置文件中指定你想使用的 Mermaid 和 ZenUML 版本。例如：
-
-```toml
-[params]
-  [params.mermaid]
-    cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
-    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
-```
-
-> [!TIP]
-> 只有设置了 ZenUML CDN，才能使用 ZenUML 功能。
-
-look
-: Mermaid 图表在 FixIt 主题中默认是手绘样式，如果你更喜欢经典样式，可以在配置文件中修改：
-
-```toml
-[params]
-  [params.mermaid]
-    look = "classic"
-```
-
-### 主题 {#themes}
-
-以下是可用的主题：
-
-1. [**default**][theme-default] - 这是所有图表的默认主题。
-2. [**neutral**][theme-neutral] - 这个主题非常适合黑白打印的文档。
-3. [**dark**][theme-dark] - 这个主题适合与深色元素或暗模式搭配使用。
-4. [**forest**][theme-forest] - 这个主题包含各种绿色。
-5. [**base**][theme-base] - 这是唯一可以修改的主题。使用此主题作为自定义的基础。
-
-请前往 [Theme Configuration | Mermaid][mermaid-theming] 页面，了解有关动态和集成主题配置的更多信息。
-
-站点范围主题
-: 你可以通过 `hugo.toml` 中的 `params.mermaid.themes` 参数全局配置 Mermaid 主题。
-
-```toml
-[params]
-  [params.mermaid]
-    themes = ["default", "dark"]
-```
-
-图表特定主题
-: 要自定义单个图表的主题，请使用 frontmatter 配置。
-
-以下是使用 frontmatter 配置将主题设置为 `forest` 的示例代码：
-
-```markdown
-{{</* mermaid */>}}
----
-config:
-  theme: 'forest'
----
-  graph TD
-    a --> b
-{{</* /mermaid */>}}
-```
-
-{{< mermaid >}}
----
-config:
-  theme: 'forest'
----
-  graph TD
-    a --> b
-{{< /mermaid >}}
+有关详细的配置选项、主题，请参考 [图表支持 - Mermaid][diagrams-support-mermaid] 页面。
 
 ## 流程图 {#flowchart}
 
@@ -449,10 +383,4 @@ gitGraph
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD003 MD022 MD049 reference-links-images -->
 [mermaid]: https://mermaid.js.org/
-[theme-default]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-default.js
-[theme-neutral]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-neutral.js
-[theme-dark]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-dark.js
-[theme-forest]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-forest.js
-[theme-base]: https://github.com/mermaid-js/mermaid/blob/develop/packages/mermaid/src/themes/theme-base.js
-[mermaid-theming]: https://mermaid.js.org/config/theming.html
 [diagrams-support-mermaid]: {{< relref "/documentation/content-management/diagrams-support/mermaid" >}}

@@ -1069,6 +1069,8 @@ name
     # optional values: ["classic", "handDrawn"]
     look = "handDrawn"
     fontFamily = ""
+    layoutLoaders = []
+    layout = "dagre"
 ```
 
 cdn
@@ -1090,6 +1092,12 @@ look
 
 fontFamily
 : `string` {{< version 0.4.0 >}} Mermaid 图表的字体。
+
+layoutLoaders
+: `string array` {{< version 0.4.0 >}} Mermaid 图表的布局加载器。默认为空。
+
+layout
+: `string` {{< version 0.4.0 >}} Mermaid 图表的默认布局算法。默认为 `dagre`。
 
 ### pangu
 

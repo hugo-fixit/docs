@@ -51,6 +51,8 @@ resources:
     # optional values: ["classic", "handDrawn"]
     look = "handDrawn"
     fontFamily = ""
+    layoutLoaders = []
+    layout = "dagre"
 ```
 
 CDN
@@ -74,6 +76,41 @@ look
   [params.mermaid]
     look = "classic"
 ```
+
+layoutLoaders
+: 布局加载器允许你从 ESM 模块 CDN 源加载额外的布局引擎。这对于启用高级布局算法（如 ELK（Eclipse Layout Kernel））特别有用。你可以指定布局模块的 CDN URL 数组：
+
+```toml
+[params]
+  [params.mermaid]
+    layoutLoaders = [
+      "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs"
+    ]
+```
+
+> [!NOTE]
+> 当 `layoutLoaders` 配置了 ELK 布局引擎时，将可以使用额外的布局选项：`"elk"`、`"elk.layered"`、`"elk.stress"`、`"elk.force"` 和 `"elk.mrtree"`。
+
+layout
+: 用于渲染图表的默认布局算法。默认值为 `"dagre"`，适用于大多数图表类型。当你配置了带有额外布局引擎的 `layoutLoaders` 时，可以从扩展的布局选项中进行选择：
+
+```toml
+[params]
+  [params.mermaid]
+    layout = "elk.layered"  # 需要先配置 ELK 布局加载器
+```
+
+可用的布局算法：
+
+- `"dagre"`（默认）- 标准 Dagre 布局算法
+- `"elk"` - 基本 ELK 布局，等价于 `"elk.layered"`（需要 ELK 布局加载器）
+- `"elk.layered"` - ELK 分层布局算法（需要 ELK 布局加载器）
+- `"elk.stress"` - ELK 压力布局算法（需要 ELK 布局加载器）
+- `"elk.force"` - ELK 力导向布局算法（需要 ELK 布局加载器）
+- `"elk.mrtree"` - ELK 多根树布局算法（需要 ELK 布局加载器）
+
+> [!WARNING]
+> ELK 布局算法需要先配置 `layoutLoaders`。在没有相应布局加载器的情况下使用 ELK 布局将回退到默认的 Dagre 布局。
 
 ### 主题 {#themes}
 
