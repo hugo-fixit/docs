@@ -21,6 +21,11 @@
 # 按 `nickname` 以字典顺序将您的 FixIt 网站添加到列表中
 # -------------------------------------------------------------------------------------
 
+- nickname: AriaNote
+  avatar: https://arianote.top/avatar.webp
+  description: 温故而知新，可以为师矣。
+  url: https://arianote.top
+
 - nickname: Ayang
   # avatar: https://ayang.ink/images/avatar.jpg
   url: https://ayang.ink
@@ -40,6 +45,11 @@
   avatar: https://www.gravatar.com/avatar/ba22db80ba3c392985cff46ec8c80332?s=240&d=mp
   url: https://hiif.ong
   description: Hi 👋, I'm hiifong!
+
+- nickname: Leehow
+  avatar: https://www.haoyep.com/Github.jpg
+  description: 色相事一刹那，光阴里无尽藏
+  url: https://www.haoyep.com
 
 - nickname: mailcow
   avatar: https://mailcow.email/images/cow_mailcow.svg
@@ -61,10 +71,15 @@
   description: Explore technologies with a Linux & tech enthusiast. This blog offers programming tutorials, open-source project insights, and practical tech tips.
   url: https://blog.qomarhsn.com
 
-# - nickname: Scan’s Blog
+# - nickname: Scan
 #   avatar: https://fastly.jsdelivr.net/gh/hack-scan/Blog-pic/posts/logo.png
 #   url: https://www.scan.work/
 #   description: Tracing the Freedom of Childhood.
+
+- nickname: roderick's blog
+  avatar: https://www.roderickchan.cn/images/avatar.png
+  description: 纸上得来终觉浅，绝知此事要躬行！
+  url: https://www.roderickchan.cn/zh-cn/
 
 - nickname: SHUFly
   avatar: https://shuosc.github.io/fly/shufly.webp
@@ -81,6 +96,11 @@
   url: https://blog.toastbubble.top
   description: 🍞这有多的吐司速来品鉴
 
+- nickname: Vespeng
+  avatar: https://vespeng.tech/avatar.jpg
+  description: 生命不息，折腾不止！
+  url: https://vespeng.tech
+
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
   url: https://wlanxww.com
@@ -95,6 +115,11 @@
   avatar: https://acuherb.xyz/images/avatar.jpg
   url: https://acuherb.xyz
   description: 针通经络，草养气血。
+
+- nickname: 字节飞鸿
+  avatar: https://benelin.site/images/avatar.png
+  description: 知易行难恒愈难
+  url: https://benelin.site
 
 - nickname: 逐水寻源
   avatar: https://www.zair.top/img/logo.png
