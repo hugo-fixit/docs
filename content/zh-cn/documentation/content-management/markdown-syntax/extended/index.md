@@ -35,6 +35,7 @@ collections:
 
 使用基本的 Markdown 语法，每个警示的第一行是一个警示指示符，由一个感叹号和警示类型组成，用中括号括起来。
 
+> [!note]+
 > Alert 基本语法与 [GitHub][github-alert]、[Obsidian][obsidian-callouts] 和 [Typora][typora-alert] 兼容。
 
 以下是所有五种类型的示例：
@@ -79,10 +80,11 @@ collections:
 
 使用扩展 Markdown 语法，你可以选择包含警示符号或警示标题。警示符号是 `+` 或 `-` 之一。通常用于指示警示是否可以图形折叠。
 
+> [!note]+
 > Alert 扩展语法与 [Obsidian][obsidian-callouts] 和 Fixit [admonition shortcode][sc-admonition] 兼容。
-
-> [!Tip]
-> 扩展语法与 GitHub 或 Typora 不兼容。如果包含警示符号或警示标题，这些应用程序会将 Markdown 渲染为引用块。
+>
+> > [!WARNING]
+> > 扩展语法与 GitHub 或 Typora 不兼容。如果包含警示符号或警示标题，这些应用程序会将 Markdown 渲染为引用块。
 
 #### 更改标题
 
@@ -138,7 +140,117 @@ collections:
 
 #### 支持的类型 {#supported-types}
 
-Alert 扩展语法支持 **13** 种类型的 [警示横幅][admonition-types]，除非你 [自定义 Admonition][custom-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
+Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 Admonition][custom-admonitions]，否则任何不支持的类型都会默认为 `note` 类型。类型标识不区分大小写。
+
+完整示例如下：
+
+> [!note]+
+>
+> ```markdown {.no-header, linenos=false}
+> > [!note]+
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!abstract]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!abstract]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`summary`, `tldr`
+
+> [!info]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!info]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!todo]-
+> {{< version 0.3.13 >}}
+>
+> ```markdown {.no-header, linenos=false}
+> > [!todo]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!tip]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!tip]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`hint`, `important`
+
+> [!success]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!success]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`check`, `done`
+
+> [!question]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!question]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`help`, `faq`
+
+> [!warning]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!warning]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`caution`, `attention`
+
+> [!failure]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!failure]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`fail`, `missing`
+
+> [!danger]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!danger]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`error`
+
+> [!bug]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!bug]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!example]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!example]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!quote]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!quote]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> 别名：`cite`
 
 ## 颜色预览 {#color-preview}
 
@@ -861,7 +973,6 @@ console.log('hello FixIt!');
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
-[admonition-types]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#supported-types" >}}
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
 [supported-color-models]: https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#supported-color-models
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}

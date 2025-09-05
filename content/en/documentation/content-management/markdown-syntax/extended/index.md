@@ -34,6 +34,7 @@ Also known as callouts or admonitions, alerts are blockquotes used to emphasize 
 
 With the basic Markdown syntax, the first line of each alert is an alert designator consisting of an exclamation point followed by the alert type, wrapped within brackets.
 
+> [!note]+
 > The basic syntax is compatible with [GitHub][github-alert], [Obsidian][obsidian-callouts], and [Typora][typora-alert].
 
 An example of all five types:
@@ -78,10 +79,11 @@ The rendered output looks like this:
 
 With the extended Markdown syntax, you may optionally include an alert sign and/or an alert title. The alert sign is one of `+` or `-`, typically used to indicate whether an alert is graphically foldable.
 
+> [!note]+
 > The extended syntax is compatible with [Obsidian][obsidian-callouts] and Fixit [admonition shortcode][sc-admonition].
-
-> [!Tip]
-> The extended syntax is not compatible with GitHub or Typora. If you include an alert sign or an alert title, these applications render the Markdown as a blockquote.
+>
+> > [!WARNING]
+> > The extended syntax is not compatible with GitHub or Typora. If you include an alert sign or an alert title, these applications render the Markdown as a blockquote.
 
 #### Change the title
 
@@ -137,7 +139,117 @@ You can nest alerts in multiple levels.
 
 #### Supported types
 
-The extended alert syntax supports **13** types of [admonition][admonition-types] banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+The extended alert syntax supports **13** types of admonition banners, Unless you [Customize admonitions][custom-admonitions], any unsupported type defaults to the `note` type. The type identifier is case-insensitive.
+
+The complete examples are as follows:
+
+> [!note]+
+>
+> ```markdown {.no-header, linenos=false}
+> > [!note]+
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!abstract]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!abstract]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Aliases: `summary`, `tldr`
+
+> [!info]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!info]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!todo]-
+> {{< version 0.3.13 >}}
+>
+> ```markdown {.no-header, linenos=false}
+> > [!todo]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!tip]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!tip]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Aliases: `hint`, `important`
+
+> [!success]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!success]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Aliases: `check`, `done`
+
+> [!question]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!question]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Aliases: `help`, `faq`
+
+> [!warning]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!warning]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Aliases: `caution`, `attention`
+
+> [!failure]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!failure]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Aliases: `fail`, `missing`
+
+> [!danger]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!danger]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Alias: `error`
+
+> [!bug]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!bug]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!example]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!example]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+
+> [!quote]-
+>
+> ```markdown {.no-header, linenos=false}
+> > [!quote]-
+> > The quick brown fox jumps over the lazy dog.
+> ```
+>
+> Alias: `cite`
 
 ## Color Preview
 
@@ -861,7 +973,6 @@ These features are automatically enabled in FixIt theme and require no additiona
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
 [sc-admonition]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition" >}}
-[admonition-types]: {{< relref path="/documentation/content-management/shortcodes/extended/admonition#supported-types" >}}
 [custom-admonitions]: {{< relref "/documentation/advanced#custom-admonitions" >}}
 [supported-color-models]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#supported-color-models
 [custom-task-lists]: {{< relref "/documentation/advanced#custom-task-lists" >}}

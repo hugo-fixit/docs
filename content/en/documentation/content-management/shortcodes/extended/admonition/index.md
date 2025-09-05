@@ -20,6 +20,7 @@ The `admonition` shortcode allows you to add various types of callouts to your c
 
 <!--more-->
 
+> [!TIP]+
 > This is an extended shortcode provided by the FixIt theme.\
 > For better cross-platform compatibility, the [Alerts Markdown extension syntax][alerts-syntax] is recommended.
 
