@@ -34,7 +34,7 @@
   "devDependencies": {
     "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.14.0",
-    "cross-env": "^7.0.3",
+    "cross-env": "^10.0.0",
     "lint-staged": "^16.1.0",
     "markdownlint-cli2": "^0.18.1",
     "markdownlint-rule-search-replace": "^1.2.0",
