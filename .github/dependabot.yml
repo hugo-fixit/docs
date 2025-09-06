@@ -14,6 +14,16 @@ updates:
       - "Lruihao"
     labels:
       - "dependencies"
+    groups:
+      npm-development:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      npm-production:
+        dependency-type: production
+        update-types:
+          - patch
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

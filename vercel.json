@@ -3,8 +3,8 @@
   "version": 2,
   "regions": ["hkg1"],
   "framework": "hugo",
-  "installCommand": "npm install && dnf install -y golang.x86_64",
-  "buildCommand": "npm run build -- $BUILD_DRAFTS",
+  "installCommand": "pnpm install && dnf install -y golang.x86_64",
+  "buildCommand": "pnpm build $BUILD_DRAFTS",
   "outputDirectory": "public",
   "alias": ["fixit.lruihao.cn", "pre.fixit.lruihao.cn", "hugofixit"],
   "headers": [

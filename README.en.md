@@ -27,7 +27,7 @@ git clone https://github.com/hugo-fixit/docs.git fixit-docs && cd fixit-docs
 Then, install the dev dependencies.
 
 ```bash
-npm install
+pnpm install
 ```
 
 And now you are ready to go!
@@ -36,11 +36,11 @@ Here are some useful commands.
 
 ```bash
 # run a local debugging server with watch
-npm run server
+pnpm run server
 # run a local debugging server with watch in production environment
-npm run server:production
+pnpm run server:production
 # see Edit the theme section
-npm run server:development
+pnpm run server:development
 ```
 
 ## Participate in translation
