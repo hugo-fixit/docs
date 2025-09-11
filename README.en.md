@@ -10,7 +10,7 @@
 
 ## System requirements
 
-- [Node.js](https://nodejs.org/): >= 18.0.0
+- [Node.js](https://nodejs.org/): >= 20.0.0
 - [Go](https://go.dev/dl/)
 - [Hugo](https://gohugo.io/installation/): >= 0.147.7 (extended version)
 
