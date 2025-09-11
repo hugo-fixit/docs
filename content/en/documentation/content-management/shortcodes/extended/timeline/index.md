@@ -4,7 +4,6 @@ shortTitle: Timeline
 linkTitle: Timeline Shortcode
 date: 2024-07-21T10:44:31+08:00
 description: This document will show you how to create a Timeline in FixIt using Shortcode.
-hiddenFromHomePage: true
 categories:
   - Documentation
 tags:
@@ -17,7 +16,12 @@ collections:
 featuredImage: /documentation/content-management/timeline-support/featured-image.webp
 ---
 
+This document will show you how to create a Timeline in FixIt using Shortcode.
+
 <!--more-->
+
+> [!TIP] The **Code Fences extended syntax** `` ```timeline `` is recommended over the shortcode.
+> You can find alternative usage on the [Timeline Support][timeline-support] page.
 
 ## Basic Usage
 
@@ -428,6 +432,7 @@ The `timeline` shortcode has the following named parameters, and the positional 
 | optional | node          | node style                | string  | circle / dot                                            | circle  |
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD032 MD007 -->
+<!-- markdownlint-disable-file MD032 MD007 MD052 -->
 [hugo-data]: https://gohugo.io/methods/site/data/
 [page-resources]: https://gohugo.io/content-management/page-resources/
+[timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

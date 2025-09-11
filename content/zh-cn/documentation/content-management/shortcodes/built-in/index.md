@@ -51,7 +51,7 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 根据需要使用这些 Hugo 内置 Shortcodes。
 
 {{< admonition tip >}}
-要覆盖 Hugo 内置 Shortcodes，请将 [源代码](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
+要覆盖 Hugo 内置 Shortcodes，请将 [源代码](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/_shortcodes) 复制到 `layouts/_shortcodes` 目录中同名的文件中。
 {{< /admonition >}}
 
 ### figure {#figure}

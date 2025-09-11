@@ -4,7 +4,6 @@ shortTitle: Timeline
 linkTitle: Timeline Shortcode
 date: 2024-07-21T10:44:31+08:00
 description: 这篇文档将展示如何在 FixIt 中使用 Shortcode 创建时间线。
-hiddenFromHomePage: true
 categories:
   - Documentation
 tags:
@@ -17,7 +16,12 @@ collections:
 featuredImage: /documentation/content-management/timeline-support/featured-image.webp
 ---
 
+这篇文档将展示如何在 FixIt 中使用 Shortcode 创建时间线。
+
 <!--more-->
+
+> [!TIP] 推荐使用 **代码块扩展语法** `` ```timeline `` 代替 shortcode。
+> 你可以在 [时间线支持][timeline-support] 页面找到替代用法。
 
 ## 基础用法
 
@@ -428,6 +432,7 @@ timeline/
 | 可选 | node          | 节点风格       | string  | circle / dot                                            | circle |
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD032 MD007 -->
+<!-- markdownlint-disable-file MD032 MD007 MD052 -->
 [hugo-data]: https://gohugo.io/methods/site/data/
 [page-resources]: https://gohugo.io/content-management/page-resources/
+[timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}

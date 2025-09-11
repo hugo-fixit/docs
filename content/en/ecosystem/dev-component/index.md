@@ -63,7 +63,7 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 
 ## Creating Shortcode
 
-Create a file named `caniuse.html` in the `layouts/shortcodes` directory.
+Create a file named `caniuse.html` in the `layouts/_shortcodes` directory.
 
 According to the usage instructions of [The CanIUse Embed][caniuse-embed], write the shortcode content as follows:
 

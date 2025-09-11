@@ -7,7 +7,7 @@ aliases:
 author:
   name: Lruihao
   link: https://lruihao.cn
-description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 Shortcodes。
+description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供了更多的扩展 Shortcodes。
 resources:
   - name: featured-image
     src: featured-image.jpg
@@ -24,19 +24,47 @@ collections:
 lightgallery: true
 ---
 
-**FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 Shortcodes。
+**FixIt** 主题在 Hugo 内置的 shortcode 的基础上提供了更多的扩展 Shortcodes。
 
 <!--more-->
 
-## FixIt 主题内置
+> [!TIP]
+>
+> - **FixIt 主题内置**：
+>
+>   要覆盖 FixIt 主题扩展的 Shortcodes，请将 [源代码][fixit-shortcodes-src] 复制到 `layouts/_shortcodes` 目录中。
+>
+> - **额外的组件**：
+>
+>   为了平衡 FixIt 主题的 **简洁性** 和 **可扩展性**，我们额外开发了一系列 Hugo 主题组件供用户选择。\
+>   访问 [此页面][components] 浏览由 Hugo FixIt 社区创建的主题组件合集。
 
 根据需要使用这些 FixIt 主题扩展的 Shortcodes。
 
-{{< admonition tip >}}
-要覆盖 FixIt 主题扩展的 Shortcodes，请将 [源代码](https://github.com/hugo-fixit/FixIt/tree/main/layouts/shortcodes) 复制到 `layouts/shortcodes` 目录中同名的文件中。
+## script
+
+`script` shortcode 用来在你的文章中插入 **:(fa-brands fa-js fa-fw): Javascript** 脚本。
+
+{{< admonition >}}
+脚本内容可以保证在所有的第三方库加载之后按顺序执行。
+所以你可以自由地使用第三方库。
 {{< /admonition >}}
 
-### style
+一个 `script` 示例：
+
+```markdown
+{{</* script */>}}
+console.log('Hello FixIt!');
+{{</* /script */>}}
+```
+
+你可以在开发者工具的控制台中看到输出。
+
+{{< script >}}
+console.log('Hello FixIt!');
+{{< /script >}}
+
+## style
 
 {{< admonition >}}
 Hugo **extended** 版本对于 `style` shortcode 是必需的。
@@ -65,7 +93,7 @@ This is a **right-aligned** paragraph.
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
-### link
+## link
 
 `link` shortcode 是 [Markdown 链接语法][md-link] 的替代。
 `link` shortcode 可以提供一些其它的功能并且可以在代码块中使用。
@@ -176,7 +204,7 @@ This is a **right-aligned** paragraph.
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
-### image {#image}
+## image {#image}
 
 {{< version 0.2.18 changed >}}
 
@@ -248,84 +276,7 @@ This is a **right-aligned** paragraph.
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
 
-### admonition
-
-`admonition` shortcode 允许你在内容中添加各种类型的标注。
-
-完整文档请查看页面 [扩展 Shortcode - admonition][sc-admonition]。
-
-### mermaid
-
-`mermaid` shortcode 使用 [Mermaid][mermaidjs] 库提供绘制图表和流程图的功能。
-
-完整文档请查看页面 [扩展 Shortcode - mermaid][sc-mermaid]。
-
-### echarts
-
-`echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
-
-完整文档请查看页面 [扩展 Shortcode - echarts][sc-echarts]。
-
-### mapbox
-
-`mapbox` shortcode 使用 [Mapbox GL JS][mapbox] 库提供互动式地图的功能。
-
-完整文档请查看页面 [扩展 Shortcode - mapbox][sc-mapbox]。
-
-### music
-
-`music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 库提供了一个内嵌的响应式音乐播放器。
-
-完整文档请查看页面 [扩展 Shortcode - music][sc-music]。
-
-### spotify
-
-`spotify` shortcode 提供了一个内嵌的用来播放 Spotify 音乐的响应式播放器。
-
-完整文档请查看页面 [扩展 Shortcode - spotify][sc-spotify]。
-
-### bilibili
-
-`bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
-
-完整文档请查看页面 [扩展 Shortcode - bilibili][sc-bilibili]。
-
-### douyin
-
-`douyin` shortcode 提供了一个内嵌的用来播放抖音视频的响应式播放器。
-
-完整文档请查看页面 [扩展 Shortcode - douyin][sc-douyin]。
-
-### typeit
-
-`typeit` shortcode 基于 [TypeIt][typeitjs] 提供了打字动画。
-
-完整文档请查看页面 [扩展 Shortcode - typeit][sc-typeit]。
-
-### script
-
-`script` shortcode 用来在你的文章中插入 **:(fa-brands fa-js fa-fw): Javascript** 脚本。
-
-{{< admonition >}}
-脚本内容可以保证在所有的第三方库加载之后按顺序执行。
-所以你可以自由地使用第三方库。
-{{< /admonition >}}
-
-一个 `script` 示例：
-
-```markdown
-{{</* script */>}}
-console.log('Hello FixIt!');
-{{</* /script */>}}
-```
-
-你可以在开发者工具的控制台中看到输出。
-
-{{< script >}}
-console.log('Hello FixIt!');
-{{< /script >}}
-
-### details
+## details
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
@@ -371,7 +322,7 @@ console.log('Hello FixIt!');
 _All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
-### center-quote
+## center-quote
 
 {{< version 0.2.13 >}}
 
@@ -391,15 +342,7 @@ this is a **center-quote** _shortcode_ example.
 this is a **center-quote** _shortcode_ example.
 {{< /center-quote >}}
 
-### fixit-encryptor
-
-{{< version 0.2.15 >}}
-
-你可以使用 `fixit-encryptor` shortcode 来加密部分内容。
-
-完整文档请查看页面 [内容加密][content-encryption]。
-
-### raw
+## raw
 
 {{< version 0.2.16 >}}
 
@@ -421,7 +364,7 @@ this is a **center-quote** _shortcode_ example.
 
 原始的带有 Markdown 和 HTML 语法的内容：{{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
-### reward
+## reward
 
 {{< version 0.2.18 changed >}}
 
@@ -447,17 +390,17 @@ this is a **center-quote** _shortcode_ example.
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/alipay.gif" comment="给作者买杯卡布奇诺～" >}}
 
-### version
+## version
 
 > [!NOTE]
 > `version` shortcode 用来显示指定项目的版本，这本来是 FixIt 内部使用的 shortcode，从 {{< version 0.3.15 changed >}} 版本开始放开了限制，可以通过 `params.repoVersion` 配置指定仓库。
 
 `version` shortcode 有以下位置参数：
 
-- 第一个位置参数 _[必选]_ **版本号**
-- 第二个位置参数 _[可选]_ **类型**，可选值：["new", "changed", "deleted"]，默认：`new`
-- 第三个位置参数 _[可选]_ **发行标签的 URL 前缀**，默认：`https://github.com/hugo-fixit/FixIt/releases/tag/v`
-- 第四个位置参数 _[可选]_ **项目名称**，默认：`FixIt`
+- **第一个**位置参数 _[必选]_ **版本号**
+- **第二个**位置参数 _[可选]_ **类型**，可选值：["new", "changed", "deleted"]，默认：`new`
+- **第三个**位置参数 _[可选]_ **发行标签的 URL 前缀**，默认：`https://github.com/hugo-fixit/FixIt/releases/tag/v`
+- **第四个**位置参数 _[可选]_ **项目名称**，默认：`FixIt`
 
 一个 `version` 示例：
 
@@ -473,68 +416,92 @@ this is a **center-quote** _shortcode_ example.
 {{< version 0.3.15 changed >}}\
 {{< version 0.3.15 deleted >}}
 
-### bluesky
+## admonition
+
+`admonition` shortcode 允许你在内容中添加各种类型的标注。
+
+完整文档请查看页面 [扩展 Shortcode - admonition][sc-admonition]。
+
+## mermaid
+
+`mermaid` shortcode 使用 [Mermaid][mermaidjs] 库提供绘制图表和流程图的功能。
+
+完整文档请查看页面 [扩展 Shortcode - mermaid][sc-mermaid]。
+
+## echarts
+
+`echarts` shortcode 使用 [ECharts][echarts] 库提供数据可视化的功能。
+
+完整文档请查看页面 [扩展 Shortcode - echarts][sc-echarts]。
+
+## mapbox
+
+`mapbox` shortcode 使用 [Mapbox GL JS][mapbox] 库提供互动式地图的功能。
+
+完整文档请查看页面 [扩展 Shortcode - mapbox][sc-mapbox]。
+
+## music
+
+`music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 库提供了一个内嵌的响应式音乐播放器。
+
+完整文档请查看页面 [扩展 Shortcode - music][sc-music]。
+
+## spotify
+
+`spotify` shortcode 提供了一个内嵌的用来播放 Spotify 音乐的响应式播放器。
+
+完整文档请查看页面 [扩展 Shortcode - spotify][sc-spotify]。
+
+## bilibili
+
+`bilibili` shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
+
+完整文档请查看页面 [扩展 Shortcode - bilibili][sc-bilibili]。
+
+## douyin
+
+`douyin` shortcode 提供了一个内嵌的用来播放抖音视频的响应式播放器。
+
+完整文档请查看页面 [扩展 Shortcode - douyin][sc-douyin]。
+
+## typeit
+
+`typeit` shortcode 基于 [TypeIt][typeitjs] 提供了打字动画。
+
+完整文档请查看页面 [扩展 Shortcode - typeit][sc-typeit]。
+
+## timeline
+
+`timeline` shortcode 用于创建时间轴。
+
+完整文档请查看页面 [扩展 Shortcode - timeline][sc-timeline]。
+
+## fixit-encryptor
+
+{{< version 0.2.15 >}}
+
+你可以使用 `fixit-encryptor` shortcode 来加密部分内容。
+
+完整文档请查看页面 [内容加密][content-encryption]。
+
+## bluesky
 
 {{< version 0.3.17 >}}
 
-`bluesky` 是一个用来嵌入 [Bluesky][bluesky] 的帖子的 shortcode。
+`bluesky` shortcode 用于嵌入 Bluesky 帖子。
 
-`bluesky` shortcode 有以下命名参数：
+完整文档请查看页面 [扩展 Shortcode - bluesky][sc-bluesky]。
 
-- **link** _[必选]_
+## gist
 
-    Bluesky 帖子的 URL。
+`gist` shortcode 用于在你的内容中嵌入 GitHub Gist。
 
-一个 `bluesky` 示例：
-
-```markdown
-{{</* bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" */>}}
-```
-
-呈现的输出效果如下：
-
-{{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
-
-### gist
-
-> 使用 `gist` shortcode 在你的内容中嵌入 GitHub Gist。
-
-要显示这个 URL 的 GitHub Gist：
-
-```plain
-https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710
-```
-
-在 Markdown 中这样写：
-
-```markdown
-{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 */>}}
-```
-
-呈现的输出效果如下：
-
-{{< gist Lruihao fb8b2d0353465c4d40bf74818db80710 >}}
-
-输出的 HTML 看起来像这样：
-
-```html
-<script src="https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710.js"></script>
-```
-
-要显示 Gist 中的特定文件：
-
-```markdown
-{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 bilibili.html */>}}
-```
-
-## 额外的主题组件
-
-FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。
-
-访问 [此页面][components] 浏览由 Hugo FixIt 社区创建的主题组件合集。
+完整文档请查看页面 [扩展 Shortcode - gist][sc-gist]。
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
+[fixit-shortcodes-src]: https://github.com/hugo-fixit/FixIt/tree/main/layouts/_shortcodes
+[components]: {{< relref path="/ecosystem" >}}
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
@@ -555,6 +522,7 @@ FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为�
 [sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
+[sc-timeline]: {{< relref path="/documentation/content-management/shortcodes/extended/timeline" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
-[bluesky]: https://bsky.app/
-[components]: {{< relref path="/ecosystem" >}}
+[sc-bluesky]: {{< relref path="/documentation/content-management/shortcodes/extended/bluesky" >}}
+[sc-gist]: {{< relref path="/documentation/content-management/shortcodes/extended/gist" >}}

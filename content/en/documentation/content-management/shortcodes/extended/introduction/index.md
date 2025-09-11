@@ -28,15 +28,42 @@ lightgallery: true
 
 <!--more-->
 
-## FixIt's Embedded
+> [!TIP]
+>
+> - **FixIt's Embedded**:
+>
+>   To override FixIt's embedded shortcode, copy the [source code][fixit-shortcodes-src] to a file with the same name in the `layouts/_shortcodes` directory.
+>
+> - **Extra Components**:
+>
+>   To balance **simplicity** and **extensibility**, FixIt theme provides extra Hugo theme components for customization.\
+>   Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community..
 
-Use these Hugo's embedded shortcodes as needed.
+Use these FixIt's embedded shortcodes as needed.
 
-{{< admonition tip >}}
-To override FixIt's embedded shortcode, copy the [source code](https://github.com/hugo-fixit/FixIt/tree/main/layouts/shortcodes) to a file with the same name in the `layouts/shortcodes` directory.
+## script
+
+`script` is a shortcode to insert custom **:(fa-brands fa-js fa-fw): Javascript** in your post.
+
+{{< admonition >}}
+The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
 {{< /admonition >}}
 
-### style
+Example `script` input:
+
+```markdown
+{{</* script */>}}
+console.log('Hello FixIt!');
+{{</* /script */>}}
+```
+
+You can see the output in the console of the developer tool.
+
+{{< script >}}
+console.log('Hello FixIt!');
+{{< /script >}}
+
+## style
 
 {{< admonition >}}
 Hugo **extended** version is necessary for `style` shortcode.
@@ -66,7 +93,7 @@ The rendered output looks like this:
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
-### link
+## link
 
 `link` shortcode is an alternative to [Markdown link syntax][md-link]. `link` shortcode can provide some other features and can be used in code blocks.
 
@@ -176,7 +203,7 @@ The rendered output looks like this:
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" >}}
 {{< link href="/music/Wavelength.mp3" content="Wavelength.mp3" title="Download Wavelength.mp3" download="Wavelength.mp3" card=true >}}
 
-### image {#image}
+## image {#image}
 
 {{< version 0.2.18 changed >}}
 
@@ -248,83 +275,7 @@ The rendered output looks like this:
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
 
-### admonition
-
-The `admonition` shortcode allows you to add types of callout boxes to your content.
-
-The full documentation is provided in [Extended Shortcode - admonition][sc-admonition].
-
-### mermaid
-
-The `mermaid` shortcode supports diagrams in Hugo with [Mermaid][mermaidjs] library.
-
-The full documentation is provided in [Extended Shortcode - mermaid][sc-mermaid].
-
-### echarts
-
-The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
-
-The full documentation is provided in [Extended Shortcode - echarts][sc-echarts].
-
-### mapbox
-
-The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.
-
-The full documentation is provided in [Extended Shortcode - mapbox][sc-mapbox].
-
-### music
-
-The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs] library.
-
-The full documentation is provided in [Extended Shortcode - music][sc-music].
-
-### spotify
-
-The `spotify` shortcode embeds a responsive music player for Spotify music.
-
-The full documentation is provided in [Extended Shortcode - spotify][sc-spotify].
-
-### bilibili
-
-The `bilibili` shortcode embeds a responsive video player for bilibili videos.
-
-The full documentation is provided in [Extended Shortcode - bilibili][sc-bilibili].
-
-### douyin
-
-The `douyin` shortcode embeds a responsive video player for douyin videos.
-
-The full documentation is provided in [Extended Shortcode - douyin][sc-douyin].
-
-### typeit
-
-The `typeit` shortcode provides typing animation based on [TypeIt][typeitjs].
-
-The full documentation is provided in [Extended Shortcode - typeit][sc-typeit].
-
-### script
-
-`script` is a shortcode to insert custom **:(fa-brands fa-js fa-fw): Javascript** in your post.
-
-{{< admonition >}}
-The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
-{{< /admonition >}}
-
-Example `script` input:
-
-```markdown
-{{</* script */>}}
-console.log('Hello FixIt!');
-{{</* /script */>}}
-```
-
-You can see the output in the console of the developer tool.
-
-{{< script >}}
-console.log('Hello FixIt!');
-{{< /script >}}
-
-### details
+## details
 
 {{< version 0.2.13 >}} {{< version 0.2.14 changed >}}
 
@@ -370,7 +321,7 @@ The rendered output looks like this:
 _All pages and graphics on this web site are the property of FixIt._
 {{< /details >}}
 
-### center-quote
+## center-quote
 
 {{< version 0.2.13 >}}
 
@@ -390,15 +341,7 @@ The rendered output looks like this:
 this is a **center-quote** _shortcode_ example.
 {{< /center-quote >}}
 
-### fixit-encryptor
-
-{{< version 0.2.15 >}}
-
-You can use `fixit-encryptor` shortcode to encrypt partial content.
-
-The full documentation is provided in [Content Encryption][content-encryption].
-
-### raw
+## raw
 
 {{< version 0.2.16 >}}
 
@@ -421,7 +364,7 @@ The rendered output looks like this:
 
 Raw content using Markdown and HTML syntax: {{< raw "span" >}}**Hello** <strong>FixIt</strong>{{< /raw >}}
 
-### reward
+## reward
 
 {{< version 0.2.17 >}}
 
@@ -447,17 +390,17 @@ The rendered output looks like this:
 
 {{< reward wechatpay="/images/wechatpay.gif" alipay="/images/wechatpay.gif" comment="Buy me a coffee~" >}}
 
-### version
+## version
 
 > [!NOTE]
 > The `version` shortcode is used to display the version of the specified project. This was originally a shortcode used internally by FixIt. Starting from the {{< version 0.3.15 changed >}} version, the restriction has been relaxed and the specified repository can be configured through `params.repoVersion`.
 
 The `version` shortcode has the following positional parameters:
 
-- first positional parameter _[required]_ **release tag**
-- second positional parameter _[optional]_ **type**，optional values: ["new", "changed", "deleted"], default: `new`
-- third positional parameter _[optional]_ **URL prefix for the release tag**, default: `https://github.com/hugo-fixit/FixIt/releases/tag/v`
-- fourth positional parameter _[optional]_ **project name**, default: `FixIt`
+- **first** positional parameter _[required]_ **release tag**
+- **second** positional parameter _[optional]_ **type**，optional values: ["new", "changed", "deleted"], default: `new`
+- **third** positional parameter _[optional]_ **URL prefix for the release tag**, default: `https://github.com/hugo-fixit/FixIt/releases/tag/v`
+- **fourth** positional parameter _[optional]_ **project name**, default: `FixIt`
 
 Example `version` input:
 
@@ -473,68 +416,92 @@ The rendered output looks like this:
 {{< version 0.3.15 changed >}}\
 {{< version 0.3.15 deleted >}}
 
-### bluesky
+## admonition
+
+The `admonition` shortcode allows you to add types of callout boxes to your content.
+
+The full documentation is provided in [Extended Shortcode - admonition][sc-admonition].
+
+## mermaid
+
+The `mermaid` shortcode supports diagrams in Hugo with [Mermaid][mermaidjs] library.
+
+The full documentation is provided in [Extended Shortcode - mermaid][sc-mermaid].
+
+## echarts
+
+The `echarts` shortcode supports data visualization in Hugo with [ECharts][echarts] library.
+
+The full documentation is provided in [Extended Shortcode - echarts][sc-echarts].
+
+## mapbox
+
+The `mapbox` shortcode supports interactive maps in Hugo with [Mapbox GL JS][mapbox] library.
+
+The full documentation is provided in [Extended Shortcode - mapbox][sc-mapbox].
+
+## music
+
+The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs] library.
+
+The full documentation is provided in [Extended Shortcode - music][sc-music].
+
+## spotify
+
+The `spotify` shortcode embeds a responsive music player for Spotify music.
+
+The full documentation is provided in [Extended Shortcode - spotify][sc-spotify].
+
+## bilibili
+
+The `bilibili` shortcode embeds a responsive video player for bilibili videos.
+
+The full documentation is provided in [Extended Shortcode - bilibili][sc-bilibili].
+
+## douyin
+
+The `douyin` shortcode embeds a responsive video player for douyin videos.
+
+The full documentation is provided in [Extended Shortcode - douyin][sc-douyin].
+
+## typeit
+
+The `typeit` shortcode provides typing animation based on [TypeIt][typeitjs].
+
+The full documentation is provided in [Extended Shortcode - typeit][sc-typeit].
+
+## timeline
+
+The `timeline` shortcode allows you to create a timeline.
+
+The full documentation is provided in [Extended Shortcode - timeline][sc-timeline].
+
+## fixit-encryptor
+
+{{< version 0.2.15 >}}
+
+You can use `fixit-encryptor` shortcode to encrypt partial content.
+
+The full documentation is provided in [Content Encryption][content-encryption].
+
+## bluesky
 
 {{< version 0.3.17 >}}
 
-`bluesky` is a shortcode to embed a post from [Bluesky][bluesky].
+The `bluesky` shortcode embeds a post from Bluesky.
 
-The `bluesky` shortcode has the following named parameters:
+The full documentation is provided in [Extended Shortcode - bluesky][sc-bluesky].
 
-- **link** _[required]_
+## gist
 
-    URL of the Bluesky post.
+The `gist` shortcode embeds a GitHub Gist in your content.
 
-Example `bluesky` input:
-
-```markdown
-{{</* bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" */>}}
-```
-
-The rendered output looks like this:
-
-{{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
-
-### gist
-
-> Embed a GitHub Gist in your content using the `gist` shortcode.
-
-To display a GitHub gist with this URL:
-
-```plain
-https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710
-```
-
-Include this in your Markdown:
-
-```markdown
-{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 */>}}
-```
-
-The rendered output looks like this:
-
-{{< gist Lruihao fb8b2d0353465c4d40bf74818db80710 >}}
-
-The HTML looks like this:
-
-```html
-<script src="https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710.js"></script>
-```
-
-To display a specific file within the gist:
-
-```markdown
-{{</* gist Lruihao fb8b2d0353465c4d40bf74818db80710 bilibili.html */>}}
-```
-
-## Extra Components
-
-The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.
-
-Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community.
+The full documentation is provided in [Extended Shortcode - gist][sc-gist].
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
+[fixit-shortcodes-src]: https://github.com/hugo-fixit/FixIt/tree/main/layouts/_shortcodes
+[components]: {{< relref path="/ecosystem" >}}
 [sass]: https://sass-lang.com/documentation/style-rules/declarations#nesting
 [md-link]: {{< relref path="/documentation/content-management/markdown-syntax/basics#links" >}}
 [contents-organization]: {{< relref path="/documentation/content-management/introduction#contents-organization" >}}
@@ -555,6 +522,7 @@ Visit [this page][components] to browse a collection of themes components create
 [sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}
 [sc-typeit]: {{< relref path="/documentation/content-management/shortcodes/extended/typeit" >}}
+[sc-timeline]: {{< relref path="/documentation/content-management/shortcodes/extended/timeline" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
-[bluesky]: https://bsky.app/
-[components]: {{< relref path="/ecosystem" >}}
+[sc-bluesky]: {{< relref path="/documentation/content-management/shortcodes/extended/bluesky" >}}
+[sc-gist]: {{< relref path="/documentation/content-management/shortcodes/extended/gist" >}}

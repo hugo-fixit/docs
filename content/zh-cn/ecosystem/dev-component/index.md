@@ -63,7 +63,7 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 
 ## 创建 Shortcode
 
-在 `layouts/shortcodes` 目录下创建一个名为 `caniuse.html` 的文件。
+在 `layouts/_shortcodes` 目录下创建一个名为 `caniuse.html` 的文件。
 
 根据 [The CanIUse Embed][caniuse-embed] 的使用说明，编写 shortcode 内容如下：
 
