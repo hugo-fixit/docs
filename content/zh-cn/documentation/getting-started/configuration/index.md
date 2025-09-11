@@ -1756,7 +1756,26 @@ c4u
           # more loader config e.g source, dependencies, provides etc.
         [params.page.math.mathjax.options]
           enableMenu = true
-          # more options config e.g. skipHtmlTags, ignoreHtmlClass etc.
+          # HTML tags that won't be searched for math
+          skipHtmlTags = [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code",
+            "math",
+            "select",
+            "option",
+            "mjx-container"
+          ]
+          # class that marks tags not to search
+          ignoreHtmlClass = "mathjax_ignore"
+          # HTML tags that can appear within math
+          [params.page.math.mathjax.options.includeHtmlTags]
+            # "#comment" = ""
+            # br = "\n"
+            # wbr = ""
     # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # Mapbox GL JS 的 access token

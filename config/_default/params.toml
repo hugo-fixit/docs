@@ -1071,7 +1071,26 @@ disableThemeInject = false
         # more loader config e.g source, dependencies, provides etc.
       [page.math.mathjax.options]
         enableMenu = true
-        # more options config e.g. skipHtmlTags, ignoreHtmlClass etc.
+        # HTML tags that won't be searched for math
+        skipHtmlTags = [
+          "script",
+          "noscript",
+          "style",
+          "textarea",
+          "pre",
+          "code",
+          "math",
+          "select",
+          "option",
+          "mjx-container"
+        ]
+        # class that marks tags not to search
+        ignoreHtmlClass = "mathjax_ignore"
+        # HTML tags that can appear within math
+        [page.math.mathjax.options.includeHtmlTags]
+          # "#comment" = ""
+          # br = "\n"
+          # wbr = ""
       [page.math.mathjax.tex]
         [page.math.mathjax.tex.physics]
           italicdiff = false
