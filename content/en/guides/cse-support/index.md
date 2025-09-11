@@ -9,7 +9,7 @@ tags:
   - Advanced
 resources:
   - name: featured-image
-    src: cover.webp
+    src: featured-image.webp
 description: Guide to setup CSE in FixIt.
 ---
 

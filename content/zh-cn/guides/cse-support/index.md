@@ -9,7 +9,7 @@ tags:
   - Advanced
 resources:
   - name: featured-image
-    src: cover.webp
+    src: featured-image.webp
 description: 在 FixIt 中设置 CSE 的指南。
 ---
 

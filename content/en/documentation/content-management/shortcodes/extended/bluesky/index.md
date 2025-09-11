@@ -7,6 +7,9 @@ author:
   name: Lruihao
   link: https://lruihao.cn
 description: The bluesky shortcode embeds a post from Bluesky.
+resources:
+  - name: featured-image
+    src: featured-image.webp
 tags:
   - Shortcodes
   - Content

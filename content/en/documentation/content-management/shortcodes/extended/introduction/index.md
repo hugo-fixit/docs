@@ -498,6 +498,14 @@ The `gist` shortcode embeds a GitHub Gist in your content.
 
 The full documentation is provided in [Extended Shortcode - gist][sc-gist].
 
+## tabs
+
+{{< version 0.4.0 >}}
+
+The `tabs` shortcode allows you to create tabbed content with various styles and layouts.
+
+The full documentation is provided in [Extended Shortcode - tabs][sc-tabs].
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
 [fixit-shortcodes-src]: https://github.com/hugo-fixit/FixIt/tree/main/layouts/_shortcodes
@@ -526,3 +534,4 @@ The full documentation is provided in [Extended Shortcode - gist][sc-gist].
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [sc-bluesky]: {{< relref path="/documentation/content-management/shortcodes/extended/bluesky" >}}
 [sc-gist]: {{< relref path="/documentation/content-management/shortcodes/extended/gist" >}}
+[sc-tabs]: {{< relref path="/documentation/content-management/shortcodes/extended/tabs" >}}

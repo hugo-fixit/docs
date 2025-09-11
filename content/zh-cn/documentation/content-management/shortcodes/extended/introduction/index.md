@@ -498,6 +498,14 @@ this is a **center-quote** _shortcode_ example.
 
 完整文档请查看页面 [扩展 Shortcode - gist][sc-gist]。
 
+## tabs
+
+{{< version 0.4.0 >}}
+
+`tabs` shortcode 允许你创建具有各种样式和布局的标签页内容。
+
+完整文档请查看页面 [扩展 Shortcode - tabs][sc-tabs]。
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
 [fixit-shortcodes-src]: https://github.com/hugo-fixit/FixIt/tree/main/layouts/_shortcodes
@@ -526,3 +534,4 @@ this is a **center-quote** _shortcode_ example.
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [sc-bluesky]: {{< relref path="/documentation/content-management/shortcodes/extended/bluesky" >}}
 [sc-gist]: {{< relref path="/documentation/content-management/shortcodes/extended/gist" >}}
+[sc-tabs]: {{< relref path="/documentation/content-management/shortcodes/extended/tabs" >}}

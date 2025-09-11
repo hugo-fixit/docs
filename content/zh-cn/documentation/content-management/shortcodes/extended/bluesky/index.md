@@ -7,6 +7,9 @@ author:
   name: Lruihao
   link: https://lruihao.cn
 description: bluesky shortcode 用于嵌入 Bluesky 帖子。
+resources:
+  - name: featured-image
+    src: featured-image.webp
 tags:
   - Shortcodes
   - Content

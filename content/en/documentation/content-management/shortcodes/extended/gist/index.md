@@ -7,6 +7,9 @@ author:
   name: Lruihao
   link: https://lruihao.cn
 description: The gist shortcode embeds a GitHub Gist in your content.
+resources:
+  - name: featured-image
+    src: featured-image.webp
 tags:
   - Shortcodes
   - Content
