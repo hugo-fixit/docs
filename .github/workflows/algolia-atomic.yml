@@ -38,7 +38,9 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
 
       - name: Update Algolia Index (en)
         env:
