@@ -41,7 +41,14 @@ Before starting configuration, it is recommended that you execute the following 
 ```bash
 mv hugo.toml hugo.old.toml
 cp themes/FixIt/hugo.toml hugo.toml
-echo "theme = 'FixIt'" >> hugo.toml
+```
+
+Then, remember to re-enable the **FixIt** theme:
+
+```diff
+# theme list
+- # theme = ["FixIt"] # enable in your site config file
++ theme = ["FixIt"] # enable in your site config file
 ```
 
 For advanced use, you can also split your configuration by environment, root configuration key, and language instead of a single site configuration file.

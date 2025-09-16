@@ -41,7 +41,14 @@ Hugo 有一些全局配置设置，但这不在本文的讨论范围之内。
 ```bash
 mv hugo.toml hugo.old.toml
 cp themes/FixIt/hugo.toml hugo.toml
-echo "theme = 'FixIt'" >> hugo.toml
+```
+
+然后，记得重新启用 **FixIt** 主题：
+
+```diff
+# theme list
+- # theme = ["FixIt"] # enable in your site config file
++ theme = ["FixIt"] # enable in your site config file
 ```
 
 作为进阶使用，你也可以将你的配置按环境、根配置键和语言拆分，而不是一个单独的站点配置文件。

@@ -26,10 +26,6 @@ hasCJKLanguage = false
 # 时区
 timeZone = "Asia/Shanghai"
 
-# default amount of posts in each pages
-# 默认每页列表显示的文章数目
-# TODO deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in a future release. Use pagination.pagerSize instead. 
-# paginate = 12
 # copyright description used only for seo schema
 # 版权描述，仅仅用于 SEO
 copyright = ""
