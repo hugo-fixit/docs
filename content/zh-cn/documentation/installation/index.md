@@ -93,6 +93,7 @@ git init
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+<!--
 要使用 `dev` 分支上的版本，可以使用以下命令：
 
 ```bash
@@ -101,6 +102,7 @@ git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 # 或者，将子模块分支从 `main` 切换到 `dev`：
 git submodule set-branch -b dev themes/FixIt
 ```
+-->
 
 使用以下命令升级主题：
 

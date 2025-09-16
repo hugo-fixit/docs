@@ -29,6 +29,9 @@ heading:
 
 <!--more-->
 
+> [!warning]+ 重要提示
+> Hugo 和 FixIt 主题目前都处于活跃的开发和更新阶段，功能和配置选项可能会发生变化。如果在使用过程中遇到任何报错、警告或需要技术支持，请在文档下方留言或前往我们的 [社区][community] 寻求帮助。我们会尽快为你提供解决方案。
+
 ## 配置文件 {#configuration-file}
 
 Hugo 有一些全局配置设置，但这不在本文的讨论范围之内。
@@ -2028,6 +2031,7 @@ c4u
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
+[community]: {{< relref path="/community" >}}
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/getting-started/configuration/

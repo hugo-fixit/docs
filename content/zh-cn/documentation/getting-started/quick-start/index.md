@@ -172,6 +172,10 @@ draft: true
 博客（英语：Blog）是一种在线日记型式的个人网站，借由张帖子章、图片或视频来记录生活、抒发情感或分享信息。博客上的文章通常根据张贴时间，以倒序方式由新到旧排列。
 ```
 
+> [!TIP]
+> Hugo 的渲染引擎符合 Markdown 的 [CommonMark 规范][commonmark-specification]。\
+> 除此之外，FixIt 主题还支持一些 [扩展 Markdown 语法][extended-markdown-syntax]。
+
 保存文件，然后启动 Hugo 的开发服务器来查看站点。你可以运行以下任一命令来包含草稿内容。
 
 ```bash
@@ -187,9 +191,8 @@ hugo server -D --disableFastRender
 
 当对新内容感到满意时，将 front matter 中的 `draft` 值更改为 `false`，然后保存文件。
 
-> [!NOTE]+
-> Hugo 的渲染引擎符合 Markdown 的 [CommonMark 规范][commonmark-specification]。\
-> 除此之外，FixIt 主题还支持一些 [扩展 Markdown 语法][extended-markdown-syntax]。
+> [!success]+ 恭喜！你已经成功添加了第一篇文章 :tada:
+> 现在可以执行 `git add . && git commit -m "first commit"` 来提交这些更改。
 
 ## 发布网站
 

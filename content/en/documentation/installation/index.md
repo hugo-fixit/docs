@@ -93,6 +93,7 @@ Add [FixIt][fixit] to your project as a [Git submodule][git-submodule] stored in
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
+<!--
 To use the version on the `dev` branch, you can use the following command:
 
 ```bash
@@ -101,6 +102,7 @@ git submodule add -b dev https://github.com/hugo-fixit/FixIt.git themes/FixIt
 # Alternatively, switch the submodule branch from `main` to `dev`:
 git submodule set-branch -b dev themes/FixIt
 ```
+-->
 
 To upgrade the theme by using the following command:
 

@@ -29,6 +29,9 @@ Find out how to configure your Hugo **FixIt** site.
 
 <!--more-->
 
+> [!warning]+ Important Notice
+> Hugo and the FixIt theme are currently under active development and updates. Features and configuration options may change over time. If you encounter any errors, warnings, or need technical support during usage, please leave a comment below or visit our [community][community] for help. We will provide solutions as soon as possible.
+
 ## Configuration file
 
 Hugo has some global configuration settings, which are beyond the scope of this article.
@@ -2029,6 +2032,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
+[community]: {{< relref path="/community" >}}
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [hugo-config]: https://gohugo.io/getting-started/configuration/

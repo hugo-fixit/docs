@@ -165,6 +165,10 @@ draft: true
 A blog (a truncation of "weblog") is an informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order so that the most recent post appears first, at the top of the web page. Until 2009, blogs were usually the work of a single individual,[citation needed] occasionally of a small group, and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) emerged, featuring the writing of multiple authors and sometimes professionally edited. MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, and similar institutions account for an increasing quantity of blog traffic. The rise of Twitter and other "microblogging" systems helps integrate MABs and single-author blogs into the news media. Blog can also be used as a verb, meaning to maintain or add content to a blog.
 ```
 
+> [!TIP]
+> Hugo's rendering engine conforms to the [CommonMark specification][commonmark-specification] for Markdown.\
+> In addition, the FixIt theme supports some [extended Markdown syntax][extended-markdown-syntax].
+
 Save the file, then start Hugo's development server to view the site. You can run either of the following commands to include draft content.
 
 ```bash
@@ -181,9 +185,8 @@ View your site at the URL displayed in your terminal. Keep the development serve
 
 When satisfied with your new content, set the front matter `draft` parameter to `false`.
 
-> [!NOTE]+
-> Hugo's rendering engine conforms to the [CommonMark specification][commonmark-specification] for Markdown.\
-> In addition, the FixIt theme supports some [extended Markdown syntax][extended-markdown-syntax].
+> [!success]+ Congratulations! You have added your first post successfully :tada:
+> You can now run `git add . && git commit -m "first commit"` to commit these changes.
 
 ## Publish the Site
 
