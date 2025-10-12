@@ -323,22 +323,40 @@ _All pages and graphics on this web site are the property of FixIt._
 
 ## center-quote
 
-{{< version 0.2.13 >}}
+The `center-quote` shortcode inserts a centered blockquote element into your content.
 
-`center-quote` is a shortcode to insert centered text blockquote tag in your post.
+{{< tabs >}}
+{{% tab title="Admonition center type (v0.4.0+)" %}}
 
-Example `center-quote` input:
+```markdown
+> [!center]
+> This paragraph is **center-aligned**.
+```
+
+{{% /tab %}}
+{{% tab title="Markdown attribute" %}}
+
+```markdown
+> This paragraph is **center-aligned**.
+> {.blockquote-center}
+```
+
+{{% /tab %}}
+{{% tab title="Shortcode usage" %}}
 
 ```markdown
 {{</* center-quote */>}}
-this is a **center-quote** _shortcode_ example.
+This paragraph is **center-aligned**.
 {{</* /center-quote */>}}
 ```
 
-The rendered output looks like this:
+{{% /tab %}}
+{{< /tabs >}}
+
+All three approaches produce the same result:
 
 {{< center-quote >}}
-this is a **center-quote** _shortcode_ example.
+This paragraph is **center-aligned**.
 {{< /center-quote >}}
 
 ## raw

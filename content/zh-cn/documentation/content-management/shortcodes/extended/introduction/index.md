@@ -324,22 +324,40 @@ _All pages and graphics on this web site are the property of FixIt._
 
 ## center-quote
 
-{{< version 0.2.13 >}}
-
 `center-quote` shortcode 用来在你的文章中插入文本居中的 blockquote 标签。
 
-一个 `center-quote` 示例：
+{{< tabs >}}
+{{% tab title="警示居中类型（v0.4.0+）" %}}
+
+```markdown
+> [!center]
+> 这是一个 **居中对齐** 的段落。
+```
+
+{{% /tab %}}
+{{% tab title="Markdown 属性" %}}
+
+```markdown
+> 这是一个 **居中对齐** 的段落。
+> {.blockquote-center}
+```
+
+{{% /tab %}}
+{{% tab title="Shortcode 写法" %}}
 
 ```markdown
 {{</* center-quote */>}}
-this is a **center-quote** _shortcode_ example.
+这是一个 **居中对齐** 的段落。
 {{</* /center-quote */>}}
 ```
 
-呈现的输出效果如下：
+{{% /tab %}}
+{{< /tabs >}}
+
+以上三种写法都可以达到相同的输出效果：
 
 {{< center-quote >}}
-this is a **center-quote** _shortcode_ example.
+这是一个 **居中对齐** 的段落。
 {{< /center-quote >}}
 
 ## raw
@@ -350,7 +368,7 @@ this is a **center-quote** _shortcode_ example.
 
 `raw` shortcode 只有一个参数：
 
-- **tag** _[可选]_ (**第一个**位置参数）
+- **tag** _[可选]_（**第一个**位置参数）
 
     原始内容的父级元素 HTML 标签，默认值是 `div`。
 
