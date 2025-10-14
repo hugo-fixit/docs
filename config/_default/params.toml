@@ -824,6 +824,16 @@ disableThemeInject = false
   # 图片缩放和优化
   optimise = true
 
+# FixIt 0.4.0 | NEW JSON Viewer config
+# FixIt 0.4.0 | 新增 JSON 查看器配置
+# See https://github.com/Lruihao/json-viewer-element
+[jsonViewer]
+  enable = true
+  expandDepth = 1
+  copyable = true
+  sort = false
+  boxed = true
+
 # FixIt 0.3.12 | NEW Custom partials config
 # Custom partials must be stored in the /layouts/_partials/ directory.
 # Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/

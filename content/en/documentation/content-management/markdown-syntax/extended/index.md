@@ -973,7 +973,7 @@ The extended code fences use the same triple backtick syntax as standard Markdow
 ````markdown
 ```language
 // Enter content specific to the language here
-// Supported languages include: goat, mermaid, echarts, timeline
+// Supported languages include: goat, mermaid, echarts, timeline, json
 ```
 ````
 
@@ -983,6 +983,7 @@ Each extended code fence type offers unique capabilities:
 - **Mermaid**: Professional diagrams including flowcharts, sequence diagrams, and more ([learn more][diagrams-support-mermaid])
 - **ECharts**: Interactive data visualization charts and graphs ([learn more][diagrams-support-echarts])
 - **Timeline**: Chronological event displays with rich formatting ([learn more][timeline-support])
+- **JSON**: Render JSON data structures with syntax highlighting and collapsible views ([learn more][json-viewer])
 
 These features are automatically enabled in FixIt theme and require no additional configuration. Simply use the appropriate language identifier in your code fence, and the content will be rendered using the corresponding engine.
 
@@ -1011,3 +1012,4 @@ These features are automatically enabled in FixIt theme and require no additiona
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
 [diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}
+[json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}

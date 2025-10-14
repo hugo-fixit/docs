@@ -1593,6 +1593,33 @@ cacheRemote
 optimise
 : `bool` Whether to resize and optimise images. Default is `false`.
 
+### jsonViewer
+
+{{< version 0.4.0 >}}
+
+`map` JSON Viewer Configuration, see [JSON Viewer Support][json-viewer].
+
+```toml
+[params]
+  [params.jsonViewer]
+    enable = true
+    expandDepth = 1
+    copyable = true
+    sort = false
+    boxed = true
+```
+
+enable
+: `bool` Whether to enable JSON Viewer. Default is `true`.
+expandDepth
+: `int` The depth to which the JSON structure is expanded by default. Default is `1`.
+copyable
+: `bool` Whether to show a copy button for copying JSON content. Default is `true`.
+sort
+: `bool` Whether to sort object keys alphabetically. Default is `false`.
+boxed
+: `bool` Whether to display the JSON content within a boxed layout. Default is `true`.
+
 ### customPartials
 
 {{< version 0.3.12 >}}
@@ -2060,6 +2087,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [pacejs]: https://github.com/CodeByZach/pace
 [postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [follow]: https://follow.is/
+[json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

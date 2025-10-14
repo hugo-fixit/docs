@@ -973,7 +973,7 @@ console.log('hello FixIt!');
 ````markdown
 ```language
 // 在这里输入特定语言的内容
-// 支持的语言包括：goat, mermaid, echarts, timeline
+// 支持的语言包括：goat, mermaid, echarts, timeline, json
 ```
 ````
 
@@ -983,6 +983,7 @@ console.log('hello FixIt!');
 - **Mermaid**：专业图表，包括流程图、时序图等（[了解更多][diagrams-support-mermaid]）
 - **ECharts**：交互式数据可视化图表和图形（[了解更多][diagrams-support-echarts]）
 - **Timeline**：具有丰富格式的时间线事件显示（[了解更多][timeline-support]）
+- **JSON**：格式化和可折叠的 JSON 数据视图（[了解更多][json-viewer]）
 
 这些功能在 FixIt 主题中自动启用，无需额外配置。只需在代码围栏中使用相应的语言标识符，内容就会使用相应的引擎进行渲染。
 
@@ -1011,3 +1012,4 @@ console.log('hello FixIt!');
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
 [diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}
+[json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}

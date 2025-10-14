@@ -1592,6 +1592,37 @@ cacheRemote
 optimise
 : `bool` 是否对图片进行缩放和优化，默认：`false`。
 
+### jsonViewer
+
+{{< version 0.4.0 >}}
+
+`map` JSON 查看器配置。详见 [JSON 查看器支持][json-viewer]。
+
+```toml
+[params]
+  [params.jsonViewer]
+    enable = true
+    expandDepth = 1
+    copyable = true
+    sort = false
+    boxed = true
+```
+
+enable
+: `bool` 是否启用 JSON 查看器，默认：`true`。
+
+expandDepth
+: `int` 初始展开深度级别。默认：`1`。
+
+copyable
+: `bool` 是否显示复制按钮，默认：`true`。
+
+sort
+: `bool` 是否按字母顺序排序对象键，默认：`false`。
+
+boxed
+: `bool` 是否在带边框的容器中显示 JSON，默认：`true`。
+
 ### customPartials
 
 {{< version 0.3.12 >}}
@@ -2059,6 +2090,7 @@ c4u
 [pacejs]: https://github.com/CodeByZach/pace
 [postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [follow]: https://follow.is/
+[json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
