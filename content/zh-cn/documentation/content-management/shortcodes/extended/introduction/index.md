@@ -460,9 +460,17 @@ _All pages and graphics on this web site are the property of FixIt._
 
 ## music
 
-`music` shortcode 基于 [APlayer][aplayer] 和 [MetingJS][metingjs] 库提供了一个内嵌的响应式音乐播放器。
+`music` shortcode 基于 [APlayer.js][aplayer] 和 [MetingJS][metingjs] 库提供了一个内嵌的响应式音乐播放器。
 
 完整文档请查看页面 [扩展 Shortcode - music][sc-music]。
+
+## aplayer 和 audio
+
+{{< version 0.4.0 >}}
+
+如果你需要针对音乐播放器的更多自定义选项（如自定义歌单，迷你模式，自定义音乐类型以及更多...），你可以使用 `aplayer` shortcode 配合 `audio` shortcode 以发挥 [APlayer.js][aplayer] 的全部功能。
+
+完整文档请查看页面 [扩展 Shortcode - aplayer][sc-aplayer]。
 
 ## spotify
 
@@ -516,11 +524,11 @@ _All pages and graphics on this web site are the property of FixIt._
 
 完整文档请查看页面 [扩展 Shortcode - gist][sc-gist]。
 
-## tabs
+## tabs 和 tab
 
 {{< version 0.4.0 >}}
 
-`tabs` shortcode 允许你创建具有各种样式和布局的标签页内容。
+`tabs` 和 `tab` shortcode 允许你创建具有各种样式和布局的标签页内容。
 
 完整文档请查看页面 [扩展 Shortcode - tabs][sc-tabs]。
 
@@ -544,6 +552,7 @@ _All pages and graphics on this web site are the property of FixIt._
 [sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
 [sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}
 [sc-music]: {{< relref path="/documentation/content-management/shortcodes/extended/music" >}}
+[sc-aplayer]: {{< relref path="/documentation/content-management/shortcodes/extended/aplayer" >}}
 [sc-spotify]: {{< relref path="/documentation/content-management/shortcodes/extended/spotify" >}}
 [sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}

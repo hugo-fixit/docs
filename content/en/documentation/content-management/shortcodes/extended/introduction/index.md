@@ -460,9 +460,17 @@ The full documentation is provided in [Extended Shortcode - mapbox][sc-mapbox].
 
 ## music
 
-The `music` shortcode embeds a responsive music player based on [APlayer][aplayer] and [MetingJS][metingjs] library.
+The `music` shortcode embeds a responsive music player based on [APlayer.js][aplayer] and [MetingJS][metingjs] library.
 
 The full documentation is provided in [Extended Shortcode - music][sc-music].
+
+## aplayer and audio
+
+{{< version 0.4.0 >}}
+
+If you need more advanced controls (custom playlist, mini mode, custom audio type...) over the music player, you can use the `aplayer` shortcode along with the `audio` shortcode to reach full power of [APlayer.js][aplayer].
+
+The full documentation is provided in [Extended Shortcode - aplayer][sc-aplayer].
 
 ## spotify
 
@@ -516,11 +524,11 @@ The `gist` shortcode embeds a GitHub Gist in your content.
 
 The full documentation is provided in [Extended Shortcode - gist][sc-gist].
 
-## tabs
+## tabs and tab
 
 {{< version 0.4.0 >}}
 
-The `tabs` shortcode allows you to create tabbed content with various styles and layouts.
+The `tabs` and `tab` shortcodes allow you to create tabbed content with various styles and layouts.
 
 The full documentation is provided in [Extended Shortcode - tabs][sc-tabs].
 
@@ -544,6 +552,7 @@ The full documentation is provided in [Extended Shortcode - tabs][sc-tabs].
 [sc-echarts]: {{< relref path="/documentation/content-management/shortcodes/extended/echarts" >}}
 [sc-mapbox]: {{< relref path="/documentation/content-management/shortcodes/extended/mapbox" >}}
 [sc-music]: {{< relref path="/documentation/content-management/shortcodes/extended/music" >}}
+[sc-aplayer]: {{< relref path="/documentation/content-management/shortcodes/extended/aplayer" >}}
 [sc-spotify]: {{< relref path="/documentation/content-management/shortcodes/extended/spotify" >}}
 [sc-bilibili]: {{< relref path="/documentation/content-management/shortcodes/extended/bilibili" >}}
 [sc-douyin]: {{< relref path="/documentation/content-management/shortcodes/extended/douyin" >}}

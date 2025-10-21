@@ -52,12 +52,12 @@ collections:
 一个使用自定义音乐 URL 的 `music` 示例：
 
 ```markdown
-{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" */>}}
+{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.webp" */>}}
 ```
 
 呈现的输出效果如下：
 
-{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
+{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.webp" >}}
 
 ## 音乐平台 URL 的自动识别 {#automatic-identification}
 

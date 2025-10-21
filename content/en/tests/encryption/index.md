@@ -188,7 +188,7 @@ series:
 
 ### 8 music
 
-{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
+{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.webp" >}}
 
 ### 9 bilibili
 

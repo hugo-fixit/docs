@@ -52,12 +52,12 @@ The `music` shortcode has the following named parameters by custom music URL:
 Example `music` input by custom music URL:
 
 ```markdown
-{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" */>}}
+{{</* music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.webp" */>}}
 ```
 
 The rendered output looks like this:
 
-{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.jpg" >}}
+{{< music url="/music/Wavelength.mp3" name=Wavelength artist=oldmanyoung cover="/images/Wavelength.webp" >}}
 
 ## Music Platform URL Automatic Identification {#automatic-identification}
 
