@@ -66,10 +66,10 @@
   url: https://clearsky.me
   description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
 
-- nickname: Qomarul Hasan
-  avatar: https://blog.qomarhsn.com/profile.webp
-  description: Explore technologies with a Linux & tech enthusiast. This blog offers programming tutorials, open-source project insights, and practical tech tips.
-  url: https://blog.qomarhsn.com
+# - nickname: Qomarul Hasan
+#   avatar: https://blog.qomarhsn.com/profile.webp
+#   description: Explore technologies with a Linux & tech enthusiast. This blog offers programming tutorials, open-source project insights, and practical tech tips.
+#   url: https://blog.qomarhsn.com
 
 - nickname: roderick's blog
   avatar: https://www.roderickchan.cn/images/avatar.png
