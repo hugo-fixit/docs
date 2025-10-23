@@ -462,7 +462,7 @@ disableThemeInject = false
   # 自定义社交链接如下
   [social.FixItDemo]
     id = "demo.fixit"
-    weight = 1000
+    Weight = 1000
     Template = "https://%v.lruihao.cn/"
     Title = "FixIt Demo"
     [social.FixItDemo.icon]
