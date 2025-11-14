@@ -68,5 +68,6 @@ ignoreLogs = [
   "error-remote-getjson",
   "error-missing-instagram-accesstoken",
   "err-youtube-remote",
-  "warning-dev-version"
+  "warning-dev-version",
+  "shortcode-x-getremote",
 ]
