@@ -5,7 +5,7 @@
 
 # FixIt theme version
 # FixIt 主题版本
-version = "0.2.X"
+version = "0.4.X"
 # website description for RSS, SEO, Open Graph and Twitter Cards
 # 网站描述，用于 RSS, SEO, Open Graph 和 Twitter Cards
 description = "A Clean, Elegant but Advanced Hugo Theme FixIt"
