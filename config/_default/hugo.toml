@@ -9,7 +9,7 @@ title = "FixIt"
 
 # Hostname (and path) to the root
 # 根目录的主机名（和路径）
-baseURL = "http://localhost:1313"
+baseURL = "http://localhost:1313/"
 
 # theme
 # 主题
