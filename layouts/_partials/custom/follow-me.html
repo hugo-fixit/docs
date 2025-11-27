@@ -4,7 +4,7 @@
   "hugo-fixit"
 -}}
 
-{{- if in $follows $author.name -}}
+{{- if in $follows $author.name | and (.Page.Store.Get "enableTocDialog") -}}
   <div class="follow-container">
     <a href="{{ $author.link }}" class="author-link" target="_blank">
       <img src="{{ $author.avatar }}" alt="{{ $author.name }}" class="author-avatar"> {{ $author.name }}
