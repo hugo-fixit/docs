@@ -128,10 +128,6 @@
       "path": "[[workspace]]/content/en/guides"
     },
     {
-      "title": "tests",
-      "path": "[[workspace]]/content/en/tests"
-    },
-    {
       "title": "documentation",
       "path": "[[workspace]]/content/en/documentation"
     },

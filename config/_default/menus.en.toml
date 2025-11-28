@@ -63,16 +63,6 @@
     icon = "fa-regular fa-comments"
 
 [[main]]
-  identifier = "tests"
-  name = "Tests"
-  url = "tests/"
-  title = "Tests for FixIt"
-  weight = 90
-  [main.params]
-    draft = true
-    icon = "fa-solid fa-flask text-success"
-
-[[main]]
   identifier = "github"
   pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
   url = "https://github.com/hugo-fixit/FixIt"
