@@ -179,10 +179,10 @@ hugo new --kind post-bundle posts/bar/
 - **linkToVscode**: {{< version 0.3.20 >}} if `true`, the footer of the content will be shown the link to the edit page in VSCode.
 - **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
 
+- **codeblock**: {{< version 0.4.0 >}} the same as the `params.codeblock` part in the [theme configuration][theme-config].
 - **toc**: the same as the `params.page.toc` part in the [theme configuration][theme-config].
 - **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [theme configuration][theme-config].
 - **heading**: {{< version 0.3.0 >}} the same as the `params.page.heading` part in the [theme configuration][theme-config].
-- **code**: the same as the `params.page.code` part in the [theme configuration][theme-config].
 - **math**: the same as the `params.page.math` part in the [theme configuration][theme-config].
 - **mapbox**: the same as the `params.page.mapbox` part in the [theme configuration][theme-config].
 - **share**: the same as the `params.page.share` part in the [theme configuration][theme-config].

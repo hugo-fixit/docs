@@ -180,10 +180,10 @@ hugo new --kind post-bundle posts/bar/
 - **linkToVscode**: {{< version 0.3.20 >}} 如果设为 `true`, 内容的页脚将显示指向在 VSCode 中打开的链接
 - **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
 
+- **codeblock**: {{< version 0.4.0 >}} 和 [主题配置][theme-config] 中的 `params.codeblock` 部分相同
 - **toc**: 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
 - **expirationReminder**: {{< version 0.2.13 >}} 和 [主题配置][theme-config] 中的 `params.page.expirationReminder` 部分相同
 - **heading**: {{< version 0.3.0 >}} 和 [主题配置][theme-config] 中的 `params.page.heading` 部分相同
-- **code**: 和 [主题配置][theme-config] 中的 `params.page.code` 部分相同
 - **math**: 和 [主题配置][theme-config] 中的 `params.page.math` 部分相同
 - **mapbox**: 和 [主题配置][theme-config] 中的 `params.page.mapbox` 部分相同
 - **share**: 和 [主题配置][theme-config] 中的 `params.page.share` 部分相同
