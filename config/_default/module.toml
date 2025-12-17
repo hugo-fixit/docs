@@ -1,23 +1,29 @@
 # -------------------------------------------------------------------------------------
-# Modules Configure | 模块配置
-# See: https://gohugo.io/hugo-modules/configuration/#module-config-imports
+# Modules Configuration | 模块配置
+# See: https://gohugo.io/configuration/module/
 # -------------------------------------------------------------------------------------
 
 [[imports]]
-  path = "github.com/hugo-fixit/FixIt"
+path = "github.com/hugo-fixit/FixIt"
+
 [[imports]]
-  path = "github.com/hugo-fixit/cmpt-translate"
+path = "github.com/hugo-fixit/cmpt-translate"
+
 [[imports]]
-  path = "github.com/hugo-fixit/component-projects"
+path = "github.com/hugo-fixit/component-projects"
+
 [[imports]]
-  path = "github.com/hugo-fixit/shortcode-asciinema"
+path = "github.com/hugo-fixit/shortcode-asciinema"
+
 [[imports]]
-  path = "github.com/hugo-fixit/shortcode-caniuse"
+path = "github.com/hugo-fixit/shortcode-caniuse"
+
 [[imports]]
-  path = "github.com/hugo-fixit/shortcode-missing-translation"
+path = "github.com/hugo-fixit/shortcode-missing-translation"
+
 [[imports]]
-  path = "github.com/hugo-fixit/shortcode-rewards"
+path = "github.com/hugo-fixit/shortcode-rewards"
 
 [hugoVersion]
-  extended = true
-  min = "0.147.7"
+extended = true
+min = "0.147.7"

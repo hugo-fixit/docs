@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
 # Taxonomies Configuration | 分类法配置
-# See: https://gohugo.io/content-management/taxonomies/#configure-taxonomies
+# See: https://gohugo.io/configuration/taxonomies/
 # -------------------------------------------------------------------------------------
 
 category = "categories"

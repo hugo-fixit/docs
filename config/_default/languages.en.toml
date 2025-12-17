@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
-# Multilingual and i18n | 多语言 i18n
-# See: https://gohugo.io/content-management/multilingual/#configure-languages
+# Languages Configuration | 多语言配置
+# See: https://gohugo.io/configuration/languages/
 # -------------------------------------------------------------------------------------
 
 weight = 1

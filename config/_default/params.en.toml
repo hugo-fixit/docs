@@ -4,56 +4,63 @@
 # -------------------------------------------------------------------------------------
 
 [gitInfo]
-  dir = "content/en"
+dir = "content/en"
 
 [search]
-  [search.algolia]
-    index = "index.en"
+
+[search.algolia]
+index = "index.en"
 
 [cse]
-  [cse.google]
-    cx = "27010f0a2633d4da4"
+
+[cse.google]
+cx = "27010f0a2633d4da4"
 
 [postChat]
-  userDesc = "If you have any questions about FixIt, you can ask me~"
-  defaultChatQuestions = [
-    "How to install the FixIt theme?",
-    "What features does the FixIt theme have?",
-    "FixIt theme ecosystem"
-  ]
-  defaultSearchQuestions = [
-    "Quick Start",
-    "Configure FixIt",
-    "Content Management",
-    "Advanced Usage"
-  ]
+userDesc = "If you have any questions about FixIt, you can ask me~"
+defaultChatQuestions = [
+  "How to install the FixIt theme?",
+  "What features does the FixIt theme have?",
+  "FixIt theme ecosystem"
+]
+defaultSearchQuestions = [
+  "Quick Start",
+  "Configure FixIt",
+  "Content Management",
+  "Advanced Usage"
+]
 
 [postSummary]
-  title = "AI Summary"
+title = "AI Summary"
 
 [header]
-  [header.subtitle]
-    name = "Theme for Hugo"
+
+[header.subtitle]
+name = "Theme for Hugo"
 
 [home]
-  [home.profile]
-    subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+
+[home.profile]
+subtitle = "A Clean, Elegant but Advanced Hugo Theme"
 
 [social]
-  GitHub = "hugo-fixit"
-  Twitter = "lruihao"
-  Email = "fixit@lruihao.cn"
-  RSS = true
-  [social.zsxq]
-    id = "CE3GF"
-    Weight = 70
-    Prefix = "https://t.zsxq.com/"
-    Title = "Hugo FixIt Planet"
-    [social.zsxq.icon]
-      Src = "images/icons/zsxq.svg"
-  [social.QQGroup]
-    id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
-    Title = "FixIt QQ group"
+GitHub = "hugo-fixit"
+Twitter = "lruihao"
+Email = "fixit@lruihao.cn"
+RSS = true
+
+[social.zsxq]
+id = "CE3GF"
+Weight = 70
+Prefix = "https://t.zsxq.com/"
+Title = "Hugo FixIt Planet"
+
+[social.zsxq.icon]
+Src = "images/icons/zsxq.svg"
+
+[social.QQGroup]
+id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
+Title = "FixIt QQ group"
 
 [watermark]
-  content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt Theme'
+content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt Theme'

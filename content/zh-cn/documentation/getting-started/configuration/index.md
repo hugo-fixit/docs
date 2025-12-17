@@ -63,7 +63,7 @@ cp themes/FixIt/hugo.toml hugo.toml
 
 ```toml
 [markup]
-  _merge = "shallow"
+_merge = "shallow"
 ```
 
 `_merge` 的配置值可以是以下之一：
@@ -82,11 +82,13 @@ deep
 >
 > ```toml
 > [markup]
->   _merge = "shallow"
+> _merge = "shallow"
+>
 > [outputs]
->   _merge = "shallow"
+> _merge = "shallow"
+>
 > [taxonomies]
->   _merge = "shallow"
+> _merge = "shallow"
 > ```
 
 ## 菜单配置 {#menu-configuration}
@@ -103,31 +105,33 @@ Hugo 有一个简单而强大的 [菜单系统][menu-system]。
 
 ```toml {data-open=true}
 [menu]
-  [[menu.main]]
-    identifier = ""
-    # {{< version 0.2.14 >}} 父级菜单项的标识符 (identifier)
-    parent = ""
-    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
-    pre = ""
-    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
-    post = ""
-    name = ""
-    url = ""
-    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
-    title = ""
-    weight = 1
-    # {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
-    [menu.main.params]
-      # 添加 CSS 类到菜单项
-      class = ""
-      # 是否为草稿菜单，类似草稿页面
-      draft = false
-      # {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
-      icon = ""
-      # {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
-      type = ""
-      # {{< version 0.3.9 >}} 是否显示子菜单项分割线
-      divided = false
+
+[[menu.main]]
+identifier = ""
+# {{< version 0.2.14 >}} 父级菜单项的标识符 (identifier)
+parent = ""
+# 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
+pre = ""
+# 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
+post = ""
+name = ""
+url = ""
+# 当你将鼠标悬停在此菜单链接上时，将显示的标题
+title = ""
+weight = 1
+
+# {{< version 0.2.14 >}} 向菜单项添加用户定义的内容
+[menu.main.params]
+# 添加 CSS 类到菜单项
+class = ""
+# 是否为草稿菜单，类似草稿页面
+draft = false
+# {{< version 0.2.16 >}} 添加 fontawesome 图标到菜单项
+icon = ""
+# {{< version 0.2.16 >}} 设置菜单项类型，可选值：["mobile", "desktop"]
+type = ""
+# {{< version 0.3.9 >}} 是否显示子菜单项分割线
+divided = false
 ```
 
 > [!TIP]
@@ -162,11 +166,12 @@ menu:
 
 ```toml
 [markup]
-  [markup.highlight]
-    codeFences = true
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
+
+[markup.highlight]
+codeFences = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
 ```
 
 ## 分类法配置 {#taxonomies-configuration}
@@ -175,9 +180,9 @@ FixIt 主题内置了三个维度的 [分类法][configure-taxonomies]：分类�
 
 ```toml
 [taxonomies]
-  category = "categories"
-  tag = "tags"
-  collection = "collections"
+category = "categories"
+tag = "tags"
+collection = "collections"
 ```
 
 如果你希望 `taxonomies` 配置始终保持和主题一致，你可以设置 `taxonomies._merge` 为 `shallow`。
@@ -207,46 +212,52 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 
 ```toml
 [mediaTypes]
-  [mediaTypes."text/markdown"]
-    suffixes = ["md"]
+
+[mediaTypes."text/markdown"]
+suffixes = [ "md" ]
 
 [outputFormats]
-  # {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
-  [outputFormats.archives]
-    path = "archives"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
-  [outputFormats.offline]
-    path = "offline"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
-  [outputFormats.readme]
-    baseName = "readme"
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.0 changed >}} 用于输出 baidu_urls.txt 文件的设置
-  [outputFormats.baidu_urls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.10 >}} 用于输出 search.json 文件的设置
-  [outputFormats.search]
-    baseName = "search"
-    mediaType = "application/json"
-    rel = "search"
-    isPlainText = true
-    isHTML = false
-    permalinkable = true
+
+# {{< version 0.3.0 >}} 用于输出 /archives/index.html 文件的设置
+[outputFormats.archives]
+path = "archives"
+baseName = "index"
+mediaType = "text/html"
+isPlainText = false
+isHTML = true
+permalinkable = true
+
+# {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
+[outputFormats.offline]
+path = "offline"
+baseName = "index"
+mediaType = "text/html"
+isPlainText = false
+isHTML = true
+permalinkable = true
+
+# {{< version 0.3.0 >}} 用于输出 readme.md 文件的设置
+[outputFormats.readme]
+baseName = "readme"
+mediaType = "text/markdown"
+isPlainText = true
+isHTML = false
+
+# {{< version 0.3.0 changed >}} 用于输出 baidu_urls.txt 文件的设置
+[outputFormats.baidu_urls]
+baseName = "baidu_urls"
+mediaType = "text/plain"
+isPlainText = true
+isHTML = false
+
+# {{< version 0.3.10 >}} 用于输出 search.json 文件的设置
+[outputFormats.search]
+baseName = "search"
+mediaType = "application/json"
+rel = "search"
+isPlainText = true
+isHTML = false
+permalinkable = true
 ```
 
 基本上你无需配置 `mediaTypes` 和 `outputFormats` 的配置，因为 **FixIt** 主题已经为你配置好了。你只需要配置 `outputs` 部分即可。
@@ -259,11 +270,26 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 # taxonomy = ["html"]
 # term = ["html", "rss"]
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
-  page = ["html", "markdown"]
-  section = ["html", "rss"]
-  taxonomy = ["html"]
-  term = ["html", "rss"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
+page = [
+  "html",
+  "markdown"
+]
+section = [
+  "html",
+  "rss"
+]
+taxonomy = [ "html" ]
+term = [
+  "html",
+  "rss"
+]
 ```
 
 如果你希望 `outputs` 配置始终保持和主题一致，你可以设置 `outputs._merge` 为 `shallow`。
@@ -278,11 +304,15 @@ Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能�
 baseURL = 'https://example.org/'
 languageCode = 'en'
 title = 'ABC Widgets, Inc.'
+
 [params]
-  version = "0.3.X"
-  description = "This is my new Hugo FixIt site"
-  keywords = ["Hugo", "FixIt"]
-  # ...
+version = "0.3.X"
+description = "This is my new Hugo FixIt site"
+keywords = [
+  "Hugo",
+  "FixIt"
+]
+# ...
 ```
 
 All theme configuration settings are as follows:
@@ -396,11 +426,12 @@ auto
 
 ```toml
 [params]
-  [params.author]
-    name = ""
-    email = ""
-    link = ""
-    avatar = ""
+
+[params.author]
+name = ""
+email = ""
+link = ""
+avatar = ""
 ```
 
 name
@@ -423,11 +454,12 @@ avatar
 
 ```toml
 [params]
-  [params.gitInfo]
-    repo = ""
-    branch = "main"
-    dir = "content"
-    issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
+
+[params.gitInfo]
+repo = ""
+branch = "main"
+dir = "content"
+issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 ```
 
 repo
@@ -448,16 +480,18 @@ issueTpl
 
 ```toml
 [params]
-  [params.app]
-    name = ""
-    shortName = ""
-    noFavicon = false
-    svgFavicon = ""
-    iconColor = "#5bbad5"
-    tileColor = "#da532c"
-    [params.app.themeColor]
-      light = "#f8f8f8"
-      dark = "#252627"
+
+[params.app]
+name = ""
+shortName = ""
+noFavicon = false
+svgFavicon = ""
+iconColor = "#5bbad5"
+tileColor = "#da532c"
+
+[params.app.themeColor]
+light = "#f8f8f8"
+dark = "#252627"
 ```
 
 title
@@ -487,29 +521,32 @@ themeColor
 
 ```toml
 [params]
-  [params.search]
-    enable = false
-    type = "fuse"
-    contentLength = 4000
-    placeholder = ""
-    maxResultLength = 10
-    snippetLength = 30
-    highlightTag = "em"
-    absoluteURL = false
-    [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
-    [params.search.fuse]
-      isCaseSensitive = false
-      minMatchCharLength = 2
-      findAllMatches = false
-      location = 0
-      threshold = 0.3
-      distance = 100
-      ignoreLocation = false
-      useExtendedSearch = false
-      ignoreFieldNorm = false
+
+[params.search]
+enable = false
+type = "fuse"
+contentLength = 4000
+placeholder = ""
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
+
+[params.search.algolia]
+index = ""
+appID = ""
+searchKey = ""
+
+[params.search.fuse]
+isCaseSensitive = false
+minMatchCharLength = 2
+findAllMatches = false
+location = 0
+threshold = 0.3
+distance = 100
+ignoreLocation = false
+useExtendedSearch = false
+ignoreFieldNorm = false
 ```
 
 enable
@@ -565,7 +602,13 @@ fuse
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
 ```
 
 {{< link href="/zh-cn/guides/algolia-atomic/" content="关于 algolia 的使用技巧" card=true >}}
@@ -578,12 +621,15 @@ fuse
 
 ```toml
 [params]
-  [params.cse]
-    engine = ""
-    resultsPage = "/search/"
-    [params.cse.google]
-      cx = ""
-    [params.cse.bing]
+
+[params.cse]
+engine = ""
+resultsPage = "/search/"
+
+[params.cse.google]
+cx = ""
+
+[params.cse.bing]
 ```
 
 engine
@@ -606,18 +652,21 @@ bing
 
 ```toml
 [params]
-  [params.header]
-    desktopMode = "sticky"
-    mobileMode = "auto"
-    [params.header.title]
-      logo = ""
-      name = ""
-      pre = ""
-      post = ""
-      typeit = false
-    [params.header.subtitle]
-      name = ""
-      typeit = false
+
+[params.header]
+desktopMode = "sticky"
+mobileMode = "auto"
+
+[params.header.title]
+logo = ""
+name = ""
+pre = ""
+post = ""
+typeit = false
+
+[params.header.subtitle]
+name = ""
+typeit = false
 ```
 
 desktopMode
@@ -652,12 +701,13 @@ subtitle
 
 ```toml
 [params]
-  [params.breadcrumb]
-    enable = false
-    sticky = false
-    showHome = false
-    separator = "/"
-    capitalize = false
+
+[params.breadcrumb]
+enable = false
+sticky = false
+showHome = false
+separator = "/"
+capitalize = false
 ```
 
 enable
@@ -685,9 +735,10 @@ capitalize
 
 ```toml
 [params]
-  [params.navigation]
-    inSection = false
-    reverse = false
+
+[params.navigation]
+inSection = false
+reverse = false
 ```
 
 inSection
@@ -702,30 +753,34 @@ reverse
 
 ```toml
 [params]
-  [params.footer]
-    enable = true
-    copyright = true
-    author = true
-    since = ""
-    gov = ""
-    icp = ""
-    license = ""
-    [params.footer.powered]
-      enable = true
-      hugoLogo = true
-      themeLogo = true
-    [params.footer.siteTime]
-      enable = false
-      animate = true
-      icon = "fa-solid fa-heartbeat"
-      pre = ""
-      value = ""
-    [params.footer.order]
-      powered = 0
-      copyright = 0
-      statistics = 0
-      visitor = 0
-      beian = 0
+
+[params.footer]
+enable = true
+copyright = true
+author = true
+since = ""
+gov = ""
+icp = ""
+license = ""
+
+[params.footer.powered]
+enable = true
+hugoLogo = true
+themeLogo = true
+
+[params.footer.siteTime]
+enable = false
+animate = true
+icon = "fa-solid fa-heartbeat"
+pre = ""
+value = ""
+
+[params.footer.order]
+powered = 0
+copyright = 0
+statistics = 0
+visitor = 0
+beian = 0
 ```
 
 enable
@@ -786,9 +841,10 @@ order
 
 ```toml
 [params]
-  [params.archives]
-    paginate = 20
-    dateFormat = "01-02"
+
+[params.archives]
+paginate = 20
+dateFormat = "01-02"
 ```
 
 paginate
@@ -803,12 +859,14 @@ dateFormat
 
 ```toml
 [params]
-  [params.section]
-    paginate = 20
-    dateFormat = "01-02"
-    [params.section.feed]
-      limit = -1
-      fullText = false
+
+[params.section]
+paginate = 20
+dateFormat = "01-02"
+
+[params.section.feed]
+limit = -1
+fullText = false
 ```
 
 paginate
@@ -827,12 +885,14 @@ feed
 
 ```toml
 [params]
-  [params.list]
-    paginate = 20
-    dateFormat = "01-02"
-    [params.list.feed]
-      limit = -1
-      fullText = false
+
+[params.list]
+paginate = 20
+dateFormat = "01-02"
+
+[params.list.feed]
+limit = -1
+fullText = false
 ```
 
 paginate
@@ -853,12 +913,13 @@ feed
 
 ```toml
 [params]
-  [params.recentlyUpdated]
-    archives = true
-    section = true
-    list = true
-    days = 30
-    maxCount = 10
+
+[params.recentlyUpdated]
+archives = true
+section = true
+list = true
+days = 30
+maxCount = 10
 ```
 
 archives
@@ -884,12 +945,13 @@ maxCount
 
 ```toml
 [params]
-  [params.tagcloud]
-    enable = false
-    min = 14
-    max = 32
-    peakCount = 10
-    orderby = "name"
+
+[params.tagcloud]
+enable = false
+min = 14
+max = 32
+peakCount = 10
+orderby = "name"
 ```
 
 enable
@@ -913,21 +975,24 @@ orderby
 
 ```toml
 [params]
-  [params.home]
-    paginate = 10
-    [params.home.profile]
-      enable = false
-      gravatarEmail = ""
-      avatarURL = ""
-      avatarMenu = ""
-      title = ""
-      subtitle = ""
-      typeit = true
-      social = true
-      disclaimer = ""
-    [params.home.posts]
-      enable = true
-      paginate = 6
+
+[params.home]
+paginate = 10
+
+[params.home.profile]
+enable = false
+gravatarEmail = ""
+avatarURL = ""
+avatarMenu = ""
+title = ""
+subtitle = ""
+typeit = true
+social = true
+disclaimer = ""
+
+[params.home.posts]
+enable = true
+paginate = 6
 ```
 
 rss
@@ -962,7 +1027,7 @@ posts
 
 ```toml
 [params.social]
-  Mastodon = "@xxxx"
+Mastodon = "@xxxx"
 ```
 
 生成的社交链接是 `https://mastodon.social/@xxxx`。
@@ -971,15 +1036,16 @@ posts
 
 ```toml
 [params.social]
-  [params.social.Mastodon]
-    # 排列图标时的权重（权重越大，图标的位置越靠后）
-    weight = 0
-    # 你的社交 ID
-    id = "@xxxx"
-    # 你的社交链接的前缀
-    prefix = "https://mastodon.gal/"
-    # 当鼠标停留在图标上时的提示内容
-    title = "Mastodon"
+
+[params.social.Mastodon]
+# 排列图标时的权重（权重越大，图标的位置越靠后）
+weight = 0
+# 你的社交 ID
+id = "@xxxx"
+# 你的社交链接的前缀
+prefix = "https://mastodon.gal/"
+# 当鼠标停留在图标上时的提示内容
+title = "Mastodon"
 ```
 
 所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`。
@@ -991,12 +1057,13 @@ posts
 
 ```toml
 [params]
-  [params.typeit]
-    speed = 100
-    cursorSpeed = 1000
-    cursorChar = "|"
-    duration = -1
-    loop = false
+
+[params.typeit]
+speed = 100
+cursorSpeed = 1000
+cursorChar = "|"
+duration = -1
+loop = false
 ```
 
 speed
@@ -1023,8 +1090,9 @@ loop
 
 ```toml
 [params]
-  [params.admonition]
-    # ban = "fa-solid fa-ban"
+
+[params.admonition]
+# ban = "fa-solid fa-ban"
 ```
 
 格式为 `<type> = <icon>`，其中 `<type>` 是 Admonition 类型，`<icon>` 是 Font Awesome 图标类。
@@ -1037,8 +1105,9 @@ loop
 
 ```toml
 [params]
-  [params.taskList]
-    # tip = "fa-regular fa-lightbulb"
+
+[params.taskList]
+# tip = "fa-regular fa-lightbulb"
 ```
 
 格式为 `<type> = <icon>`，其中 `<type>` 是任务列表类型，`<icon>` 是 Font Awesome 图标类。
@@ -1051,9 +1120,10 @@ loop
 
 ```toml
 [params]
-  [params.repoVersion]
-    url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
-    name = "FixIt"
+
+[params.repoVersion]
+url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+name = "FixIt"
 ```
 
 url
@@ -1070,17 +1140,21 @@ name
 
 ```toml
 [params]
-  [params.mermaid]
-    cdn = ""
-    zenuml = ""
-    themes = ["default", "dark"]
-    # optional values: ["strict", "loose", "antiscript", "sandbox"]
-    securityLevel = "loose"
-    # optional values: ["classic", "handDrawn"]
-    look = "handDrawn"
-    fontFamily = ""
-    layoutLoaders = []
-    layout = "dagre"
+
+[params.mermaid]
+cdn = ""
+zenuml = ""
+themes = [
+  "default",
+  "dark"
+]
+# optional values: ["strict", "loose", "antiscript", "sandbox"]
+securityLevel = "loose"
+# optional values: ["classic", "handDrawn"]
+look = "handDrawn"
+fontFamily = ""
+layoutLoaders = []
+layout = "dagre"
 ```
 
 cdn
@@ -1117,9 +1191,10 @@ layout
 
 ```toml
 [params]
-  [params.pangu]
-    enable = false
-    selector = "article"
+
+[params.pangu]
+enable = false
+selector = "article"
 ```
 
 enable
@@ -1137,17 +1212,18 @@ selector
 
 ```toml
 [params]
-  [params.watermark]
-    enable = false
-    content = ""
-    opacity = 0.1
-    width = 150
-    height = 20
-    rowSpacing = 60
-    colSpacing = 30
-    rotate = 15
-    fontSize = 0.85
-    fontFamily = "inherit"
+
+[params.watermark]
+enable = false
+content = ""
+opacity = 0.1
+width = 150
+height = 20
+rowSpacing = 60
+colSpacing = 30
+rotate = 15
+fontSize = 0.85
+fontFamily = "inherit"
 ```
 
 ### busuanzi
@@ -1158,11 +1234,12 @@ selector
 
 ```toml
 [params]
-  [params.busuanzi]
-    enable = false
-    source = "https://vercount.one/js"
-    siteViews = true
-    pageViews = true
+
+[params.busuanzi]
+enable = false
+source = "https://vercount.one/js"
+siteViews = true
+pageViews = true
 ```
 
 enable
@@ -1184,14 +1261,15 @@ pageViews
 
 ```toml
 [params]
-  [params.verification]
-    google = ""
-    bing = ""
-    yandex = ""
-    pinterest = ""
-    baidu = ""
-    so = ""
-    sogou = ""
+
+[params.verification]
+google = ""
+bing = ""
+yandex = ""
+pinterest = ""
+baidu = ""
+so = ""
+sogou = ""
 ```
 
 ### seo
@@ -1200,9 +1278,10 @@ pageViews
 
 ```toml
 [params]
-  [params.seo]
-    image = ""
-    thumbnailUrl = ""
+
+[params.seo]
+image = ""
+thumbnailUrl = ""
 ```
 
 image
@@ -1217,31 +1296,39 @@ thumbnailUrl
 
 ```toml
 [params]
-  [params.analytics]
-    enable = false
-    [params.analytics.google]
-      id = ""
-      anonymizeIP = true
-    [params.analytics.fathom]
-      id = ""
-      server = ""
-        [params.analytics.baidu]
-      id = ""
-    [params.analytics.umami]
-      data_website_id = ""
-      src = ""
-      data_host_url = ""
-      data_domains = ""
-    [params.analytics.plausible]
-      data_domain = ""
-      src = ""
-    [params.analytics.cloudflare]
-      token = ""
-    [params.analytics.splitbee]
-      enable = false
-      no_cookie = true
-      do_not_track = true
-      data_token = ""
+
+[params.analytics]
+enable = false
+
+[params.analytics.google]
+id = ""
+anonymizeIP = true
+
+[params.analytics.fathom]
+id = ""
+server = ""
+
+[params.analytics.baidu]
+id = ""
+
+[params.analytics.umami]
+data_website_id = ""
+src = ""
+data_host_url = ""
+data_domains = ""
+
+[params.analytics.plausible]
+data_domain = ""
+src = ""
+
+[params.analytics.cloudflare]
+token = ""
+
+[params.analytics.splitbee]
+enable = false
+no_cookie = true
+do_not_track = true
+data_token = ""
 ```
 
 enable
@@ -1302,12 +1389,14 @@ splitbee
 
 ```toml
 [params]
-  [params.cookieconsent]
-    enable = true
-    [params.cookieconsent.content]
-      message = ""
-      dismiss = ""
-      link = ""
+
+[params.cookieconsent]
+enable = true
+
+[params.cookieconsent.content]
+message = ""
+dismiss = ""
+link = ""
 ```
 
 enable
@@ -1326,7 +1415,7 @@ content
 
 ```toml
 [params.cdn]
-  data = ""
+data = ""
 ```
 
 data
@@ -1338,9 +1427,10 @@ data
 
 ```toml
 [params]
-  [params.compatibility]
-    polyfill = false
-    objectFit = false
+
+[params.compatibility]
+polyfill = false
+objectFit = false
 ```
 
 polyfill
@@ -1357,11 +1447,12 @@ objectFit
 
 ```toml
 [params]
-  [params.githubCorner]
-    enable = false
-    permalink = ""
-    title = "View source on GitHub"
-    position = "right"
+
+[params.githubCorner]
+enable = false
+permalink = ""
+title = "View source on GitHub"
+position = "right"
 ```
 
 enable
@@ -1384,10 +1475,11 @@ position
 
 ```toml
 [params]
-  [params.gravatar]
-    enable = false
-    host = "www.gravatar.com"
-    style = ""
+
+[params.gravatar]
+enable = false
+host = "www.gravatar.com"
+style = ""
 ```
 
 enable
@@ -1407,9 +1499,10 @@ style
 
 ```toml
 [params]
-  [params.backToTop]
-    enable = true
-    scrollpercent = false
+
+[params.backToTop]
+enable = true
+scrollpercent = false
 ```
 
 enable
@@ -1426,14 +1519,15 @@ scrollpercent
 
 ```toml
 [params]
-  [params.readingProgress]
-    enable = false
-    start = "left"
-    position = "top"
-    reversed = false
-    light = ""
-    dark = ""
-    height = "2px"
+
+[params.readingProgress]
+enable = false
+start = "left"
+position = "top"
+reversed = false
+light = ""
+dark = ""
+height = "2px"
 ```
 
 enable
@@ -1465,10 +1559,11 @@ height
 
 ```toml
 [params]
-  [params.pace]
-    enable = false
-    color = "blue"
-    theme = "minimal"
+
+[params.pace]
+enable = false
+color = "blue"
+theme = "minimal"
 ```
 
 enable
@@ -1491,34 +1586,35 @@ theme
 
 ```toml
 [params]
-  # PostChat: https://ai.zhheo.com/docs/addCode.html
-  [params.postChat]
-    enable = false
-    key = ""
-    # 用户如何发起聊天：["iframe", "magic"]
-    userMode = "iframe"
-    addButton = true
-    defaultInput = false
-    left = ""
-    bottom = ""
-    width = ""
-    height = ""
-    fill = ""
-    backgroundColor = ""
-    upLoadWeb = true
-    showInviteLink = true
-    userTitle = ""
-    userDesc = ""
-    # 需要屏蔽掉的 DOM 容器，例如：[".aplayer"]
-    blackDom = []
-    # 仅适用于 iframe 模式
-    frameWidth = ""     # 例如："375px"
-    frameHeight = ""    # 例如："600px"
-    # 仅适用于 magic 模式
-    userIcon = ""
-    defaultChatQuestions = []
-    defaultSearchQuestions = []
-    hotWords = true
+
+# PostChat: https://ai.zhheo.com/docs/addCode.html
+[params.postChat]
+enable = false
+key = ""
+# 用户如何发起聊天：["iframe", "magic"]
+userMode = "iframe"
+addButton = true
+defaultInput = false
+left = ""
+bottom = ""
+width = ""
+height = ""
+fill = ""
+backgroundColor = ""
+upLoadWeb = true
+showInviteLink = true
+userTitle = ""
+userDesc = ""
+# 需要屏蔽掉的 DOM 容器，例如：[".aplayer"]
+blackDom = []
+# 仅适用于 iframe 模式
+frameWidth = "" # 例如："375px"
+frameHeight = "" # 例如："600px"
+# 仅适用于 magic 模式
+userIcon = ""
+defaultChatQuestions = []
+defaultSearchQuestions = []
+hotWords = true
 ```
 
 ### postSummary
@@ -1533,18 +1629,19 @@ theme
 
 ```toml
 [params]
-  # PostSummary: https://ai.zhheo.com/docs/summary.html
-  [params.postSummary]
-    enable = false
-    key = ""
-    title = ""
-    # 主题选项：["", "simple", "yanzhi"]
-    theme = ""
-    postURL = ""
-    blacklist = ""
-    wordLimit = 1000
-    typingAnimate = true
-    beginningText = ""
+
+# PostSummary: https://ai.zhheo.com/docs/summary.html
+[params.postSummary]
+enable = false
+key = ""
+title = ""
+# 主题选项：["", "simple", "yanzhi"]
+theme = ""
+postURL = ""
+blacklist = ""
+wordLimit = 1000
+typingAnimate = true
+beginningText = ""
 ```
 
 ### feed
@@ -1553,12 +1650,14 @@ theme
 
 ```toml
 [params]
-  [params.feed]
-    limit = 10
-    fullText = true
-    [params.feed.follow]
-      feedId = ""
-      userId = ""
+
+[params.feed]
+limit = 10
+fullText = true
+
+[params.feed.follow]
+feedId = ""
+userId = ""
 ```
 
 limit
@@ -1581,9 +1680,10 @@ follow
 
 ```toml
 [params]
-  [params.image]
-  cacheRemote = false
-  optimise = false
+
+[params.image]
+cacheRemote = false
+optimise = false
 ```
 
 cacheRemote
@@ -1600,12 +1700,13 @@ optimise
 
 ```toml
 [params]
-  [params.jsonViewer]
-    enable = true
-    expandDepth = 1
-    copyable = true
-    sort = false
-    boxed = true
+
+[params.jsonViewer]
+enable = true
+expandDepth = 1
+copyable = true
+sort = false
+boxed = true
 ```
 
 enable
@@ -1639,9 +1740,10 @@ boxed
 
 ```toml
 [params]
-  [params.dev]
-    enable = false
-    c4u = false
+
+[params.dev]
+enable = false
+c4u = false
 ```
 
 enable
@@ -1656,397 +1758,450 @@ c4u
 
 ```toml
 [params]
-  [params.page]
-    # {{< version 0.2.18 >}} 是否启用文章作者头像
-    authorAvatar = true
-    # 是否在主页隐藏一篇文章
-    hiddenFromHomePage = false
-    # 是否在搜索结果中隐藏一篇文章
-    hiddenFromSearch = false
-    # {{< version 0.3.0 >}} 是否在相关文章中隐藏一篇文章
-    hiddenFromRelated = false
-    # {{< version 0.3.10 >}} 是否在 RSS、Atom 和 JSON feed 中隐藏一篇文章
-    hiddenFromFeed = false
-    # 是否使用 twemoji
-    twemoji = false
-    # {{< version 0.2.18 changed >}} 是否使用 lightgallery
-    # 设为 true，图片设置标题时，文章中的图片将以画廊形式呈现，例如：![alt](src "title")
-    # 设为 "force"，无论图片是否设置标题文章中的图片都将强制按照画廊形式呈现，例如：![alt](src)
-    lightgallery = false
-    # 是否使用 ruby 扩展语法
-    ruby = true
-    # 是否使用 fraction 扩展语法
-    fraction = true
-    # 是否使用 fontawesome 扩展语法
-    fontawesome = true
-    # 许可协议信息（支持 HTML 格式）
-    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-    # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = true
-    # {{< version 0.3.0 >}} 是否显示查看文章源码的链接
-    linkToSource = true
-    # {{< version 0.3.0 >}} 是否显示编辑文章的链接
-    linkToEdit = true
-    # {{< version 0.3.0 >}} 是否显示报告文章问题的链接
-    linkToReport = true
-    # {{< version 0.3.20 >}} 是否显示在 VSCode 中查看文章的链接
-    linkToVscode = true
-    # {{< version 0.3.10 changed >}} 页面样式 ["narrow", "normal", "wide", ...]
-    pageStyle = "normal"
-    # {{< version 0.2.17 changed >}} 开启自动书签支持
-    # 如果为 true，则在关闭页面时保存阅读进度
-    autoBookmark = false
-    # {{< version 0.2.17 >}} 是否使用 字数统计
-    wordCount = true
-    # {{< version 0.2.17 >}} 是否使用 预计阅读
-    readingTime = true
-    # {{< version 0.2.17 >}} 文章结束标志
-    endFlag = ""
-    # {{< version 0.2.18 >}} 是否开启即时页面
-    instantPage = false
-    # {{< version 0.3.0 >}} 是否在侧边栏显示集合列表
-    collectionList = false
-    # {{< version 0.3.0 >}} 是否在文章末尾显示集合导航
-    collectionNavigation = false
 
-    # {{< version 0.2.15 >}} 转载配置
-    [params.page.repost]
-      enable = false
-      url = ""
-    # 目录配置
-    [params.page.toc]
-      # 是否使用目录
-      enable = true
-      # 是否保持使用文章前面的静态目录
-      keepStatic = false
-      # 是否使侧边目录自动折叠展开
-      auto = true
-      # {{< version 0.2.13 >}} 目录位置 ["left", "right"]
-      position = "right"
-      # {{< version 0.3.12 >}} 取代 `markup.tableOfContents` 设置
-      ordered = false
-      startLevel = 2
-      endLevel = 6
-      # {{< version 0.4.0 >}} 是否降低内容中的 H1 标题级别
-      decreaseH1 = false
-    # {{< version 0.2.13 >}} 在文章开头显示提示信息，提醒读者文章内容可能过时
-    [params.page.expirationReminder]
-      enable = false
-      # 如果文章最后更新于这天数之前，显示提醒
-      reminder = 90
-      # 如果文章最后更新于这天数之前，显示警告
-      warning = 180
-      # 如果文章到期是否关闭评论
-      closeComment = false
-    # {{< version 0.3.0 >}} 页面标题配置
-    [params.page.heading]
-      # {{< version 0.3.6 >}} 是否自动大写标题
-      capitalize = false
-      # {{< version 0.3.12 changed >}} 必须设置 `params.page.toc.ordered` 为 true
-      [params.page.heading.number]
-        # 是否启用自动标题编号
-        enable = false
-        [params.page.heading.number.format]
-          h1 = "{title}"
-          h2 = "{h2} {title}"
-          h3 = "{h2}.{h3} {title}"
-          h4 = "{h2}.{h3}.{h4} {title}"
-          h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-          h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-    # 代码块包装器配置
-    [params.page.code]
-      # {{< version 0.3.9 >}} 是否启用代码块包装器
-      enable = true
-      # 是否显示代码块包装器的复制按钮
-      copy = true
-      # {{< version 0.2.13 >}} 是否显示代码块包装器的编辑按钮
-      edit = true
-      # 默认展开显示的代码行数
-      maxShownLines = 10
-    # {{< version 0.4.0 changed >}} 数学公式配置
-    # See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
-    [params.page.math]
-      enable = true
-      # 数学公式渲染引擎，可选值：["katex", "mathjax"]
-      type = "katex"
-      # KaTeX server-side rendering (https://katex.org)
-      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
-      [params.page.math.katex]
-        # KaTeX extension copy-tex
-        copyTex = true
-        throwOnError = false
-        errorColor = "#ff4949"
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.katex.macros]
-          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
-      # MathJax server-side rendering (https://www.mathjax.org)
-      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-      [params.page.math.mathjax]
-        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        [params.page.math.mathjax.packages]
-          # "[+]" = ["configmacros"]
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.mathjax.macros]
-          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
-        [params.page.math.mathjax.loader]
-          load = ["ui/safe"]
-          [params.page.math.mathjax.loader.paths]
-            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-          # more loader config e.g source, dependencies, provides etc.
-        [params.page.math.mathjax.options]
-          enableMenu = true
-          # HTML tags that won't be searched for math
-          skipHtmlTags = [
-            "script",
-            "noscript",
-            "style",
-            "textarea",
-            "pre",
-            "code",
-            "math",
-            "select",
-            "option",
-            "mjx-container"
-          ]
-          # class that marks tags not to search
-          ignoreHtmlClass = "mathjax_ignore"
-          # HTML tags that can appear within math
-          [params.page.math.mathjax.options.includeHtmlTags]
-            # "#comment" = ""
-            # br = "\n"
-            # wbr = ""
-    # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
-    [params.page.mapbox]
-      # Mapbox GL JS 的 access token
-      accessToken = ""
-      # 浅色主题的地图样式
-      lightStyle = "mapbox://styles/mapbox/light-v11"
-      # 深色主题的地图样式
-      darkStyle = "mapbox://styles/mapbox/dark-v11"
-      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
-      navigation = true
-      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}
-      geolocate = true
-      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol" ScaleControl >}}
-      scale = true
-      # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
-      fullscreen = true
-    # {{< version 0.3.0 >}} [试验性功能] 缓存图床图片到本地，详见：https://github.com/hugo-fixit/FixIt/pull/362
-    [params.page.cacheRemoteImages]
-      enable = false
-      # 用本地图片链接替换远程图片链接 (放置在 public/images/remote/)
-      replace = false
-    # {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
-    [params.page.related]
-      enable = false
-      count = 5
-      # {{< version 0.3.20 >}} 相关内容显示的位置，可选值：["aside", "footer"]
-      position = ["aside", "footer"]
-    # {{< version 0.2.17 >}} 赞赏设置
-    [params.page.reward]
-      enable = false
-      animation = false
-      # 相对于页脚的位置，可选值：["before", "after"]
-      position = "after"
-      # comment = "Buy me a coffee"
-      # {{< version 0.2.18 >}} 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
-      mode = "static"
-      [params.page.reward.ways]
-        # wechatpay = "/images/wechatpay.png"
-        # alipay = "/images/alipay.png"
-        # paypal = "/images/paypal.png"
-        # bitcoin = "/images/bitcoin.png"
-    # 文章页面的分享信息设置
-    [params.page.share]
-      enable = true
-      Twitter = true
-      Facebook = true
-      Linkedin = false
-      Whatsapp = true
-      Pinterest = false
-      Tumblr = false
-      HackerNews = false
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = true
-      Instapaper = false
-      Pocket = false
-      Flipboard = false
-      Weibo = true
-      Myspace = true
-      Blogger = true
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = true
-      Skype = false
-      Trello = false
-      Mix = false
-    # {{< version 0.2.15 changed >}} 评论系统设置
-    [params.page.comment]
-      enable = false
-      # {{< version 0.2.13 >}} {{< link "https://artalk.js.org/" Artalk >}} 评论系统设置 (https://artalk.js.org/)
-      [params.page.comment.artalk]
-        enable = false
-        server = "https://yourdomain"
-        site = "默认站点"
-        # {{< version 0.3.3 >}} 是否使用后端配置
-        useBackendConf = false
-        placeholder = ""
-        noComment = ""
-        sendBtn = ""
-        editorTravel = true
-        flatMode = "auto"
-        # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
-        lightgallery = false
-        locale = "" # {{< version 0.2.15 >}}
-        # {{< version 0.2.18 >}}
-        emoticons = ""
-        nestMax = 2
-        nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
-        vote = true
-        voteDown = false
-        uaBadge = true
-        listSort = true
-        imgUpload = true
-        preview = true
-        versionCheck = true
-      # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} 评论系统设置 (https://disqus.com)
-      [params.page.comment.disqus]
-        enable = false
-        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-        shortname = ""
-      # {{< version 0.1.1 >}} {{< link "https://github.com/gitalk/gitalk" Gitalk >}} 评论系统设置 (https://github.com/gitalk/gitalk)
-      [params.page.comment.gitalk]
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # {{< link "https://github.com/xCss/Valine" Valine >}} 评论系统设置 (https://github.com/xCss/Valine)
-      [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta = ['nick','mail','link']
-        requiredFields = []
-        pageSize = 10
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # emoji 数据文件名称，默认是 "google.yml"
-        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
-        # 可以在你的项目下相同路径存放你自己的数据文件：
-        # "assets/lib/valine/emoji/"
-        emoji = ""
-        commentCount = true # {{< version 0.2.13 >}}
-      # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} 评论系统设置 (https://waline.js.org)
-      [params.page.comment.waline]
-        enable = false
-        serverURL = ""
-        pageview = false # {{< version 0.2.15 >}}
-        emoji = ["//unpkg.com/@waline/emojis@1.1.0/weibo"]
-        meta = ["nick", "mail", "link"]
-        requiredMeta = []
-        login = "enable"
-        wordLimit = 0
-        pageSize = 10
-        imageUploader = false # {{< version 0.2.15 >}}
-        highlighter = false # {{< version 0.2.15 >}}
-        comment = false # {{< version 0.2.15 >}}
-        texRenderer = false # {{< version 0.2.16 >}}
-        search = false # {{< version 0.2.16 >}}
-        recaptchaV3Key = "" # {{< version 0.2.16 >}}
-        turnstileKey = "" # {{< version 0.3.8 >}}
-        reaction = false # {{< version 0.2.18 >}}
-      # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置 (https://developers.facebook.com/docs/plugins/comments)
-      [params.page.comment.facebook]
-        enable = false
-        width = "100%"
-        numPosts = 10
-        appId = ""
-        languageCode = "zh_CN"
-      # {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置 (https://comments.app)
-      [params.page.comment.telegram]
-        enable = false
-        siteID = ""
-        limit = 5
-        height = ""
-        color = ""
-        colorful = true
-        dislikes = false
-        outlined = false
-      # {{< link "https://commento.io/" "Commento" >}} 评论系统设置 (https://commento.io)
-      [params.page.comment.commento]
-        enable = false
-      # {{< link "https://utteranc.es/" "Utterances" >}} 评论系统设置 (https://utteranc.es)
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-      # {{< version 0.2.13 >}} {{< link "https://twikoo.js.org/" "Twikoo" >}} 评论系统设置 (https://twikoo.js.org/)
-      [params.page.comment.twikoo]
-        enable = false
-        envId = ""
-        region = ""
-        path = ""
-        visitor = true
-        commentCount = true
-        # {{< version 0.2.17 changed >}} 启用 lightgallery 支持
-        lightgallery = false
-        # {{< version 0.2.17 >}} 启用 Katex 支持
-        katex = false
-      # {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} 评论系统设置
-      [params.page.comment.giscus]
-        enable = false
-        repo = ""
-        repoId = ""
-        category = ""
-        categoryId = ""
-        mapping = ""
-        origin = "https://giscus.app" # {{< version 0.3.7 >}} Or set it to your self-hosted domain
-        strict = "0" # {{< version 0.2.18 >}}
-        term = ""
-        reactionsEnabled = "1"
-        emitMetadata = "0"
-        inputPosition = "bottom" # ["top", "bottom"]
-        lightTheme = "light"
-        darkTheme = "dark"
-        lazyLoad = true
-    # 第三方库配置
-    [params.page.library]
-      [params.page.library.css]
-        # someCSS = "some.css"
-        # 位于 "assets/"
-        # 或者
-        # someCSS = "https://cdn.example.com/some.css"
-      [params.page.library.js]
-        # someJavascript = "some.js"
-        # 位于 "assets/"
-        # 或者
-        # someJavascript = "https://cdn.example.com/some.js"
-    # 页面 SEO 配置
-    [params.page.seo]
-      # 图片 URL
-      images = []
-      # 出版者信息
-      [params.page.seo.publisher]
-        name = ""
-        logoUrl = ""
+[params.page]
+# {{< version 0.2.18 >}} 是否启用文章作者头像
+authorAvatar = true
+# 是否在主页隐藏一篇文章
+hiddenFromHomePage = false
+# 是否在搜索结果中隐藏一篇文章
+hiddenFromSearch = false
+# {{< version 0.3.0 >}} 是否在相关文章中隐藏一篇文章
+hiddenFromRelated = false
+# {{< version 0.3.10 >}} 是否在 RSS、Atom 和 JSON feed 中隐藏一篇文章
+hiddenFromFeed = false
+# 是否使用 twemoji
+twemoji = false
+# {{< version 0.2.18 changed >}} 是否使用 lightgallery
+# 设为 true，图片设置标题时，文章中的图片将以画廊形式呈现，例如：![alt](src "title")
+# 设为 "force"，无论图片是否设置标题文章中的图片都将强制按照画廊形式呈现，例如：![alt](src)
+lightgallery = false
+# 是否使用 ruby 扩展语法
+ruby = true
+# 是否使用 fraction 扩展语法
+fraction = true
+# 是否使用 fontawesome 扩展语法
+fontawesome = true
+# 许可协议信息（支持 HTML 格式）
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+# 是否显示原始 Markdown 文档内容的链接
+linkToMarkdown = true
+# {{< version 0.3.0 >}} 是否显示查看文章源码的链接
+linkToSource = true
+# {{< version 0.3.0 >}} 是否显示编辑文章的链接
+linkToEdit = true
+# {{< version 0.3.0 >}} 是否显示报告文章问题的链接
+linkToReport = true
+# {{< version 0.3.20 >}} 是否显示在 VSCode 中查看文章的链接
+linkToVscode = true
+# {{< version 0.3.10 changed >}} 页面样式 ["narrow", "normal", "wide", ...]
+pageStyle = "normal"
+# {{< version 0.2.17 changed >}} 开启自动书签支持
+# 如果为 true，则在关闭页面时保存阅读进度
+autoBookmark = false
+# {{< version 0.2.17 >}} 是否使用 字数统计
+wordCount = true
+# {{< version 0.2.17 >}} 是否使用 预计阅读
+readingTime = true
+# {{< version 0.2.17 >}} 文章结束标志
+endFlag = ""
+# {{< version 0.2.18 >}} 是否开启即时页面
+instantPage = false
+# {{< version 0.3.0 >}} 是否在侧边栏显示集合列表
+collectionList = false
+# {{< version 0.3.0 >}} 是否在文章末尾显示集合导航
+collectionNavigation = false
 
+# {{< version 0.2.15 >}} 转载配置
+[params.page.repost]
+enable = false
+url = ""
+
+# 目录配置
+[params.page.toc]
+# 是否使用目录
+enable = true
+# 是否保持使用文章前面的静态目录
+keepStatic = false
+# 是否使侧边目录自动折叠展开
+auto = true
+# {{< version 0.2.13 >}} 目录位置 ["left", "right"]
+position = "right"
+# {{< version 0.3.12 >}} 取代 `markup.tableOfContents` 设置
+ordered = false
+startLevel = 2
+endLevel = 6
+# {{< version 0.4.0 >}} 是否降低内容中的 H1 标题级别
+decreaseH1 = false
+
+# {{< version 0.2.13 >}} 在文章开头显示提示信息，提醒读者文章内容可能过时
+[params.page.expirationReminder]
+enable = false
+# 如果文章最后更新于这天数之前，显示提醒
+reminder = 90
+# 如果文章最后更新于这天数之前，显示警告
+warning = 180
+# 如果文章到期是否关闭评论
+closeComment = false
+
+# {{< version 0.3.0 >}} 页面标题配置
+[params.page.heading]
+# {{< version 0.3.6 >}} 是否自动大写标题
+capitalize = false
+
+# {{< version 0.3.12 changed >}} 必须设置 `params.page.toc.ordered` 为 true
+[params.page.heading.number]
+# 是否启用自动标题编号
+enable = false
+
+[params.page.heading.number.format]
+h1 = "{title}"
+h2 = "{h2} {title}"
+h3 = "{h2}.{h3} {title}"
+h4 = "{h2}.{h3}.{h4} {title}"
+h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+# 代码块包装器配置
+[params.page.code]
+# {{< version 0.3.9 >}} 是否启用代码块包装器
+enable = true
+# 是否显示代码块包装器的复制按钮
+copy = true
+# {{< version 0.2.13 >}} 是否显示代码块包装器的编辑按钮
+edit = true
+# 默认展开显示的代码行数
+maxShownLines = 10
+
+# {{< version 0.4.0 changed >}} 数学公式配置
+# See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
+[params.page.math]
+enable = true
+# 数学公式渲染引擎，可选值：["katex", "mathjax"]
+type = "katex"
+
+# KaTeX server-side rendering (https://katex.org)
+# KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+[params.page.math.katex]
+# KaTeX extension copy-tex
+copyTex = true
+throwOnError = false
+errorColor = "#ff4949"
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.katex.macros]
+# "\\f" = "#1f(#2)"  # usage: $\f{a}{b}$
+
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
+[params.page.math.mathjax.packages]
+# "[+]" = ["configmacros"]
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.mathjax.macros]
+# bold = ["{\\bf #1}", 1]  # usage: $\bold{math}$
+
+[params.page.math.mathjax.loader]
+load = [ "ui/safe" ]
+
+[params.page.math.mathjax.loader.paths]
+# custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
+# more loader config e.g source, dependencies, provides etc.
+[params.page.math.mathjax.options]
+enableMenu = true
+# HTML tags that won't be searched for math
+skipHtmlTags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container"
+]
+# class that marks tags not to search
+ignoreHtmlClass = "mathjax_ignore"
+
+# HTML tags that can appear within math
+[params.page.math.mathjax.options.includeHtmlTags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
+
+# {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} 配置 (https://docs.mapbox.com/mapbox-gl-js)
+[params.page.mapbox]
+# Mapbox GL JS 的 access token
+accessToken = ""
+# 浅色主题的地图样式
+lightStyle = "mapbox://styles/mapbox/light-v11"
+# 深色主题的地图样式
+darkStyle = "mapbox://styles/mapbox/dark-v11"
+# 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
+navigation = true
+# 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}
+geolocate = true
+# 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol" ScaleControl >}}
+scale = true
+# 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
+fullscreen = true
+
+# {{< version 0.3.0 >}} [试验性功能] 缓存图床图片到本地
+# 详见：https://github.com/hugo-fixit/FixIt/pull/362
+[params.page.cacheRemoteImages]
+enable = false
+# 用本地图片链接替换远程图片链接 (放置在 public/images/remote/)
+replace = false
+
+# {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
+[params.page.related]
+enable = false
+count = 5
+# {{< version 0.3.20 >}} 相关内容显示的位置，可选值：["aside", "footer"]
+position = [
+  "aside",
+  "footer"
+]
+
+# {{< version 0.2.17 >}} 赞赏设置
+[params.page.reward]
+enable = false
+animation = false
+# 相对于页脚的位置，可选值：["before", "after"]
+position = "after"
+# comment = "Buy me a coffee"
+# {{< version 0.2.18 >}} 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
+mode = "static"
+
+[params.page.reward.ways]
+# wechatpay = "/images/wechatpay.png"
+# alipay = "/images/alipay.png"
+# paypal = "/images/paypal.png"
+# bitcoin = "/images/bitcoin.png"
+
+# 文章页面的分享信息设置
+[params.page.share]
+enable = true
+Twitter = true
+Facebook = true
+Linkedin = false
+Whatsapp = true
+Pinterest = false
+Tumblr = false
+HackerNews = false
+Reddit = false
+VK = false
+Buffer = false
+Xing = false
+Line = true
+Instapaper = false
+Pocket = false
+Flipboard = false
+Weibo = true
+Myspace = true
+Blogger = true
+Baidu = false
+Odnoklassniki = false
+Evernote = true
+Skype = false
+Trello = false
+Mix = false
+
+# {{< version 0.2.15 changed >}} 评论系统设置
+[params.page.comment]
+enable = false
+
+# {{< version 0.2.13 >}} {{< link "https://artalk.js.org/" Artalk >}} 评论系统设置 (https://artalk.js.org/)
+[params.page.comment.artalk]
+enable = false
+server = "https://yourdomain"
+site = "默认站点"
+# {{< version 0.3.3 >}} 是否使用后端配置
+useBackendConf = false
+placeholder = ""
+noComment = ""
+sendBtn = ""
+editorTravel = true
+flatMode = "auto"
+# {{< version 0.2.17 changed >}} 启用 lightgallery 支持
+lightgallery = false
+locale = "" # {{< version 0.2.15 >}}
+# {{< version 0.2.18 >}}
+emoticons = ""
+nestMax = 2
+nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+vote = true
+voteDown = false
+uaBadge = true
+listSort = true
+imgUpload = true
+preview = true
+versionCheck = true
+
+# {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} 评论系统设置 (https://disqus.com)
+[params.page.comment.disqus]
+enable = false
+# Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+shortname = ""
+
+# {{< version 0.1.1 >}} {{< link "https://github.com/gitalk/gitalk" Gitalk >}} 评论系统设置 (https://github.com/gitalk/gitalk)
+[params.page.comment.gitalk]
+enable = false
+owner = ""
+repo = ""
+clientId = ""
+clientSecret = ""
+
+# {{< link "https://github.com/xCss/Valine" Valine >}} 评论系统设置 (https://github.com/xCss/Valine)
+[params.page.comment.valine]
+enable = false
+appId = ""
+appKey = ""
+placeholder = ""
+avatar = "mp"
+meta = [
+  'nick',
+  'mail',
+  'link'
+]
+requiredFields = []
+pageSize = 10
+lang = ""
+visitor = true
+recordIP = true
+highlight = true
+enableQQ = false
+serverURLs = ""
+# emoji 数据文件名称，默认是 "google.yml"
+# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+# 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
+# 可以在你的项目下相同路径存放你自己的数据文件：
+# "assets/lib/valine/emoji/"
+emoji = ""
+commentCount = true
+
+# {{< version 0.2.13 >}}
+# {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} 评论系统设置 (https://waline.js.org)
+[params.page.comment.waline]
+enable = false
+serverURL = ""
+pageview = false # {{< version 0.2.15 >}}
+emoji = [ "//unpkg.com/@waline/emojis@1.1.0/weibo" ]
+meta = [
+  "nick",
+  "mail",
+  "link"
+]
+requiredMeta = []
+login = "enable"
+wordLimit = 0
+pageSize = 10
+imageUploader = false # {{< version 0.2.15 >}}
+highlighter = false # {{< version 0.2.15 >}}
+comment = false # {{< version 0.2.15 >}}
+texRenderer = false # {{< version 0.2.16 >}}
+search = false # {{< version 0.2.16 >}}
+recaptchaV3Key = "" # {{< version 0.2.16 >}}
+turnstileKey = "" # {{< version 0.3.8 >}}
+reaction = false
+
+# {{< version 0.2.18 >}}
+# {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook 评论系统" >}}设置 (https://developers.facebook.com/docs/plugins/comments)
+[params.page.comment.facebook]
+enable = false
+width = "100%"
+numPosts = 10
+appId = ""
+languageCode = "zh_CN"
+
+# {{< link "https://comments.app/" "Telegram Comments" >}} 评论系统设置 (https://comments.app)
+[params.page.comment.telegram]
+enable = false
+siteID = ""
+limit = 5
+height = ""
+color = ""
+colorful = true
+dislikes = false
+outlined = false
+
+# {{< link "https://commento.io/" "Commento" >}} 评论系统设置 (https://commento.io)
+[params.page.comment.commento]
+enable = false
+
+# {{< link "https://utteranc.es/" "Utterances" >}} 评论系统设置 (https://utteranc.es)
+[params.page.comment.utterances]
+enable = false
+# owner/repo
+repo = ""
+issueTerm = "pathname"
+label = ""
+lightTheme = "github-light"
+darkTheme = "github-dark"
+
+# {{< version 0.2.13 >}} {{< link "https://twikoo.js.org/" "Twikoo" >}} 评论系统设置 (https://twikoo.js.org/)
+[params.page.comment.twikoo]
+enable = false
+envId = ""
+region = ""
+path = ""
+visitor = true
+commentCount = true
+# {{< version 0.2.17 changed >}} 启用 lightgallery 支持
+lightgallery = false
+# {{< version 0.2.17 >}} 启用 Katex 支持
+katex = false
+
+# {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} 评论系统设置
+[params.page.comment.giscus]
+enable = false
+repo = ""
+repoId = ""
+category = ""
+categoryId = ""
+mapping = ""
+origin = "https://giscus.app" # {{< version 0.3.7 >}} Or set it to your self-hosted domain
+strict = "0" # {{< version 0.2.18 >}}
+term = ""
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom" # ["top", "bottom"]
+lightTheme = "light"
+darkTheme = "dark"
+lazyLoad = true
+
+# 第三方库配置
+[params.page.library]
+
+[params.page.library.css]
+# someCSS = "some.css"
+# 位于 "assets/"
+# 或者
+# someCSS = "https://cdn.example.com/some.css"
+
+[params.page.library.js]
+# someJavascript = "some.js"
+# 位于 "assets/"
+# 或者
+# someJavascript = "https://cdn.example.com/some.js"
+
+# 页面 SEO 配置
+[params.page.seo]
+# 图片 URL
+images = []
+
+# 出版者信息
+[params.page.seo.publisher]
+name = ""
+logoUrl = ""
 ```
 
 ## Favicon 生成

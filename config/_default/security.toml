@@ -1,18 +1,32 @@
 # -------------------------------------------------------------------------------------
 # Security policy | 安全策略
-# See: https://gohugo.io/about/security-model/#security-policy
+# See: https://gohugo.io/about/security/
 # -------------------------------------------------------------------------------------
 
 enableInlineShortcodes = false
+
 [exec]
-  allow = ['^(dart-)?sass(-embedded)?$', '^git$', '^go$', '^npx$', '^postcss$', '^code$']
-  osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$']
+allow = [
+  '^(dart-)?sass(-embedded)?$',
+  '^git$',
+  '^go$',
+  '^npx$',
+  '^postcss$',
+  '^code$'
+]
+osEnv = [ '(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG)$' ]
+
 [funcs]
-  getenv = ['^HUGO_', '^CI$']
+getenv = [
+  '^HUGO_',
+  '^CI$'
+]
+
 [goTemplates]
-  allowActionJSTmpl = false
+allowActionJSTmpl = false
+
 [http]
-  # TODO 验证 avif 是否支持
-  # mediaTypes = ['^image/avif$']
-  methods = ['(?i)GET|POST']
-  urls = ['.*']
+# TODO 验证 avif 是否支持
+# mediaTypes = ['^image/avif$']
+methods = [ '(?i)GET|POST' ]
+urls = [ '.*' ]

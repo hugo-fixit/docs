@@ -4,70 +4,82 @@
 # -------------------------------------------------------------------------------------
 
 [[main]]
-  identifier = "releases"
-  parent = "documentation"
-  name = "Releases"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
-  url = "https://github.com/hugo-fixit/FixIt/releases"
-  weight = 5
-  [main.params]
-    icon = "fa-solid fa-code-branch"
-[[main]]
-  identifier = "archives"
-  parent = "documentation"
-  name = "Archives"
-  url = "archives/"
-  weight = 20
-  [main.params]
-    icon = "fa-solid fa-archive"
-    divided = true
-[[main]]
-  identifier = "categories"
-  parent = "documentation"
-  name = "Categories"
-  url = "categories/"
-  weight = 21
-  [main.params]
-    icon = "fa-solid fa-folder-tree"
-[[main]]
-  identifier = "collections"
-  parent = "documentation"
-  name = "Collections"
-  url = "collections/"
-  weight = 22
-  [main.params]
-    icon = "fa-solid fa-layer-group"
-[[main]]
-  identifier = "tags"
-  parent = "documentation"
-  name = "Tags"
-  url = "tags/"
-  weight = 23
-  [main.params]
-    icon = "fa-solid fa-tags"
+identifier = "releases"
+parent = "documentation"
+name = "Releases"
+post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
+url = "https://github.com/hugo-fixit/FixIt/releases"
+weight = 5
+
+[main.params]
+icon = "fa-solid fa-code-branch"
 
 [[main]]
-  identifier = "showcase"
-  name = "Showcase"
-  url = "showcase/"
-  weight = 31
-  [main.params]
-    icon = "fa-solid fa-blog"
+identifier = "archives"
+parent = "documentation"
+name = "Archives"
+url = "archives/"
+weight = 20
+
+[main.params]
+icon = "fa-solid fa-archive"
+divided = true
 
 [[main]]
-  identifier = "community"
-  name = "Community"
-  url = "community/"
-  weight = 40
-  [main.params]
-    icon = "fa-regular fa-comments"
+identifier = "categories"
+parent = "documentation"
+name = "Categories"
+url = "categories/"
+weight = 21
+
+[main.params]
+icon = "fa-solid fa-folder-tree"
 
 [[main]]
-  identifier = "github"
-  pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
-  url = "https://github.com/hugo-fixit/FixIt"
-  title = "GitHub"
-  weight = 100
-  [main.params]
-    class = "text-center"
-    type = "mobile"
+identifier = "collections"
+parent = "documentation"
+name = "Collections"
+url = "collections/"
+weight = 22
+
+[main.params]
+icon = "fa-solid fa-layer-group"
+
+[[main]]
+identifier = "tags"
+parent = "documentation"
+name = "Tags"
+url = "tags/"
+weight = 23
+
+[main.params]
+icon = "fa-solid fa-tags"
+
+[[main]]
+identifier = "showcase"
+name = "Showcase"
+url = "showcase/"
+weight = 31
+
+[main.params]
+icon = "fa-solid fa-blog"
+
+[[main]]
+identifier = "community"
+name = "Community"
+url = "community/"
+weight = 40
+
+[main.params]
+icon = "fa-regular fa-comments"
+
+[[main]]
+identifier = "github"
+pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
+url = "https://github.com/hugo-fixit/FixIt"
+title = "GitHub"
+weight = 100
+
+[main.params]
+class = "text-center"
+type = "mobile"

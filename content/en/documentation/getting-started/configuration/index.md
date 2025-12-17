@@ -63,7 +63,7 @@ For example, merge the `markup` configuration from the FixIt theme:
 
 ```toml
 [markup]
-  _merge = "shallow"
+_merge = "shallow"
 ```
 
 The configuration value for `_merge` can be one of:
@@ -82,11 +82,13 @@ deep
 >
 > ```toml
 > [markup]
->   _merge = "shallow"
+> _merge = "shallow"
+>
 > [outputs]
->   _merge = "shallow"
+> _merge = "shallow"
+>
 > [taxonomies]
->   _merge = "shallow"
+> _merge = "shallow"
 > ```
 
 ## Menu Configuration {#menu-configuration}
@@ -103,31 +105,33 @@ The following is a complete menu item configuration:
 
 ```toml {data-open=true}
 [menu]
-  [[menu.main]]
-    identifier = ""
-    # {{< version 0.2.14 >}} Identifier of the parent menu item
-    parent = ""
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = ""
-    url = ""
-    # title will be shown when you hover on this menu link
-    title = ""
-    weight = 1
-    # {{< version 0.2.14 >}} add user-defined content to menu items
-    [menu.main.params]
-      # add css class to a specific menu item
-      class = ""
-      # whether set as a draft menu item whose function is similar to a draft post/page
-      draft = false
-      # {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
-      icon = ""
-      # {{< version 0.2.16 >}} set menu item type, optional values: ["mobile", "desktop"]
-      type = ""
-      # {{< version 0.3.9 >}} whether to show the submenu item divider line
-      divided = false
+
+[[menu.main]]
+identifier = ""
+# {{< version 0.2.14 >}} Identifier of the parent menu item
+parent = ""
+# you can add extra information before the name (HTML format is supported), such as icons
+pre = ""
+# you can add extra information after the name (HTML format is supported), such as icons
+post = ""
+name = ""
+url = ""
+# title will be shown when you hover on this menu link
+title = ""
+weight = 1
+
+# {{< version 0.2.14 >}} add user-defined content to menu items
+[menu.main.params]
+# add css class to a specific menu item
+class = ""
+# whether set as a draft menu item whose function is similar to a draft post/page
+draft = false
+# {{< version 0.2.16 >}} add fontawesome icon to a specific menu item
+icon = ""
+# {{< version 0.2.16 >}} set menu item type, optional values: ["mobile", "desktop"]
+type = ""
+# {{< version 0.3.9 >}} whether to show the submenu item divider line
+divided = false
 ```
 
 > [!TIP]
@@ -162,11 +166,12 @@ This section only records some [necessary configuration][necessary-configuration
 
 ```toml
 [markup]
-  [markup.highlight]
-    codeFences = true
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = false
+
+[markup.highlight]
+codeFences = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
 ```
 
 ## Taxonomies Configuration
@@ -175,9 +180,9 @@ The FixIt theme has three built-in [taxonomies][configure-taxonomies]: categorie
 
 ```toml
 [taxonomies]
-  category = "categories"
-  tag = "tags"
-  collection = "collections"
+category = "categories"
+tag = "tags"
+collection = "collections"
 ```
 
 If you want the `taxonomies` configuration to always be consistent with the theme, you can set `taxonomies._merge` to `shallow`.
@@ -207,46 +212,52 @@ More details about the configuration of output formats can be found in the [Cust
 
 ```toml
 [mediaTypes]
-  [mediaTypes."text/markdown"]
-    suffixes = ["md"]
+
+[mediaTypes."text/markdown"]
+suffixes = [ "md" ]
 
 [outputFormats]
-  # {{< version 0.3.0 >}} Options to make output /archives/index.html file
-  [outputFormats.archives]
-    path = "archives"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} Options to make output /offline/index.html file
-  [outputFormats.offline]
-    path = "offline"
-    baseName = "index"
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    permalinkable = true
-  # {{< version 0.3.0 >}} Options to make output readme.md file
-  [outputFormats.readme]
-    baseName = "readme"
-    mediaType = "text/markdown"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.0 changed >}} Options to make output baidu_urls.txt file
-  [outputFormats.baidu_urls]
-    baseName = "baidu_urls"
-    mediaType = "text/plain"
-    isPlainText = true
-    isHTML = false
-  # {{< version 0.3.10 >}} Options to make output search.json file
-  [outputFormats.search]
-    baseName = "search"
-    mediaType = "application/json"
-    rel = "search"
-    isPlainText = true
-    isHTML = false
-    permalinkable = true
+
+# {{< version 0.3.0 >}} Options to make output /archives/index.html file
+[outputFormats.archives]
+path = "archives"
+baseName = "index"
+mediaType = "text/html"
+isPlainText = false
+isHTML = true
+permalinkable = true
+
+# {{< version 0.3.0 >}} Options to make output /offline/index.html file
+[outputFormats.offline]
+path = "offline"
+baseName = "index"
+mediaType = "text/html"
+isPlainText = false
+isHTML = true
+permalinkable = true
+
+# {{< version 0.3.0 >}} Options to make output readme.md file
+[outputFormats.readme]
+baseName = "readme"
+mediaType = "text/markdown"
+isPlainText = true
+isHTML = false
+
+# {{< version 0.3.0 changed >}} Options to make output baidu_urls.txt file
+[outputFormats.baidu_urls]
+baseName = "baidu_urls"
+mediaType = "text/plain"
+isPlainText = true
+isHTML = false
+
+# {{< version 0.3.10 >}} Options to make output search.json file
+[outputFormats.search]
+baseName = "search"
+mediaType = "application/json"
+rel = "search"
+isPlainText = true
+isHTML = false
+permalinkable = true
 ```
 
 You only need to configure the root configuration key `outputs`, because the **FixIt** theme has already configured the `mediaTypes` and `outputFormats` for you.
@@ -259,11 +270,26 @@ You only need to configure the root configuration key `outputs`, because the **F
 # taxonomy = ["html"]
 # term = ["html", "rss"]
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
-  page = ["html", "markdown"]
-  section = ["html", "rss"]
-  taxonomy = ["html"]
-  term = ["html", "rss"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
+page = [
+  "html",
+  "markdown"
+]
+section = [
+  "html",
+  "rss"
+]
+taxonomy = [ "html" ]
+term = [
+  "html",
+  "rss"
+]
 ```
 
 If you want the `outputs` configuration to always be consistent with the theme, you can set `outputs._merge` to `shallow`.
@@ -278,11 +304,15 @@ A simple example:
 baseURL = 'https://example.org/'
 languageCode = 'en'
 title = 'ABC Widgets, Inc.'
+
 [params]
-  version = "0.3.X"
-  description = "This is my new Hugo FixIt site"
-  keywords = ["Hugo", "FixIt"]
-  # ...
+version = "0.3.X"
+description = "This is my new Hugo FixIt site"
+keywords = [
+  "Hugo",
+  "FixIt"
+]
+# ...
 ```
 
 All theme configuration settings are as follows:
@@ -394,11 +424,12 @@ When set to `true`, missing translations will be merged and displayed. Recommend
 
 ```toml
 [params]
-  [params.author]
-    name = ""
-    email = ""
-    link = ""
-    avatar = ""
+
+[params.author]
+name = ""
+email = ""
+link = ""
+avatar = ""
 ```
 
 name
@@ -421,11 +452,12 @@ avatar
 
 ```toml
 [params]
-  [params.gitInfo]
-    repo = ""
-    branch = "main"
-    dir = "content"
-    issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
+
+[params.gitInfo]
+repo = ""
+branch = "main"
+dir = "content"
+issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 ```
 
 repo
@@ -446,16 +478,18 @@ issueTpl
 
 ```toml
 [params]
-  [params.app]
-    name = ""
-    shortName = ""
-    noFavicon = false
-    svgFavicon = ""
-    iconColor = "#5bbad5"
-    tileColor = "#da532c"
-    [params.app.themeColor]
-      light = "#f8f8f8"
-      dark = "#252627"
+
+[params.app]
+name = ""
+shortName = ""
+noFavicon = false
+svgFavicon = ""
+iconColor = "#5bbad5"
+tileColor = "#da532c"
+
+[params.app.themeColor]
+light = "#f8f8f8"
+dark = "#252627"
 ```
 
 title
@@ -485,29 +519,32 @@ themeColor
 
 ```toml
 [params]
-  [params.search]
-    enable = false
-    type = "fuse"
-    contentLength = 4000
-    placeholder = ""
-    maxResultLength = 10
-    snippetLength = 30
-    highlightTag = "em"
-    absoluteURL = false
-    [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
-    [params.search.fuse]
-      isCaseSensitive = false
-      minMatchCharLength = 2
-      findAllMatches = false
-      location = 0
-      threshold = 0.3
-      distance = 100
-      ignoreLocation = false
-      useExtendedSearch = false
-      ignoreFieldNorm = false
+
+[params.search]
+enable = false
+type = "fuse"
+contentLength = 4000
+placeholder = ""
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
+
+[params.search.algolia]
+index = ""
+appID = ""
+searchKey = ""
+
+[params.search.fuse]
+isCaseSensitive = false
+minMatchCharLength = 2
+findAllMatches = false
+location = 0
+threshold = 0.3
+distance = 100
+ignoreLocation = false
+useExtendedSearch = false
+ignoreFieldNorm = false
 ```
 
 enable
@@ -563,7 +600,13 @@ In order to generate `search.json` for searching, add `search` output file type 
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
 ```
 
 {{< link href="/guides/algolia-atomic" content="Tips about algolia" card=true >}}
@@ -576,12 +619,15 @@ In order to generate `search.json` for searching, add `search` output file type 
 
 ```toml
 [params]
-  [params.cse]
-    engine = ""
-    resultsPage = "/search/"
-    [params.cse.google]
-      cx = ""
-    [params.cse.bing]
+
+[params.cse]
+engine = ""
+resultsPage = "/search/"
+
+[params.cse.google]
+cx = ""
+
+[params.cse.bing]
 ```
 
 engine
@@ -604,18 +650,21 @@ bing
 
 ```toml
 [params]
-  [params.header]
-    desktopMode = "sticky"
-    mobileMode = "auto"
-    [params.header.title]
-      logo = ""
-      name = ""
-      pre = ""
-      post = ""
-      typeit = false
-    [params.header.subtitle]
-      name = ""
-      typeit = false
+
+[params.header]
+desktopMode = "sticky"
+mobileMode = "auto"
+
+[params.header.title]
+logo = ""
+name = ""
+pre = ""
+post = ""
+typeit = false
+
+[params.header.subtitle]
+name = ""
+typeit = false
 ```
 
 desktopMode
@@ -650,12 +699,13 @@ subtitle
 
 ```toml
 [params]
-  [params.breadcrumb]
-    enable = false
-    sticky = false
-    showHome = false
-    separator = "/"
-    capitalize = false
+
+[params.breadcrumb]
+enable = false
+sticky = false
+showHome = false
+separator = "/"
+capitalize = false
 ```
 
 enable
@@ -683,9 +733,10 @@ capitalize
 
 ```toml
 [params]
-  [params.navigation]
-    inSection = false
-    reverse = false
+
+[params.navigation]
+inSection = false
+reverse = false
 ```
 
 inSection
@@ -700,30 +751,34 @@ reverse
 
 ```toml
 [params]
-  [params.footer]
-    enable = true
-    copyright = true
-    author = true
-    since = ""
-    gov = ""
-    icp = ""
-    license = ""
-    [params.footer.powered]
-      enable = true
-      hugoLogo = true
-      themeLogo = true
-    [params.footer.siteTime]
-      enable = false
-      animate = true
-      icon = "fa-solid fa-heartbeat"
-      pre = ""
-      value = ""
-    [params.footer.order]
-      powered = 0
-      copyright = 0
-      statistics = 0
-      visitor = 0
-      beian = 0
+
+[params.footer]
+enable = true
+copyright = true
+author = true
+since = ""
+gov = ""
+icp = ""
+license = ""
+
+[params.footer.powered]
+enable = true
+hugoLogo = true
+themeLogo = true
+
+[params.footer.siteTime]
+enable = false
+animate = true
+icon = "fa-solid fa-heartbeat"
+pre = ""
+value = ""
+
+[params.footer.order]
+powered = 0
+copyright = 0
+statistics = 0
+visitor = 0
+beian = 0
 ```
 
 enable
@@ -785,9 +840,10 @@ The order value can be one of `first`, `0`, `1`, `2`, `3`, `4`, `5`, `last`.
 
 ```toml
 [params]
-  [params.archives]
-    paginate = 20
-    dateFormat = "01-02"
+
+[params.archives]
+paginate = 20
+dateFormat = "01-02"
 ```
 
 paginate
@@ -802,12 +858,14 @@ dateFormat
 
 ```toml
 [params]
-  [params.section]
-    paginate = 20
-    dateFormat = "01-02"
-    [params.section.feed]
-      limit = -1
-      fullText = false
+
+[params.section]
+paginate = 20
+dateFormat = "01-02"
+
+[params.section.feed]
+limit = -1
+fullText = false
 ```
 
 paginate
@@ -826,12 +884,14 @@ feed
 
 ```toml
 [params]
-  [params.list]
-    paginate = 20
-    dateFormat = "01-02"
-    [params.list.feed]
-      limit = -1
-      fullText = false
+
+[params.list]
+paginate = 20
+dateFormat = "01-02"
+
+[params.list.feed]
+limit = -1
+fullText = false
 ```
 
 paginate
@@ -852,12 +912,13 @@ feed
 
 ```toml
 [params]
-  [params.recentlyUpdated]
-    archives = true
-    section = true
-    list = true
-    days = 30
-    maxCount = 10
+
+[params.recentlyUpdated]
+archives = true
+section = true
+list = true
+days = 30
+maxCount = 10
 ```
 
 archives
@@ -883,12 +944,13 @@ maxCount
 
 ```toml
 [params]
-  [params.tagcloud]
-    enable = false
-    min = 14
-    max = 32
-    peakCount = 10
-    orderby = "name"
+
+[params.tagcloud]
+enable = false
+min = 14
+max = 32
+peakCount = 10
+orderby = "name"
 ```
 
 enable
@@ -912,21 +974,24 @@ orderby
 
 ```toml
 [params]
-  [params.home]
-    paginate = 10
-    [params.home.profile]
-      enable = false
-      gravatarEmail = ""
-      avatarURL = ""
-      avatarMenu = ""
-      title = ""
-      subtitle = ""
-      typeit = true
-      social = true
-      disclaimer = ""
-    [params.home.posts]
-      enable = true
-      paginate = 6
+
+[params.home]
+paginate = 10
+
+[params.home.profile]
+enable = false
+gravatarEmail = ""
+avatarURL = ""
+avatarMenu = ""
+title = ""
+subtitle = ""
+typeit = true
+social = true
+disclaimer = ""
+
+[params.home.posts]
+enable = true
+paginate = 6
 ```
 
 rss
@@ -962,7 +1027,7 @@ You can directly set your ID to get a default social link and its icon:
 
 ```toml
 [params.social]
-  Mastodon = "@xxxx"
+Mastodon = "@xxxx"
 ```
 
 The social link generated is `https://mastodon.social/@xxxx`.
@@ -971,15 +1036,16 @@ Or You can set more options through a object:
 
 ```toml
 [params.social]
-  [params.social.Mastodon]
-    # weight when arranging icons (the greater the weight, the later the icon is positioned)
-    weight = 0
-    # your social ID
-    id = "@xxxx"
-    # prefix of your social link
-    prefix = "https://mastodon.gal/"
-    # content hovering on the icon
-    title = "Mastodon"
+
+[params.social.Mastodon]
+# weight when arranging icons (the greater the weight, the later the icon is positioned)
+weight = 0
+# your social ID
+id = "@xxxx"
+# prefix of your social link
+prefix = "https://mastodon.gal/"
+# content hovering on the icon
+title = "Mastodon"
 ```
 
 ### typeit
@@ -988,12 +1054,13 @@ Or You can set more options through a object:
 
 ```toml
 [params]
-  [params.typeit]
-    speed = 100
-    cursorSpeed = 1000
-    cursorChar = "|"
-    duration = -1
-    loop = false
+
+[params.typeit]
+speed = 100
+cursorSpeed = 1000
+cursorChar = "|"
+duration = -1
+loop = false
 ```
 
 speed
@@ -1020,8 +1087,9 @@ loop
 
 ```toml
 [params]
-  [params.admonition]
-    # ban = "fa-solid fa-ban"
+
+[params.admonition]
+# ban = "fa-solid fa-ban"
 ```
 
 The syntax is `<type> = <icon>`, where `<type>` is the type of the admonition and `<icon>` is the Font Awesome icon class.
@@ -1034,8 +1102,9 @@ The syntax is `<type> = <icon>`, where `<type>` is the type of the admonition an
 
 ```toml
 [params]
-  [params.taskList]
-    # tip = "fa-regular fa-lightbulb"
+
+[params.taskList]
+# tip = "fa-regular fa-lightbulb"
 ```
 
 The syntax is `<type> = <icon>`, where `<type>` is the type of the task list and `<icon>` is the Font Awesome icon class.
@@ -1048,9 +1117,10 @@ The syntax is `<type> = <icon>`, where `<type>` is the type of the task list and
 
 ```toml
 [params]
-  [params.repoVersion]
-    url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
-    name = "FixIt"
+
+[params.repoVersion]
+url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+name = "FixIt"
 ```
 
 url
@@ -1067,17 +1137,21 @@ name
 
 ```toml
 [params]
-  [params.mermaid]
-    cdn = ""
-    zenuml = ""
-    themes = ["default", "dark"]
-    # optional values: ["strict", "loose", "antiscript", "sandbox"]
-    securityLevel = "loose"
-    # optional values: ["classic", "handDrawn"]
-    look = "handDrawn"
-    fontFamily = ""
-    layoutLoaders = []
-    layout = "dagre"
+
+[params.mermaid]
+cdn = ""
+zenuml = ""
+themes = [
+  "default",
+  "dark"
+]
+# optional values: ["strict", "loose", "antiscript", "sandbox"]
+securityLevel = "loose"
+# optional values: ["classic", "handDrawn"]
+look = "handDrawn"
+fontFamily = ""
+layoutLoaders = []
+layout = "dagre"
 ```
 
 cdn
@@ -1114,9 +1188,10 @@ layout
 
 ```toml
 [params]
-  [params.pangu]
-    enable = false
-    selector = "article"
+
+[params.pangu]
+enable = false
+selector = "article"
 ```
 
 enable
@@ -1134,17 +1209,18 @@ selector
 
 ```toml
 [params]
-  [params.watermark]
-    enable = false
-    content = ""
-    opacity = 0.1
-    width = 150
-    height = 20
-    rowSpacing = 60
-    colSpacing = 30
-    rotate = 15
-    fontSize = 0.85
-    fontFamily = "inherit"
+
+[params.watermark]
+enable = false
+content = ""
+opacity = 0.1
+width = 150
+height = 20
+rowSpacing = 60
+colSpacing = 30
+rotate = 15
+fontSize = 0.85
+fontFamily = "inherit"
 ```
 
 ### busuanzi
@@ -1155,11 +1231,12 @@ selector
 
 ```toml
 [params]
-  [params.busuanzi]
-    enable = false
-    source = "https://vercount.one/js"
-    siteViews = true
-    pageViews = true
+
+[params.busuanzi]
+enable = false
+source = "https://vercount.one/js"
+siteViews = true
+pageViews = true
 ```
 
 enable
@@ -1181,14 +1258,15 @@ pageViews
 
 ```toml
 [params]
-  [params.verification]
-    google = ""
-    bing = ""
-    yandex = ""
-    pinterest = ""
-    baidu = ""
-    so = ""
-    sogou = ""
+
+[params.verification]
+google = ""
+bing = ""
+yandex = ""
+pinterest = ""
+baidu = ""
+so = ""
+sogou = ""
 ```
 
 ### seo
@@ -1197,9 +1275,10 @@ pageViews
 
 ```toml
 [params]
-  [params.seo]
-    image = ""
-    thumbnailUrl = ""
+
+[params.seo]
+image = ""
+thumbnailUrl = ""
 ```
 
 image
@@ -1214,31 +1293,39 @@ thumbnailUrl
 
 ```toml
 [params]
-  [params.analytics]
-    enable = false
-    [params.analytics.google]
-      id = ""
-      anonymizeIP = true
-    [params.analytics.fathom]
-      id = ""
-      server = ""
-    [params.analytics.baidu]
-      id = ""
-    [params.analytics.umami]
-      data_website_id = ""
-      src = ""
-      data_host_url = ""
-      data_domains = ""
-    [params.analytics.plausible]
-      data_domain = ""
-      src = ""
-    [params.analytics.cloudflare]
-      token = ""
-    [params.analytics.splitbee]
-      enable = false
-      no_cookie = true
-      do_not_track = true
-      data_token = ""
+
+[params.analytics]
+enable = false
+
+[params.analytics.google]
+id = ""
+anonymizeIP = true
+
+[params.analytics.fathom]
+id = ""
+server = ""
+
+[params.analytics.baidu]
+id = ""
+
+[params.analytics.umami]
+data_website_id = ""
+src = ""
+data_host_url = ""
+data_domains = ""
+
+[params.analytics.plausible]
+data_domain = ""
+src = ""
+
+[params.analytics.cloudflare]
+token = ""
+
+[params.analytics.splitbee]
+enable = false
+no_cookie = true
+do_not_track = true
+data_token = ""
 ```
 
 enable
@@ -1299,12 +1386,14 @@ splitbee
 
 ```toml
 [params]
-  [params.cookieconsent]
-    enable = true
-    [params.cookieconsent.content]
-      message = ""
-      dismiss = ""
-      link = ""
+
+[params.cookieconsent]
+enable = true
+
+[params.cookieconsent.content]
+message = ""
+dismiss = ""
+link = ""
 ```
 
 enable
@@ -1323,8 +1412,9 @@ content
 
 ```toml
 [params]
-  [params.cdn]
-    data = "unpkg.yml"
+
+[params.cdn]
+data = "unpkg.yml"
 ```
 
 data
@@ -1336,9 +1426,10 @@ data
 
 ```toml
 [params]
-  [params.compatibility]
-    polyfill = false
-    objectFit = false
+
+[params.compatibility]
+polyfill = false
+objectFit = false
 ```
 
 polyfill
@@ -1355,11 +1446,12 @@ objectFit
 
 ```toml
 [params]
-  [params.githubCorner]
-    enable = false
-    permalink = ""
-    title = "View source on GitHub"
-    position = "right"
+
+[params.githubCorner]
+enable = false
+permalink = ""
+title = "View source on GitHub"
+position = "right"
 ```
 
 enable
@@ -1382,10 +1474,11 @@ position
 
 ```toml
 [params]
-  [params.gravatar]
-    enable = false
-    host = "www.gravatar.com"
-    style = ""
+
+[params.gravatar]
+enable = false
+host = "www.gravatar.com"
+style = ""
 ```
 
 enable
@@ -1406,9 +1499,10 @@ style
 
 ```toml
 [params]
-  [params.backToTop]
-    enable = true
-    scrollpercent = false
+
+[params.backToTop]
+enable = true
+scrollpercent = false
 ```
 
 enable
@@ -1425,14 +1519,15 @@ scrollpercent
 
 ```toml
 [params]
-  [params.readingProgress]
-    enable = false
-    start = "left"
-    position = "top"
-    reversed = false
-    light = ""
-    dark = ""
-    height = "2px"
+
+[params.readingProgress]
+enable = false
+start = "left"
+position = "top"
+reversed = false
+light = ""
+dark = ""
+height = "2px"
 ```
 
 enable
@@ -1464,10 +1559,11 @@ height
 
 ```toml
 [params]
-  [params.pace]
-    enable = false
-    color = "blue"
-    theme = "minimal"
+
+[params.pace]
+enable = false
+color = "blue"
+theme = "minimal"
 ```
 
 enable
@@ -1490,34 +1586,35 @@ theme
 
 ```toml
 [params]
-  # PostChat: https://ai.zhheo.com/docs/addCode.html
-  [params.postChat]
-    enable = false
-    key = ""
-    # How users initiate chats: ["iframe", "magic"]
-    userMode = "iframe"
-    addButton = true
-    defaultInput = false
-    left = ""
-    bottom = ""
-    width = ""
-    height = ""
-    fill = ""
-    backgroundColor = ""
-    upLoadWeb = true
-    showInviteLink = true
-    userTitle = ""
-    userDesc = ""
-    # dom container to be blacked out, e.g. [".aplayer"]
-    blackDom = []
-    # Only for iframe mode
-    frameWidth = ""     # e.g. "375px"
-    frameHeight = ""    # e.g. "600px"
-    # only for magic mode
-    userIcon = ""
-    defaultChatQuestions = []
-    defaultSearchQuestions = []
-    hotWords = true
+
+# PostChat: https://ai.zhheo.com/docs/addCode.html
+[params.postChat]
+enable = false
+key = ""
+# How users initiate chats: ["iframe", "magic"]
+userMode = "iframe"
+addButton = true
+defaultInput = false
+left = ""
+bottom = ""
+width = ""
+height = ""
+fill = ""
+backgroundColor = ""
+upLoadWeb = true
+showInviteLink = true
+userTitle = ""
+userDesc = ""
+# dom container to be blacked out, e.g. [".aplayer"]
+blackDom = []
+# Only for iframe mode
+frameWidth = "" # e.g. "375px"
+frameHeight = "" # e.g. "600px"
+# only for magic mode
+userIcon = ""
+defaultChatQuestions = []
+defaultSearchQuestions = []
+hotWords = true
 ```
 
 ### postSummary
@@ -1532,18 +1629,19 @@ theme
 
 ```toml
 [params]
-  # PostSummary: https://ai.zhheo.com/docs/summary.html
-  [params.postSummary]
-    enable = false
-    key = ""
-    title = ""
-    # themes options: ["", "simple", "yanzhi"]
-    theme = ""
-    postURL = ""
-    blacklist = ""
-    wordLimit = 1000
-    typingAnimate = true
-    beginningText = ""
+
+# PostSummary: https://ai.zhheo.com/docs/summary.html
+[params.postSummary]
+enable = false
+key = ""
+title = ""
+# themes options: ["", "simple", "yanzhi"]
+theme = ""
+postURL = ""
+blacklist = ""
+wordLimit = 1000
+typingAnimate = true
+beginningText = ""
 ```
 
 ### feed
@@ -1554,12 +1652,14 @@ theme
 
 ```toml
 [params]
-  [params.feed]
-    limit = 10
-    fullText = true
-    [params.feed.follow]
-      feedId = ""
-      userId = ""
+
+[params.feed]
+limit = 10
+fullText = true
+
+[params.feed.follow]
+feedId = ""
+userId = ""
 ```
 
 limit
@@ -1582,9 +1682,10 @@ follow
 
 ```toml
 [params]
-  [params.image]
-  cacheRemote = false
-  optimise = false
+
+[params.image]
+cacheRemote = false
+optimise = false
 ```
 
 cacheRemote
@@ -1601,12 +1702,13 @@ optimise
 
 ```toml
 [params]
-  [params.jsonViewer]
-    enable = true
-    expandDepth = 1
-    copyable = true
-    sort = false
-    boxed = true
+
+[params.jsonViewer]
+enable = true
+expandDepth = 1
+copyable = true
+sort = false
+boxed = true
 ```
 
 enable
@@ -1636,9 +1738,10 @@ Select the scope named `public_repo` to generate personal access token, Configur
 
 ```toml
 [params]
-  [params.dev]
-    enable = false
-    c4u = false
+
+[params.dev]
+enable = false
+c4u = false
 ```
 
 enable
@@ -1653,397 +1756,451 @@ c4u
 
 ```toml
 [params]
-  [params.page]
-    # {{< version 0.2.18 >}} whether to enable the author's avatar of the post
-    authorAvatar = true
-    # whether to hide a page from home page
-    hiddenFromHomePage = false
-    # whether to hide a page from search results
-    hiddenFromSearch = false
-    # {{< version 0.3.0 >}} whether to hide a page from related posts
-    hiddenFromRelated = false
-    # {{< version 0.3.10 >}} whether to hide a page from RSS, Atom and JSON feed
-    hiddenFromFeed = false
-    # whether to enable twemoji
-    twemoji = false
-    # {{< version 0.2.18 changed >}} whether to enable lightgallery
-    # set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
-    # set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
-    lightgallery = false
-    # whether to enable the ruby extended syntax
-    ruby = true
-    # whether to enable the fraction extended syntax
-    fraction = true
-    # whether to enable the fontawesome extended syntax
-    fontawesome = true
-    # license info (HTML format is supported)
-    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-    # whether to show link to Raw Markdown content of the post
-    linkToMarkdown = true
-    # {{< version 0.3.0 >}} whether to show link to view source code of the post
-    linkToSource = true
-    # {{< version 0.3.0 >}} whether to show link to edit the post
-    linkToEdit = true
-    # {{< version 0.3.0 >}} whether to show link to report issue for the post
-    linkToReport = true
-    # {{< version 0.3.20 >}} whether to show link to view the post in VSCode
-    linkToVscode = true
-    # {{< version 0.3.10 changed >}} Page style ["narrow", "normal", "wide", ...]
-    pageStyle = "normal"
-    # {{< version 0.2.17 changed >}} Auto Bookmark Support
-    # If true, save the reading progress when closing the page.
-    autoBookmark = false
-    # {{< version 0.2.17 >}} whether to enable wordCount
-    wordCount = true
-    # {{< version 0.2.17 >}} whether to enable readingTime
-    readingTime = true
-    # {{< version 0.2.17 >}} end of post flag
-    endFlag = ""
-    # {{< version 0.2.18 >}} whether to enable instant.page
-    instantPage = false
-    # {{< version 0.3.0 >}} whether to enable collection list at the sidebar
-    collectionList = false
-    # {{< version 0.3.0 >}} whether to enable collection navigation at the end of the post
-    collectionNavigation = false
 
-    # {{< version 0.2.15 >}} Repost config
-    [params.page.repost]
-      enable = false
-      url = ""
-    # Table of the contents config
-    [params.page.toc]
-      # whether to enable the table of the contents
-      enable = true
-      # whether to keep the static table of the contents in front of the post
-      keepStatic = false
-      # whether to make the table of the contents in the sidebar automatically collapsed
-      auto = true
-      # {{< version 0.2.13 >}} position of TOC ["left", "right"]
-      position = "right"
-      # {{< version 0.3.12 >}} supersede `markup.tableOfContents` settings
-      ordered = false
-      startLevel = 2
-      endLevel = 6
-      # {{< version 0.4.0 >}} whether to decrease the H1 heading level in content
-      decreaseH1 = false
-    # {{< version 0.2.13 >}} Display a message at the beginning of an article to warn the reader that its content might be expired
-    [params.page.expirationReminder]
-      enable = false
-      # Display the reminder if the last modified time is more than 90 days ago
-      reminder = 90
-      # Display warning if the last modified time is more than 180 days ago
-      warning = 180
-      # If the article expires, close the comment or not
-      closeComment = false
-    # {{< version 0.3.0 >}} page heading config
-    [params.page.heading]
-      # {{< version 0.3.6 >}} whether to capitalize automatic text of headings
-      capitalize = false
-      # {{< version 0.3.12 changed >}} must set `params.page.toc.ordered` to true
-      [params.page.heading.number]
-        # whether to enable auto heading numbering
-        enable = false
-        [params.page.heading.number.format]
-          h1 = "{title}"
-          h2 = "{h2} {title}"
-          h3 = "{h2}.{h3} {title}"
-          h4 = "{h2}.{h3}.{h4} {title}"
-          h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-          h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-    # {{< version 0.4.0 changed >}} mathematical formulas configuration
-    # See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
-    [params.page.math]
-      enable = true
-      # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
-      type = "katex"
-      # KaTeX server-side rendering (https://katex.org)
-      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
-      [params.page.math.katex]
-        # KaTeX extension copy-tex
-        copyTex = true
-        throwOnError = false
-        errorColor = "#ff4949"
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.katex.macros]
-          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
-      # MathJax server-side rendering (https://www.mathjax.org)
-      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-      [params.page.math.mathjax]
-        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        [params.page.math.mathjax.packages]
-          # "[+]" = ["configmacros"]
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.mathjax.macros]
-          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
-        [params.page.math.mathjax.loader]
-          load = ["ui/safe"]
-          [params.page.math.mathjax.loader.paths]
-            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-          # more loader config e.g source, dependencies, provides etc.
-        [params.page.math.mathjax.options]
-          enableMenu = true
-          # HTML tags that won't be searched for math
-          skipHtmlTags = [
-            "script",
-            "noscript",
-            "style",
-            "textarea",
-            "pre",
-            "code",
-            "math",
-            "select",
-            "option",
-            "mjx-container"
-          ]
-          # class that marks tags not to search
-          ignoreHtmlClass = "mathjax_ignore"
-          # HTML tags that can appear within math
-          [params.page.math.mathjax.options.includeHtmlTags]
-            # "#comment" = ""
-            # br = "\n"
-            # wbr = ""
-    # Code wrapper config
-    [params.page.code]
-      # {{< version 0.3.9 >}} whether to enable the code wrapper
-      enable = true
-      # whether to show the copy button of the code wrapper
-      copy = true
-      # {{< version 0.2.13 >}} whether to show the edit button of the code wrapper
-      edit = true
-      # the maximum number of lines of displayed code by default
-      maxShownLines = 10
-    # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
-    [params.page.mapbox]
-      # access token of Mapbox GL JS
-      accessToken = ""
-      # style for the light theme
-      lightStyle = "mapbox://styles/mapbox/light-v11"
-      # style for the dark theme
-      darkStyle = "mapbox://styles/mapbox/dark-v11"
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
-      navigation = true
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}
-      geolocate = true
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol" ScaleControl >}}
-      scale = true
-      # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
-      fullscreen = true
-    # {{< version 0.3.0 >}} [Experimental] cache remote images locally, see: https://github.com/hugo-fixit/FixIt/pull/362
-    [params.page.cacheRemoteImages]
-      enable = false
-      # replace remote image url with local image url (place in public/images/remote/)
-      replace = false
-    # {{< version 0.3.0 >}} Related content config (https://gohugo.io/content-management/related/)
-    [params.page.related]
-      enable = false
-      count = 5
-      # {{< version 0.3.20 >}} position of related content, optional values: ["aside", "footer"]
-      position = ["aside", "footer"]
-    # {{< version 0.2.17 >}} Donate (Sponsor) settings
-    [params.page.reward]
-      enable = false
-      animation = false
-      # position relative to post footer, optional values: ["before", "after"]
-      position = "after"
-      # comment = "Buy me a coffee"
-      # {{< version 0.2.18 >}} display mode of QR code images, optional values: ["static", "fixed"], default: `static`
-      mode = "static"
-      [params.page.reward.ways]
-        # wechatpay = "/images/wechatpay.png"
-        # alipay = "/images/alipay.png"
-        # paypal = "/images/paypal.png"
-        # bitcoin = "/images/bitcoin.png"
-    # social share links in post page
-    [params.page.share]
-      enable = true
-      Twitter = true
-      Facebook = true
-      Linkedin = false
-      Whatsapp = true
-      Pinterest = false
-      Tumblr = false
-      HackerNews = false
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = true
-      Instapaper = false
-      Pocket = false
-      Flipboard = false
-      Weibo = true
-      Myspace = true
-      Blogger = true
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = true
-      Skype = false
-      Trello = false
-      Mix = false
-    # {{< version 0.2.15 changed >}} Comment config
-    [params.page.comment]
-      enable = false
-      # {{< version 0.2.13 >}} {{< link "https://artalk.js.org/" Artalk >}} comment config (https://artalk.js.org/)
-      [params.page.comment.artalk]
-        enable = false
-        server = "https://yourdomain"
-        site = "默认站点"
-        # {{< version 0.3.3 >}} whether use backend configuration
-        useBackendConf = false
-        placeholder = ""
-        noComment = ""
-        sendBtn = ""
-        editorTravel = true
-        flatMode = "auto"
-        maxNesting = 3
-        # {{< version 0.2.17 changed >}} enable lightgallery support
-        lightgallery = false
-        locale = "" # {{< version 0.2.15 >}}
-        # {{< version 0.2.18 >}}
-        emoticons = ""
-        nestMax = 2
-        nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
-        vote = true
-        voteDown = false
-        uaBadge = true
-        listSort = true
-        imgUpload = true
-        preview = true
-        versionCheck = true
-      # {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} comment config (https://disqus.com)
-      [params.page.comment.disqus]
-        enable = false
-        # Disqus shortname to use Disqus in posts
-        shortname = ""
-      # {{< version 0.1.1 >}} {{< link "https://github.com/gitalk/gitalk" Gitalk >}} comment config (https://github.com/gitalk/gitalk)
-      [params.page.comment.gitalk]
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # {{< link "https://github.com/xCss/Valine" Valine >}} comment config (https://github.com/xCss/Valine)
-      [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
-        avatar = "mp"
-        meta = ['nick','mail','link']
-        requiredFields = []
-        pageSize = 10
-        lang = ""
-        visitor = true
-        recordIP = true
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # emoji data file name, default is "google.yml"
-        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-        # located in "themes/FixIt/assets/lib/valine/emoji/" directory
-        # you can store your own data files in the same path under your project:
-        # "assets/lib/valine/emoji/"
-        emoji = ""
-        commentCount = true # {{< version 0.2.13 >}}
-      # {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} comment config (https://waline.js.org)
-      [params.page.comment.waline]
-        enable = false
-        serverURL = ""
-        pageview = false # {{< version 0.2.15 >}}
-        emoji = ["//unpkg.com/@waline/emojis@1.1.0/weibo"]
-        meta = ["nick", "mail", "link"]
-        requiredMeta = []
-        login = "enable"
-        wordLimit = 0
-        pageSize = 10
-        imageUploader = false # {{< version 0.2.15 >}}
-        highlighter = false # {{< version 0.2.15 >}}
-        comment = false # {{< version 0.2.15 >}}
-        texRenderer = false # {{< version 0.2.16 >}}
-        search = false # {{< version 0.2.16 >}}
-        recaptchaV3Key = "" # {{< version 0.2.16 >}}
-        turnstileKey = "" # {{< version 0.3.8 >}}
-        reaction = false # {{< version 0.2.18 >}}
-      # {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook comment" >}} config (https://developers.facebook.com/docs/plugins/comments)
-      [params.page.comment.facebook]
-        enable = false
-        width = "100%"
-        numPosts = 10
-        appId = ""
-        languageCode = ""
-      # {{< link "https://comments.app/" "Telegram comments" >}} config (https://comments.app)
-      [params.page.comment.telegram]
-        enable = false
-        siteID = ""
-        limit = 5
-        height = ""
-        color = ""
-        colorful = true
-        dislikes = false
-        outlined = false
-      # {{< link "https://commento.io/" "Commento" >}} comment config (https://commento.io)
-      [params.page.comment.commento]
-        enable = false
-      # {{< link "https://utteranc.es/" "Utterances" >}} comment config (https://utteranc.es)
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-      # {{< version 0.2.13 >}} {{< link "https://twikoo.js.org/" "Twikoo" >}} comment config (https://twikoo.js.org/)
-      [params.page.comment.twikoo]
-        enable = false
-        envId = ""
-        region = ""
-        path = ""
-        visitor = true
-        commentCount = true
-        # {{< version 0.2.17 changed >}} enable lightgallery support
-        lightgallery = false
-        # {{< version 0.2.17 >}} enable Katex support
-        katex = false
-      # {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} comments config
-      [params.page.comment.giscus]
-        enable = false
-        repo = ""
-        repoId = ""
-        category = ""
-        categoryId = ""
-        mapping = ""
-        origin = "https://giscus.app" # {{< version 0.3.7 >}} Or set it to your self-hosted domain
-        strict = "0" # {{< version 0.2.18 >}}
-        term = ""
-        reactionsEnabled = "1"
-        emitMetadata = "0"
-        inputPosition = "bottom" # ["top", "bottom"]
-        lightTheme = "light"
-        darkTheme = "dark"
-        lazyLoad = true
-    # Third-party library config
-    [params.page.library]
-      [params.page.library.css]
-        # someCSS = "some.css"
-        # located in "assets/"
-        # Or
-        # someCSS = "https://cdn.example.com/some.css"
-      [params.page.library.js]
-        # someJavascript = "some.js"
-        # located in "assets/"
-        # Or
-        # someJavascript = "https://cdn.example.com/some.js"
-    # Page SEO config
-    [params.page.seo]
-      # image URL
-      images = []
-      # Publisher info
-      [params.page.seo.publisher]
-        name = ""
-        logoUrl = ""
+[params.page]
+# {{< version 0.2.18 >}} whether to enable the author's avatar of the post
+authorAvatar = true
+# whether to hide a page from home page
+hiddenFromHomePage = false
+# whether to hide a page from search results
+hiddenFromSearch = false
+# {{< version 0.3.0 >}} whether to hide a page from related posts
+hiddenFromRelated = false
+# {{< version 0.3.10 >}} whether to hide a page from RSS, Atom and JSON feed
+hiddenFromFeed = false
+# whether to enable twemoji
+twemoji = false
+# {{< version 0.2.18 changed >}} whether to enable lightgallery
+# set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
+# set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
+lightgallery = false
+# whether to enable the ruby extended syntax
+ruby = true
+# whether to enable the fraction extended syntax
+fraction = true
+# whether to enable the fontawesome extended syntax
+fontawesome = true
+# license info (HTML format is supported)
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+# whether to show link to Raw Markdown content of the post
+linkToMarkdown = true
+# {{< version 0.3.0 >}} whether to show link to view source code of the post
+linkToSource = true
+# {{< version 0.3.0 >}} whether to show link to edit the post
+linkToEdit = true
+# {{< version 0.3.0 >}} whether to show link to report issue for the post
+linkToReport = true
+# {{< version 0.3.20 >}} whether to show link to view the post in VSCode
+linkToVscode = true
+# {{< version 0.3.10 changed >}} Page style ["narrow", "normal", "wide", ...]
+pageStyle = "normal"
+# {{< version 0.2.17 changed >}} Auto Bookmark Support
+# If true, save the reading progress when closing the page.
+autoBookmark = false
+# {{< version 0.2.17 >}} whether to enable wordCount
+wordCount = true
+# {{< version 0.2.17 >}} whether to enable readingTime
+readingTime = true
+# {{< version 0.2.17 >}} end of post flag
+endFlag = ""
+# {{< version 0.2.18 >}} whether to enable instant.page
+instantPage = false
+# {{< version 0.3.0 >}} whether to enable collection list at the sidebar
+collectionList = false
+# {{< version 0.3.0 >}} whether to enable collection navigation at the end of the post
+collectionNavigation = false
+
+# {{< version 0.2.15 >}} Repost config
+[params.page.repost]
+enable = false
+url = ""
+
+# Table of the contents config
+[params.page.toc]
+# whether to enable the table of the contents
+enable = true
+# whether to keep the static table of the contents in front of the post
+keepStatic = false
+# whether to make the table of the contents in the sidebar automatically collapsed
+auto = true
+# {{< version 0.2.13 >}} position of TOC ["left", "right"]
+position = "right"
+# {{< version 0.3.12 >}} supersede `markup.tableOfContents` settings
+ordered = false
+startLevel = 2
+endLevel = 6
+# {{< version 0.4.0 >}} whether to decrease the H1 heading level in content
+decreaseH1 = false
+
+# {{< version 0.2.13 >}} Display a message at the beginning of an article to warn the reader that its content might be expired
+[params.page.expirationReminder]
+enable = false
+# Display the reminder if the last modified time is more than 90 days ago
+reminder = 90
+# Display warning if the last modified time is more than 180 days ago
+warning = 180
+# If the article expires, close the comment or not
+closeComment = false
+
+# {{< version 0.3.0 >}} page heading config
+[params.page.heading]
+# {{< version 0.3.6 >}} whether to capitalize automatic text of headings
+capitalize = false
+
+# {{< version 0.3.12 changed >}} must set `params.page.toc.ordered` to true
+[params.page.heading.number]
+# whether to enable auto heading numbering
+enable = false
+
+[params.page.heading.number.format]
+h1 = "{title}"
+h2 = "{h2} {title}"
+h3 = "{h2}.{h3} {title}"
+h4 = "{h2}.{h3}.{h4} {title}"
+h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+# {{< version 0.4.0 changed >}} mathematical formulas configuration
+# See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
+[params.page.math]
+enable = true
+# mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
+type = "katex"
+
+# KaTeX server-side rendering (https://katex.org)
+# KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+[params.page.math.katex]
+# KaTeX extension copy-tex
+copyTex = true
+throwOnError = false
+errorColor = "#ff4949"
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.katex.macros]
+# "\\f" = "#1f(#2)"  # usage: $\f{a}{b}$
+
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
+[params.page.math.mathjax.packages]
+# "[+]" = ["configmacros"]
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.mathjax.macros]
+# "bold" = ["{\\bf #1}", 1]  # usage: $\bold{math}$
+
+[params.page.math.mathjax.loader]
+load = [ "ui/safe" ]
+
+[params.page.math.mathjax.loader.paths]
+# custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
+# more loader config e.g source, dependencies, provides etc.
+[params.page.math.mathjax.options]
+enableMenu = true
+# HTML tags that won't be searched for math
+skipHtmlTags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container"
+]
+# class that marks tags not to search
+ignoreHtmlClass = "mathjax_ignore"
+
+# HTML tags that can appear within math
+[params.page.math.mathjax.options.includeHtmlTags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
+
+# Code wrapper config
+[params.page.code]
+# {{< version 0.3.9 >}} whether to enable the code wrapper
+enable = true
+# whether to show the copy button of the code wrapper
+copy = true
+# {{< version 0.2.13 >}} whether to show the edit button of the code wrapper
+edit = true
+# the maximum number of lines of displayed code by default
+maxShownLines = 10
+
+# {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
+[params.page.mapbox]
+# access token of Mapbox GL JS
+accessToken = ""
+# style for the light theme
+lightStyle = "mapbox://styles/mapbox/light-v11"
+# style for the dark theme
+darkStyle = "mapbox://styles/mapbox/dark-v11"
+# whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol" NavigationControl >}}
+navigation = true
+# whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol" GeolocateControl >}}
+geolocate = true
+# whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#scalecontrol" ScaleControl >}}
+scale = true
+# whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
+fullscreen = true
+
+# {{< version 0.3.0 >}} [Experimental] cache remote images locally
+# See: https://github.com/hugo-fixit/FixIt/pull/362
+[params.page.cacheRemoteImages]
+enable = false
+# replace remote image URL with local image URL (place in public/images/remote/)
+replace = false
+
+# {{< version 0.3.0 >}} Related content config (https://gohugo.io/content-management/related/)
+[params.page.related]
+enable = false
+count = 5
+# {{< version 0.3.20 >}} position of related content, optional values: ["aside", "footer"]
+position = [
+  "aside",
+  "footer"
+]
+
+# {{< version 0.2.17 >}} Donate (Sponsor) settings
+[params.page.reward]
+enable = false
+animation = false
+# position relative to post footer, optional values: ["before", "after"]
+position = "after"
+# comment = "Buy me a coffee"
+# {{< version 0.2.18 >}} display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+mode = "static"
+
+[params.page.reward.ways]
+# wechatpay = "/images/wechatpay.png"
+# alipay = "/images/alipay.png"
+# paypal = "/images/paypal.png"
+# bitcoin = "/images/bitcoin.png"
+
+# Social share links in post page
+[params.page.share]
+enable = true
+Twitter = true
+Facebook = true
+Linkedin = false
+Whatsapp = true
+Pinterest = false
+Tumblr = false
+HackerNews = false
+Reddit = false
+VK = false
+Buffer = false
+Xing = false
+Line = true
+Instapaper = false
+Pocket = false
+Flipboard = false
+Weibo = true
+Myspace = true
+Blogger = true
+Baidu = false
+Odnoklassniki = false
+Evernote = true
+Skype = false
+Trello = false
+Mix = false
+
+# {{< version 0.2.15 changed >}} Comment config
+[params.page.comment]
+enable = false
+
+# {{< version 0.2.13 >}} {{< link "https://artalk.js.org/" Artalk >}} comment config (https://artalk.js.org/)
+[params.page.comment.artalk]
+enable = false
+server = "https://yourdomain"
+site = "默认站点"
+# {{< version 0.3.3 >}} whether use backend configuration
+useBackendConf = false
+placeholder = ""
+noComment = ""
+sendBtn = ""
+editorTravel = true
+flatMode = "auto"
+maxNesting = 3
+# {{< version 0.2.17 changed >}} enable lightgallery support
+lightgallery = false
+locale = "" # {{< version 0.2.15 >}}
+# {{< version 0.2.18 >}}
+emoticons = ""
+nestMax = 2
+nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+vote = true
+voteDown = false
+uaBadge = true
+listSort = true
+imgUpload = true
+preview = true
+versionCheck = true
+
+# {{< version 0.1.1 >}} {{< link "https://disqus.com/" Disqus >}} comment config (https://disqus.com)
+[params.page.comment.disqus]
+enable = false
+# Disqus shortname to use Disqus in posts
+shortname = ""
+
+# {{< version 0.1.1 >}} {{< link "https://github.com/gitalk/gitalk" Gitalk >}} comment config (https://github.com/gitalk/gitalk)
+[params.page.comment.gitalk]
+enable = false
+owner = ""
+repo = ""
+clientId = ""
+clientSecret = ""
+
+# {{< link "https://github.com/xCss/Valine" Valine >}} comment config (https://github.com/xCss/Valine)
+[params.page.comment.valine]
+enable = false
+appId = ""
+appKey = ""
+placeholder = ""
+avatar = "mp"
+meta = [
+  'nick',
+  'mail',
+  'link'
+]
+requiredFields = []
+pageSize = 10
+lang = ""
+visitor = true
+recordIP = true
+highlight = true
+enableQQ = false
+serverURLs = ""
+# emoji data file name, default is "google.yml"
+# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+# located in "themes/FixIt/assets/lib/valine/emoji/" directory
+# you can store your own data files in the same path under your project:
+# "assets/lib/valine/emoji/"
+emoji = ""
+commentCount = true
+
+# {{< version 0.2.13 >}}
+# {{< version 0.2.16 changed >}} {{< link "https://waline.js.org" Waline >}} comment config (https://waline.js.org)
+[params.page.comment.waline]
+enable = false
+serverURL = ""
+pageview = false # {{< version 0.2.15 >}}
+emoji = [ "//unpkg.com/@waline/emojis@1.1.0/weibo" ]
+meta = [
+  "nick",
+  "mail",
+  "link"
+]
+requiredMeta = []
+login = "enable"
+wordLimit = 0
+pageSize = 10
+imageUploader = false # {{< version 0.2.15 >}}
+highlighter = false # {{< version 0.2.15 >}}
+comment = false # {{< version 0.2.15 >}}
+texRenderer = false # {{< version 0.2.16 >}}
+search = false # {{< version 0.2.16 >}}
+recaptchaV3Key = "" # {{< version 0.2.16 >}}
+turnstileKey = "" # {{< version 0.3.8 >}}
+reaction = false
+
+# {{< version 0.2.18 >}}
+# {{< link "https://developers.facebook.com/docs/plugins/comments" "Facebook comment" >}} config (https://developers.facebook.com/docs/plugins/comments)
+[params.page.comment.facebook]
+enable = false
+width = "100%"
+numPosts = 10
+appId = ""
+languageCode = ""
+
+# {{< link "https://comments.app/" "Telegram comments" >}} config (https://comments.app)
+[params.page.comment.telegram]
+enable = false
+siteID = ""
+limit = 5
+height = ""
+color = ""
+colorful = true
+dislikes = false
+outlined = false
+
+# {{< link "https://commento.io/" "Commento" >}} comment config (https://commento.io)
+[params.page.comment.commento]
+enable = false
+
+# {{< link "https://utteranc.es/" "Utterances" >}} comment config (https://utteranc.es)
+[params.page.comment.utterances]
+enable = false
+# owner/repo
+repo = ""
+issueTerm = "pathname"
+label = ""
+lightTheme = "github-light"
+darkTheme = "github-dark"
+
+# {{< version 0.2.13 >}} {{< link "https://twikoo.js.org/" "Twikoo" >}} comment config (https://twikoo.js.org/)
+[params.page.comment.twikoo]
+enable = false
+envId = ""
+region = ""
+path = ""
+visitor = true
+commentCount = true
+# {{< version 0.2.17 changed >}} enable lightgallery support
+lightgallery = false
+# {{< version 0.2.17 >}} enable Katex support
+katex = false
+
+# {{< version 0.2.14 >}} {{< link "https://giscus.app/" "Giscus" >}} comments config
+[params.page.comment.giscus]
+enable = false
+repo = ""
+repoId = ""
+category = ""
+categoryId = ""
+mapping = ""
+origin = "https://giscus.app" # {{< version 0.3.7 >}} Or set it to your self-hosted domain
+strict = "0" # {{< version 0.2.18 >}}
+term = ""
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom" # ["top", "bottom"]
+lightTheme = "light"
+darkTheme = "dark"
+lazyLoad = true
+
+# Third-party library config
+[params.page.library]
+
+[params.page.library.css]
+# someCSS = "some.css"
+# located in "assets/"
+# Or
+# someCSS = "https://cdn.example.com/some.css"
+
+[params.page.library.js]
+# someJavascript = "some.js"
+# located in "assets/"
+# Or
+# someJavascript = "https://cdn.example.com/some.js"
+
+# Page SEO config
+[params.page.seo]
+# image URL
+images = []
+
+# Publisher info
+[params.page.seo.publisher]
+name = ""
+logoUrl = ""
 ```
 
 ## Favicon Generation

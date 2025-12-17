@@ -1,6 +1,11 @@
 # -------------------------------------------------------------------------------------
 # Front Matter Configuration | Front Matter 配置
-# See: https://gohugo.io/getting-started/configuration/#configure-front-matter
+# See: https://gohugo.io/configuration/front-matter/
 # -------------------------------------------------------------------------------------
 
-lastmod = ["lastmod", ":fileModTime", ":git", ":defalut"]
+lastmod = [
+  "lastmod",
+  ":fileModTime",
+  ":git",
+  ":defalut"
+]

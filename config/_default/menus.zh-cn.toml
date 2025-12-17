@@ -4,80 +4,93 @@
 # -------------------------------------------------------------------------------------
 
 [[main]]
-  identifier = "releases"
-  parent = "documentation"
-  name = "版本发布"
-  post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
-  url = "https://github.com/hugo-fixit/FixIt/releases"
-  weight = 5
-  [main.params]
-    icon = "fa-solid fa-code-branch"
-[[main]]
-  identifier = "archives"
-  parent = "documentation"
-  name = "归档"
-  url = "archives/"
-  weight = 20
-  [main.params]
-    icon = "fa-solid fa-archive"
-    divided = true
-[[main]]
-  identifier = "categories"
-  parent = "documentation"
-  name = "分类"
-  url = "categories/"
-  weight = 21
-  [main.params]
-    icon = "fa-solid fa-folder-tree"
-[[main]]
-  identifier = "collections"
-  parent = "documentation"
-  name = "合集"
-  url = "collections/"
-  weight = 22
-  [main.params]
-    icon = "fa-solid fa-layer-group"
-[[main]]
-  identifier = "tags"
-  parent = "documentation"
-  name = "标签"
-  url = "tags/"
-  weight = 23
-  [main.params]
-    icon = "fa-solid fa-tags"
+identifier = "releases"
+parent = "documentation"
+name = "版本发布"
+post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
+url = "https://github.com/hugo-fixit/FixIt/releases"
+weight = 5
+
+[main.params]
+icon = "fa-solid fa-code-branch"
 
 [[main]]
-  identifier = "showcase"
-  name = "案例展示"
-  url = "showcase/"
-  weight = 31
-  [main.params]
-    icon = "fa-solid fa-blog"
+identifier = "archives"
+parent = "documentation"
+name = "归档"
+url = "archives/"
+weight = 20
+
+[main.params]
+icon = "fa-solid fa-archive"
+divided = true
 
 [[main]]
-  identifier = "community"
-  name = "社区支持"
-  url = "community/"
-  weight = 40
-  [main.params]
-    icon = "fa-regular fa-comments"
+identifier = "categories"
+parent = "documentation"
+name = "分类"
+url = "categories/"
+weight = 21
+
+[main.params]
+icon = "fa-solid fa-folder-tree"
 
 [[main]]
-  identifier = "tests"
-  name = "测试"
-  url = "tests/"
-  title = "FixIt 测试文章"
-  weight = 90
-  [main.params]
-    draft = true
-    icon = "fa-solid fa-flask text-success"
+identifier = "collections"
+parent = "documentation"
+name = "合集"
+url = "collections/"
+weight = 22
+
+[main.params]
+icon = "fa-solid fa-layer-group"
 
 [[main]]
-  identifier = "github"
-  pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
-  url = "https://github.com/hugo-fixit/FixIt"
-  title = "GitHub"
-  weight = 100
-  [main.params]
-    class = "text-center"
-    type = "mobile"
+identifier = "tags"
+parent = "documentation"
+name = "标签"
+url = "tags/"
+weight = 23
+
+[main.params]
+icon = "fa-solid fa-tags"
+
+[[main]]
+identifier = "showcase"
+name = "案例展示"
+url = "showcase/"
+weight = 31
+
+[main.params]
+icon = "fa-solid fa-blog"
+
+[[main]]
+identifier = "community"
+name = "社区支持"
+url = "community/"
+weight = 40
+
+[main.params]
+icon = "fa-regular fa-comments"
+
+[[main]]
+identifier = "tests"
+name = "测试"
+url = "tests/"
+title = "FixIt 测试文章"
+weight = 90
+
+[main.params]
+draft = true
+icon = "fa-solid fa-flask text-success"
+
+[[main]]
+identifier = "github"
+pre = "<i class='fa-brands fa-github fa-fw' aria-hidden='true'></i>"
+url = "https://github.com/hugo-fixit/FixIt"
+title = "GitHub"
+weight = 100
+
+[main.params]
+class = "text-center"
+type = "mobile"

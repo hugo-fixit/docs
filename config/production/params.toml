@@ -6,186 +6,206 @@
 # Comment config
 # 评论系统设置
 [page.comment]
-  enable = true
-  # FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
-  # FixIt 0.2.13 | 新增 Artalk 评论系统设置 (https://artalk.js.org/)
-  [page.comment.artalk]
-    enable = false
-    server = "https://yourdomain"
-    site = "默认站点"
-    placeholder = ""
-    noComment = ""
-    sendBtn = ""
-    editorTravel = true
-    flatMode = 'auto'
-    # FixIt 0.2.17 | CHANGED enable lightgallery support
-    # FixIt 0.2.17 | 更改 启用 lightgallery 支持
-    lightgallery = false
-    locale = "" # FixIt 0.2.15 | NEW
-    # FixIt 0.2.18 | NEW
-    emoticons = ""
-    nestMax = 2
-    nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
-    vote = true
-    voteDown = false
-    uaBadge = true
-    listSort = true
-    imgUpload = true
-    preview = true
-    versionCheck = true
-    # TODO add pagination and heightLimit in release 1.0.0
-  # Disqus comment config (https://disqus.com/)
-  # Disqus 评论系统设置 (https://disqus.com/)
-  [page.comment.disqus]
-    enable = false
-    # Disqus shortname to use Disqus in posts
-    # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-    shortname = ""
-  # Gitalk comment config (https://github.com/gitalk/gitalk)
-  # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-  [page.comment.gitalk]
-    enable = false
-    owner = ""
-    repo = ""
-    clientId = ""
-    clientSecret = ""
-  # Valine comment config (https://github.com/xCss/Valine)
-  # Valine 评论系统设置 (https://github.com/xCss/Valine)
-  [page.comment.valine]
-    enable = false
-    appId = ""
-    appKey = ""
-    placeholder = ""
-    avatar = "mp"
-    meta = ['nick','mail','link']
-    requiredFields = []
-    pageSize = 10
-    lang = ""
-    visitor = true
-    recordIP = true
-    highlight = true
-    enableQQ = false
-    serverURLs = ""
-    # emoji data file name, default is "google.yml"
-    # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-    # located in "themes/FixIt/assets/lib/valine/emoji/" directory
-    # you can store your own data files in the same path under your project:
-    # "assets/lib/valine/emoji/"
-    # emoji 数据文件名称, 默认是 "google.yml"
-    # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-    # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
-    # 可以在你的项目下相同路径存放你自己的数据文件:
-    # "assets/lib/valine/emoji/"
-    emoji = ""
-    commentCount = true # FixIt 0.2.13 | NEW
-  # # FixIt 0.2.13 | NEW Waline comment config (https://waline.js.org)
-  # # FixIt 0.2.13 | 新增 Waline 评论系统设置 (https://waline.js.org)
-  [page.comment.waline]
-    enable = false
-    serverURL = ""
-    pageview = false
-    emoji = ['//unpkg.com/@waline/emojis@1.1.0/weibo']
-    meta = ['nick', 'mail', 'link']
-    requiredMeta = []
-    login = 'enable'
-    wordLimit = 0
-    pageSize = 10
-    imageUploader = false
-    highlighter = false
-    comment = false
-    texRenderer = false
-    search = false
-    recaptchaV3Key = ""
-    reaction = false
-  # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-  # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-  [page.comment.facebook]
-    enable = false
-    width = "100%"
-    numPosts = 10
-    appId = ""
-    languageCode = ""
-  # Telegram comments config (https://comments.app/)
-  # Telegram 评论系统设置 (https://comments.app/)
-  [page.comment.telegram]
-    enable = false
-    siteID = ""
-    limit = 5
-    height = ""
-    color = ""
-    colorful = true
-    dislikes = false
-    outlined = false
-  # Commento comment config (https://commento.io/)
-  # Commento 评论系统设置 (https://commento.io/)
-  [page.comment.commento]
-    enable = false
-  # Utterances comment config (https://utteranc.es/)
-  # Utterances 评论系统设置 (https://utteranc.es/)
-  [page.comment.utterances]
-    enable = false
-    # owner/repo
-    repo = ""
-    issueTerm = "pathname"
-    label = ""
-    lightTheme = "github-light"
-    darkTheme = "github-dark"
-  # # FixIt 0.2.13 | NEW Twikoo comment config (https://twikoo.js.org/)
-  # # FixIt 0.2.13 | 新增 Twikoo 评论系统设置 (https://twikoo.js.org/)
-  [page.comment.twikoo]
-    enable = false
-    envId = ""
-    region = ""
-    path = ""
-    visitor = true
-    commentCount = true
-    # FixIt 0.2.17 | CHANGED enable lightgallery support
-    # FixIt 0.2.17 | 更改 启用 lightgallery 支持
-    lightgallery = false
-    # FixIt 0.2.17 | NEW enable Katex support
-    # FixIt 0.2.17 | 新增 启用 Katex 支持
-    katex = false
-  # FixIt 0.2.14 | NEW Giscus comments config (https://giscus.app/)
-  # FixIt 0.2.14 | 新增 Giscus 评论系统设置 (https://giscus.app/)
-  [page.comment.giscus]
-    enable = true
-    repo = "hugo-fixit/FixIt"
-    repoId = "R_kgDOGihPtQ"
-    category = "General"
-    categoryId = "DIC_kwDOGihPtc4CApHX"
-    mapping = "title"
-    strict = "0" # FixIt NEW | 0.2.18
-    term = ""
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "top" # ["top", "bottom"]
-    lightTheme = "light"
-    darkTheme = "dark_dimmed"
-    lazyLoad = true
+enable = true
+
+# FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
+# FixIt 0.2.13 | 新增 Artalk 评论系统设置 (https://artalk.js.org/)
+[page.comment.artalk]
+enable = false
+server = "https://yourdomain"
+site = "默认站点"
+placeholder = ""
+noComment = ""
+sendBtn = ""
+editorTravel = true
+flatMode = 'auto'
+# FixIt 0.2.17 | CHANGED enable lightgallery support
+# FixIt 0.2.17 | 更改 启用 lightgallery 支持
+lightgallery = false
+locale = "" # FixIt 0.2.15 | NEW
+# FixIt 0.2.18 | NEW
+emoticons = ""
+nestMax = 2
+nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+vote = true
+voteDown = false
+uaBadge = true
+listSort = true
+imgUpload = true
+preview = true
+versionCheck = true
+
+# TODO add pagination and heightLimit in release 1.0.0
+# Disqus comment config (https://disqus.com/)
+# Disqus 评论系统设置 (https://disqus.com/)
+[page.comment.disqus]
+enable = false
+# Disqus shortname to use Disqus in posts
+# Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+shortname = ""
+
+# Gitalk comment config (https://github.com/gitalk/gitalk)
+# Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
+[page.comment.gitalk]
+enable = false
+owner = ""
+repo = ""
+clientId = ""
+clientSecret = ""
+
+# Valine comment config (https://github.com/xCss/Valine)
+# Valine 评论系统设置 (https://github.com/xCss/Valine)
+[page.comment.valine]
+enable = false
+appId = ""
+appKey = ""
+placeholder = ""
+avatar = "mp"
+meta = [
+  'nick',
+  'mail',
+  'link'
+]
+requiredFields = []
+pageSize = 10
+lang = ""
+visitor = true
+recordIP = true
+highlight = true
+enableQQ = false
+serverURLs = ""
+# emoji data file name, default is "google.yml"
+# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+# located in "themes/FixIt/assets/lib/valine/emoji/" directory
+# you can store your own data files in the same path under your project:
+# "assets/lib/valine/emoji/"
+# emoji 数据文件名称, 默认是 "google.yml"
+# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+# 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
+# 可以在你的项目下相同路径存放你自己的数据文件:
+# "assets/lib/valine/emoji/"
+emoji = ""
+commentCount = true
+
+# FixIt 0.2.13 | NEW
+# # FixIt 0.2.13 | NEW Waline comment config (https://waline.js.org)
+# # FixIt 0.2.13 | 新增 Waline 评论系统设置 (https://waline.js.org)
+[page.comment.waline]
+enable = false
+serverURL = ""
+pageview = false
+emoji = [ '//unpkg.com/@waline/emojis@1.1.0/weibo' ]
+meta = [
+  'nick',
+  'mail',
+  'link'
+]
+requiredMeta = []
+login = 'enable'
+wordLimit = 0
+pageSize = 10
+imageUploader = false
+highlighter = false
+comment = false
+texRenderer = false
+search = false
+recaptchaV3Key = ""
+reaction = false
+
+# Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+# Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+[page.comment.facebook]
+enable = false
+width = "100%"
+numPosts = 10
+appId = ""
+languageCode = ""
+
+# Telegram comments config (https://comments.app/)
+# Telegram 评论系统设置 (https://comments.app/)
+[page.comment.telegram]
+enable = false
+siteID = ""
+limit = 5
+height = ""
+color = ""
+colorful = true
+dislikes = false
+outlined = false
+
+# Commento comment config (https://commento.io/)
+# Commento 评论系统设置 (https://commento.io/)
+[page.comment.commento]
+enable = false
+
+# Utterances comment config (https://utteranc.es/)
+# Utterances 评论系统设置 (https://utteranc.es/)
+[page.comment.utterances]
+enable = false
+# owner/repo
+repo = ""
+issueTerm = "pathname"
+label = ""
+lightTheme = "github-light"
+darkTheme = "github-dark"
+
+# # FixIt 0.2.13 | NEW Twikoo comment config (https://twikoo.js.org/)
+# # FixIt 0.2.13 | 新增 Twikoo 评论系统设置 (https://twikoo.js.org/)
+[page.comment.twikoo]
+enable = false
+envId = ""
+region = ""
+path = ""
+visitor = true
+commentCount = true
+# FixIt 0.2.17 | CHANGED enable lightgallery support
+# FixIt 0.2.17 | 更改 启用 lightgallery 支持
+lightgallery = false
+# FixIt 0.2.17 | NEW enable Katex support
+# FixIt 0.2.17 | 新增 启用 Katex 支持
+katex = false
+
+# FixIt 0.2.14 | NEW Giscus comments config (https://giscus.app/)
+# FixIt 0.2.14 | 新增 Giscus 评论系统设置 (https://giscus.app/)
+[page.comment.giscus]
+enable = true
+repo = "hugo-fixit/FixIt"
+repoId = "R_kgDOGihPtQ"
+category = "General"
+categoryId = "DIC_kwDOGihPtc4CApHX"
+mapping = "title"
+strict = "0" # FixIt NEW | 0.2.18
+term = ""
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "top" # ["top", "bottom"]
+lightTheme = "light"
+darkTheme = "dark_dimmed"
+lazyLoad = true
 
 # FixIt 0.3.10 | NEW Busuanzi count
 # FixIt 0.3.10 | 新增 不蒜子计数
 [busuanzi]
-  # whether to enable busuanzi count
-  # 是否启用不蒜子计数
-  enable = true
-  # busuanzi count core script source. Default is https://vercount.one/js
-  # 不蒜子计数器核心脚本地址。默认为 https://vercount.one/js
-  source = "https://vercount.one/js"
-  # whether to show the site views
-  # 是否显示网站访问量
-  siteViews = true
-  # whether to show the page views
-  # 是否显示页面访问量
-  pageViews = true
+# whether to enable busuanzi count
+# 是否启用不蒜子计数
+enable = true
+# busuanzi count core script source. Default is https://vercount.one/js
+# 不蒜子计数器核心脚本地址。默认为 https://vercount.one/js
+source = "https://vercount.one/js"
+# whether to show the site views
+# 是否显示网站访问量
+siteViews = true
+# whether to show the page views
+# 是否显示页面访问量
+pageViews = true
 
 # CDN config for third-party library files
 # 第三方库文件的 CDN 设置
 [cdn]
-  # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
-  # located in "themes/FixIt/assets/data/cdn/" directory
-  # you can store your own data files in the same path under your project: "assets/data/cdn/"
-  # CDN 数据文件名称, 默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
-  # 位于 "themes/FixIt/assets/data/cdn/" 目录
-  # 可以在你的项目下相同路径存放你自己的数据文件："assets/data/cdn/"
-  # data = "unpkg.yml"
+# CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
+# located in "themes/FixIt/assets/data/cdn/" directory
+# you can store your own data files in the same path under your project: "assets/data/cdn/"
+# CDN 数据文件名称, 默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
+# 位于 "themes/FixIt/assets/data/cdn/" 目录
+# 可以在你的项目下相同路径存放你自己的数据文件："assets/data/cdn/"
+# data = "unpkg.yml"

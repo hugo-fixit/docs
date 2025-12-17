@@ -6,72 +6,80 @@
 description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"
 
 [gitInfo]
-  dir = "content/zh-cn"
+dir = "content/zh-cn"
 
 [search]
-  [search.algolia]
-    index = "index.zh-cn"
+
+[search.algolia]
+index = "index.zh-cn"
 
 [cse]
-  resultsPage = "/zh-cn/search/"
-  [cse.google]
-    cx = "83ffebf0680ff4971"
+resultsPage = "/zh-cn/search/"
+
+[cse.google]
+cx = "83ffebf0680ff4971"
 
 [postChat]
-  userDesc = "如果你对 FixIt 有任何疑问，可以来问我哦～"
-  defaultChatQuestions = [
-    "怎么安装 FixIt 主题？",
-    "FixIt 主题有哪些功能？",
-    "FixIt 主题生态系统",
-  ]
-  defaultSearchQuestions = [
-    "快速上手",
-    "配置 FixIt",
-    "内容管理",
-    "进阶使用"
-  ]
+userDesc = "如果你对 FixIt 有任何疑问，可以来问我哦～"
+defaultChatQuestions = [
+  "怎么安装 FixIt 主题？",
+  "FixIt 主题有哪些功能？",
+  "FixIt 主题生态系统",
+]
+defaultSearchQuestions = [
+  "快速上手",
+  "配置 FixIt",
+  "内容管理",
+  "进阶使用"
+]
 
 [postSummary]
-  title = "AI 摘要"
+title = "AI 摘要"
 
 [header]
-  [header.subtitle]
-    name = "Hugo 主题"
+
+[header.subtitle]
+name = "Hugo 主题"
 
 [home]
-  [home.profile]
-    subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+
+[home.profile]
+subtitle = "一个简洁、优雅且高效的 Hugo 主题"
 
 [social]
-  GitHub = "hugo-fixit"
-  # Weibo = "liahao"
-  Email = "fixit@lruihao.cn"
-  RSS = true
-  [social.weixin]
-    id = "qr-wx-mp_s.webp"
-    weight = 20
-    Template = "https://lruihao.cn/images/%v"
-    Title = "FixIt 主题交流群"
-    [social.weixin.icon]
-      Class = "fa-brands fa-weixin fa-fw"
-  [social.zsxq]
-    id = "CE3GF"
-    weight = 70
-    Prefix = "https://t.zsxq.com/"
-    Title = "Hugo FixIt 知识星球"
-    [social.zsxq.icon]
-      Src = "images/icons/zsxq.svg"
-  [social.QQGroup]
-    id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
-    Title = "FixIt 主题交流群"
+GitHub = "hugo-fixit"
+# Weibo = "liahao"
+Email = "fixit@lruihao.cn"
+RSS = true
+
+[social.weixin]
+id = "qr-wx-mp_s.webp"
+weight = 20
+Template = "https://lruihao.cn/images/%v"
+Title = "FixIt 主题交流群"
+
+[social.weixin.icon]
+Class = "fa-brands fa-weixin fa-fw"
+
+[social.zsxq]
+id = "CE3GF"
+weight = 70
+Prefix = "https://t.zsxq.com/"
+Title = "Hugo FixIt 知识星球"
+
+[social.zsxq.icon]
+Src = "images/icons/zsxq.svg"
+
+[social.QQGroup]
+id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"
+Title = "FixIt 主题交流群"
 
 [pangu]
-  enable = true
-  selector = "article"
+enable = true
+selector = "article"
 
 [watermark]
-  content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt 主题'
+content = '<img class="fixit-icon" src="/images/hugo-fixit.webp" alt="FixIt logo" /> FixIt 主题'
 
 [githubCorner]
-  title = "在 GitHub 上查看源代码"
-
+title = "在 GitHub 上查看源代码"
