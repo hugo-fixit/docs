@@ -80,7 +80,7 @@ deep
 > [!important]
 > 如果你希望简化配置文件，请确保以下配置必须从主题合并：
 >
-> ```toml
+> ```toml {mode="mac",lineNos=false}
 > [markup]
 > _merge = "shallow"
 >
@@ -1692,6 +1692,67 @@ cacheRemote
 optimise
 : `bool` 是否对图片进行缩放和优化，默认：`false`。
 
+### codeblock
+
+{{< version 0.4.0 >}}
+
+`map` 代码块包装器配置。
+
+```toml
+[params]
+
+[params.codeblock]
+wrapper = true
+mode = "classic"
+wrapperClass = ""
+maxShownLines = 10
+copyable = true
+lineNosToggler = true
+lineWrapToggler = true
+editable = false
+```
+
+> [!NOTE]
+> 你可以通过 Markdown 属性覆盖全局配置，例如：
+>
+> ````markdown {wrapper=false, lineNos=false}
+> ```lang {mode="mac", maxShownLines=5}
+> code here
+> ```
+> ````
+
+wrapper
+: `bool` 是否启用代码块包装器，默认：`true`。
+
+mode
+: `string` 代码块模式。可选值：`classic`、`mac`、`simple` 等，默认：`classic`。（如果设置为自定义值，则需要为 `data-mode` 属性创建自定义 CSS。）
+
+wrapperClass
+: `string` 代码块包装器的自定义 CSS 类，默认为空字符串。\
+例如：`is-collapsed is-expanded line-nos-hidden line-wrapping`
+
+| 类名              | 描述                                                  |
+| :---------------- | :---------------------------------------------------- |
+| `is-collapsed`    | 控制代码块包装器是否折叠。（仅适用于 `classic` 模式） |
+| `is-expanded`     | 控制代码块预览是否展开。（默认是折叠的）              |
+| `line-nos-hidden` | 控制是否隐藏行号。                                    |
+| `line-wrapping`   | 控制是否启用换行。                                    |
+
+maxShownLines
+: `int` 代码块预览时显示的最大行数，默认：`10`。
+
+copyable
+: `bool` 是否启用代码复制按钮。默认：`true`。
+
+lineNosToggler
+: `bool` 是否在代码块标题中启用行号切换按钮。默认：`true`。（仅在 `classic` 模式下可用）
+
+lineWrapToggler
+: `bool` 是否在代码块标题中启用自动换行切换按钮。默认：`true`。（仅在 `classic` 模式下可用）
+
+editable
+: `bool` 是否在代码块标题中启用代码编辑按钮。默认：`false`。（仅在 `classic` 模式下可用）
+
 ### jsonViewer
 
 {{< version 0.4.0 >}}
@@ -1862,17 +1923,6 @@ h4 = "{h2}.{h3}.{h4} {title}"
 h5 = "{h2}.{h3}.{h4}.{h5} {title}"
 h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
 
-# 代码块包装器配置
-[params.page.code]
-# {{< version 0.3.9 >}} 是否启用代码块包装器
-enable = true
-# 是否显示代码块包装器的复制按钮
-copy = true
-# {{< version 0.2.13 >}} 是否显示代码块包装器的编辑按钮
-edit = true
-# 默认展开显示的代码行数
-maxShownLines = 10
-
 # {{< version 0.4.0 changed >}} 数学公式配置
 # See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
 [params.page.math]
@@ -1953,13 +2003,6 @@ geolocate = true
 scale = true
 # 是否添加 {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
 fullscreen = true
-
-# {{< version 0.3.0 >}} [试验性功能] 缓存图床图片到本地
-# 详见：https://github.com/hugo-fixit/FixIt/pull/362
-[params.page.cacheRemoteImages]
-enable = false
-# 用本地图片链接替换远程图片链接 (放置在 public/images/remote/)
-replace = false
 
 # {{< version 0.3.0 >}} 相关内容配置 (https://gohugo.io/content-management/related/)
 [params.page.related]

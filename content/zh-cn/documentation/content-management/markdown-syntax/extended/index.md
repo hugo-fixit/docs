@@ -898,84 +898,22 @@ some Markdown content
   {.text-warning}
 {.text-primary}
 
-#### 代码块
-
-请注意，[code fences][code-fences] 中的属性和其他高亮处理指令必须位于开始标记之后，例如：
-
-````markdown
-```go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
-// ... code
-```
-````
-
-给代码块添加 `title` 属性，例如：
-
-````markdown
-```js {title="test.js"}
-console.log('hello FixIt!');
-```
-````
-
-呈现的输出效果如下：
-
-```js {title="test.js"}
-console.log('hello FixIt!');
-```
-
-{{< version 0.3.9 >}}
-
-给代码块添加 `no-header` 类，隐藏代码块的标题，例如：
-
-````markdown
-```js {.no-header}
-function forEach(elements, handler) {
-  elements = elements || [];
-  for (let i = 0; i < elements.length; i++) {
-    handler(elements[i]);
-  }
-}
-```
-````
-
-呈现的输出效果如下：
-
-```js {.no-header}
-function forEach(elements, handler) {
-  elements = elements || [];
-  for (let i = 0; i < elements.length; i++) {
-    handler(elements[i]);
-  }
-}
-```
-
-{{< version 0.3.9 >}}
-
-给代码块添加 `data-open` 属性，强制展开或者折叠代码块，例如：
-
-````markdown
-```js {data-open=false}
-console.log('hello FixIt!');
-```
-````
-
-呈现的输出效果如下：
-
-```js {data-open=false}
-console.log('hello FixIt!');
-```
-
 ## 代码块扩展语法
 
 **FixIt** 主题扩展了标准 Markdown 代码围栏，支持高级功能，包括图表、图形和交互式可视化。这些扩展的代码围栏使你能够直接在 Markdown 文件中创建丰富的动态内容。
 
-扩展的代码围栏使用与标准 Markdown 相同的三重反引号语法，但使用特定的语言标识符来触发特殊的渲染引擎：
+### 语法
+
+扩展的代码围栏使用与标准 Markdown 相同的三重反引号语法，但使用特定语言标识符来触发特殊的渲染引擎：
 
 ````markdown
-```language
+```language {}
 // 在这里输入特定语言的内容
 // 支持的语言包括：goat, mermaid, echarts, timeline, json
 ```
 ````
+
+### 语言
 
 每种扩展代码围栏类型都提供独特的功能：
 
@@ -987,8 +925,55 @@ console.log('hello FixIt!');
 
 这些功能在 FixIt 主题中自动启用，无需额外配置。只需在代码围栏中使用相应的语言标识符，内容就会使用相应的引擎进行渲染。
 
+### 选项
+
+你可以通过 [Hugo 语法高亮选项][code-fences]、[主题代码块配置][codeblock-config] 或者以下选项来自定义你的代码块：
+
+| 选项    | 描述         | 类型     |
+| :------ | :----------- | :------- |
+| `title` | 代码块标题   | `string` |
+| `name`  | 代码块文件名 | `string` |
+
+例如：
+
+````markdown
+```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+<script setup>
+import { ref } from 'vue'
+
+const msg = ref('Hello World!')
+</script>
+
+<template>
+  <h1>{{ msg }}</h1>
+  <input v-model="msg" />
+</template>
+
+<style lang="scss" scoped>
+</style>
+```
+````
+
+呈现的输出如下所示：
+
+```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+<script setup>
+import { ref } from 'vue'
+
+const msg = ref('Hello World!')
+</script>
+
+<template>
+  <h1>{{ msg }}</h1>
+  <input v-model="msg" />
+</template>
+
+<style lang="scss" scoped>
+</style>
+```
+
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD052 MD059 -->
+<!-- markdownlint-disable-file MD052 MD059 MD024 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
@@ -1007,9 +992,10 @@ console.log('hello FixIt!');
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
-[code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
 [diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
+[code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
+[codeblock-config]: {{< relref path="/documentation/getting-started/configuration#codeblock" >}}

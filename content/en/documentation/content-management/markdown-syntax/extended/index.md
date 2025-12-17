@@ -898,84 +898,22 @@ The rendered output looks like this:
   {.text-warning}
 {.text-primary}
 
-#### code fences
-
-Note that attributes in [code fences][code-fences] must come after the opening tag, with any other highlighting processing instruction, e.g.:
-
-````markdown
-```go {.myclass linenos=table,hl_lines=[8,"15-17"],linenostart=199}
-// ... code
-```
-````
-
-Add `title` attribute to a code block, for example:
-
-````markdown
-```js {title="test.js"}
-console.log('hello FixIt!');
-```
-````
-
-The rendered output looks like this:
-
-```js {title="test.js"}
-console.log('hello FixIt!');
-```
-
-{{< version 0.3.9 >}}
-
-Add `no-header` class to a code block to hide the header, for example:
-
-````markdown
-```js {.no-header}
-function forEach(elements, handler) {
-  elements = elements || [];
-  for (let i = 0; i < elements.length; i++) {
-    handler(elements[i]);
-  }
-}
-```
-````
-
-The rendered output looks like this:
-
-```js {.no-header}
-function forEach(elements, handler) {
-  elements = elements || [];
-  for (let i = 0; i < elements.length; i++) {
-    handler(elements[i]);
-  }
-}
-```
-
-{{< version 0.3.9 >}}
-
-Add `data-open` attribute to a code block to force expand or collapse the code block, for example:
-
-````markdown
-```js {data-open=false}
-console.log('hello FixIt!');
-```
-````
-
-The rendered output looks like this:
-
-```js {data-open=false}
-console.log('hello FixIt!');
-```
-
 ## Code Fences Extended
 
 **FixIt** theme extends the standard Markdown code fences to support advanced features including diagrams, charts, and interactive visualizations. These extended code fences enable you to create rich, dynamic content directly within your Markdown files.
 
+### Syntax
+
 The extended code fences use the same triple backtick syntax as standard Markdown, but with specific language identifiers that trigger special rendering engines:
 
 ````markdown
-```language
+```language {.class, key="value"}
 // Enter content specific to the language here
 // Supported languages include: goat, mermaid, echarts, timeline, json
 ```
 ````
+
+### Language
 
 Each extended code fence type offers unique capabilities:
 
@@ -987,8 +925,55 @@ Each extended code fence type offers unique capabilities:
 
 These features are automatically enabled in FixIt theme and require no additional configuration. Simply use the appropriate language identifier in your code fence, and the content will be rendered using the corresponding engine.
 
+### Options
+
+You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], or the following options:
+
+| Option  | Description         | Type     |
+| :------ | :------------------ | :------- |
+| `title` | Code block title    | `string` |
+| `name`  | Code block filename | `string` |
+
+For example:
+
+````markdown
+```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+<script setup>
+import { ref } from 'vue'
+
+const msg = ref('Hello World!')
+</script>
+
+<template>
+  <h1>{{ msg }}</h1>
+  <input v-model="msg" />
+</template>
+
+<style lang="scss" scoped>
+</style>
+```
+````
+
+The rendered output looks like this:
+
+```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+<script setup>
+import { ref } from 'vue'
+
+const msg = ref('Hello World!')
+</script>
+
+<template>
+  <h1>{{ msg }}</h1>
+  <input v-model="msg" />
+</template>
+
+<style lang="scss" scoped>
+</style>
+```
+
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD052 MD059 -->
+<!-- markdownlint-disable-file MD052 MD059 MD024 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts
@@ -1007,9 +992,10 @@ These features are automatically enabled in FixIt theme and require no additiona
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
-[code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
 [diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
+[code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
+[codeblock-config]: {{< relref path="/documentation/getting-started/configuration#codeblock" >}}

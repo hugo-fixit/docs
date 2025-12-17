@@ -80,7 +80,7 @@ deep
 > [!important]
 > If you want to simplify your configuration files, make sure the following configuration must be merged from the theme:
 >
-> ```toml
+> ```toml {mode="mac",lineNos=false}
 > [markup]
 > _merge = "shallow"
 >
@@ -1694,6 +1694,67 @@ cacheRemote
 optimise
 : `bool` Whether to resize and optimise images. Default is `false`.
 
+### codeblock
+
+{{< version 0.4.0 >}}
+
+`map` Code block wrapper Configuration.
+
+```toml
+[params]
+
+[params.codeblock]
+wrapper = true
+mode = "classic"
+wrapperClass = ""
+maxShownLines = 10
+copyable = true
+lineNosToggler = true
+lineWrapToggler = true
+editable = false
+```
+
+> [!NOTE]
+> You can override the global config via Markdown attributes, for example:
+>
+> ````markdown {wrapper=false, lineNos=false}
+> ```lang {mode="mac", maxShownLines=5}
+> code here
+> ```
+> ````
+
+wrapper
+: `bool` Whether to enable the code block wrapper. Default is `true`.
+
+mode
+: `string` Code block mode. The configuration value for `mode` can be one of `classic`, `mac`, `simple`, etc. Default is `classic`. (If you set to custom value, you need to create a custom CSS for `data-mode` attribute.)
+
+wrapperClass
+: `string` Additional classes for the code block wrapper. Default is `""`.\
+e.g. `is-collapsed is-expanded line-nos-hidden line-wrapping`
+
+| Class Name        | Description                                                                   |
+| :---------------- | :---------------------------------------------------------------------------- |
+| `is-collapsed`    | Control the code block wrapper is collapsed or not. (only for `classic` mode) |
+| `is-expanded`     | Control the code block preview is expanded or not. (default is collapsed)     |
+| `line-nos-hidden` | Control the line numbers is hidden or not.                                    |
+| `line-wrapping`   | Control the line wrapping is enabled or not.                                  |
+
+maxShownLines
+: `int` The maximum number of lines to show in the code block preview. Default is `10`.
+
+copyable
+: `bool` Whether to enable code copy button. Default is `true`.
+
+lineNosToggler
+: `bool` Whether to enable line numbers toggle button in the code block header. Default is `true`. (Only available in `classic` mode)
+
+lineWrapToggler
+: `bool` Whether to enable toggle line wrapping in the code block header. Default is `true`. (Only available in `classic` mode)
+
+editable
+: `bool` Whether to enable code edit button in the code block header. Default is `false`. (Only available in `classic` mode)
+
 ### jsonViewer
 
 {{< version 0.4.0 >}}
@@ -1924,17 +1985,6 @@ ignoreHtmlClass = "mathjax_ignore"
 # br = "\n"
 # wbr = ""
 
-# Code wrapper config
-[params.page.code]
-# {{< version 0.3.9 >}} whether to enable the code wrapper
-enable = true
-# whether to show the copy button of the code wrapper
-copy = true
-# {{< version 0.2.13 >}} whether to show the edit button of the code wrapper
-edit = true
-# the maximum number of lines of displayed code by default
-maxShownLines = 10
-
 # {{< link "https://docs.mapbox.com/mapbox-gl-js" "Mapbox GL JS" >}} config (https://docs.mapbox.com/mapbox-gl-js)
 [params.page.mapbox]
 # access token of Mapbox GL JS
@@ -1951,13 +2001,6 @@ geolocate = true
 scale = true
 # whether to add {{< link "https://docs.mapbox.com/mapbox-gl-js/api#fullscreencontrol" FullscreenControl >}}
 fullscreen = true
-
-# {{< version 0.3.0 >}} [Experimental] cache remote images locally
-# See: https://github.com/hugo-fixit/FixIt/pull/362
-[params.page.cacheRemoteImages]
-enable = false
-# replace remote image URL with local image URL (place in public/images/remote/)
-replace = false
 
 # {{< version 0.3.0 >}} Related content config (https://gohugo.io/content-management/related/)
 [params.page.related]

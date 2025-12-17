@@ -261,9 +261,6 @@ toc:
 expirationReminder:
   enable: false
   # ...
-code:
-  copy: true
-  # ...
 edit:
   enable: false
   # ...

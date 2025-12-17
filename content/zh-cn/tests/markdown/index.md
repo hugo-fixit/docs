@@ -9,9 +9,6 @@ tags:
 categories:
   - Tests
 lightgallery: true
-cacheRemoteImages:
-  enable: true
-  replace: false
 menu:
   main:
     title: Test for Markdown rendering

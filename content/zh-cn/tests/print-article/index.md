@@ -11,7 +11,7 @@ tags:
   - ES6
 categories:
   - Tests
-code:
+codeblock:
   maxShownLines: 30
 menu:
   main:
