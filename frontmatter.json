@@ -92,10 +92,6 @@
   "frontMatter.preview.host": "http://localhost:1313",
   "frontMatter.content.pageFolders": [
     {
-      "path": "[[workspace]]/content/zh-cn/tests",
-      "title": "tests"
-    },
-    {
       "path": "[[workspace]]/content/zh-cn/showcase",
       "title": "showcase"
     },

@@ -48,7 +48,6 @@ mainSections = [
   "guides",
   "references",
   "guides",
-  "tests",
 ]
 
 # the editor to use when creating new content
