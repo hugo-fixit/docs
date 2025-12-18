@@ -137,7 +137,7 @@ events:
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< timeline >}}
 events:
   - timestamp: 2024-07-19 20:30
@@ -216,7 +216,7 @@ events:
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< timeline reverse=true >}}
 events:
   - timestamp: 2021-12-18T16:15:22+08:00
@@ -270,7 +270,7 @@ events:
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< timeline >}}
 {
   "events": [
@@ -339,7 +339,7 @@ content = "活动按期开始"
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< timeline >}}
 [[events]]
 timestamp = "2024-07-11"

@@ -122,7 +122,7 @@ ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scat
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts >}}
 {
   "title": {
@@ -301,7 +301,7 @@ series:
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts >}}
 title:
   text: 折线统计图
@@ -527,7 +527,7 @@ data = [
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts >}}
 [title]
 text = "折线统计图"
@@ -848,7 +848,7 @@ data = [
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts js=true >}}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
@@ -1104,7 +1104,7 @@ return option;
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts js=true >}}
 const data = [];
 for (let i = 0; i <= 100; i++) {
@@ -1205,7 +1205,7 @@ return fetch('/echarts/les-miserables.json')
 
 {{< details "查看源码" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts js=true async=true >}}
 return fetch('/echarts/les-miserables.json')
   .then((response) => response.json())

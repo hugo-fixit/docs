@@ -74,7 +74,7 @@ In addition, you can also customize the `pageStyle` value in `assets/css/_custom
 
 For example: `pageStyle="custom"`
 
-```scss {data-open=true}
+```scss {name="assets/css/_custom.scss"}
 [data-page-style='custom'] {
   @media only screen and (min-width: 1441px) {
     %page-style {
@@ -184,7 +184,7 @@ After that, you can use the custom admonition in your content:
 {{< admonition ban "" false >}}
 Shortcode syntax:
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition ban >}}
 This is a custom admonition type with a ban icon.
 {{?{}< /admonition >}}
@@ -192,7 +192,7 @@ This is a custom admonition type with a ban icon.
 
 Alerts Markdown extension syntax:
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 > [!ban]
 > This is a custom admonition type with a ban icon.
 ```
@@ -211,8 +211,9 @@ To define a custom task list, change `params.taskList` in your site configuratio
 
 ```toml
 [params]
-  [params.taskList]
-    tip = "fa-regular fa-lightbulb"
+
+[params.taskList]
+tip = "fa-regular fa-lightbulb"
 ```
 
 If you need to change the default title of a custom task list, you can add the following content to the corresponding language file:
@@ -234,7 +235,7 @@ The rendered output looks like this:
 
 If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/css/_custom.scss`:
 
-```scss {title="_custom.scss"}
+```scss {name="assets/css/_custom.scss"}
 li[data-task='tip'] {
   --fi-task-color: #9974F7;
   --fi-checkbox-color: #EA9E36;
@@ -270,12 +271,14 @@ Next, taking the [component-projects] component as an example, we will introduce
 
         Then add this theme component to your `hugo.toml` configuration file:
 
-        ```toml
+        ```toml {mode="simple", lineNos=false}
         [module]
-          [[module.imports]]
-            path = "github.com/hugo-fixit/FixIt"
-          [[module.imports]]
-            path = "github.com/hugo-fixit/component-projects"
+
+        [[module.imports]]
+        path = "github.com/hugo-fixit/FixIt"
+
+        [[module.imports]]
+        path = "github.com/hugo-fixit/component-projects"
         ```
 
         On the first start of Hugo it will download the required files.
@@ -284,13 +287,13 @@ Next, taking the [component-projects] component as an example, we will introduce
 
         Clone FixIt and this git repository into your theme folder and add it as a submodule to the site directory.
 
-        ```bash
+        ```bash {mode="simple", lineNos=false}
         git submodule add https://github.com/hugo-fixit/component-projects.git themes/component-projects
         ```
 
         Next edit `hugo.toml` of your project and add this theme component to your themes:
 
-        ```toml
+        ```toml {mode="simple", lineNos=false}
         theme = ["FixIt", "component-projects"]
         ```
 
@@ -300,26 +303,27 @@ Next, taking the [component-projects] component as an example, we will introduce
 
     Through the [custom blocks][block] opened by the FixIt theme, we can easily inject the initialization file of the component through configuration:
 
-    ```toml {data-open=true}
+    ```toml {mode="simple", lineNos=false}
     [params]
+
     [params.customPartials]
-      head = []
-      menuDesktop = []
-      menuMobile = []
-      profile = []
-      aside = []
-      comment = []
-      footer = []
-      widgets = []
-      assets = [
-        "inject/component-projects.html",
-      ]
-      postTocBefore = []
-      postTocAfter = []
-      postContentBefore = []
-      postContentAfter = []
-      postFooterBefore = []
-      postFooterAfter = []
+    head = []
+    menuDesktop = []
+    menuMobile = []
+    profile = []
+    aside = []
+    comment = []
+    footer = []
+    widgets = []
+    assets = [
+      "inject/component-projects.html",
+    ]
+    postTocBefore = []
+    postTocAfter = []
+    postContentBefore = []
+    postContentAfter = []
+    postFooterBefore = []
+    postFooterAfter = []
     ```
 
 3. **Theme component import completed**, use the component features according to different component documents.

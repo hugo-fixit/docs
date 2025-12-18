@@ -103,7 +103,7 @@ According to the interface provided by Hugo, FixIt theme only realizes some func
 
 The following is a complete menu item configuration:
 
-```toml {data-open=true}
+```toml
 [menu]
 
 [[menu.main]]
@@ -143,7 +143,7 @@ In addition, you can also add content to the menu through the `front matter` of 
 
 Here is a `yaml` example:
 
-```yaml {data-open=true}
+```yaml
 ---
 title: Configure FixIt
 author: Lruihao

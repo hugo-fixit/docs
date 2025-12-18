@@ -27,11 +27,18 @@ Hugo 使用一系列因素来识别基于前置参数的页面相关内容。这
 
 ```toml
 [params]
-  [params.page]
-    [params.page.related]
-      enable = true
-      count = 5
-      position = ["aside", "footer"]
+# ...
+
+[params.page]
+# ...
+
+[params.page.related]
+enable = true
+count = 5
+position = [
+  "aside",
+  "footer"
+]
 ```
 
 > [!NOTE]
@@ -47,35 +54,38 @@ Hugo 提供了合理的相关内容默认配置，但如果需要，你可以在
 
 如果项目中没有设置任何 `related` 配置，Hugo 的相关内容方法将使用以下配置。
 
-```toml {data-open=true}
+```toml
 [related]
-  includeNewer = false
-  threshold = 80
-  toLower = false
-  [[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'keywords'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 100
-  [[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'date'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 10
-  [[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'tags'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 80
+includeNewer = false
+threshold = 80
+toLower = false
+
+[[related.indices]]
+applyFilter = false
+cardinalityThreshold = 0
+name = 'keywords'
+pattern = ''
+toLower = false
+type = 'basic'
+weight = 100
+
+[[related.indices]]
+applyFilter = false
+cardinalityThreshold = 0
+name = 'date'
+pattern = ''
+toLower = false
+type = 'basic'
+weight = 10
+
+[[related.indices]]
+applyFilter = false
+cardinalityThreshold = 0
+name = 'tags'
+pattern = ''
+toLower = false
+type = 'basic'
+weight = 80
 ```
 
 自定义配置应使用相同的语法设置。

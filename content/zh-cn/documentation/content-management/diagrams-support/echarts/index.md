@@ -133,7 +133,7 @@ ECharts 的代码块扩展语法支持以下参数：
 
 {{< details "查看源码" false "center" >}}
 
-````markdown {data-open=true}
+````markdown {mode="mac", lineNos=false}
 ```echarts
 {
   "title": {
@@ -312,7 +312,7 @@ series:
 
 {{< details "查看源码" false "center" >}}
 
-````markdown {data-open=true}
+````markdown {mode="mac", lineNos=false}
 ```echarts
 title:
   text: Summary Line Chart
@@ -538,7 +538,7 @@ data = [
 
 {{< details "查看源码" false "center" >}}
 
-````markdown {data-open=true}
+````markdown {mode="mac", lineNos=false}
 ```echarts
 [title]
 text = "Summary Line Chart"
@@ -859,7 +859,7 @@ data = [
 
 {{< details "查看源码" false "center" >}}
 
-````markdown {data-open=true}
+````markdown {mode="mac", lineNos=false}
 ```echarts {js=true}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
@@ -1115,7 +1115,7 @@ return option;
 
 {{< details "查看源码" false "center" >}}
 
-````markdown {data-open=true}
+````markdown {mode="mac", lineNos=false}
 ```echarts {js=true}
 const data = [];
 for (let i = 0; i <= 100; i++) {
@@ -1216,7 +1216,7 @@ return fetch('/echarts/les-miserables.json')
 
 {{< details "查看源码" false "center" >}}
 
-````markdown {data-open=true}
+````markdown {mode="mac", lineNos=false}
 ```echarts {js=true,async=true}
 return fetch('/echarts/les-miserables.json')
   .then((response) => response.json())

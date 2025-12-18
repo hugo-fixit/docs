@@ -27,11 +27,18 @@ To enable related content, set the `page.related.enable` parameter to `true` in 
 
 ```toml
 [params]
-  [params.page]
-    [params.page.related]
-      enable = true
-      count = 5
-      position = ["aside", "footer"]
+# ...
+
+[params.page]
+# ...
+
+[params.page.related]
+enable = true
+count = 5
+position = [
+  "aside",
+  "footer"
+]
 ```
 
 > [!NOTE]
@@ -47,35 +54,38 @@ Hugo provides a sensible default configuration of Related Content, but you can f
 
 Without any `related` configuration set on the project, Hugo’s Related Content methods will use the following.
 
-```toml {data-open=true}
+```toml
 [related]
-  includeNewer = false
-  threshold = 80
-  toLower = false
-  [[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'keywords'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 100
-  [[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'date'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 10
-  [[related.indices]]
-    applyFilter = false
-    cardinalityThreshold = 0
-    name = 'tags'
-    pattern = ''
-    toLower = false
-    type = 'basic'
-    weight = 80
+includeNewer = false
+threshold = 80
+toLower = false
+
+[[related.indices]]
+applyFilter = false
+cardinalityThreshold = 0
+name = 'keywords'
+pattern = ''
+toLower = false
+type = 'basic'
+weight = 100
+
+[[related.indices]]
+applyFilter = false
+cardinalityThreshold = 0
+name = 'date'
+pattern = ''
+toLower = false
+type = 'basic'
+weight = 10
+
+[[related.indices]]
+applyFilter = false
+cardinalityThreshold = 0
+name = 'tags'
+pattern = ''
+toLower = false
+type = 'basic'
+weight = 80
 ```
 
 Custom configuration should be set using the same syntax.

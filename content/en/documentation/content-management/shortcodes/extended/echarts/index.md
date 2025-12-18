@@ -122,7 +122,7 @@ Example `echarts` input in `JSON` format:
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts >}}
 {
   "title": {
@@ -301,7 +301,7 @@ series:
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts >}}
 title:
   text: Summary Line Chart
@@ -527,7 +527,7 @@ data = [
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts >}}
 [title]
 text = "Summary Line Chart"
@@ -848,7 +848,7 @@ Set the `js` parameter to `true`, the example `echarts` input in [JS object lite
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts js=true >}}
 {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
@@ -1104,7 +1104,7 @@ return option;
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts js=true >}}
 const data = [];
 for (let i = 0; i <= 100; i++) {
@@ -1205,7 +1205,7 @@ return fetch('/echarts/les-miserables.json')
 
 {{< details "View source" false "center" >}}
 
-```markdown {data-open=true}
+```markdown {mode="mac", lineNos=false}
 {{?{}< echarts js=true async=true >}}
 return fetch('/echarts/les-miserables.json')
   .then((response) => response.json())

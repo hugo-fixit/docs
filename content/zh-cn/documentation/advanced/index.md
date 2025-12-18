@@ -74,7 +74,7 @@ FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项�
 
 例如： `pageStyle="custom"`
 
-```scss {data-open=true}
+```scss {name="assets/css/_custom.scss"}
 [data-page-style='custom'] {
   @media only screen and (min-width: 1441px) {
     %page-style {
@@ -154,8 +154,9 @@ Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建
 
 ```toml
 [params]
-  [params.admonition]
-    ban = "fa-solid fa-ban"
+
+[params.admonition]
+ban = "fa-solid fa-ban"
 ```
 
 然后在项目目录 `assets/css/_override.scss` 中创建以下 SCSS 块：
@@ -184,7 +185,7 @@ ban = "禁止"
 {{< admonition ban "" false >}}
 Shortcode 语法：
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition ban >}}
 这是一个带有禁止图标的自定义 Admonition 类型。
 {{?{}< /admonition >}}
@@ -192,7 +193,7 @@ Shortcode 语法：
 
 Alert Markdown 扩展语法：
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 > [!ban]
 > 这是一个带有禁止图标的自定义 Admonition 类型。
 ```
@@ -211,8 +212,9 @@ Alert Markdown 扩展语法：
 
 ```toml
 [params]
-  [params.taskList]
-    tip = "fa-regular fa-lightbulb"
+
+[params.taskList]
+tip = "fa-regular fa-lightbulb"
 ```
 
 如果你需要修改自定义任务列表的默认标题，你可以在对应的语言文件中添加以下内容：
@@ -234,7 +236,7 @@ tip = "提示"
 
 如果你想修改任务列表默认样式，你可以在项目目录 `assets/css/_custom.scss` 中添加以下 SCSS 块：
 
-```scss {title="_custom.scss"}
+```scss {name="assets/css/_custom.scss"}
 li[data-task='tip'] {
   --fi-task-color: #9974F7;
   --fi-checkbox-color: #EA9E36;
@@ -270,12 +272,14 @@ li[data-task='tip'] {
 
         然后将此主题组件添加到你的 `hugo.toml` 配置文件中：
 
-        ```toml
+        ```toml {mode="simple", lineNos=false}
         [module]
-          [[module.imports]]
-            path = "github.com/hugo-fixit/FixIt"
-          [[module.imports]]
-            path = "github.com/hugo-fixit/component-projects"
+
+        [[module.imports]]
+        path = "github.com/hugo-fixit/FixIt"
+
+        [[module.imports]]
+        path = "github.com/hugo-fixit/component-projects"
         ```
 
         在 Hugo 的第一次启动时，它将下载所需的文件。
@@ -284,13 +288,13 @@ li[data-task='tip'] {
 
         将 FixIt 和此 git 存储库克隆到你的主题文件夹中，并将其作为网站目录的子模块添加。
 
-        ```bash
+        ```bash {mode="simple", lineNos=false}
         git submodule add https://github.com/hugo-fixit/component-projects.git themes/component-projects
         ```
 
         接下来编辑项目的 `hugo.toml` 并将此主题组件添加到你的主题中：
 
-        ```toml
+        ```toml {mode="simple", lineNos=false}
         theme = ["FixIt", "component-projects"]
         ```
 
@@ -300,26 +304,27 @@ li[data-task='tip'] {
 
     通过 FixIt 主题开放的 [自定义块][block]，我们能通过配置轻松地注入组件的初始化文件：
 
-    ```toml {data-open=true}
+    ```toml {mode="simple", lineNos=false}
     [params]
+
     [params.customPartials]
-      head = []
-      menuDesktop = []
-      menuMobile = []
-      profile = []
-      aside = []
-      comment = []
-      footer = []
-      widgets = []
-      assets = [
-        "inject/component-projects.html",
-      ]
-      postTocBefore = []
-      postTocAfter = []
-      postContentBefore = []
-      postContentAfter = []
-      postFooterBefore = []
-      postFooterAfter = []
+    head = []
+    menuDesktop = []
+    menuMobile = []
+    profile = []
+    aside = []
+    comment = []
+    footer = []
+    widgets = []
+    assets = [
+      "inject/component-projects.html",
+    ]
+    postTocBefore = []
+    postTocAfter = []
+    postContentBefore = []
+    postContentAfter = []
+    postFooterBefore = []
+    postFooterAfter = []
     ```
 
 3. **主题组件引入完成**，根据不同组件文档使用组件功能即可。

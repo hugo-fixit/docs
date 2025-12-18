@@ -62,7 +62,7 @@ collections:
 
 {{< admonition >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -72,7 +72,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition abstract "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition abstract >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -83,7 +83,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition info "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition info >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -94,7 +94,7 @@ The quick brown fox jumps over the lazy dog.
 {{< admonition todo "" false >}}
 {{< version 0.3.13 >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition todo >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -104,7 +104,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition tip "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition tip >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -115,7 +115,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition success "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition success >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -126,7 +126,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition question "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition question >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -137,7 +137,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition warning "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition warning >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -148,7 +148,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition failure "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition failure >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -159,7 +159,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition danger "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition danger >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -170,7 +170,7 @@ Alias: `error`
 
 {{< admonition bug "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition bug >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -180,7 +180,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition example "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition example >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}
@@ -190,7 +190,7 @@ The quick brown fox jumps over the lazy dog.
 
 {{< admonition quote "" false >}}
 
-```markdown {.no-header, linenos=false}
+```markdown {mode="simple", linenos=false}
 {{?{}< admonition quote >}}
 The quick brown fox jumps over the lazy dog.
 {{?{}< /admonition >}}

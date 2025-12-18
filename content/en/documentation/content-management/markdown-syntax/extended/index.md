@@ -39,7 +39,7 @@ With the basic Markdown syntax, the first line of each alert is an alert designa
 
 An example of all five types:
 
-```markdown {data-open=true}
+```markdown {.is-expanded}
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
 
@@ -145,14 +145,14 @@ The complete examples are as follows:
 
 > [!note]+
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!note]+
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!abstract]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!abstract]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -161,7 +161,7 @@ The complete examples are as follows:
 
 > [!info]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!info]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -169,14 +169,14 @@ The complete examples are as follows:
 > [!todo]-
 > {{< version 0.3.13 >}}
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!todo]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!tip]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!tip]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -185,7 +185,7 @@ The complete examples are as follows:
 
 > [!success]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!success]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -194,7 +194,7 @@ The complete examples are as follows:
 
 > [!question]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!question]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -203,7 +203,7 @@ The complete examples are as follows:
 
 > [!warning]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!warning]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -212,7 +212,7 @@ The complete examples are as follows:
 
 > [!failure]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!failure]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -221,7 +221,7 @@ The complete examples are as follows:
 
 > [!danger]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!danger]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -230,21 +230,21 @@ The complete examples are as follows:
 
 > [!bug]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!bug]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!example]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!example]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!quote]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!quote]-
 > > The quick brown fox jumps over the lazy dog.
 > ```

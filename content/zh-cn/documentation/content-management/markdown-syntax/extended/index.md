@@ -40,7 +40,7 @@ collections:
 
 以下是所有五种类型的示例：
 
-```markdown {data-open=true}
+```markdown {.is-expanded}
 > [!NOTE]
 > 突出显示用户应考虑的信息，即使只是浏览也应考虑。
 
@@ -146,14 +146,14 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!note]+
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!note]+
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!abstract]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!abstract]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -162,7 +162,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!info]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!info]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -170,14 +170,14 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 > [!todo]-
 > {{< version 0.3.13 >}}
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!todo]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!tip]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!tip]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -186,7 +186,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!success]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!success]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -195,7 +195,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!question]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!question]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -204,7 +204,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!warning]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!warning]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -213,7 +213,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!failure]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!failure]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -222,7 +222,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!danger]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!danger]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
@@ -231,21 +231,21 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 
 > [!bug]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!bug]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!example]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!example]-
 > > The quick brown fox jumps over the lazy dog.
 > ```
 
 > [!quote]-
 >
-> ```markdown {.no-header, linenos=false}
+> ```markdown {mode="simple", linenos=false}
 > > [!quote]-
 > > The quick brown fox jumps over the lazy dog.
 > ```

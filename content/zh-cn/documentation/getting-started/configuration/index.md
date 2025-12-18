@@ -103,7 +103,7 @@ Hugo 有一个简单而强大的 [菜单系统][menu-system]。
 
 下面是一个完整的菜单项配置：
 
-```toml {data-open=true}
+```toml
 [menu]
 
 [[menu.main]]
@@ -143,7 +143,7 @@ divided = false
 
 这是一个 `yaml` 示例：
 
-```yaml {data-open=true}
+```yaml
 ---
 title: 配置 Fixit
 author: Lruihao
