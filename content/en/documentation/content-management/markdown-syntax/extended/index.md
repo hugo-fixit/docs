@@ -907,27 +907,33 @@ The rendered output looks like this:
 The extended code fences use the same triple backtick syntax as standard Markdown, but with specific language identifiers that trigger special rendering engines:
 
 ````markdown
-```language {.class, key="value"}
+```LANG [OPTIONS]
 // Enter content specific to the language here
-// Supported languages include: goat, mermaid, echarts, timeline, json
 ```
 ````
 
-### Language
-
-Each extended code fence type offers unique capabilities:
-
-- **GoAT**: ASCII art diagrams that render as scalable vector graphics ([learn more][diagrams-support-goat])
-- **Mermaid**: Professional diagrams including flowcharts, sequence diagrams, and more ([learn more][diagrams-support-mermaid])
-- **ECharts**: Interactive data visualization charts and graphs ([learn more][diagrams-support-echarts])
-- **Timeline**: Chronological event displays with rich formatting ([learn more][timeline-support])
-- **JSON**: Render JSON data structures with syntax highlighting and collapsible views ([learn more][json-viewer])
+### Languages
 
 These features are automatically enabled in FixIt theme and require no additional configuration. Simply use the appropriate language identifier in your code fence, and the content will be rendered using the corresponding engine.
 
+[**GoAT**][diagrams-support-goat]
+: `goat` ASCII art diagrams that render as scalable vector graphics.
+
+[**Mermaid**][diagrams-support-mermaid]
+: `mermaid` Professional diagrams including flowcharts, sequence diagrams, and more.
+
+[**ECharts**][diagrams-support-echarts]
+: `echarts` Interactive data visualization charts and graphs.
+
+[**Timeline**][timeline-support]
+: `timeline` Chronological event displays with rich formatting.
+
+[**JSON**][json-viewer]
+: `json` Render JSON data structures with syntax highlighting and collapsible views.
+
 ### Options
 
-You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], or the following options:
+You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], [Markdown attributes](#markdown-attributes) or the following options:
 
 | Option  | Description         | Type     |
 | :------ | :------------------ | :------- |

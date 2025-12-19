@@ -81,6 +81,9 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 
 ### highlight
 
+> [!TIP]
+> 推荐使用 [Markdown 代码块扩展语法][code-fences-extended] 以获得更好的代码块渲染和更多功能。
+
 > [`highlight` shortcode 的文档][highlight]。
 
 一个 `highlight` 示例：
@@ -262,11 +265,12 @@ https://lruihao.cn
 要了解如何配置你的 Hugo 网站以满足新的欧盟隐私法规，请参阅 [隐私保护][privacy-protections]。
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file no-inline-html -->
+<!-- markdownlint-disable-file MD052 MD033 -->
 [shortcodes]: https://gohugo.io/content-management/shortcodes/
 [use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
 [partial-template]: https://gohugo.io/templates/partial/
 [figure]: https://gohugo.io/content-management/shortcodes/#figure
+[code-fences-extended]: {{< relref path="/documentation/content-management/markdown-syntax/extended/#code-fences-extended" >}}
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [param]: https://gohugo.io/content-management/shortcodes/#param
 [qr]: https://gohugo.io/content-management/shortcodes/#qr

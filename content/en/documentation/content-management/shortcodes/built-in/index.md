@@ -81,6 +81,9 @@ The HTML looks like this:
 
 ### highlight
 
+> [!TIP]
+> Recommended to use the [Markdown code fences extended syntax][code-fences-extended] for better code block rendering and more features.
+
 > [Documentation of `highlight` shortcode][highlight].
 
 Example `highlight` input:
@@ -262,11 +265,12 @@ The rendered output looks like this:
 To learn how to configure your Hugo site to meet the new EU privacy regulation, see [privacy protections][privacy-protections].
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file no-inline-html -->
+<!-- markdownlint-disable-file MD052 MD033 -->
 [shortcodes]: https://gohugo.io/content-management/shortcodes/
 [use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
 [partial-template]: https://gohugo.io/templates/partial/
 [figure]: https://gohugo.io/content-management/shortcodes/#figure
+[code-fences-extended]: {{< relref path="/documentation/content-management/markdown-syntax/extended/#code-fences-extended" >}}
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight
 [instagram]: https://gohugo.io/content-management/shortcodes/#instagram
 [param]: https://gohugo.io/content-management/shortcodes/#param

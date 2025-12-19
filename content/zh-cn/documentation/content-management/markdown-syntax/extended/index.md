@@ -812,7 +812,9 @@ $\text{MathJax}$ 在页面加载后通过 JavaScript 进行 **客户端渲染**�
 
 **[link{?]}(#escape-character)** 而不是 **[link](#escape-character)**。
 
-## Markdown 属性
+## Markdown 属性 {#markdown-attributes}
+
+{{< version 0.104.0 >}}
 
 > 更新你的站点配置以启用块级元素的 [Markdown 属性][markdown-attributes]。
 
@@ -898,36 +900,42 @@ some Markdown content
   {.text-warning}
 {.text-primary}
 
-## 代码块扩展语法
+## 代码块扩展语法 {#code-fences-extended}
 
 **FixIt** 主题扩展了标准 Markdown 代码围栏，支持高级功能，包括图表、图形和交互式可视化。这些扩展的代码围栏使你能够直接在 Markdown 文件中创建丰富的动态内容。
 
-### 语法
+### 语法 {#syntax}
 
 扩展的代码围栏使用与标准 Markdown 相同的三重反引号语法，但使用特定语言标识符来触发特殊的渲染引擎：
 
 ````markdown
-```language {}
+```LANG [OPTIONS]
 // 在这里输入特定语言的内容
-// 支持的语言包括：goat, mermaid, echarts, timeline, json
 ```
 ````
 
-### 语言
+### 语言 {#languages}
 
-每种扩展代码围栏类型都提供独特的功能：
+这些功能在 FixIt 主题中自动启用，无需额外配置，只需在代码围栏中使用相应的语言标识符，内容就会使用相应的引擎进行渲染。
 
-- **GoAT**：ASCII 艺术图表，渲染为可缩放的矢量图形（[了解更多][diagrams-support-goat]）
-- **Mermaid**：专业图表，包括流程图、时序图等（[了解更多][diagrams-support-mermaid]）
-- **ECharts**：交互式数据可视化图表和图形（[了解更多][diagrams-support-echarts]）
-- **Timeline**：具有丰富格式的时间线事件显示（[了解更多][timeline-support]）
-- **JSON**：格式化和可折叠的 JSON 数据视图（[了解更多][json-viewer]）
+[**GoAT**][diagrams-support-goat]
+: `goat` ASCII 艺术图表，渲染为可缩放的矢量图形。
 
-这些功能在 FixIt 主题中自动启用，无需额外配置。只需在代码围栏中使用相应的语言标识符，内容就会使用相应的引擎进行渲染。
+[**Mermaid**][diagrams-support-mermaid]
+: `mermaid` 专业图表，包括流程图、时序图等。
 
-### 选项
+[**ECharts**][diagrams-support-echarts]
+: `echarts` 交互式数据可视化图表和图形。
 
-你可以通过 [Hugo 语法高亮选项][code-fences]、[主题代码块配置][codeblock-config] 或者以下选项来自定义你的代码块：
+[**Timeline**][timeline-support]
+: `timeline` 具有丰富格式的时间线事件显示。
+
+[**JSON**][json-viewer]
+: `json` 格式化和可折叠的 JSON 数据视图。
+
+### 选项 {#options}
+
+你可以通过 [Hugo 语法高亮选项][code-fences]、[主题代码块配置][codeblock-config]、[Markdown 属性](#markdown-attributes) 或者以下选项来自定义你的代码块：
 
 | 选项    | 描述         | 类型     |
 | :------ | :----------- | :------- |

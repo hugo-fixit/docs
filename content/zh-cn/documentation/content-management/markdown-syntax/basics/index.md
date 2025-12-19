@@ -558,23 +558,23 @@ grunt.initConfig({
 
 ## 表格
 
-通过在每个单元格之间添加竖线作为分隔线，并在标题下添加一行破折号（也由竖线分隔）来创建表格。注意，竖线不需要垂直对齐。
+通过在每个单元格之间添加竖线作为分隔线，并在标题下添加一行破折号（也由竖线分隔）来创建表格。
 
 ```markdown
-| Option | Description |
-| ------ | ----------- |
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 ```
 
 呈现的输出效果如下：
 
-| Option | Description |
-| ------ | ----------- |
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
 输出的 HTML 看起来像这样：
 
@@ -603,24 +603,22 @@ grunt.initConfig({
 </table>
 ```
 
-{{< admonition note "文本右对齐或居中对齐" false >}}
-在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐，在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中。
+{{< admonition note "Markdown 表格对齐规则" false >}}
+在分隔线左侧加 `:` 左对齐，右侧加 `:` 右对齐，两侧都加或不加则居中。
 
 ```markdown
-| Option | Description |
-|:------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| 姓名 | 年龄 | 城市 |
+| :--- | ---: | :--: |
+| 张三 | 28   | 北京 |
+| 李四 | 34   | 上海 |
 ```
 
 呈现的输出效果如下：
 
-| Option | Description |
-|:------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| 姓名 | 年龄 | 城市 |
+| :--- | ---: | :--: |
+| 张三 | 28   | 北京 |
+| 李四 | 34   | 上海 |
 {{< /admonition >}}
 
 ## 链接 {#links}

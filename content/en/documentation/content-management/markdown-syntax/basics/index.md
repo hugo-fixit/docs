@@ -557,23 +557,23 @@ grunt.initConfig({
 
 ## Tables
 
-Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.
+Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header.
 
 ```markdown
-| Option | Description |
-| ------ | ----------- |
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 ```
 
 The rendered output looks like this:
 
-| Option | Description |
-| ------ | ----------- |
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
 The HTML looks like this:
 
@@ -602,26 +602,22 @@ The HTML looks like this:
 </table>
 ```
 
-{{< admonition note "Right or center aligned text" >}}
-Adding a colon on the right side of the dashes below any heading will right align text for that column.
-
-Adding colons on both sides of the dashes below any heading will center align text for that column.
+{{< admonition note "Markdown table alignment rules" >}}
+Add a colon `:` to the left of the separator line for left alignment, and a colon `:` to the right for right alignment. Adding colons on both sides or omitting them will center the table.
 
 ```markdown
-| Option | Description |
-|:------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| Name      | Age | City     |
+| :-------- | --: | :------: |
+| Zhang San | 28  | Beijing  |
+| Li Si     | 34  | Shanghai |
 ```
 
 The rendered output looks like this:
 
-| Option | Description |
-|:------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| Name      | Age | City     |
+| :-------- | --: | :------: |
+| Zhang San | 28  | Beijing  |
+| Li Si     | 34  | Shanghai |
 {{< /admonition >}}
 
 ## Links {#links}

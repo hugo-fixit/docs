@@ -406,7 +406,7 @@ When set to `true`, missing translations will be merged and displayed. Recommend
 
 | Setting | Multi-language Sites | Single-language Sites | Performance Impact          |
 | :------ | :------------------- | :-------------------- | :-------------------------- |
-| `true`  | ✅ Recommended       | ⚠️ Performance Loss | Additional merging overhead |
+| `true`  | ✅ Recommended       | ⚠️ Performance Loss   | Additional merging overhead |
 | `false` | ❌ Limited Function  | ✅ Recommended        | No additional overhead      |
 
 > [!NOTE]
