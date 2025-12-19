@@ -1750,7 +1750,7 @@ lineNosToggler
 : `bool` Whether to enable line numbers toggle button in the code block header. Default is `true`. (Only available in `classic` mode)
 
 lineWrapToggler
-: `bool` Whether to enable toggle line wrapping in the code block header. Default is `true`. (Only available in `classic` mode)
+: `bool` Whether to enable toggle line wrapping button in the code block header. Default is `true`. (Only available in `classic` mode)
 
 editable
 : `bool` Whether to enable code edit button in the code block header. Default is `false`. (Only available in `classic` mode)
