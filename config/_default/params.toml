@@ -853,7 +853,7 @@ userId = ""
 cacheRemote = true
 # Image resizing and optimisation
 # 图片缩放和优化
-optimise = true
+optimise = false
 
 # FixIt 0.4.0 | NEW Code block wrapper config
 # you can override the global config via Markdown attributes, for example:
