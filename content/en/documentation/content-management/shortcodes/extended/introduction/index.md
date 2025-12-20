@@ -416,7 +416,7 @@ The rendered output looks like this:
 The `version` shortcode has the following positional parameters:
 
 - **first** positional parameter _[required]_ **release tag**
-- **second** positional parameter _[optional]_ **type**，optional values: ["new", "changed", "deleted"], default: `new`
+- **second** positional parameter _[optional]_ **type**，optional values: ["new", "changed", "deleted", "deprecated"], default: `new`
 - **third** positional parameter _[optional]_ **URL prefix for the release tag**, default: `https://github.com/hugo-fixit/FixIt/releases/tag/v`
 - **fourth** positional parameter _[optional]_ **project name**, default: `FixIt`
 
@@ -426,13 +426,15 @@ Example `version` input:
 {{</* version 0.3.15 */>}}
 {{</* version 0.3.15 changed */>}}
 {{</* version 0.3.15 deleted */>}}
+{{</* version 0.3.15 deprecated */>}}
 ```
 
 The rendered output looks like this:
 
 {{< version 0.3.15 >}}\
 {{< version 0.3.15 changed >}}\
-{{< version 0.3.15 deleted >}}
+{{< version 0.3.15 deleted >}}\
+{{< version 0.3.15 deprecated >}}
 
 ## admonition
 

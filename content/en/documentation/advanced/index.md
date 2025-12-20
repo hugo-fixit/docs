@@ -154,8 +154,9 @@ To define a custom admonition, change `params.admonition` in your site configura
 
 ```toml
 [params]
-  [params.admonition]
-    ban = "fa-solid fa-ban"
+
+[params.admonition]
+ban = "fa-solid fa-ban"
 ```
 
 Then create the following SCSS block in your project directory `assets/css/_override.scss`:

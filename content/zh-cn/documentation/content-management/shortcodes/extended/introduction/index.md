@@ -416,7 +416,7 @@ _All pages and graphics on this web site are the property of FixIt._
 `version` shortcode 有以下位置参数：
 
 - **第一个**位置参数 _[必选]_ **版本号**
-- **第二个**位置参数 _[可选]_ **类型**，可选值：["new", "changed", "deleted"]，默认：`new`
+- **第二个**位置参数 _[可选]_ **类型**，可选值：["new", "changed", "deleted", "deprecated"]，默认：`new`
 - **第三个**位置参数 _[可选]_ **发行标签的 URL 前缀**，默认：`https://github.com/hugo-fixit/FixIt/releases/tag/v`
 - **第四个**位置参数 _[可选]_ **项目名称**，默认：`FixIt`
 
@@ -426,13 +426,15 @@ _All pages and graphics on this web site are the property of FixIt._
 {{</* version 0.3.15 */>}}
 {{</* version 0.3.15 changed */>}}
 {{</* version 0.3.15 deleted */>}}
+{{</* version 0.3.15 deprecated */>}}
 ```
 
 呈现的输出效果如下：
 
 {{< version 0.3.15 >}}\
 {{< version 0.3.15 changed >}}\
-{{< version 0.3.15 deleted >}}
+{{< version 0.3.15 deleted >}}\
+{{< version 0.3.15 deprecated >}}
 
 ## admonition
 
