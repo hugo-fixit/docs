@@ -61,16 +61,6 @@
   url: https://www.nikunokoya.com
   description: Niku's blog
 
-- nickname: pagezen
-  avatar: https://clearsky.me/avatar.jpg
-  url: https://clearsky.me
-  description: 晴空小筑站长，其博客对 FixIt 主题的扩展细节做的很棒！
-
-# - nickname: Qomarul Hasan
-#   avatar: https://blog.qomarhsn.com/profile.webp
-#   description: Explore technologies with a Linux & tech enthusiast. This blog offers programming tutorials, open-source project insights, and practical tech tips.
-#   url: https://blog.qomarhsn.com
-
 - nickname: roderick's blog
   avatar: https://www.roderickchan.cn/images/avatar.png
   description: 纸上得来终觉浅，绝知此事要躬行！
@@ -126,10 +116,10 @@
   url: https://www.zair.top
   description: 分享我的学习笔记、经验与有趣的小玩意。
 
-- nickname: KAYOON
-  avatar: https://iamky.cn/android-chrome-192x192.png
-  url: https://iamky.cn
-  description: 分享学习过程中整理出来的知识以及踩过的坑。
+# - nickname: KAYOON
+#   avatar: https://iamky.cn/android-chrome-192x192.png
+#   url: https://iamky.cn
+#   description: 分享学习过程中整理出来的知识以及踩过的坑。
 
 - nickname: Adilhyz
   avatar: https://adilhyz.github.io/images/avatar.png

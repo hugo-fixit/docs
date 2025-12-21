@@ -1686,6 +1686,8 @@ follow
 [params.image]
 cacheRemote = false
 optimise = false
+# FixIt 0.4.0 | 新增 排除优化的图片文件名（或模式）列表
+blackList = []
 ```
 
 cacheRemote
@@ -1693,6 +1695,9 @@ cacheRemote
 
 optimise
 : `bool` Whether to resize and optimise images. Default is `false`.
+
+blackList
+: `string array` {{< version 0.4.0 >}} A list of image file names or patterns to exclude from optimisation. e.g. `["example.jpg", "test-*.png"]`.
 
 ### codeblock
 
