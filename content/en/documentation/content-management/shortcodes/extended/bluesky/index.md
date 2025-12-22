@@ -33,7 +33,9 @@ Example `bluesky` input:
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
+{{< /env >}}
 
 ## Options
 

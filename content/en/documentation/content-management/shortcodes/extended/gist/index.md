@@ -39,7 +39,9 @@ Include this in your Markdown:
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< gist Lruihao fb8b2d0353465c4d40bf74818db80710 >}}
+{{< /env >}}
 
 The HTML looks like this:
 

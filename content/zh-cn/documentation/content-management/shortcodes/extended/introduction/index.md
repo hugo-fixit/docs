@@ -436,6 +436,30 @@ _All pages and graphics on this web site are the property of FixIt._
 {{< version 0.3.15 deleted >}}\
 {{< version 0.3.15 deprecated >}}
 
+## env
+
+{{< version 0.4.0 >}}
+
+`env` shortcode 用来根据当前的 Hugo 环境变量来有条件地渲染内容。
+
+在网络受限地区，本地加载 YouTube、Twitter 等服务会拖慢开发；可配置成只在生产环境渲染，开发环境直接跳过，提速调试。
+
+一个 `env` 示例：
+
+```markdown
+{{</* env "production" */>}}
+This content is only rendered in the production environment.
+里面的内容只会在生产环境中渲染。
+{{</* /env */>}}
+```
+
+呈现的输出效果如下：
+
+{{< env "production" >}}
+This content is only rendered in the production environment.
+里面的内容只会在生产环境中渲染。
+{{< /env >}}
+
 ## admonition
 
 `admonition` shortcode 允许你在内容中添加各种类型的标注。

@@ -436,6 +436,34 @@ The rendered output looks like this:
 {{< version 0.3.15 deleted >}}\
 {{< version 0.3.15 deprecated >}}
 
+## env
+
+{{< version 0.4.0 >}}
+
+The `env` shortcode is used to conditionally render content based on the current Hugo environment.
+
+In regions with restricted networks, loading YouTube, Twitter, etc. locally slows development; render them only in production and skip in dev to speed things up.
+
+Example `env` input:
+
+```markdown
+{{</* env "development" */>}}
+This content is only rendered in the **development** environment.
+{{</* /env */>}}
+{{</* env "production" */>}}
+This content is only rendered in the **production** environment.
+{{</* /env */>}}
+```
+
+The rendered output looks like this:
+
+{{< env "development" >}}
+This content is only rendered in the **development** environment.
+{{< /env >}}
+{{< env "production" >}}
+This content is only rendered in the **production** environment.
+{{< /env >}}
+
 ## admonition
 
 The `admonition` shortcode allows you to add types of callout boxes to your content.

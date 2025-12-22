@@ -33,7 +33,9 @@ collections:
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}
+{{< /env >}}
 
 ## 详细参数
 

@@ -38,7 +38,9 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 
 ## 使用 Shortcodes
 
+{{< env "production" >}}
 {{< youtube 2xkNJL4gJ9E >}}
+{{< /env >}}
 
 1. 带有原始字体串格式的 Shortcodes \` \`
 2. 带有 Markdown 的 Shortcodes `% %`
@@ -126,7 +128,9 @@ shortcode 是一个简单的片段，位于内容文件中，Hugo 将使用预�
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< instagram CxOWiQNP2MO >}}
+{{< /env >}}
 
 ### param
 
@@ -230,7 +234,9 @@ https://lruihao.cn
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< x user="SanDiegoZoo" id="1453110110599868418" >}}
+{{< /env >}}
 
 ### vimeo
 
@@ -244,7 +250,9 @@ https://lruihao.cn
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< vimeo 146022717 >}}
+{{< /env >}}
 
 ### youtube
 
@@ -258,7 +266,9 @@ https://lruihao.cn
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< youtube 0RKpf3rK57I >}}
+{{< /env >}}
 
 ## 隐私配置
 

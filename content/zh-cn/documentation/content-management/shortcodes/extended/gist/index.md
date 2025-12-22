@@ -39,7 +39,9 @@ https://gist.github.com/Lruihao/fb8b2d0353465c4d40bf74818db80710
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< gist Lruihao fb8b2d0353465c4d40bf74818db80710 >}}
+{{< /env >}}
 
 生成的 HTML 如下所示：
 

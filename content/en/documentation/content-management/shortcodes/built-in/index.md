@@ -38,7 +38,9 @@ In addition to cleaner Markdown, shortcodes can be updated any time to reflect n
 
 ## Use Shortcodes
 
+{{< env "production" >}}
 {{< youtube 2xkNJL4gJ9E >}}
+{{< /env >}}
 
 1. Shortcodes with raw string parameters \` \`
 2. Shortcodes with Markdown `% %`
@@ -126,7 +128,9 @@ Example `instagram` input:
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< instagram CxOWiQNP2MO >}}
+{{< /env >}}
 
 ### param
 
@@ -230,7 +234,9 @@ Example `x` input:
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< x user="SanDiegoZoo" id="1453110110599868418" >}}
+{{< /env >}}
 
 ### vimeo
 
@@ -244,7 +250,9 @@ Example `vimeo` input:
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< vimeo 146022717 >}}
+{{< /env >}}
 
 ### youtube
 
@@ -258,7 +266,9 @@ Example `youtube` input:
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< youtube 0RKpf3rK57I >}}
+{{< /env >}}
 
 ## Privacy configuration
 
