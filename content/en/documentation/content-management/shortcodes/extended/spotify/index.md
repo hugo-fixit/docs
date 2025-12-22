@@ -35,7 +35,9 @@ Or
 
 The rendered output looks like this:
 
+{{< env "production" >}}
 {{< spotify artist 74ASZWbe4lXaubB36ztrGX >}}
+{{< /env >}}
 
 ## Options
 

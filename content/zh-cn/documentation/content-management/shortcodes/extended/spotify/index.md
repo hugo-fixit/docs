@@ -35,7 +35,9 @@ Or
 
 呈现的输出效果如下：
 
+{{< env "production" >}}
 {{< spotify artist 74ASZWbe4lXaubB36ztrGX >}}
+{{< /env >}}
 
 ## 详细参数
 
@@ -51,10 +53,10 @@ Or
 
     Spotify 音乐的 `id`，可以在 Spotify URL 中找到。
 
-- **width** _[optional]_ (**第三个**位置参数)
+- **width** _[可选]_ (**第三个**位置参数)
 
     Spotify 音乐播放器的宽度。
 
-- **height** _[optional]_ (**第四个**位置参数)
+- **height** _[可选]_ (**第四个**位置参数)
 
     Spotify 音乐播放器的高度。

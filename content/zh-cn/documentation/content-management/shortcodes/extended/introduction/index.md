@@ -292,15 +292,15 @@ This is a **right-aligned** paragraph.
 
     是否初始显示 `details` 元素的内容，默认值是 `false`。
 
-- **class** _[optional]_ (**第三个**位置参数）{{< version 0.3.17 >}}
+- **class** _[可选]_ (**第三个**位置参数）{{< version 0.3.17 >}}
 
     元素的 `class` 属性的值。
 
-- **name** _[optional]_ {{< version 0.3.17 >}}
+- **name** _[可选]_ {{< version 0.3.17 >}}
 
     元素的 `name` 属性的值。
 
-- **title** _[optional]_ {{< version 0.3.17 >}}
+- **title** _[可选]_ {{< version 0.3.17 >}}
 
     元素的 `title` 属性的值。
 
