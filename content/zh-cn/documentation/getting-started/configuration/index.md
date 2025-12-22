@@ -977,10 +977,10 @@ orderby
 [params]
 
 [params.home]
-paginate = 10
 
 [params.home.profile]
 enable = false
+onlyFirstPage = false
 gravatarEmail = ""
 avatarURL = ""
 avatarMenu = ""
@@ -995,16 +995,14 @@ enable = true
 paginate = 6
 ```
 
-rss
-: `int` RSS 文章数目，默认：`10`。
-
 profile
 : `map` 主页个人信息配置。
 
 - enable: `bool` 是否显示个人信息，默认：`false`。
+- onlyFirstPage: `bool` 是否只在主页第一页显示个人信息，默认：`false`。{{< version 0.4.0 >}}
 - gravatarEmail: `string`Gravatar 邮箱，用于优先在主页显示的头像。
-- avatarURL: `string` 主页显示头像的 URL。{{< version 0.2.17 >}}
-- avatarMenu: `string` 头像菜单链接的 identifier。
+- avatarURL: `string` 主页显示头像的 URL，默认是作者的头像。
+- avatarMenu: `string` 头像菜单链接的 identifier。{{< version 0.2.17 >}}
 - title: `string` 主页显示的网站标题（支持 HTML 格式）。
 - subtitle: `string` 主页显示的网站副标题。
 - typeit: `bool` 是否为副标题显示打字机动画，默认：`true`。

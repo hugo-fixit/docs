@@ -976,10 +976,10 @@ orderby
 [params]
 
 [params.home]
-paginate = 10
 
 [params.home.profile]
 enable = false
+onlyFirstPage = false
 gravatarEmail = ""
 avatarURL = ""
 avatarMenu = ""
@@ -994,15 +994,13 @@ enable = true
 paginate = 6
 ```
 
-rss
-: `int` Amount of RSS pages. Default is `10`.
-
 profile
 : `map` The Home page profile Configuration.
 
 - enable: `bool` Whether to enable home page profile. Default is `false`.
+- onlyFirstPage: `bool` Whether to show profile and content only in the first home page. Default is `false`.
 - gravatarEmail: `string` Gravatar Email for preferred avatar in home page.
-- avatarURL: `string` URL of avatar shown in home page.
+- avatarURL: `string` URL of avatar shown in home page, default is author's avatar.
 - avatarMenu: `string` Identifier of avatar menu link. {{< version 0.2.17 >}}
 - title: `string` Title shown in home page (HTML format is supported).
 - subtitle: `string` Subtitle shown in home page.

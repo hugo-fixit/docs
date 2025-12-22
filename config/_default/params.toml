@@ -354,11 +354,14 @@ rss = 10
 # 主页个人信息
 [home.profile]
 enable = true
+# FixIt 0.4.0 | NEW Whether to show profile and content only in the first home page
+# FixIt 0.4.0 | 新增 仅在首页显示个人信息和内容
+onlyFirstPage = false
 # Gravatar Email for preferred avatar in home page
 # Gravatar 邮箱，用于优先在主页显示的头像
 gravatarEmail = ""
-# URL of avatar shown in home page
-# 主页显示头像的 URL
+# URL of avatar shown in home page, default is author's avatar
+# 主页显示头像的 URL, 默认为作者头像
 avatarURL = "/images/hugo-fixit.webp"
 # FixIt 0.2.17 | NEW identifier of avatar menu link
 # FixIt 0.2.17 | 新增 头像菜单链接的 identifier
