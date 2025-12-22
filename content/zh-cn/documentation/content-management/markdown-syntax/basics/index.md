@@ -750,18 +750,18 @@ Content for chapter one.
 图片的语法与链接相似，但包含一个在前面的感叹号。
 
 ```markdown
-![Minion](https://octodex.github.com/images/minion.png)
+![Droidtocat](https://octodex.github.com/images/droidtocat.png)
 ```
 
-![Minion](https://octodex.github.com/images/minion.png)
+![Droidtocat](https://octodex.github.com/images/droidtocat.png)
 
 或者：
 
 ```markdown
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Alt text](https://octodex.github.com/images/spidertocat.png "The Spidertocat")
 ```
 
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Alt text](https://octodex.github.com/images/spidertocat.png "The Spidertocat")
 
 像链接一样，图片也具有引用式的语法：
 
@@ -774,10 +774,10 @@ Content for chapter one.
 稍后在文档中提供参考内容，用来定义 URL 的位置：
 
 ```markdown
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://octodex.github.com/images/ironcat.jpg  "The IronCat"
 ```
 
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
+[id]: https://octodex.github.com/images/ironcat.jpg "The IronCat"
 
 {{< admonition tip >}}
 **FixIt** 主题提供了一个包含更多功能的 [图片的 shortcode]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}})。

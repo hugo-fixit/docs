@@ -744,18 +744,18 @@ This is a footnote with "label"[^label]
 Images have a similar syntax to links but include a preceding exclamation point.
 
 ```markdown
-![Minion](https://octodex.github.com/images/minion.png)
+![Droidtocat](https://octodex.github.com/images/droidtocat.png)
 ```
 
-![Minion](https://octodex.github.com/images/minion.png)
+![Droidtocat](https://octodex.github.com/images/droidtocat.png)
 
 or:
 
 ```markdown
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Alt text](https://octodex.github.com/images/spidertocat.png "The Spidertocat")
 ```
 
-![Alt text](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Alt text](https://octodex.github.com/images/spidertocat.png "The Spidertocat")
 
 Like links, images also have a reference-style syntax:
 
@@ -768,10 +768,10 @@ Like links, images also have a reference-style syntax:
 With a reference later in the document defining the URL location:
 
 ```markdown
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://octodex.github.com/images/ironcat.jpg  "The IronCat"
 ```
 
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
+[id]: https://octodex.github.com/images/ironcat.jpg "The IronCat"
 
 {{< admonition tip >}}
 **FixIt** theme has [special shortcode for image]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}}), which provides more features.
