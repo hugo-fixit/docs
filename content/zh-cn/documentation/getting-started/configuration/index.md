@@ -1674,7 +1674,7 @@ follow
 
 {{< version 0.3.17 >}}
 
-`map` 图片配置。
+`map` 图片配置，结合 Hugo 的图像处理选项 `imaging` 进行图片优化。
 
 ```toml
 [params]

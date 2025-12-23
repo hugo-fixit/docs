@@ -119,11 +119,13 @@ To fully utilize all the features of the FixIt theme, add the following content 
 
 ```toml
 [markup]
-  _merge = "shallow"
+_merge = "shallow"
+
 [outputs]
-  _merge = "shallow"
+_merge = "shallow"
+
 [taxonomies]
-  _merge = "shallow"
+_merge = "shallow"
 ```
 
 The above configuration inherits the `markup`, `outputs`, and `taxonomies` configurations of the FixIt theme.

@@ -1676,7 +1676,7 @@ follow
 
 {{< version 0.3.17 >}}
 
-`map` Image configuration.
+`map` Image configuration, combined with Hugo's image processing options `imaging` for image optimisation.
 
 ```toml
 [params]
@@ -1684,7 +1684,6 @@ follow
 [params.image]
 cacheRemote = false
 optimise = false
-# FixIt 0.4.0 | 新增 排除优化的图片文件名（或模式）列表
 blackList = []
 ```
 

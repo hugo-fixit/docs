@@ -849,7 +849,9 @@ feedId = ""
 userId = ""
 
 # FixIt 0.3.17 | NEW Image config
+# Combined with Hugo's image processing option `imaging` for image optimisation
 # FixIt 0.3.17 | 新增 图片配置
+# 结合 Hugo 的图像处理选项 `imaging` 进行图片优化
 [image]
 # cache remote images for better optimisations
 # 缓存远程图片以获得更好的优化效果

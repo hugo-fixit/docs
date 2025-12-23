@@ -1,5 +1,5 @@
 ---
-title: Installation Theme
+title: Theme Installation
 linkTitle: Installation
 date: 2024-01-18T10:29:25+08:00
 description: Install FixIt theme for your Hugo site in a few steps.
@@ -30,7 +30,7 @@ Although not required in all cases, [Git][git], [Go][go], [Dart Sass][dart-sass]
 Git is required to:
 
 - Build Hugo from source
-- Use the [Hugo Modules][hugo-modules] feature
+- Use the [Git Submodules][git-submodules] feature
 - Install a theme as a Git submodule
 - Access [commit information][commit-info] from a local Git repository
 - Host your site with services such as [CloudCannon][cloudcannon], [Cloudflare Pages][cloudflare-pages], [GitHub Pages][github-pages], [GitLab Pages][gitlab-pages], and [Netlify][netlify]
@@ -38,7 +38,7 @@ Git is required to:
 Go is required to:
 
 - Build Hugo from source
-- Use the Hugo Modules feature
+- Use the [Hugo Modules][hugo-modules] feature
 
 Dart Sass is required to transpile Sass to CSS when using the latest features of the Sass language.
 
@@ -55,15 +55,16 @@ Please refer to the relevant documentation for installation instructions:
 - _[Dart Sass][dart-sass-install] (not used yet)_
 - [Node.js][node-install] (v16.0.0 or later)
 
-## Manual
+## Installations
 
-You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file][releases] of the theme and extract it in the `themes` directory.
+{{< tabs defaultTab=3 >}}
+{{% tab title="Manual" %}}
+You can download the [latest release :(fa-regular fa-file-archive fa-fw): .zip file](https://github.com/hugo-fixit/FixIt/releases) of the theme and extract it in the `themes` directory.
 
 To upgrade the theme by replacing the old theme with the new one.
-
-## Git Clone {#git-clone}
-
-In this way, just clone the [FixIt][fixit] theme into the `themes` directory.
+{{% /tab %}}
+{{% tab title="Git Clone" %}}
+In this way, just clone the [FixIt](https://github.com/hugo-fixit/FixIt) theme into the `themes` directory.
 
 ```bash
 git clone https://github.com/hugo-fixit/FixIt.git themes/FixIt
@@ -76,9 +77,8 @@ cd themes/FixIt
 git pull
 ```
 
-## Git Submodule {#git-submodule}
-
-<!-- markdownlint-disable-next-line no-bare-urls -->
+{{% /tab %}}
+{{% tab title="Git Submodules" %}}
 {{< link "https://github.com/hugo-fixit/hugo-fixit-starter1/generate" "Click to quickly create a blog!" "A quick-start template base on Git submodule to create a Hugo FixIt site." true "fa-solid fa-screwdriver-wrench" >}}
 
 Initialize an empty Git repository in the current directory.
@@ -87,7 +87,7 @@ Initialize an empty Git repository in the current directory.
 git init
 ```
 
-Add [FixIt][fixit] to your project as a [Git submodule][git-submodule] stored in the `themes` directory.
+Add [FixIt](https://github.com/hugo-fixit/FixIt) to your project as a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) stored in the `themes` directory.
 
 ```bash
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
@@ -110,24 +110,24 @@ To upgrade the theme by using the following command:
 git submodule update --remote --merge themes/FixIt
 ```
 
-## Hugo Module {#hugo-module}
-
-<!-- markdownlint-disable-next-line no-bare-urls -->
+{{% /tab %}}
+{{% tab title="Hugo Module" %}}
 {{< link "https://github.com/hugo-fixit/hugo-fixit-starter/generate" "Click to quickly create a blog!" "A quick-start template base on Hugo Modules to create a Hugo FixIt site." true "fa-solid fa-screwdriver-wrench" >}}
 
 {{< admonition tip >}}
 In this way, you don't need to configure `theme = "FixIt"` in `hugo.toml`.
 {{< /admonition >}}
 
-The easiest way to use a [Module][hugo-modules] for a theme is to import it in the config. See [Use Hugo Modules][use-hugo-modules].
+The easiest way to use a [Module][hugo-modules] for a theme is to import it in the config. See [Use Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
 
 1. Initialize the hugo module system: `hugo mod init github.com/<your_user>/<your_project>`
 2. Import the theme:
 
    ```toml
    [module]
-     [[module.imports]]
-       path = "github.com/hugo-fixit/FixIt"
+
+   [[module.imports]]
+   path = "github.com/hugo-fixit/FixIt"
    ```
 
 To update or manage versions, you can use `hugo mod get`.
@@ -143,33 +143,12 @@ hugo mod get -u github.com/hugo-fixit/FixIt
 hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 ```
 
-## CLI
+{{% /tab %}}
+{{< /tabs >}}
 
-{{< asciinema-embed 697494 >}}
+---
 
-FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hugo FixIt site skeleton. It provides two ways to quickly scaffold Hugo FixIt site based on Git Submodule or Hugo Module, and provides the ability to check the latest version of the FixIt theme. See the [FixIt CLI docs][fixit-cli] for more details.
-
-```bash
-npx fixit-cli create my-blog
-```
-
-The supported template presets are:
-
-| Module Type                    | Repository                                                               |
-| :----------------------------- | :----------------------------------------------------------------------- |
-| [Hugo Module][hugo-modules]    | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
-| [Git Submodule][git-submodule] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
-| Component Skeleton             | [component-skeleton](https://github.com/hugo-fixit/component-skeleton)   |
-
-<!-- markdownlint-disable search-replace -->
-
-{{< admonition danger "Tip" >}}
-The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
-{{< /admonition >}}
-
-## Comparison
-
-|                               | Manual             | Git Clone          | Git Submodule      | Hugo Module        |
+|                               | Manual             | Git Clone          | Git Submodules     | Hugo Modules       |
 | ----------------------------- | :----------------: | :----------------: | :----------------: | :----------------: |
 | Prerequisites                 | Hugo               | Hugo, Git          | Hugo, Git          | Hugo, Git, Go      |
 | Easy to install?              | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -178,7 +157,30 @@ The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or Fix
 | Automatic updates?            | :x:                | :x:                | :white_check_mark: | :white_check_mark: |
 | Latest version available?     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
+## CLI
+
+{{< admonition danger "Tip" >}}
+The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
+{{< /admonition >}}
+
+```bash {mode="simple"}
+npx fixit-cli create my-blog
+```
+
+{{< asciinema-embed 697494 >}}
+
+FixIt provides an [official CLI][fixit-cli] for quickly scaffolding ambitious Hugo FixIt site skeleton. It provides two ways to quickly scaffold Hugo FixIt site based on Git Submodules or Hugo Modules, and provides the ability to check the latest version of the FixIt theme. See the [FixIt CLI docs][fixit-cli] for more details.
+
+The supported template presets are:
+
+| Module Type                      | Repository                                                               |
+| :------------------------------- | :----------------------------------------------------------------------- |
+| [Hugo Module][hugo-modules]      | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
+| [Git Submodules][git-submodules] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
+| Component Skeleton               | [component-skeleton](https://github.com/hugo-fixit/component-skeleton)   |
+
 <!-- link reference definition -->
+<!-- markdownlint-disable-file MD034 search-replace -->
 [hugo]: https://gohugo.io/
 [hugo-install]: https://gohugo.io/installation/
 [git]: https://git-scm.com/
@@ -195,9 +197,6 @@ The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or Fix
 [github-pages]: https://pages.github.com/
 [gitlab-pages]: https://docs.gitlab.com/ee/user/project/pages/
 [netlify]: https://www.netlify.com/
-[fixit]: https://github.com/hugo-fixit/FixIt
 [fixit-cli]: https://github.com/hugo-fixit/fixit-cli
-[releases]: https://github.com/hugo-fixit/FixIt/releases
-[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
-[use-hugo-modules]: https://gohugo.io/hugo-modules/use-modules/

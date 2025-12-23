@@ -385,6 +385,8 @@ This part is shown in the [content encryption page][content-encryption].
 | Romanian             | `ro`      | `ro`                  | :(fa-regular fa-square fa-fw):       |
 | Vietnamese           | `vi`      | `vi`                  | :(fa-regular fa-square fa-fw):       |
 | Hindi                | `hi`      | `hi`                  | :(fa-regular fa-square fa-fw):       |
+| Japanese             | `ja`      | `ja`                  | :(fa-regular fa-square fa-fw):       |
+| Korean               | `ko`      | `ko`                  | :(fa-regular fa-square fa-fw):       |
 
 ### Basic Configuration
 

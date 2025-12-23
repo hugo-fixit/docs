@@ -388,6 +388,8 @@ seo:
 | 罗马尼亚语   | `ro`      | `ro`             | :(fa-regular fa-square fa-fw):       |
 | 越南语       | `vi`      | `vi`             | :(fa-regular fa-square fa-fw):       |
 | 印地语       | `hi`      | `hi`             | :(fa-regular fa-square fa-fw):       |
+| 日语         | `ja`      | `ja`             | :(fa-regular fa-square fa-fw):       |
+| 韩语         | `ko`      | `ko`             | :(fa-regular fa-square fa-fw):       |
 
 ### 基本配置
 

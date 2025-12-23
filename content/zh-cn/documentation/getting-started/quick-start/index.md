@@ -126,11 +126,13 @@ hugo server
 
 ```toml
 [markup]
-  _merge = "shallow"
+_merge = "shallow"
+
 [outputs]
-  _merge = "shallow"
+_merge = "shallow"
+
 [taxonomies]
-  _merge = "shallow"
+_merge = "shallow"
 ```
 
 以上配置表示继承 FixIt 主题的 `markup`，`outputs` 和 `taxonomies` 配置。
