@@ -111,7 +111,7 @@ git submodule update --remote --merge themes/FixIt
 ```
 
 {{% /tab %}}
-{{% tab title="Hugo Module" %}}
+{{% tab title="Hugo Modules" %}}
 {{< link "https://github.com/hugo-fixit/hugo-fixit-starter/generate" "Click to quickly create a blog!" "A quick-start template base on Hugo Modules to create a Hugo FixIt site." true "fa-solid fa-screwdriver-wrench" >}}
 
 {{< admonition tip >}}
@@ -175,7 +175,7 @@ The supported template presets are:
 
 | Module Type                      | Repository                                                               |
 | :------------------------------- | :----------------------------------------------------------------------- |
-| [Hugo Module][hugo-modules]      | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
+| [Hugo Modules][hugo-modules]     | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
 | [Git Submodules][git-submodules] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
 | Component Skeleton               | [component-skeleton](https://github.com/hugo-fixit/component-skeleton)   |
 

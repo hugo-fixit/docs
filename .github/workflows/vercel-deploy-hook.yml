@@ -10,7 +10,7 @@ jobs:
       - name: Trigger Vercel deploy hook (Production)
         run: |
           curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
-      - run: sleep 10
-      - name: Trigger Vercel deploy hook (Preview)
-        run: |
-          curl -X POST ${{ secrets.VERCEL_PRE_DEPLOY_HOOK }}
+      # - run: sleep 10
+      # - name: Trigger Vercel deploy hook (Preview)
+      #   run: |
+      #     curl -X POST ${{ secrets.VERCEL_PRE_DEPLOY_HOOK }}

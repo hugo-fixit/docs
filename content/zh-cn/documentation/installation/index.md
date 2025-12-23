@@ -30,7 +30,7 @@ resources:
 Git 用于：
 
 - 从源代码构建 Hugo
-- 使用 [Git 子模块][git-submodule] 功能
+- 使用 [Git 子模块][git-submodules] 功能
 - 将主题安装为 Git 子模块
 - 从本地 Git 存储库访问 [提交信息][commit-info]
 - 使用 [CloudCannon][cloudcannon]、[Cloudflare Pages][cloudflare-pages]、[GitHub Pages][github-pages]、[GitLab Pages][gitlab-pages] 和 [Netlify][netlify] 等服务托管你的站点
@@ -176,7 +176,7 @@ FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站
 | 模块类型                    | 仓库                                                                     |
 | :-------------------------- | :----------------------------------------------------------------------- |
 | [Hugo 模块][hugo-modules]   | [hugo-fixit-starter](https://github.com/hugo-fixit/hugo-fixit-starter)   |
-| [Git 子模块][git-submodule] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
+| [Git 子模块][git-submodules] | [hugo-fixit-starter1](https://github.com/hugo-fixit/hugo-fixit-starter1) |
 | 组件骨架                    | [component-skeleton](https://github.com/hugo-fixit/component-skeleton)   |
 
 <!-- link reference definition -->
@@ -198,5 +198,5 @@ FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站
 [gitlab-pages]: https://docs.gitlab.com/ee/user/project/pages/
 [netlify]: https://www.netlify.com/
 [fixit-cli]: https://github.com/hugo-fixit/fixit-cli
-[git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
