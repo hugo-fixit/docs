@@ -858,7 +858,7 @@ userId = ""
 cacheRemote = true
 # Image resizing and optimisation
 # 图片缩放和优化
-optimise = true
+optimise = false
 # FixIt 0.4.0 | NEW A list of image file names or patterns to exclude from optimisation
 # FixIt 0.4.0 | 新增 排除优化的图片文件名（或模式）列表
 # e.g. ["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]
