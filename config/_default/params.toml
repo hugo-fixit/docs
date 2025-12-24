@@ -922,6 +922,7 @@ footer = []
 widgets = []
 assets = [
   "custom/use-assets.html",
+  "inject/santa-hat.fixit.html",
   "inject/cmpt-translate.html",
   "inject/shortcode-caniuse.html",
 ]

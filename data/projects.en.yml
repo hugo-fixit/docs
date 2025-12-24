@@ -23,6 +23,7 @@
     - hugo-fixit/cmpt-mdevtools
     - hugo-fixit/cmpt-flyfish
     - hugo-fixit/cmpt-translate
+    - hugo-fixit/cmpt-santa-hat
     - hugo-fixit/hugo-json-feed
     - hugo-fixit/shortcode-asciinema
     - hugo-fixit/shortcode-caniuse

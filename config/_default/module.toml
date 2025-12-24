@@ -7,6 +7,9 @@
 path = "github.com/hugo-fixit/FixIt"
 
 [[imports]]
+path = "github.com/hugo-fixit/cmpt-santa-hat"
+
+[[imports]]
 path = "github.com/hugo-fixit/cmpt-translate"
 
 [[imports]]
