@@ -1691,7 +1691,7 @@ cacheRemote
 : `bool` Whether to cache remote images for better optimisations. Default is `false`.
 
 optimise
-: `bool` Whether to resize and optimise images. Default is `false`.
+: `bool` Whether to resize and optimise images (may slow builds). Default is `false`.
 
 blackList
 : `string array` {{< version 0.4.0 >}} A list of image file names or patterns to exclude from optimisation. e.g. `["example.jpg", "test-*.png"]`.

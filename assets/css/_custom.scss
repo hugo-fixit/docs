@@ -3,6 +3,42 @@
 // 自定义样式
 // ==============================
 
+.header-wrapper {
+  .header-title:hover {
+    .santa-hat {
+      animation: jiggle 0.4s ease-in-out;
+    }
+  }
+  .santa-hat {
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    // rotate: 10deg;
+    translate: 8px 2px;
+    position: absolute;
+
+    + img.logo {
+      // 模拟帽子遮挡效果
+      filter: drop-shadow(0.5px -0.5px 1px rgba(0,0,0,0.6))
+    }
+  }
+
+  @keyframes jiggle {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-8deg);
+    }
+    50% {
+      transform: rotate(6deg);
+    }
+    75% {
+      transform: rotate(-4deg);
+    }
+  }
+}
+
 .profile-custom {
   margin-top: 0.5rem;
 

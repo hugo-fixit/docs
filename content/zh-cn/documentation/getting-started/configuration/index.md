@@ -1689,7 +1689,7 @@ cacheRemote
 : `bool` 是否缓存远程图片以获得更好的优化效果，默认：`false`。
 
 optimise
-: `bool` 是否对图片进行缩放和优化，默认：`false`。
+: `bool` 是否对图片进行缩放和优化（可能会减慢构建速度），默认：`false`。
 
 blackList
 : `string array` {{< version 0.4.0 >}} 排除优化的图片文件名（或模式）列表。例如：`["example.jpg", "test-*.png"]`。
