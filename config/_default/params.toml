@@ -911,19 +911,20 @@ boxed = true
 [customPartials]
 head = [
   "inject/component-projects.html",
+  "inject/fixit-docs-bookmark.html",
   "inject/shortcode-rewards.html",
 ]
 menuDesktop = [ "inject/translate-menu-desktop.html", ]
 menuMobile = [ "inject/translate-menu-mobile.html", ]
-profile = [ "custom/profile.html", ]
+profile = []
 aside = [ "custom/aside.html", ]
 comment = []
 footer = []
 widgets = []
 assets = [
   "custom/use-assets.html",
-  "inject/santa-hat.fixit.html",
   "inject/cmpt-translate.html",
+  "inject/santa-hat.fixit.html",
   "inject/shortcode-caniuse.html",
 ]
 postTocBefore = [ "custom/follow-me.html", ]

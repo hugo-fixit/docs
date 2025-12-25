@@ -216,10 +216,7 @@ hugo
 
 我们强烈建议你花少量时间完整阅读 FixIt 主题的文档，以便你更好地了解如何使用它。
 
-1. [安装篇][installation]
-2. [入门篇][getting-started]
-3. [内容管理][content-management]
-4. [进阶篇][advanced]
+{{< fixit-docs-bookmark >}}
 
 ## 寻求帮助
 
@@ -248,11 +245,7 @@ hugo
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
-[installation]: {{< relref path="/documentation/installation" >}}
-[getting-started]: {{< relref path="/documentation/getting-started" >}}
 [configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
-[content-management]: {{< relref path="/documentation/content-management" >}}
-[advanced]: {{< relref path="/documentation/advanced" >}}
 [community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->

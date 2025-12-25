@@ -2,9 +2,11 @@ go 1.20
 
 use .
 use ../FixIt
+use ../cmpt-santa-hat
+use ../cmpt-translate
 use ../component-projects
 use ../shortcode-asciinema
 use ../shortcode-caniuse
+use ../shortcode-docs-bookmark
 use ../shortcode-missing-translation
 use ../shortcode-rewards
-use ../cmpt-translate

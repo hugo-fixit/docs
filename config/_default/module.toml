@@ -22,6 +22,9 @@ path = "github.com/hugo-fixit/shortcode-asciinema"
 path = "github.com/hugo-fixit/shortcode-caniuse"
 
 [[imports]]
+path = "github.com/hugo-fixit/shortcode-docs-bookmark"
+
+[[imports]]
 path = "github.com/hugo-fixit/shortcode-missing-translation"
 
 [[imports]]

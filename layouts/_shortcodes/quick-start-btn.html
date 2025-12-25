@@ -1,0 +1,5 @@
+{{- $quickStartPage := .Page.GetPage "/documentation/getting-started/quick-start" -}}
+<div class="quick-start-container">
+  <pre class="banner-start-commands"><span>npx fixit-cli new my-blog</span></pre>
+  <a href="{{ $quickStartPage.RelPermalink }}" title="{{ $quickStartPage.Description }}" class="quick-start-btn">{{ $quickStartPage.LinkTitle }} <i class="fa-solid fa-arrow-right fa-sm fa-fw"></i></a>
+</div>

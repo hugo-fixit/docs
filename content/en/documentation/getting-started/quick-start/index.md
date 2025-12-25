@@ -210,10 +210,7 @@ To learn how to deploy your site, see the [hosting and deployment][hosting-and-d
 
 We strongly recommend that you read the full documentation for the FixIt theme to better understand how to use it.
 
-1. [Installation][installation]
-2. [Getting Started][getting-started]
-3. [Content Management][content-management]
-4. [Advanced Usage][advanced]
+{{< fixit-docs-bookmark >}}
 
 ## Ask for help
 
@@ -242,11 +239,7 @@ if you encounter any problems or have any questions, please go to our [community
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
-[installation]: {{< relref path="/documentation/installation" >}}
-[getting-started]: {{< relref path="/documentation/getting-started" >}}
 [configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
-[content-management]: {{< relref path="/documentation/content-management" >}}
-[advanced]: {{< relref path="/documentation/advanced" >}}
 [community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->
