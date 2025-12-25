@@ -4,8 +4,7 @@
   "hugo-fixit"
 -}}
 
-{{- /* (.Page.Store.Get "hasToc") 在 Hugo 0.153.0+ 版本失效 */ -}}
-{{- if in $follows $author.name -}}
+{{- if in $follows $author.name | and (.Store.Get "showToc") -}}
   <div class="follow-container">
     <a href="{{ $author.link }}" class="author-link" target="_blank">
       <img src="{{ $author.avatar }}" alt="{{ $author.name }}" class="author-avatar"> {{ $author.name }}
