@@ -51,18 +51,25 @@ Then, remember to re-enable the **FixIt** theme:
 + theme = ["FixIt"] # enable in your site config file
 ```
 
-For advanced use, you can also split your configuration by environment, root configuration key, and language instead of a single site configuration file.
-
-More details can be found in the [Configure Hugo][hugo-config] page.
+> [!NOTE]
+> You can also split your configuration by environment, root configuration key, and language instead of a single site configuration file into [configuration directory][configuration-directory].
+>
+> The FixIt CLI tool supports auto-split configuration file. See [FixIt CLI documentation][fixit-cli] for more details.
 
 ## Merge configuration
 
-If you don’t need to be so verbose as in the default setup above, you can also [merge configuration from themes][merge-config-from-themes].
+You can simplify your configuration files by [merging configuration][merge-config] from the theme instead of being as detailed as the default.
 
-For example, merge the `markup` configuration from the FixIt theme:
+For example, merging necessary configuration `markup`, `outputs`, and `taxonomies` from the FixIt theme:
 
 ```toml
 [markup]
+_merge = "shallow"
+
+[outputs]
+_merge = "shallow"
+
+[taxonomies]
 _merge = "shallow"
 ```
 
@@ -76,20 +83,6 @@ shallow
 
 deep
 : Add values for new keys, merge existing.
-
-> [!important]
-> If you want to simplify your configuration files, make sure the following configuration must be merged from the theme:
->
-> ```toml {mode="mac",lineNos=false}
-> [markup]
-> _merge = "shallow"
->
-> [outputs]
-> _merge = "shallow"
->
-> [taxonomies]
-> _merge = "shallow"
-> ```
 
 ## Menu Configuration {#menu-configuration}
 
@@ -2271,8 +2264,9 @@ They're easily created via <https://realfavicongenerator.net/>.
 [community]: {{< relref path="/community" >}}
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
-[hugo-config]: https://gohugo.io/getting-started/configuration/
-[merge-config-from-themes]: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
+[configuration-directory]: https://gohugo.io/configuration/introduction/#configuration-directory
+[fixit-cli]: https://github.com/hugo-fixit/fixit-cli
+[merge-config]: https://gohugo.io/configuration/introduction/#merge-configuration-settings
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
@@ -2291,7 +2285,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [follow]: https://follow.is/
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
 [block]: {{< relref path="/references/blocks" >}}
-[configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
+[configuration-markup]: https://gohugo.io/configuration/markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/configuration/output-formats/
 [configure-taxonomies]: https://gohugo.io/content-management/taxonomies/#configure-taxonomies

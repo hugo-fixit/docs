@@ -51,18 +51,25 @@ cp themes/FixIt/hugo.toml hugo.toml
 + theme = ["FixIt"] # enable in your site config file
 ```
 
-作为进阶使用，你也可以将你的配置按环境、根配置键和语言拆分，而不是一个单独的站点配置文件。
-
-更多细节可以在 [配置 Hugo][hugo-config] 页面找到。
+> [!NOTE]
+> 你也可以将你的配置按环境、根配置键和语言拆分在 [配置目录][configuration-directory]，而不是一个单独的站点配置文件。
+>
+> FixIt CLI 工具支持自动拆分配置文件，详情请参阅 [FixIt CLI 文档][fixit-cli]。
 
 ## 合并配置 {#merge-configuration}
 
-如果你不需要像上面的默认设置那样那么详细，你也可以 [从主题中合并配置][merge-config-from-themes]。
+你可以从主题中 [合并配置][merge-config] 来简化文件，无需像默认那样详细。
 
-例如，从 FixIt 主题中合并 `markup` 配置：
+例如，从 FixIt 主题中合并必要的配置 `markup`、 `outputs` 和 `taxonomies`：
 
 ```toml
 [markup]
+_merge = "shallow"
+
+[outputs]
+_merge = "shallow"
+
+[taxonomies]
 _merge = "shallow"
 ```
 
@@ -76,20 +83,6 @@ shallow
 
 deep
 : 为新键添加值，合并现有值。
-
-> [!important]
-> 如果你希望简化配置文件，请确保以下配置必须从主题合并：
->
-> ```toml {mode="mac",lineNos=false}
-> [markup]
-> _merge = "shallow"
->
-> [outputs]
-> _merge = "shallow"
->
-> [taxonomies]
-> _merge = "shallow"
-> ```
 
 ## 菜单配置 {#menu-configuration}
 
@@ -2272,8 +2265,9 @@ logoUrl = ""
 [community]: {{< relref path="/community" >}}
 [config]: https://github.com/hugo-fixit/FixIt/blob/master/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
-[hugo-config]: https://gohugo.io/getting-started/configuration/
-[merge-config-from-themes]: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
+[configuration-directory]: https://gohugo.io/configuration/introduction/#configuration-directory
+[fixit-cli]: https://github.com/hugo-fixit/fixit-cli
+[merge-config]: https://gohugo.io/configuration/introduction/#merge-configuration-settings
 [algolia]: https://www.algolia.com/
 [fusejs]: https://fusejs.io/
 [fusejs-options]: https://fusejs.io/api/options.html
@@ -2292,7 +2286,7 @@ logoUrl = ""
 [follow]: https://follow.is/
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
 [block]: {{< relref path="/references/blocks" >}}
-[configuration-markup]: https://gohugo.io/getting-started/configuration-markup/
+[configuration-markup]: https://gohugo.io/configuration/markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43
 [hugo-output-formats]: https://gohugo.io/configuration/output-formats/
 [configure-taxonomies]: https://gohugo.io/content-management/taxonomies/#configure-taxonomies

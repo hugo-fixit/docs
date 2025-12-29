@@ -330,7 +330,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
   [markup.goldmark]
     [markup.goldmark.extensions]
       strikethrough = false
-      # https://gohugo.io/getting-started/configuration-markup/#extras
+      # https://gohugo.io/configuration/markup/#extras
       [markup.goldmark.extensions.extras]
         [markup.goldmark.extensions.extras.delete]
           enable = true

@@ -28,7 +28,7 @@ Emoji 可以通过多种方式在 Hugo 项目中启用。
 
 [`emojify`](https://gohugo.io/functions/emojify/) 方法可以直接在模板中调用，或者使用 [行内 Shortcodes](https://gohugo.io/templates/shortcode-templates#inline-shortcodes)。
 
-要全局使用 emoji, 需要在你的 [网站配置](https://gohugo.io/getting-started/configuration/) 中设置 `enableEmoji` 为 `true`,
+要全局使用 emoji, 需要在你的 [网站配置](https://gohugo.io/configuration/all/) 中设置 `enableEmoji` 为 `true`,
 然后你就可以直接在文章中输入 emoji 的代码。
 它们以**冒号**开头和结尾，并且包含 emoji 的 **代码**:
 

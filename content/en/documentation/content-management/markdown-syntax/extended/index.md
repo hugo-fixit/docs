@@ -330,7 +330,7 @@ The rendered output looks like this:
   [markup.goldmark]
     [markup.goldmark.extensions]
       strikethrough = false
-      # https://gohugo.io/getting-started/configuration-markup/#extras
+      # https://gohugo.io/configuration/markup/#extras
       [markup.goldmark.extensions.extras]
         [markup.goldmark.extensions.extras.delete]
           enable = true

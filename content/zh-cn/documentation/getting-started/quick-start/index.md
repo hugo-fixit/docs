@@ -224,7 +224,7 @@ hugo
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
-[hugo-installing]: https://gohugo.io/getting-started/installing/
+[hugo-installing]: https://gohugo.io/installation/
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
