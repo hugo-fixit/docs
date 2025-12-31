@@ -5,7 +5,7 @@ description: FixIt 项目的 API 参考。
 cascade:
   params:
     type: posts
-keywords: 
+keywords:
   - hugo-fixit
   - FixIt
   - API 参考
@@ -15,6 +15,6 @@ menu:
     parent: documentation
     name: API 参考
     weight: 3
-    params: 
+    params:
       icon: fa-solid fa-microchip
 ---

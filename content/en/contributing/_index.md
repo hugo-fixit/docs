@@ -6,7 +6,7 @@ description: Hugo FixIt is eager for enthusiasm and participation from the open-
 cascade:
   params:
     type: posts
-keywords: 
+keywords:
   - hugo-fixit
   - FixIt
   - Contribution

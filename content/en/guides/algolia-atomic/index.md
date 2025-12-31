@@ -4,7 +4,7 @@ date: 2023-12-01T10:20:16+08:00
 categories:
   - Guides
   - Documentation
-tags: 
+tags:
   - algolia
   - Advanced
 resources:
@@ -36,25 +36,32 @@ Based on the API Keys obtained in the previous step, to configure the algolia se
 
 ```toml
 [params.search]
-  enable = true
-  type = "algolia"
-  contentLength = 4000
-  placeholder = ""
-  maxResultLength = 10
-  snippetLength = 30
-  highlightTag = "em"
-  absoluteURL = false
-  [params.search.algolia]
-    index = "index.en" # algolia index name
-    appID = "" # algolia Application ID
-    searchKey = "" # algolia Search-Only API Key
+enable = true
+type = "algolia"
+contentLength = 4000
+placeholder = ""
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
+
+[params.search.algolia]
+index = "index.en" # algolia index name
+appID = "" # algolia Application ID
+searchKey = "" # algolia Search-Only API Key
 ```
 
 In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
 ```
 
 ## Upload Index
@@ -124,7 +131,7 @@ One more thing, you can automate the process of uploading `search.json` to algol
         branches:
           - master
         paths:
-          - "content"
+          - content
       workflow_dispatch:
 
     jobs:
@@ -134,8 +141,8 @@ One more thing, you can automate the process of uploading `search.json` to algol
           - name: Check out repository code
             uses: actions/checkout@v4
             with:
-              submodules: recursive  # Fetch Hugo themes (true OR recursive)
-              fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+              submodules: recursive # Fetch Hugo themes (true OR recursive)
+              fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
           - name: Setup Hugo
             uses: peaceiris/actions-hugo@v2
@@ -153,8 +160,8 @@ One more thing, you can automate the process of uploading `search.json` to algol
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY # algolia Application ID
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }} # algolia Admin API Key
-              ALGOLIA_INDEX_NAME: "index.en" # algolia index name
-              ALGOLIA_INDEX_FILE: './public/search.json' # local search.json file path
+              ALGOLIA_INDEX_NAME: index.en # algolia index name
+              ALGOLIA_INDEX_FILE: ./public/search.json # local search.json file path
             run: |
               npm run algolia
 
@@ -162,8 +169,8 @@ One more thing, you can automate the process of uploading `search.json` to algol
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-              ALGOLIA_INDEX_NAME: "index.zh-cn"
-              ALGOLIA_INDEX_FILE: "./public/zh-cn/search.json"
+              ALGOLIA_INDEX_NAME: index.zh-cn
+              ALGOLIA_INDEX_FILE: ./public/zh-cn/search.json
             run: |
               npm run algolia
     ```

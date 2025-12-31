@@ -10,7 +10,7 @@
     - hugo-fixit/docs
     - Lruihao/hugo-blog
 - title: 🧩 Components
-  description: "The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization."
+  description: 'The FixIt theme balances **simplicity** and **extensibility** with extra Hugo theme components for customization.'
   collections:
     - Components
   # Order by, optional values: ['default', 'name', 'star', 'fork']
@@ -42,7 +42,7 @@
     - hugo-fixit/hugo-shell
     - hugo-fixit/.tools
 - title: 👾 Third party
-  description: "Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components."
+  description: 'Welcome to contribute [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.en.yml) your theme components.'
   contentAdapters: true
   collections:
     - TP Components

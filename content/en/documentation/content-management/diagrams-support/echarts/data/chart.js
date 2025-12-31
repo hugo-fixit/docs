@@ -23,7 +23,7 @@ return {
       splitNumber: 4,
       shape: 'circle',
       axisName: {
-        formatter: '【{value}】',
+        formatter: '[{value}]',
         color: '#428BD4'
       },
       splitArea: {

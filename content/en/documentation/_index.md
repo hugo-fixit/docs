@@ -16,6 +16,6 @@ menu:
     name: Docs
     title: Theme Documentation
     weight: 1
-    params: 
+    params:
       icon: fa-regular fa-newspaper
 ---

@@ -327,21 +327,29 @@ The rendered output looks like this:
 
 ```toml {title="hugo.toml"}
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      strikethrough = false
-      # https://gohugo.io/configuration/markup/#extras
-      [markup.goldmark.extensions.extras]
-        [markup.goldmark.extensions.extras.delete]
-          enable = true
-        [markup.goldmark.extensions.extras.insert]
-          enable = true
-        [markup.goldmark.extensions.extras.mark]
-          enable = true
-        [markup.goldmark.extensions.extras.subscript]
-          enable = true
-        [markup.goldmark.extensions.extras.superscript]
-          enable = true
+
+[markup.goldmark]
+
+[markup.goldmark.extensions]
+strikethrough = false
+
+# https://gohugo.io/configuration/markup/#extras
+[markup.goldmark.extensions.extras]
+
+[markup.goldmark.extensions.extras.delete]
+enable = true
+
+[markup.goldmark.extensions.extras.insert]
+enable = true
+
+[markup.goldmark.extensions.extras.mark]
+enable = true
+
+[markup.goldmark.extensions.extras.subscript]
+enable = true
+
+[markup.goldmark.extensions.extras.superscript]
+enable = true
 ```
 
 {{< /admonition >}}
@@ -455,68 +463,102 @@ You can modify the automatic rendering configuration for mathematical formulas i
 
 ```toml {title="hugo.toml"}
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$', '$']]
+
+[markup.goldmark]
+
+[markup.goldmark.extensions]
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [
+  [
+    '\[',
+    '\]'
+  ],
+  [
+    '$$',
+    '$$'
+  ]
+]
+inline = [
+  [
+    '\(',
+    '\)'
+  ],
+  [
+    '$',
+    '$'
+  ]
+]
 
 [params]
-  [params.page]
-    [params.page.math]
-      enable = true
-      # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
-      type = "katex"
-      # KaTeX server-side rendering (https://katex.org)
-      # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
-      [params.page.math.katex]
-        # KaTeX extension copy-tex
-        copyTex = true
-        throwOnError = false
-        errorColor = "#ff4949"
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.katex.macros]
-          # "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
-      # MathJax server-side rendering (https://www.mathjax.org)
-      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-      [params.page.math.mathjax]
-        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        [params.page.math.mathjax.packages]
-          # "[+]" = ['configmacros']
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.mathjax.macros]
-          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
-        [params.page.math.mathjax.loader]
-          load = ["ui/safe"]
-          [params.page.math.mathjax.loader.paths]
-            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-          # more loader config e.g source, dependencies, provides etc.
-        [params.page.math.mathjax.options]
-          enableMenu = true
-          # HTML tags that won't be searched for math
-          skipHtmlTags = [
-            "script",
-            "noscript",
-            "style",
-            "textarea",
-            "pre",
-            "code",
-            "math",
-            "select",
-            "option",
-            "mjx-container"
-          ]
-          # class that marks tags not to search
-          ignoreHtmlClass = "mathjax_ignore"
-          # HTML tags that can appear within math
-          [params.page.math.mathjax.options.includeHtmlTags]
-            # "#comment" = ""
-            # br = "\n"
-            # wbr = ""
+
+[params.page]
+
+[params.page.math]
+enable = true
+# mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
+type = "katex"
+
+# KaTeX server-side rendering (https://katex.org)
+# KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+[params.page.math.katex]
+# KaTeX extension copy-tex
+copyTex = true
+throwOnError = false
+errorColor = "#ff4949"
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.katex.macros]
+# "\\f" = "#1f(#2)" # usage: $\f{a}{b}$
+
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
+[params.page.math.mathjax.packages]
+# "[+]" = ['configmacros']
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.mathjax.macros]
+# "bold" = ["{\\bf #1}", 1] # usage: $\bold{math}$
+
+[params.page.math.mathjax.loader]
+load = [ "ui/safe" ]
+
+[params.page.math.mathjax.loader.paths]
+# custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
+# more loader config e.g source, dependencies, provides etc.
+
+[params.page.math.mathjax.options]
+enableMenu = true
+# HTML tags that won't be searched for math
+skipHtmlTags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container"
+]
+# class that marks tags not to search
+ignoreHtmlClass = "mathjax_ignore"
+
+# HTML tags that can appear within math
+[params.page.math.mathjax.options.includeHtmlTags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
 ```
 
 ### KaTeX
@@ -686,7 +728,7 @@ For example:
 
 ```toml
 [params.page.math.katex.macros]
-  "\\f" = "#1f(#2)"   # usage: $\f{a}{b}$
+"\\f" = "#1f(#2)" # usage: $\f{a}{b}$
 ```
 
 Then use it in your articles as follows:

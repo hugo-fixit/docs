@@ -1,10 +1,10 @@
---- 
+---
 title: CSE 支持
 date: 2024-11-28T15:01:29+08:00
 categories:
   - Guides
   - Documentation
-tags: 
+tags:
   - CSE
   - Advanced
 resources:
@@ -40,17 +40,21 @@ hugo new content search/index.md
 
 ```toml
 [params]
-  [params.search]
-    enable = true
-    type = "cse"
-  [params.cse]
-    # 搜索引擎：["google", "bing"]
-    engine = "google"
-    resultsPage = "/search/"
-    [params.cse.google]
-      cx = ""
-    [params.cse.bing]
-      # 暂不支持
+
+[params.search]
+enable = true
+type = "cse"
+
+[params.cse]
+# 搜索引擎：["google", "bing"]
+engine = "google"
+resultsPage = "/search/"
+
+[params.cse.google]
+cx = ""
+
+[params.cse.bing]
+# 暂不支持
 ```
 
 ## Google CSE

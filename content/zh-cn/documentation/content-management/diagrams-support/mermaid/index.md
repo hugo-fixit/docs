@@ -42,17 +42,21 @@ resources:
 
 ```toml
 [params]
-  [params.mermaid]
-    cdn = ""
-    zenuml = ""
-    themes = ["default", "dark"]
-    # optional values: ["strict", "loose", "antiscript", "sandbox"]
-    securityLevel = "loose"
-    # optional values: ["classic", "handDrawn"]
-    look = "handDrawn"
-    fontFamily = ""
-    layoutLoaders = []
-    layout = "dagre"
+
+[params.mermaid]
+cdn = ""
+zenuml = ""
+themes = [
+  "default",
+  "dark"
+]
+# optional values: ["strict", "loose", "antiscript", "sandbox"]
+securityLevel = "loose"
+# optional values: ["classic", "handDrawn"]
+look = "handDrawn"
+fontFamily = ""
+layoutLoaders = []
+layout = "dagre"
 ```
 
 CDN
@@ -60,9 +64,10 @@ CDN
 
 ```toml
 [params]
-  [params.mermaid]
-    cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
-    zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
+
+[params.mermaid]
+cdn = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"
+zenuml = "https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml@0.2/dist/mermaid-zenuml.esm.min.mjs"
 ```
 
 > [!WARNING]
@@ -73,8 +78,9 @@ look
 
 ```toml
 [params]
-  [params.mermaid]
-    look = "classic"
+
+[params.mermaid]
+look = "classic"
 ```
 
 layoutLoaders
@@ -82,10 +88,9 @@ layoutLoaders
 
 ```toml
 [params]
-  [params.mermaid]
-    layoutLoaders = [
-      "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs"
-    ]
+
+[params.mermaid]
+layoutLoaders = [ "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs" ]
 ```
 
 > [!NOTE]
@@ -96,8 +101,9 @@ layout
 
 ```toml
 [params]
-  [params.mermaid]
-    layout = "elk.layered"  # 需要先配置 ELK 布局加载器
+
+[params.mermaid]
+layout = "elk.layered" # 需要先配置 ELK 布局加载器
 ```
 
 可用的布局算法：
@@ -129,8 +135,12 @@ layout
 
 ```toml
 [params]
-  [params.mermaid]
-    themes = ["default", "dark"]
+
+[params.mermaid]
+themes = [
+  "default",
+  "dark"
+]
 ```
 
 图表特定主题
@@ -1220,7 +1230,7 @@ radar-beta
   min 0
 ```
 
-## 树状图​ :fire: {#treemap}
+## 树状图 :fire: {#treemap}
 
 {{< version 0.4.0 >}}
 

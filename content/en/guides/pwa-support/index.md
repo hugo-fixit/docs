@@ -105,7 +105,13 @@ You only need to add "offline" in `outputs.home` as below:
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
 ```
 
 {{< admonition type=tip title="I18n" open=true >}}
@@ -118,8 +124,8 @@ Go to `hugo.toml`, add or change the option `enablePWA = true` under `[params]`.
 
 ```toml
 [params]
-    # ...
-    enablePWA = true
+# ...
+enablePWA = true
 ```
 
 ## Install your PWA

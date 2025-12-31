@@ -862,9 +862,7 @@ optimise = true
 # FixIt 0.4.0 | NEW A list of image file names or patterns to exclude from optimisation
 # FixIt 0.4.0 | 新增 排除优化的图片文件名（或模式）列表
 # e.g. ["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]
-blackList = [
-  "*.gif",
-]
+blackList = [ "*.gif", ]
 
 # FixIt 0.4.0 | NEW Code block wrapper config
 # you can override the global config via Markdown attributes, for example:
@@ -1117,7 +1115,7 @@ errorColor = "#ff4949"
 # custom macros map
 # syntax: <macro> = <definition>
 [page.math.katex.macros]
-"\\f" = "#1f(#2)"  # usage: $\f{a}{b}$
+"\\f" = "#1f(#2)" # usage: $\f{a}{b}$
 
 # MathJax server-side rendering (https://www.mathjax.org)
 # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
@@ -1133,7 +1131,10 @@ cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 # custom macros map
 # syntax: <macro> = <definition>
 [page.math.mathjax.macros]
-bold = ["{\\bf #1}", 1]  # usage: $\bold{math}$
+bold = [
+  "{\\bf #1}",
+  1
+] # usage: $\bold{math}$
 
 [page.math.mathjax.loader]
 load = [
@@ -1146,6 +1147,7 @@ load = [
 custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
 
 # more loader config e.g source, dependencies, provides etc.
+
 [page.math.mathjax.options]
 enableMenu = true
 # HTML tags that won't be searched for math

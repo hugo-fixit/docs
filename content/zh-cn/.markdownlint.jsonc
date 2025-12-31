@@ -5,6 +5,7 @@
       {
         "name": "nbsp",
         "message": "Don't use no-break spaces",
+        // eslint-disable-next-line no-irregular-whitespace
         "searchPattern": "/ /g",
         "replace": " ",
         "searchScope": "all"

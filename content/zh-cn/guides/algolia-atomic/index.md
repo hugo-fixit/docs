@@ -4,7 +4,7 @@ date: 2023-12-01T10:20:16+08:00
 categories:
   - Guides
   - Documentation
-tags: 
+tags:
   - algolia
   - Advanced
 resources:
@@ -36,25 +36,32 @@ description: 在 FixIt 主题中使用 algolia 的技巧。
 
 ```toml
 [params.search]
-  enable = true
-  type = "algolia"
-  contentLength = 4000
-  placeholder = ""
-  maxResultLength = 10
-  snippetLength = 30
-  highlightTag = "em"
-  absoluteURL = false
-  [params.search.algolia]
-    index = "index.zh-cn" # algolia 索引名称
-    appID = "" # algolia Application ID
-    searchKey = "" # algolia Search-Only API Key
+enable = true
+type = "algolia"
+contentLength = 4000
+placeholder = ""
+maxResultLength = 10
+snippetLength = 30
+highlightTag = "em"
+absoluteURL = false
+
+[params.search.algolia]
+index = "index.zh-cn" # algolia 索引名称
+appID = "" # algolia Application ID
+searchKey = "" # algolia Search-Only API Key
 ```
 
 为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
 ```
 
 ## 上传索引
@@ -121,7 +128,7 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
         branches:
           - master
         paths:
-          - "content"
+          - content
       workflow_dispatch:
 
     jobs:
@@ -131,8 +138,8 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
           - name: Check out repository code
             uses: actions/checkout@v4
             with:
-              submodules: recursive  # Fetch Hugo themes (true OR recursive)
-              fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+              submodules: recursive # Fetch Hugo themes (true OR recursive)
+              fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
           - name: Setup Hugo
             uses: peaceiris/actions-hugo@v2
@@ -150,8 +157,8 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY # algolia Application ID
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }} # algolia Admin API Key
-              ALGOLIA_INDEX_NAME: "index.en" # algolia index name
-              ALGOLIA_INDEX_FILE: './public/search.json' # local search.json file path
+              ALGOLIA_INDEX_NAME: index.en # algolia index name
+              ALGOLIA_INDEX_FILE: ./public/search.json # local search.json file path
             run: |
               npm run algolia
 
@@ -159,8 +166,8 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY
               ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-              ALGOLIA_INDEX_NAME: "index.zh-cn"
-              ALGOLIA_INDEX_FILE: "./public/zh-cn/search.json"
+              ALGOLIA_INDEX_NAME: index.zh-cn
+              ALGOLIA_INDEX_FILE: ./public/zh-cn/search.json
             run: |
               npm run algolia
     ```

@@ -145,10 +145,10 @@ hugo new --kind post-bundle posts/bar/
 
     ```yaml {data-open=false}
     author:
-      name: "" # 文章作者
-      link: "" # 文章作者的链接
-      email: "" # 文章作者的邮箱，用于设置 Gravatar 头像，优先于 `author.avatar`
-      avatar: "" # 文章作者的头像
+      name: '' # 文章作者
+      link: '' # 文章作者的链接
+      email: '' # 文章作者的邮箱，用于设置 Gravatar 头像，优先于 `author.avatar`
+      avatar: '' # 文章作者的头像
     ```
 
 - **authorAvatar**: {{< version 0.2.18 >}} 是否启用文章作者头像
@@ -229,23 +229,23 @@ resources:
 
 ```yaml
 ---
-title: "我的第一篇文章"
-subtitle: ""
+title: 我的第一篇文章
+subtitle: ''
 date: 2020-03-04T15:58:26+08:00
 lastmod: 2020-03-04T15:58:26+08:00
 draft: true
-author: ""
-authorLink: ""
-authorEmail: ""
-description: ""
-keywords: ""
-license: ""
+author: ''
+authorLink: ''
+authorEmail: ''
+description: ''
+keywords: ''
+license: ''
 images: []
 
 tags: []
 categories: []
-featuredImage: ""
-featuredImagePreview: ""
+featuredImage: ''
+featuredImagePreview: ''
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -256,7 +256,7 @@ ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true
-pageStyle: "normal"
+pageStyle: normal
 
 toc:
   enable: true
@@ -271,7 +271,7 @@ math:
   enable: true
   # ...
 mapbox:
-  accessToken: ""
+  accessToken: ''
   # ...
 share:
   enable: true
@@ -281,15 +281,15 @@ comment:
   # ...
 library:
   css:
-    # someCSS = "some.css"
-    # 位于 "assets/"
-    # 或者
-    # someCSS = "https://cdn.example.com/some.css"
+  # someCSS = "some.css"
+  # 位于 "assets/"
+  # 或者
+  # someCSS = "https://cdn.example.com/some.css"
   js:
-    # someJS = "some.js"
-    # 位于 "assets/"
-    # 或者
-    # someJS = "https://cdn.example.com/some.js"
+  # someJS = "some.js"
+  # 位于 "assets/"
+  # 或者
+  # someJS = "https://cdn.example.com/some.js"
 seo:
   images: []
   # ...
@@ -402,98 +402,108 @@ seo:
 defaultContentLanguage = "zh-cn"
 
 [languages]
-  [languages.en]
-    weight = 1
-    title = "My Hugo FixIt Site"
-    languageCode = "en"
-    languageName = "English"
-    [[languages.en.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Posts"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.en.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Tags"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.en.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "Categories"
-      url = "/categories/"
-      title = ""
-      weight = 3
 
-  [languages.zh-cn]
-    weight = 2
-    title = "我的 Hugo FixIt 网站"
-    # 网站语言，仅在这里 CN 大写
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    # 是否包括中日韩文字
-    hasCJKLanguage = true
-    [[languages.zh-cn.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "文章"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.zh-cn.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "标签"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.zh-cn.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "分类"
-      url = "/categories/"
-      title = ""
-      weight = 3
+[languages.en]
+weight = 1
+title = "My Hugo FixIt Site"
+languageCode = "en"
+languageName = "English"
 
-  [languages.fr]
-    weight = 3
-    title = "Mon nouveau site Hugo FixIt"
-    languageCode = "fr"
-    languageName = "Français"
-    [[languages.fr.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Postes"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.fr.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Balises"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.fr.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "Catégories"
-      url = "/categories/"
-      title = ""
-      weight = 3
+[[languages.en.menu.main]]
+identifier = "posts"
+pre = ""
+post = ""
+name = "Posts"
+url = "/posts/"
+title = ""
+weight = 1
+
+[[languages.en.menu.main]]
+identifier = "tags"
+pre = ""
+post = ""
+name = "Tags"
+url = "/tags/"
+title = ""
+weight = 2
+
+[[languages.en.menu.main]]
+identifier = "categories"
+pre = ""
+post = ""
+name = "Categories"
+url = "/categories/"
+title = ""
+weight = 3
+
+[languages.zh-cn]
+weight = 2
+title = "我的 Hugo FixIt 网站"
+# 网站语言，仅在这里 CN 大写
+languageCode = "zh-CN"
+languageName = "简体中文"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+
+[[languages.zh-cn.menu.main]]
+identifier = "posts"
+pre = ""
+post = ""
+name = "文章"
+url = "/posts/"
+title = ""
+weight = 1
+
+[[languages.zh-cn.menu.main]]
+identifier = "tags"
+pre = ""
+post = ""
+name = "标签"
+url = "/tags/"
+title = ""
+weight = 2
+
+[[languages.zh-cn.menu.main]]
+identifier = "categories"
+pre = ""
+post = ""
+name = "分类"
+url = "/categories/"
+title = ""
+weight = 3
+
+[languages.fr]
+weight = 3
+title = "Mon nouveau site Hugo FixIt"
+languageCode = "fr"
+languageName = "Français"
+
+[[languages.fr.menu.main]]
+identifier = "posts"
+pre = ""
+post = ""
+name = "Postes"
+url = "/posts/"
+title = ""
+weight = 1
+
+[[languages.fr.menu.main]]
+identifier = "tags"
+pre = ""
+post = ""
+name = "Balises"
+url = "/tags/"
+title = ""
+weight = 2
+
+[[languages.fr.menu.main]]
+identifier = "categories"
+pre = ""
+post = ""
+name = "Catégories"
+url = "/categories/"
+title = ""
+weight = 3
 ```
 
 然后，对于每个新页面，将语言代码附加到文件名中。
@@ -523,7 +533,7 @@ defaultContentLanguage = "zh-cn"
 > 这是一个额外的主题组件，具体请查看 [hugo-fixit/cmpt-translate]。
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file MD052 MD060 -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [coverview]: https://coverview.lruihao.cn/

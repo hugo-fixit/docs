@@ -103,7 +103,13 @@ repost:
 
 ```toml
 [outputs]
-  home = ["html", "rss", "archives", "offline", "search"]
+home = [
+  "html",
+  "rss",
+  "archives",
+  "offline",
+  "search"
+]
 ```
 
 {{< admonition type=tip title="I18n" open=true >}}
@@ -116,8 +122,8 @@ repost:
 
 ```toml
 [params]
-    # ...
-    enablePWA = true
+# ...
+enablePWA = true
 ```
 
 ## 安装并使用你的 PWA

@@ -26,56 +26,88 @@ $\text{MathJax}$ 在页面加载后通过 JavaScript 进行 **客户端渲染**�
 
 ```toml {title="hugo.toml"}
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$', '$']]
+
+[markup.goldmark]
+
+[markup.goldmark.extensions]
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [
+  [
+    '\[',
+    '\]'
+  ],
+  [
+    '$$',
+    '$$'
+  ]
+]
+inline = [
+  [
+    '\(',
+    '\)'
+  ],
+  [
+    '$',
+    '$'
+  ]
+]
 
 [params]
-  [params.page]
-    [params.page.math]
-      enable = true
-      type = "mathjax"
-      # MathJax server-side rendering (https://www.mathjax.org)
-      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-      [params.page.math.mathjax]
-        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        [params.page.math.mathjax.packages]
-          # '[+]' = ['configmacros']
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.mathjax.macros]
-          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
-        [params.page.math.mathjax.loader]
-          load = ['ui/safe']
-          [params.page.math.mathjax.loader.paths]
-            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-          # more loader config e.g source, dependencies, provides etc.
-        [params.page.math.mathjax.options]
-          enableMenu = true
-          # HTML tags that won't be searched for math
-          skipHtmlTags = [
-            "script",
-            "noscript",
-            "style",
-            "textarea",
-            "pre",
-            "code",
-            "math",
-            "select",
-            "option",
-            "mjx-container"
-          ]
-          # class that marks tags not to search
-          ignoreHtmlClass = "mathjax_ignore"
-          # HTML tags that can appear within math
-          [params.page.math.mathjax.options.includeHtmlTags]
-            # "#comment" = ""
-            # br = "\n"
-            # wbr = ""
+
+[params.page]
+
+[params.page.math]
+enable = true
+type = "mathjax"
+
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
+[params.page.math.mathjax.packages]
+# '[+]' = ['configmacros']
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.mathjax.macros]
+# "bold" = ["{\\bf #1}", 1] # usage: $\bold{math}$
+
+[params.page.math.mathjax.loader]
+load = [ 'ui/safe' ]
+
+[params.page.math.mathjax.loader.paths]
+# custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
+# more loader config e.g source, dependencies, provides etc.
+
+[params.page.math.mathjax.options]
+enableMenu = true
+# HTML tags that won't be searched for math
+skipHtmlTags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container"
+]
+# class that marks tags not to search
+ignoreHtmlClass = "mathjax_ignore"
+
+# HTML tags that can appear within math
+[params.page.math.mathjax.options.includeHtmlTags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
 ```
 
 ## 行内公式
@@ -196,7 +228,7 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 
 ```toml
 [params.page.math.mathjax]
-  cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ```
 
 ## 自定义宏 {#custom-macros}
@@ -205,8 +237,11 @@ $\text{MathJax}$ 支持自定义宏。可以在主题的配置文件中添加自
 
 ```toml
 [params.page.math.mathjax.macros]
-  "KaTeX" = "{K\\kern-.325em\\raise.21em{\\scriptstyle{A}}\\kern-.17em\\TeX}" # usage: $\KaTeX$
-  "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+KaTeX = "{K\\kern-.325em\\raise.21em{\\scriptstyle{A}}\\kern-.17em\\TeX}" # usage: $\KaTeX$
+bold = [
+  "{\\bf #1}",
+  1
+] # usage: $\bold{math}$
 ```
 
 然后在文章中使用：
@@ -227,15 +262,26 @@ $\text{MathJax}$ 支持自定义扩展。可以在主题的配置文件中添加
 
 ```toml
 [params.page.math.mathjax.packages]
-  "[+]" = ["physics", "xypic"]
+"[+]" = [
+  "physics",
+  "xypic"
+]
+
 [params.page.math.mathjax.loader]
-  load = ["ui/safe", "[tex]/physics", "[custom]/xypic.js"]
-  [params.page.math.mathjax.loader.paths]
-    custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+load = [
+  "ui/safe",
+  "[tex]/physics",
+  "[custom]/xypic.js"
+]
+
+[params.page.math.mathjax.loader.paths]
+custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
 [params.page.math.mathjax.tex]
-  [params.page.math.mathjax.tex.physics]
-    italicdiff = false
-    arrowdel = false
+
+[params.page.math.mathjax.tex.physics]
+italicdiff = false
+arrowdel = false
 ```
 
 一个 `physics` 包示例：

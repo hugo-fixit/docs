@@ -5,7 +5,7 @@ description: API references for the FixIt project.
 cascade:
   params:
     type: posts
-keywords: 
+keywords:
   - hugo-fixit
   - FixIt
   - References
@@ -16,6 +16,6 @@ menu:
     name: References
     title: All References
     weight: 3
-    params: 
+    params:
       icon: fa-solid fa-microchip
 ---

@@ -548,7 +548,7 @@ grunt.initConfig({
       }
     }
   }
-};
+})
 ```
 
 {{< admonition >}}

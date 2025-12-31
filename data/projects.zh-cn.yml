@@ -10,7 +10,7 @@
     - hugo-fixit/docs
     - Lruihao/hugo-blog
 - title: 🧩 组件
-  description: "FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。"
+  description: 'FixIt 主题旨在 **简洁性** 和 **可扩展性** 之间取得平衡。为此，我们开发了一系列额外的 Hugo 主题组件供用户选择。'
   collections:
     - Components
   # Order by, optional values: ['default', 'name', 'star', 'fork']
@@ -42,7 +42,7 @@
     - hugo-fixit/hugo-shell
     - hugo-fixit/.tools
 - title: 👾 第三方
-  description: "欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。"
+  description: '欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。'
   contentAdapters: true
   collections:
     - TP Components

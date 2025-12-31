@@ -295,7 +295,10 @@ Next, taking the [component-projects] component as an example, we will introduce
         Next edit `hugo.toml` of your project and add this theme component to your themes:
 
         ```toml {mode="simple", lineNos=false}
-        theme = ["FixIt", "component-projects"]
+        theme = [
+          "FixIt",
+          "component-projects",
+        ]
         ```
 
 2. **Inject Partial**
@@ -316,9 +319,7 @@ Next, taking the [component-projects] component as an example, we will introduce
     comment = []
     footer = []
     widgets = []
-    assets = [
-      "inject/component-projects.html",
-    ]
+    assets = [ "inject/component-projects.html" ]
     postTocBefore = []
     postTocAfter = []
     postContentBefore = []

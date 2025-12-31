@@ -65,22 +65,23 @@ Custom partials must be stored in the `/layouts/_partials/` directory.
 
 ```toml
 [params]
-  [params.customPartials]
-    head = []
-    menuDesktop = []
-    menuMobile = []
-    profile = []
-    aside = []
-    comment = []
-    footer = []
-    widgets = []
-    assets = []
-    postTocBefore = []
-    postTocAfter = []
-    postContentBefore = []
-    postContentAfter = []
-    postFooterBefore = []
-    postFooterAfter = []
+
+[params.customPartials]
+head = []
+menuDesktop = []
+menuMobile = []
+profile = []
+aside = []
+comment = []
+footer = []
+widgets = []
+assets = []
+postTocBefore = []
+postTocAfter = []
+postContentBefore = []
+postContentAfter = []
+postFooterBefore = []
+postFooterAfter = []
 ```
 
 ## How to Use
@@ -99,8 +100,9 @@ Then specify the path of the custom template in the configuration file.
 
 ```toml
 [params]
-  [params.customPartials]
-    profile = ["custom/profile.html"]
+
+[params.customPartials]
+profile = [ "custom/profile.html" ]
 ```
 
 Visit the homepage, and you will see the custom content in the `profile` area.

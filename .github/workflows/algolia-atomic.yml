@@ -11,8 +11,8 @@ on:
       - 'data/**'
       - 'static/**'
       - 'themes/**'
-      - 'go.mod'
-      - 'go.sum'
+      - go.mod
+      - go.sum
   workflow_dispatch:
 
 jobs:
@@ -46,8 +46,8 @@ jobs:
         env:
           ALGOLIA_APP_ID: YKOM6PKLUY
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-          ALGOLIA_INDEX_NAME: 'index.en'
-          ALGOLIA_INDEX_FILE: './public/search.json'
+          ALGOLIA_INDEX_NAME: index.en
+          ALGOLIA_INDEX_FILE: ./public/search.json
         run: |
           pnpm algolia
 
@@ -55,7 +55,7 @@ jobs:
         env:
           ALGOLIA_APP_ID: YKOM6PKLUY
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-          ALGOLIA_INDEX_NAME: 'index.zh-cn'
-          ALGOLIA_INDEX_FILE: './public/zh-cn/search.json'
+          ALGOLIA_INDEX_NAME: index.zh-cn
+          ALGOLIA_INDEX_FILE: ./public/zh-cn/search.json
         run: |
           pnpm algolia

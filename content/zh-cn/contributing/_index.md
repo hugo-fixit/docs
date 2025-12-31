@@ -6,7 +6,7 @@ description: Hugo FixIt 非常渴望来自于开源社区的热情和参与。�
 cascade:
   params:
     type: posts
-keywords: 
+keywords:
   - hugo-fixit
   - FixIt
   - 贡献指南

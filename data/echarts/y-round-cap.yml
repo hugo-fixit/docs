@@ -9,7 +9,7 @@ radiusAxis:
     - v
     - w
     - x
-    - 'y'
+    - y
     - z
   z: 10
 polar: {}

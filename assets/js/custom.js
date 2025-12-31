@@ -9,34 +9,35 @@ class FixItDocs {
       github: 'https://github.com/Lruihao',
       website: 'https://lruihao.cn',
     }
-    this.site = 'FixIt';
-    this.url = location.origin;
+    this.site = 'FixIt'
+    this.url = location.origin
   }
+
   /**
    * print theme info with pretty style
-   * @returns {FixItDocs}
+   * @returns {FixItDocs} FixItDocs instance
    */
   themeInfo() {
-    let subtitle = fixit.config?.version || 'unknown';
+    let subtitle = window.fixit.config?.version || 'unknown'
 
     if (subtitle.split('-').length > 2) {
-      subtitle = subtitle.replace(/-.*$/, '*');
+      subtitle = subtitle.replace(/-.*$/, '*')
     }
     // set header subtitle with theme version (desktop and mobile)
-    const headerSubtitles = document.querySelectorAll('.header-subtitle');
+    const headerSubtitles = document.querySelectorAll('.header-subtitle')
     headerSubtitles.forEach((el) => {
-      el.textContent = subtitle;
-    });
-    return this;
+      el.textContent = subtitle
+    })
+    return this
   }
 
   /**
    * initialize
-   * @returns {FixItDocs}
+   * @returns {FixItDocs} FixItDocs instance
    */
   init() {
-    this.themeInfo();
-    return this;
+    this.themeInfo()
+    return this
   }
 }
 
@@ -44,9 +45,9 @@ class FixItDocs {
  * immediate execution
  */
 (() => {
-  window.fixitDocs = new FixItDocs();
+  window.fixitDocs = new FixItDocs()
   // it will be executed when the DOM tree is built
   document.addEventListener('DOMContentLoaded', () => {
-    window.fixitDocs.init();
-  });
-})();
+    window.fixitDocs.init()
+  })
+})()

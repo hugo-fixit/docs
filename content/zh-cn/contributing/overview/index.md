@@ -12,7 +12,7 @@ related:
 reward:
   position: before
 description: Hugo FixIt 非常渴望来自于开源社区的热情和参与。我们需要你们的支持！
-keywords: 
+keywords:
   - hugo-fixit
   - FixIt
   - 贡献指南
@@ -23,7 +23,7 @@ menu:
     name: 贡献指南
     title: 为 FixIt 项目做贡献
     weight: 4
-    params: 
+    params:
       icon: fa-solid fa-heart-circle-bolt text-danger fa-beat
       # class: fa-bounce
 ---

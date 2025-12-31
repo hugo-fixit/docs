@@ -22,7 +22,11 @@ If you've built a Hugo theme components and want to contribute back to the Hugo 
 Since Hugo `0.42` a project can configure a theme as a composite of as many theme components you need:
 
 ```toml
-theme = ['base-theme', 'my-shortcodes', 'my-components']
+theme = [
+  'base-theme',
+  'my-shortcodes',
+  'my-components',
+]
 ```
 
 You can even nest this, and have the theme component itself include theme components in its own `hugo.toml` (theme inheritance).

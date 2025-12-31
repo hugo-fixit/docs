@@ -26,56 +26,88 @@ To enable $\text{MathJax}$ support in the FixIt theme, you need to configure it 
 
 ```toml {title="hugo.toml"}
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)'], ['$', '$']]
+
+[markup.goldmark]
+
+[markup.goldmark.extensions]
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [
+  [
+    '\[',
+    '\]'
+  ],
+  [
+    '$$',
+    '$$'
+  ]
+]
+inline = [
+  [
+    '\(',
+    '\)'
+  ],
+  [
+    '$',
+    '$'
+  ]
+]
 
 [params]
-  [params.page]
-    [params.page.math]
-      enable = true
-      type = "mathjax"
-      # MathJax server-side rendering (https://www.mathjax.org)
-      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-      [params.page.math.mathjax]
-        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-        [params.page.math.mathjax.packages]
-          # '[+]' = ['configmacros']
-        # custom macros map
-        # syntax: <macro> = <definition>
-        [params.page.math.mathjax.macros]
-          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
-        [params.page.math.mathjax.loader]
-          load = ['ui/safe']
-          [params.page.math.mathjax.loader.paths]
-            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-          # more loader config e.g source, dependencies, provides etc.
-        [params.page.math.mathjax.options]
-          enableMenu = true
-          # HTML tags that won't be searched for math
-          skipHtmlTags = [
-            "script",
-            "noscript",
-            "style",
-            "textarea",
-            "pre",
-            "code",
-            "math",
-            "select",
-            "option",
-            "mjx-container"
-          ]
-          # class that marks tags not to search
-          ignoreHtmlClass = "mathjax_ignore"
-          # HTML tags that can appear within math
-          [params.page.math.mathjax.options.includeHtmlTags]
-            # "#comment" = ""
-            # br = "\n"
-            # wbr = ""
+
+[params.page]
+
+[params.page.math]
+enable = true
+type = "mathjax"
+
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[params.page.math.mathjax]
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
+[params.page.math.mathjax.packages]
+# '[+]' = ['configmacros']
+
+# custom macros map
+# syntax: <macro> = <definition>
+[params.page.math.mathjax.macros]
+# "bold" = ["{\\bf #1}", 1] # usage: $\bold{math}$
+
+[params.page.math.mathjax.loader]
+load = [ 'ui/safe' ]
+
+[params.page.math.mathjax.loader.paths]
+# custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
+# more loader config e.g source, dependencies, provides etc.
+
+[params.page.math.mathjax.options]
+enableMenu = true
+# HTML tags that won't be searched for math
+skipHtmlTags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container"
+]
+# class that marks tags not to search
+ignoreHtmlClass = "mathjax_ignore"
+
+# HTML tags that can appear within math
+[params.page.math.mathjax.options.includeHtmlTags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
 ```
 
 ## Inline Formulas
@@ -196,7 +228,7 @@ Custom $\text{MathJax}$ CDN is supported. You can set the $\text{MathJax}$ CDN a
 
 ```toml
 [params.page.math.mathjax]
-  cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ```
 
 ## Custom Macros {#custom-macros}
@@ -205,8 +237,11 @@ $\text{MathJax}$ supports custom macros. You can add custom macros in the theme 
 
 ```toml
 [params.page.math.mathjax.macros]
-  "KaTeX" = "{K\\kern-.325em\\raise.21em{\\scriptstyle{A}}\\kern-.17em\\TeX}" # usage: $\KaTeX$
-  "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+KaTeX = "{K\\kern-.325em\\raise.21em{\\scriptstyle{A}}\\kern-.17em\\TeX}" # usage: $\KaTeX$
+bold = [
+  "{\\bf #1}",
+  1
+] # usage: $\bold{math}$
 ```
 
 Then use them in your article:
@@ -227,15 +262,26 @@ For example, to add the [`physics`][physics] and [`xypic`][xyjax] extension pack
 
 ```toml
 [params.page.math.mathjax.packages]
-  "[+]" = ["physics", "xypic"]
+"[+]" = [
+  "physics",
+  "xypic"
+]
+
 [params.page.math.mathjax.loader]
-  load = ["ui/safe", "[tex]/physics", "[custom]/xypic.js"]
-  [params.page.math.mathjax.loader.paths]
-    custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+load = [
+  "ui/safe",
+  "[tex]/physics",
+  "[custom]/xypic.js"
+]
+
+[params.page.math.mathjax.loader.paths]
+custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
 [params.page.math.mathjax.tex]
-  [params.page.math.mathjax.tex.physics]
-    italicdiff = false
-    arrowdel = false
+
+[params.page.math.mathjax.tex.physics]
+italicdiff = false
+arrowdel = false
 ```
 
 A `physics` package example:

@@ -17,7 +17,6 @@ resources:
     src: featured-image.webp
 ---
 
-
 [[GoAT][goat]]^(Go ASCII Tool) is a Go implementation of [markdeep.mini.js][markdeep]'s ASCII diagram generator.
 
 <!--more-->

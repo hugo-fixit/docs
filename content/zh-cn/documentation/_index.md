@@ -16,6 +16,6 @@ menu:
     name: 文档
     title: 主题文档
     weight: 1
-    params: 
+    params:
       icon: fa-regular fa-newspaper
 ---

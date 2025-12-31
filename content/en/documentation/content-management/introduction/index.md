@@ -144,10 +144,10 @@ hugo new --kind post-bundle posts/bar/
 
     ```yaml {data-open=false}
     author:
-      name: "" # the author's name
-      link: "" # the link of the author
-      email: "" # the email of the author, used to set a Gravatar avatar, which takes precedence over `author.avatar`
-      avatar: "" # the local avatar of the author
+      name: '' # the author's name
+      link: '' # the link of the author
+      email: '' # the email of the author, used to set a Gravatar avatar, which takes precedence over `author.avatar`
+      avatar: '' # the local avatar of the author
     ```
 
 - **authorAvatar**: {{< version 0.2.18 >}} whether to enable the author's avatar of the post.
@@ -227,23 +227,23 @@ Here is a front matter example:
 
 ```yaml
 ---
-title: "My First Post"
-subtitle: ""
+title: My First Post
+subtitle: ''
 date: 2020-03-04T15:58:26+08:00
 lastmod: 2020-03-04T15:58:26+08:00
 draft: true
-author: ""
-authorLink: ""
-authorEmail: ""
-description: ""
-keywords: ""
-license: ""
+author: ''
+authorLink: ''
+authorEmail: ''
+description: ''
+keywords: ''
+license: ''
 images: []
 
 tags: []
 categories: []
-featuredImage: ""
-featuredImagePreview: ""
+featuredImage: ''
+featuredImagePreview: ''
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -253,7 +253,7 @@ ruby: true
 fraction: true
 fontawesome: true
 linkToMarkdown: true
-pageStyle: "normal"
+pageStyle: normal
 
 toc:
   enable: true
@@ -268,7 +268,7 @@ math:
   enable: true
   # ...
 mapbox:
-  accessToken: ""
+  accessToken: ''
   # ...
 share:
   enable: true
@@ -278,15 +278,15 @@ comment:
   # ...
 library:
   css:
-    # someCSS = "some.css"
-    # located in "assets/"
-    # Or
-    # someCSS = "https://cdn.example.com/some.css"
+  # someCSS = "some.css"
+  # located in "assets/"
+  # Or
+  # someCSS = "https://cdn.example.com/some.css"
   js:
-    # someJS = "some.js"
-    # located in "assets/"
-    # Or
-    # someJS = "https://cdn.example.com/some.js"
+  # someJS = "some.js"
+  # located in "assets/"
+  # Or
+  # someJS = "https://cdn.example.com/some.js"
 seo:
   images: []
   # ...
@@ -399,98 +399,108 @@ For example with English, Chinese and French website:
 defaultContentLanguage = "en"
 
 [languages]
-  [languages.en]
-    weight = 1
-    title = "My Hugo FixIt Site"
-    languageCode = "en"
-    languageName = "English"
-    [[languages.en.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Posts"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.en.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Tags"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.en.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "Categories"
-      url = "/categories/"
-      title = ""
-      weight = 3
 
-  [languages.zh-cn]
-    weight = 2
-    title = "我的 Hugo FixIt 网站"
-    # language code, CN only here
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    # whether to include Chinese/Japanese/Korean
-    hasCJKLanguage = true
-    [[languages.zh-cn.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "文章"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.zh-cn.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "标签"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.zh-cn.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "分类"
-      url = "/categories/"
-      title = ""
-      weight = 3
+[languages.en]
+weight = 1
+title = "My Hugo FixIt Site"
+languageCode = "en"
+languageName = "English"
 
-  [languages.fr]
-    weight = 3
-    title = "Mon nouveau site Hugo FixIt"
-    languageCode = "fr"
-    languageName = "Français"
-    [[languages.fr.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "Postes"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    [[languages.fr.menu.main]]
-      identifier = "tags"
-      pre = ""
-      post = ""
-      name = "Balises"
-      url = "/tags/"
-      title = ""
-      weight = 2
-    [[languages.fr.menu.main]]
-      identifier = "categories"
-      name = "Catégories"
-      pre = ""
-      post = ""
-      url = "/categories/"
-      title = ""
-      weight = 3
+[[languages.en.menu.main]]
+identifier = "posts"
+pre = ""
+post = ""
+name = "Posts"
+url = "/posts/"
+title = ""
+weight = 1
+
+[[languages.en.menu.main]]
+identifier = "tags"
+pre = ""
+post = ""
+name = "Tags"
+url = "/tags/"
+title = ""
+weight = 2
+
+[[languages.en.menu.main]]
+identifier = "categories"
+pre = ""
+post = ""
+name = "Categories"
+url = "/categories/"
+title = ""
+weight = 3
+
+[languages.zh-cn]
+weight = 2
+title = "我的 Hugo FixIt 网站"
+# language code, CN only here
+languageCode = "zh-CN"
+languageName = "简体中文"
+# whether to include Chinese/Japanese/Korean
+hasCJKLanguage = true
+
+[[languages.zh-cn.menu.main]]
+identifier = "posts"
+pre = ""
+post = ""
+name = "文章"
+url = "/posts/"
+title = ""
+weight = 1
+
+[[languages.zh-cn.menu.main]]
+identifier = "tags"
+pre = ""
+post = ""
+name = "标签"
+url = "/tags/"
+title = ""
+weight = 2
+
+[[languages.zh-cn.menu.main]]
+identifier = "categories"
+pre = ""
+post = ""
+name = "分类"
+url = "/categories/"
+title = ""
+weight = 3
+
+[languages.fr]
+weight = 3
+title = "Mon nouveau site Hugo FixIt"
+languageCode = "fr"
+languageName = "Français"
+
+[[languages.fr.menu.main]]
+identifier = "posts"
+pre = ""
+post = ""
+name = "Postes"
+url = "/posts/"
+title = ""
+weight = 1
+
+[[languages.fr.menu.main]]
+identifier = "tags"
+pre = ""
+post = ""
+name = "Balises"
+url = "/tags/"
+title = ""
+weight = 2
+
+[[languages.fr.menu.main]]
+identifier = "categories"
+name = "Catégories"
+pre = ""
+post = ""
+url = "/categories/"
+title = ""
+weight = 3
 ```
 
 Then, for each new page, append the language code to the file name.
@@ -523,7 +533,7 @@ With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automati
 > This is an additional theme component, please refer to [hugo-fixit/cmpt-translate].
 
 <!-- link reference definition -->
-<!-- markdownlint-disable-file reference-links-images -->
+<!-- markdownlint-disable-file MD052 MD060 -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [coverview]: https://coverview.lruihao.cn/

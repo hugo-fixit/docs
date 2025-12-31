@@ -68,7 +68,7 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 根据 [The CanIUse Embed][caniuse-embed] 的使用说明，编写 shortcode 内容如下：
 
 ```go-html-template {title="caniuse.html"}
-{{- /* 
+{{- /*
   reference https://github.com/pengzhanbo/caniuse-embed
   <feature>: Feature name
   <past>: Show the past N versions that match the feature, range is 0 - 5, default is 2
@@ -90,27 +90,26 @@ go mod init github.com/hugo-fixit/shortcode-caniuse
 
 ```js
 function setCanIUseEmbedsTheme(allCanIUseEmbeds, isDark) {
-  allCanIUseEmbeds.forEach(function (embed) {
-    embed.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  });
+  allCanIUseEmbeds.forEach((embed) => {
+    embed.setAttribute('data-theme', isDark ? 'dark' : 'light')
+  })
 }
 
 function CanIUseShortcodeInit() {
   if (typeof window.fixit?.switchThemeEventSet === 'object') {
-    const allCanIUseEmbeds = document.querySelectorAll('.ciu-embed');
-    setCanIUseEmbedsTheme(allCanIUseEmbeds, window.fixit.isDark);
-    window.fixit?.switchThemeEventSet.add(function (isDark) {
-      setCanIUseEmbedsTheme(allCanIUseEmbeds, isDark);
+    const allCanIUseEmbeds = document.querySelectorAll('.ciu-embed')
+    setCanIUseEmbedsTheme(allCanIUseEmbeds, window.fixit.isDark)
+    window.fixit?.switchThemeEventSet.add((isDark) => {
+      setCanIUseEmbedsTheme(allCanIUseEmbeds, isDark)
     })
-    return;
   }
 }
 
-
 if (document.readyState !== 'loading') {
-  CanIUseShortcodeInit();
-} else {
-  document.addEventListener('DOMContentLoaded', caniuseShortcodeInit, false);
+  CanIUseShortcodeInit()
+}
+else {
+  document.addEventListener('DOMContentLoaded', caniuseShortcodeInit, false)
 }
 ```
 

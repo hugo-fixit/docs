@@ -1062,12 +1062,15 @@ When the `js` parameter is set to `true` and the content format is JS code, at t
 ```js
 /**
  * Get ECharts option
- * @param {Object} fixit FixIt instance
- * @param {Object} chart ECharts instance
- * @returns {Object|Promise} ECharts option or Promise
+ * @param {object} fixit FixIt instance
+ * @param {object} chart ECharts instance
+ * @returns {object | Promise} ECharts option or Promise
  */
 function _getOption(fixit, chart) {
-  // your content
+  const option = {
+    // your content
+  }
+  return option
 }
 ```
 

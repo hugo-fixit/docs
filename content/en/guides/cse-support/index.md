@@ -1,10 +1,10 @@
---- 
+---
 title: CSE Support
 date: 2024-11-28T15:01:29+08:00
 categories:
   - Guides
   - Documentation
-tags: 
+tags:
   - CSE
   - Advanced
 resources:
@@ -40,17 +40,21 @@ To configure Google or Bing CSE in the FixIt theme:
 
 ```toml
 [params]
-  [params.search]
-    enable = true
-    type = "cse"
-  [params.cse]
-    # Search engine: ["google", "bing"]
-    engine = "google"
-    resultsPage = "/search/"
-    [params.cse.google]
-      cx = ""
-    [params.cse.bing]
-      # Unsupported yet
+
+[params.search]
+enable = true
+type = "cse"
+
+[params.cse]
+# Search engine: ["google", "bing"]
+engine = "google"
+resultsPage = "/search/"
+
+[params.cse.google]
+cx = ""
+
+[params.cse.bing]
+# Unsupported yet
 ```
 
 ## Google CSE

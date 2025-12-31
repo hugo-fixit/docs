@@ -295,7 +295,10 @@ li[data-task='tip'] {
         接下来编辑项目的 `hugo.toml` 并将此主题组件添加到你的主题中：
 
         ```toml {mode="simple", lineNos=false}
-        theme = ["FixIt", "component-projects"]
+        theme = [
+          "FixIt",
+          "component-projects",
+        ]
         ```
 
 2. **注入 Partial**
@@ -316,9 +319,7 @@ li[data-task='tip'] {
     comment = []
     footer = []
     widgets = []
-    assets = [
-      "inject/component-projects.html",
-    ]
+    assets = [ "inject/component-projects.html" ]
     postTocBefore = []
     postTocAfter = []
     postContentBefore = []

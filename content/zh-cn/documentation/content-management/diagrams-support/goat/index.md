@@ -17,7 +17,6 @@ resources:
     src: featured-image.webp
 ---
 
-
 [[GoAT][goat]]^(Go ASCII Tool) 是 [markdeep.mini.js][markdeep] 图像生成器的 Go 语言实现。
 
 <!--more-->

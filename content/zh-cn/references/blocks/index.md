@@ -65,22 +65,23 @@ cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 
 ```toml
 [params]
-  [params.customPartials]
-    head = []
-    menuDesktop = []
-    menuMobile = []
-    profile = []
-    aside = []
-    comment = []
-    footer = []
-    widgets = []
-    assets = []
-    postTocBefore = []
-    postTocAfter = []
-    postContentBefore = []
-    postContentAfter = []
-    postFooterBefore = []
-    postFooterAfter = []
+
+[params.customPartials]
+head = []
+menuDesktop = []
+menuMobile = []
+profile = []
+aside = []
+comment = []
+footer = []
+widgets = []
+assets = []
+postTocBefore = []
+postTocAfter = []
+postContentBefore = []
+postContentAfter = []
+postFooterBefore = []
+postFooterAfter = []
 ```
 
 ## 如何使用
@@ -99,8 +100,9 @@ The quick brown fox jumps over the lazy dog.
 
 ```toml
 [params]
-  [params.customPartials]
-    profile = ["custom/profile.html"]
+
+[params.customPartials]
+profile = [ "custom/profile.html" ]
 ```
 
 访问首页，你会看到在 `profile` 区域显示了模板中自定义的内容。

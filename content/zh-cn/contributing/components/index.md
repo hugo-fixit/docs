@@ -22,7 +22,11 @@ menu:
 自从 Hugo `0.42` 版本以来，项目可以将主题配置为所需的任意数量的主题组件的组合：
 
 ```toml
-theme = ['base-theme', 'my-shortcodes', 'my-components']
+theme = [
+  'base-theme',
+  'my-shortcodes',
+  'my-components',
+]
 ```
 
 甚至可以嵌套这个设置，并且让主题组件本身在其自己的 `hugo.toml` 文件中包含主题组件（主题继承）。

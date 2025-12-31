@@ -13,7 +13,7 @@ related:
 reward:
   position: before
 description: Hugo FixIt is eager for enthusiasm and participation from the open-source community. We need your support!
-keywords: 
+keywords:
   - hugo-fixit
   - FixIt
   - Contribution
@@ -24,7 +24,7 @@ menu:
     name: Contributing
     title: Contribute to the FixIt project
     weight: 4
-    params: 
+    params:
       icon: fa-solid fa-heart-circle-bolt text-danger fa-beat
       # class: fa-bounce
 ---
