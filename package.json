@@ -41,7 +41,7 @@
     "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
     "lint-staged": "^16.2.7",
-    "markdownlint-cli2": "^0.18.1",
+    "markdownlint-cli2": "^0.20.0",
     "markdownlint-rule-search-replace": "^1.2.0",
     "simple-git-hooks": "^2.13.1"
   },
