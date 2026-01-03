@@ -1626,13 +1626,27 @@ hotWords = true
 enable = false
 key = ""
 title = ""
-# 主题选项：["", "simple", "yanzhi"]
+# 主题选项：["", "simple", "yanzhi", "menghuan"]
 theme = ""
 postURL = ""
 blacklist = ""
 wordLimit = 1000
 typingAnimate = true
 beginningText = ""
+```
+
+## podcast
+
+{{< version 0.4.0 >}}
+
+`map` AI 播客配置。
+
+```toml
+[params]
+
+# Podcast: https://ai.zhheo.com/docs/podcast.html
+[params.podcast]
+enable = false
 ```
 
 ### feed
