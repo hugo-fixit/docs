@@ -1869,6 +1869,8 @@ pageStyle = "normal"
 # {{< version 0.2.17 changed >}} 开启自动书签支持
 # 如果为 true，则在关闭页面时保存阅读进度
 autoBookmark = false
+# {{< version 0.4.0 >}} 是否显示最后修改时间
+showLastmod = true
 # {{< version 0.2.17 >}} 是否使用 字数统计
 wordCount = true
 # {{< version 0.2.17 >}} 是否使用 预计阅读

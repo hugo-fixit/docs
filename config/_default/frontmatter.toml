@@ -7,5 +7,5 @@ lastmod = [
   "lastmod",
   ":git",
   ":fileModTime",
-  ":defalut"
+  ":default"
 ]

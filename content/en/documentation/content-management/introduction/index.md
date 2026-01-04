@@ -197,6 +197,7 @@ hugo new --kind post-bundle posts/bar/
 
 - **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [theme configuration][theme-config].
 - **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [theme configuration][theme-config].
+- **showLastmod**: {{< version 0.4.0 >}} the same as the `params.page.showLastmod` part in the [theme configuration][theme-config].
 - **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [theme configuration][theme-config].
 - **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [theme configuration][theme-config].
 - **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [theme configuration][theme-config].
