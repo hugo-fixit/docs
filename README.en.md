@@ -1,7 +1,6 @@
 # FixIt Theme Documentation
 
-[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Production&logo=vercel)](https://fixit.lruihao.cn/)
-[![Preview environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Preview?style=flat&label=Preview&logo=vercel)](https://pre.fixit.lruihao.cn/)
+[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Vercel&logo=vercel)](https://fixit.lruihao.cn/)
 [![Hugo](https://img.shields.io/badge/Hugo-%5E0.147.7-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 
 👉 [中文](README.md) | English
