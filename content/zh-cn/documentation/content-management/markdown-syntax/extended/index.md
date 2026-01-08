@@ -35,7 +35,7 @@ collections:
 
 使用基本的 Markdown 语法，每个警示的第一行是一个警示指示符，由一个感叹号和警示类型组成，用中括号括起来。
 
-> [!note]+
+> [!note]~
 > Alert 基本语法与 [GitHub][github-alert]、[Obsidian][obsidian-callouts] 和 [Typora][typora-alert] 兼容。
 
 以下是所有五种类型的示例：
@@ -80,7 +80,7 @@ collections:
 
 使用扩展 Markdown 语法，你可以选择包含警示符号或警示标题。警示符号是 `+` 或 `-` 之一。通常用于指示警示是否可以图形折叠。
 
-> [!note]+
+> [!note]~
 > Alert 扩展语法与 [Obsidian][obsidian-callouts] 和 Fixit [admonition shortcode][sc-admonition] 兼容。
 >
 > > [!WARNING]
@@ -137,6 +137,22 @@ collections:
 > [!question] 警示可以嵌套吗？
 > > [!todo] 可以！它们可以。
 > > > [!example] 你甚至可以使用多层嵌套。
+
+#### 仅内容警示
+
+{{< version 0.4.2 >}}
+
+你可以通过在类型标识符后直接添加波浪号（`~`）来创建仅内容警示。
+
+> [!warning] 这是 FixIt 独有的扩展语法，与 Obsidian 或其他 Markdown 应用不兼容。
+
+```markdown
+> [!TIP]~
+> 这是一个没有标题的仅内容警示。
+```
+
+> [!TIP]~
+> 这是一个没有标题的仅内容警示。
 
 #### 支持的类型 {#supported-types}
 

@@ -34,7 +34,7 @@ Also known as callouts or admonitions, alerts are blockquotes used to emphasize 
 
 With the basic Markdown syntax, the first line of each alert is an alert designator consisting of an exclamation point followed by the alert type, wrapped within brackets.
 
-> [!note]+
+> [!note]~
 > The basic syntax is compatible with [GitHub][github-alert], [Obsidian][obsidian-callouts], and [Typora][typora-alert].
 
 An example of all five types:
@@ -79,7 +79,7 @@ The rendered output looks like this:
 
 With the extended Markdown syntax, you may optionally include an alert sign and/or an alert title. The alert sign is one of `+` or `-`, typically used to indicate whether an alert is graphically foldable.
 
-> [!note]+
+> [!note]~
 > The extended syntax is compatible with [Obsidian][obsidian-callouts] and Fixit [admonition shortcode][sc-admonition].
 >
 > > [!WARNING]
@@ -123,7 +123,7 @@ You can make a Alert foldable by adding a plus (+) or a minus (-) directly after
 > [!QUESTION]- Are Alerts foldable?
 > Yes! In a foldable Alert, the contents are hidden when collapsed.
 
-#### Nested alerts
+#### Nested Alerts
 
 You can nest alerts in multiple levels.
 
@@ -136,6 +136,22 @@ You can nest alerts in multiple levels.
 > [!question] Can alerts be nested?
 > > [!todo] Yes!, they can.
 > > > [!example] You can even use multiple layers of nesting.
+
+#### Content-only Alerts
+
+{{< version 0.4.2 >}}
+
+> [!warning] This is a FixIt-exclusive syntax and is not compatible with Obsidian or other Markdown applications.
+
+You can create content-only alerts by adding a tilde (`~`) directly after the type identifier.
+
+```markdown
+> [!TIP]~
+> This is a content-only alert without a title.
+```
+
+> [!TIP]~
+> This is a content-only alert without a title.
 
 #### Supported types
 
