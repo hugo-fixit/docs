@@ -52,8 +52,6 @@ To use the `file-tree` shortcode, include it in your content as follows:
 
 The `file-tree` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-<!-- @param {array} highlightList - List of file or folder names to highlight, separated by commas -->
-
 | Parameter       | Type    | Default | Description                                                                   |
 | :-------------- | :------ | :------ | :---------------------------------------------------------------------------- |
 | `path`          | string  | `"/"`   | ==1== The path to scan in filesystem (relative to project root or contentDir) |
@@ -63,7 +61,7 @@ The `file-tree` shortcode has the following named parameters, and the positional
 | `data`          | string  | -       | Name of data file in `data/filetree/` directory                               |
 | `ignoreList`    | string  | -       | Comma-separated list of files/folders to ignore                               |
 | `highlightList` | string  | -       | Comma-separated list of files/folders to highlight                            |
-| `fullRootName`  | boolean | `false` | Whether to use the full root path as the root name when scanning filesystem   |
+| `name`          | string  | -       | Name for the root node (if set to `{path}`, uses the full root path)          |
 
 ### Configuration
 
@@ -252,27 +250,27 @@ By default, the `path` is `/`:
 
 The rendered output looks like this:
 
-{{< file-tree />}}
+{{< file-tree name="{path}" />}}
 
 Use `ignoreList` parameter to exclude specific files or folders:
 
 ```markdown
-{{</* file-tree level=0 ignoreList=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" /*/>}}
+{{</* file-tree level=0 ignoreList=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" /*/>}}
 ```
 
 The rendered output looks like this:
 
-{{< file-tree level=0 ignoreList=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" />}}
+{{< file-tree level=0 ignoreList=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" />}}
 
 Use `path` parameter to scan a specific directory, e.g., `documentation` under the `content` directory:
 
 ```markdown
-{{</* file-tree path="documentation" level=2 folderSlash=true fullRootName=true /*/>}}
+{{</* file-tree path="documentation" level=2 folderSlash=true name="{path}" /*/>}}
 ```
 
 The rendered output looks like this:
 
-{{< file-tree path="documentation" level=2 folderSlash=true fullRootName=true />}}
+{{< file-tree path="documentation" level=2 folderSlash=true name="{path}" />}}
 
 <!-- link reference definition -->
 [page-resources]: https://gohugo.io/content-management/page-resources/
