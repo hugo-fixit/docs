@@ -21,6 +21,8 @@ resources:
 
 <!--more-->
 
+## 概览 {#overview}
+
 ECharts 提供了常规的 [折线图][line], [柱状图][bar], [散点图][scatter], [饼图][pie], [K 线图][candlestick], 用于统计的 [盒形图][boxplot], 用于地理数据可视化的 [地图][map], [热力图][heatmap], [线图][lines], 用于关系数据可视化的 [关系图][graph], [treemap][treemap], [旭日图][sunburst], 多维数据可视化的 [平行坐标][parallel], 还有用于 BI 的 [漏斗图][funnel], [仪表盘][gauge], 并且支持图与图之间的混搭。
 
 ## 用法 {#usage}

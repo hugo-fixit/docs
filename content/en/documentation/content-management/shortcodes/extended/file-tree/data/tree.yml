@@ -1,0 +1,19 @@
+- name: blog-project
+  type: dir
+  children:
+    - name: content
+      type: dir
+      children:
+        - name: posts
+          type: dir
+        - name: about.md
+          type: file
+    - name: static
+      type: dir
+      children:
+        - name: images
+          type: dir
+        - name: favicon.ico
+          type: file
+    - name: config.toml
+      type: file

@@ -872,8 +872,6 @@ $\text{MathJax}$ 在页面加载后通过 JavaScript 进行 **客户端渲染**�
 
 ## Markdown 属性 {#markdown-attributes}
 
-{{< version 0.104.0 >}}
-
 > 更新你的站点配置以启用块级元素的 [Markdown 属性][markdown-attributes]。
 
 Hugo 支持图像和块元素上的 Markdown 属性，包括块引用、围栏代码块、标题、水平线、列表、段落和表格。

@@ -16,6 +16,7 @@ enable = false
 enable = false
 # Check for updates
 c4u = true
+debug = false
 
 # -------------------------------------------------------------------------------------
 # Theme Components Configuration | 主题组件配置

@@ -21,6 +21,8 @@ resources:
 
 <!--more-->
 
+## Overview
+
 The basic chart types ECharts supports include [line series][line], [bar series][bar], [scatter series][scatter], [pie charts][pie], [candle-stick series][candlestick], [boxplot series][boxplot] for statistics, [map series][map], [heatmap series][heatmap], [lines series][lines] for directional information, [graph series][graph] for relationships, [treemap series][treemap], [sunburst series][sunburst], [parallel series][parallel] for multi-dimensional data, [funnel series][funnel], [gauge series][gauge]. And it's extremely easy to create a combinition of them with ECharts.
 
 ## Usage

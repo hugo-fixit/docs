@@ -15,6 +15,7 @@ resources:
 tags:
   - Shortcodes
   - Content
+  - ECharts
 categories:
   - Documentation
 collections:

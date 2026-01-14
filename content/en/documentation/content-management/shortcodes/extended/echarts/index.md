@@ -15,6 +15,7 @@ resources:
 tags:
   - Shortcodes
   - Content
+  - ECharts
 categories:
   - Documentation
 collections:
@@ -1274,7 +1275,7 @@ Support obtaining data from Hugo [site data][hugo-data], with data files defined
 For example, if you have a file `data/echarts/round-cap.json`, you can use the `data` parameter to reference it:
 
 ```markdown
-{{?{}< echarts data="round-cap" />}}
+{{</* echarts data="round-cap" /*/>}}
 ```
 
 The rendered output looks like this:
