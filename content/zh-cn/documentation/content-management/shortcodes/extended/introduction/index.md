@@ -558,6 +558,14 @@ This content is only rendered in the production environment.
 
 完整文档请查看页面 [扩展 Shortcode - tabs][sc-tabs]。
 
+## file-tree
+
+{{< version 0.4.2 >}}
+
+`file-tree` shortcode 用于渲染一个交互式的文件树结构。
+
+完整文档请查看页面 [扩展 Shortcode - File Tree][sc-file-tree]。
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
 [fixit-shortcodes-src]: https://github.com/hugo-fixit/FixIt/tree/main/layouts/_shortcodes
@@ -588,3 +596,4 @@ This content is only rendered in the production environment.
 [sc-bluesky]: {{< relref path="/documentation/content-management/shortcodes/extended/bluesky" >}}
 [sc-gist]: {{< relref path="/documentation/content-management/shortcodes/extended/gist" >}}
 [sc-tabs]: {{< relref path="/documentation/content-management/shortcodes/extended/tabs" >}}
+[sc-file-tree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree" >}}

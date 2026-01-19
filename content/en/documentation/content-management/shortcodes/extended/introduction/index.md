@@ -562,6 +562,14 @@ The `tabs` and `tab` shortcodes allow you to create tabbed content with various 
 
 The full documentation is provided in [Extended Shortcode - tabs][sc-tabs].
 
+## file-tree
+
+{{< version 0.4.2 >}}
+
+The `file-tree` shortcode is used to render an interactive file tree structure.
+
+The full documentation is provided in [Extended Shortcode - File Tree][sc-file-tree].
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images no-inline-html link-fragments -->
 [fixit-shortcodes-src]: https://github.com/hugo-fixit/FixIt/tree/main/layouts/_shortcodes
@@ -592,3 +600,4 @@ The full documentation is provided in [Extended Shortcode - tabs][sc-tabs].
 [sc-bluesky]: {{< relref path="/documentation/content-management/shortcodes/extended/bluesky" >}}
 [sc-gist]: {{< relref path="/documentation/content-management/shortcodes/extended/gist" >}}
 [sc-tabs]: {{< relref path="/documentation/content-management/shortcodes/extended/tabs" >}}
+[sc-file-tree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree" >}}
