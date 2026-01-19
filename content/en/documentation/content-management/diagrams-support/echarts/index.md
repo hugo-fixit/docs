@@ -44,14 +44,14 @@ To use ECharts, simply place the ECharts option in formats such as `JSON`, `YAML
 
 The Code Fences extended syntax for ECharts supports the following parameters:
 
-| Parameter | Description                                                                      | Type   | Default |
-| :-------- | :------------------------------------------------------------------------------- | :----- | :------ |
-| width     | Width of the data visualization                                                  | string | `100%`  |
-| height    | Height of the data visualization                                                 | string | `30rem` |
-| js        | {{< version 0.3.19 >}} Whether to use JS code                                    | bool   | `false` |
-| async     | {{< version 0.3.20 >}} Whether JS code executes asynchronously                   | bool   | `false` |
-| data      | {{< version 0.3.20 >}} Hugo Site data key below `echarts` scope                  | string | -       |
-| file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string | -       |
+| Parameter | Description                                               | Type   | Default |
+| :-------- | :-------------------------------------------------------- | :----- | :------ |
+| width     | Width of the data visualization                           | string | `100%`  |
+| height    | Height of the data visualization                          | string | `30rem` |
+| js        | Whether to use JS code                                    | bool   | `false` |
+| async     | Whether JS code executes asynchronously                   | bool   | `false` |
+| file      | Data file in [page resources][page-resources] or `assets` | string | -       |
+| data      | Hugo Site data key below `echarts` scope                  | string | -       |
 
 ---
 
@@ -1278,24 +1278,6 @@ return fetch('/echarts/les-miserables.json')
 
 {{< /details >}}
 
-## Site Data
-
-{{< version 0.3.20 >}}
-
-Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/echarts` directory, and the format supports `JSON`, `YAML`, and `TOML`.
-
-For example, if you have a file `data/echarts/round-cap.json`, you can use the `data` parameter to reference it:
-
-````markdown
-```echarts {data="round-cap"}
-```
-````
-
-The rendered output looks like this:
-
-```echarts {data="round-cap"}
-```
-
 ## File Data
 
 {{< version 0.3.20 >}}
@@ -1304,16 +1286,7 @@ Supports getting data from files in Hugo [page-resources] or `assets`, and the f
 
 For example, the current page structure is as follows:
 
-```plain
-echarts/
-├── data/
-│   ├── chart.js
-│   ├── chart.json
-│   ├── chart.toml
-│   └── chart.yaml
-├── featured-image.webp
-└── index.md
-```
+{{< file-tree path="documentation/content-management/diagrams-support/echarts" level=2 highlightList="chart.js, chart.yaml, chart.json, chart.toml" />}}
 
 You can use the `file` parameter to get data from the file:
 
@@ -1337,6 +1310,24 @@ An example of loading a `JS` file:
 The rendered output looks like this:
 
 ```echarts {file="data/chart.js"}
+```
+
+## Site Data
+
+{{< version 0.3.20 >}}
+
+Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/echarts` directory, and the format supports `JSON`, `YAML`, and `TOML`.
+
+For example, if you have a file `data/echarts/round-cap.json`, you can use the `data` parameter to reference it:
+
+````markdown
+```echarts {data="round-cap"}
+```
+````
+
+The rendered output looks like this:
+
+```echarts {data="round-cap"}
 ```
 
 <!-- link reference definition -->

@@ -1266,22 +1266,6 @@ return fetch('/echarts/les-miserables.json')
 
 {{< /details >}}
 
-### Data 数据
-
-{{< version 0.3.20 >}}
-
-支持从 Hugo [站点数据][hugo-data] 中获取数据，数据文件定义在 `data/echarts` 目录下，格式支持 `JSON`、`YAML`、`TOML` 格式。
-
-例如，定义有 `data/echarts/round-cap.json` 文件，你可以 使用 `data` 参数来引用：
-
-```markdown
-{{?{}< echarts data="round-cap" />}}
-```
-
-呈现的输出效果如下：
-
-{{< echarts data="round-cap" />}}
-
 ### File 数据
 
 {{< version 0.3.20 >}}
@@ -1290,16 +1274,7 @@ return fetch('/echarts/les-miserables.json')
 
 例如，当前页面结构如下：
 
-```plain
-echarts/
-├── data/
-│   ├── chart.js
-│   ├── chart.json
-│   ├── chart.toml
-│   └── chart.yaml
-├── featured-image.webp
-└── index.md
-```
+{{< file-tree path="content/en/documentation/content-management/shortcodes/extended/echarts" level=2 highlightList="chart.js, chart.yaml, chart.json, chart.toml" />}}
 
 你可以使用 `file` 参数来从文件中获取数据：
 
@@ -1321,18 +1296,34 @@ echarts/
 
 {{< echarts file="data/chart.js" />}}
 
+### Data 数据
+
+{{< version 0.3.20 >}}
+
+支持从 Hugo [站点数据][hugo-data] 中获取数据，数据文件定义在 `data/echarts` 目录下，格式支持 `JSON`、`YAML`、`TOML` 格式。
+
+例如，定义有 `data/echarts/round-cap.json` 文件，你可以 使用 `data` 参数来引用：
+
+```markdown
+{{?{}< echarts data="round-cap" />}}
+```
+
+呈现的输出效果如下：
+
+{{< echarts data="round-cap" />}}
+
 ## 参数配置 {#parameters}
 
 `echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
 
-| 参数   | 说明                                                                       | 类型   | 默认值  |
-| :----- | :------------------------------------------------------------------------- | :----- | :------ |
-| width  | ==1== 数据可视化的宽度                                                     | string | `100%`  |
-| height | ==2== 数据可视化的高度                                                     | string | `30rem` |
-| js     | {{< version 0.3.19 >}} 是否使用 `JS` 格式                                  | bool   | `false` |
-| async  | {{< version 0.3.20 >}} JS 代码是否异步执行                                 | bool   | `false` |
-| data   | {{< version 0.3.20 >}} Hugo 站点数据键值（`echarts` 范围）                 | string | -       |
-| file   | {{< version 0.3.20 >}} [页面资源][page-resources] 或 `assets` 中的数据文件 | string | -       |
+| 参数   | 说明                                                | 类型   | 默认值  |
+| :----- | :-------------------------------------------------- | :----- | :------ |
+| width  | ==1== 数据可视化的宽度                              | string | `100%`  |
+| height | ==2== 数据可视化的高度                              | string | `30rem` |
+| js     | 是否使用 `JS` 格式                                  | bool   | `false` |
+| async  | JS 代码是否异步执行                                 | bool   | `false` |
+| file   | [页面资源][page-resources] 或 `assets` 中的数据文件 | string | -       |
+| data   | Hugo 站点数据键值（`echarts` 范围）                 | string | -       |
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD032 MD007 MD037 MD052 -->
