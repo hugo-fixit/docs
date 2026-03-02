@@ -116,17 +116,57 @@
   url: https://www.zair.top
   description: 分享我的学习笔记、经验与有趣的小玩意。
 
-# - nickname: KAYOON
-#   avatar: https://iamky.cn/android-chrome-192x192.png
-#   url: https://iamky.cn
-#   description: 分享学习过程中整理出来的知识以及踩过的坑。
+- nickname: KAYOON
+  avatar: https://iamky.cn/android-chrome-192x192.png
+  url: https://iamky.cn
+  description: 分享学习过程中整理出来的知识以及踩过的坑。
 
 - nickname: Adilhyz
-  avatar: https://adilhyz.github.io/images/avatar.png
-  url: http://adilhyz.github.io
+  avatar: https://github.com/adilhyz.png
+  url: https://sanrei.my.id/
   description: GNU/Linux enthusiast & Software Engineer. Loves Exploring Computing, fall into Cybersecurity, Enjoying Music, Watching Films, and Reading.
 
 - nickname: 宋飞
   avatar: https://songfei.org/images/songfei.png
   url: https://songfei.org
   description: 软件开发工程师、业余无线电爱好者。
+
+- nickname: 自游人
+  avatar: https://17you.com/icons/web-app-manifest-512x512.png
+  url: https://17you.com/
+  description: 旅行和写作
+
+- nickname: Yao Chaohao
+  avatar: https://crisyao.github.io/me.jpg
+  url: https://crisyao.github.io/
+  description:
+
+- nickname: Heng-Mei Blog
+  avatar: https://heng-mei.github.io/avatar.jpg
+  url: https://crisyao.github.io/
+  description: 横眉冷对千夫指，俯首甘为孺子牛。
+
+- nickname: Buray's Blog
+  avatar: https://burayimg.heisenw.com/blog/img/a6c9b1f7-6da1-4978-bedf-29b03325cace.webp
+  url: https://www.buray.top/
+  description:
+
+- nickname: Huxley's Notes
+  avatar: https://huxinme.top/images/avatar.svg
+  url: https://huxinme.top/
+  description: 自定义优化做的很不错！
+
+- nickname: Deequoique
+  avatar: https://deequoique.github.io/logo.png
+  url: https://deequoique.github.io/
+  description: Deequoique's 赛博小屋
+
+- nickname: Dylan's Blog
+  avatar:
+  url: https://du33169.tech/
+  description:
+
+- nickname: Z3n1th Blog
+  avatar: https://z3n1th1.com/images/avatar.jpg
+  url: https://z3n1th1.com/
+  description:

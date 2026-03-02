@@ -1,9 +1,9 @@
-github.com/hugo-fixit/FixIt v0.4.2 h1:9vESYO7AKdTA6Rg6RsPKAhLQ040Dj31Q/Czs/3ynS2w=
-github.com/hugo-fixit/FixIt v0.4.2/go.mod h1:3XIRedrqakO7/a4ZnhE46haMRF8HgsT0N0B5j5D2iRU=
+github.com/hugo-fixit/FixIt v0.4.3-0.20260302034217-78a994b92b25 h1:phhR7pAYDnUKtkKXTE9rN1XyeBX487WYozBGP3DEJeo=
+github.com/hugo-fixit/FixIt v0.4.3-0.20260302034217-78a994b92b25/go.mod h1:3XIRedrqakO7/a4ZnhE46haMRF8HgsT0N0B5j5D2iRU=
 github.com/hugo-fixit/cmpt-santa-hat v1.0.3 h1:2N++EKF/GtbYJ9Pa8aI/Hp67xNiqVb+sz04PJw8fTv0=
 github.com/hugo-fixit/cmpt-santa-hat v1.0.3/go.mod h1:h25a6xmOj1CFIIpSaKeJIWcTtoQyVR39Uu47NDiZLb0=
-github.com/hugo-fixit/cmpt-translate v1.11.2 h1:9uxeksNkF2N3mMFOG/s2KC20hhH+/XoryrKWRc4wXgU=
-github.com/hugo-fixit/cmpt-translate v1.11.2/go.mod h1:JZ0STubquTlRgyyGhGPlt2s0KJ1gCa99+P8ltTwQRM4=
+github.com/hugo-fixit/cmpt-translate v1.12.0 h1:HQqcL3CwC5CDkJtMBACP9QIXlXJpAw4xxjf3Y3++djg=
+github.com/hugo-fixit/cmpt-translate v1.12.0/go.mod h1:JZ0STubquTlRgyyGhGPlt2s0KJ1gCa99+P8ltTwQRM4=
 github.com/hugo-fixit/component-projects v1.9.2 h1:018KT1Q/yj+ho/2txYi6pTJmW0Ji/i8+mquBz16Bw8Y=
 github.com/hugo-fixit/component-projects v1.9.2/go.mod h1:nXW0R37REwpfwUD1I4RtB5QW71vw66nRyB9uEpYxr+c=
 github.com/hugo-fixit/shortcode-asciinema v1.1.0 h1:nli2H/BeufC/LgT+Md35NFLfSYoNGs0z0yhCkH5cbvU=

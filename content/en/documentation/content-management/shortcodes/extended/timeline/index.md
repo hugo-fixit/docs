@@ -357,7 +357,7 @@ content = "Event start"
 
 {{< /details >}}
 
-## Site Data
+## Hugo Data
 
 {{< version 0.3.20 >}}
 

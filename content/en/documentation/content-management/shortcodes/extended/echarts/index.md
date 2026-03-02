@@ -1296,7 +1296,7 @@ The rendered output looks like this:
 
 {{< echarts file="data/chart.js" />}}
 
-### Site Data
+### Hugo Data
 
 {{< version 0.3.20 >}}
 

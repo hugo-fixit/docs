@@ -202,7 +202,7 @@ The rendered output looks like this:
 
 {{< file-tree file="data/tree.yml" />}}
 
-## Site Data
+## Hugo Data
 
 Support obtaining data from Hugo [site data][hugo-data], with data files defined in the `data/filetree` directory, and the format supports `JSON`, `YAML`, and `TOML`.
 

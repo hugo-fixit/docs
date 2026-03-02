@@ -989,6 +989,9 @@ some Markdown content
 [**JSON**][json-viewer]
 : `json` 格式化和可折叠的 JSON 数据视图。
 
+[**File Tree**][file-tree]
+: `file-tree` 渲染文件和目录结构为交互式树。
+
 ### 选项 {#options}
 
 你可以通过 [Hugo 语法高亮选项][code-fences]、[主题代码块配置][codeblock-config]、[Markdown 属性](#markdown-attributes) 或者以下选项来自定义你的代码块：

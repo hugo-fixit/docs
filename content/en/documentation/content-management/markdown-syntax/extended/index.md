@@ -989,6 +989,9 @@ These features are automatically enabled in FixIt theme and require no additiona
 [**JSON**][json-viewer]
 : `json` Render JSON data structures with syntax highlighting and collapsible views.
 
+[**File Tree**][file-tree]
+: `file-tree` Render file and directory structures as interactive trees.
+
 ### Options
 
 You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], [Markdown attributes](#markdown-attributes) or the following options:
