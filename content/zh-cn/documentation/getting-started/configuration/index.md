@@ -1716,6 +1716,8 @@ mode = "classic"
 wrapperClass = ""
 maxShownLines = 10
 copyable = true
+ownloadable = false
+fullscreen = false
 lineNosToggler = true
 lineWrapToggler = true
 editable = false
@@ -1752,6 +1754,12 @@ maxShownLines
 
 copyable
 : `bool` 是否启用代码复制按钮。默认：`true`。
+
+downloadable
+: `bool` {{< version 0.4.3 >}} 是否在代码块标题中启用代码下载按钮。默认：`false`。（仅在 `classic` 模式下可用）
+
+fullscreen
+: `bool` {{< version 0.4.3 >}} 是否在代码块标题中启用代码全屏按钮。默认：`false`。（仅在 `classic` 模式下可用）
 
 lineNosToggler
 : `bool` 是否在代码块标题中启用行号切换按钮。默认：`true`。（仅在 `classic` 模式下可用）

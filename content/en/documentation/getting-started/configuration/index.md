@@ -1718,6 +1718,8 @@ mode = "classic"
 wrapperClass = ""
 maxShownLines = 10
 copyable = true
+downloadable = false
+fullscreen = false
 lineNosToggler = true
 lineWrapToggler = true
 editable = false
@@ -1754,6 +1756,12 @@ maxShownLines
 
 copyable
 : `bool` Whether to enable code copy button. Default is `true`.
+
+downloadable
+: `bool` {{< version 0.4.3 >}} Whether to enable code download button in the code block header. Default is `false`. (Only available in `classic` mode)
+
+fullscreen
+: `bool` {{< version 0.4.3 >}} Whether to enable code fullscreen button in the code block header. Default is `false`. (Only available in `classic` mode)
 
 lineNosToggler
 : `bool` Whether to enable line numbers toggle button in the code block header. Default is `true`. (Only available in `classic` mode)
