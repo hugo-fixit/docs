@@ -10,6 +10,6 @@ require (
 	github.com/hugo-fixit/shortcode-asciinema v1.1.0 // indirect
 	github.com/hugo-fixit/shortcode-caniuse v1.5.0 // indirect
 	github.com/hugo-fixit/shortcode-docs-bookmark v1.1.2 // indirect
-	github.com/hugo-fixit/shortcode-missing-translation v1.1.0 // indirect
+	github.com/hugo-fixit/shortcode-missing-translation v1.1.1 // indirect
 	github.com/hugo-fixit/shortcode-rewards v1.1.1 // indirect
 )

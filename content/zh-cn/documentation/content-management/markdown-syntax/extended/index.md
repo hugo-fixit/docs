@@ -1064,5 +1064,6 @@ const msg = ref('Hello World!')
 [diagrams-support-echarts]: {{< relref path="/documentation/content-management/diagrams-support/echarts" >}}
 [timeline-support]: {{< relref path="/documentation/content-management/timeline-support" >}}
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
+[file-tree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree/#inline-content" >}}
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
 [codeblock-config]: {{< relref path="/documentation/getting-started/configuration#codeblock" >}}

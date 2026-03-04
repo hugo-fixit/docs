@@ -25,4 +25,4 @@ collections:
 <!--more-->
 <!-- markdownlint-disable-file MD007 MD032 -->
 
-{{< missing-translation original=false >}}
+{{< missing-translation >}}
