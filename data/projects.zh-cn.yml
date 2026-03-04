@@ -43,10 +43,13 @@
     - hugo-fixit/.tools
 - title: 👾 第三方
   description: '欢迎大家投稿 [PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/edit/dev/data/projects.zh-cn.yml) 你开发的主题组件。'
-  contentAdapters: true
+  contentAdapters: false
   collections:
     - TP Components
   orderby: star
   order: desc
   repos:
     - fixit-theme/hugo-shortcode-plugins-live2d
+    - Artexxx/cmpt-graph-view
+    - Artexxx/cmpt-post-preview
+    - Artexxx/shortcode-jupyter-notebook
