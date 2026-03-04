@@ -9,35 +9,35 @@ version = "v0.4.3"
 
 [[imports]]
 path = "github.com/hugo-fixit/cmpt-santa-hat"
-version = "v1.0.3"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/cmpt-translate"
-version = "v1.12.0"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/component-projects"
-version = "v1.9.2"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/shortcode-asciinema"
-version = "v1.1.0"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/shortcode-caniuse"
-version = "v1.5.0"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/shortcode-docs-bookmark"
-version = "v1.1.2"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/shortcode-missing-translation"
-version = "v1.1.1"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/shortcode-rewards"
-version = "v1.1.1"
+version = "latest"
 
 [hugoVersion]
 extended = true
