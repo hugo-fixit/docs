@@ -405,6 +405,14 @@ When set to `true`, missing translations will be merged and displayed. Recommend
 > [!NOTE]
 > This won't create new pages, if you need empty placeholder pages, you might need [shortcode-missing-translation][sc-missing-translation].
 
+### tooltip
+
+{{< version 0.4.4 >}}
+
+`bool` Whether to enable tooltip replacement for elements with title attribute, such as footnote references. Default is `true`.
+
+When enabled, elements with a `title` attribute will display a tooltip on hover, showing the content of the `title`. This is particularly useful for footnote references, allowing users to see the footnote content without needing to scroll to the bottom of the page.
+
 ### disableThemeInject
 
 {{< version 0.2.14 >}}

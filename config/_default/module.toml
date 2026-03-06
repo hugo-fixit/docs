@@ -5,7 +5,7 @@
 
 [[imports]]
 path = "github.com/hugo-fixit/FixIt"
-version = "v0.4.3"
+version = "main"
 
 [[imports]]
 path = "github.com/hugo-fixit/cmpt-santa-hat"

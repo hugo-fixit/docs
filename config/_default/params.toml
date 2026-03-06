@@ -52,6 +52,13 @@ indexWithSubtitle = true
 # FixIt 0.3.13 | NEW whether to show summary in plain text
 # FixIt 0.3.13 | 新增 是否显示纯文本摘要
 summaryPlainify = false
+# FixIt 0.4.0 | NEW whether to enable merging missing translations from other languages
+# when set to true, missing translations from other languages will be merged and displayed
+# default is false for better performance, especially for single-language sites
+# set to true if your site has multiple languages and you want to show all content
+enableTranslationMerge = false
+# FixIt 0.4.4 | NEW whether to enable tooltip replacement for elements with title attribute, such as footnote references
+tooltip = true
 # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
 # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
 # FixIt 0.2.14 | 新增 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。
@@ -1558,7 +1565,7 @@ enterprise = true
 
 # FixIt Docs config
 [docs]
-minHugoVersion = "0.147.7"
+minHugoVersion = "0.156.0"
 
 [planet]
 invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF

@@ -407,6 +407,14 @@ auto
 > [!NOTE]
 > 这不会创建新的页面，如果你需要空的占位页面，你可能需要 [shortcode-missing-translation][sc-missing-translation]。
 
+### tooltip
+
+{{< version 0.4.4 >}}
+
+`bool` 是否启用 tooltip 替换具有 title 属性的元素，例如脚注引用。默认值为 `true`。
+
+启用后，具有 `title` 属性的元素将在悬停时显示 tooltip，显示 `title` 的内容。这对于脚注引用特别有用，允许用户在不需要滚动到页面底部的情况下查看脚注内容。
+
 ### disableThemeInject
 
 {{< version 0.2.14 >}}
