@@ -996,10 +996,11 @@ These features are automatically enabled in FixIt theme and require no additiona
 
 You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], [Markdown attributes](#markdown-attributes) or the following options:
 
-| Option  | Description         | Type     |
-| :------ | :------------------ | :------- |
-| `title` | Code block title    | `string` |
-| `name`  | Code block filename | `string` |
+| Option  | Description                          | Type     |
+| :------ | :----------------------------------- | :------- |
+| `title` | Code block title                     | `string` |
+| `name`  | Code block filename or tab item name | `string` |
+| `group` | Code block tabs group name           | `string` |
 
 For example:
 
@@ -1037,6 +1038,28 @@ const msg = ref('Hello World!')
 
 <style lang="scss" scoped>
 </style>
+```
+
+The `name` and `group` options can be used together to create tabbed code blocks. For example:
+
+````markdown
+```js {group="languages", name="Hi JS"}
+console.log('Hello, world!');
+```
+
+```python {group="languages", name="Hi Python"}
+print('Hello, world!')
+```
+````
+
+The rendered output looks like this:
+
+```js {group="languages", name="Hi JS"}
+console.log('Hello, world!')
+```
+
+```python {group="languages", name="Hi Python"}
+print('Hello, world!')
 ```
 
 <!-- link reference definition -->
