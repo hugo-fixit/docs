@@ -308,8 +308,6 @@ keywords = [
 # ...
 ```
 
-All theme configuration settings are as follows:
-
 所有 FixIt 主题配置设置如下：
 
 ### version
