@@ -1005,7 +1005,7 @@ You can supply extra options to the code block via [Hugo syntax highlighting opt
 For example:
 
 ````markdown
-```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"], shadow=hover}
 <script setup>
 import { ref } from 'vue'
 
@@ -1024,7 +1024,7 @@ const msg = ref('Hello World!')
 
 The rendered output looks like this:
 
-```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"], shadow=hover}
 <script setup>
 import { ref } from 'vue'
 

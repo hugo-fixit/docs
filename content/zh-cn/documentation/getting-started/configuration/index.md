@@ -1721,6 +1721,7 @@ wrapper = true
 mode = "classic"
 wrapperClass = ""
 maxShownLines = 10
+shadow = "never"
 copyable = true
 downloadable = false
 fullscreen = false
@@ -1757,6 +1758,9 @@ wrapperClass
 
 maxShownLines
 : `int` 代码块预览时显示的最大行数，默认：`10`。
+
+shadow
+: `string` {{< version 0.4.4 >}} 是否显示代码块的阴影效果。可选值：`always`、`hover`、`never`，默认：`never`。
 
 copyable
 : `bool` 是否启用代码复制按钮。默认：`true`。

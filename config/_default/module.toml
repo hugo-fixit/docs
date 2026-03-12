@@ -1,15 +1,17 @@
 # -------------------------------------------------------------------------------------
 # Modules Configuration | 模块配置
 # See: https://gohugo.io/configuration/module/
-# -------------------------------------------------------------------------------------
-
-# 本地调试时不要指定 version
-# hugo mod get 仅适用于未设置版本号的模块导入
 # https://github.com/gohugoio/hugo/pull/13966
+#
+# - 设置 version 后，模块视为直接依赖由 hugo.direct.sum 管理，
+#   否则视为间接依赖由 go.mod 和 go.sum 管理。
+# - 命令 hugo mod get 只能在没有设置 version 的情况下导入模块，
+#   或设置一个松散的版本查询（比如 main、latest、>v1.0.0）。
+# - 本地调试时不要指定 version，否则 hugo.work 不会生效。
+# -------------------------------------------------------------------------------------
 
 [[imports]]
 path = "github.com/hugo-fixit/FixIt"
-version = "main"
 
 [[imports]]
 path = "github.com/hugo-fixit/cmpt-santa-hat"

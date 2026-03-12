@@ -1725,6 +1725,7 @@ wrapper = true
 mode = "classic"
 wrapperClass = ""
 maxShownLines = 10
+hadow = "never"
 copyable = true
 downloadable = false
 fullscreen = false
@@ -1761,6 +1762,9 @@ e.g. `is-collapsed is-expanded line-nos-hidden line-wrapping`
 
 maxShownLines
 : `int` The maximum number of lines to show in the code block preview. Default is `10`.
+
+shadow
+: `string` {{< version 0.4.4 >}} Whether to show shadow effect for code blocks. The configuration value for `shadow` can be one of `always`, `hover`, `never`. Default is `never`.
 
 copyable
 : `bool` Whether to enable code copy button. Default is `true`.
