@@ -3,9 +3,12 @@
 # See: https://gohugo.io/configuration/module/
 # -------------------------------------------------------------------------------------
 
+# 本地调试时不要指定 version
+# hugo mod get 仅适用于未设置版本号的模块导入
+# https://github.com/gohugoio/hugo/pull/13966
+
 [[imports]]
 path = "github.com/hugo-fixit/FixIt"
-# 本地调试时不要指定 version
 version = "main"
 
 [[imports]]
