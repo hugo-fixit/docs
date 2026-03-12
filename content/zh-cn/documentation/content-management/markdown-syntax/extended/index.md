@@ -996,11 +996,11 @@ some Markdown content
 
 你可以通过 [Hugo 语法高亮选项][code-fences]、[主题代码块配置][codeblock-config]、[Markdown 属性](#markdown-attributes) 或者以下选项来自定义你的代码块：
 
-| 选项    | 描述                     | 类型     |
-| :------ | :----------------------- | :------- |
-| `title` | 代码块标题               | `string` |
-| `name`  | 代码块文件名或标签项名称 | `string` |
-| `group` | 代码块标签组名称         | `string` |
+| 选项    | 描述                                   | 类型     |
+| :------ | :------------------------------------- | :------- |
+| `title` | 代码块标题                             | `string` |
+| `name`  | 代码块文件名或标签项名称               | `string` |
+| `group` | {{< version 0.4.4 >}} 代码块标签组名称 | `string` |
 
 例如：
 
@@ -1040,26 +1040,26 @@ const msg = ref('Hello World!')
 </style>
 ```
 
-`name` 和 `group` 选项可以一起使用来创建标签页式的代码块。例如：
+`group` 和 `name` 选项可以一起使用来创建标签页式的代码块。例如：
 
 ````markdown
-```js {group="languages", name="Hi JS"}
-console.log('Hello, world!');
-```
-
 ```python {group="languages", name="Hi Python"}
 print('Hello, world!')
+```
+<!-- 使用 .active 来设置默认激活的标签页 -->
+```js {group="languages", name="Hi JS", .active}
+console.log('Hello, world!');
 ```
 ````
 
 呈现的输出如下所示：
 
-```js {group="languages", name="Hi JS"}
-console.log('Hello, world!')
-```
-
 ```python {group="languages", name="Hi Python"}
 print('Hello, world!')
+```
+
+```js {group="languages", name="Hi JS", .active}
+console.log('Hello, world!')
 ```
 
 <!-- link reference definition -->
