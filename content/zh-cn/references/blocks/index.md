@@ -55,7 +55,7 @@ cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 | `custom-post__footer:before`  | 文章页脚前自定义块   | `layouts/posts/single.html`             |
 | `custom-post__footer:after`   | 文章页脚后自定义块   | `layouts/posts/single.html`             |
 
-## 主题配置
+## 主题配置 {#configuration}
 
 {{< version 0.3.12 >}}
 

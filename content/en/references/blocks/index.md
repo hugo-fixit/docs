@@ -55,7 +55,7 @@ You can implement these blocks through `define`.
 | `custom-post__footer:before`  | Custom block before post footer  | `layouts/posts/single.html`             |
 | `custom-post__footer:after`   | Custom block after post footer   | `layouts/posts/single.html`             |
 
-## Theme Configuration
+## Theme Configuration {#configuration}
 
 {{< version 0.3.12 >}}
 

@@ -165,14 +165,17 @@ else {
 
 ### 注入 Partial
 
-{{< version 0.3.9 >}}
+{{< version 0.3.12 >}}
 
-通过 FixIt 主题开放的自定义块，在 `layouts/_partials/custom.html` 文件将 `shortcode-caniuse.html` 注入到 `custom-assets` 中：
+为了通过 FixIt 主题开放的 [自定义块][custom-block] 将 `shortcode-caniuse.html` 注入到 `custom-assets` 中，你需要填写以下必要配置：
 
-```go-html-template
-{{- define "custom-assets" -}}
-  {{- partial "inject/shortcode-caniuse.html" . -}}
-{{- end -}}
+```toml
+[params]
+
+[params.customPartials]
+# ... other partials
+assets = [ "inject/shortcode-caniuse.html" ]
+# ... other partials
 ```
 
 ### 使用 Shortcode
@@ -216,6 +219,7 @@ else {
 [caniuse-embed]: https://caniuse-embed.vercel.app/
 [caniuse-embed-repo]: https://github.com/pengzhanbo/caniuse-embed
 [installation]: {{< relref "/documentation/installation" >}}
+[custom-block]: {{< relref "/references/blocks#configuration" >}}
 [caniuse]: https://caniuse.com/
 [mdn-browser-compat-data]: https://github.com/mdn/browser-compat-data
 [Fyrd/caniuse]: https://github.com/Fyrd/caniuse

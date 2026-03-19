@@ -165,14 +165,17 @@ The installation method is the same as [installing a theme][installation]. There
 
 ### Inject Partial
 
-{{< version 0.3.9 >}}
+{{< version 0.3.12 >}}
 
-Inject the `shortcode-caniuse.html` into the `custom-assets` through the custom block opened by the FixIt theme in the `layouts/_partials/custom.html` file:
+In order to inject the partial `shortcode-caniuse.html` into the `custom-assets` through the [custom block][custom-block] opened by the FixIt theme, you need to fill in the following necessary configurations:
 
-```go-html-template
-{{- define "custom-assets" -}}
-  {{- partial "inject/shortcode-caniuse.html" . -}}
-{{- end -}}
+```toml
+[params]
+
+[params.customPartials]
+# ... other partials
+assets = [ "inject/shortcode-caniuse.html" ]
+# ... other partials
 ```
 
 ### Use Shortcode
@@ -216,6 +219,7 @@ The presentation effect is as follows:
 [caniuse-embed]: https://caniuse-embed.vercel.app/
 [caniuse-embed-repo]: https://github.com/pengzhanbo/caniuse-embed
 [installation]: {{< relref "/documentation/installation" >}}
+[custom-block]: {{< relref "/references/blocks#configuration" >}}
 [caniuse]: https://caniuse.com/
 [mdn-browser-compat-data]: https://github.com/mdn/browser-compat-data
 [Fyrd/caniuse]: https://github.com/Fyrd/caniuse
