@@ -76,21 +76,18 @@ For example: `pageStyle="custom"`
 
 ```scss {name="assets/css/_custom.scss"}
 [data-page-style='custom'] {
-  @media only screen and (min-width: 1441px) {
-    %page-style {
-      width: Round(70%, 2px);
+  %page-style {
+    @include media('xl') {
+      width: ROUND(70%, 2px);
+      max-width: 1600px;
     }
-  }
 
-  @media only screen and (min-width: 1440px) {
-    %page-style {
-      width: Round(60%, 2px);
+    @include media('lg') {
+      width: ROUND(60%, 2px);
     }
-  }
 
-  @media only screen and (min-width: 1200px) {
-    %page-style {
-      width: Round(56%, 2px);
+    @include media('md') {
+      width: ROUND(56%, 2px);
     }
   }
 }
@@ -123,7 +120,7 @@ If you set `goldmark.parser.attribute.block` to `true`, you can also use:
 {.page-break-after}
 
 Something you want to hide in the print view is written here.
-{.print-d-none}
+{.d-none-print}
 ```
 
 ## Script Customization
