@@ -27,7 +27,7 @@
   url: https://arianote.top
 
 - nickname: Ayang
-  # avatar: https://ayang.ink/images/avatar.jpg
+  avatar: https://ayang.ink/images/avatar.jpg
   url: https://ayang.ink
   description: Ayang's blog
 
@@ -81,10 +81,10 @@
   url: https://blog.toastbubble.top
   description: 🍞这有多的吐司速来品鉴
 
-- nickname: Vespeng
-  avatar: https://vespeng.com/avatar.jpg
-  url: https://vespeng.com
-  description: 生命不息，折腾不止！
+# - nickname: Vespeng
+#   avatar: https://vespeng.com/avatar.jpg
+#   url: https://vespeng.com
+#   description: 生命不息，折腾不止！
 
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
@@ -101,10 +101,10 @@
   url: https://acuherb.xyz
   description: 针通经络，草养气血。
 
-- nickname: 字节飞鸿
-  avatar: https://benelin.site/images/avatar.png
-  url: https://benelin.site
-  description: 知易行难恒愈难
+# - nickname: 字节飞鸿
+#   avatar: https://benelin.site/images/avatar.png
+#   url: https://benelin.site
+#   description: 知易行难恒愈难
 
 - nickname: 指月小筑
   avatar: https://img.lixueduan.com/about/avatar.png
@@ -131,10 +131,10 @@
   url: https://songfei.org
   description: 软件开发工程师、业余无线电爱好者。
 
-- nickname: 自游人
-  avatar: https://17you.com/icons/web-app-manifest-512x512.png
-  url: https://17you.com/
-  description: 旅行和写作
+# - nickname: 自游人
+#   avatar: https://17you.com/icons/web-app-manifest-512x512.png
+#   url: https://17you.com/
+#   description: 旅行和写作
 
 - nickname: Yao Chaohao
   avatar: https://crisyao.github.io/me.jpg
@@ -162,7 +162,7 @@
   description: Deequoique's 赛博小屋
 
 - nickname: Dylan's Blog
-  avatar:
+  avatar: https://github.com/du33169.png
   url: https://du33169.tech/
   description:
 
@@ -180,3 +180,18 @@
   avatar: https://t1ng-t1ng.github.io/images/avater.jpg
   url: https://t1ng-t1ng.github.io/
   description:
+
+- nickname: 石墨烯积木
+  avatar: https://img.san3.cn/logo.webp
+  url: https://www.san3.cn/
+  description:
+
+- nickname: 采石场
+  avatar: https://ych817.github.io/clebsch.svg
+  url: https://ych817.github.io/
+  description:
+
+- nickname: scottstuff.net
+  avatar: https://scottstuff.net/images/picture.jpg
+  url: https://scottstuff.net/
+  description: Scott Laird's writing on technology and nerdery.
