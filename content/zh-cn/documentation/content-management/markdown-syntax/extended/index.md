@@ -992,15 +992,20 @@ some Markdown content
 [**File Tree**][file-tree]
 : `file-tree` 渲染文件和目录结构为交互式树。
 
+**Toggle**
+: `toggle` 以 TOML、YAML 和 JSON 格式渲染语法高亮的配置数据。
+
 ### 选项 {#options}
 
 你可以通过 [Hugo 语法高亮选项][code-fences]、[主题代码块配置][codeblock-config]、[Markdown 属性](#markdown-attributes) 或者以下选项来自定义你的代码块：
 
-| 选项    | 描述                                   | 类型     |
-| :------ | :------------------------------------- | :------- |
-| `title` | 代码块标题                             | `string` |
-| `name`  | 代码块文件名或标签项名称               | `string` |
-| `group` | {{< version 0.4.4 >}} 代码块标签组名称 | `string` |
+| 选项          | 描述                                         | 类型     |
+| :------------ | :------------------------------------------- | :------- |
+| `title`       | 代码块标题                                   | `string` |
+| `name`        | 代码块名称或标签项名称                       | `string` |
+| `group`       | {{< version 0.4.4 >}} 代码块标签组名称       | `string` |
+| `before_tabs` | {{< version 0.4.5 >}} 在标签项之前显示的内容 | `string` |
+| `filename`    | {{< version 0.4.5 >}} 代码块文件名           | `string` |
 
 例如：
 

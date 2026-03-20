@@ -62,7 +62,7 @@ cp themes/FixIt/hugo.toml hugo.toml
 
 例如，从 FixIt 主题中合并必要的配置 `markup`、 `outputs` 和 `taxonomies`：
 
-```toml
+```toggle
 [markup]
 _merge = "shallow"
 
@@ -157,7 +157,7 @@ menu:
 
 本节仅记录**FixIt**主题的一些 [必要配置][necessary-configuration-for-theme]。有关更多详细信息，请参阅 [Configure markup][configuration-markup] 页面。
 
-```toml
+```toggle
 [markup]
 
 [markup.highlight]
@@ -171,7 +171,7 @@ noClasses = false
 
 FixIt 主题内置了三个维度的 [分类法][configure-taxonomies]：分类、标签和合集。主题默认 `taxonomies` 配置如下：
 
-```toml
+```toggle
 [taxonomies]
 category = "categories"
 tag = "tags"
@@ -423,7 +423,7 @@ auto
 
 `map` 作者配置。
 
-```toml
+```toggle
 [params]
 
 [params.author]
@@ -451,7 +451,7 @@ avatar
 
 `map` 公共 Git 仓库信息，仅在 `enableGitInfo` 设为 `true` 时有效。
 
-```toml
+```toggle
 [params]
 
 [params.gitInfo]
@@ -477,7 +477,7 @@ issueTpl
 
 `map` 应用图标配置。
 
-```toml
+```toggle
 [params]
 
 [params.app]
@@ -518,7 +518,7 @@ themeColor
 
 `map` 搜索配置。
 
-```toml
+```toggle
 [params]
 
 [params.search]
@@ -599,7 +599,7 @@ fuse
 
 为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
 
-```toml
+```toggle
 [outputs]
 home = [
   "html",
@@ -618,7 +618,7 @@ home = [
 
 `map` 自定义搜索引擎（CSE）配置，详见 [CSE 支持][cse-support]。
 
-```toml
+```toggle
 [params]
 
 [params.cse]
@@ -649,7 +649,7 @@ bing
 
 `map` 页面头部导航栏配置。
 
-```toml
+```toggle
 [params]
 
 [params.header]
@@ -698,7 +698,7 @@ subtitle
 
 `map` 面包屑导航配置。
 
-```toml
+```toggle
 [params]
 
 [params.breadcrumb]
@@ -732,7 +732,7 @@ capitalize
 
 `map` 文章导航配置。
 
-```toml
+```toggle
 [params]
 
 [params.navigation]
@@ -750,7 +750,7 @@ reverse
 
 `map` 页面底部信息配置。
 
-```toml
+```toggle
 [params]
 
 [params.footer]
@@ -838,7 +838,7 @@ order
 
 `map` 归档页面配置。
 
-```toml
+```toggle
 [params]
 
 [params.archives]
@@ -856,7 +856,7 @@ dateFormat
 
 `map` Section（所有文章）页面配置。
 
-```toml
+```toggle
 [params]
 
 [params.section]
@@ -882,7 +882,7 @@ feed
 
 `map` List（目录或标签）页面配置。
 
-```toml
+```toggle
 [params]
 
 [params.list]
@@ -910,7 +910,7 @@ feed
 
 `map` 最近更新文章设置。
 
-```toml
+```toggle
 [params]
 
 [params.recentlyUpdated]
@@ -942,7 +942,7 @@ maxCount
 
 `map` 标签云配置。
 
-```toml
+```toggle
 [params]
 
 [params.tagcloud]
@@ -972,7 +972,7 @@ orderby
 
 `map` 主页配置。
 
-```toml
+```toggle
 [params]
 
 [params.home]
@@ -1022,7 +1022,7 @@ posts
 
 你可以直接配置你的社交 ID 来生成一个默认社交链接和图标：
 
-```toml
+```toggle
 [params.social]
 Mastodon = "@xxxx"
 ```
@@ -1052,7 +1052,7 @@ title = "Mastodon"
 
 `map` 打字机动画配置。
 
-```toml
+```toggle
 [params]
 
 [params.typeit]
@@ -1115,7 +1115,7 @@ loop
 
 `version` `version` shortcode 配置。
 
-```toml
+```toggle
 [params]
 
 [params.repoVersion]
@@ -1135,7 +1135,7 @@ name
 
 `map` Mermaid 配置，详见 [图表支持 - Mermaid][diagrams-support-mermaid]。
 
-```toml
+```toggle
 [params]
 
 [params.mermaid]
@@ -1186,7 +1186,7 @@ layout
 
 `map` PanguJS 配置。
 
-```toml
+```toggle
 [params]
 
 [params.pangu]
@@ -1207,7 +1207,7 @@ selector
 
 `map` 水印配置，详见 [Watermark][watermark] 文档。
 
-```toml
+```toggle
 [params]
 
 [params.watermark]
@@ -1229,7 +1229,7 @@ fontFamily = "inherit"
 
 `map` 不蒜子计数器配置。
 
-```toml
+```toggle
 [params]
 
 [params.busuanzi]
@@ -1256,7 +1256,7 @@ pageViews
 
 `map` 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou。
 
-```toml
+```toggle
 [params]
 
 [params.verification]
@@ -1273,7 +1273,7 @@ sogou = ""
 
 `map` SEO 配置。
 
-```toml
+```toggle
 [params]
 
 [params.seo]
@@ -1291,7 +1291,7 @@ thumbnailUrl
 
 `map` 网站分析配置。
 
-```toml
+```toggle
 [params]
 
 [params.analytics]
@@ -1384,7 +1384,7 @@ splitbee
 
 `map` Cookie 许可配置。
 
-```toml
+```toggle
 [params]
 
 [params.cookieconsent]
@@ -1410,7 +1410,7 @@ content
 
 `map` CDN 配置。
 
-```toml
+```toggle
 [params.cdn]
 data = ""
 ```
@@ -1422,7 +1422,7 @@ data
 
 `map` 兼容性设置。
 
-```toml
+```toggle
 [params]
 
 [params.compatibility]
@@ -1442,7 +1442,7 @@ objectFit
 
 `map` 在左上角或者右上角显示 GitHub 开源链接。
 
-```toml
+```toggle
 [params]
 
 [params.githubCorner]
@@ -1470,7 +1470,7 @@ position
 
 `map` Gravatar 配置。
 
-```toml
+```toggle
 [params]
 
 [params.gravatar]
@@ -1494,7 +1494,7 @@ style
 
 `map` 返回顶部按钮配置。
 
-```toml
+```toggle
 [params]
 
 [params.backToTop]
@@ -1514,7 +1514,7 @@ scrollpercent
 
 `map` 阅读进度条配置。
 
-```toml
+```toggle
 [params]
 
 [params.readingProgress]
@@ -1554,7 +1554,7 @@ height
 
 `map` 页面加载期间顶部的进度条，详见 [Pace.js][pacejs]。
 
-```toml
+```toggle
 [params]
 
 [params.pace]
@@ -1659,7 +1659,7 @@ enable = false
 
 `map` 全局 Feed 配置用于 RSS, Atom 和 JSON feed，默认配置如下：
 
-```toml
+```toggle
 [params]
 
 [params.feed]
@@ -1689,7 +1689,7 @@ follow
 
 `map` 图片配置，结合 Hugo 的图像处理选项 `imaging` 进行图片优化。
 
-```toml
+```toggle
 [params]
 
 [params.image]
@@ -1713,7 +1713,7 @@ blackList
 
 `map` 代码块包装器配置。
 
-```toml
+```toggle
 [params]
 
 [params.codeblock]
@@ -1786,7 +1786,7 @@ editable
 
 `map` JSON 查看器配置。详见 [JSON 查看器支持][json-viewer]。
 
-```toml
+```toggle
 [params]
 
 [params.jsonViewer]
@@ -1826,7 +1826,7 @@ boxed
 
 选择命名为 `public_repo` 的范围以生成个人访问令牌，配置环境变量 `HUGO_PARAMS_GHTOKEN=xxx`，详见 <https://gohugo.io/functions/os/getenv/#examples>。
 
-```toml
+```toggle
 [params]
 
 [params.dev]

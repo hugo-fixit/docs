@@ -62,7 +62,7 @@ You can simplify your configuration files by [merging configuration][merge-confi
 
 For example, merging necessary configuration `markup`, `outputs`, and `taxonomies` from the FixIt theme:
 
-```toml
+```toggle
 [markup]
 _merge = "shallow"
 
@@ -157,7 +157,7 @@ Configure rendering of markup to HTML via the root configuration keys `markup`.
 
 This section only records some [necessary configuration][necessary-configuration-for-theme] for the **FixIt** theme. For more details, see the [Configure markup][configuration-markup] page.
 
-```toml
+```toggle
 [markup]
 
 [markup.highlight]
@@ -171,7 +171,7 @@ noClasses = false
 
 The FixIt theme has three built-in [taxonomies][configure-taxonomies]: categories, tags, and collections. The default `taxonomies` configuration of the theme is as follows:
 
-```toml
+```toggle
 [taxonomies]
 category = "categories"
 tag = "tags"
@@ -423,7 +423,7 @@ When enabled, elements with a `title` attribute will display a tooltip on hover,
 
 `map` The author Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.author]
@@ -451,7 +451,7 @@ avatar
 
 `map` The Git repository information (only then `enableGitInfo` is `true`).
 
-```toml
+```toggle
 [params]
 
 [params.gitInfo]
@@ -477,7 +477,7 @@ issueTpl
 
 `map` The App icon Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.app]
@@ -518,7 +518,7 @@ themeColor
 
 `map` The Search Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.search]
@@ -599,7 +599,7 @@ Based on [algolia][algolia], [Fuse.js][fusejs], [Custom Search Engine](#cse) or 
 
 In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
 
-```toml
+```toggle
 [outputs]
 home = [
   "html",
@@ -618,7 +618,7 @@ home = [
 
 `map` The Custom Search Engine (CSE) Configuration. See [CSE Support][cse-support].
 
-```toml
+```toggle
 [params]
 
 [params.cse]
@@ -649,7 +649,7 @@ bing
 
 `map` The Header Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.header]
@@ -698,7 +698,7 @@ subtitle
 
 `map` The Breadcrumb Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.breadcrumb]
@@ -732,7 +732,7 @@ capitalize
 
 `map` The Post navigation Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.navigation]
@@ -750,7 +750,7 @@ reverse
 
 `map` The Footer Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.footer]
@@ -839,7 +839,7 @@ The order value can be one of `first`, `0`, `1`, `2`, `3`, `4`, `5`, `last`.
 
 `map` The Archives page Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.archives]
@@ -857,7 +857,7 @@ dateFormat
 
 `map` The Section page Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.section]
@@ -883,7 +883,7 @@ feed
 
 `map` The List (category or tag) page Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.list]
@@ -911,7 +911,7 @@ feed
 
 `map` The Recently Updated posts Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.recentlyUpdated]
@@ -943,7 +943,7 @@ maxCount
 
 `map` The TagCloud Configuration for tags page.
 
-```toml
+```toggle
 [params]
 
 [params.tagcloud]
@@ -973,7 +973,7 @@ orderby
 
 `map` The Home page Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.home]
@@ -1024,7 +1024,7 @@ which is you can refer to.
 
 You can directly set your ID to get a default social link and its icon:
 
-```toml
+```toggle
 [params.social]
 Mastodon = "@xxxx"
 ```
@@ -1051,7 +1051,7 @@ title = "Mastodon"
 
 `map` TypeIt Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.typeit]
@@ -1114,7 +1114,7 @@ The syntax is `<type> = <icon>`, where `<type>` is the type of the task list and
 
 `map` The `version` shortcode Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.repoVersion]
@@ -1134,7 +1134,7 @@ name
 
 `map` Mermaid Configuration, see [Diagrams Support - Mermaid][diagrams-support-mermaid].
 
-```toml
+```toggle
 [params]
 
 [params.mermaid]
@@ -1185,7 +1185,7 @@ layout
 
 `map` PanguJS Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.pangu]
@@ -1206,7 +1206,7 @@ selector
 
 `map` Watermark Configuration. See [Watermark][watermark] for more information.
 
-```toml
+```toggle
 [params]
 
 [params.watermark]
@@ -1228,7 +1228,7 @@ fontFamily = "inherit"
 
 `map` Busuanzi count Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.busuanzi]
@@ -1255,7 +1255,7 @@ pageViews
 
 `map` Site verification code Configuration for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou.
 
-```toml
+```toggle
 [params]
 
 [params.verification]
@@ -1272,7 +1272,7 @@ sogou = ""
 
 `map` Site SEO Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.seo]
@@ -1290,7 +1290,7 @@ thumbnailUrl
 
 `map` Analytics Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.analytics]
@@ -1383,7 +1383,7 @@ splitbee
 
 `map` Cookie consent Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.cookieconsent]
@@ -1409,7 +1409,7 @@ content
 
 `map` CDN Configuration for third-party library files.
 
-```toml
+```toggle
 [params]
 
 [params.cdn]
@@ -1423,7 +1423,7 @@ data
 
 `map` Compatibility Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.compatibility]
@@ -1443,7 +1443,7 @@ objectFit
 
 `map` GitHub banner in the top-right or top-left corner.
 
-```toml
+```toggle
 [params]
 
 [params.githubCorner]
@@ -1471,7 +1471,7 @@ position
 
 `map` Gravatar Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.gravatar]
@@ -1496,7 +1496,7 @@ style
 
 `map` Back to top Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.backToTop]
@@ -1516,7 +1516,7 @@ scrollpercent
 
 `map` Reading progress bar Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.readingProgress]
@@ -1556,7 +1556,7 @@ height
 
 `map` Progress bar in the top during page loading, based on [Pace.js][pacejs].
 
-```toml
+```toggle
 [params]
 
 [params.pace]
@@ -1663,7 +1663,7 @@ enable = false
 
 `map` Global Feed config for RSS, Atom and JSON feed. Default is as follows:
 
-```toml
+```toggle
 [params]
 
 [params.feed]
@@ -1693,7 +1693,7 @@ follow
 
 `map` Image configuration, combined with Hugo's image processing options `imaging` for image optimisation.
 
-```toml
+```toggle
 [params]
 
 [params.image]
@@ -1717,7 +1717,7 @@ blackList
 
 `map` Code block wrapper Configuration.
 
-```toml
+```toggle
 [params]
 
 [params.codeblock]
@@ -1790,7 +1790,7 @@ editable
 
 `map` JSON Viewer Configuration, see [JSON Viewer Support][json-viewer].
 
-```toml
+```toggle
 [params]
 
 [params.jsonViewer]
@@ -1826,7 +1826,7 @@ boxed
 
 Select the scope named `public_repo` to generate personal access token, Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see <https://gohugo.io/functions/os/getenv/#examples>.
 
-```toml
+```toggle
 [params]
 
 [params.dev]

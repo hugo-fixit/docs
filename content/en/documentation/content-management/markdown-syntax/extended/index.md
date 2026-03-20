@@ -992,15 +992,20 @@ These features are automatically enabled in FixIt theme and require no additiona
 [**File Tree**][file-tree]
 : `file-tree` Render file and directory structures as interactive trees.
 
+**Toggle**
+: `toggle` Renders syntax-highlighted configuration data in TOML, YAML, and JSON formats.
+
 ### Options
 
 You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], [Markdown attributes](#markdown-attributes) or the following options:
 
-| Option  | Description                                      | Type     |
-| :------ | :----------------------------------------------- | :------- |
-| `title` | Code block title                                 | `string` |
-| `name`  | Code block filename or tab item name             | `string` |
-| `group` | {{< version 0.4.4 >}} Code block tabs group name | `string` |
+| Option        | Description                                              | Type     |
+| :------------ | :------------------------------------------------------- | :------- |
+| `title`       | Code block title                                         | `string` |
+| `name`        | Code block name or tab item name                         | `string` |
+| `group`       | {{< version 0.4.4 >}} Code block tabs group name         | `string` |
+| `before_tabs` | {{< version 0.4.5 >}} Content displayed before tab items | `string` |
+| `filename`    | {{< version 0.4.5 >}} Code block filename                | `string` |
 
 For example:
 
