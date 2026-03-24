@@ -341,7 +341,7 @@ Alert 扩展语法支持 **13** 种类型的警示横幅，除非你 [自定义 
 {{< admonition info "如何开启 Hugo 扩展语法" >}}
 [下划线](#inserted-text)、[标记文本](#marked-text)、[下标](#subscript) 和 [上标](#superscript) 语法默认关闭，需更新 Hugo 版本到 `0.128.0` 以上且开启以下的配置：
 
-```toml {title="hugo.toml"}
+```toml {name="hugo.toml"}
 [markup]
 
 [markup.goldmark]
@@ -477,7 +477,7 @@ FixIt 主题的作者是 ++Lruihao++。
 
 你可以在 [主题配置][theme-config] 中修改数学公式自动渲染的相关配置：
 
-```toml {title="hugo.toml"}
+```toml {name="hugo.toml"}
 [markup]
 
 [markup.goldmark]

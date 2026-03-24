@@ -341,7 +341,7 @@ The rendered output looks like this:
 
 [Inserted Text](#inserted-text), [Marked Text](#marked-text), [Subscript](#subscript), and [Superscript](#superscript) syntax are disabled by default. You need to update Hugo to version `0.128.0` or later and enable the following configuration:
 
-```toml {title="hugo.toml"}
+```toml {name="hugo.toml"}
 [markup]
 
 [markup.goldmark]
@@ -477,7 +477,7 @@ This part is shown in the [emoji support page][emoji-support].
 
 You can modify the automatic rendering configuration for mathematical formulas in the [theme configuration][theme-config]:
 
-```toml {title="hugo.toml"}
+```toml {name="hugo.toml"}
 [markup]
 
 [markup.goldmark]

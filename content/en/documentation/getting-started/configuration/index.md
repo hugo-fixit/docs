@@ -293,7 +293,7 @@ In addition to Hugo global configuration, **FixIt** provides some theme configur
 
 A simple example:
 
-```toml {title="hugo.toml"}
+```toml {name="hugo.toml"}
 baseURL = 'https://example.org/'
 languageCode = 'en'
 title = 'ABC Widgets, Inc.'

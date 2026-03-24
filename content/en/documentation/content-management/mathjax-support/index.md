@@ -24,7 +24,7 @@ $\text{MathJax}$ performs **client-side rendering** via JavaScript after page lo
 
 To enable $\text{MathJax}$ support in the FixIt theme, you need to configure it in the theme's configuration file `hugo.toml`.
 
-```toml {title="hugo.toml"}
+```toml {name="hugo.toml"}
 [markup]
 
 [markup.goldmark]

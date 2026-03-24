@@ -3,9 +3,8 @@ module github.com/hugo-fixit/docs
 go 1.20
 
 require (
-	github.com/hugo-fixit/FixIt v0.4.5-0.20260320092628-b09555981b86 // indirect
+	github.com/hugo-fixit/FixIt v0.4.5-0.20260324033628-9132b408c640 // indirect
 	github.com/hugo-fixit/cmpt-santa-hat v1.0.3 // indirect
-	github.com/hugo-fixit/cmpt-translate v1.12.0 // indirect
 	github.com/hugo-fixit/component-projects v1.10.0 // indirect
 	github.com/hugo-fixit/shortcode-asciinema v1.1.0 // indirect
 	github.com/hugo-fixit/shortcode-caniuse v1.5.0 // indirect
