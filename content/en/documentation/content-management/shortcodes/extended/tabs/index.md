@@ -123,11 +123,11 @@ The rendered output looks like this:
 {{< tabs type="segment" >}}
 {{% tab title="tabs shortcode" %}}
 
-| Parameter   | Description                                                                        | Type      | Options                             | Default     |
-| :---------- | :--------------------------------------------------------------------------------- | :-------- | :---------------------------------- | :---------- |
-| `defaultTab` | Default active tab index                                                          | integer   | `0` ~ `count - 1`                   | `0`         |
-| `type`       | Tab style type                                                                    | string    | `underline`, `pill`, `card`, `segment` | `underline` |
-| `placement`  | Tab placement position relative to content, not effective for `segment` type tabs | string    | `top`, `bottom`, `left`, `right`      | `top`       |
+| Parameter    | Description                                                                       | Type    | Options                                | Default     |
+| :----------- | :-------------------------------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
+| `defaultTab` | Default active tab index                                                          | integer | `0` ~ `count - 1`                      | `0`         |
+| `type`       | Tab style type                                                                    | string  | `underline`, `pill`, `card`, `segment` | `underline` |
+| `placement`  | Tab placement position relative to content, not effective for `segment` type tabs | string  | `top`, `bottom`, `left`, `right`       | `top`       |
 
 {{% /tab %}}
 {{% tab title="tab shortcode" %}}

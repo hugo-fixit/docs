@@ -123,10 +123,10 @@ collections:
 {{< tabs type="segment" >}}
 {{% tab title="tabs shortcode" %}}
 
-| 参数         | 说明                                                       | 类型    | 可选值                                 | 默认值      |
-| :----------- | :--------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
-| `defaultTab` | 默认激活标签页的索引                                       | integer | `0` ~ `count - 1`                      | `0`         |
-| `type`       | 标签页的样式类型                                           | string  | `underline`、`pill`、`card`、`segment` | `underline` |
+| 参数         | 说明                                                      | 类型    | 可选值                                 | 默认值      |
+| :----------- | :-------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
+| `defaultTab` | 默认激活标签页的索引                                      | integer | `0` ~ `count - 1`                      | `0`         |
+| `type`       | 标签页的样式类型                                          | string  | `underline`、`pill`、`card`、`segment` | `underline` |
 | `placement`  | 标签页相对于内容的位置，对于 `segment` 类型的选项卡不生效 | string  | `top`、`bottom`、`left`、`right`       | `top`       |
 
 {{% /tab %}}
