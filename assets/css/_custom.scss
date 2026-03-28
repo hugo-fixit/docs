@@ -48,16 +48,11 @@
     }
 
     &:hover {
-      background-color: #33a06f;
+      background-color: light-dark(#33a06f, #42d392);
       transition-duration: 0.2s;
 
       i {
         transform: translate(2px);
-      }
-
-      [data-theme='dark'] & {
-        background-color: #42d392;
-        color: #f0f0f0;
       }
     }
   }
@@ -92,43 +87,28 @@
       .author-avatar {
         width: 34px;
         border-radius: 50%;
-        border: 1px solid $global-border-color;
-  
-        [data-theme='dark'] & {
-          border-color: $global-border-color-dark;
-        }
+        border: 1px solid fixit-var(global-border-color);
       }
     }
     .follow-btn {
-      border: 1px solid var(--follow-btn-border-color, #d1d9e0);
-      background-color: var(--follow-btn-bg-color, #f6f8fa);
+      border: 1px solid var(--follow-btn-border-color, light-dark(#d1d9e0, #3d444d));
+      background-color: var(--follow-btn-bg-color, light-dark(#f6f8fa, #2a313c));
+      color: var(--follow-btn-color, light-dark(#25292e, #d1d7e0));
       border-radius: 6px;
       padding: 4px 10px;
       flex-shrink: 0;
       font-size: 14px;
       line-height: 20px;
-      color: var(--follow-btn-color, #25292e);
-
-      [data-theme='dark'] & {
-        --follow-btn-color: #d1d7e0;
-        --follow-btn-border-color: #3d444d;
-        --follow-btn-bg-color: #2a313c;
-      }
 
       &:active,
       &:hover {
-        --follow-btn-border-color: #d1d9e0;
-        --follow-btn-bg-color: #eff2f5;
+        --follow-btn-border-color: light-dark(#d1d9e0, #3d444d);
+        --follow-btn-bg-color: light-dark(#eff2f5, #2f3742);
         --fa-animation-iteration-count: 0;
         transition-duration: .1s;
 
         i {
           --fa: "\2b";
-        }
-
-        [data-theme='dark'] & {
-          --follow-btn-border-color: #3d444d;
-          --follow-btn-bg-color: #2f3742;
         }
       }
     }
@@ -151,10 +131,3 @@
 //     // write here
 //   }
 // }
-
-// ==============================
-// Mobile style
-// ==============================
-@media only screen and (max-width: 680px) {
-  //
-}
