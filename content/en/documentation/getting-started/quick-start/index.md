@@ -41,7 +41,7 @@ If this is your first time using [Hugo](https://gohugo.io/), we strongly suggest
 
 Before you begin this tutorial you must:
 
-1. [Install Hugo][hugo-installing] (extended edition, v{{< param docs.minHugoVersion >}} or later)
+1. [Install Hugo][hugo-installing] (extended edition, v{{< param docs.min_hugo_version >}} or later)
 2. [Install Git][git-install]
 
 You must also be comfortable working from the command line.
@@ -54,7 +54,7 @@ You must also be comfortable working from the command line.
 
 ### Commands
 
-Verify that you have installed Hugo v{{< param docs.minHugoVersion >}} or later.
+Verify that you have installed Hugo v{{< param docs.min_hugo_version >}} or later.
 
 ```bash
 hugo version

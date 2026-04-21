@@ -197,6 +197,27 @@ collections:
 ---
 ```
 
+### 分类法图标 {#taxonomy-icons}
+
+{{< version 1.0.0 >}}
+
+`map` 分类法图标配置，用于覆盖 title/card/term 三个位置的图标。
+
+```toml
+[params]
+
+[params.taxonomy_icons]
+# syntax: <taxonomy> = [<title icon>, <card icon>, <term title icon>]
+# example:
+# category = [
+#   "fa-solid fa-folder-tree",
+#   "fa-regular fa-folder",
+#   "fa-regular fa-folder-open"
+# ]
+```
+
+需要配合 `[taxonomies]` 使用。请先配置 `[taxonomies]`，否则该配置不会生效。
+
 ## 自定义输出格式
 
 Hugo 可以输出多种格式的内容，**FixIt** 主题利用了这个功能。为了完全配置主题，请将以下选项配置到 `hugo.toml` 中。
@@ -223,6 +244,15 @@ permalinkable = true
 # {{< version 0.3.0 >}} 用于输出 /offline/index.html 文件的设置
 [outputFormats.offline]
 path = "offline"
+baseName = "index"
+mediaType = "text/html"
+isPlainText = false
+isHTML = true
+permalinkable = true
+
+# {{< version 1.0.0 >}} 用于输出 /link/index.html 文件的设置
+[outputFormats.link]
+path = "link"
 baseName = "index"
 mediaType = "text/html"
 isPlainText = false
@@ -257,7 +287,7 @@ permalinkable = true
 
 ```toml
 # 用于 Hugo 输出文档的设置，可选值如下：
-# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# home = ["html", "rss", "archives", "offline", "link", "search", "readme", "baidu_urls"]
 # page = ["html", "markdown"]
 # section = ["html", "rss"]
 # taxonomy = ["html"]
@@ -268,6 +298,7 @@ home = [
   "rss",
   "archives",
   "offline",
+  "link",
   "search"
 ]
 page = [
@@ -358,12 +389,6 @@ auto
 {{< version 0.3.13 >}}
 
 `bool` 是否大写标题，默认：`true`。
-
-### externalIcon
-
-{{< version 0.2.14 >}}
-
-`bool` 是否自动显示外链图标，默认：`false`。
 
 ### withSiteTitle
 
@@ -489,8 +514,8 @@ iconColor = "#5bbad5"
 tileColor = "#da532c"
 
 [params.app.themeColor]
-light = "#f8f8f8"
-dark = "#252627"
+light = "#f6f8fa"
+dark = "#151b23"
 ```
 
 title
@@ -511,8 +536,8 @@ tileColor
 themeColor
 : `map` Android 浏览器主题色。
 
-- light: `string` 浅色主题颜色，默认：`#f8f8f8`。
-- dark: `string` 深色主题颜色，默认：`#252627`。
+- light: `string` 浅色主题颜色，默认：`#f6f8fa`。
+- dark: `string` 深色主题颜色，默认：`#151b23`。
 
 ### search
 
@@ -655,6 +680,7 @@ bing
 [params.header]
 desktopMode = "sticky"
 mobileMode = "auto"
+blur = false
 
 [params.header.title]
 logo = ""
@@ -675,6 +701,10 @@ desktopMode
 mobileMode
 : {{< version 0.2.13 changed >}}\
 `string` 移动端导航栏模式，可选值：`sticky`、`normal`、`auto`, 默认：`auto`。
+
+blur
+: {{< version 1.0.0 >}}\
+`bool` 是否启用导航栏模糊效果，默认：`false`。
 
 title
 : `map` 页面头部导航栏标题配置。
@@ -1018,7 +1048,7 @@ posts
 
 `map` 作者的社交信息设置。
 
-你可以参考位于 `themes/FixIt/assets/data/social.yaml` 的默认数据来配置你的社交链接。
+你可以参考位于 `themes/FixIt/assets/data/social.yml` 的默认数据来配置你的社交链接。
 
 你可以直接配置你的社交 ID 来生成一个默认社交链接和图标：
 
@@ -1045,7 +1075,7 @@ prefix = "https://mastodon.gal/"
 title = "Mastodon"
 ```
 
-所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yaml`。
+所有支持的社交链接的默认数据位于 `themes/FixIt/assets/data/social.yml`。
 你可以参考它来配置你的社交链接。
 
 ### typeit
@@ -1707,6 +1737,34 @@ optimise
 blackList
 : `string array` {{< version 0.4.0 >}} 排除优化的图片文件名（或模式）列表。例如：`["example.jpg", "test-*.png"]`。
 
+### link
+
+{{< version 1.0.0 >}}
+
+`map` 链接渲染配置（外链图标和外链跳转保护）。
+
+```toggle
+[params]
+
+[params.link]
+external_icon = true
+
+[params.link.guard]
+enable = false
+mode = "modal"
+allow_domains = []
+```
+
+external_icon
+: `bool` 是否自动显示外链图标，默认：`true`。
+
+guard
+: `map` 外链跳转保护配置。
+
+- enable: `bool` 是否启用外链跳转保护，默认：`false`。
+- mode: `string` 保护模式，可选值：`modal`、`redirect`，默认：`modal`。
+- allow_domains: `string array` 白名单域名列表，命中后跳过确认。
+
 ### codeblock
 
 {{< version 0.4.0 >}}
@@ -1811,6 +1869,14 @@ sort
 
 boxed
 : `bool` 是否在带边框的容器中显示 JSON，默认：`true`。
+
+### filetree
+
+{{< version 0.4.2 >}} 文件树配置，用于 `file-tree` shortcode。详见 [扩展 Shortcode - File Tree][filetree]。
+
+### taxonomy_icons
+
+{{< version 1.0.0 >}} 分类图标配置。详见 [分类图标支持](#taxonomy-icons)。
 
 ### customPartials
 
@@ -2319,6 +2385,7 @@ logoUrl = ""
 [postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [follow]: https://follow.is/
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
+[filetree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree" >}}
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/configuration/markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

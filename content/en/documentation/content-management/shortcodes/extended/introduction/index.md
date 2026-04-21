@@ -93,6 +93,22 @@ The rendered output looks like this:
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
+## auto-dark
+
+{{< version 1.0.0 >}}
+
+`auto-dark` shortcode wraps content and adapts it for dark mode by inverting color/hue automatically.
+
+Example `auto-dark` input:
+
+```markdown
+{{</* auto-dark */>}}
+<img src="/images/logo.svg" alt="logo" />
+{{</* /auto-dark */>}}
+```
+
+You can paste the above snippet into your content to test the effect in your own site.
+
 ## link
 
 `link` shortcode is an alternative to [Markdown link syntax][md-link]. `link` shortcode can provide some other features and can be used in code blocks.

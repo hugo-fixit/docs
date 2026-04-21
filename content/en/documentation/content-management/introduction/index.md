@@ -167,6 +167,16 @@ hugo new --kind post-bundle posts/bar/
 - **hiddenFromSearch**: if `true`, the content will not be shown in the search results.
 - **hiddenFromRelated**: {{< version 0.3.0 >}} if `true`, the content will not be shown in the related posts.
 - **hiddenFromFeed**: {{< version 0.3.10 >}} if `true`, the content will not be shown in the RSS, Atom and JSON feed.
+- **link_guard**: {{< version 1.0.0 >}} override `params.link.guard` for current page. Supports `bool` or `map`.
+
+    ```yaml {data-open=false}
+    link_guard:
+      enable: true
+      mode: modal # modal | redirect
+      allow_domains:
+        - github.com
+    ```
+
 - **twemoji**: if `true`, the content will enable the twemoji.
 - **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [theme configuration][theme-config].
 - **ruby**: if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].
@@ -205,9 +215,10 @@ hugo new --kind post-bundle posts/bar/
 - **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [theme configuration][theme-config].
 - **feed**: {{< version 0.3.10 >}} the same as the `params.feed` part in the [theme configuration][theme-config].
 
-<!-- front matter for section only -->
+<!-- front matter for _index.md only -->
 
-- **titleIcon**: {{< version 0.3.5 >}} the icon for the page title, only valid in `_index.md`.
+- **titleIcon**: {{< version 1.0.0 changed >}} the icon for the page title, only valid in `_index.md`.
+- **cardIcon**: {{< version 1.0.0 >}} the icon for the taxonomy card in taxonomies pages, only valid in taxonomy `_index.md`.
 
 ---
 

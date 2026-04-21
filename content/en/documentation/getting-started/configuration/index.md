@@ -197,6 +197,27 @@ collections:
 ---
 ```
 
+### Taxonomy icons
+
+{{< version 1.0.0 >}}
+
+`map` Taxonomy icon overrides for title/card/term slots.
+
+```toml
+[params]
+
+[params.taxonomy_icons]
+# syntax: <taxonomy> = [<title icon>, <card icon>, <term title icon>]
+# example:
+# category = [
+#   "fa-solid fa-folder-tree",
+#   "fa-regular fa-folder",
+#   "fa-regular fa-folder-open"
+# ]
+```
+
+Works with `[taxonomies]`. Configure `[taxonomies]` first, otherwise taxonomy icons will not take effect.
+
 ## Custom output formats
 
 Hugo can output content in multiple formats. The **FixIt** theme takes advantage of this feature. In order to fully configure the theme, configure the following options into `hugo.toml`.
@@ -223,6 +244,15 @@ permalinkable = true
 # {{< version 0.3.0 >}} Options to make output /offline/index.html file
 [outputFormats.offline]
 path = "offline"
+baseName = "index"
+mediaType = "text/html"
+isPlainText = false
+isHTML = true
+permalinkable = true
+
+# {{< version 1.0.0 >}} Options to make output /link/index.html file
+[outputFormats.link]
+path = "link"
 baseName = "index"
 mediaType = "text/html"
 isPlainText = false
@@ -257,7 +287,7 @@ You only need to configure the root configuration key `outputs`, because the **F
 
 ```toml
 # Options to make hugo output files, the optional values are below:
-# home = ["html", "rss", "archives", "offline", "readme", "baidu_urls", "search"]
+# home = ["html", "rss", "archives", "offline", "link", "search", "readme", "baidu_urls"]
 # page = ["html", "markdown"]
 # section = ["html", "rss"]
 # taxonomy = ["html"]
@@ -268,6 +298,7 @@ home = [
   "rss",
   "archives",
   "offline",
+  "link",
   "search"
 ]
 page = [
@@ -352,12 +383,6 @@ auto
 {{< version 0.2.12 >}}
 
 `bool` Enable PWA. Default is `false`.
-
-### externalIcon
-
-{{< version 0.2.14 >}}
-
-`bool` Whether to add external Icon for external links automatically. Default is `false`.
 
 ### capitalizeTitles
 
@@ -489,8 +514,8 @@ iconColor = "#5bbad5"
 tileColor = "#da532c"
 
 [params.app.themeColor]
-light = "#f8f8f8"
-dark = "#252627"
+light = "#f6f8fa"
+dark = "#151b23"
 ```
 
 title
@@ -511,8 +536,8 @@ tileColor
 themeColor
 : `map` Android browser theme color.
 
-- light: `string` The light theme color. Default is `#f8f8f8`.
-- dark: `string` The dark theme color. Default is `#252627`.
+- light: `string` The light theme color. Default is `#f6f8fa`.
+- dark: `string` The dark theme color. Default is `#151b23`.
 
 ### search
 
@@ -655,6 +680,7 @@ bing
 [params.header]
 desktopMode = "sticky"
 mobileMode = "auto"
+blur = false
 
 [params.header.title]
 logo = ""
@@ -675,6 +701,10 @@ desktopMode
 mobileMode
 : {{< version 0.2.13 changed >}}\
 `string` Mobile header mode. The configuration value for `mobileMode` can be one of `sticky`, `normal`, `auto`. Default is `auto`.
+
+blur
+: {{< version 1.0.0 >}}\
+`bool` Whether to enable header blur effect. Default is `false`.
 
 title
 : `map` The Header title Configuration.
@@ -1019,7 +1049,7 @@ posts
 
 `map` Social Configuration about the author.
 
-The default data of all supported social links is located in `themes/FixIt/assets/data/social.yaml`,
+The default data of all supported social links is located in `themes/FixIt/assets/data/social.yml`,
 which is you can refer to.
 
 You can directly set your ID to get a default social link and its icon:
@@ -1711,6 +1741,34 @@ optimise
 blackList
 : `string array` {{< version 0.4.0 >}} A list of image file names or patterns to exclude from optimisation. e.g. `["example.jpg", "test-*.png"]`.
 
+### link
+
+{{< version 1.0.0 >}}
+
+`map` Link rendering config (external icon and external link guard).
+
+```toggle
+[params]
+
+[params.link]
+external_icon = true
+
+[params.link.guard]
+enable = false
+mode = "modal"
+allow_domains = []
+```
+
+external_icon
+: `bool` Whether to add external icon for external links automatically. Default is `true`.
+
+guard
+: `map` External link guard configuration.
+
+- enable: `bool` Whether to enable external link guard. Default is `false`.
+- mode: `string` Guard mode. The configuration value for `mode` can be one of `modal`, `redirect`. Default is `modal`.
+- allow_domains: `string array` Allowed domains that bypass guard checks.
+
 ### codeblock
 
 {{< version 0.4.0 >}}
@@ -1811,6 +1869,14 @@ sort
 : `bool` Whether to sort object keys alphabetically. Default is `false`.
 boxed
 : `bool` Whether to display the JSON content within a boxed layout. Default is `true`.
+
+### filetree
+
+{{< version 0.4.2 >}} File tree configuration for the `file-tree` shortcode. See [Extended Shortcode - File Tree][filetree] for details.
+
+### taxonomy_icons
+
+{{< version 1.0.0 >}} Taxonomy icons configuration. See [Taxonomy Icons](#taxonomy-icons) for details.
 
 ### customPartials
 
@@ -2321,6 +2387,7 @@ They're easily created via <https://realfavicongenerator.net/>.
 [postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [follow]: https://follow.is/
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
+[filetree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree" >}}
 [block]: {{< relref path="/references/blocks" >}}
 [configuration-markup]: https://gohugo.io/configuration/markup/
 [necessary-configuration-for-theme]: https://github.com/hugo-fixit/FixIt/issues/43

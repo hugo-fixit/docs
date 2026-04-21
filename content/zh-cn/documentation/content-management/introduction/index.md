@@ -168,6 +168,16 @@ hugo new --kind post-bundle posts/bar/
 - **hiddenFromSearch**: 如果设为 `true`, 这篇文章将不会显示在搜索结果中
 - **hiddenFromRelated**: {{< version 0.3.0 >}} 如果设为 `true`, 这篇文章将不会显示在相关文章中
 - **hiddenFromFeed**: {{< version 0.3.10 >}} 如果设为 `true`, 这篇文章将不会显示在 RSS、ATOM 和 JSON Feed 中
+- **link_guard**: {{< version 1.0.0 >}} 覆盖当前页面的 `params.link.guard` 配置，支持 `bool` 或 `map`
+
+    ```yaml {data-open=false}
+    link_guard:
+      enable: true
+      mode: modal # modal | redirect
+      allow_domains:
+        - github.com
+    ```
+
 - **twemoji**: 如果设为 `true`, 这篇文章会使用 twemoji
 - **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
 - **ruby**: 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]
@@ -207,9 +217,10 @@ hugo new --kind post-bundle posts/bar/
 - **instantPage**: {{< version 0.2.18 >}} 和 [主题配置][theme-config] 中的 `params.page.instantPage` 部分相同
 - **feed**: {{< version 0.3.10 >}} 和 [主题配置][theme-config] 中的 `params.feed` 部分相同
 
-<!-- front matter for section only -->
+<!-- front matter for _index.md only -->
 
-- **titleIcon**: {{< version 0.3.5 >}} 用于页面标题的图标，仅在 `_index.md` 中有效
+- **titleIcon**: {{< version 1.0.0 >}} 用于页面标题的图标，仅在 `_index.md` 中有效
+- - **cardIcon**: {{< version 1.0.0 >}} 用于分类（taxonomy）页面中分类卡片的图标，仅在分类 `_index.md` 中有效
 
 ---
 

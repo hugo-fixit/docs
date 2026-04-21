@@ -422,7 +422,7 @@ Unless you customize marked text, any unsupported type defaults to the `default`
 ==This is a custom type with pink color.==[pink]
 ```
 
-Customize the marked text by adding the following CSS in your project directory `assets/css/_custom.scss`:
+Customize the marked text by adding the following CSS in your project directory `assets/scss/custom.scss`:
 
 ```scss {title="_custom.scss"}
 .mark-pink {

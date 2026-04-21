@@ -93,6 +93,22 @@ This is a **right-aligned** paragraph.
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
+## auto-dark
+
+{{< version 1.0.0 >}}
+
+`auto-dark` shortcode 会包裹内容，并在深色模式下自动进行颜色/色相反转，方便适配浅色素材。
+
+一个 `auto-dark` 示例：
+
+```markdown
+{{</* auto-dark */>}}
+<img src="/images/logo.svg" alt="logo" />
+{{</* /auto-dark */>}}
+```
+
+你可以将上面的示例粘贴到自己的站点内容中查看实际效果。
+
 ## link
 
 `link` shortcode 是 [Markdown 链接语法][md-link] 的替代。

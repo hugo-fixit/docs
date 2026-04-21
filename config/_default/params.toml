@@ -30,9 +30,6 @@ images = [ "/images/apple-devices-preview.webp" ]
 # FixIt 0.2.12 | NEW enable PWA
 # FixIt 0.2.12 | 新增 开启 PWA 支持
 enablePWA = true
-# FixIt 0.2.14 | NEW whether to add external Icon for external links automatically
-# FixIt 0.2.14 | 新增 是否自动显示外链图标
-externalIcon = true
 # FixIt 0.3.13 | NEW whether to capitalize titles
 # FixIt 0.3.13 | 新增 是否大写标题
 capitalizeTitles = true
@@ -876,6 +873,22 @@ optimise = true
 # e.g. ["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]
 blackList = [ "*.gif", ]
 
+# FixIt 1.0.0 | NEW Link config
+[link]
+# whether to add external Icon for external links automatically
+external_icon = true
+
+# External link guard config
+# per-page override via front matter: link_guard (bool/object)
+[link.guard]
+enable = false
+# external link guard mode, available modes: ["modal"， "redirect"]
+# in "modal" mode, a dialog will pop up to ask for confirmation when users click external links
+# in "redirect" mode, users will be redirected to an intermediate page before visiting external links
+mode = "modal"
+# allowed domains (exact host or parent domain) will skip confirmation
+allow_domains = []
+
 # FixIt 0.4.0 | NEW Code block wrapper config
 # you can override the global config via Markdown attributes, for example:
 # ```lang {mode="mac", maxShownLines=5}
@@ -917,6 +930,38 @@ expandDepth = 1
 copyable = true
 sort = false
 boxed = true
+
+# FixIt 0.4.2 | NEW File tree config
+# See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/file-tree/
+[filetree]
+# the expand level of the tree (expand all: -1, collapse all: 0)
+level = 1
+# whether to append a trailing "/" to folder names
+folderSlash = false
+# list of file or folder names to ignore
+ignoreList = []
+
+# FixIt 1.0.0 | NEW Taxonomy icons config
+# works with [taxonomies]. Configure [taxonomies] first, otherwise taxonomy icons will not take effect.
+[taxonomy_icons]
+# syntax: <taxonomy> = [<title icon>, <card icon>, <term title icon>]
+# example:
+# topic = [
+#   "fa-solid fa-book-bookmark",
+#   "fa-solid fa-book",
+#   "fa-solid fa-book-open"
+# ]
+
+# FixIt 0.4.5 | NEW Print config
+[print]
+# whether to expand all admonitions before printing
+expand_admonition = true
+# whether to expand all code blocks and code tabs before printing
+expand_code = true
+# whether to expand all details elements before printing
+expand_details = true
+# whether to expand all file trees before printing
+expand_file_tree = false
 
 # FixIt 0.3.12 | NEW Custom partials config
 # Custom partials must be stored in the /layouts/_partials/ directory.
@@ -1567,7 +1612,7 @@ enterprise = true
 
 # FixIt Docs config
 [docs]
-minHugoVersion = "0.156.0"
+min_hugo_version = "0.158.0"
 
 [planet]
 invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF

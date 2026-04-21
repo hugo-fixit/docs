@@ -29,15 +29,15 @@ Hugo **extended** version is necessary for the style customization.
 
 **FixIt** theme has been built to be as configurable as possible by defining custom `.scss` style files.
 
-The directory including the custom `.scss` style files is `assets/css` relative to **your project root directory**.
+The directory including the custom `.scss` style files is `assets/scss` relative to **your project root directory**.
 
-In `assets/css/_override.scss`, you can override the variables in `themes/FixIt/assets/css/_variables.scss` to customize the style.
+In `assets/scss/override.scss`, you can override the variables in `themes/FixIt/assets/scss/_variables.scss` to customize the style.
 
-In `assets/css/_custom.scss`, you can add some css style code to customize the style.
+In `assets/scss/custom.scss`, you can add some css style code to customize the style.
 
 ### Fonts Style {#font-style}
 
-The following font styles are defined in `assets/css/_override.scss`.
+The following font styles are defined in `assets/scss/override.scss`.
 
 To customize the global font, take the open-source font [LXGW WenKai][LxgwWenKai] as an example:
 
@@ -70,11 +70,11 @@ The FixIt theme provides a page width configuration option `pageStyle` and three
 - **normal** New default page/toc width ratio
 - **wide** Larger page/toc width ratio
 
-In addition, you can also customize the `pageStyle` value in `assets/css/_custom.scss`
+In addition, you can also customize the `pageStyle` value in `assets/scss/custom.scss`
 
 For example: `pageStyle="custom"`
 
-```scss {name="assets/css/_custom.scss"}
+```scss {name="assets/scss/custom.scss"}
 [data-page-style='custom'] {
   %page-style {
     @include media('xl') {
@@ -156,7 +156,7 @@ To define a custom admonition, change `params.admonition` in your site configura
 ban = "fa-solid fa-ban"
 ```
 
-Then create the following SCSS block in your project directory `assets/css/_override.scss`:
+Then create the following SCSS block in your project directory `assets/scss/override.scss`:
 
 ```scss {title="_override.scss"}
 // Custom admonition style
@@ -231,9 +231,9 @@ The rendered output looks like this:
 
 - [tip] This is a custom task list type with a tip icon.
 
-If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/css/_custom.scss`:
+If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/scss/custom.scss`:
 
-```scss {name="assets/css/_custom.scss"}
+```scss {name="assets/scss/custom.scss"}
 li[data-task='tip'] {
   --fi-task-color: #9974F7;
   --fi-checkbox-color: #EA9E36;

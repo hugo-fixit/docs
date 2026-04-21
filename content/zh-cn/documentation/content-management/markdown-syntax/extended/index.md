@@ -422,7 +422,7 @@ FixIt 主题的作者是 ++Lruihao++。
 ==这是一个带有粉色的自定义类型。==[pink]
 ```
 
-在你的项目目录 `assets/css/_custom.scss` 中添加以下 CSS 来自定义标记文本：
+在你的项目目录 `assets/scss/custom.scss` 中添加以下 CSS 来自定义标记文本：
 
 ```scss {title="_custom.scss"}
 .mark-pink {
