@@ -28,12 +28,12 @@ _~作者：[Lruihao][author]~_
 
 所有的反馈都是欢迎的！详见 [Discussions][discussions]、[Pull requests][pulls] 和 [Issues][issues]。
 
-| 官方社区                           | 说明                                             |
-| :--------------------------------- | :----------------------------------------------- |
-| [Discussions][discussions]         | GitHub 讨论区                                    |
-| [FixIt 主题交流群（微信）][wx-mp]  | 关注「菠菜眾長」回复“FixIt”获取                  |
-| [FixIt 主题交流群（QQ）][qq-group] | QQ 群：`814031017`                               |
-| [Hugo FixIt 星球][zsxq]            | 付费知识星球（[新人优惠券～][promotion_coupon]） |
+| 官方社区                           | 说明                            |
+| :--------------------------------- | :------------------------------ |
+| [Discussions][discussions]         | GitHub 讨论区                   |
+| [FixIt 主题交流群（微信）][wx-mp]  | 关注「菠菜眾長」回复“FixIt”获取 |
+| [FixIt 主题交流群（QQ）][qq-group] | QQ 群：`814031017`              |
+| [FixIt 开发交流群][dev-group]      | QQ 群：`770835493`              |
 
 <!-- ## 💰 有偿支持 {#paid-support} -->
 
@@ -70,10 +70,9 @@ _~作者：[Lruihao][author]~_
 [discussions]: https://github.com/orgs/hugo-fixit/discussions
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [issues]: https://github.com/hugo-fixit/FixIt/issues
-[qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
+[qq-group]: https://qm.qq.com/q/Mn1I7ljqsS
+[dev-group]: https://qm.qq.com/q/ky3uru0mbu
 [wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
-[zsxq]: {{< param planet.invite >}}
-[promotion_coupon]: {{< param planet.promotion_coupon >}}
 [postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [translate.js]: https://github.com/xnx3/translate
 [enterprise-translation-channel]: https://translate.zvo.cn/4087.html
