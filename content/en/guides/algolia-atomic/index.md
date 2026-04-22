@@ -70,10 +70,9 @@ Then, you need to upload `search.json` files to algolia to activate searching.
 You could upload the `search.json` files by browsers but a CLI tool may be better.
 [Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) is a good choice.
 
-{{< admonition tip "Is your site multilingual?" false >}}
-To be compatible with Hugo multilingual mode,
-you need to upload different `search.json` for each language to the different index of algolia, such as `zh-cn/search.json` or `fr/search.json`...
-{{< /admonition >}}
+> [!tip]- Is your site multilingual?
+> To be compatible with Hugo multilingual mode,
+> you need to upload different `search.json` for each language to the different index of algolia, such as `zh-cn/search.json` or `fr/search.json`...
 
 ### Preparation
 

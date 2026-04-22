@@ -26,11 +26,10 @@ lightgallery: true
 <!--more-->
 <!-- markdownlint-disable-file -->
 
-{{< admonition >}}
-这篇文章借鉴了一篇很棒的 [来自 Grav 的文章](http://learn.getgrav.org/content/markdown)。
-
-如果你想了解 **FixIt** 主题的扩展 Markdown 语法，请阅读 [扩展 Markdown 语法页面]({{< relref "/documentation/content-management/markdown-syntax/extended" >}})。
-{{< /admonition >}}
+> [!quote]+
+> 这篇文章借鉴了一篇很棒的 [来自 Grav 的文章](http://learn.getgrav.org/content/markdown)。
+>
+> 如果你想了解 **FixIt** 主题的扩展 Markdown 语法，请阅读 [扩展 Markdown 语法页面]({{< relref "/documentation/content-management/markdown-syntax/extended" >}})。
 
 事实上，编写 Web 内容很麻烦。[WYSIWYG]^(所见即所得) 编辑器帮助减轻了这一任务。但通常会导致代码太糟，或更糟糕的是，网页也会很丑。
 
@@ -57,9 +56,8 @@ John Gruber, Markdown 的作者如是说：
 
 话不多说，我们来回顾一下 Markdown 的主要语法以及生成的 HTML 样式！
 
-{{< admonition tip >}}
-:(fa-regular fa-bookmark fa-fw): 将此页保存为书签，以备将来参考！
-{{< /admonition >}}
+> [!tip]+
+> :(fa-regular fa-bookmark fa-fw): 将此页保存为书签，以备将来参考！
 
 ## 标题
 
@@ -83,20 +81,18 @@ John Gruber, Markdown 的作者如是说：
 <h6>h6 标题</h6>
 ```
 
-{{< admonition note "标题 ID" >}}
-要添加自定义标题 ID, 请在与标题相同的行中将自定义 ID 放在花括号中：
-
-```markdown
-### 一个很棒的标题 {#custom-id}
-```
-
-输出的 HTML 看起来像这样：
-
-```html
-<h3 id="custom-id">一个很棒的标题</h3>
-```
-
-{{< /admonition >}}
+> [!note]+ 标题 ID
+> 要添加自定义标题 ID, 请在与标题相同的行中将自定义 ID 放在花括号中：
+>
+> ```markdown
+> ### 一个很棒的标题 {#custom-id}
+> ```
+>
+> 输出的 HTML 看起来像这样：
+>
+> ```html
+> <h3 id="custom-id">一个很棒的标题</h3>
+> ```
 
 ## 注释
 
@@ -551,10 +547,9 @@ grunt.initConfig({
 })
 ```
 
-{{< admonition >}}
-**Hugo** 文档中的 [语法高亮页面](https://gohugo.io/content-management/syntax-highlighting/) 介绍了有关语法高亮的更多信息，
+> [!NOTE]
+> **Hugo** 文档中的 [语法高亮页面](https://gohugo.io/content-management/syntax-highlighting/) 介绍了有关语法高亮的更多信息，
 包括语法高亮的 shortcode。
-{{< /admonition >}}
 
 ## 表格
 
@@ -713,9 +708,8 @@ Content for chapter one.
 Content for chapter one.
 ```
 
-{{< admonition >}}
-定位标记的位置几乎是任意的。因为它们并不引人注目，所以它们通常被放在同一行了。
-{{< /admonition >}}
+> [!NOTE]
+> 定位标记的位置几乎是任意的。因为它们并不引人注目，所以它们通常被放在同一行了。
 
 ## 脚注
 
@@ -779,6 +773,5 @@ Content for chapter one.
 
 [id]: https://octodex.github.com/images/ironcat.jpg "The IronCat"
 
-{{< admonition tip >}}
-**FixIt** 主题提供了一个包含更多功能的 [图片的 shortcode]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}})。
-{{< /admonition >}}
+> [!TIP]
+> **FixIt** 主题提供了一个包含更多功能的 [图片的 shortcode]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}})。

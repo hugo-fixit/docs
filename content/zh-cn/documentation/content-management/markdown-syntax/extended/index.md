@@ -856,9 +856,8 @@ $\text{MathJax}$ 在页面加载后通过 JavaScript 进行 **客户端渲染**�
 
 **{?:}joy{?:}** 而不是 **:joy:**
 
-{{< admonition tip >}}
-这个方法可以间接解决一个还未解决的 **[Hugo 的 issue](https://github.com/gohugoio/hugo/issues/4978)**。
-{{< /admonition >}}
+> [!bug]
+> 这个方法可以间接解决一个还未解决的 **[Hugo 的 issue][hugo-issue-4978]**。
 
 另一个例子是：
 
@@ -1086,6 +1085,7 @@ console.log('Hello, world!')
 [docs-mathjax]: {{< relref path="/documentation/content-management/mathjax-support" >}}
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
+[hugo-issue-4978]: https://github.com/gohugoio/hugo/issues/4978
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}

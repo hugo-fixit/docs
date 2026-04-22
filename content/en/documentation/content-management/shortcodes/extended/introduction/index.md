@@ -28,7 +28,9 @@ lightgallery: true
 
 <!--more-->
 
-> [!TIP]
+Use these FixIt's embedded shortcodes as needed.
+
+> [!TIP]~
 >
 > - **FixIt's Embedded**:
 >
@@ -39,15 +41,12 @@ lightgallery: true
 >   To balance **simplicity** and **extensibility**, FixIt theme provides extra Hugo theme components for customization.\
 >   Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community..
 
-Use these FixIt's embedded shortcodes as needed.
-
 ## script
 
 `script` is a shortcode to insert custom **:(fa-brands fa-js fa-fw): Javascript** in your post.
 
-{{< admonition >}}
-The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
-{{< /admonition >}}
+> [!NOTE]
+> The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
 
 Example `script` input:
 
@@ -65,9 +64,7 @@ console.log('Hello FixIt!');
 
 ## style
 
-{{< admonition >}}
-Hugo **extended** version is necessary for `style` shortcode.
-{{< /admonition >}}
+> [!note] Hugo **extended** version is necessary for `style` shortcode.
 
 `style` is a shortcode to insert custom style in your post.
 

@@ -114,11 +114,10 @@ git submodule update --remote --merge themes/FixIt
 {{% tab title="Hugo Modules" %}}
 {{< link "https://github.com/hugo-fixit/hugo-fixit-starter/generate" "Click to quickly create a blog!" "A quick-start template base on Hugo Modules to create a Hugo FixIt site." true "fa-solid fa-screwdriver-wrench" >}}
 
-{{< admonition tip >}}
-In this way, you don't need to configure `theme = "FixIt"` in `hugo.toml`.
-{{< /admonition >}}
+> [!TIP]~
+> In this way, you don't need to configure `theme = "FixIt"` in `hugo.toml`.
 
-The easiest way to use a [Module][hugo-modules] for a theme is to import it in the config. See [Use Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
+The easiest way to use a [Module](https://gohugo.io/hugo-modules/) for a theme is to import it in the config. See [Use Hugo Modules](https://gohugo.io/hugo-modules/use-modules/).
 
 1. Initialize the hugo module system: `hugo mod init github.com/<your_user>/<your_project>`
 2. Import the theme:
@@ -159,11 +158,10 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 
 ## CLI
 
-{{< admonition danger "Tip" >}}
-The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
-{{< /admonition >}}
+> [!danger]+ Tip
+> The CLI assumes prior knowledge of Hugo and FixIt. If you are new to Hugo or FixIt, we strongly suggest going through [the theme documentation](../) without any scaffold tools before using the CLI.
 
-```bash {mode="simple"}
+```bash {mode="simple" lineNos=false}
 npx fixit-cli create my-blog
 ```
 

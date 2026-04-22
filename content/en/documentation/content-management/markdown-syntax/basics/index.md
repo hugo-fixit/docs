@@ -26,11 +26,10 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 <!--more-->
 <!-- markdownlint-disable-file -->
 
-{{< admonition >}}
-This article is a shameful copy of the great [Grav original page](http://learn.getgrav.org/content/markdown).
-
-If you want to know about the extended Markdown syntax of **FixIt** theme, please read [extended Markdown syntax page]({{< relref "/documentation/content-management/markdown-syntax/extended" >}}).
-{{< /admonition >}}
+> [!quote]+
+> This article is a shameful copy of the great [Grav original page](http://learn.getgrav.org/content/markdown).
+>
+> If you want to know about the extended Markdown syntax of **FixIt** theme, please read [extended Markdown syntax page]({{< relref "/documentation/content-management/markdown-syntax/extended" >}}).
 
 Let's face it: Writing content for the Web is tiresome. WYSIWYG editors help alleviate this task, but they generally result in horrible code, or worse yet, ugly web pages.
 
@@ -57,9 +56,8 @@ John Gruber, the author of Markdown, puts it like this:
 
 Without further delay, let us go over the main elements of Markdown and what the resulting HTML looks like!
 
-{{< admonition tip >}}
-:(fa-regular fa-bookmark fa-fw): Bookmark this page for easy future reference!
-{{< /admonition >}}
+> [!tip]+
+> :(fa-regular fa-bookmark fa-fw): Bookmark this page for easy future reference!
 
 ## Headings
 
@@ -83,20 +81,18 @@ The HTML looks like this:
 <h6>h6 Heading</h6>
 ```
 
-{{< admonition note "Heading IDs" >}}
-To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading:
-
-```markdown
-### A Great Heading {#custom-id}
-```
-
-The HTML looks like this:
-
-```html
-<h3 id="custom-id">A Great Heading</h3>
-```
-
-{{< /admonition >}}
+> [!note]+ Heading IDs
+> To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading:
+>
+> ```markdown
+> ### A Great Heading {#custom-id}
+> ```
+>
+> The HTML looks like this:
+>
+> ```html
+> <h3 id="custom-id">A Great Heading</h3>
+> ```
 
 ## Comments
 
@@ -551,9 +547,8 @@ grunt.initConfig({
 })
 ```
 
-{{< admonition >}}
-[Syntax highlighting page](https://gohugo.io/content-management/syntax-highlighting/) in **Hugo** Docs introduces more about syntax highlighting, including highlight shortcode.
-{{< /admonition >}}
+> [!NOTE]
+> [Syntax highlighting page](https://gohugo.io/content-management/syntax-highlighting/) in **Hugo** Docs introduces more about syntax highlighting, including highlight shortcode.
 
 ## Tables
 
@@ -712,9 +707,8 @@ Content for chapter one.
 Content for chapter one.
 ```
 
-{{< admonition >}}
-The specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.
-{{< /admonition >}}
+> [!NOTE]
+> The specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.
 
 ## Footnotes
 
@@ -773,6 +767,5 @@ With a reference later in the document defining the URL location:
 
 [id]: https://octodex.github.com/images/ironcat.jpg "The IronCat"
 
-{{< admonition tip >}}
-**FixIt** theme has [special shortcode for image]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}}), which provides more features.
-{{< /admonition >}}
+> [!TIP]
+> **FixIt** theme has [special shortcode for image]({{< relref "/documentation/content-management/shortcodes/extended/introduction#image" >}}), which provides more features.

@@ -112,10 +112,6 @@ home = [
 ]
 ```
 
-{{< admonition type=tip title="I18n" open=true >}}
-目前，离线页面支持 I18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
-{{< /admonition >}}
-
 ### 开启 `enablePWA` 选项 {#enable-pwa}
 
 前往 `hugo.toml`, 添加/修改 `[params]` 配置项下 `enablePWA` 选项的值为 `true`。

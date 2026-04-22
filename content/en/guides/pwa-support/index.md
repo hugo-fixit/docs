@@ -114,10 +114,6 @@ home = [
 ]
 ```
 
-{{< admonition type=tip title="I18n" open=true >}}
-Currently, I18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
-{{< /admonition >}}
-
 ### Enable the `enablePWA` option {#enable-pwa}
 
 Go to `hugo.toml`, add or change the option `enablePWA = true` under `[params]`.

@@ -61,14 +61,12 @@ categories:
 ---
 ```
 
-{{< admonition info >}}
-
-1. After entering the correct password each time, the password hash value will be cached locally by the user, and the pages will be unlocked automatically when accessed again within one day
-2. A "Encrypt again" button is provided at the end of the article. Click it to immediately forget the password and re encrypt the content
-3. Encrypted pages have been hidden from search
-4. The markdown output of encrypted pages has been disabled. To prevent password disclosure, **do not make encrypted pages public in any form**
-
-{{< /admonition >}}
+> [!info]~
+>
+> 1. After entering the correct password each time, the password hash value will be cached locally by the user, and the pages will be unlocked automatically when accessed again within one day
+> 2. A "Encrypt again" button is provided at the end of the article. Click it to immediately forget the password and re encrypt the content
+> 3. Encrypted pages have been hidden from search
+> 4. The Markdown output of encrypted pages has been disabled. To prevent password disclosure, **do not make encrypted pages public in any form**
 
 ### Advanced use
 

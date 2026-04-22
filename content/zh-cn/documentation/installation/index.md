@@ -114,9 +114,8 @@ git submodule set-branch -b dev themes/FixIt
 {{% tab title="Hugo 模块" %}}
 {{< link "https://github.com/hugo-fixit/hugo-fixit-starter/generate" "点击快速创建博客！" "一个基于 Hugo 模块创建 Hugo FixIt 站点的快速启动模板。" true "fa-solid fa-screwdriver-wrench" >}}
 
-{{< admonition tip >}}
-以这种方式，无需要在 `hugo.toml` 中配置 `theme = "FixIt"`。
-{{< /admonition >}}
+> [!tip]~
+> 以这种方式，无需要在 `hugo.toml` 中配置 `theme = "FixIt"`。
 
 将 [Hugo 模块](https://gohugo.io/hugo-modules/) 用于主题的最简单方法是将其导入配置中。请参阅 [使用 Hugo 模块](https://gohugo.io/hugo-modules/use-modules/)。
 
@@ -159,9 +158,8 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
 
 ## CLI
 
-{{< admonition danger "提醒" >}}
-CLI 假定你事先了解 Hugo 和 FixIt。如果你是 Hugo 或 FixIt 的新手，我们强烈建议你在使用 CLI 之前先阅读 [主题文档](../)，不要使用任何脚手架工具。
-{{< /admonition >}}
+> [!danger]+ 提醒
+> CLI 假定你事先了解 Hugo 和 FixIt。如果你是 Hugo 或 FixIt 的新手，我们强烈建议你在使用 CLI 之前先阅读 [主题文档](../)，不要使用任何脚手架工具。
 
 ```bash {mode="simple"}
 npx fixit-cli create my-blog

@@ -52,9 +52,8 @@ See more details in the [Use Shortcodes][use-shortcodes] section.
 
 Use these Hugo's embedded shortcodes as needed.
 
-{{< admonition tip >}}
-To override Hugo's embedded shortcode, copy the [source code](https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes) to a file with the same name in the `layouts/_shortcodes` directory.
-{{< /admonition >}}
+> [!TIP]
+> To override Hugo's embedded shortcode, copy the [source code][hugo-embedded-shortcodes] to a file with the same name in the `layouts/_shortcodes` directory.
 
 ### figure {#figure}
 
@@ -277,8 +276,9 @@ To learn how to configure your Hugo site to meet the new EU privacy regulation, 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 MD033 -->
 [shortcodes]: https://gohugo.io/content-management/shortcodes/
-[use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
 [partial-template]: https://gohugo.io/templates/partial/
+[use-shortcodes]: https://gohugo.io/content-management/shortcodes/#use-shortcodes
+[hugo-embedded-shortcodes]: https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates/shortcodes
 [figure]: https://gohugo.io/content-management/shortcodes/#figure
 [code-fences-extended]: {{< relref path="/documentation/content-management/markdown-syntax/extended/#code-fences-extended" >}}
 [highlight]: https://gohugo.io/content-management/shortcodes/#highlight

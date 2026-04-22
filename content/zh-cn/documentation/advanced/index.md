@@ -23,9 +23,7 @@ tags:
 
 ## 自定义样式
 
-{{< admonition >}}
-Hugo **extended** 版本对于自定义样式是必需的。
-{{< /admonition >}}
+> [!note] Hugo **extended** 版本对于自定义样式是必需的。
 
 通过定义自定义 `.scss` 样式文件，**FixIt** 主题支持可配置的样式。
 

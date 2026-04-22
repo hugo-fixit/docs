@@ -119,21 +119,19 @@ This is an additional theme component, please refer to [hugo-fixit/component-pro
 
 **Hugo** allows you to add front matter in `yaml`, `toml` or `json` to your content files, see [Front matter][front-matter].
 
-{{< admonition >}}
-**Not all** of the below front matters need to be set in each of your posts.
-It is necessary only if the front matters and the `page` part in your [theme configuration]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) are inconsistent.
-{{< /admonition >}}
+> [!note]
+> **Not all** of the below front matters need to be set in each of your posts.
+>
+> It is necessary only if the front matters and your [theme configuration][theme-config] are inconsistent.
 
-{{< admonition tip "" false >}}
-Some [archetypes](https://gohugo.io/content-management/archetypes/) are embedded in the **FixIt** theme, which will take effect when creating new content with the following commands, and the front matter will be automatically brought in.
-
-```bash
-hugo new posts/foo.md
-# Or
-hugo new --kind post-bundle posts/bar/
-```
-
-{{< /admonition >}}
+> [!tip]-
+> Some [archetypes] are embedded in the **FixIt** theme, which will take effect when creating new content with the following commands, and the front matter will be automatically brought in.
+>
+> ```bash
+> hugo new posts/foo.md
+> # Or
+> hugo new --kind post-bundle posts/bar/
+> ```
 
 - **title**: the title for the content.
 - **subtitle**: the subtitle for the content.
@@ -325,9 +323,8 @@ Alternatively, you may add the `<!--more-->` summary divider where you want to s
 
 Content that comes before the summary divider will be used as that content’s summary.
 
-{{< admonition >}}
-Be careful to enter `<!--more-->` exactly; i.e., all lowercase and with no whitespace.
-{{< /admonition >}}
+> [!NOTE]
+> Be careful to enter `<!--more-->` exactly; i.e., all lowercase and with no whitespace.
 
 ### Front Matter Summary
 
@@ -359,7 +356,7 @@ Each summary type has different characteristics:
 
 ## Markdown Syntax
 
-This part is shown in the [basic markdown syntax page][basic-markdown-syntax] and the [extended markdown syntax page][extended-markdown-syntax].
+This part is shown in the [basic Markdown syntax page][basic-markdown-syntax] and the [extended Markdown syntax page][extended-markdown-syntax].
 
 ## Shortcodes
 
@@ -523,9 +520,8 @@ Single file `my-page.md` is split in three files:
 - in Chinese: `my-page.zh-cn.md`
 - in French: `my-page.fr.md`
 
-{{< admonition tip >}}
-Use [Front Matter parameter](https://gohugo.io/content-management/multilingual#translate-your-content) to translate urls too.
-{{< /admonition >}}
+> [!NOTE]
+> Use [Front Matter parameter][multilingual-content] to translate urls too.
 
 ### Overwrite Translation Strings
 
@@ -554,6 +550,7 @@ With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automati
 [cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[archetypes]: https://gohugo.io/content-management/archetypes/
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
 [fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
@@ -565,5 +562,6 @@ With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automati
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
+[multilingual-content]: https://gohugo.io/content-management/multilingual#translate-your-content
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [hugo-fixit/cmpt-translate]: /ecosystem/hugo-fixit/cmpt-translate/

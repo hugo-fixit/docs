@@ -45,10 +45,8 @@ lightgallery: true
 
 `script` shortcode 用来在你的文章中插入 **:(fa-brands fa-js fa-fw): Javascript** 脚本。
 
-{{< admonition >}}
-脚本内容可以保证在所有的第三方库加载之后按顺序执行。
-所以你可以自由地使用第三方库。
-{{< /admonition >}}
+> [!NOTE]
+> 脚本内容可以保证在所有的第三方库加载之后按顺序执行，所以你可以自由地使用第三方库。
 
 一个 `script` 示例：
 
@@ -66,9 +64,7 @@ console.log('Hello FixIt!');
 
 ## style
 
-{{< admonition >}}
-Hugo **extended** 版本对于 `style` shortcode 是必需的。
-{{< /admonition >}}
+> [!note] Hugo **extended** 版本对于 `style` shortcode 是必需的。
 
 `style` shortcode 用来在你的文章中插入自定义样式。
 

@@ -120,21 +120,19 @@ type: posts
 
 **Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的 Front matter，详见 [Front matter][front-matter]。
 
-{{< admonition >}}
-**不是所有**的以下 Front matter 都必须在你的每篇文章中设置。
-只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 中的 `page` 部分不一致时才有必要这么做。
-{{< /admonition >}}
+> [!NOTE]
+> **不是所有**的以下 Front matter 都必须在你的每篇文章中设置。
+>
+> 只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 不一致时才有必要这么做。
 
-{{< admonition tip "" false >}}
-**FixIt** 主题内嵌了一些 [原型 (Archetype)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的 Front matter：
-
-```bash
-hugo new posts/foo.md
-# 或
-hugo new --kind post-bundle posts/bar/
-```
-
-{{< /admonition >}}
+> [!tip]-
+> **FixIt** 主题内嵌了一些 [原型 (Archetype)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的 Front matter：
+>
+> ```bash
+> hugo new posts/foo.md
+> # 或
+> hugo new --kind post-bundle posts/bar/
+> ```
 
 - **title**: 文章标题
 - **subtitle**: 文章副标题
@@ -328,9 +326,8 @@ seo:
 
 摘要分隔符之前的内容将用作该文章的摘要。
 
-{{< admonition >}}
+> [!NOTE]
 请小心输入 `<!--more-->`，即全部为小写且没有空格。
-{{< /admonition >}}
 
 ### Front matter 摘要
 

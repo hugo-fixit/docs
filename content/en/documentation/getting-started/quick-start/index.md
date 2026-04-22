@@ -35,9 +35,8 @@ In this tutorial you will:
 
 ## Prerequisites
 
-{{< admonition tip >}}
-If this is your first time using [Hugo](https://gohugo.io/), we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/).
-{{< /admonition >}}
+> [!todo]+
+> If this is your first time using [Hugo][hugo], we strongly suggest you learn more about it by following this [great documentation for beginners][hugo-started].
 
 Before you begin this tutorial you must:
 
@@ -218,6 +217,8 @@ if you encounter any problems or have any questions, please go to our [community
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
+[hugo]: https://gohugo.io/
+[hugo-started]: https://gohugo.io/getting-started/
 [hugo-installing]: https://gohugo.io/installation/
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt

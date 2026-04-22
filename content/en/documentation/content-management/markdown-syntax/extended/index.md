@@ -856,9 +856,8 @@ The rendered output looks like this:
 
 **{?:}joy{?:}** instead of **:joy:**
 
-{{< admonition tip >}}
-This is related to **[an issue for Hugo](https://github.com/gohugoio/hugo/issues/4978)**, which has not been resolved.
-{{< /admonition >}}
+> [!bug]
+> This is related to **[an issue for Hugo][hugo-issue-4978]**, which has not been resolved.
 
 Another example is:
 
@@ -1086,6 +1085,7 @@ console.log('Hello, world!')
 [docs-mathjax]: {{< relref path="/documentation/content-management/mathjax-support" >}}
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
+[hugo-issue-4978]: https://github.com/gohugoio/hugo/issues/4978
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}

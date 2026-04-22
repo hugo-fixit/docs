@@ -35,9 +35,8 @@ toc:
 
 ## 先决条件
 
-{{< admonition tip >}}
-如果这是你第一次使用 [Hugo](https://gohugo.io/)，我们强烈建议你通过阅读这篇 [入门文档](https://gohugo.io/getting-started/) 来更多地了解它。
-{{< /admonition >}}
+> [!todo]+
+> 如果这是你第一次使用 [Hugo](https://gohugo.io/)，我们强烈建议你通过阅读这篇 [入门文档](https://gohugo.io/getting-started/) 来更多地了解它。
 
 在开始本教程之前，你必须：
 

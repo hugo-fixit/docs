@@ -23,9 +23,7 @@ Discover advanced usage of the Hugo - **FixIt** theme.
 
 ## Style Customization
 
-{{< admonition >}}
-Hugo **extended** version is necessary for the style customization.
-{{< /admonition >}}
+> [!note] Hugo **extended** version is necessary for the style customization.
 
 **FixIt** theme has been built to be as configurable as possible by defining custom `.scss` style files.
 
