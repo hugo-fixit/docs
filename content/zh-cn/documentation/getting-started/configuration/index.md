@@ -320,6 +320,8 @@ term = [
 
 ## 主题配置 {#theme-configuration}
 
+![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
+
 除了 Hugo 全局配置外，FixIt 还通过根配置键 `params` 提供了一些主题配置。
 
 一个简单的例子：
@@ -2341,24 +2343,6 @@ images = []
 name = ""
 logoUrl = ""
 ```
-
-## Favicon 生成
-
-强烈建议你把你自己的网站图标，`browserconfig.xml` 和 `site.webmanifest` 文件放在 `/static` 目录。
-
-- android-chrome-192x192.png
-- android-chrome-512x512.png
-- apple-touch-icon.png
-- browserconfig.xml
-- favicon-32x32.png
-- favicon-16x16.png
-- favicon.ico
-- mstile-150x150.png
-- safari-pinned-tab.svg
-
-利用 <https://realfavicongenerator.net/> 可以很容易地生成这些文件。
-
-![完整配置下的预览](full-configuration-preview.zh-cn.png "完整配置下的预览")
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->

@@ -320,6 +320,8 @@ If you want the `outputs` configuration to always be consistent with the theme, 
 
 ## Theme Configuration {#theme-configuration}
 
+![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
+
 In addition to Hugo global configuration, **FixIt** provides some theme configuration via the root configuration keys `params`.
 
 A simple example:
@@ -2343,24 +2345,6 @@ images = []
 name = ""
 logoUrl = ""
 ```
-
-## Favicon Generation
-
-It is recommended to put your own favicons, `browserconfig.xml` and `site.webmanifest` files into the `/static` directory.
-
-- android-chrome-192x192.png
-- android-chrome-512x512.png
-- apple-touch-icon.png
-- browserconfig.xml
-- favicon-32x32.png
-- favicon-16x16.png
-- favicon.ico
-- mstile-150x150.png
-- safari-pinned-tab.svg
-
-They're easily created via <https://realfavicongenerator.net/>.
-
-![Complete configuration preview](full-configuration-preview.png "Complete configuration preview")
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->

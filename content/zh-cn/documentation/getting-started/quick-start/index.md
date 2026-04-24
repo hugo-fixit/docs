@@ -195,6 +195,22 @@ hugo server -D --disableFastRender
 > [!success]+ 恭喜！你已经成功添加了第一篇文章 :tada:
 > 现在可以执行 `git add . && git commit -m "first commit"` 来提交这些更改。
 
+## Favicon 生成
+
+强烈建议你把你自己的网站图标，`browserconfig.xml` 和 `site.webmanifest` 文件放在 `/static` 目录。
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-32x32.png
+- favicon-16x16.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+
+利用 <https://realfavicongenerator.net/> 可以很容易地生成这些文件。
+
 ## 发布网站
 
 在此步骤中，你将发布你的网站，但不会 _部署_ 它。

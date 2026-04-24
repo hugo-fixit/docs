@@ -189,6 +189,22 @@ When satisfied with your new content, set the front matter `draft` parameter to 
 > [!success]+ Congratulations! You have added your first post successfully :tada:
 > You can now run `git add . && git commit -m "first commit"` to commit these changes.
 
+## Favicon Generation
+
+It is recommended to put your own favicons, `browserconfig.xml` and `site.webmanifest` files into the `/static` directory.
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-32x32.png
+- favicon-16x16.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+
+They're easily created via <https://realfavicongenerator.net/>.
+
 ## Publish the Site
 
 In this step you will publish your site, but you will not _deploy_ it.
