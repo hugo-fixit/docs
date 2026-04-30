@@ -99,14 +99,14 @@ There are three css common class for print view in FixIt Theme.
 
 - `page-break-before` Insert page break before element
 - `page-break-after` Insert page break after element
-- `print-d-none` Hide elements in print view
+- `d-none-print` Hide elements in print view
 
 Here is a simple exmple:
 
 ```html
 <div class="page-break-before"></div>
 <div class="page-break-after"></div>
-<div class="print-d-none">
+<div class="d-none-print">
   Something you want to hide in the print view is written here.
 </div>
 ```

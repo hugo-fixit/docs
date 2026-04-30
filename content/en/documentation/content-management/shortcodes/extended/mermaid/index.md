@@ -44,6 +44,26 @@ Just insert your mermaid code in the `mermaid` shortcode and that’s it.
 {{</* /mermaid */>}}
 ```
 
+Named parameters are also supported:
+
+```markdown
+{{</* mermaid wrapper=false */>}}
+graph TD
+    A[Start] --> B[End]
+{{</* /mermaid */>}}
+```
+
+```markdown
+{{</* mermaid filename="architecture.mmd" */>}}
+graph TD
+    A[Client] --> B[Server]
+{{</* /mermaid */>}}
+```
+
+Parameters
+: `wrapper` (`bool`) Optional. Overrides `params.mermaid.wrapper` for this shortcode instance.
+: `filename` (`string`) Optional. Sets the filename used by diagram/code download actions.
+
 ### Configuration
 
 For detailed configuration options and themes, please refer to the [Diagrams Support - Mermaid][diagrams-support-mermaid] page.

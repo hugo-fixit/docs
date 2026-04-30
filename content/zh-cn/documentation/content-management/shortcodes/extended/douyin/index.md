@@ -47,7 +47,7 @@ Or
 
 {{< version 0.3.7 >}}
 
-`douyin` shortcode 有以下命名参数：
+`douyin` shortcode 有以下具名参数：
 
 - **id** _[必需]_（**第一个**位置参数）
 

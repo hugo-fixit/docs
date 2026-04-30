@@ -32,7 +32,7 @@ mapbox:
 
 [Mapbox GL JS][mapbox] 是一个 JavaScript 库，它使用 WebGL, 以 [vector tiles][vector-tiles] 和 [Mapbox styles][style-spec] 为来源，将它们渲染成互动式地图。
 
-`mapbox` shortcode 有以下命名参数来使用 Mapbox GL JS:
+`mapbox` shortcode 有以下具名参数来使用 Mapbox GL JS:
 
 - **lng** _[必需]_（**第一个**位置参数）
 

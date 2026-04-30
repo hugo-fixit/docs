@@ -53,7 +53,7 @@ collections:
 {{< /aplayer >}}
 
 > [!NOTE]
-> 需要注意的是，这两个 shortcodes 并不能单独使用，并且必须使用命名参数来设置它们的属性。
+> 需要注意的是，这两个 shortcodes 并不能单独使用，并且必须使用具名参数来设置它们的属性。
 >
 > 如果你将 LRC 放置于 `audio` shortcode 之中，它会通过 JS 字符串方式传递给 APlayer，所以你需要将 `lrcType` 设置为 1。如果你通过配置 `lrc` 参数的方式来设置 LRC 文件的链接，那么它将会被通过 LRC 文件方式传递给 APlayer，则 `lrcType` 需要被设置为 3。
 

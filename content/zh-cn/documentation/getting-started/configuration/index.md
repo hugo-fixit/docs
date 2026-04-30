@@ -1171,6 +1171,7 @@ name
 [params]
 
 [params.mermaid]
+wrapper = true
 cdn = ""
 zenuml = ""
 themes = [
@@ -1185,6 +1186,9 @@ fontFamily = ""
 layoutLoaders = []
 layout = "dagre"
 ```
+
+wrapper
+: `bool` {{< version 1.0.0 >}} 是否启用 Mermaid 包装器界面及图表交互能力，默认：`true`。
 
 cdn
 : `string` {{< version 0.4.0 >}} Mermaid 核心脚本地址。\

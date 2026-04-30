@@ -180,7 +180,7 @@ assets = [ "inject/shortcode-caniuse.html" ]
 
 ### 使用 Shortcode
 
-`caniuse` shortcode 有以下命名参数：
+`caniuse` shortcode 有以下具名参数：
 
 - **feature** _[必需]_（**第一个**位置参数）特性名称
 - **past** _[可选]_（**第二个**位置参数）显示过去 N 个版本，范围是 `0 - 5`，默认为 `2`

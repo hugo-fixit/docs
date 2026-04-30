@@ -44,6 +44,7 @@ resources:
 [params]
 
 [params.mermaid]
+wrapper = true
 cdn = ""
 zenuml = ""
 themes = [
@@ -58,6 +59,34 @@ fontFamily = ""
 layoutLoaders = []
 layout = "dagre"
 ```
+
+wrapper
+: 是否启用 Mermaid 包装器界面（图表/代码页签和交互操作），默认值为 `true`。
+
+当 `wrapper = true` 时，每个 Mermaid 图表都支持：
+
+- **图表** 与 **代码** 页签切换
+- 拖拽平移和缩放（按住 <kbd>Ctrl</kbd> 并滚动鼠标滚轮缩放）
+- 放大、缩小、重置视图
+- 下载 SVG
+
+你也可以在单个代码块上通过属性关闭 wrapper：
+
+````markdown
+```mermaid {wrapper=false}
+graph TD
+  A[开始] --> B[结束]
+```
+````
+
+还可以通过属性指定下载文件名：
+
+````markdown
+```mermaid {filename="architecture.mmd"}
+graph TD
+  A[客户端] --> B[服务端]
+```
+````
 
 CDN
 : 你可使用 `params.mermaid` 在配置文件中指定你想使用的 Mermaid 和 ZenUML 版本。例如：

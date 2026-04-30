@@ -112,7 +112,7 @@ This is a **right-aligned** paragraph.
 
 支持 [本地资源引用][contents-organization] 的完整用法。
 
-`link` shortcode 有以下命名参数：
+`link` shortcode 有以下具名参数：
 
 - **href** _[必需]_（**第一个**位置参数）
 
@@ -224,7 +224,7 @@ This is a **right-aligned** paragraph.
 
 支持 [本地资源引用][contents-organization] 的完整用法。
 
-`image` shortcode 有以下命名参数：
+`image` shortcode 有以下具名参数：
 
 - **src** _[必需]_（**第一个**位置参数）
 
@@ -294,7 +294,7 @@ This is a **right-aligned** paragraph.
 
 `details` shortcode 用来在你的文章中插入 **:(fa-brands fa-html5 fa-fw): HTML5 标签** `details` 和 `summary`。
 
-`details` shortcode 有以下命名参数：
+`details` shortcode 有以下具名参数：
 
 - **summary** _[可选]_ (**第一个**位置参数）
 
@@ -398,7 +398,7 @@ _All pages and graphics on this web site are the property of FixIt._
 
 {{< version 0.2.18 changed >}}
 
-`reward` shortcode 有以下命名参数：
+`reward` shortcode 有以下具名参数：
 
 - **wechatpay** _[可选]_（**第一个**位置参数）
 - **alipay** _[可选]_（**第二个**位置参数）

@@ -1170,6 +1170,7 @@ name
 [params]
 
 [params.mermaid]
+wrapper = true
 cdn = ""
 zenuml = ""
 themes = [
@@ -1184,6 +1185,9 @@ fontFamily = ""
 layoutLoaders = []
 layout = "dagre"
 ```
+
+wrapper
+: `bool` {{< version 1.0.0 >}} Enable Mermaid wrapper UI and interactions for diagram rendering. Default is `true`.
 
 cdn
 : `string` {{< version 0.4.0 >}} The Mermaid ESM module CDN source.\

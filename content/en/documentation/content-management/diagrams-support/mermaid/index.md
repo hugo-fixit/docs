@@ -44,6 +44,7 @@ You can configure Mermaid globally in your `hugo.toml` file.
 [params]
 
 [params.mermaid]
+wrapper = true
 cdn = ""
 zenuml = ""
 themes = [
@@ -58,6 +59,34 @@ fontFamily = ""
 layoutLoaders = []
 layout = "dagre"
 ```
+
+wrapper
+: Enable Mermaid wrapper UI (diagram/code tabs and interactive actions). Default is `true`.
+
+When `wrapper = true`, each Mermaid diagram provides:
+
+- A **Diagram** tab and a **Code** tab
+- Pan and zoom support (drag to pan, <kbd>Ctrl</kbd> + mouse wheel to zoom)
+- Zoom in, zoom out, and reset actions
+- SVG download action
+
+You can disable wrapper for a single diagram via code fence attributes:
+
+````markdown
+```mermaid {wrapper=false}
+graph TD
+  A[Start] --> B[End]
+```
+````
+
+You can also set a custom download filename for diagram actions:
+
+````markdown
+```mermaid {filename="architecture.mmd"}
+graph TD
+  A[Client] --> B[Server]
+```
+````
 
 CDN
 : You can use `params.mermaid` in your configuration file to specify the version of Mermaid and ZenUML you want to use. For example:

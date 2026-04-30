@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 你可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 
-`fixit-encryptor` shortcode 具有以下命名参数：
+`fixit-encryptor` shortcode 具有以下具名参数：
 
 - **password** _[必需]_（**第一个**位置参数）
 

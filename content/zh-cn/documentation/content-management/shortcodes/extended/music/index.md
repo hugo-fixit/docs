@@ -31,7 +31,7 @@ collections:
 
 支持 [本地资源引用][contents-organization] 的完整用法。
 
-`music` shortcode 有以下命名参数来使用自定义音乐 URL:
+`music` shortcode 有以下具名参数来使用自定义音乐 URL:
 
 - **server** _[必需]_
 
@@ -61,7 +61,7 @@ collections:
 
 ## 音乐平台 URL 的自动识别 {#automatic-identification}
 
-`music` shortcode 有一个命名参数来使用音乐平台 URL 的自动识别：
+`music` shortcode 有一个具名参数来使用音乐平台 URL 的自动识别：
 
 - **auto** _[必需]]_（**第一个**位置参数）
 
@@ -81,7 +81,7 @@ collections:
 
 ## 自定义音乐平台，类型和 ID {#custom-server}
 
-`music` shortcode 有以下命名参数来使用自定义音乐平台：
+`music` shortcode 有以下具名参数来使用自定义音乐平台：
 
 - **server** _[必需]_（**第一个**位置参数）
 
@@ -113,7 +113,7 @@ collections:
 
 ## 其它参数 {#other-parameters}
 
-`music` shortcode 有一些可以应用于以上三种方式的其它命名参数：
+`music` shortcode 有一些可以应用于以上三种方式的其它具名参数：
 
 - **theme** _[可选]_
 
@@ -139,7 +139,7 @@ collections:
 
     是否自动暂停其它播放器，默认值是 `true`。
 
-`music` shortcode 还有一些只适用于音乐列表方式的其它命名参数：
+`music` shortcode 还有一些只适用于音乐列表方式的其它具名参数：
 
 - **loop** _[可选]_
 

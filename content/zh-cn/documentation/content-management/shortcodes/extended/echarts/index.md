@@ -1314,7 +1314,7 @@ return fetch('/echarts/les-miserables.json')
 
 ## 参数配置 {#parameters}
 
-`echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
+`echarts` shortcode 有以下具名参数，位置参数按照从上到下的顺序排列：
 
 | 参数   | 说明                                                | 类型   | 默认值  |
 | :----- | :-------------------------------------------------- | :----- | :------ |

@@ -65,7 +65,7 @@ https://www.bilibili.com/video/BV1kt411k7Rq?p=3
 
 ## 详细参数
 
-`bilibili` shortcode 有以下命名参数：
+`bilibili` shortcode 有以下具名参数：
 
 - **id** _[必需]_（**第一个**位置参数）
 

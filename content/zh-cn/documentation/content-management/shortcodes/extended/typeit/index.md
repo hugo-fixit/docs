@@ -27,7 +27,7 @@ collections:
 
 只需将你需要打字动画的内容插入 `typeit` shortcode 中即可。
 
-`typeit` shortcode 有以下命名参数：
+`typeit` shortcode 有以下具名参数：
 
 - **tag** _[可选]_
 

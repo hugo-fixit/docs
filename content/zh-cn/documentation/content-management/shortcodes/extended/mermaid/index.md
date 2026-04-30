@@ -44,6 +44,26 @@ collections:
 {{</* /mermaid */>}}
 ```
 
+也支持具名参数：
+
+```markdown
+{{</* mermaid wrapper=false */>}}
+graph TD
+    A[开始] --> B[结束]
+{{</* /mermaid */>}}
+```
+
+```markdown
+{{</* mermaid filename="architecture.mmd" */>}}
+graph TD
+    A[客户端] --> B[服务端]
+{{</* /mermaid */>}}
+```
+
+参数说明
+: `wrapper` (`bool`) 可选。为当前 shortcode 实例覆盖 `params.mermaid.wrapper`。
+: `filename` (`string`) 可选。设置图表/代码下载动作使用的文件名。
+
 ### 配置 {#configuration}
 
 有关详细的配置选项、主题，请参考 [图表支持 - Mermaid][diagrams-support-mermaid] 页面。

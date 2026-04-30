@@ -39,7 +39,7 @@ collections:
 
 ## 详细参数
 
-`bluesky` shortcode 有以下命名参数：
+`bluesky` shortcode 有以下具名参数：
 
 - **link** _[必需]_ {{< version 0.3.17 >}}
 

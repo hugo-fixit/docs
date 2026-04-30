@@ -43,7 +43,7 @@ Or
 
 {{< version 0.3.8 >}}
 
-`spotify` shortcode 有以下命名参数：
+`spotify` shortcode 有以下具名参数：
 
 - **type** _[必需]_ (**第一个**位置参数)
 
