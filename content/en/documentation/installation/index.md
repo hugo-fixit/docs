@@ -23,9 +23,12 @@ Install **FixIt** theme for your Hugo site in a few steps.
 
 ## Prerequisites
 
-Thanks to the simplicity of Hugo, [Hugo][hugo] may be the only dependency of this theme.
+[Hugo][hugo] (extended edition) and [Dart Sass][dart-sass] are required dependencies of this theme.
 
-Although not required in all cases, [Git][git], [Go][go], [Dart Sass][dart-sass] and [Node.js][node.js] are commonly used when working with Hugo.
+> [!important]
+> Dart Sass is required to transpile the theme's SCSS to CSS.
+
+Although not required in all cases, [Git][git], [Go][go] and [Node.js][node.js] are commonly used when working with Hugo.
 
 Git is required to:
 
@@ -40,19 +43,18 @@ Go is required to:
 - Build Hugo from source
 - Use the [Hugo Modules][hugo-modules] feature
 
-Dart Sass is required to transpile Sass to CSS when using the latest features of the Sass language.
-
 Node.js is required to:
 
 - Use the FixIt CLI
+- Use the [`@hugo-fixit/post-encrypt`][post-encrypt] script for content encryption
 - Some Automation Tools, e.g. [atomic-algolia]({{< relref path="/guides/algolia-atomic" >}})
 
 Please refer to the relevant documentation for installation instructions:
 
 - [Hugo][hugo-install] (extended edition, v{{< param docs.min_hugo_version >}} or later)
+- [Dart Sass][dart-sass-install]
 - [Git][git-install]
 - [Go][go-install]
-- [Dart Sass][dart-sass-install]
 - [Node.js][node-install] (v20.0.0 or later)
 
 ## Installations
@@ -138,8 +140,8 @@ hugo mod get -u
 hugo mod get -u ./...
 # Update one module
 hugo mod get -u github.com/hugo-fixit/FixIt
-# Get a specific version (e.g. v0.4.5, @latest, @main)
-hugo mod get github.com/hugo-fixit/FixIt@v0.4.5
+# Get a specific version (e.g. v1.0.0, @latest, @main)
+hugo mod get github.com/hugo-fixit/FixIt@v1.0.0
 ```
 
 {{% /tab %}}
@@ -155,6 +157,26 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.4.5
 | Download speed?               | :x:                | :x:                | :heavy_check_mark: | :white_check_mark: |
 | Automatic updates?            | :x:                | :x:                | :white_check_mark: | :white_check_mark: |
 | Latest version available?     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+## Versioning
+
+FixIt follows [Semantic Versioning](https://semver.org/). The **stable** version is determined by [GitHub Releases](https://github.com/hugo-fixit/FixIt/releases), while the `main` branch contains development changes and unreleased new features.
+
+- For **production sites**, always use a tagged release (e.g. `v1.0.0`).
+- The `main` branch may include breaking changes and is not guaranteed to be stable.
+
+When using Hugo Modules, pin to a specific version:
+
+```bash
+hugo mod get github.com/hugo-fixit/FixIt@v1.0.0
+```
+
+When using Git Submodules, checkout a specific tag:
+
+```bash
+cd themes/FixIt
+git checkout v1.0.0
+```
 
 ## CLI
 
@@ -198,3 +220,4 @@ The supported template presets are:
 [fixit-cli]: https://github.com/hugo-fixit/fixit-cli
 [git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
+[post-encrypt]: https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt

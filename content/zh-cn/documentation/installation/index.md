@@ -23,9 +23,12 @@ resources:
 
 ## 先决条件
 
-由于 Hugo 提供的便利性，[Hugo][hugo] 可能是此主题的唯一依赖项。
+[Hugo][hugo]（扩展版）和 [Dart Sass][dart-sass] 是此主题的必需依赖项。
 
-尽管不是在所有情况下都需要，但是在使用 Hugo 时通常会使用 [Git][git]、[Go][go]、[Dart Sass][dart-sass] 和 [Node.js][node.js]。
+> [!important]
+> Dart Sass 用于将主题的 SCSS 转译为 CSS。
+
+尽管不是在所有情况下都需要，但是在使用 Hugo 时通常会使用 [Git][git]、[Go][go] 和 [Node.js][node.js]。
 
 Git 用于：
 
@@ -40,19 +43,18 @@ Go 用于：
 - 从源代码构建 Hugo
 - 使用 [Hugo 模块功能][hugo-modules]
 
-Dart Sass 用于在使用 Sass 语言的最新功能时将 Sass 转译为 CSS。
-
 Node.js 用于：
 
+- 使用 [`@hugo-fixit/post-encrypt`][post-encrypt] 脚本进行内容加密
 - 使用 FixIt CLI
 - 使用一些自动化工具，例如 [atomic-algolia]({{< relref path="/guides/algolia-atomic" >}})
 
 请参考相关文档以获取安装说明：
 
 - [Hugo][hugo-install]（扩展版，v{{< param docs.min_hugo_version >}} 或更高版本）
+- [Dart Sass][dart-sass-install]
 - [Git][git-install]
 - [Go][go-install]
-- [Dart Sass][dart-sass-install]
 - [Node.js][node-install]（v20.0.0 或更高版本）
 
 ## 安装方式
@@ -138,8 +140,8 @@ hugo mod get -u
 hugo mod get -u ./...
 # 更新一个模块
 hugo mod get -u github.com/hugo-fixit/FixIt
-# 获取特定版本（例如 v0.4.5, @latest, @main）
-hugo mod get github.com/hugo-fixit/FixIt@v0.4.5
+# 获取特定版本（例如 v1.0.0, @latest, @main）
+hugo mod get github.com/hugo-fixit/FixIt@v1.0.0
 ```
 
 {{% /tab %}}
@@ -155,6 +157,26 @@ hugo mod get github.com/hugo-fixit/FixIt@v0.4.5
 | 下载速度如何？           | :x:                | :x:                | :heavy_check_mark: | :white_check_mark: |
 | 是否可以自动更新？       | :x:                | :x:                | :white_check_mark: | :white_check_mark: |
 | 是否可以使用最新版本？   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+## 版本管理 {#versioning}
+
+FixIt 遵循[语义化版本控制](https://semver.org/)。**稳定**版本以 [GitHub Releases](https://github.com/hugo-fixit/FixIt/releases) 为准，而 `main` 分支包含开发中的改动和未发布的新功能。
+
+- 对于**生产环境**，请始终使用带标签的发布版本（例如 `v1.0.0`）。
+- `main` 分支可能包含破坏性更改，不保证稳定性。
+
+使用 Hugo 模块时，锁定到特定版本：
+
+```bash
+hugo mod get github.com/hugo-fixit/FixIt@v1.0.0
+```
+
+使用 Git 子模块时，切换到特定标签：
+
+```bash
+cd themes/FixIt
+git checkout v1.0.0
+```
 
 ## CLI
 
@@ -198,3 +220,4 @@ FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站
 [fixit-cli]: https://github.com/hugo-fixit/fixit-cli
 [git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
+[post-encrypt]: https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt
