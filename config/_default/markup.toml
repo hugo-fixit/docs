@@ -1,15 +1,6 @@
 # -------------------------------------------------------------------------------------
-# Markup Configuration | 解析配置
+# Markup Configuration
 # See: https://gohugo.io/configuration/markup/
 # -------------------------------------------------------------------------------------
 
-# Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-# 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-[highlight]
-_merge = "shallow"
-
-# Goldmark is from Hugo 0.60 the default library used for Markdown
-# Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
-# https://gohugo.io/configuration/markup/#goldmark
-[goldmark]
 _merge = "shallow"

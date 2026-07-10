@@ -1,8 +1,9 @@
 # -------------------------------------------------------------------------------------
-# Taxonomies Configuration | 分类法配置
+# Taxonomies Configuration
 # See: https://gohugo.io/configuration/taxonomies/
 # -------------------------------------------------------------------------------------
 
+_merge = "shallow"
 category = "categories"
 tag = "tags"
 collection = "collections"

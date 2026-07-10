@@ -3,7 +3,7 @@
 # See: https://fixit.lruihao.cn/documentation/basics/#theme-configuration
 # -------------------------------------------------------------------------------------
 
-[gitInfo]
+[git_info]
 dir = "content/en"
 
 [search]
@@ -16,21 +16,21 @@ index = "index.en"
 [cse.google]
 cx = "27010f0a2633d4da4"
 
-[postChat]
-userDesc = "If you have any questions about FixIt, you can ask me~"
-defaultChatQuestions = [
+[post_chat]
+user_desc = "If you have any questions about FixIt, you can ask me~"
+default_chat_questions = [
   "How to install the FixIt theme?",
   "What features does the FixIt theme have?",
   "FixIt theme ecosystem"
 ]
-defaultSearchQuestions = [
+default_search_questions = [
   "Quick Start",
   "Configure FixIt",
   "Content Management",
   "Advanced Usage"
 ]
 
-[postSummary]
+[post_summary]
 title = "AI Summary"
 
 [header]
@@ -49,14 +49,14 @@ Twitter = "lruihao"
 Email = "fixit@lruihao.cn"
 RSS = true
 
-[social.zsxq]
-id = "CE3GF"
-Weight = 70
-Prefix = "https://t.zsxq.com/"
-Title = "Hugo FixIt Planet"
+# [social.zsxq]
+# id = "CE3GF"
+# Weight = 70
+# Prefix = "https://t.zsxq.com/"
+# Title = "Hugo FixIt Planet"
 
-[social.zsxq.icon]
-Src = "images/icons/zsxq.svg"
+# [social.zsxq.icon]
+# Src = "images/icons/zsxq.svg"
 
 [social.QQGroup]
 id = "awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM"

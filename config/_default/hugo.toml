@@ -1,46 +1,39 @@
 # -------------------------------------------------------------------------------------
-# Hugo Configuration | Hugo 配置
+# Hugo Configuration
 # See: https://gohugo.io/configuration/all/
 # -------------------------------------------------------------------------------------
 
 # website title
-# 网站标题
 title = "FixIt"
-
-# Hostname (and path) to the root
-# 根目录的主机名（和路径）
-baseURL = "http://localhost:1313/"
-
-# theme
-# 主题
-# theme = ["FixIt", "shortcode-rewards"]
-
+# hostname (and path) to the root
+baseURL = "http://localhost:1313"
+# theme list
+# theme = ["FixIt"] # enable in your site config file
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
-# 设置默认的语言 ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "en"
-# disableLanguages = ["zh-cn"]
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+# language name ["English", "简体中文", "Français", "Polski", ...]
+languageName = "English"
 # whether to include Chinese/Japanese/Korean
-# 是否包括中日韩文字
 hasCJKLanguage = false
-# Timezone Local
-# 时区
+# timezone local
 timeZone = "Asia/Shanghai"
-
 # copyright description used only for seo schema
-# 版权描述，仅仅用于 SEO
 copyright = ""
-
 # whether to use robots.txt
-# 是否使用 robots.txt
 enableRobotsTXT = true
 # whether to use git commit log
-# 是否使用 git 信息
 enableGitInfo = true
 # whether to use emoji code
-# 是否使用 emoji 代码
 enableEmoji = true
+# the capitalization rules to follow, optional values: ["ap", "chicago", "go", "firstupper", "none"]
+titleCaseStyle = "ap"
+# whether to capitalize automatic list titles
+capitalizeListTitles = false
 # the main sections of a site
-# 主站点的主要部分
+# if set, the MainSections method on the Site object returns the given sections,
+# otherwise it returns the section with the most pages.
 mainSections = [
   "contributing",
   "documentation",
@@ -49,18 +42,9 @@ mainSections = [
   "references",
   "guides",
 ]
-
 # the editor to use when creating new content
-# 创建新内容时使用的编辑器
 newContentEditor = "code"
-
-# whether to capitalize automatic list titles
-# 是否自动大写列表标题
-titleCaseStyle = "ap"
-capitalizeListTitles = false
-
-# ignore some build errors
-# 忽略一些构建错误
+# ignore some build warnings and errors
 ignoreLogs = [
   "error-get-remote-json",
   "error-get-gh-repo",

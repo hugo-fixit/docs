@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------------
-# Modules Configuration | 模块配置
+# Modules Configuration
 # See: https://gohugo.io/configuration/module/
 # https://github.com/gohugoio/hugo/pull/13966
 #
@@ -47,4 +47,4 @@ version = "latest"
 
 [hugoVersion]
 extended = true
-min = "0.156.0"
+min = "0.161.0"

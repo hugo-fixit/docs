@@ -1,279 +1,900 @@
 # -------------------------------------------------------------------------------------
-# Theme Core Configuration | 主题核心配置
+# Theme Core Configuration
+# Two types of params:
+#   1. Site-level params — apply to the entire site, can NOT be overridden per-page.
+#   2. Page-level params — can be overridden per-page via page front matter.
+#
 # See: https://fixit.lruihao.cn/documentation/basics/#theme-configuration
 # -------------------------------------------------------------------------------------
 
 # FixIt theme version
-# FixIt 主题版本
-version = "0.4.X"
-# website description for RSS, SEO, Open Graph and Twitter Cards
-# 网站描述，用于 RSS, SEO, Open Graph 和 Twitter Cards
+version = "1.0.X" # e.g. "0.4.X", "0.4.5", "v1.0.0" etc.
+# site description
 description = "A Clean, Elegant but Advanced Hugo Theme FixIt"
 # site keywords
-# 网站关键词
 keywords = [
   "Hugo",
   "FixIt"
 ]
 # site default theme ["light", "dark", "auto"]
-# 网站默认主题 ["light", "dark", "auto"]
-defaultTheme = "auto"
-# which hash function used for SRI, when empty, no SRI is used ["sha256", "sha384", "sha512", "md5"]
-# 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ["sha256", "sha384", "sha512", "md5"]
+default_theme = "auto"
+# which hash function used for SRI, when empty, no SRI is used
+# ["sha256", "sha384", "sha512", "md5"]
 fingerprint = ""
 # date format
-# 日期格式
-dateFormat = "2006-01-02"
+date_format = "2006-01-02"
 # website images for Open Graph and Twitter Cards
-# 网站图片，用于 Open Graph 和 Twitter Cards
 images = [ "/images/apple-devices-preview.webp" ]
-# FixIt 0.2.12 | NEW enable PWA
-# FixIt 0.2.12 | 新增 开启 PWA 支持
-enablePWA = true
-# FixIt 0.3.13 | NEW whether to capitalize titles
-# FixIt 0.3.13 | 新增 是否大写标题
-capitalizeTitles = true
-# FixIt 0.3.0 | NEW whether to add site title to the title of every page
+# whether to add site title to the title of every page
 # remember to set up your site title in `hugo.toml` (e.g. title = "title")
-# FixIt 0.3.0 | 新增 是否在每个页面标题中添加网站标题
-# 请记得在 `hugo.toml` 中设置网站标题 (例如 title = "title")
-withSiteTitle = true
-# FixIt 0.3.0 | NEW title delimiter when the site title is be added to the title of every page
-# FixIt 0.3.0 | 新增 当网站标题被添加到每个页面标题时的标题分隔符
-titleDelimiter = "|"
-# FixIt 0.3.0 | NEW whether to add site subtitle to the title of index page
+with_site_title = true
+# title delimiter when the site title is be added to the title of every page
+title_delimiter = "|"
+# whether to add site subtitle to the title of index page
 # remember to set up your site subtitle by `params.header.subtitle.name`
-# FixIt 0.3.0 | 新增 是否在主页标题中添加网站副标题
-# 请记得通过 `params.header.subtitle.name` 设置网站副标题
-indexWithSubtitle = true
-# FixIt 0.3.13 | NEW whether to show summary in plain text
-# FixIt 0.3.13 | 新增 是否显示纯文本摘要
-summaryPlainify = false
-# FixIt 0.4.0 | NEW whether to enable merging missing translations from other languages
+index_with_subtitle = true
+# whether to enable merging missing translations from other languages
 # when set to true, missing translations from other languages will be merged and displayed
 # default is false for better performance, especially for single-language sites
 # set to true if your site has multiple languages and you want to show all content
-enableTranslationMerge = false
-# FixIt 0.4.4 | NEW whether to enable tooltip replacement for elements with title attribute, such as footnote references
+enable_translation_merge = false
+# whether to enable tooltip replacement for elements with title attribute, such as footnote references
 tooltip = true
-# FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
-# You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
-# FixIt 0.2.14 | 新增 默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记。
-# 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法。
-disableThemeInject = false
+# FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
+# you can turn it off, but we would really appreciate if you don't, as this is a good way to watch FixIt's popularity on the rise.
+disable_theme_inject = false
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Page-level params
+# All params and sections below can be used in page front matter to override per-page.
+#
+# Example front matter:
+#   ---
+#   capitalize_titles: false
+#   hidden_from_home_page: true
+#   toc:
+#     enable: true
+#   math:
+#     enable: true
+#   comment:
+#     enable: false
+#   ---
+#
+# See: https://fixit.lruihao.cn/documentation/content-management/front-matter
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# whether to capitalize titles
+capitalize_titles = true
+# whether to show summary in plain text
+summary_plainify = false
+# whether to enable the author's avatar of the post
+author_avatar = true
+# whether to hide a page from home page
+hidden_from_home_page = false
+# whether to hide a page from search results
+hidden_from_search = false
+# whether to hide a page from related posts
+hidden_from_related = false
+# whether to hide a page from RSS, Atom and JSON feed
+hidden_from_feed = false
+# whether to enable twemoji
+twemoji = false
+# whether to enable lightgallery
+# set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
+# set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
+# [todo] change gallery engine in the future
+lightgallery = false
+# whether to enable the ruby extended syntax
+ruby = true
+# whether to enable the fraction extended syntax
+fraction = true
+# whether to enable the fontawesome extended syntax
+fontawesome = true
+# license info (HTML format is supported)
+license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+# Page style ["narrow", "normal", "wide", ...]
+page_style = "normal"
+# Auto Bookmark Support
+# if true, save the reading progress when closing the page.
+auto_bookmark = false
+# whether to show the last modified time
+show_lastmod = true
+# whether to enable wordCount
+word_count = true
+# whether to enable readingTime
+reading_time = true
+# whether to enable instant.page
+instant_page = false
+# whether to enable collection list at the sidebar
+collection_list = false
+# whether to enable collection navigation at the end of the post
+collection_navigation = false
+# end of post flag
+end_flag = ""
 
 # Author Configuration
-# 作者配置
 [author]
 name = "Lruihao"
 email = "1024@lruihao.cn"
 link = "https://lruihao.cn"
 avatar = "/images/avatar.png"
 
-# FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
-# FixIt 0.3.0 | 新增 公共 Git 仓库信息，仅在 enableGitInfo 设为 true 时有效
-[gitInfo]
+# Link config
+[link]
+# whether to add external Icon for external links automatically
+external_icon = true
+
+# External link guard config
+[link.guard]
+enable = false
+# external link guard mode, available modes: ["modal", "redirect"]
+# in "modal" mode, a dialog will pop up to ask for confirmation when users click external links
+# in "redirect" mode, users will be redirected to an intermediate page before visiting external links
+mode = "modal"
+# allowed domains (exact host or parent domain) will skip confirmation
+allow_domains = []
+
+# Image config
+# combined with Hugo's image processing option `imaging` for image optimisation
+[image]
+# cache remote images for better optimisations
+cache_remote = true
+# Image resizing and optimisation (may slow builds)
+optimise = true
+# A list of image file names or patterns to exclude from optimisation
+# e.g. ["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]
+black_list = []
+
+# Code block wrapper config
+# you can override the global config via Markdown attributes, for example:
+# ```lang {mode="mac", max_shown_lines=5}
+# code here
+# ```
+[codeblock]
+# whether to enable the code block wrapper
+wrapper = true
+# code block mode
+# available modes: ["classic", "mac", "simple", ...]
+# if you set to custom value, you need to create a custom CSS for data-mode attribute
+mode = "classic"
+# additional classes for the code block wrapper
+# e.g. "is-collapsed is-expanded line-nos-hidden line-wrapping"
+wrapper_class = ""
+# the maximum number of lines to show in the code block preview
+max_shown_lines = 10
+# whether to show shadow effect for code blocks, available values: ["always", "hover", "never"]
+shadow = "hover"
+# whether to enable code copy button
+copyable = true
+# [classic] whether to enable code download button in the code block header
+downloadable = false
+# [classic] whether to enable code fullscreen button in the code block header
+fullscreen = true
+# [classic] whether to enable line numbers toggle button in the code block header
+line_nos_toggler = true
+# [classic] whether to enable toggle line wrapping button in the code block header
+line_wrap_toggler = true
+# [classic][Experimental] whether to enable code edit button in the code block header
+editable = false
+
+# JSON Viewer config
+# See https://github.com/Lruihao/json-viewer-element
+[json_viewer]
+enable = true
+expand_depth = 1
+copyable = true
+sort = false
+boxed = true
+
+# File tree config
+# See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/file-tree/
+[filetree]
+# the expand level of the tree (expand all: -1, collapse all: 0)
+level = 1
+# whether to append a trailing "/" to folder names
+folder_slash = false
+# list of file or folder names to ignore
+ignore_list = []
+# list of file or folder names to highlight
+highlight_list = []
+
+# Mermaid config
+# See http://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/
+[mermaid]
+# whether to enable the Mermaid wrapper
+# When enabled, Mermaid diagrams are wrapped with diagram tabs and actions:
+# - pan/zoom (drag & ctrl+wheel)
+# - reset view
+# - download as SVG
+wrapper = true
+# Mermaid ESM module CDN source
+# default is https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs
+cdn = "https://unpkg.com/mermaid/dist/mermaid.esm.min.mjs"
+# ZenUML ESM module CDN source
+# default is empty, you can set it to a CDN source to enable ZenUML support
+# e.g. https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs
+zenuml = "https://unpkg.com/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
+# for values, see https://mermaid.js.org/config/theming.html#available-themes
+themes = [
+  "default",
+  "dark"
+]
+# The security level for Mermaid diagrams
+# optional values: ["strict", "loose", "antiscript", "sandbox"]
+security_level = "loose"
+# The appearance style for Mermaid diagrams
+# optional values: ["classic", "handDrawn"]
+look = "handDrawn"
+# Specifies the font to be used in the rendered diagrams
+font_family = ""
+# Layout loaders from ESM module CDN sources (e.g., ELK layout engine)
+# Example: ["https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk/dist/mermaid-layout-elk.esm.min.mjs"]
+# this will enable additional layout options: ["elk", "elk.layered", "elk.stress", "elk.force", "elk.mrtree"]
+layout_loaders = []
+# default layout algorithm for rendering diagrams
+# available options: "dagre" (default), "elk", "elk.layered", "elk.stress", "elk.force", "elk.mrtree"
+# note: ELK layouts require layout_loaders to be configured first
+layout = "dagre"
+
+# Table of the contents config
+[toc]
+# whether to enable the table of the contents
+enable = true
+# whether to keep the static table of the contents in front of the post
+keep_static = false
+# whether to make the table of the contents in the sidebar automatically collapsed
+auto = true
+# position of TOC ["left", "right"]
+position = "right"
+# supersede `markup.tableOfContents` settings
+ordered = false
+start_level = 2
+end_level = 6
+# whether to decrease the H1 heading level in content
+decrease_h1 = true
+
+# Display a message at the beginning of an article to warn the reader that its content might be expired
+[expiration_reminder]
+enable = true
+# display the reminder if the last modified time is more than 90 days ago
+reminder = 90
+# display warning if the last modified time is more than 180 days ago
+warning = 180
+# if the article expires, close the comment or not
+close_comment = false
+
+# page heading config
+[heading]
+# whether to capitalize automatic text of headings
+capitalize = false
+
+# must set `params.toc.ordered` to true
+[heading.number]
+# whether to enable auto heading numbering
+enable = true
+# only enable in main section pages (default is posts)
+only_main_section = true
+
+[heading.number.format]
+h1 = "{title}"
+h2 = "{h2} {title}"
+h3 = "{h2}.{h3} {title}"
+h4 = "{h2}.{h3}.{h4} {title}"
+h5 = "{h2}.{h3}.{h4}.{h5} {title}"
+h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
+
+# mathematical formulas configuration
+# See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
+[math]
+enable = true
+# mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
+type = "katex"
+
+# KaTeX server-side rendering (https://katex.org)
+# KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
+[math.katex]
+# KaTeX extension copy-tex
+copy_tex = true
+throw_on_error = false
+error_color = "#ff4949"
+
+# custom macros map
+# syntax: <macro> = <definition>
+[math.katex.macros]
+"\\f" = "#1f(#2)" # usage: $\f{a}{b}$
+
+# MathJax server-side rendering (https://www.mathjax.org)
+# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+[math.mathjax]
+cdn = "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+
+[math.mathjax.packages]
+"[+]" = [
+  "physics",
+  "xypic"
+]
+
+# custom macros map
+# syntax: <macro> = <definition>
+[math.mathjax.macros]
+# usage: $\bold{math}$
+bold = [
+  "{\\bf #1}",
+  1
+]
+
+[math.mathjax.loader]
+load = [
+  "ui/safe",
+  "[tex]/physics",
+  "[custom]/xypic.js"
+]
+
+[math.mathjax.loader.paths]
+custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+
+# more loader config e.g source, dependencies, provides etc.
+
+[math.mathjax.options]
+enable_menu = true
+# HTML tags that won't be searched for math
+skip_html_tags = [
+  "script",
+  "noscript",
+  "style",
+  "textarea",
+  "pre",
+  "code",
+  "math",
+  "select",
+  "option",
+  "mjx-container"
+]
+# class that marks tags not to search
+ignore_html_class = "mathjax_ignore"
+
+# HTML tags that can appear within math
+[math.mathjax.options.include_html_tags]
+# "#comment" = ""
+# br = "\n"
+# wbr = ""
+
+[math.mathjax.tex]
+
+[math.mathjax.tex.physics]
+italicdiff = false
+arrowdel = false
+
+# Mapbox GL JS config (https://docs.mapbox.com/mapbox-gl-js)
+[mapbox]
+# access token of Mapbox GL JS
+access_token = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+# style for the light theme
+light_style = "mapbox://styles/mapbox/light-v11?optimize=true"
+# style for the dark theme
+dark_style = "mapbox://styles/mapbox/dark-v11?optimize=true"
+# whether to add NavigationControl
+navigation = true
+# whether to add GeolocateControl
+geolocate = true
+# whether to add ScaleControl
+scale = true
+# whether to add FullscreenControl
+fullscreen = true
+
+# PostChat AI config
+# based on your posts to build a knowledge base, support AI summary, AI search, and AI Chatbot.
+# get PostChat Key from my invitation link, thanks for your support!
+# https://ai.zhheo.com/console/login?InviteID=85041330
+[post_chat]
+enable = true
+key = "P-2J0JXDUZY4EALD3P"
+# how users initiate chats: ["iframe", "magic"]
+user_mode = "magic"
+add_button = true
+default_input = false
+left = ""
+bottom = ""
+width = ""
+height = ""
+fill = ""
+background_color = ""
+upload_web = true
+show_invite_link = true
+user_title = "Cell+"
+user_desc = ""
+# dom container to be blacked out, e.g. [".aplayer"]
+black_dom = []
+# only for iframe mode
+frame_width = "" # e.g. "375px"
+frame_height = "" # e.g. "600px"
+# only for magic mode
+user_icon = "https://lruihao.cn/images/avatar.jpg"
+default_chat_questions = []
+default_search_questions = []
+hot_words = true
+
+# Summary AI config
+# See https://ai.zhheo.com/docs/summary.html
+[post_summary]
+enable = true
+# if you set `params.post_chat.key`, you don't need to set `params.post_summary.key`
+key = ""
+title = ""
+# themes options: ["", "simple", "yanzhi", "menghuan"]
+theme = ""
+post_url = ""
+blacklist = ""
+word_limit = 5000
+typing_animate = true
+beginning_text = ""
+loading_text = true
+
+# Podcast AI config
+# See https://ai.zhheo.com/docs/podcast.html
+[podcast]
+enable = true
+
+# Related content config (https://gohugo.io/content-management/related/)
+[related]
+enable = true
+count = 5
+# position of related content, optional values: ["aside", "footer"]
+position = [
+  "aside",
+  "footer"
+]
+
+# Donate (Sponsor) settings
+[reward]
+enable = true
+animation = false
+# position relative to post footer, optional values: ["before", "after"]
+position = "after"
+comment = "Buy me a coffee"
+# display mode of QR code images, optional values: ["static", "fixed"], default: `static`
+mode = "fixed"
+
+[reward.ways]
+wechatpay = "/images/wechatpay.jpg"
+alipay = "/images/alipay.jpg"
+# paypal = "/images/paypal.png"
+# bitcoin = "/images/bitcoin.png"
+
+# Post footer link config
+[post_link]
+# whether to show link to Raw Markdown content
+markdown = true
+# whether to show link to view source code (requires git_info.repo)
+source = true
+# whether to show link to edit the post (requires git_info.repo)
+edit = true
+# whether to show link to report issue (requires git_info.repo)
+report = true
+# open in editor protocol (e.g. "vscode", "trae" etc.), empty to disable
+editor = "vscode"
+
+# Social share links in post page
+[share]
+enable = true
+Twitter = true
+Facebook = true
+Linkedin = false
+Whatsapp = false
+Pinterest = false
+Tumblr = false
+HackerNews = false
+Reddit = false
+VK = false
+Buffer = false
+Xing = false
+Line = false
+Instapaper = false
+Pocket = false
+Flipboard = false
+Weibo = true
+Myspace = false
+Blogger = false
+Baidu = false
+Odnoklassniki = false
+Evernote = false
+Skype = false
+Trello = false
+Mix = false
+
+# Comment config
+[comment]
+enable = false
+
+# Artalk comment config (https://artalk.js.org/)
+[comment.artalk]
+enable = false
+server = "https://yourdomain"
+site = "默认站点"
+# prefer remote (backend) configuration over local
+# If true, remote config takes priority; if false (default), local config overrides remote
+prefer_remote_conf = false
+placeholder = ""
+no_comment = ""
+send_btn = ""
+editor_travel = true
+flat_mode = "auto"
+# enable lightgallery support
+lightgallery = false
+locale = ""
+emoticons = ""
+nest_max = 2
+nest_sort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
+vote = true
+vote_down = false
+ua_badge = true
+list_sort = true
+list_unread_highlight = false
+img_upload = true
+img_lazy_load = false # false | "native" | "data-src"
+preview = true
+version_check = true
+# request timeout in milliseconds
+req_timeout = 15000
+# page view increment on comment list load
+pv_add = true
+
+# pagination config
+[comment.artalk.pagination]
+page_size = 20
+read_more = true
+auto_load = true
+
+# height limit config
+[comment.artalk.height_limit]
+content = 300
+children = 400
+scrollable = false
+
+# Disqus comment config (https://disqus.com)
+[comment.disqus]
+enable = false
+# Disqus shortname to use Disqus in posts
+shortname = ""
+
+# Gitalk comment config (https://github.com/gitalk/gitalk)
+[comment.gitalk]
+enable = false
+owner = ""
+repo = ""
+client_id = ""
+client_secret = ""
+
+# Valine comment config (https://github.com/xCss/Valine)
+[comment.valine]
+enable = false
+app_id = ""
+app_key = ""
+placeholder = ""
+avatar = "mp"
+meta = [
+  'nick',
+  'mail',
+  'link'
+]
+required_fields = []
+page_size = 10
+lang = ""
+visitor = true
+record_ip = true
+highlight = true
+enable_qq = false
+server_urls = ""
+# emoji data file name, default is "google.yml"
+# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+# located in "themes/FixIt/assets/lib/valine/emoji/" directory
+# you can store your own data files in the same path under your project:
+# "assets/lib/valine/emoji/"
+emoji = ""
+comment_count = true
+
+# Waline comment config (https://waline.js.org)
+[comment.waline]
+enable = false
+server_url = ""
+pageview = false
+emoji = [ "//unpkg.com/@waline/emojis@1.1.0/weibo" ]
+meta = [
+  "nick",
+  "mail",
+  "link"
+]
+required_meta = []
+login = "enable"
+word_limit = 0
+page_size = 10
+image_uploader = false
+highlighter = false
+comment = false
+tex_renderer = false
+search = false
+recaptcha_v3_key = ""
+turnstile_key = ""
+reaction = false
+
+# Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
+[comment.facebook]
+enable = false
+width = "100%"
+num_posts = 10
+app_id = ""
+language_code = ""
+
+# Telegram comments config (https://comments.app)
+[comment.telegram]
+enable = false
+site_id = ""
+limit = 5
+height = ""
+color = ""
+colorful = true
+dislikes = false
+outlined = false
+
+# Commento comment config (https://commento.io)
+[comment.commento]
+enable = false
+
+# Utterances comment config (https://utteranc.es)
+[comment.utterances]
+enable = false
+# owner/repo
+repo = ""
+issue_term = "pathname"
+label = ""
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+# Twikoo comment config (https://twikoo.js.org/)
+[comment.twikoo]
+enable = false
+env_id = ""
+region = ""
+path = ""
+visitor = true
+comment_count = true
+lang = ""
+# enable lightgallery support
+lightgallery = false
+# enable Katex support
+katex = false
+
+# Giscus comments config
+[comment.giscus]
+enable = false
+repo = ""
+repo_id = ""
+category = ""
+category_id = ""
+mapping = ""
+# Or set it to your self-hosted domain
+origin = "https://giscus.app"
+strict = "0"
+term = ""
+reactions_enabled = "1"
+emit_metadata = "0"
+input_position = "bottom" # ["top", "bottom"]
+lang = ""
+light_theme = "light"
+dark_theme = "dark"
+lazy_load = true
+
+# Third-party library config
+[library]
+
+[library.css]
+# someCSS = "some.css"
+# located in "assets/"
+# Or
+# someCSS = "https://cdn.example.com/some.css"
+
+[library.js]
+# someJavascript = "some.js"
+# located in "assets/"
+# Or
+# someJavascript = "https://cdn.example.com/some.js"
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# public Git repository information only then enableGitInfo is true
+[git_info]
+# e.g. "https://github.com/hugo-fixit/docs"
 repo = "https://github.com/hugo-fixit/docs"
 branch = "main"
 # the content directory path relative to the root of the repository
-# 相对于仓库根目录的内容目录路径
 dir = "content"
 # the issue template for reporting issue of the posts
 # available template params: {title} {URL} {sourceURL}
-# 用于报告文章问题的 issue 模板
-# 可用模板参数：{title} {URL} {sourceURL}
-issueTpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
+issue_tpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|URL|{URL}|%0A|Filename|{sourceURL}|"
 
-# App icon config
-# 应用图标配置
+# App and PWA config
 [app]
-# optional site title override for the app when added to an iOS home screen or Android launcher
-# 当添加到 iOS 主屏幕或者 Android 启动器时的标题，覆盖默认标题
-title = "FixIt"
+# whether to enable PWA support
+pwa = true
+# app name used for home screen and manifest (falls back to site title)
+name = "Hugo FixIt"
+# optional short name for the manifest (falls back to name)
+short_name = "FixIt"
 # whether to omit favicon resource links
-# 是否隐藏网站图标资源链接
-noFavicon = false
+no_favicon = false
 # modern SVG favicon to use in place of older style .png and .ico files
-# 更现代的 SVG 网站图标，可替代旧的 .png 和 .ico 文件
-# svgFavicon = "/images/fixit.min.svg"
+svg_favicon = ""
 # Safari mask icon color
-# Safari 图标颜色
-iconColor = "#FF7359"
+mask_color = "#FF7359"
 # Windows v8-10 tile color
-# Windows v8-10 磁贴颜色
-tileColor = "#2d89ef"
+tile_color = "#2d89ef"
 
 # Android browser theme color
-# Android 浏览器主题色
-[app.themeColor]
-light = "#f8f8f8"
-dark = "#252627"
+[app.theme_color]
+light = "#f6f8fa"
+dark = "#151b23"
+
+# Web app manifest icons (users should provide their own icon files)
+[[app.icons]]
+src = "/apple-touch-icon.png"
+sizes = "180x180"
+type = "image/png"
+purpose = "any maskable"
+
+[[app.icons]]
+src = "/android-chrome-192x192.png"
+sizes = "192x192"
+type = "image/png"
+
+[[app.icons]]
+src = "/android-chrome-512x512.png"
+sizes = "512x512"
+type = "image/png"
 
 # Search config
-# 搜索配置
 [search]
 enable = true
-# type of search engine ["algolia", "fuse", "cse"]
-# 搜索引擎的类型 ["algolia", "fuse", "cse"]
+# type of search engine ["fuse", "algolia", "pagefind", "cse"]
 type = "algolia"
 # max index length of the chunked content
-# 文章内容最长索引长度
-contentLength = 4000
+content_length = 4000
 # placeholder of the search bar
-# 搜索框的占位提示语
 placeholder = ""
 # max number of results length
-# 最大结果数目
-maxResultLength = 10
+max_result_length = 10
 # snippet length of the result
-# 结果内容片段长度
-snippetLength = 30
+snippet_length = 30
 # HTML tag name of the highlight part in results
-# 搜索结果中高亮部分的 HTML 标签
-highlightTag = "em"
+highlight_tag = "em"
 # whether to use the absolute URL based on the baseURL in search index
-# 是否在搜索索引中使用基于 baseURL 的绝对路径
-absoluteURL = false
+absolute_url = false
+# whether to enable anchorify for headings in search results
+anchorify = true
 
 [search.algolia]
 index = ""
-appID = "YKOM6PKLUY"
-searchKey = "a44c110d3ac360be2c69cd79d34b77a8"
+app_id = "YKOM6PKLUY"
+search_key = "a44c110d3ac360be2c69cd79d34b77a8"
 
+# https://fusejs.io/api/options.html
 [search.fuse]
-# FixIt 0.2.17 | NEW https://fusejs.io/api/options.html
-isCaseSensitive = false
-minMatchCharLength = 2
-findAllMatches = false
+is_case_sensitive = false
+min_match_char_length = 2
+find_all_matches = false
 location = 0
 threshold = 0.3
 distance = 100
-ignoreLocation = false
-useExtendedSearch = false
-ignoreFieldNorm = false
+ignore_location = false
+use_extended_search = false
+ignore_field_norm = false
 
-# FixIt 0.3.16 | NEW Custom Search Engine (CSE)
-# FixIt 0.3.16 | 新增 自定义搜索引擎 (CSE)
+# Pagefind search config (http://pagefind.app/)
+[search.pagefind]
+# Pagefind bundle and index directory
+bundle_path = "pagefind/"
+# debounce timeout in milliseconds, set to 0 to disable debounce
+debounce_timeout_ms = 300
+# whether to respect FixIt built-in search visibility rules
+use_built_in_filters = true
+# optional sort field: ["date", "title"]
+sort_by = ""
+# sort order for sort_by: ["asc", "desc"]
+sort_order = "desc"
+
+# Custom Search Engine (CSE)
 [cse]
-# Search Engine: ["google", "bing"]
-# 搜索引擎：["google", "bing"]
+# search engine: ["google", "bing"]
 engine = "google"
-# Search results page URL (layout: search)
-# 搜索结果页面 URL (layout: search)
-resultsPage = "/search/"
+# search results page URL (layout: search)
+results_page = "/search/"
 
-# Google: https://programmablesearchengine.google.com/
 # Google Custom Search Engine Context
-# Google 自定义搜索引擎 ID
+# See: https://programmablesearchengine.google.com/
 [cse.google]
 cx = ""
 
-# Bing (Unsupported): https://www.customsearch.ai/
+# Bing Custom Search Engine Context (unverified)
+# See: https://www.customsearch.ai/
 [cse.bing]
+cx = ""
 
 # Header config
-# 页面头部导航栏配置
 [header]
 # desktop header mode ["sticky", "normal", "auto"]
-# 桌面端导航栏模式 ["sticky", "normal", "auto"]
-desktopMode = "sticky"
+desktop_mode = "sticky"
 # mobile header mode ["sticky", "normal", "auto"]
-# 移动端导航栏模式 ["sticky", "normal", "auto"]
-mobileMode = "auto"
+mobile_mode = "auto"
+# whether to enable header blur effect
+blur = false
 
 # Header title config
-# 页面头部导航栏标题配置
 [header.title]
-# URL of the LOGO, default is favicon
-# LOGO 的 URL，默认为网站图标
+# URL of the logo
 logo = "/images/hugo-fixit.webp"
-# title name, default is site title
-# 标题名称，默认为网站标题
+# title name
 name = ""
 # you can add extra information before the name (HTML format is supported), such as icons
-# 你可以在名称 (允许 HTML 格式) 之前添加其他信息，例如图标
 pre = ""
 # you can add extra information after the name (HTML format is supported), such as icons
-# 你可以在名称 (允许 HTML 格式) 之后添加其他信息，例如图标
 post = ""
 # whether to use typeit animation for title name
-# 是否为标题显示打字机动画
 typeit = false
 
-# FixIt 0.2.12 | NEW Header subtitle config
-# FixIt 0.2.12 | 新增 页面头部导航栏副标题配置
+# Header subtitle config
 [header.subtitle]
 # subtitle name
-# 副标题名称
 name = ""
 # whether to use typeit animation for subtitle name
-# 是否为副标题显示打字机动画
 typeit = false
 
-# FixIt 0.2.18 | NEW Breadcrumb config
-# FixIt 0.2.18 | 新增 面包屑导航配置
+# Breadcrumb config
 [breadcrumb]
 enable = true
 sticky = true
-showHome = false
-# FixIt 0.3.13 | NEW
+show_home = false
 separator = "/"
 capitalize = true
 
-# FixIt 0.3.10 | NEW Post navigation config
-# FixIt 0.3.10 | 新增 文章导航配置
+# Post navigation config
 [navigation]
 # whether to show the post navigation in section pages scope
-# 是否在 section 页面范围内显示文章导航
-inSection = false
+in_section = false
 # whether to reverse the next/previous post navigation order
-# 是否反转 下一篇/上一篇 文章导航顺序
 reverse = false
 
 # Footer config
-# 页面底部信息配置
 [footer]
 enable = true
 # whether to show copyright info
-# 是否显示版权信息
 copyright = true
 # whether to show the author
-# 是否显示作者
 author = true
 # site creation year
-# 网站创立年份
-since = 2021
+since = "2021"
 # TODO whether to show total word count of site content
-# TODO 是否显示网站内容总字数
-wordCount = true
-# FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
-# FixIt 0.2.12 | 新增 公网安备信息，仅在中国使用 (支持 HTML 格式)
+word_count = true
+# Public network security only in China (HTML format is supported)
 gov = ""
 # ICP info only in China (HTML format is supported)
-# ICP 备案信息，仅在中国使用 (支持 HTML 格式)
 icp = ""
 # license info (HTML format is supported)
-# 许可协议信息 (支持 HTML 格式)
 license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
 
-# FixIt 0.3.0 | NEW whether to show Hugo and theme info
-# FixIt 0.3.0 | 新增 是否显示 Hugo 和主题信息
+# whether to show Hugo and theme info
 [footer.powered]
 enable = true
-hugoLogo = true
-themeLogo = true
+hugo_logo = true
+theme_logo = true
 
-# FixIt 0.2.17 | CHANGED Site creation time
-# FixIt 0.2.17 | 更改 网站创立时间
-[footer.siteTime]
+# Site creation time
+[footer.site_time]
 enable = true
 animate = true
 icon = "fa-solid fa-heartbeat"
 pre = ""
+# e.g. "2021-12-18T16:15:22+08:00"
 value = "2021-12-18T16:15:22+08:00"
 
-# FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
-# FixIt 0.2.17 | 新增 页面底部行排序，可选值：["first", 0, 1, 2, 3, 4, 5, "last"]
+# footer lines order, optional values: ["first", 0-5, "last"]
 [footer.order]
 powered = 0
 copyright = 0
@@ -281,121 +902,95 @@ statistics = 0
 visitor = 0
 beian = 0
 
-# Section (all posts) page config
-# Section (所有文章) 页面配置
-[section]
-# special amount of posts in each section page
-# section 页面每页显示文章数量
+# Archives page config (all pages of posts type)
+[archives]
+# special amount of posts in archives page
 paginate = 20
 # date format (month and day)
-# 日期格式 (月和日)
-dateFormat = "01-02"
+date_format = "01-02"
 
-# FixIt 0.3.10 | NEW Section feed config for RSS, Atom and JSON feed.
-# FixIt 0.3.10 | 新增 Section feed 配置用于 RSS, Atom 和 JSON feed。
+# Section page config (all pages in section)
+[section]
+# special amount of pages in each section page
+paginate = 20
+# date format (month and day)
+date_format = "01-02"
+
+# Section feed config for RSS, Atom and JSON feed.
 [section.feed]
-# The number of posts to include in the feed. If set to -1, all posts.
-# 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+# the number of posts to include in the feed. If set to -1, all posts.
 limit = -1
 # whether to show the full text content in feed.
-# 是否在 feed 中显示全文内容。
-fullText = false
+full_text = false
 
-# List (category or tag) page config
-# List (目录或标签) 页面配置
+# Term list (category or tag) page config
 [list]
 # special amount of posts in each list page
-# list 页面每页显示文章数量
 paginate = 20
 # date format (month and day)
-# 日期格式 (月和日)
-dateFormat = "01-02"
+date_format = "01-02"
 
-# FixIt 0.3.10 | NEW Term list feed config for RSS, Atom and JSON feed.
-# FixIt 0.3.10 | 新增 Term list feed 配置用于 RSS, Atom 和 JSON feed。
+# Term list feed config for RSS, Atom and JSON feed.
 [list.feed]
-# The number of posts to include in the feed. If set to -1, all posts.
-# 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+# the number of posts to include in the feed. If set to -1, all posts.
 limit = -1
 # whether to show the full text content in feed.
-# 是否在 feed 中显示全文内容。
-fullText = false
+full_text = false
 
-# FixIt 0.3.13 | NEW recently updated pages config for archives, section and term list
-# FixIt 0.3.13 | 新增 最近更新页面配置用于归档、section 和 term 列表
-[recentlyUpdated]
+# recently updated pages config for archives, section and term list
+[recently_updated]
 archives = true
 section = true
-term = true
+list = true
 days = 30
-maxCount = 10
+max_count = 10
 
 # TagCloud config for tags page
-# 标签云配置
-[tagcloud]
+[tag_cloud]
 enable = true
 # Minimum font size in px
-# 以 px 为单位的最小字体大小
 min = 14
 # Maximum font size in px
-# 以 px 为单位的最大字体大小
 max = 32
 # Maximum count of posts per tag
-# 每个标签的最大帖子数
-peakCount = 10
+peak_count = 10
 # Order of tags, optional values: ["name", "count"]
-# 标签顺序，可选值：["name", "count"]
 orderby = "name"
 
 # Home page config
-# 主页配置
 [home]
-# amount of RSS pages
-# RSS 文章数目
-rss = 10
 
 # Home page profile
-# 主页个人信息
 [home.profile]
 enable = true
-# FixIt 0.4.0 | NEW Whether to show profile and content only in the first home page
-# FixIt 0.4.0 | 新增 仅在首页显示个人信息和内容
-onlyFirstPage = false
-# Gravatar Email for preferred avatar in home page
-# Gravatar 邮箱，用于优先在主页显示的头像
-gravatarEmail = ""
+# whether to show profile and content only in the first home page
+only_first_page = false
+# Gravatar email for preferred avatar in home page
+gravatar_email = ""
 # URL of avatar shown in home page, default is author's avatar
-# 主页显示头像的 URL, 默认为作者头像
-avatarURL = "/images/hugo-fixit.webp"
-# FixIt 0.2.17 | NEW identifier of avatar menu link
-# FixIt 0.2.17 | 新增 头像菜单链接的 identifier
-avatarMenu = ""
+avatar_url = "/images/hugo-fixit.webp"
+# identifier of avatar menu link
+avatar_menu = ""
 # title shown in home page (HTML format is supported)
-# 主页显示的网站标题（支持 HTML 格式）
 title = ""
-# subtitle shown in home page
-# 主页显示的网站副标题
-subtitle = "This is my new Hugo FixIt site"
+# subtitle shown in home page (HTML format is supported)
+subtitle = ""
 # whether to use typeit animation for subtitle
-# 是否为副标题显示打字机动画
 typeit = true
 # whether to show social links
-# 是否显示社交账号
 social = true
 # disclaimer (HTML format is supported)
-# 免责声明（支持 HTML 格式）
 disclaimer = ""
 
 # Home page posts
-# 主页文章列表
 [home.posts]
 enable = true
 # special amount of posts in each home posts page
-# 主页每页显示文章数量
 paginate = 6
+# whether to show featured image preview in home page post list
+image_preview = true
 
-# Social config in home page
-# 主页的社交信息设置
+# Social config about the author
 [social]
 GitHub = ""
 Linkedin = ""
@@ -465,7 +1060,7 @@ Ko-Fi = ""
 BuyMeaCoffee = ""
 Linktree = ""
 QQ = ""
-QQGroup = "" # https://qun.qq.com/join.html
+QQGroup = ""
 Diaspora = ""
 CSDN = ""
 Discord = ""
@@ -479,154 +1074,108 @@ HackTheBox = ""
 RootMe = ""
 Feishu = ""
 TryHackMe = ""
+Douyin = ""
+TikTok = ""
+Credly = ""
+Bluesky = ""
 Phone = ""
 Email = ""
 RSS = true
 
 # custom social links like the following
-# 自定义社交链接如下
-[social.FixItDemo]
-id = "demo.fixit"
-Weight = 1000
-Template = "https://%v.lruihao.cn/"
-Title = "FixIt Demo"
+# [params.social.twitter]
+# id = "lruihao"
+# weight = 3
+# prefix = "https://x.com/"
+# title = "X"
 
-[social.FixItDemo.icon]
-Src = "images/icons/demo.svg"
+# [params.social.twitter.icon]
+# class = "fa-brands fa-x-twitter"
+
+[social.fixit_demo]
+id = "demo.fixit"
+weight = 1000
+template = "https://%v.lruihao.cn/"
+title = "FixIt Demo"
+
+[social.fixit_demo.icon]
+src = "images/icons/demo.svg"
 
 # TypeIt config
-# TypeIt 配置
 [typeit]
 # typing speed between each step (measured in milliseconds)
-# 每一步的打字速度 (单位是毫秒)
 speed = 100
 # blinking speed of the cursor (measured in milliseconds)
-# 光标的闪烁速度 (单位是毫秒)
-cursorSpeed = 1000
+cursor_speed = 1000
 # character used for the cursor (HTML format is supported)
-# 光标的字符 (支持 HTML 格式)
-cursorChar = "|"
+cursor_char = "|"
 # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-# 打字结束之后光标的持续时间 (单位是毫秒，"-1" 代表无限大)
 duration = -1
-# FixIt 0.2.18 | NEW whether your strings will continuously loop after completing
-# FixIt 0.2.18 | 新增 打字完成后是否会连续循环
+# whether your strings will continuously loop after completing
+# [fixme] There is a bug when printing in groups
 loop = false
 
-# FixIt 0.2.15 | NEW Mermaid config
-# FixIt 0.2.15 | 新增 Mermaid 配置
-# See http://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/
-[mermaid]
-# FixIt 0.4.0 | NEW Mermaid ESM module CDN source
-# default is https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs
-cdn = "https://unpkg.com/mermaid/dist/mermaid.esm.min.mjs"
-# FixIt 0.4.0 | NEW ZenUML ESM module CDN source
-# default is empty, you can set it to a CDN source to enable ZenUML support
-# 默认为空，你可以将其设置为 CDN 源以启用 ZenUML 支持
-# e.g. https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs
-zenuml = "https://unpkg.com/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs"
-# For values, see https://mermaid.js.org/config/theming.html#available-themes
-themes = [
-  "default",
-  "dark"
-]
-# FixIt 0.4.0 | NEW the security level for Mermaid diagrams
-# FixIt 0.4.0 | 新增 Mermaid 图表的安全级别
-# optional value: ["strict", "loose", "antiscript", "sandbox"];
-securityLevel = "loose"
-# FixIt 0.4.0 | NEW the appearance style for Mermaid diagrams
-# FixIt 0.4.0 | 新增 Mermaid 图表的外观样式
-# optional value: ["classic", "handDrawn"]
-look = "handDrawn"
-# FixIt 0.4.0 | NEW the font family for Mermaid diagrams
-# FixIt 0.4.0 | 新增 Mermaid 图表的字体
-fontFamily = ""
-
-# FixIt 0.3.13 | NEW Admonitions custom config
-# FixIt 0.3.13 | 新增 自定义 Admonition 配置
+# Admonitions custom config
 # See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions
 # syntax: <type> = <icon>
 [admonition]
 ban = "fa-solid fa-ban"
 sponsor = "fa-solid fa-hand-holding-usd"
 
-# FixIt 0.3.14 | NEW Task lists custom config
-# FixIt 0.3.14 | 新增 自定义任务列表配置
+# Task lists custom config
 # See https://fixit.lruihao.cn/documentation/content-management/advanced/#custom-task-lists
 # syntax: <sign> = <icon>
-[taskList]
+[task_list]
 tip = "fa-regular fa-lightbulb"
 
-# FixIt 0.3.15 | NEW version shortcode config
-# FixIt 0.3.15 | 新增 version shortcode 配置
-[repoVersion]
-# url prefix for the release tag
-# 发行标签的 URL 前缀
-url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
+# version shortcode config
+[repo_version]
 # project name
-# 项目名称
 name = "FixIt"
+# url prefix for the release tag
+url = "https://github.com/hugo-fixit/FixIt/releases/tag/v"
 
-# FixIt 0.2.12 | NEW PanguJS config
-# FixIt 0.2.12 | 新增 盘古之白配置
+# PanguJS config
 [pangu]
-# For Chinese writing
-# 适用于中文写作用户
+# for Chinese writing
 enable = false
-selector = "article" # FixIt 0.2.17 | NEW
+selector = "article"
 
-# FixIt 0.2.12 | NEW Watermark config
-# Detail config see https://github.com/Lruihao/watermark#readme
-# FixIt 0.2.12 | 新增 水印配置
-# 详细参数见 https://github.com/Lruihao/watermark#readme
+# Watermark config
+# detail config see https://github.com/Lruihao/watermark#readme
 [watermark]
 enable = true
 # watermark's text (HTML format is supported)
-# 水印内容 (允许 HTML 格式)
 content = ""
 # watermark's transparency
-# 水印透明度
 opacity = 0.0125
 # watermark's width. unit: px
-# 单水印宽度 单位：px
 width = 150
 # watermark's height. unit: px
-# 单水印高度 单位：px
 height = 21
 # row spacing of watermarks. unit: px
-# 水印行间距 单位：px
-rowSpacing = 60
+row_spacing = 60
 # col spacing of watermarks. unit: px
-# 水印列间距 单位：px
-colSpacing = 30
+col_spacing = 30
 # watermark's tangent angle. unit: deg
-# 水印旋转角度 单位：deg
 rotate = 15
 # watermark's fontSize. unit: rem
-# 水印字体大小，单位：rem
-fontSize = 0.85
+font_size = 0.85
 # watermark's fontFamily
-# 水印字体
-fontFamily = "inherit"
+font_family = "inherit"
 
-# FixIt 0.3.10 | NEW Busuanzi count
-# FixIt 0.3.10 | 新增 不蒜子计数
+# Busuanzi count
 [busuanzi]
 # whether to enable busuanzi count
-# 是否启用不蒜子计数
 enable = false
 # busuanzi count core script source. Default is https://vercount.one/js
-# 不蒜子计数器核心脚本地址。默认为 https://vercount.one/js
 source = "https://vercount.one/js"
 # whether to show the site views
-# 是否显示网站访问量
-siteViews = true
+site_views = true
 # whether to show the page views
-# 是否显示页面访问量
-pageViews = true
+page_views = true
 
-# Site verification code for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
-# 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
+# Site verification code config for Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
 [verification]
 google = ""
 bing = ""
@@ -637,17 +1186,20 @@ so = ""
 sogou = ""
 
 # Site SEO config
-# 网站 SEO 配置
 [seo]
-# image URL
-# 图片 URL
-image = "/images/apple-devices-preview.webp"
+# default cover image for the site
+cover = "/images/apple-devices-preview.webp"
 # thumbnail URL
-# 缩略图 URL
-thumbnailUrl = "/images/tn.webp"
+thumbnail_url = "/images/tn.webp"
+# Page SEO images (frontmatter-overridable)
+images = []
+
+# Publisher info (frontmatter-overridable)
+[seo.publisher]
+name = "Lruihao"
+logo_url = "/images/avatar.png"
 
 # Analytics config
-# 网站分析配置
 [analytics]
 enable = false
 
@@ -655,37 +1207,35 @@ enable = false
 [analytics.google]
 id = ""
 # whether to anonymize IP
-# 是否匿名化用户 IP
-anonymizeIP = true
+anonymize_ip = true
 
 # Fathom Analytics
 [analytics.fathom]
 id = ""
 # server url for your tracker if you're self hosting
-# 自行托管追踪器时的主机路径
 server = ""
 
-# FixIt 0.3.16 | NEW Baidu Analytics
+# Baidu Analytics
 [analytics.baidu]
 id = ""
 
-# FixIt 0.3.16 | NEW Umami Analytics
+# Umami Analytics
 [analytics.umami]
 data_website_id = ""
 src = ""
 data_host_url = ""
 data_domains = ""
 
-# FixIt 0.3.16 | NEW Plausible Analytics
+# Plausible Analytics
 [analytics.plausible]
 data_domain = ""
 src = ""
 
-# FixIt 0.3.16 | NEW Cloudflare Analytics
+# Cloudflare Analytics
 [analytics.cloudflare]
 token = ""
 
-# FixIt 0.3.16 | NEW Splitbee Analytics
+# Splitbee Analytics
 [analytics.splitbee]
 enable = false
 # no cookie mode
@@ -696,252 +1246,88 @@ do_not_track = true
 data_token = ""
 
 # Cookie consent config
-# Cookie 许可配置
 [cookieconsent]
 enable = true
 
 # text strings used for Cookie consent banner
-# 用于 Cookie 许可横幅的文本字符串
 [cookieconsent.content]
 message = ""
 dismiss = ""
 link = ""
 
 # CDN config for third-party library files
-# 第三方库文件的 CDN 设置
 [cdn]
 # CDN data file name, disabled by default ["jsdelivr.yml", "unpkg.yml", ...]
 # located in "themes/FixIt/assets/data/cdn/" directory
 # you can store your own data files in the same path under your project: "assets/data/cdn/"
-# CDN 数据文件名称，默认不启用 ["jsdelivr.yml", "unpkg.yml", ...]
-# 位于 "themes/FixIt/assets/data/cdn/" 目录
-# 可以在你的项目下相同路径存放你自己的数据文件："assets/data/cdn/"
-# data = "unpkg.yml"
+data = ""
 
 # Compatibility config
-# 兼容性设置
 [compatibility]
 # whether to use Polyfill.io on cdnjs to be compatible with older browsers
-# 是否使用 cdnjs 上的 Polyfill.io 来兼容旧式浏览器
 # https://cdnjs.cloudflare.com/polyfill
 polyfill = false
 # whether to use object-fit-images to be compatible with older browsers
-# 是否使用 object-fit-images 来兼容旧式浏览器
-objectFit = false
+object_fit = false
 
-# FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
-# FixIt 0.2.14 | 新增 在左上角或者右上角显示 GitHub 开源链接
-[githubCorner]
+# GitHub banner in the top-right or top-left corner
+[github_corner]
 enable = true
 permalink = "https://github.com/hugo-fixit/FixIt"
 title = "View source on GitHub"
 position = "right" # ["left", "right"]
 
-# FixIt 0.2.14 | NEW Gravatar config
-# FixIt 0.2.14 | 新增 Gravatar 设置
-# https://docs.gravatar.com/general/images/
+# Gravatar config
 [gravatar]
-# FixIt 0.2.18 | NEW Depends on the author's email, if the author's email is not set, the local avatar will be used
-# FixIt 0.2.18 | 新增 取决于作者邮箱，作者邮箱未设置则使用本地头像
+# Depends on the author's email, if the author's email is not set, the local avatar will be used
 enable = true
 # Gravatar host, default: "www.gravatar.com"
-# Gravatar 主机，默认：“www.gravatar.com”
 host = "gravatar.loli.net" # ["cravatar.cn", "gravatar.loli.net", ...]
 style = "mp" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
 
 # Back to top
-# 返回顶部
-[backToTop]
+[back_to_top]
 enable = true
-# FixIt 0.4.0 | CHANGED whether to show the scroll percent indicator around the back to top button
-# FixIt 0.4.0 | 更改 是否在返回顶部按钮周围显示滚动百分比指示器
+# whether to show the scroll percent indicator around the back to top button
 scrollpercent = true
 
 # Reading progress bar
-# 阅读进度条
-[readingProgress]
+[reading_progress]
 enable = true
-# Available values: ["left", "right"]
-# 可用值：["left", "right"]
+# available values: ["left", "right"]
 start = "left"
-# Available values: ["top", "bottom"]
-# 可用值：["top", "bottom"]
+# available values: ["top", "bottom"]
 position = "top"
 reversed = false
 light = "#000"
 dark = "#fff"
 height = "2px"
 
-# FixIt 0.2.17 | NEW Progress bar in the top during page loading
-# For more information: https://github.com/CodeByZach/pace
-# FixIt 0.2.17 | 新增 页面加载期间顶部的进度条
-# 有关详细信息：https://github.com/CodeByZach/pace
+# Progress bar in the top during page loading.
+# for more information: https://github.com/CodeByZach/pace
 [pace]
 enable = true
-# All available colors:
-# 所有可用颜色：
+# all available colors:
 # ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]
 color = "blue"
-# All available themes:
-# 所有可用主题：
+# all available themes:
 # ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",
 # "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]
 theme = "minimal"
 
-# FixIt 0.3.17 | NEW PostChat AI config
-# Based on your posts to build a knowledge base, support AI summary, AI search, and AI Chatbot.
-# Get PostChat Key from my invitation link, thanks for your support!
-# https://ai.zhheo.com/console/login?InviteID=85041330
-[postChat]
-enable = true
-key = "P-2J0JXDUZY4EALD3P"
-# How users initiate chats: ["iframe", "magic"]
-userMode = "magic"
-addButton = true
-defaultInput = false
-left = ""
-bottom = ""
-width = ""
-height = ""
-fill = ""
-backgroundColor = "#FF735A"
-upLoadWeb = true
-showInviteLink = true
-userTitle = "Cell+"
-userDesc = ""
-# dom container to be blacked out, e.g. [".aplayer"]
-blackDom = []
-# Only for iframe mode
-frameWidth = "" # e.g. "375px"
-frameHeight = "" # e.g. "600px"
-# only for magic mode
-userIcon = "https://lruihao.cn/images/avatar.jpg"
-defaultChatQuestions = []
-defaultSearchQuestions = []
-# FixIt 0.4.0 | NEW
-hotWords = true
-
-# FixIt 0.3.17 | NEW Summary AI config
-# See https://ai.zhheo.com/docs/summary.html
-[postSummary]
-enable = true
-# If you set `params.postChat.key`, you don't need to set `params.postSummary.key`
-key = ""
-title = ""
-# themes options: ["", "simple", "yanzhi"]
-theme = ""
-postURL = ""
-blacklist = ""
-wordLimit = 5000
-typingAnimate = true
-beginningText = ""
-loadingText = false
-
-# FixIt 0.4.0 | NEW Podcast AI config
-# See https://ai.zhheo.com/docs/podcast.html
-[podcast]
-enable = true
-
-# FixIt 0.3.10 | NEW Global Feed config for RSS, Atom and JSON feed.
-# FixIt 0.3.10 | 新增 全局 Feed 配置用于 RSS, Atom 和 JSON feed。
+# Global Feed config for RSS, Atom and JSON feed.
 [feed]
-# The number of posts to include in the feed. If set to -1, all posts.
-# 包含在 feed 中的文章数目。如果设置为 -1，代表所有文章。
+# the number of posts to include in the feed. If set to -1, all posts.
 limit = 10
 # whether to show the full text content in feed.
-# 是否在 feed 中显示全文内容。
-fullText = true
+full_text = true
 
 # Site Challenge for Follow: https://follow.is/
 [feed.follow]
-feedId = ""
-userId = ""
+feed_id = ""
+user_id = ""
 
-# FixIt 0.3.17 | NEW Image config
-# Combined with Hugo's image processing option `imaging` for image optimisation
-# FixIt 0.3.17 | 新增 图片配置
-# 结合 Hugo 的图像处理选项 `imaging` 进行图片优化
-[image]
-# cache remote images for better optimisations
-# 缓存远程图片以获得更好的优化效果
-cacheRemote = true
-# Image resizing and optimisation (may slow builds)
-# 图片缩放和优化（可能会减慢构建速度）
-optimise = true
-# FixIt 0.4.0 | NEW A list of image file names or patterns to exclude from optimisation
-# FixIt 0.4.0 | 新增 排除优化的图片文件名（或模式）列表
-# e.g. ["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]
-blackList = [ "*.gif", ]
-
-# FixIt 1.0.0 | NEW Link config
-[link]
-# whether to add external Icon for external links automatically
-external_icon = true
-
-# External link guard config
-# per-page override via front matter: link_guard (bool/object)
-[link.guard]
-enable = false
-# external link guard mode, available modes: ["modal"， "redirect"]
-# in "modal" mode, a dialog will pop up to ask for confirmation when users click external links
-# in "redirect" mode, users will be redirected to an intermediate page before visiting external links
-mode = "modal"
-# allowed domains (exact host or parent domain) will skip confirmation
-allow_domains = []
-
-# FixIt 0.4.0 | NEW Code block wrapper config
-# you can override the global config via Markdown attributes, for example:
-# ```lang {mode="mac", maxShownLines=5}
-# code here
-# ```
-[codeblock]
-# whether to enable the code block wrapper
-wrapper = true
-# code block mode
-# available modes: ["classic", "mac", "simple", ...]
-# if you set to custom value, you need to create a custom CSS for data-mode attribute
-mode = "classic"
-# additional classes for the code block wrapper
-# e.g. "is-collapsed is-expanded line-nos-hidden line-wrapping"
-wrapperClass = ""
-# the maximum number of lines to show in the code block preview
-maxShownLines = 10
-# whether to show shadow effect for code blocks, available values: ["always", "hover", "never"]
-shadow = "hover"
-# whether to enable code copy button
-copyable = true
-# [classic] whether to enable code download button in the code block header
-downloadable = false
-# [classic] whether to enable code fullscreen button in the code block header
-fullscreen = true
-# [classic] whether to enable line numbers toggle button in the code block header
-lineNosToggler = true
-# [classic] whether to enable toggle line wrapping button in the code block header
-lineWrapToggler = true
-# [classic][Experimental] whether to enable code edit button in the code block header
-editable = false
-
-# FixIt 0.4.0 | NEW JSON Viewer config
-# FixIt 0.4.0 | 新增 JSON 查看器配置
-# See https://github.com/Lruihao/json-viewer-element
-[jsonViewer]
-enable = true
-expandDepth = 1
-copyable = true
-sort = false
-boxed = true
-
-# FixIt 0.4.2 | NEW File tree config
-# See https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/file-tree/
-[filetree]
-# the expand level of the tree (expand all: -1, collapse all: 0)
-level = 1
-# whether to append a trailing "/" to folder names
-folderSlash = false
-# list of file or folder names to ignore
-ignoreList = []
-
-# FixIt 1.0.0 | NEW Taxonomy icons config
+# Taxonomy icons config
 # works with [taxonomies]. Configure [taxonomies] first, otherwise taxonomy icons will not take effect.
 [taxonomy_icons]
 # syntax: <taxonomy> = [<title icon>, <card icon>, <term title icon>]
@@ -952,7 +1338,7 @@ ignoreList = []
 #   "fa-solid fa-book-open"
 # ]
 
-# FixIt 0.4.5 | NEW Print config
+# Print config
 [print]
 # whether to expand all admonitions before printing
 expand_admonition = true
@@ -963,22 +1349,19 @@ expand_details = true
 # whether to expand all file trees before printing
 expand_file_tree = false
 
-# FixIt 0.3.12 | NEW Custom partials config
-# Custom partials must be stored in the /layouts/_partials/ directory.
-# Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
-# FixIt 0.3.12 | 新增 自定义部分配置
-# 自定义模板必须存放在 /layouts/_partials/ 目录中。
-# 依赖于开放的自定义块 https://fixit.lruihao.cn/references/blocks/
-[customPartials]
+# Custom partials config
+# custom partials must be stored in the /layouts/_partials/ directory.
+# depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
+[custom_partials]
 head = [
   "inject/component-projects.html",
   "inject/fixit-docs-bookmark.html",
   "inject/shortcode-rewards.html",
 ]
-menuDesktop = [ "inject/translate-menu-desktop.html", ]
-menuMobile = [ "inject/translate-menu-mobile.html", ]
+menu_desktop = [ "inject/translate-menu-desktop.html" ]
+menu_mobile = [ "inject/translate-menu-mobile.html" ]
 profile = []
-aside = [ "custom/aside.html", ]
+aside = [ "custom/aside.html" ]
 comment = []
 footer = []
 widgets = []
@@ -988,555 +1371,119 @@ assets = [
   "inject/santa-hat.fixit.html",
   "inject/shortcode-caniuse.html",
 ]
-postTocBefore = [ "custom/follow-me.html", ]
-postTocAfter = []
-postContentBefore = []
-postContentAfter = []
-postFooterBefore = []
-postFooterAfter = []
+post_toc_before = [ "custom/follow-me.html" ]
+post_toc_after = []
+post_content_before = []
+post_content_after = []
+post_footer_before = []
+post_footer_after = []
 
-# FixIt 0.2.15 | NEW Developer options
-# Select the scope named `public_repo` to generate personal access token,
-# Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see https://gohugo.io/functions/os/getenv/#examples
-# FixIt 0.2.15 | 新增 开发者选项
-# 选择命名为 "public_repo" 的范围以生成个人访问令牌，
-# 配置环境变量 HUGO_PARAMS_GHTOKEN=xxx，详见 https://gohugo.io/functions/os/getenv/#examples
+# SCSS variables customization via config
+# Leave empty to use the theme default value (defined in scss-vars.html).
+# Note: Color values must use hex format (e.g. "#ff0000"), CSS named colors (e.g. "red") are not supported.
+[appearance]
+# Global Typography
+global_font_family = ""
+global_font_size = ""
+global_font_weight = ""
+global_line_height = ""
+global_border_radius = ""
+# Global Colors
+global_background_color = ""
+global_background_color_dark = ""
+global_font_color = ""
+global_font_color_dark = ""
+global_font_secondary_color = ""
+global_font_secondary_color_dark = ""
+global_link_color = ""
+global_link_color_dark = ""
+global_link_hover_color = ""
+global_link_hover_color_dark = ""
+global_border_color = ""
+global_border_color_dark = ""
+# Scrollbar
+scrollbar_color = ""
+scrollbar_hover_color = ""
+# Selection
+selection_color = ""
+selection_color_dark = ""
+# Header
+header_background_color = ""
+header_background_color_dark = ""
+header_title_font_size = ""
+header_title_font_family = ""
+menu_active_color = ""
+menu_active_color_dark = ""
+menu_border_color = ""
+menu_border_color_dark = ""
+search_background_color = ""
+search_background_color_dark = ""
+# Tag Cloud
+tag_cloud_start = ""
+tag_cloud_start_dark = ""
+tag_cloud_end = ""
+tag_cloud_end_dark = ""
+# Single Content
+toc_title_font_size = ""
+toc_content_font_size = ""
+collection_title_font_size = ""
+collection_list_font_size = ""
+related_title_font_size = ""
+related_list_font_size = ""
+single_link_color = ""
+single_link_color_dark = ""
+single_link_hover_color = ""
+single_link_hover_color_dark = ""
+# Table
+table_background_color = ""
+table_background_color_dark = ""
+table_thead_color = ""
+table_thead_color_dark = ""
+table_border_color = ""
+table_border_color_dark = ""
+# Blockquote
+blockquote_color = ""
+blockquote_color_dark = ""
+# Reward
+reward_color = ""
+reward_color_dark = ""
+reward_img_width = ""
+# Pagination
+pagination_link_color = ""
+pagination_link_color_dark = ""
+pagination_link_hover_color = ""
+pagination_link_hover_color_dark = ""
+# Code
+code_color = ""
+code_color_dark = ""
+code_font_family = ""
+code_header_color = ""
+code_header_color_dark = ""
+code_header_background_color = ""
+code_header_background_color_dark = ""
+code_background_color = ""
+code_background_color_dark = ""
+code_error_color = ""
+code_highlight_color = ""
+code_highlight_color_dark = ""
+code_font_size = ""
+code_block_font_size = ""
+# GitHub Corners
+github_corner_color = ""
+github_corner_color_dark = ""
+github_corner_fill = ""
+github_corner_fill_dark = ""
+
+# Developer options
+# select the scope named `public_repo` to generate personal access token,
+# configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see https://gohugo.io/functions/os/getenv/#examples
 [dev]
 enable = false
-# Check for updates
-# 检查更新
+# check for updates
 c4u = false
 
-# Page config
-# 文章页面配置
-[page]
-# FixIt 0.2.18 | NEW whether to enable the author's avatar of the post
-# FixIt 0.2.18 | 新增 是否启用文章作者头像
-authorAvatar = true
-# whether to hide a page from home page
-# 是否在主页隐藏一篇文章
-hiddenFromHomePage = false
-# whether to hide a page from search results
-# 是否在搜索结果中隐藏一篇文章
-hiddenFromSearch = false
-# FixIt 0.3.0 | NEW whether to hide a page from RSS feed
-# FixIt 0.3.0 | 新增 是否在 RSS 中隐藏一篇文章
-hiddenFromFeed = false
-# FixIt 0.3.0 | NEW whether to hide a page from related posts
-# FixIt 0.3.0 | 新增 是否在相关文章中隐藏一篇文章
-hiddenFromRelated = false
-# whether to enable twemoji
-# 是否使用 twemoji
-twemoji = false
-# FixIt 0.2.18 | CHANGED whether to enable lightgallery
-# set to true, images in the content will be shown as the gallery if the image has a title, e.g. ![alt](src "title")
-# set to "force", images in the content will be forced to shown as the gallery regardless of the image has a title or not, e.g. ![alt](src)
-# FixIt 0.2.18 | 更改 是否使用 lightgallery
-# 设为 true，且图片设置标题时，文章中的图片将以画廊形式呈现，例如：![alt](src "title")
-# 设为 "force"，无论图片是否设置标题文章中的图片都将强制按照画廊形式呈现，例如：![alt](src)
-lightgallery = false
-# whether to enable the ruby extended syntax
-# 是否使用 ruby 扩展语法
-ruby = true
-# whether to enable the fraction extended syntax
-# 是否使用 fraction 扩展语法
-fraction = true
-# whether to enable the fontawesome extended syntax
-# 是否使用 fontawesome 扩展语法
-fontawesome = true
-# license info (HTML format is supported)
-# 许可协议信息（支持 HTML 格式）
-license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
-# whether to show link to Raw Markdown content of the post
-# 是否显示原始 Markdown 文档内容的链接
-linkToMarkdown = true
-# whether to show link to view source code of the post
-# 是否显示查看文章源码的链接
-linkToSource = true
-# whether to show link to edit the post
-# 是否显示编辑文章的链接
-linkToEdit = true
-# whether to show link to report issue for the post
-# 是否显示报告文章问题的链接
-linkToReport = true
-# FixIt 0.3.20 | NEW whether to show link to view the post in VSCode
-# FixIt 0.3.20 | 新增 是否显示在 VSCode 中查看文章的链接
-linkToVscode = true
-# FixIt 0.3.10 | CHANGED Page style ["narrow", "normal", "wide", ...)
-# FixIt 0.3.10 | 更改 页面样式 ["narrow", "normal", "wide", ...)
-pageStyle = "normal"
-# FixIt 0.2.17 | CHANGED Auto Bookmark Support
-# If true, save the reading progress when closing the page.
-# FixIt 0.2.17 | 更改 自动书签支持
-# 如果为 true，关闭页面时保存阅读进度。
-autoBookmark = false
-# FixIt 0.4.0 | NEW whether to show the last modified time
-# FixIt 0.4.0 | 新增 是否显示最后修改时间
-showLastmod = true
-# FixIt 0.2.17 | NEW whether to enable wordCount
-# FixIt 0.2.17 | 新增 是否启用字数显示
-wordCount = true
-# FixIt 0.2.17 | NEW whether to enable readingTime
-# FixIt 0.2.17 | 新增 是否开启预计阅读时间显示
-readingTime = true
-# end of post flag
-# 文章结束标志
-endFlag = ""
-# FixIt 0.2.18 | NEW whether to enable instant.page
-# FixIt 0.2.18 | 新增 是否开启即时页面
-instantPage = true
-# FixIt 0.3.0 | NEW whether to enable collection list at the sidebar
-# FixIt 0.3.0 | 新增 是否在侧边栏显示集合列表
-collectionList = true
-# FixIt 0.3.0 | NEW whether to enable collection navigation at the end of the post
-# FixIt 0.3.0 | 新增 是否在文章末尾显示集合导航
-collectionNavigation = true
-
-# FixIt 0.2.15 | NEW Repost config
-# FixIt 0.2.15 | 新增 转载配置
-[page.repost]
-enable = false
-url = ""
-
-# Table of the contents config
-# 目录配置
-[page.toc]
-# whether to enable the table of the contents
-# 是否使用目录
-enable = true
-# whether to keep the static table of the contents in front of the post
-# 是否保持使用文章前面的静态目录
-keepStatic = false
-# whether to make the table of the contents in the sidebar automatically collapsed
-# 是否使侧边目录自动折叠展开
-auto = true
-# FixIt 0.2.13 | NEW position of TOC ["left", "right"]
-# FixIt 0.2.13 | 新增 目录位置 ["left", "right"]
-position = "right"
-# FixIt 0.3.12 | NEW supersede `markup.tableOfContents` settings
-# FixIt 0.3.12 | 新增 取代 `markup.tableOfContents` 设置
-ordered = false
-startLevel = 2
-endLevel = 6
-# FixIt 0.4.0 | NEW whether to decrease the H1 heading level in content
-# FixIt 0.4.0 | 新增 是否降低内容中的 H1 标题级别
-decreaseH1 = true
-
-# FixIt 0.2.13 | NEW Display a message at the beginning of an article to warn the reader that its content might be expired.
-# FixIt 0.2.13 | 新增 在文章开头显示提示信息，提醒读者文章内容可能过时。
-[page.expirationReminder]
-enable = true
-# Display the reminder if the last modified time is more than 90 days ago
-# 如果文章最后更新于这天数之前，显示提醒
-reminder = 90
-# Display warning if the last modified time is more than 180 days ago
-# 如果文章最后更新于这天数之前，显示警告
-warning = 180
-# If the article expires, close the comment or not
-# 如果文章到期是否关闭评论
-closeComment = false
-
-# FixIt 0.3.0 | NEW page heading config
-# FixIt 0.3.0 | 新增 页面标题配置
-[page.heading]
-# FixIt 0.3.3 | NEW whether to capitalize automatic text of headings
-# FixIt 0.3.3 | 新增 是否自动大写标题
-capitalize = true
-
-# FixIt 0.3.12 | CHANGED must set `params.page.toc.ordered` to true
-# FixIt 0.3.12 | 更改 必须设置 `params.page.toc.ordered` 为 true
-[page.heading.number]
-# whether to enable auto heading numbering
-# 是否启用自动标题编号
-enable = true
-# FixIt 0.3.3 | NEW only enable in main section pages (default is posts)
-# FixIt 0.3.3 | 新增 仅在主要部分页面启用 (默认为文章)
-onlyMainSection = true
-
-[page.heading.number.format]
-h1 = "{title}"
-h2 = "{h2} {title}"
-h3 = "{h2}.{h3} {title}"
-h4 = "{h2}.{h3}.{h4} {title}"
-h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-
-# FixIt 0.4.0 | CHANGED mathematical formulas configuration
-# FixIt 0.4.0 | 更改 数学公式配置
-# See http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula
-[page.math]
-enable = true
-# mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
-# 数学公式渲染引擎，可选值：["katex", "mathjax"]
-type = "katex"
-
-# KaTeX server-side rendering (https://katex.org)
-# KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
-[page.math.katex]
-# KaTeX extension copy-tex
-copyTex = true
-throwOnError = false
-errorColor = "#ff4949"
-
-# custom macros map
-# syntax: <macro> = <definition>
-[page.math.katex.macros]
-"\\f" = "#1f(#2)" # usage: $\f{a}{b}$
-
-# MathJax server-side rendering (https://www.mathjax.org)
-# MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-[page.math.mathjax]
-cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-
-[page.math.mathjax.packages]
-"[+]" = [
-  "physics",
-  "xypic"
-]
-
-# custom macros map
-# syntax: <macro> = <definition>
-[page.math.mathjax.macros]
-bold = [
-  "{\\bf #1}",
-  1
-] # usage: $\bold{math}$
-
-[page.math.mathjax.loader]
-load = [
-  "ui/safe",
-  "[tex]/physics",
-  "[custom]/xypic.js"
-]
-
-[page.math.mathjax.loader.paths]
-custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
-
-# more loader config e.g source, dependencies, provides etc.
-
-[page.math.mathjax.options]
-enableMenu = true
-# HTML tags that won't be searched for math
-skipHtmlTags = [
-  "script",
-  "noscript",
-  "style",
-  "textarea",
-  "pre",
-  "code",
-  "math",
-  "select",
-  "option",
-  "mjx-container"
-]
-# class that marks tags not to search
-ignoreHtmlClass = "mathjax_ignore"
-
-# HTML tags that can appear within math
-[page.math.mathjax.options.includeHtmlTags]
-# "#comment" = ""
-# br = "\n"
-# wbr = ""
-
-[page.math.mathjax.tex]
-
-[page.math.mathjax.tex.physics]
-italicdiff = false
-arrowdel = false
-
-# Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-# Mapbox GL JS 配置 (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
-[page.mapbox]
-# access token of Mapbox GL JS
-# Mapbox GL JS 的 access token
-accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
-# style for the light theme
-# 浅色主题的地图样式
-lightStyle = "mapbox://styles/mapbox/light-v11?optimize=true"
-# style for the dark theme
-# 深色主题的地图样式
-darkStyle = "mapbox://styles/mapbox/dark-v11?optimize=true"
-# whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-# 是否添加 导航控制 (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-navigation = true
-# whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-# 是否添加 地理定位控制 (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-geolocate = true
-# whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-# 是否添加 规模控制 (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-scale = true
-# whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-# 是否添加 全屏控制 (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-fullscreen = true
-
-# FixIt 0.3.0 | NEW Related content config (https://gohugo.io/content-management/related/)
-# FixIt 0.3.0 | 新增 相关内容配置 (https://gohugo.io/content-management/related/)
-[page.related]
-enable = true
-count = 5
-# FixIt 0.3.20 | NEW position of related content, optional values: ["aside", "footer"]
-position = [
-  "aside",
-  "footer"
-]
-
-# Donate (Sponsor) settings
-# 赞赏设置
-[page.reward]
-enable = true
-animation = true
-# position relative to post footer, optional values: ["before", "after"]
-# 相对于页脚的位置，可选值：["before", "after"]
-position = "after"
-# FixIt 0.2.18 | NEW display mode of QR code images, optional values: ["static", "fixed"], default: `static`
-# FixIt 0.2.18 | 新增 二维码图片展示模式，可选值：["static", "fixed"]，默认：`static`
-mode = "fixed"
-comment = "Buy me a coffee~"
-
-[page.reward.ways]
-wechatpay = "/images/wechatpay.jpg"
-alipay = "/images/alipay.jpg"
-# paypal = "/images/paypal.png"
-# bitcoin = "/images/bitcoin.png"
-
-# Social share links in post page
-# 文章页面的分享信息设置
-[page.share]
-enable = true
-Twitter = true
-Facebook = true
-Linkedin = false
-Whatsapp = false
-Pinterest = false
-Tumblr = false
-HackerNews = true
-Reddit = false
-VK = false
-Buffer = false
-Xing = false
-Line = true
-Instapaper = false
-Pocket = false
-Flipboard = false
-Weibo = true
-Myspace = false
-Blogger = false
-Baidu = false
-Odnoklassniki = false
-Evernote = false
-Skype = false
-Trello = false
-Mix = false
-
-# Comment config
-# 评论系统设置
-[page.comment]
-enable = false
-
-# FixIt 0.2.13 | NEW Artalk comment config (https://artalk.js.org/)
-# FixIt 0.2.13 | 新增 Artalk 评论系统设置 (https://artalk.js.org/)
-[page.comment.artalk]
-enable = false
-server = "https://yourdomain"
-site = "默认站点"
-# FixIt 0.3.3 | NEW whether use backend configuration
-# FixIt 0.3.3 | 新增 是否使用后端配置
-useBackendConf = false
-placeholder = ""
-noComment = ""
-sendBtn = ""
-editorTravel = true
-flatMode = 'auto'
-# FixIt 0.2.17 | CHANGED enable lightgallery support
-# FixIt 0.2.17 | 更改 启用 lightgallery 支持
-lightgallery = false
-locale = "" # FixIt 0.2.15 | NEW
-# FixIt 0.2.18 | NEW
-emoticons = ""
-nestMax = 2
-nestSort = "DATE_ASC" # ["DATE_ASC", "DATE_DESC", "VOTE_UP_DESC"]
-vote = true
-voteDown = false
-uaBadge = true
-listSort = true
-imgUpload = true
-preview = true
-versionCheck = true
-
-# Disqus comment config (https://disqus.com/)
-# Disqus 评论系统设置 (https://disqus.com/)
-[page.comment.disqus]
-enable = false
-# Disqus shortname to use Disqus in posts
-# Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-shortname = ""
-
-# Gitalk comment config (https://github.com/gitalk/gitalk)
-# Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-[page.comment.gitalk]
-enable = false
-owner = ""
-repo = ""
-clientId = ""
-clientSecret = ""
-
-# Valine comment config (https://github.com/xCss/Valine)
-# Valine 评论系统设置 (https://github.com/xCss/Valine)
-[page.comment.valine]
-enable = false
-appId = ""
-appKey = ""
-placeholder = ""
-avatar = "mp"
-meta = []
-requiredFields = []
-pageSize = 10
-lang = ""
-visitor = true
-recordIP = true
-highlight = true
-enableQQ = false
-serverURLs = ""
-# emoji data file name, default is "google.yml"
-# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-# located in "themes/FixIt/assets/lib/valine/emoji/" directory
-# you can store your own data files in the same path under your project:
-# "assets/lib/valine/emoji/"
-# emoji 数据文件名称，默认是 "google.yml"
-# ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
-# 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
-# 可以在你的项目下相同路径存放你自己的数据文件：
-# "assets/lib/valine/emoji/"
-emoji = ""
-commentCount = true
-
-# FixIt 0.2.13 | NEW
-# # FixIt 0.2.13 | NEW Waline comment config (https://waline.js.org)
-# # FixIt 0.2.13 | 新增 Waline 评论系统设置 (https://waline.js.org)
-[page.comment.waline]
-enable = false
-serverURL = ""
-pageview = false
-emoji = [ '//unpkg.com/@waline/emojis@1.1.0/weibo' ]
-meta = [
-  'nick',
-  'mail',
-  'link'
-]
-requiredMeta = []
-login = 'enable'
-wordLimit = 0
-pageSize = 10
-imageUploader = false
-highlighter = false
-comment = false
-texRenderer = false
-search = false
-recaptchaV3Key = ""
-reaction = false
-
-# Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-# Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-[page.comment.facebook]
-enable = false
-width = "100%"
-numPosts = 10
-appId = ""
-languageCode = ""
-
-# Telegram comments config (https://comments.app/)
-# Telegram 评论系统设置 (https://comments.app/)
-[page.comment.telegram]
-enable = false
-siteID = ""
-limit = 5
-height = ""
-color = ""
-colorful = true
-dislikes = false
-outlined = false
-
-# Commento comment config (https://commento.io/)
-# Commento 评论系统设置 (https://commento.io/)
-[page.comment.commento]
-enable = false
-
-# Utterances comment config (https://utteranc.es/)
-# Utterances 评论系统设置 (https://utteranc.es/)
-[page.comment.utterances]
-enable = false
-# owner/repo
-repo = ""
-issueTerm = "pathname"
-label = ""
-lightTheme = "github-light"
-darkTheme = "github-dark"
-
-# # FixIt 0.2.13 | NEW Twikoo comment config (https://twikoo.js.org/)
-# # FixIt 0.2.13 | 新增 Twikoo 评论系统设置 (https://twikoo.js.org/)
-[page.comment.twikoo]
-enable = false
-envId = ""
-region = ""
-path = ""
-visitor = true
-commentCount = true
-# FixIt 0.2.17 | CHANGED enable lightgallery support
-# FixIt 0.2.17 | 更改 启用 lightgallery 支持
-lightgallery = false
-# FixIt 0.2.17 | NEW enable Katex support
-# FixIt 0.2.17 | 新增 启用 Katex 支持
-katex = false
-
-# FixIt 0.2.14 | NEW Giscus comments config (https://giscus.app/)
-# FixIt 0.2.14 | 新增 Giscus 评论系统设置 (https://giscus.app/)
-[page.comment.giscus]
-enable = false
-repo = ""
-repoId = ""
-category = ""
-categoryId = ""
-mapping = ""
-strict = "0" # FixIt NEW | 0.2.18
-term = ""
-reactionsEnabled = "1"
-emitMetadata = "0"
-inputPosition = "bottom" # ["top", "bottom"]
-lightTheme = "light"
-darkTheme = "dark"
-lazyLoad = true
-
-# Third-party library config
-# 第三方库配置
-[page.library]
-
-[page.library.css]
-# someCSS = "some.css"
-# located in "assets/" 位于 "assets/"
-# Or 或者
-# someCSS = "https://cdn.example.com/some.css"
-
-[page.library.js]
-# someJavascript = "some.js"
-# located in "assets/" 位于 "assets/"
-# Or 或者
-# someJavascript = "https://cdn.example.com/some.js"
-
-# Page SEO config
-# 页面 SEO 配置
-[page.seo]
-# image URL
-# 图片 URL
-images = []
-
-# Publisher info
-# 出版者信息
-[page.seo.publisher]
-name = "Lruihao"
-logoUrl = "/images/avatar.png"
-
 # -------------------------------------------------------------------------------------
-# Theme Components Configuration | 主题组件配置
+# Theme Components Configuration
 # -------------------------------------------------------------------------------------
 
 # Content adapters config for component projects
@@ -1612,7 +1559,7 @@ enterprise = true
 
 # FixIt Docs config
 [docs]
-min_hugo_version = "0.158.0"
+min_hugo_version = "0.161.0"
 
 [planet]
 invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF

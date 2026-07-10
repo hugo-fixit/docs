@@ -1,11 +1,12 @@
 # -------------------------------------------------------------------------------------
-# Front Matter Configuration | Front Matter 配置
+# Front Matter Configuration
 # See: https://gohugo.io/configuration/front-matter/
 # -------------------------------------------------------------------------------------
 
+_merge = "shallow"
 lastmod = [
   "lastmod",
   ":git",
   ":fileModTime",
-  ":default"
+  ":default",
 ]
