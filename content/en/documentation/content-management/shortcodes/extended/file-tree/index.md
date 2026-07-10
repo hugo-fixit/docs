@@ -43,7 +43,7 @@ The `file-tree` shortcode provides a visual representation of directory structur
 To use the `file-tree` shortcode, include it in your content as follows:
 
 ```markdown
-{{</* file-tree [path] [level] [folderSlash] [file="filename"] [data="datafilename"] [ignoreList="item1,item2"] */>}}
+{{</* file-tree [path] [level] [folder_slash] [file="filename"] [data="datafilename"] [ignore_list="item1,item2"] */>}}
 <!-- Your tree data here (optional) -->
 {{</* /file-tree */>}}
 ```
@@ -52,16 +52,16 @@ To use the `file-tree` shortcode, include it in your content as follows:
 
 The `file-tree` shortcode has the following named parameters, and the positional parameters ordered from top to bottom:
 
-| Parameter       | Type    | Default | Description                                                                   |
-| :-------------- | :------ | :------ | :---------------------------------------------------------------------------- |
-| `path`          | string  | `"/"`   | ==1== The path to scan in filesystem (relative to project root or contentDir) |
-| `level`         | int     | `1`     | ==2== The expand level of the tree (expand all: -1, collapse all: 0)          |
-| `folderSlash`   | boolean | `false` | ==3== Whether to append "/" to folder names                                   |
-| `file`          | string  | -       | Path to data file in page resources or assets (JSON/YAML/TOML)                |
-| `data`          | string  | -       | Name of data file in `data/filetree/` directory                               |
-| `ignoreList`    | string  | -       | Comma-separated list of files/folders to ignore                               |
-| `highlightList` | string  | -       | Comma-separated list of files/folders to highlight                            |
-| `name`          | string  | -       | Name for the root node (if set to `{path}`, uses the full root path)          |
+| Parameter        | Type    | Default | Description                                                                   |
+| :--------------- | :------ | :------ | :---------------------------------------------------------------------------- |
+| `path`           | string  | `"/"`   | ==1== The path to scan in filesystem (relative to project root or contentDir) |
+| `level`          | int     | `1`     | ==2== The expand level of the tree (expand all: -1, collapse all: 0)          |
+| `folder_slash`   | boolean | `false` | ==3== Whether to append "/" to folder names                                   |
+| `file`           | string  | -       | Path to data file in page resources or assets (JSON/YAML/TOML)                |
+| `data`           | string  | -       | Name of data file in `data/filetree/` directory                               |
+| `ignore_list`    | string  | -       | Comma-separated list of files/folders to ignore                               |
+| `highlight_list` | string  | -       | Comma-separated list of files/folders to highlight                            |
+| `name`           | string  | -       | Name for the root node (if set to `{path}`, uses the full root path)          |
 
 ### Configuration
 
@@ -72,8 +72,8 @@ You can configure default behavior in your site configuration or page front matt
 
 [params.filetree]
 level = 1
-folderSlash = false
-ignoreList = []
+folder_slash = false
+ignore_list = []
 ```
 
 ## Inline Content
@@ -170,7 +170,7 @@ type = "file"
 
 Additionally, you can use **code fence syntax** with the `file-tree` language identifier for a more convenient writing experience.
 
-````md {maxShownLines=11}
+````md {max_shown_lines=11}
 ```file-tree
 - name: src
   type: dir
@@ -190,7 +190,7 @@ Supports getting data from files in Hugo [page-resources] or `assets`, and the f
 
 For example, the current page structure is as follows:
 
-{{< file-tree path="documentation/content-management/shortcodes/extended/file-tree" level=-1 highlightList="tree.yml" />}}
+{{< file-tree path="documentation/content-management/shortcodes/extended/file-tree" level=-1 highlight_list="tree.yml" />}}
 
 You can use the `file` parameter to get data from the file:
 
@@ -208,7 +208,7 @@ Support obtaining data from Hugo [site data][hugo-data], with data files defined
 
 For example, the data structure is as follows:
 
-```file-tree {highlightList="example.yml" level=-1}
+```file-tree {highlight_list="example.yml" level=-1}
 - name: fixit-docs
   type: dir
   children:
@@ -252,25 +252,25 @@ The rendered output looks like this:
 
 {{< file-tree name="{path}" />}}
 
-Use `ignoreList` parameter to exclude specific files or folders:
+Use `ignore_list` parameter to exclude specific files or folders:
 
 ```markdown
-{{</* file-tree level=0 ignoreList=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" /*/>}}
+{{</* file-tree level=0 ignore_list=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" /*/>}}
 ```
 
 The rendered output looks like this:
 
-{{< file-tree level=0 ignoreList=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" />}}
+{{< file-tree level=0 ignore_list=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" />}}
 
 Use `path` parameter to scan a specific directory, e.g., `documentation` under the `content` directory:
 
 ```markdown
-{{</* file-tree path="documentation" level=2 folderSlash=true name="{path}" /*/>}}
+{{</* file-tree path="documentation" level=2 folder_slash=true name="{path}" /*/>}}
 ```
 
 The rendered output looks like this:
 
-{{< file-tree path="documentation" level=2 folderSlash=true name="{path}" />}}
+{{< file-tree path="documentation" level=2 folder_slash=true name="{path}" />}}
 
 <!-- link reference definition -->
 [page-resources]: https://gohugo.io/content-management/page-resources/

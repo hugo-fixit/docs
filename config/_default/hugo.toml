@@ -53,4 +53,5 @@ ignoreLogs = [
   "err-youtube-remote",
   "warning-dev-version",
   "shortcode-x-getremote",
+  "warning-remote-image",
 ]

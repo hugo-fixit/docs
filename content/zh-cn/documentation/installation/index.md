@@ -52,8 +52,8 @@ Node.js 用于：
 - [Hugo][hugo-install]（扩展版，v{{< param docs.min_hugo_version >}} 或更高版本）
 - [Git][git-install]
 - [Go][go-install]
-- _[Dart Sass][dart-sass-install]（尚未使用）_
-- [Node.js][node-install]（v16.0.0 或更高版本）
+- [Dart Sass][dart-sass-install]
+- [Node.js][node-install]（v20.0.0 或更高版本）
 
 ## 安装方式
 
@@ -138,8 +138,8 @@ hugo mod get -u
 hugo mod get -u ./...
 # 更新一个模块
 hugo mod get -u github.com/hugo-fixit/FixIt
-# 获取特定版本（例如 v0.3.2, @latest, @main）
-hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
+# 获取特定版本（例如 v0.4.5, @latest, @main）
+hugo mod get github.com/hugo-fixit/FixIt@v0.4.5
 ```
 
 {{% /tab %}}

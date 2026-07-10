@@ -62,15 +62,15 @@ $global-font-family: 'MMT', $global-font-family;
 
 {{< version 0.3.10 changed >}}
 
-The FixIt theme provides a page width configuration option `pageStyle` and three values.
+The FixIt theme provides a page width configuration option `page_style` and three values.
 
 - **narrow** Keep `<v0.2.13` page/toc width ratio
 - **normal** New default page/toc width ratio
 - **wide** Larger page/toc width ratio
 
-In addition, you can also customize the `pageStyle` value in `assets/scss/custom.scss`
+In addition, you can also customize the `page_style` value in `assets/scss/custom.scss`
 
-For example: `pageStyle="custom"`
+For example: `page_style="custom"`
 
 ```scss {name="assets/scss/custom.scss"}
 [data-page-style='custom'] {
@@ -305,22 +305,22 @@ Next, taking the [component-projects] component as an example, we will introduce
     ```toml {mode="simple", lineNos=false}
     [params]
 
-    [params.customPartials]
+    [params.custom_partials]
     head = []
-    menuDesktop = []
-    menuMobile = []
+    menu_desktop = []
+    menu_mobile = []
     profile = []
     aside = []
     comment = []
     footer = []
     widgets = []
     assets = [ "inject/component-projects.html" ]
-    postTocBefore = []
-    postTocAfter = []
-    postContentBefore = []
-    postContentAfter = []
-    postFooterBefore = []
-    postFooterAfter = []
+    post_toc_before = []
+    post_toc_after = []
+    post_content_before = []
+    post_content_after = []
+    post_footer_before = []
+    post_footer_after = []
     ```
 
 3. **Theme component import completed**, use the component features according to different component documents.

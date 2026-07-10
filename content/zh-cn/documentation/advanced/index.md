@@ -62,15 +62,15 @@ $global-font-family: 'MMT', $global-font-family;
 
 {{< version 0.2.13 >}}
 
-FixIt 主题提供了页面宽度配置选项 `pageStyle` 并提供三种选项。
+FixIt 主题提供了页面宽度配置选项 `page_style` 并提供三种选项。
 
 - **narrow** 保留 `<v0.2.13` 页面目录宽度比
 - **normal** 新的默认页面目录宽度比
 - **wide** 较大的页面目录宽度比
 
-另外，你还可以在 `assets/scss/custom.scss` 中，自定义 `pageStyle` 值
+另外，你还可以在 `assets/scss/custom.scss` 中，自定义 `page_style` 值
 
-例如： `pageStyle="custom"`
+例如： `page_style="custom"`
 
 ```scss {name="assets/scss/custom.scss"}
 [data-page-style='custom'] {
@@ -305,22 +305,22 @@ li[data-task='tip'] {
     ```toml {mode="simple", lineNos=false}
     [params]
 
-    [params.customPartials]
+    [params.custom_partials]
     head = []
-    menuDesktop = []
-    menuMobile = []
+    menu_desktop = []
+    menu_mobile = []
     profile = []
     aside = []
     comment = []
     footer = []
     widgets = []
     assets = [ "inject/component-projects.html" ]
-    postTocBefore = []
-    postTocAfter = []
-    postContentBefore = []
-    postContentAfter = []
-    postFooterBefore = []
-    postFooterAfter = []
+    post_toc_before = []
+    post_toc_after = []
+    post_content_before = []
+    post_content_after = []
+    post_footer_before = []
+    post_footer_after = []
     ```
 
 3. **主题组件引入完成**，根据不同组件文档使用组件功能即可。

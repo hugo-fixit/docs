@@ -172,7 +172,7 @@ In order to inject the partial `shortcode-caniuse.html` into the `custom-assets`
 ```toml
 [params]
 
-[params.customPartials]
+[params.custom_partials]
 # ... other partials
 assets = [ "inject/shortcode-caniuse.html" ]
 # ... other partials

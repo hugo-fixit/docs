@@ -32,7 +32,7 @@ Hugo 使用一系列因素来识别基于前置参数的页面相关内容。这
 [params.page]
 # ...
 
-[params.page.related]
+[params.related]
 enable = true
 count = 5
 position = [

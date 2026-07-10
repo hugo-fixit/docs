@@ -39,8 +39,6 @@ hugo new content search/index.md
 To configure Google or Bing CSE in the FixIt theme:
 
 ```toml
-[params]
-
 [params.search]
 enable = true
 type = "cse"
@@ -48,13 +46,13 @@ type = "cse"
 [params.cse]
 # Search engine: ["google", "bing"]
 engine = "google"
-resultsPage = "/search/"
+results_page = "/search/"
 
 [params.cse.google]
 cx = ""
 
 [params.cse.bing]
-# Unsupported yet
+cx = ""
 ```
 
 ## Google CSE
@@ -82,14 +80,7 @@ events:
 
 ## Bing CSE
 
-> [!WARNING]
-> Bing CSE is not supported in FixIt yet.
-
-<!--
-Bing Custom Search is similar to Google CSE, but the configuration is different. You can go to the [Bing Custom Search][bing-cse] page to view the complete tutorial.
-
-Follow these steps to create a new custom search instance:
--->
+Bing Custom Search is similar to Google CSE. You can go to the [Bing Custom Search][bing-cse] page to create a custom search instance and obtain the CX ID, then configure it in `params.cse.bing.cx`.
 
 <!-- link reference definition -->
 [google-cse]: https://programmablesearchengine.google.com/

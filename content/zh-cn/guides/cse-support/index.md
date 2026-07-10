@@ -39,8 +39,6 @@ hugo new content search/index.md
 在 FixIt 主题中配置 Google 或 Bing CSE：
 
 ```toml
-[params]
-
 [params.search]
 enable = true
 type = "cse"
@@ -48,13 +46,13 @@ type = "cse"
 [params.cse]
 # 搜索引擎：["google", "bing"]
 engine = "google"
-resultsPage = "/search/"
+results_page = "/search/"
 
 [params.cse.google]
 cx = ""
 
 [params.cse.bing]
-# 暂不支持
+cx = ""
 ```
 
 ## Google CSE
@@ -82,14 +80,7 @@ events:
 
 ## Bing CSE
 
-> [!WARNING]
-> Bing CSE 在 FixIt 中暂不支持。
-
-<!--
-Bing 自定义搜索与 Google CSE 类似，但配置不同。你可以前往 [Bing Custom Search][bing-cse] 查看完整的教程。
-
-按照以下步骤创建一个新的自定义搜索实例：
--->
+Bing 自定义搜索与 Google CSE 类似。你可以前往 [Bing Custom Search][bing-cse] 页面创建自定义搜索实例并获取 CX ID，然后在 `params.cse.bing.cx` 中配置。
 
 <!-- link reference definition -->
 [google-cse]: https://programmablesearchengine.google.com/

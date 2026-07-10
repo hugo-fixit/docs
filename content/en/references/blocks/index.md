@@ -59,29 +59,27 @@ You can implement these blocks through `define`.
 
 {{< version 0.3.12 >}}
 
-To facilitate the management of introducing custom templates, you can specify the path of custom templates through the `params.customPartials` parameter.
+To facilitate the management of introducing custom templates, you can specify the path of custom templates through the `params.custom_partials` parameter.
 
 Custom partials must be stored in the `/layouts/_partials/` directory.
 
 ```toml
-[params]
-
-[params.customPartials]
+[params.custom_partials]
 head = []
-menuDesktop = []
-menuMobile = []
+menu_desktop = []
+menu_mobile = []
 profile = []
 aside = []
 comment = []
 footer = []
 widgets = []
 assets = []
-postTocBefore = []
-postTocAfter = []
-postContentBefore = []
-postContentAfter = []
-postFooterBefore = []
-postFooterAfter = []
+post_toc_before = []
+post_toc_after = []
+post_content_before = []
+post_content_after = []
+post_footer_before = []
+post_footer_after = []
 ```
 
 ## How to Use
@@ -99,9 +97,7 @@ The quick brown fox jumps over the lazy dog.
 Then specify the path of the custom template in the configuration file.
 
 ```toml
-[params]
-
-[params.customPartials]
+[params.custom_partials]
 profile = [ "custom/profile.html" ]
 ```
 

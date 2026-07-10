@@ -1274,7 +1274,7 @@ return fetch('/echarts/les-miserables.json')
 
 例如，当前页面结构如下：
 
-{{< file-tree path="content/en/documentation/content-management/shortcodes/extended/echarts" level=2 highlightList="chart.js, chart.yaml, chart.json, chart.toml" />}}
+{{< file-tree path="content/en/documentation/content-management/shortcodes/extended/echarts" level=2 highlight_list="chart.js, chart.yaml, chart.json, chart.toml" />}}
 
 你可以使用 `file` 参数来从文件中获取数据：
 

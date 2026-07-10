@@ -52,8 +52,8 @@ Please refer to the relevant documentation for installation instructions:
 - [Hugo][hugo-install] (extended edition, v{{< param docs.min_hugo_version >}} or later)
 - [Git][git-install]
 - [Go][go-install]
-- _[Dart Sass][dart-sass-install] (not used yet)_
-- [Node.js][node-install] (v16.0.0 or later)
+- [Dart Sass][dart-sass-install]
+- [Node.js][node-install] (v20.0.0 or later)
 
 ## Installations
 
@@ -138,8 +138,8 @@ hugo mod get -u
 hugo mod get -u ./...
 # Update one module
 hugo mod get -u github.com/hugo-fixit/FixIt
-# Get a specific version (e.g. v0.3.2, @latest, @main)
-hugo mod get github.com/hugo-fixit/FixIt@v0.3.2
+# Get a specific version (e.g. v0.4.5, @latest, @main)
+hugo mod get github.com/hugo-fixit/FixIt@v0.4.5
 ```
 
 {{% /tab %}}

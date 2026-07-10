@@ -513,49 +513,49 @@ inline = [
 
 [params.page]
 
-[params.page.math]
+[params.math]
 enable = true
 # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
 type = "katex"
 
 # KaTeX server-side rendering (https://katex.org)
 # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
-[params.page.math.katex]
+[params.math.katex]
 # KaTeX extension copy-tex
-copyTex = true
-throwOnError = false
-errorColor = "#ff4949"
+copy_tex = true
+throw_on_error = false
+error_color = "#ff4949"
 
 # custom macros map
 # syntax: <macro> = <definition>
-[params.page.math.katex.macros]
+[params.math.katex.macros]
 # "\\f" = "#1f(#2)" # usage: $\f{a}{b}$
 
 # MathJax server-side rendering (https://www.mathjax.org)
 # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-[params.page.math.mathjax]
+[params.math.mathjax]
 cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 
-[params.page.math.mathjax.packages]
+[params.math.mathjax.packages]
 # "[+]" = ['configmacros']
 
 # custom macros map
 # syntax: <macro> = <definition>
-[params.page.math.mathjax.macros]
+[params.math.mathjax.macros]
 # "bold" = ["{\\bf #1}", 1] # usage: $\bold{math}$
 
-[params.page.math.mathjax.loader]
+[params.math.mathjax.loader]
 load = [ "ui/safe" ]
 
-[params.page.math.mathjax.loader.paths]
+[params.math.mathjax.loader.paths]
 # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
 
 # more loader config e.g source, dependencies, provides etc.
 
-[params.page.math.mathjax.options]
-enableMenu = true
+[params.math.mathjax.options]
+enable_menu = true
 # HTML tags that won't be searched for math
-skipHtmlTags = [
+skip_html_tags = [
   "script",
   "noscript",
   "style",
@@ -568,10 +568,10 @@ skipHtmlTags = [
   "mjx-container"
 ]
 # class that marks tags not to search
-ignoreHtmlClass = "mathjax_ignore"
+ignore_html_class = "mathjax_ignore"
 
 # HTML tags that can appear within math
-[params.page.math.mathjax.options.includeHtmlTags]
+[params.math.mathjax.options.include_html_tags]
 # "#comment" = ""
 # br = "\n"
 # wbr = ""
@@ -710,7 +710,7 @@ $$
 
 通过这个扩展，在选择并复制 $\KaTeX$ 渲染的公式时，会将其 $\LaTeX$ 源代码复制到剪贴板。
 
-在你的 [主题配置][theme-config] 中的 `[params.page.math.katex]` 下面设置属性 `copyTex = true` 来启用 Copy-tex。
+在你的 [主题配置][theme-config] 中的 `[params.math.katex]` 下面设置属性 `copy_tex = true` 来启用 Copy-tex。
 
 选择并复制上一节中渲染的公式，可以发现复制的内容为 $\LaTeX$ 源代码。
 
@@ -738,12 +738,12 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 
 #### 自定义宏 {#custom-macros}
 
-你可以在你的 [主题配置][theme-config] 中的 `[params.page.math.katex.macros]` 下面添加自定义宏。
+你可以在你的 [主题配置][theme-config] 中的 `[params.math.katex.macros]` 下面添加自定义宏。
 
 例如：
 
 ```toml
-[params.page.math.katex.macros]
+[params.math.katex.macros]
 "\\f" = "#1f(#2)" # usage: $\f{a}{b}$
 ```
 
@@ -780,7 +780,7 @@ $c = \pm\sqrt{a\^2 + b^2}$
 $c = \pm\sqrt{a\^2 + b^2}$
 
 > [!CAUTION]
-> 如果你设置 `params.page.math.katex.throwOnError` 为 `true`，则会抛出错误并停止渲染。
+> 如果你设置 `params.math.katex.throw_on_error` 为 `true`，则会抛出错误并停止渲染。
 
 ### MathJax
 
@@ -1009,7 +1009,7 @@ some Markdown content
 例如：
 
 ````markdown
-```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+```vue {.line-wrapping, name="App.vue", title="Hello World", max_shown_lines=11, linenos=false, hl_lines=[4,"8-9"]}
 <script setup>
 import { ref } from 'vue'
 
@@ -1028,7 +1028,7 @@ const msg = ref('Hello World!')
 
 呈现的输出如下所示：
 
-```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"]}
+```vue {.line-wrapping, name="App.vue", title="Hello World", max_shown_lines=11, linenos=false, hl_lines=[4,"8-9"]}
 <script setup>
 import { ref } from 'vue'
 

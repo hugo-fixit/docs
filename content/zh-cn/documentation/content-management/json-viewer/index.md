@@ -75,7 +75,7 @@ JSON 查看器提供以下功能：
 
 [params.jsonViewer]
 enable = true
-expandDepth = 1
+expand_depth = 1
 copyable = true
 sort = false
 boxed = true
@@ -89,7 +89,7 @@ boxed = true
 ---
 title: 我的 JSON 数据
 jsonViewer:
-  expandDepth: 2
+  expand_depth: 2
   sort: true
 ---
 ```
@@ -99,7 +99,7 @@ jsonViewer:
 你还可以通过在代码围栏中直接添加选项来自定义单个实例的 JSON 查看器：
 
 ````markdown
-```json {expandDepth=2, copyable=false, sort=true, boxed=false}
+```json {expand_depth=2, copyable=false, sort=true, boxed=false}
 {
   "name": "FixIt",
   "version": "0.4.0",
@@ -111,7 +111,7 @@ jsonViewer:
 
 上述代码围栏将渲染为：
 
-```json {expandDepth=2, copyable=false, sort=true, boxed=false}
+```json {expand_depth=2, copyable=false, sort=true, boxed=false}
 {
   "name": "FixIt",
   "version": "0.4.0",

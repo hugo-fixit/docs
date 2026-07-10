@@ -75,7 +75,7 @@ Add the following to your `hugo.toml` ([Configuration Options][json-viewer-confi
 
 [params.jsonViewer]
 enable = true
-expandDepth = 1
+expand_depth = 1
 copyable = true
 sort = false
 boxed = true
@@ -89,7 +89,7 @@ You can override global settings for individual pages using front matter:
 ---
 title: My JSON Data
 jsonViewer:
-  expandDepth: 2
+  expand_depth: 2
   sort: true
 ---
 ```
@@ -99,7 +99,7 @@ jsonViewer:
 You can also customize the JSON viewer for individual instances by adding options directly in the code fence:
 
 ````markdown
-```json {expandDepth=2, copyable=false, sort=true, boxed=false}
+```json {expand_depth=2, copyable=false, sort=true, boxed=false}
 {
   "name": "FixIt",
   "version": "0.4.0",
@@ -111,7 +111,7 @@ You can also customize the JSON viewer for individual instances by adding option
 
 The above code fence will render as:
 
-```json {expandDepth=2, copyable=false, sort=true, boxed=false}
+```json {expand_depth=2, copyable=false, sort=true, boxed=false}
 {
   "name": "FixIt",
   "version": "0.4.0",

@@ -59,29 +59,27 @@ cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 
 {{< version 0.3.12 >}}
 
-为了便于管理引入自定义模板，可以通过 `params.customPartials` 参数来指定自定义模板的路径。
+为了便于管理引入自定义模板，可以通过 `params.custom_partials` 参数来指定自定义模板的路径。
 
 自定义模板必须存放在 `/layouts/_partials/` 目录中。
 
 ```toml
-[params]
-
-[params.customPartials]
+[params.custom_partials]
 head = []
-menuDesktop = []
-menuMobile = []
+menu_desktop = []
+menu_mobile = []
 profile = []
 aside = []
 comment = []
 footer = []
 widgets = []
 assets = []
-postTocBefore = []
-postTocAfter = []
-postContentBefore = []
-postContentAfter = []
-postFooterBefore = []
-postFooterAfter = []
+post_toc_before = []
+post_toc_after = []
+post_content_before = []
+post_content_after = []
+post_footer_before = []
+post_footer_after = []
 ```
 
 ## 如何使用
@@ -99,9 +97,7 @@ The quick brown fox jumps over the lazy dog.
 然后，在配置文件中指定自定义模板的路径即可。
 
 ```toml
-[params]
-
-[params.customPartials]
+[params.custom_partials]
 profile = [ "custom/profile.html" ]
 ```
 
