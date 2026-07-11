@@ -1079,7 +1079,7 @@ console.log('Hello, world!')
 [katex]: https://katex.org/
 [mathjax]: https://www.mathjax.org/
 [tomath]: https://gohugo.io/functions/transform/tomath/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration/params" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
 [docs-mathjax]: {{< relref path="/documentation/content-management/mathjax-support" >}}
@@ -1094,4 +1094,4 @@ console.log('Hello, world!')
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
 [file-tree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree/#inline-content" >}}
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
-[codeblock-config]: {{< relref path="/documentation/getting-started/configuration#codeblock" >}}
+[codeblock-config]: {{< relref path="/documentation/getting-started/configuration/params#codeblock" >}}

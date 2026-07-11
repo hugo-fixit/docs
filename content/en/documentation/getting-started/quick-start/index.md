@@ -258,7 +258,7 @@ if you encounter any problems or have any questions, please go to our [community
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
-[configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
+[configuration]: {{< relref path="/documentation/getting-started/configuration/introduction" >}}
 [community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->

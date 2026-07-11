@@ -135,7 +135,7 @@ Example `mapbox` input with multiple markers:
 [mapbox]: https://docs.mapbox.com/mapbox-gl-js
 [vector-tiles]: https://docs.mapbox.com/help/glossary/vector-tiles/
 [style-spec]: https://docs.mapbox.com/mapbox-gl-js/style-spec/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration/params" >}}
 [front-matter]: {{< relref path="/documentation/content-management/introduction#front-matter" >}}
 [navigationcontrol]: https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol
 [geolocatecontrol]: https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol

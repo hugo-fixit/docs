@@ -550,8 +550,8 @@ weight = 3
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /zh-cn/ecosystem/hugo-fixit/component-projects/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
-[content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration/theme" >}}
+[content-to-menu]: {{< relref path="/documentation/getting-started/configuration/introduction#menu-configuration" >}}
 [ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
 [fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
 [fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}

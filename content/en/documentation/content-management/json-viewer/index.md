@@ -122,4 +122,4 @@ The above code fence will render as:
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
-[json-viewer-config]: {{< relref path="/documentation/getting-started/configuration#jsonviewer" >}}
+[json-viewer-config]: {{< relref path="/documentation/getting-started/configuration/params#json_viewer" >}}
