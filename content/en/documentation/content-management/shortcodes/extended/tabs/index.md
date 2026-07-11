@@ -56,7 +56,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Underline style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs placement="bottom" defaultTab=1 */>}}
 {{%/* tab title="Tab 1" */%}}Underline style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Underline style tab 2 content, this is the **default selected** tab{{%/* /tab */%}}
@@ -73,7 +73,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Pill style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs type="pill" placement="left" */>}}
 {{%/* tab title="Tab 1" */%}}Pill style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Pill style tab 2 content{{%/* /tab */%}}
@@ -90,7 +90,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Card style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs type="card" placement="right" */>}}
 {{%/* tab title="Tab 1" */%}}Card style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Card style tab 2 content{{%/* /tab */%}}
@@ -107,7 +107,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Segment style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs type="segment" */>}}
 {{%/* tab title="Tab 1" */%}}Segment style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Segment style tab 2 content{{%/* /tab */%}}

@@ -1,6 +1,7 @@
 ---
-title: Configure FixIt
-linkTitle: Configuration
+title: Hugo FixIt Configuration Overview
+linkTitle: Configuration Overview
+shortTitle: Overview
 date: 2024-03-07T15:37:59+08:00
 aliases:
   - /theme-documentation-basics/

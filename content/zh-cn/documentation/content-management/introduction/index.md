@@ -118,193 +118,7 @@ type: posts
 
 ## Front matter {#front-matter}
 
-**Hugo** 允许你在文章内容前面添加 `yaml`, `toml` 或者 `json` 格式的 Front matter，详见 [Front matter][front-matter]。
-
-> [!NOTE]
-> **不是所有**的以下 Front matter 都必须在你的每篇文章中设置。
->
-> 只有在文章的参数和你的 [主题配置]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) 不一致时才有必要这么做。
-
-> [!tip]-
-> **FixIt** 主题内嵌了一些 [原型 (Archetype)](https://gohugo.io/content-management/archetypes/)，使用以下命令创建新内容时会自动带入常用的 Front matter：
->
-> ```bash
-> hugo new posts/foo.md
-> # 或
-> hugo new --kind post-bundle posts/bar/
-> ```
-
-- **title**: 文章标题
-- **subtitle**: 文章副标题
-- **date**: 这篇文章创建的日期时间它通常是从文章的 Front matter 中的 `date` 字段获取的，但是也可以在 [主题配置][theme-config] 中设置
-- **lastmod**: 上次修改内容的日期时间
-- **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数，这篇文章不会被渲染
-- **author**: {{< version 0.2.18 changed >}} 文章作者配置，和 [主题配置][theme-config] 中的 `params.author` 部分相同
-
-    ```yaml {data-open=false}
-    author:
-      name: '' # 文章作者
-      link: '' # 文章作者的链接
-      email: '' # 文章作者的邮箱，用于设置 Gravatar 头像，优先于 `author.avatar`
-      avatar: '' # 文章作者的头像
-    ```
-
-- **authorAvatar**: {{< version 0.2.18 >}} 是否启用文章作者头像
-- **description**: 文章内容的描述
-- **keywords**: 文章内容的关键词
-- **license**: 这篇文章特殊的许可
-- **images**: 页面图片，用于 Open Graph 和 Twitter Cards
-- **summary**: 文章的摘要
-- **summaryPlainify**: {{< version 0.3.13 >}} 是否显示纯文本摘要，默认：`false`。和 [主题配置][theme-config] 中的 `params.summaryPlainify` 相同
-
-- **tags**: 文章的标签
-- **categories**: 文章所属的类别
-- **featuredImage**: 文章的特色图片
-- **featuredImagePreview**: 用在主页预览的文章特色图片
-
-- **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上
-- **hiddenFromSearch**: 如果设为 `true`, 这篇文章将不会显示在搜索结果中
-- **hiddenFromRelated**: {{< version 0.3.0 >}} 如果设为 `true`, 这篇文章将不会显示在相关文章中
-- **hiddenFromFeed**: {{< version 0.3.10 >}} 如果设为 `true`, 这篇文章将不会显示在 RSS、ATOM 和 JSON Feed 中
-- **link_guard**: {{< version 1.0.0 >}} 覆盖当前页面的 `params.link.guard` 配置，支持 `bool` 或 `map`
-
-    ```yaml {data-open=false}
-    link_guard:
-      enable: true
-      mode: modal # modal | redirect
-      allow_domains:
-        - github.com
-    ```
-
-- **twemoji**: 如果设为 `true`, 这篇文章会使用 twemoji
-- **lightgallery**: {{< version 0.2.18 changed >}} 和 [主题配置][theme-config] 中的 `params.page.lightgallery` 部分相同
-- **ruby**: 如果设为 `true`, 这篇文章会使用 [上标注释扩展语法][ruby-syntax]
-- **fraction**: 如果设为 `true`, 这篇文章会使用 [分数扩展语法][fraction-syntax]
-- **fontawesome**: 如果设为 `true`, 这篇文章会使用 [Font Awesome 扩展语法][fontawesome-syntax]
-- **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接
-- **linkToSource**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向源码的链接
-- **linkToEdit**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向编辑页面的链接
-- **linkToReport**: {{< version 0.3.0 >}} 如果设为 `true`, 内容的页脚将显示指向报告问题的链接
-- **linkToVscode**: {{< version 0.3.20 >}} 如果设为 `true`, 内容的页脚将显示指向在 VSCode 中打开的链接
-- **pageStyle**: {{< version 0.2.13 >}} 页面样式，详见 [页面宽度][page-style]
-
-- **codeblock**: {{< version 0.4.0 >}} 和 [主题配置][theme-config] 中的 `params.codeblock` 部分相同
-- **toc**: 和 [主题配置][theme-config] 中的 `params.page.toc` 部分相同
-- **expirationReminder**: {{< version 0.2.13 >}} 和 [主题配置][theme-config] 中的 `params.page.expirationReminder` 部分相同
-- **heading**: {{< version 0.3.0 >}} 和 [主题配置][theme-config] 中的 `params.page.heading` 部分相同
-- **math**: 和 [主题配置][theme-config] 中的 `params.page.math` 部分相同
-- **mapbox**: 和 [主题配置][theme-config] 中的 `params.page.mapbox` 部分相同
-- **share**: 和 [主题配置][theme-config] 中的 `params.page.share` 部分相同
-- **comment**: 和 [主题配置][theme-config] 中的 `params.page.comment` 部分相同
-- **library**: 和 [主题配置][theme-config] 中的 `params.page.library` 部分相同
-- **seo**: 和 [主题配置][theme-config] 中的 `params.page.seo` 部分相同
-- **type**: 页面渲染模板，详见 [页面模板](#templates)
-- **layout**: 页面渲染模板，详见 [页面模板](#templates)
-- **menu**: 详见 [添加内容到菜单][content-to-menu]
-
-- **password**: {{< version 0.2.15 >}} 加密页面内容的密码，详见 [内容加密](#content-encryption)
-- **message**: {{< version 0.2.15 >}} 加密提示信息，详见 [内容加密](#content-encryption)
-
-- **repost**: {{< version 0.2.15 >}} 和 [主题配置][theme-config] 中的 `params.page.repost` 部分相同
-- **autoBookmark**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.autoBookmark` 部分相同
-- **showLastmod**: {{< version 0.4.0 >}} 和 [主题配置][theme-config] 中的 `params.page.showLastmod` 部分相同
-- **wordCount**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.wordCount` 部分相同
-- **readingTime**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.readingTime` 部分相同
-- **endFlag**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.endFlag` 部分相同
-- **reward**: {{< version 0.2.17 >}} 和 [主题配置][theme-config] 中的 `params.page.reward` 部分相同
-- **instantPage**: {{< version 0.2.18 >}} 和 [主题配置][theme-config] 中的 `params.page.instantPage` 部分相同
-- **feed**: {{< version 0.3.10 >}} 和 [主题配置][theme-config] 中的 `params.feed` 部分相同
-
-<!-- front matter for _index.md only -->
-
-- **titleIcon**: {{< version 1.0.0 >}} 用于页面标题的图标，仅在 `_index.md` 中有效
-- - **cardIcon**: {{< version 1.0.0 >}} 用于分类（taxonomy）页面中分类卡片的图标，仅在分类 `_index.md` 中有效
-
----
-
-**featuredImage** 和 **featuredImagePreview** 支持 [本地资源引用](#contents-organization) 的完整用法。
-
-如果带有在 Front matter 中设置了 `name: featured-image` 或 `name: featured-image-preview` 属性的页面资源，
-没有必要再设置 `featuredImage` 或 `featuredImagePreview`:
-
-```yaml
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-```
-
-这是一个 Front matter 例子：
-
-```yaml
----
-title: 我的第一篇文章
-subtitle: ''
-date: 2020-03-04T15:58:26+08:00
-lastmod: 2020-03-04T15:58:26+08:00
-draft: true
-author: ''
-authorLink: ''
-authorEmail: ''
-description: ''
-keywords: ''
-license: ''
-images: []
-
-tags: []
-categories: []
-featuredImage: ''
-featuredImagePreview: ''
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-hiddenFromFeed: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-pageStyle: normal
-
-toc:
-  enable: true
-  auto: true
-expirationReminder:
-  enable: false
-  # ...
-edit:
-  enable: false
-  # ...
-math:
-  enable: true
-  # ...
-mapbox:
-  accessToken: ''
-  # ...
-share:
-  enable: true
-  # ...
-comment:
-  enable: true
-  # ...
-library:
-  css:
-  # someCSS = "some.css"
-  # 位于 "assets/"
-  # 或者
-  # someCSS = "https://cdn.example.com/some.css"
-  js:
-  # someJS = "some.js"
-  # 位于 "assets/"
-  # 或者
-  # someJS = "https://cdn.example.com/some.js"
-seo:
-  images: []
-  # ...
----
-```
+这部分内容在 [Front matter][front-matter] 中介绍。
 
 ## 内容摘要
 
@@ -355,7 +169,7 @@ seo:
 4. 按照自动摘要拆分方法。
 
 > [!TIP]
-> 如果你想要纯文本摘要，可以设置 `params.summaryPlainify` 或者 Front matter `summaryPlainify`。
+> 如果你想要纯文本摘要，可以设置 `params.summary_plainify` 或者 Front matter `summary_plainify`。
 
 ## Markdown 语法
 
@@ -507,9 +321,9 @@ weight = 2
 
 [[languages.fr.menu.main]]
 identifier = "categories"
+name = "Catégories"
 pre = ""
 post = ""
-name = "Catégories"
 url = "/categories/"
 title = ""
 weight = 3
@@ -547,15 +361,9 @@ weight = 3
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [coverview]: https://coverview.lruihao.cn/
 [coverview-repo]: https://github.com/Lruihao/CoverView
-[front-matter]: https://gohugo.io/content-management/front-matter/
+[front-matter]: {{< relref path="/documentation/content-management/front-matter" >}}
 [cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /zh-cn/ecosystem/hugo-fixit/component-projects/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration/theme" >}}
-[content-to-menu]: {{< relref path="/documentation/getting-started/configuration/introduction#menu-configuration" >}}
-[ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
-[fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
-[fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
-[page-style]: {{< relref path="/documentation/advanced#page-style" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [hugo-url-management]: https://gohugo.io/content-management/urls/
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}

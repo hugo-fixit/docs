@@ -1,6 +1,7 @@
 ---
-title: 配置 FixIt
-linkTitle: 配置篇
+title: Hugo FixIt 配置概述
+linkTitle: 配置概述
+shortTitle: 概述
 date: 2024-03-07T15:37:59+08:00
 aliases:
   - /zh-cn/theme-documentation-basics/
@@ -325,6 +326,7 @@ term = [
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 -->
+[community]: {{< relref path="/community" >}}
 [config]: https://github.com/hugo-fixit/FixIt/blob/{{< param docs.fixit_version >}}/hugo.toml
 [menu-system]: https://gohugo.io/content-management/menus/
 [configuration-directory]: https://gohugo.io/configuration/introduction/#configuration-directory

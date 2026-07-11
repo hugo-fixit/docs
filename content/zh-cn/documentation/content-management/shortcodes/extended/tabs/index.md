@@ -56,7 +56,7 @@ collections:
 {{% tab title="标签页 3" %}}下划线样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs placement="bottom" defaultTab=1 */>}}
 {{%/* tab title="标签页 1" */%}}下划线样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}下划线样式标签页 2 的内容，这个是**默认选中**的标签页{{%/* /tab */%}}
@@ -73,7 +73,7 @@ collections:
 {{% tab title="标签页 3" %}}胶囊样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs type="pill" placement="left" */>}}
 {{%/* tab title="标签页 1" */%}}胶囊样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}胶囊样式标签页 2 的内容{{%/* /tab */%}}
@@ -90,7 +90,7 @@ collections:
 {{% tab title="标签页 3" %}}卡片样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs type="card" placement="right" */>}}
 {{%/* tab title="标签页 1" */%}}卡片样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}卡片样式标签页 2 的内容{{%/* /tab */%}}
@@ -107,7 +107,7 @@ collections:
 {{% tab title="标签页 3" %}}分段样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs type="segment" */>}}
 {{%/* tab title="标签页 1" */%}}分段样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}分段样式标签页 2 的内容{{%/* /tab */%}}
