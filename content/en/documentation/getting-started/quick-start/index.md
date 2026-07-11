@@ -33,15 +33,16 @@ In this tutorial you will:
 3. Configure the site
 4. Publish the site
 
-## Prerequisites
-
-> [!todo]+
+> [!todo]~
 > If this is your first time using [Hugo][hugo], we strongly suggest you learn more about it by following this [great documentation for beginners][hugo-started].
 
-Before you begin this tutorial you must:
+## Prerequisites
 
-1. [Install Hugo][hugo-installing] (extended edition, v{{< param docs.min_hugo_version >}} or later)
-2. [Install Git][git-install]
+Before you begin this tutorial you must install:
+
+1. [Hugo][hugo-installing] (extended edition, v{{< param docs.min_hugo_version >}} or later)
+2. [Dart Sass][dart-sass-install]
+3. [Git][git-install]
 
 You must also be comfortable working from the command line.
 
@@ -236,6 +237,7 @@ if you encounter any problems or have any questions, please go to our [community
 [hugo]: https://gohugo.io/
 [hugo-started]: https://gohugo.io/getting-started/
 [hugo-installing]: https://gohugo.io/installation/
+[dart-sass-install]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules

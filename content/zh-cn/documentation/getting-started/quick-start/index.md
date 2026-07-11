@@ -33,15 +33,16 @@ toc:
 3. 配置站点
 4. 发布站点
 
-## 先决条件
-
-> [!todo]+
+> [!todo]~
 > 如果这是你第一次使用 [Hugo](https://gohugo.io/)，我们强烈建议你通过阅读这篇 [入门文档](https://gohugo.io/getting-started/) 来更多地了解它。
 
-在开始本教程之前，你必须：
+## 先决条件
 
-1. [安装 Hugo][hugo-installing]（扩展版，v{{< param docs.min_hugo_version >}} 或更高版本）
-2. [安装 Git][git-install]
+在开始本教程之前，你必须安装：
+
+1. [Hugo][hugo-installing]（扩展版，v{{< param docs.min_hugo_version >}} 或更高版本）
+2. [Dart Sass][dart-sass-install]
+3. [Git][git-install]
 
 你还必须熟悉使用命令行。
 
@@ -240,6 +241,7 @@ hugo
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
 [hugo-installing]: https://gohugo.io/installation/
+[dart-sass-install]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
