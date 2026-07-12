@@ -3,14 +3,13 @@ title: Content Encryption
 date: 2023-02-24T22:32:41+08:00
 aliases:
   - /theme-documentation-content-encryption/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Find out how to encrypt content in FixIt theme.
 keywords:
   - Hugo Encryption
   - Content Encryption
   - FixIt
+  - AES-256-GCM
+  - PBKDF2
 password: 1212
 message: Password is 1212
 resources:
@@ -30,9 +29,19 @@ Find out how to encrypt content in FixIt theme.
 
 <!--more-->
 
-## Page Encryption
+## Implementation Details
 
-### Front matter
+FixIt theme provides two levels of content encryption:
+
+- **Template processing**: Password protection based on Hugo template syntax. Content is stored in plaintext in the build output, offering no real encryption security.
+- **Post-encrypt (AES-256-GCM)**: Build-time encryption using AES-256-GCM with PBKDF2 key derivation (100,000 iterations). Provides strong cryptographic security for sensitive content.
+
+> [!danger]~
+> "The simplest password is enough to prevent 90% of people!"
+>
+> There is no trivial matter about privacy. Please do not upload important and private contents, and keep them properly!
+
+## Page Encryption
 
 The FixIt theme provides two front matters for page encryption.
 
@@ -42,23 +51,11 @@ The FixIt theme provides two front matters for page encryption.
 For example, the front matters in this article are as follows:
 
 ```yaml
----
-title: Theme Documentation - Content Encryption
-date: 2022-05-28T11:51:41+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
-description: Find out how to encrypt content in FixIt theme.
+title: Content Encryption
+date: 2023-02-24T22:32:41+08:00
 password: 1212
 message: Password is 1212
-resources:
-  - name: featured-image
-    src: featured-image.png
-tags:
-  - Encryption
-categories:
-  - Documentation
----
+# other front matter ...
 ```
 
 > [!info]~
@@ -67,38 +64,6 @@ categories:
 > 2. A "Encrypt again" button is provided at the end of the article. Click it to immediately forget the password and re encrypt the content
 > 3. Encrypted pages have been hidden from search
 > 4. The Markdown output of encrypted pages has been disabled. To prevent password disclosure, **do not make encrypted pages public in any form**
-
-### Advanced use
-
-FixIt Dcryptor has two lifecycle hooks, see [Class FixItDecryptor API]({{< relref "/references/fixIt-decryptor" >}}).
-
-For example, after unlocking the article, output the text:
-
-```go-html-template
-{{</* script */>}}
-document.addEventListener('DOMContentLoaded', () => {
-  fixit.theme.decryptor.addEventListener('decrypted', function() {
-    console.log('after password decryption')
-  })
-  if (window.localStorage.getItem(`fixit-decryptor/#${location.pathname}`)) {
-    console.log('after automatic decryption')
-  }
-});
-{{</* /script */>}}
-```
-
-You can see the output in the console of the developer tool.
-
-{{< script >}}
-document.addEventListener('DOMContentLoaded', () => {
-  fixit.decryptor.addEventListener('decrypted', function() {
-    console.log('after password decryption')
-  })
-  if (window.localStorage.getItem(`fixit-decryptor/#${location.pathname}`)) {
-    console.log('after automatic decryption')
-  }
-});
-{{< /script >}}
 
 ## Partial Encryption {#partial-encryption}
 
@@ -139,12 +104,12 @@ The `fixit-encryptor` shortcode was supported in version {{< version 0.2.15 >}}.
 An example of nesting:
 
 ```md
-{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
-{{</* typeit */>}}如果你愿意一层一层一层地剥开我的心{{</* /typeit */>}}
-{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
-{{</* typeit */>}}你会发现 你会讶异{{</* /typeit */>}}
-{{%/* fixit-encryptor "1212" "密码是 1212" */%}}
-{{</* typeit */>}}你是我最压抑最深处的秘密{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "Password is 1212" */%}}
+{{</* typeit */>}}If you peel my heart layer by layer{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "Password is 1212" */%}}
+{{</* typeit */>}}You will find you will be surprised{{</* /typeit */>}}
+{{%/* fixit-encryptor "1212" "Password is 1212" */%}}
+{{</* typeit */>}}You are my most suppressed deepest secret{{</* /typeit */>}}
 {{%/* /fixit-encryptor */%}}
 {{%/* /fixit-encryptor */%}}
 {{%/* /fixit-encryptor */%}}
@@ -152,23 +117,24 @@ An example of nesting:
 
 The rendered output looks like this:
 
-{{% fixit-encryptor "1212" "密码是 1212" %}}
-{{< typeit >}}如果你愿意一层一层一层地剥开我的心{{< /typeit >}}
-{{% fixit-encryptor "1212" "密码是 1212" %}}
-{{< typeit >}}你会发现 你会讶异{{< /typeit >}}
-{{% fixit-encryptor "1212" "密码是 1212" %}}
-{{< typeit >}}你是我最压抑最深处的秘密{{< /typeit >}}
+{{% fixit-encryptor "1212" "Password is 1212" %}}
+{{< typeit >}}If you peel my heart layer by layer{{< /typeit >}}
+{{% fixit-encryptor "1212" "Password is 1212" %}}
+{{< typeit >}}You will find you will be surprised{{< /typeit >}}
+{{% fixit-encryptor "1212" "Password is 1212" %}}
+{{< typeit >}}You are my most suppressed deepest secret{{< /typeit >}}
 {{% /fixit-encryptor %}}
 {{% /fixit-encryptor %}}
 {{% /fixit-encryptor %}}
 
-## Summary
+## Post-encrypt Tool
 
-Compared with encrypting content through script batch processing such as golang/python/javascript, FixIt theme built-in encryption has the following advantages and disadvantages:
+{{< version 1.0.0 >}}
 
-- **Advantages**: High usability, out of the box, without further batch processing
-- **Disadvantages**: Low security, the encryption algorithm is limited by the `go-html-template` syntax
+For enhanced security, FixIt provides a standalone [post-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt) tool that encrypts content at build time using AES-256-GCM with PBKDF2 key derivation. This provides significantly stronger encryption than the template-based approach.
 
-> "The simplest password is enough to prevent 90% of people!"
->
-> There is no trivial matter about privacy. Please do not upload important and private contents, and keep them properly!
+```bash
+npx @hugo-fixit/post-encrypt
+```
+
+See the [post-encrypt documentation](https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt) for more details.

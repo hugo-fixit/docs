@@ -4,7 +4,7 @@
 #   1. Site-level params — apply to the entire site, can NOT be overridden per-page.
 #   2. Page-level params — can be overridden per-page via page front matter.
 #
-# See: https://fixit.lruihao.cn/documentation/basics/#theme-configuration
+# See: https://fixit.lruihao.cn/documentation/getting-started/configuration/params/
 # -------------------------------------------------------------------------------------
 
 # FixIt theme version.
@@ -1173,7 +1173,7 @@ duration = -1
 loop = false
 
 # Admonitions custom configuration.
-# See: [Custom Admonitions](https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions).
+# See: [Custom Admonitions](https://fixit.lruihao.cn/documentation/advanced/#custom-admonitions).
 # syntax: `<type> = <icon>`
 [admonition]
 ban = "fa-solid fa-ban"
@@ -1181,7 +1181,7 @@ sponsor = "fa-solid fa-hand-holding-usd"
 
 # ban = "fa-solid fa-ban"
 # Task lists custom configuration.
-# See: [Custom Task Lists](https://fixit.lruihao.cn/documentation/content-management/advanced/#custom-task-lists).
+# See: [Custom Task Lists](https://fixit.lruihao.cn/documentation/advanced/#custom-task-lists).
 # syntax: `<sign> = <icon>`
 [task_list]
 tip = "fa-regular fa-lightbulb"

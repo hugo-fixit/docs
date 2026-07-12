@@ -5,8 +5,6 @@ date: 2026-07-11T18:19:31+08:00
 description: All FixIt theme configuration settings via the root configuration keys params.
 categories:
   - Documentation
-collections:
-  - Getting Started
 tags:
   - Configuration
 lightgallery: true
@@ -1084,11 +1082,11 @@ loop
 
 ### admonition
 
-`map` Admonitions custom configuration. See: [Custom Admonitions](https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions). Syntax: `<type> = <icon>`. Example: `ban = "fa-solid fa-ban"`.
+`map` Admonitions custom configuration. See: [Custom Admonitions](https://fixit.lruihao.cn/documentation/advanced/#custom-admonitions). Syntax: `<type> = <icon>`. Example: `ban = "fa-solid fa-ban"`.
 
 ### task_list
 
-`map` Task lists custom configuration. See: [Custom Task Lists](https://fixit.lruihao.cn/documentation/content-management/advanced/#custom-task-lists). Syntax: `<sign> = <icon>`. Example: `tip = "fa-regular fa-lightbulb"`.
+`map` Task lists custom configuration. See: [Custom Task Lists](https://fixit.lruihao.cn/documentation/advanced/#custom-task-lists). Syntax: `<sign> = <icon>`. Example: `tip = "fa-regular fa-lightbulb"`.
 
 ### repo_version
 

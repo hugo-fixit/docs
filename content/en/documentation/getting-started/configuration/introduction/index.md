@@ -20,8 +20,6 @@ tags:
   - Basics
 categories:
   - Documentation
-collections:
-  - Getting Started
 lightgallery: true
 heading:
   capitalize: false

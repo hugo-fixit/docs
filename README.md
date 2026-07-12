@@ -9,7 +9,7 @@
 
 ## 系统依赖
 
-- [Node.js](https://nodejs.org/): >= 20.0.0
+- [Node.js](https://nodejs.org/): >= 22.0.0
 - [Go](https://go.dev/dl/)
 - [Hugo](https://gohugo.io/installation/): >= 0.156.0 (extended version)
 

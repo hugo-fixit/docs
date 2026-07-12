@@ -5,8 +5,6 @@ date: 2026-07-11T04:44:06+08:00
 description: 了解 FixIt 主题通过根配置键 params 提供的所有配置项。
 categories:
   - Documentation
-collections:
-  - Getting Started
 tags:
   - Configuration
 lightgallery: true
@@ -1104,11 +1102,11 @@ loop
 
 ### admonition
 
-`map` 告诫自定义配置。详见 [Custom Admonitions](https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/admonition/#custom-admonitions)。语法：`<type> = <icon>`。示例：`ban = "fa-solid fa-ban"`。
+`map` 告诫自定义配置。详见 [Custom Admonitions](https://fixit.lruihao.cn/documentation/advanced/#custom-admonitions)。语法：`<type> = <icon>`。示例：`ban = "fa-solid fa-ban"`。
 
 ### task_list
 
-`map` 任务列表自定义配置。详见 [Custom Task Lists](https://fixit.lruihao.cn/documentation/content-management/advanced/#custom-task-lists)。语法：`<sign> = <icon>`。示例：`tip = "fa-regular fa-lightbulb"`。
+`map` 任务列表自定义配置。详见 [Custom Task Lists](https://fixit.lruihao.cn/documentation/advanced/#custom-task-lists)。语法：`<sign> = <icon>`。示例：`tip = "fa-regular fa-lightbulb"`。
 
 ### repo_version
 
