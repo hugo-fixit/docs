@@ -4,7 +4,7 @@
 #   1. Site-level params — apply to the entire site, can NOT be overridden per-page.
 #   2. Page-level params — can be overridden per-page via page front matter.
 #
-# See: https://fixit.lruihao.cn/documentation/getting-started/configuration/params/
+# See: https://fixit.lruihao.cn/docs/getting-started/configuration/params/
 # -------------------------------------------------------------------------------------
 
 # FixIt theme version.
@@ -62,7 +62,7 @@ disable_theme_inject = false
 #     enable: false
 #   ---
 #
-# See: https://fixit.lruihao.cn/documentation/content-management/front-matter
+# See: https://fixit.lruihao.cn/docs/content-management/front-matter
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # Whether to capitalize titles.
@@ -196,7 +196,7 @@ sort = false
 boxed = true
 
 # File tree configuration.
-# See: [File Tree](https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/file-tree/)
+# See: [File Tree](https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/file-tree/)
 [filetree]
 # The expand level of the tree (expand all: -1, collapse all: 0).
 level = 1
@@ -1173,7 +1173,7 @@ duration = -1
 loop = false
 
 # Admonitions custom configuration.
-# See: [Custom Admonitions](https://fixit.lruihao.cn/documentation/advanced/#custom-admonitions).
+# See: [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions).
 # syntax: `<type> = <icon>`
 [admonition]
 ban = "fa-solid fa-ban"
@@ -1181,7 +1181,7 @@ sponsor = "fa-solid fa-hand-holding-usd"
 
 # ban = "fa-solid fa-ban"
 # Task lists custom configuration.
-# See: [Custom Task Lists](https://fixit.lruihao.cn/documentation/advanced/#custom-task-lists).
+# See: [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists).
 # syntax: `<sign> = <icon>`
 [task_list]
 tip = "fa-regular fa-lightbulb"

@@ -4,9 +4,6 @@ shortTitle: 内置
 date: 2023-02-24T22:11:22+08:00
 aliases:
   - /zh-cn/theme-documentation-built-in-shortcodes/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Shortcodes 是在内容文件中调用内置或自定义模板的简单片段。
 resources:
   - name: featured-image

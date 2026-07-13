@@ -3,9 +3,6 @@ title: Extended Shortcode - bluesky
 shortTitle: Bluesky
 linkTitle: Bluesky Shortcode
 date: 2025-03-12T15:04:00+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The bluesky shortcode embeds a post from Bluesky.
 resources:
   - name: featured-image

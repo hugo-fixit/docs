@@ -5,9 +5,6 @@ linkTitle: Music Shortcode
 date: 2023-02-24T22:50:50+08:00
 aliases:
   - /zh-cn/extended-shortcode-music/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: music shortcode 基于 APlayer 和 MetingJS 库提供了一个内嵌的响应式音乐播放器。
 resources:
   - name: featured-image

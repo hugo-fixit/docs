@@ -3,9 +3,6 @@ title: 扩展 Shortcode - tabs
 shortTitle: Tabs
 linkTitle: Tabs Shortcode
 date: 2025-09-11T13:53:46+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: tabs shortcode 允许你创建具有各种样式和布局的标签页内容。
 resources:
   - name: featured-image

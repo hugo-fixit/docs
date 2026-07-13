@@ -3,9 +3,6 @@ title: Extended Shortcode - spotify
 shortTitle: Spotify
 linkTitle: Spotify Shortcode
 date: 2024-05-20T11:06:24+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The spotify shortcode embeds a responsive music player for Spotify music.
 resources:
   - name: featured-image

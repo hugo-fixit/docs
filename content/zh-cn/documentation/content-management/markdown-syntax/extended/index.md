@@ -2,9 +2,6 @@
 title: Markdown 扩展语法
 shortTitle: 扩展语法
 date: 2023-02-24T21:42:22+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: 这篇文章展示了 FixIt 风格的 Markdown 扩展语法。
 resources:
   - name: featured-image

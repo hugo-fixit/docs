@@ -2,9 +2,6 @@
 weight: 1
 title: Quick Start
 date: 2024-03-01T15:18:19+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Learn to create a Hugo FixIt site in minutes.
 resources:
   - name: featured-image

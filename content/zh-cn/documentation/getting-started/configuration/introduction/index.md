@@ -7,9 +7,6 @@ aliases:
   - /zh-cn/theme-documentation-basics/
   - /zh-cn/documentation/basics/
   - /zh-cn/documentation/getting-started/configuration/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: 了解如何配置你的 Hugo FixIt 站点。
 resources:
   - name: featured-image
@@ -97,9 +94,9 @@ Hugo 有一个简单而强大的 [菜单系统][menu-system]。
 下面是一个完整的菜单项配置：
 
 ```toml
-[menu]
+[menus]
 
-[[menu.main]]
+[[menus.main]]
 identifier = ""
 # 父级菜单项的标识符 (identifier)
 parent = ""
@@ -114,14 +111,15 @@ title = ""
 weight = 1
 
 # 向菜单项添加用户定义的内容
-[menu.main.params]
+[menus.main.params]
 # 添加 CSS 类到菜单项
 class = ""
 # 是否为草稿菜单，类似草稿页面
 draft = false
 # 添加 fontawesome 图标到菜单项
 icon = ""
-# 设置菜单项类型，可选值：["mobile", "desktop"]
+# 设置菜单项类型
+# 可选值：["mobile", "desktop"]
 type = ""
 # 是否显示子菜单项分割线
 divided = false

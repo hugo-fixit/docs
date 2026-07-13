@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
 # Sitemap Configuration
-# See: https://gohugo.io/templates/sitemap/#configuration
+# See: https://gohugo.io/configuration/sitemap/
 # -------------------------------------------------------------------------------------
 
 changefreq = "weekly"

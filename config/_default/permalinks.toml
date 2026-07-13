@@ -1,12 +1,13 @@
 # -------------------------------------------------------------------------------------
 # Permalinks Configuration
-# See: https://gohugo.io/content-management/urls/#permalinks
+# See: https://gohugo.io/configuration/permalinks/
 # -------------------------------------------------------------------------------------
 
-documentation = "/:sections[0:]/:slugorcontentbasename"
-guides = "/guides/:slugorcontentbasename"
+[page]
+documentation = "/docs/:sections[1:]/:slugorcontentbasename"
 
-# [page]
-# [section]
+[section]
+documentation = "/docs/:sections[1:]"
+
 # [taxonomy]
 # [term]

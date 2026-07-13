@@ -1,9 +1,6 @@
 ---
 title: 进阶篇
 date: 2024-04-06T12:59:28+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: 探索 Hugo - FixIt 主题的的进阶使用。
 resources:
   - name: featured-image

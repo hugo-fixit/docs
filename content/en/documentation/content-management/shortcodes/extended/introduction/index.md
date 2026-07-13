@@ -4,9 +4,6 @@ shortTitle: Overview
 date: 2023-02-24T22:11:39+08:00
 aliases:
   - /theme-documentation-extended-shortcodes/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: FixIt theme provides multiple shortcodes on top of built-in ones in Hugo.
 resources:
   - name: featured-image

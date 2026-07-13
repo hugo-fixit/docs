@@ -1082,11 +1082,11 @@ loop
 
 ### admonition
 
-`map` Admonitions custom configuration. See: [Custom Admonitions](https://fixit.lruihao.cn/documentation/advanced/#custom-admonitions). Syntax: `<type> = <icon>`. Example: `ban = "fa-solid fa-ban"`.
+`map` Admonitions custom configuration. See: [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions). Syntax: `<type> = <icon>`. Example: `ban = "fa-solid fa-ban"`.
 
 ### task_list
 
-`map` Task lists custom configuration. See: [Custom Task Lists](https://fixit.lruihao.cn/documentation/advanced/#custom-task-lists). Syntax: `<sign> = <icon>`. Example: `tip = "fa-regular fa-lightbulb"`.
+`map` Task lists custom configuration. See: [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists). Syntax: `<sign> = <icon>`. Example: `tip = "fa-regular fa-lightbulb"`.
 
 ### repo_version
 
@@ -2262,7 +2262,7 @@ boxed
 
 ### filetree
 
-`map` File tree configuration. See: [File Tree](https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/file-tree/).
+`map` File tree configuration. See: [File Tree](https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/file-tree/).
 
 ```toggle
 [params]

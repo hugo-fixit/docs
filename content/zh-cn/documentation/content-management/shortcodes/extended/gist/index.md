@@ -3,9 +3,6 @@ title: 扩展 Shortcode - gist
 shortTitle: Gist
 linkTitle: Gist Shortcode
 date: 2025-04-02T16:35:00+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: gist shortcode 用于在你的内容中嵌入 GitHub Gist。
 resources:
   - name: featured-image

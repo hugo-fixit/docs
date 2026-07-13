@@ -2,9 +2,6 @@
 title: Extended Markdown Syntax
 shortTitle: Extended Syntax
 date: 2023-02-24T21:42:22+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: This article shows the FixIt Flavored Markdown extended syntax.
 resources:
   - name: featured-image
@@ -996,7 +993,7 @@ These features are automatically enabled in FixIt theme and require no additiona
 
 ### Options
 
-You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], [Markdown attributes](#markdown-attributes) or the following options:
+You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][codeblock-config], [Markdown attributes](#markdown-attributes) or the following options:
 
 | Option        | Description                                              | Type     |
 | :------------ | :------------------------------------------------------- | :------- |

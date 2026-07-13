@@ -1,9 +1,6 @@
 ---
 title: Advanced Usage
 date: 2024-04-06T12:59:28+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Discover advanced usage of the Hugo - FixIt theme.
 resources:
   - name: featured-image

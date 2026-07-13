@@ -3,9 +3,6 @@ title: Extended Shortcode - tabs
 shortTitle: Tabs
 linkTitle: Tabs Shortcode
 date: 2025-09-11T13:53:54+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The tabs shortcode allows you to create tabbed content with various styles and layouts.
 resources:
   - name: featured-image

@@ -3,9 +3,6 @@ title: 扩展 Shortcode - File Tree
 shortTitle: File Tree
 linkTitle: File Tree Shortcode
 date: 2026-01-14T02:50:48+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: File Tree shortcode 用于渲染交互式文件树结构。
 resources:
   - name: featured-image

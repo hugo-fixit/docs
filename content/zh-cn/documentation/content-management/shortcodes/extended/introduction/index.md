@@ -4,9 +4,6 @@ shortTitle: 概述
 date: 2023-02-24T22:11:39+08:00
 aliases:
   - /zh-cn/theme-documentation-extended-shortcodes/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供了更多的扩展 Shortcodes。
 resources:
   - name: featured-image

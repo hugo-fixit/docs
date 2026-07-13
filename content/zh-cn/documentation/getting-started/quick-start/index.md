@@ -2,9 +2,6 @@
 weight: 1
 title: 快速上手
 date: 2024-03-01T15:18:19+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: 学习在几分钟内创建一个 Hugo FixIt 站点。
 resources:
   - name: featured-image

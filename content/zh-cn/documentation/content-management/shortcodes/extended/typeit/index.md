@@ -5,9 +5,6 @@ linkTitle: Typeit Shortcode
 date: 2023-02-24T22:59:50+08:00
 aliases:
   - /zh-cn/extended-shortcode-typeit/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: typeit shortcode 基于 TypeIt 提供了打字动画。
 resources:
   - name: featured-image

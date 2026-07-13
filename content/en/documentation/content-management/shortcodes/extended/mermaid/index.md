@@ -5,9 +5,6 @@ linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
 aliases:
   - /extended-shortcode-mermaid/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The mermaid shortcode supports diagrams in Hugo with Mermaid library.
 resources:
   - name: featured-image

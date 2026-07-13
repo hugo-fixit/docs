@@ -3,9 +3,6 @@ title: Extended Shortcode - File Tree
 shortTitle: File Tree
 linkTitle: File Tree Shortcode
 date: 2026-01-14T02:50:14+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The file-tree shortcode is used to render an interactive file tree structure.
 resources:
   - name: featured-image

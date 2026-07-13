@@ -7,9 +7,6 @@ aliases:
   - /theme-documentation-basics/
   - /documentation/basics/
   - /documentation/getting-started/configuration/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Find out how to configure your Hugo FixIt site.
 resources:
   - name: featured-image
@@ -97,33 +94,33 @@ According to the interface provided by Hugo, FixIt theme only realizes some func
 The following is a complete menu item configuration:
 
 ```toml
-[menu]
+[menus]
 
-[[menu.main]]
-identifier = ""
-# Identifier of the parent menu item
+[[menus.main]]
+identifier = "archives"
 parent = ""
-# you can add extra information before the name (HTML format is supported), such as icons
+# You can add extra information before the name (HTML format is supported), such as icons.
 pre = ""
-# you can add extra information after the name (HTML format is supported), such as icons
+# You can add extra information after the name (HTML format is supported), such as icons.
 post = ""
 name = ""
 url = ""
-# title will be shown when you hover on this menu link
+# Title will be shown when you hover on this menu link.
 title = ""
 weight = 1
 
-# add user-defined content to menu items
-[menu.main.params]
-# add css class to a specific menu item
+# Add user-defined content to menu items.
+[menus.main.params]
+# Add CSS class to a specific menu item.
 class = ""
-# whether set as a draft menu item whose function is similar to a draft post/page
+# Whether set as a draft menu item whose function is similar to a draft post/page.
 draft = false
-# add fontawesome icon to a specific menu item
+# Add FontAwesome icon to a specific menu item.
 icon = ""
-# set menu item type, optional values: ["mobile", "desktop"]
+# Set menu item type.
+# available values: ["mobile", "desktop"]
 type = ""
-# whether to show the submenu item divider line
+# Whether to show the submenu item divider line.
 divided = false
 ```
 

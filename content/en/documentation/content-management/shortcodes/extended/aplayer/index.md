@@ -3,9 +3,6 @@ title: Extended Shortcode - aplayer
 shortTitle: APlayer
 linkTitle: APlayer Shortcode
 date: 2025-10-21T06:46:37+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 resources:
   - name: featured-image
     src: featured-image.webp

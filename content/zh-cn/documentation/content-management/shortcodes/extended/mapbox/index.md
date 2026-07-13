@@ -5,9 +5,6 @@ linkTitle: Mapbox Shortcode
 date: 2023-02-24T22:45:45+08:00
 aliases:
   - /zh-cn/extended-shortcode-mapbox/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: mapbox shortcode 使用 Mapbox GL JS 库提供互动式地图的功能。
 resources:
   - name: featured-image

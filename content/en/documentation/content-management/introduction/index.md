@@ -4,9 +4,6 @@ shortTitle: Overview
 date: 2023-02-24T17:27:22+08:00
 aliases:
   - /theme-documentation-content/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Find out how to create and organize your content quickly and intuitively in FixIt theme.
 resources:
   - name: featured-image

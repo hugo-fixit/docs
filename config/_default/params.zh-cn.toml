@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
-# Theme Core Configuration | 主题核心配置
-# See: https://fixit.lruihao.cn/zh-cn/documentation/basics/#theme-configuration
+# Theme Core Configuration
+# See: https://fixit.lruihao.cn/zh-cn/docs/getting-started/configuration/params/
 # -------------------------------------------------------------------------------------
 
 description = "一个简洁、优雅且高效的 Hugo 主题 FixIt"

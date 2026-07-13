@@ -1102,11 +1102,11 @@ loop
 
 ### admonition
 
-`map` 告诫自定义配置。详见 [Custom Admonitions](https://fixit.lruihao.cn/documentation/advanced/#custom-admonitions)。语法：`<type> = <icon>`。示例：`ban = "fa-solid fa-ban"`。
+`map` 告诫自定义配置。详见 [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions)。语法：`<type> = <icon>`。示例：`ban = "fa-solid fa-ban"`。
 
 ### task_list
 
-`map` 任务列表自定义配置。详见 [Custom Task Lists](https://fixit.lruihao.cn/documentation/advanced/#custom-task-lists)。语法：`<sign> = <icon>`。示例：`tip = "fa-regular fa-lightbulb"`。
+`map` 任务列表自定义配置。详见 [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists)。语法：`<sign> = <icon>`。示例：`tip = "fa-regular fa-lightbulb"`。
 
 ### repo_version
 
@@ -2282,7 +2282,7 @@ boxed
 
 ### filetree
 
-`map` 文件树配置。详见 [File Tree](https://fixit.lruihao.cn/documentation/content-management/shortcodes/extended/file-tree/)。
+`map` 文件树配置。详见 [File Tree](https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/file-tree/)。
 
 ```toggle
 [params]
