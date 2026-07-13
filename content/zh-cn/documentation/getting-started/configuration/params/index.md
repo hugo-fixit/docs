@@ -20,7 +20,7 @@ heading:
 
 ```toggle {name="hugo.toml"}
 baseURL = 'https://example.org/'
-languageCode = 'en'
+locale = 'en'
 title = 'ABC Widgets, Inc.'
 
 [params]

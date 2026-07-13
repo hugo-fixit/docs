@@ -9,10 +9,10 @@ weight = 1
 contentDir = "content/en"
 # language code
 # 网站语言
-languageCode = "en"
+locale = "en"
 # language name
 # 语言名称
-languageName = "English"
+label = "English"
 # whether to include Chinese/Japanese/Korean
 # 是否包括中日韩文字
 hasCJKLanguage = false

@@ -12,9 +12,9 @@ baseURL = "http://localhost:1313"
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "en"
 # language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
+locale = "en"
 # language name ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
+label = "English"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = false
 # timezone local

@@ -225,8 +225,8 @@ defaultContentLanguage = "en"
 [languages.en]
 weight = 1
 title = "My Hugo FixIt Site"
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 
 [[languages.en.menu.main]]
 identifier = "posts"
@@ -259,8 +259,8 @@ weight = 3
 weight = 2
 title = "我的 Hugo FixIt 网站"
 # language code, CN only here
-languageCode = "zh-CN"
-languageName = "简体中文"
+locale = "zh-CN"
+label = "简体中文"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = true
 
@@ -294,8 +294,8 @@ weight = 3
 [languages.fr]
 weight = 3
 title = "Mon nouveau site Hugo FixIt"
-languageCode = "fr"
-languageName = "Français"
+locale = "fr"
+label = "Français"
 
 [[languages.fr.menu.main]]
 identifier = "posts"

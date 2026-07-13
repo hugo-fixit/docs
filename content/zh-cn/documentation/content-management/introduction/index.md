@@ -188,7 +188,7 @@ type: posts
 
 **FixIt** 主题完全兼容 Hugo 的多语言模式，并且支持在网页上切换语言。
 
-![语言切换](/documentation/content-management/introduction/language-switch.gif '语言切换')
+![语言切换](/docs/content-management/introduction/language-switch.gif '语言切换')
 
 ### 兼容性 {#language-compatibility}
 
@@ -226,8 +226,8 @@ defaultContentLanguage = "zh-cn"
 [languages.en]
 weight = 1
 title = "My Hugo FixIt Site"
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 
 [[languages.en.menu.main]]
 identifier = "posts"
@@ -260,8 +260,8 @@ weight = 3
 weight = 2
 title = "我的 Hugo FixIt 网站"
 # 网站语言，仅在这里 CN 大写
-languageCode = "zh-CN"
-languageName = "简体中文"
+locale = "zh-CN"
+label = "简体中文"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 
@@ -295,8 +295,8 @@ weight = 3
 [languages.fr]
 weight = 3
 title = "Mon nouveau site Hugo FixIt"
-languageCode = "fr"
-languageName = "Français"
+locale = "fr"
+label = "Français"
 
 [[languages.fr.menu.main]]
 identifier = "posts"
@@ -347,7 +347,7 @@ weight = 3
 
 通过 [自动翻译][hugo-fixit/cmpt-translate] 组件，你只需少量的配置，就可以使单语言站点自动翻译为多种语言。
 
-![自动翻译](/documentation/content-management/introduction/auto-translate.gif '自动翻译为多种语言')
+![自动翻译](/docs/content-management/introduction/auto-translate.gif '自动翻译为多种语言')
 
 > [!TIP]
 > 这是一个额外的主题组件，具体请查看 [hugo-fixit/cmpt-translate]。
