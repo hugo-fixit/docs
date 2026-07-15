@@ -83,7 +83,7 @@ message: 密码是 1212
 
 一个 `fixit-encryptor` 示例：
 
-```md
+```go-template
 {{%/* fixit-encryptor "1212" "密码是 1212" */%}}
 `fixit-encryptor` shortcode 在版本 {{</* version 0.2.15 */>}} 得到支持。
 {{%/* /fixit-encryptor */%}}

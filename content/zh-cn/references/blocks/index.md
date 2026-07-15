@@ -90,7 +90,7 @@ post_footer_after = []
 
 写入任意内容：
 
-```go-html-template
+```go-template
 The quick brown fox jumps over the lazy dog.
 ```
 

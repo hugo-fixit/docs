@@ -83,7 +83,7 @@ The `fixit-encryptor` shortcode has the following named parameters:
 
 Example `fixit-encryptor` input:
 
-```go-html-template
+```go-template
 {{%/* fixit-encryptor "1212" "Password is 1212" */%}}
 The `fixit-encryptor` shortcode was supported in version {{</* version 0.2.15 */>}}.
 {{%/* /fixit-encryptor */%}}

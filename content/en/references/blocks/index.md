@@ -90,7 +90,7 @@ At first, create a custom file in the `layouts/_partials/` directory, such as `l
 
 Write any content:
 
-```go-html-template
+```go-template
 The quick brown fox jumps over the lazy dog.
 ```
 

@@ -2308,7 +2308,7 @@ highlight_list
 
 ### mermaid
 
-`map` Mermaid 配置。详见 [Mermaid](http://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/)。
+`map` Mermaid 配置。详见 [Mermaid](https://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/)。
 
 ```toggle
 [params]
@@ -2455,7 +2455,7 @@ number
 
 ### math
 
-`map` 数学公式配置。详见 [Formula](http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula)。
+`map` 数学公式配置。详见 [Formula](https://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula)。
 
 ```toggle
 [params]
