@@ -207,8 +207,8 @@ The supported template presets are:
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [go]: https://go.dev/
 [go-install]: https://go.dev/doc/install
-[dart-sass]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
-[dart-sass-install]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
+[dart-sass]: https://sass-lang.com/dart-sass/
+[dart-sass-install]: https://sass-lang.com/install/
 [node.js]: https://nodejs.org/
 [node-install]: https://nodejs.org/en/download/
 [commit-info]: https://gohugo.io/variables/git/

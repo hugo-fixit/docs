@@ -1,7 +1,7 @@
 # FixIt Theme Documentation
 
 [![Production environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Vercel&logo=vercel)](https://fixit.lruihao.cn/)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.156.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.161.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 
 👉 [中文](README.md) | English
 
@@ -9,9 +9,10 @@
 
 ## System requirements
 
-- [Node.js](https://nodejs.org/): >= 22.0.0
+- [Hugo](https://gohugo.io/installation/): >= 0.161.0 (extended version)
 - [Go](https://go.dev/dl/)
-- [Hugo](https://gohugo.io/installation/): >= 0.156.0 (extended version)
+- [Dart Sass](https://sass-lang.com/install/)
+- [Node.js](https://nodejs.org/): >= 22.0.0
 
 ## Contributing
 
