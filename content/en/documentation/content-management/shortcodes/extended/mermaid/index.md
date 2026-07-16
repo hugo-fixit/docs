@@ -5,9 +5,6 @@ linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
 aliases:
   - /extended-shortcode-mermaid/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The mermaid shortcode supports diagrams in Hugo with Mermaid library.
 resources:
   - name: featured-image
@@ -43,6 +40,26 @@ Just insert your mermaid code in the `mermaid` shortcode and that’s it.
 // mermaid diagram code here
 {{</* /mermaid */>}}
 ```
+
+Named parameters are also supported:
+
+```markdown
+{{</* mermaid wrapper=false */>}}
+graph TD
+    A[Start] --> B[End]
+{{</* /mermaid */>}}
+```
+
+```markdown
+{{</* mermaid filename="architecture.mmd" */>}}
+graph TD
+    A[Client] --> B[Server]
+{{</* /mermaid */>}}
+```
+
+Parameters
+: `wrapper` (`bool`) Optional. Overrides `params.mermaid.wrapper` for this shortcode instance.
+: `filename` (`string`) Optional. Sets the filename used by diagram/code download actions.
 
 ### Configuration
 

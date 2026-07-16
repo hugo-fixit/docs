@@ -2,9 +2,6 @@
 weight: 1
 title: 快速上手
 date: 2024-03-01T15:18:19+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: 学习在几分钟内创建一个 Hugo FixIt 站点。
 resources:
   - name: featured-image
@@ -33,16 +30,16 @@ toc:
 3. 配置站点
 4. 发布站点
 
+> [!todo]~
+> 如果这是你第一次使用 [Hugo](https://gohugo.io/)，我们强烈建议你通过阅读这篇 [入门文档](https://gohugo.io/getting-started/) 来更多地了解它。
+
 ## 先决条件
 
-{{< admonition tip >}}
-如果这是你第一次使用 [Hugo](https://gohugo.io/)，我们强烈建议你通过阅读这篇 [入门文档](https://gohugo.io/getting-started/) 来更多地了解它。
-{{< /admonition >}}
+在开始本教程之前，你必须安装：
 
-在开始本教程之前，你必须：
-
-1. [安装 Hugo][hugo-installing]（扩展版，v{{< param docs.minHugoVersion >}} 或更高版本）
-2. [安装 Git][git-install]
+1. [Hugo][hugo-installing]（扩展版，v{{< param docs.min_hugo_version >}} 或更高版本）
+2. [Dart Sass][dart-sass-install]
+3. [Git][git-install]
 
 你还必须熟悉使用命令行。
 
@@ -54,7 +51,7 @@ toc:
 
 ### 命令
 
-验证你是否安装了 Hugo v{{< param docs.minHugoVersion >}} 或更高版本。
+验证你是否安装了 Hugo v{{< param docs.min_hugo_version >}} 或更高版本。
 
 ```bash
 hugo version
@@ -196,6 +193,22 @@ hugo server -D --disableFastRender
 > [!success]+ 恭喜！你已经成功添加了第一篇文章 :tada:
 > 现在可以执行 `git add . && git commit -m "first commit"` 来提交这些更改。
 
+## Favicon 生成
+
+强烈建议你把你自己的网站图标，`browserconfig.xml` 和 `site.webmanifest` 文件放在 `/static` 目录。
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-32x32.png
+- favicon-16x16.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+
+利用 <https://realfavicongenerator.net/> 可以很容易地生成这些文件。
+
 ## 发布网站
 
 在此步骤中，你将发布你的网站，但不会 _部署_ 它。
@@ -225,6 +238,7 @@ hugo
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
 [hugo-installing]: https://gohugo.io/installation/
+[dart-sass-install]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
@@ -245,7 +259,7 @@ hugo
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
-[configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
+[configuration]: {{< relref path="/documentation/getting-started/configuration/introduction" >}}
 [community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->

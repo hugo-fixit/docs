@@ -5,9 +5,6 @@ linkTitle: Mapbox Shortcode
 date: 2023-02-24T22:45:45+08:00
 aliases:
   - /zh-cn/extended-shortcode-mapbox/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: mapbox shortcode 使用 Mapbox GL JS 库提供互动式地图的功能。
 resources:
   - name: featured-image
@@ -32,7 +29,7 @@ mapbox:
 
 [Mapbox GL JS][mapbox] 是一个 JavaScript 库，它使用 WebGL, 以 [vector tiles][vector-tiles] 和 [Mapbox styles][style-spec] 为来源，将它们渲染成互动式地图。
 
-`mapbox` shortcode 有以下命名参数来使用 Mapbox GL JS:
+`mapbox` shortcode 有以下具名参数来使用 Mapbox GL JS:
 
 - **lng** _[必需]_（**第一个**位置参数）
 
@@ -137,7 +134,7 @@ mapbox:
 [mapbox]: https://docs.mapbox.com/mapbox-gl-js
 [vector-tiles]: https://docs.mapbox.com/help/glossary/vector-tiles/
 [style-spec]: https://docs.mapbox.com/mapbox-gl-js/style-spec/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration/params" >}}
 [front-matter]: {{< relref path="/documentation/content-management/introduction#front-matter" >}}
 [navigationcontrol]: https://docs.mapbox.com/mapbox-gl-js/api#navigationcontrol
 [geolocatecontrol]: https://docs.mapbox.com/mapbox-gl-js/api#geolocatecontrol

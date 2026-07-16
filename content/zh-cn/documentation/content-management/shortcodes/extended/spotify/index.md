@@ -3,9 +3,6 @@ title: 扩展 Shortcode - spotify
 shortTitle: Spotify
 linkTitle: Spotify Shortcode
 date: 2024-05-20T11:06:24+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: spotify shortcode 提供了一个内嵌的响应式音乐播放器。
 resources:
   - name: featured-image
@@ -43,7 +40,7 @@ Or
 
 {{< version 0.3.8 >}}
 
-`spotify` shortcode 有以下命名参数：
+`spotify` shortcode 有以下具名参数：
 
 - **type** _[必需]_ (**第一个**位置参数)
 

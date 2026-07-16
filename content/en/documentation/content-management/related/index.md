@@ -32,7 +32,7 @@ To enable related content, set the `page.related.enable` parameter to `true` in 
 [params.page]
 # ...
 
-[params.page.related]
+[params.related]
 enable = true
 count = 5
 position = [

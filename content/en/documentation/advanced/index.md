@@ -1,9 +1,6 @@
 ---
 title: Advanced Usage
 date: 2024-04-06T12:59:28+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Discover advanced usage of the Hugo - FixIt theme.
 resources:
   - name: featured-image
@@ -23,21 +20,19 @@ Discover advanced usage of the Hugo - **FixIt** theme.
 
 ## Style Customization
 
-{{< admonition >}}
-Hugo **extended** version is necessary for the style customization.
-{{< /admonition >}}
+> [!note] Hugo **extended** version is necessary for the style customization.
 
 **FixIt** theme has been built to be as configurable as possible by defining custom `.scss` style files.
 
-The directory including the custom `.scss` style files is `assets/css` relative to **your project root directory**.
+The directory including the custom `.scss` style files is `assets/scss` relative to **your project root directory**.
 
-In `assets/css/_override.scss`, you can override the variables in `themes/FixIt/assets/css/_variables.scss` to customize the style.
+In `assets/scss/override.scss`, you can override the variables in `themes/FixIt/assets/scss/_variables.scss` to customize the style.
 
-In `assets/css/_custom.scss`, you can add some css style code to customize the style.
+In `assets/scss/custom.scss`, you can add some css style code to customize the style.
 
 ### Fonts Style {#font-style}
 
-The following font styles are defined in `assets/css/_override.scss`.
+The following font styles are defined in `assets/scss/override.scss`.
 
 To customize the global font, take the open-source font [LXGW WenKai][LxgwWenKai] as an example:
 
@@ -64,17 +59,17 @@ $global-font-family: 'MMT', $global-font-family;
 
 {{< version 0.3.10 changed >}}
 
-The FixIt theme provides a page width configuration option `pageStyle` and three values.
+The FixIt theme provides a page width configuration option `page_style` and three values.
 
 - **narrow** Keep `<v0.2.13` page/toc width ratio
 - **normal** New default page/toc width ratio
 - **wide** Larger page/toc width ratio
 
-In addition, you can also customize the `pageStyle` value in `assets/css/_custom.scss`
+In addition, you can also customize the `page_style` value in `assets/scss/custom.scss`
 
-For example: `pageStyle="custom"`
+For example: `page_style="custom"`
 
-```scss {name="assets/css/_custom.scss"}
+```scss {name="assets/scss/custom.scss"}
 [data-page-style='custom'] {
   %page-style {
     @include media('xl') {
@@ -101,14 +96,14 @@ There are three css common class for print view in FixIt Theme.
 
 - `page-break-before` Insert page break before element
 - `page-break-after` Insert page break after element
-- `print-d-none` Hide elements in print view
+- `d-none-print` Hide elements in print view
 
 Here is a simple exmple:
 
 ```html
 <div class="page-break-before"></div>
 <div class="page-break-after"></div>
-<div class="print-d-none">
+<div class="d-none-print">
   Something you want to hide in the print view is written here.
 </div>
 ```
@@ -156,7 +151,7 @@ To define a custom admonition, change `params.admonition` in your site configura
 ban = "fa-solid fa-ban"
 ```
 
-Then create the following SCSS block in your project directory `assets/css/_override.scss`:
+Then create the following SCSS block in your project directory `assets/scss/override.scss`:
 
 ```scss {title="_override.scss"}
 // Custom admonition style
@@ -231,9 +226,9 @@ The rendered output looks like this:
 
 - [tip] This is a custom task list type with a tip icon.
 
-If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/css/_custom.scss`:
+If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/scss/custom.scss`:
 
-```scss {name="assets/css/_custom.scss"}
+```scss {name="assets/scss/custom.scss"}
 li[data-task='tip'] {
   --fi-task-color: #9974F7;
   --fi-checkbox-color: #EA9E36;
@@ -307,22 +302,22 @@ Next, taking the [component-projects] component as an example, we will introduce
     ```toml {mode="simple", lineNos=false}
     [params]
 
-    [params.customPartials]
+    [params.custom_partials]
     head = []
-    menuDesktop = []
-    menuMobile = []
+    menu_desktop = []
+    menu_mobile = []
     profile = []
     aside = []
     comment = []
     footer = []
     widgets = []
     assets = [ "inject/component-projects.html" ]
-    postTocBefore = []
-    postTocAfter = []
-    postContentBefore = []
-    postContentAfter = []
-    postFooterBefore = []
-    postFooterAfter = []
+    post_toc_before = []
+    post_toc_after = []
+    post_content_before = []
+    post_content_after = []
+    post_footer_before = []
+    post_footer_after = []
     ```
 
 3. **Theme component import completed**, use the component features according to different component documents.

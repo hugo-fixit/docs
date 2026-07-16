@@ -5,9 +5,6 @@ linkTitle: Echarts Shortcode
 date: 2023-02-24T22:40:40+08:00
 aliases:
   - /zh-cn/extended-shortcode-echarts/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: echarts shortcode 使用 ECharts 库提供数据可视化的功能。
 resources:
   - name: featured-image
@@ -1274,7 +1271,7 @@ return fetch('/echarts/les-miserables.json')
 
 例如，当前页面结构如下：
 
-{{< file-tree path="content/en/documentation/content-management/shortcodes/extended/echarts" level=2 highlightList="chart.js, chart.yaml, chart.json, chart.toml" />}}
+{{< file-tree path="content/en/documentation/content-management/shortcodes/extended/echarts" level=2 highlight_list="chart.js, chart.yaml, chart.json, chart.toml" />}}
 
 你可以使用 `file` 参数来从文件中获取数据：
 
@@ -1314,7 +1311,7 @@ return fetch('/echarts/les-miserables.json')
 
 ## 参数配置 {#parameters}
 
-`echarts` shortcode 有以下命名参数，位置参数按照从上到下的顺序排列：
+`echarts` shortcode 有以下具名参数，位置参数按照从上到下的顺序排列：
 
 | 参数   | 说明                                                | 类型   | 默认值  |
 | :----- | :-------------------------------------------------- | :----- | :------ |

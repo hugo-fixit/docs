@@ -5,9 +5,6 @@ linkTitle: Echarts Shortcode
 date: 2023-02-24T22:40:40+08:00
 aliases:
   - /extended-shortcode-echarts/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The echarts shortcode supports data visualization in Hugo with ECharts library.
 resources:
   - name: featured-image
@@ -1274,7 +1271,7 @@ Supports getting data from files in Hugo [page-resources] or `assets`, and the f
 
 For example, the current page structure is as follows:
 
-{{< file-tree path="documentation/content-management/shortcodes/extended/echarts" level=2 highlightList="chart.js, chart.yaml, chart.json, chart.toml" />}}
+{{< file-tree path="documentation/content-management/shortcodes/extended/echarts" level=2 highlight_list="chart.js, chart.yaml, chart.json, chart.toml" />}}
 
 You can use the `file` parameter to get data from the file:
 

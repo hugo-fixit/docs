@@ -2,9 +2,6 @@
 title: Extended Markdown Syntax
 shortTitle: Extended Syntax
 date: 2023-02-24T21:42:22+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: This article shows the FixIt Flavored Markdown extended syntax.
 resources:
   - name: featured-image
@@ -422,7 +419,7 @@ Unless you customize marked text, any unsupported type defaults to the `default`
 ==This is a custom type with pink color.==[pink]
 ```
 
-Customize the marked text by adding the following CSS in your project directory `assets/css/_custom.scss`:
+Customize the marked text by adding the following CSS in your project directory `assets/scss/custom.scss`:
 
 ```scss {title="_custom.scss"}
 .mark-pink {
@@ -513,49 +510,49 @@ inline = [
 
 [params.page]
 
-[params.page.math]
+[params.math]
 enable = true
 # mathematical formulas rendering engines, optional values: ["katex", "mathjax"]
 type = "katex"
 
 # KaTeX server-side rendering (https://katex.org)
 # KaTeX partial config: https://gohugo.io/functions/transform/tomath/#options
-[params.page.math.katex]
+[params.math.katex]
 # KaTeX extension copy-tex
-copyTex = true
-throwOnError = false
-errorColor = "#ff4949"
+copy_tex = true
+throw_on_error = false
+error_color = "#ff4949"
 
 # custom macros map
 # syntax: <macro> = <definition>
-[params.page.math.katex.macros]
+[params.math.katex.macros]
 # "\\f" = "#1f(#2)" # usage: $\f{a}{b}$
 
 # MathJax server-side rendering (https://www.mathjax.org)
 # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-[params.page.math.mathjax]
+[params.math.mathjax]
 cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 
-[params.page.math.mathjax.packages]
+[params.math.mathjax.packages]
 # "[+]" = ['configmacros']
 
 # custom macros map
 # syntax: <macro> = <definition>
-[params.page.math.mathjax.macros]
+[params.math.mathjax.macros]
 # "bold" = ["{\\bf #1}", 1] # usage: $\bold{math}$
 
-[params.page.math.mathjax.loader]
+[params.math.mathjax.loader]
 load = [ "ui/safe" ]
 
-[params.page.math.mathjax.loader.paths]
+[params.math.mathjax.loader.paths]
 # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
 
 # more loader config e.g source, dependencies, provides etc.
 
-[params.page.math.mathjax.options]
-enableMenu = true
+[params.math.mathjax.options]
+enable_menu = true
 # HTML tags that won't be searched for math
-skipHtmlTags = [
+skip_html_tags = [
   "script",
   "noscript",
   "style",
@@ -568,10 +565,10 @@ skipHtmlTags = [
   "mjx-container"
 ]
 # class that marks tags not to search
-ignoreHtmlClass = "mathjax_ignore"
+ignore_html_class = "mathjax_ignore"
 
 # HTML tags that can appear within math
-[params.page.math.mathjax.options.includeHtmlTags]
+[params.math.mathjax.options.include_html_tags]
 # "#comment" = ""
 # br = "\n"
 # wbr = ""
@@ -710,7 +707,7 @@ $$
 
 With this extension, when you select and copy a $\KaTeX$-rendered formula, its $\LaTeX$ source code will be copied to the clipboard.
 
-Enable Copy-tex by setting the `copyTex` attribute to `true` under `[params.page.math.katex]` in your [theme configuration][theme-config].
+Enable Copy-tex by setting the `copy_tex` attribute to `true` under `[params.math.katex]` in your [theme configuration][theme-config].
 
 Select and copy the rendered formulas from the previous section, and you will find that the copied content is the $\LaTeX$ source code.
 
@@ -738,12 +735,12 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 
 #### Custom Macros {#custom-macros}
 
-You can add custom macros in your [theme configuration][theme-config] under `[params.page.math.katex.macros]`.
+You can add custom macros in your [theme configuration][theme-config] under `[params.math.katex.macros]`.
 
 For example:
 
 ```toml
-[params.page.math.katex.macros]
+[params.math.katex.macros]
 "\\f" = "#1f(#2)" # usage: $\f{a}{b}$
 ```
 
@@ -780,7 +777,7 @@ The rendered output is as follows. Hovering the mouse over the error message wil
 $c = \pm\sqrt{a\^2 + b^2}$
 
 > [!CAUTION]
-> If you set `params.page.math.katex.throwOnError` to `true`, an error will be thrown and rendering will be stopped.
+> If you set `params.math.katex.throw_on_error` to `true`, an error will be thrown and rendering will be stopped.
 
 ### MathJax
 
@@ -856,9 +853,8 @@ The rendered output looks like this:
 
 **{?:}joy{?:}** instead of **:joy:**
 
-{{< admonition tip >}}
-This is related to **[an issue for Hugo](https://github.com/gohugoio/hugo/issues/4978)**, which has not been resolved.
-{{< /admonition >}}
+> [!bug]
+> This is related to **[an issue for Hugo][hugo-issue-4978]**, which has not been resolved.
 
 Another example is:
 
@@ -997,7 +993,7 @@ These features are automatically enabled in FixIt theme and require no additiona
 
 ### Options
 
-You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][theme-config], [Markdown attributes](#markdown-attributes) or the following options:
+You can supply extra options to the code block via [Hugo syntax highlighting options][code-fences], [theme code block configuration][codeblock-config], [Markdown attributes](#markdown-attributes) or the following options:
 
 | Option        | Description                                              | Type     |
 | :------------ | :------------------------------------------------------- | :------- |
@@ -1010,7 +1006,7 @@ You can supply extra options to the code block via [Hugo syntax highlighting opt
 For example:
 
 ````markdown
-```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"], shadow=hover}
+```vue {.line-wrapping, name="App.vue", title="Hello World", max_shown_lines=11, linenos=false, hl_lines=[4,"8-9"], shadow=hover}
 <script setup>
 import { ref } from 'vue'
 
@@ -1029,7 +1025,7 @@ const msg = ref('Hello World!')
 
 The rendered output looks like this:
 
-```vue {.line-wrapping, name="App.vue", title="Hello World", maxShownLines=11, linenos=false, hl_lines=[4,"8-9"], shadow=hover}
+```vue {.line-wrapping, name="App.vue", title="Hello World", max_shown_lines=11, linenos=false, hl_lines=[4,"8-9"], shadow=hover}
 <script setup>
 import { ref } from 'vue'
 
@@ -1080,12 +1076,13 @@ console.log('Hello, world!')
 [katex]: https://katex.org/
 [mathjax]: https://www.mathjax.org/
 [tomath]: https://gohugo.io/functions/transform/tomath/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
+[theme-config]: {{< relref path="/documentation/getting-started/configuration/params" >}}
 [copy-tex]: https://github.com/Khan/KaTeX/tree/master/contrib/copy-tex
 [mhchem]: https://github.com/Khan/KaTeX/tree/master/contrib/mhchem
 [docs-mathjax]: {{< relref path="/documentation/content-management/mathjax-support" >}}
 [fontawesome]: https://fontawesome.com/
 [fontawesome-icons]: https://fontawesome.com/icons?d=gallery
+[hugo-issue-4978]: https://github.com/gohugoio/hugo/issues/4978
 [markdown-attributes]: https://gohugo.io/content-management/markdown-attributes/
 [diagrams-support-goat]: {{< relref path="/documentation/content-management/diagrams-support/goat" >}}
 [diagrams-support-mermaid]: {{< relref path="/documentation/content-management/diagrams-support/mermaid" >}}
@@ -1094,4 +1091,4 @@ console.log('Hello, world!')
 [json-viewer]: {{< relref path="/documentation/content-management/json-viewer" >}}
 [file-tree]: {{< relref path="/documentation/content-management/shortcodes/extended/file-tree/#inline-content" >}}
 [code-fences]: https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences
-[codeblock-config]: {{< relref path="/documentation/getting-started/configuration#codeblock" >}}
+[codeblock-config]: {{< relref path="/documentation/getting-started/configuration/params#codeblock" >}}

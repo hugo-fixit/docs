@@ -5,9 +5,6 @@ linkTitle: Typeit Shortcode
 date: 2023-02-24T22:59:50+08:00
 aliases:
   - /zh-cn/extended-shortcode-typeit/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: typeit shortcode 基于 TypeIt 提供了打字动画。
 resources:
   - name: featured-image
@@ -27,7 +24,7 @@ collections:
 
 只需将你需要打字动画的内容插入 `typeit` shortcode 中即可。
 
-`typeit` shortcode 有以下命名参数：
+`typeit` shortcode 有以下具名参数：
 
 - **tag** _[可选]_
 

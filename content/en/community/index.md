@@ -28,12 +28,12 @@ Don't forget to leave a ⭐️ if you like this theme, thanks! [![GitHub stars](
 
 All feedback is welcome! Head over to the [discussions][discussions], [Pull requests][pulls] and [issues][issues] tracker.
 
-| Official Community          | Description                     |
-| :-------------------------- | :------------------------------ |
-| [Discussions][discussions]  | GitHub discussion forum         |
-| [FixIt WeChat group][wx-mp] | Follow and reply "FixIt" to get |
-| [FixIt QQ group][qq-group]  | QQ group: `814031017`           |
-| [Hugo FixIt Planet][zsxq]   | Paid knowledge Planet           |
+| Official Community           | Description                     |
+| :--------------------------- | :------------------------------ |
+| [Discussions][discussions]   | GitHub discussion forum         |
+| [FixIt WeChat group][wx-mp]  | Follow and reply "FixIt" to get |
+| [FixIt QQ group][qq-group]   | QQ group: `814031017`           |
+| [FixIt Dev group][dev-group] | QQ group: `770835493`           |
 
 <!-- ## 💰 Paid support {#paid-support} -->
 
@@ -69,10 +69,9 @@ We hope for your support. If you enjoy the theme, please consider buying me a co
 [discussions]: https://github.com/orgs/hugo-fixit/discussions
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [issues]: https://github.com/hugo-fixit/FixIt/issues
-[qq-group]: https://qm.qq.com/cgi-bin/qm/qr?k=awbwdTtSQ_-H5QGzeJxdWgv6JMbNehNM&jump_from=webapi
+[qq-group]: https://qm.qq.com/q/Mn1I7ljqsS
+[dev-group]: https://qm.qq.com/q/ky3uru0mbu
 [wx-mp]: https://lruihao.cn/images/qr-wx-mp.webp
-[zsxq]: {{< param planet.invite >}}
-[promotion_coupon]: {{< param planet.promotion_coupon >}}
 [postchat]: https://ai.zhheo.com/console/login?InviteID=85041330
 [translate.js]: https://github.com/xnx3/translate
 [enterprise-translation-channel]: https://translate.zvo.cn/4087.html

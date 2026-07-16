@@ -2,9 +2,6 @@
 weight: 1
 title: Quick Start
 date: 2024-03-01T15:18:19+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Learn to create a Hugo FixIt site in minutes.
 resources:
   - name: featured-image
@@ -33,16 +30,16 @@ In this tutorial you will:
 3. Configure the site
 4. Publish the site
 
+> [!todo]~
+> If this is your first time using [Hugo][hugo], we strongly suggest you learn more about it by following this [great documentation for beginners][hugo-started].
+
 ## Prerequisites
 
-{{< admonition tip >}}
-If this is your first time using [Hugo](https://gohugo.io/), we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/getting-started/).
-{{< /admonition >}}
+Before you begin this tutorial you must install:
 
-Before you begin this tutorial you must:
-
-1. [Install Hugo][hugo-installing] (extended edition, v{{< param docs.minHugoVersion >}} or later)
-2. [Install Git][git-install]
+1. [Hugo][hugo-installing] (extended edition, v{{< param docs.min_hugo_version >}} or later)
+2. [Dart Sass][dart-sass-install]
+3. [Git][git-install]
 
 You must also be comfortable working from the command line.
 
@@ -54,7 +51,7 @@ You must also be comfortable working from the command line.
 
 ### Commands
 
-Verify that you have installed Hugo v{{< param docs.minHugoVersion >}} or later.
+Verify that you have installed Hugo v{{< param docs.min_hugo_version >}} or later.
 
 ```bash
 hugo version
@@ -190,6 +187,22 @@ When satisfied with your new content, set the front matter `draft` parameter to 
 > [!success]+ Congratulations! You have added your first post successfully :tada:
 > You can now run `git add . && git commit -m "first commit"` to commit these changes.
 
+## Favicon Generation
+
+It is recommended to put your own favicons, `browserconfig.xml` and `site.webmanifest` files into the `/static` directory.
+
+- android-chrome-192x192.png
+- android-chrome-512x512.png
+- apple-touch-icon.png
+- browserconfig.xml
+- favicon-32x32.png
+- favicon-16x16.png
+- favicon.ico
+- mstile-150x150.png
+- safari-pinned-tab.svg
+
+They're easily created via <https://realfavicongenerator.net/>.
+
 ## Publish the Site
 
 In this step you will publish your site, but you will not _deploy_ it.
@@ -218,7 +231,10 @@ if you encounter any problems or have any questions, please go to our [community
 
 <!-- link reference definition -->
 <!-- markdownlint-disable-file reference-links-images -->
+[hugo]: https://gohugo.io/
+[hugo-started]: https://gohugo.io/getting-started/
 [hugo-installing]: https://gohugo.io/installation/
+[dart-sass-install]: https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass
 [git-install]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [fixit]: https://github.com/hugo-fixit/FixIt
 [git-submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
@@ -239,7 +255,7 @@ if you encounter any problems or have any questions, please go to our [community
 [hugo-on-netlify]: https://docs.netlify.com/integrations/frameworks/hugo/
 [hosting-and-deployment]: https://gohugo.io/hosting-and-deployment/
 [fixit-cli]: {{< relref path="/documentation/installation#cli" >}}
-[configuration]: {{< relref path="/documentation/getting-started/configuration" >}}
+[configuration]: {{< relref path="/documentation/getting-started/configuration/introduction" >}}
 [community]: {{< relref path="/community" >}}
 
 <!-- footnote reference definition -->

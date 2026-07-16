@@ -68,9 +68,8 @@ home = [
 
 然后你需要上传 `search.json` 到 algolia 来激活搜索功能。你可以使用浏览器来上传 `search.json` 文件，但是一个自动化的脚本可能效果更好，[Algolia Atomic](https://github.com/chrisdmacrae/atomic-algolia) 是一个不错的选择。
 
-{{< admonition tip "你的站点是多语言模式？" false >}}
-为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `search.json` 文件到对应的 algolia index, 例如 `zh-cn/search.json` 或 `fr/search.json`……
-{{< /admonition >}}
+> [!tip]- 你的站点是多语言模式？
+> 为了兼容 Hugo 的多语言模式，你需要上传不同语言的 `search.json` 文件到对应的 algolia index, 例如 `zh-cn/search.json` 或 `fr/search.json`……
 
 ### 准备
 

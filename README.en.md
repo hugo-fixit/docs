@@ -5,11 +5,11 @@
 
 👉 [中文](README.md) | English
 
-[FixIt](https://github.com/hugo-fixit/FixIt) theme documentation is mainly divided into: [Documentation](https://fixit.lruihao.cn/documentation/), [Guides](https://fixit.lruihao.cn/guides/) two major sections, welcome everyone to initiate a PR to improve the theme documentation.
+[FixIt](https://github.com/hugo-fixit/FixIt) theme documentation is mainly divided into: [Documentation](https://fixit.lruihao.cn/docs/), [Guides](https://fixit.lruihao.cn/guides/) two major sections, welcome everyone to initiate a PR to improve the theme documentation.
 
 ## System requirements
 
-- [Node.js](https://nodejs.org/): >= 20.0.0
+- [Node.js](https://nodejs.org/): >= 22.0.0
 - [Go](https://go.dev/dl/)
 - [Hugo](https://gohugo.io/installation/): >= 0.156.0 (extended version)
 

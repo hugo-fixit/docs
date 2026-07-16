@@ -41,9 +41,35 @@ These features may be useful for some websites, such as this documentation site.
 
 ## How to turn your FixIt site into a PWA? {#setup-in-fixit}
 
-### Configure `site.webmanifest` {#site.webmanifest}
+### Configure manifest {#site.webmanifest}
 
-Under the `/static/` folder, you need to create a file named `site.webmanifest`. This file provides information about your app and it is required for your app to be installable.
+FixIt generates the web app manifest automatically via the `manifest` output format. You can configure the app settings under `[params.app]` in `hugo.toml`:
+
+```toml
+[params.app]
+pwa = true
+name = "Your App Name"
+short_name = "App"
+
+# Web app manifest icons
+[[params.app.icons]]
+src = "/apple-touch-icon.png"
+sizes = "180x180"
+type = "image/png"
+purpose = "any maskable"
+
+[[params.app.icons]]
+src = "/android-chrome-192x192.png"
+sizes = "192x192"
+type = "image/png"
+
+[[params.app.icons]]
+src = "/android-chrome-512x512.png"
+sizes = "512x512"
+type = "image/png"
+```
+
+Alternatively, you can still provide a static `site.webmanifest` file under the `/static/` folder if you prefer manual control.
 
 Here are the key values required.
 
@@ -63,45 +89,11 @@ Here are the key values required.
 
     An array of objects representing image files will be served as application icons. You can reuse the favicon of your site as the icons.
 
-There are other optional values you can set in the manifest file, check out this [documentation][manifest] for more information.
+There are other optional values you can set in the `[params.app]` configuration, check out the [configuration reference][manifest] for more information.
 
-Here is a sample `site.webmanifest` file from this documentation site.
+### Configure output formats {#output-formats}
 
-```json
-{
-  "name": "FixIt Theme Documentation",
-  "short_name": "FixIt Docs",
-  "start_url": "/",
-  "description": "A Clean, Elegant but Advanced Hugo Theme",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "icons": [
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
-```
-
-### Configure the offline page {#offline-page}
-
-The offline page will be served to your visitor when they are offline.
-
-You only need to add "offline" in `outputs.home` as below:
+You need to add `"offline"` and `"manifest"` to `outputs.home`:
 
 ```toml
 [outputs]
@@ -109,23 +101,19 @@ home = [
   "html",
   "rss",
   "archives",
+  "search",
   "offline",
-  "search"
+  "manifest"
 ]
 ```
 
-{{< admonition type=tip title="I18n" open=true >}}
-Currently, I18n is supported for the offline page, but only for English and Chinese. Of course, you can [Contribute with a new language](https://github.com/hugo-fixit/FixIt/pulls) to the theme!
-{{< /admonition >}}
+### Enable the PWA option {#enable-pwa}
 
-### Enable the `enablePWA` option {#enable-pwa}
-
-Go to `hugo.toml`, add or change the option `enablePWA = true` under `[params]`.
+Go to `hugo.toml`, add or change the option `pwa = true` under `[params.app]`.
 
 ```toml
-[params]
-# ...
-enablePWA = true
+[params.app]
+pwa = true
 ```
 
 ## Install your PWA

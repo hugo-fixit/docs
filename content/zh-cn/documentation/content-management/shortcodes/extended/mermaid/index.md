@@ -5,9 +5,6 @@ linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
 aliases:
   - /zh-cn/extended-shortcode-mermaid/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: mermaid shortcode 使用 Mermaid 库提供绘制图表和流程图的功能。
 resources:
   - name: featured-image
@@ -43,6 +40,26 @@ collections:
 // mermaid diagram code here
 {{</* /mermaid */>}}
 ```
+
+也支持具名参数：
+
+```markdown
+{{</* mermaid wrapper=false */>}}
+graph TD
+    A[开始] --> B[结束]
+{{</* /mermaid */>}}
+```
+
+```markdown
+{{</* mermaid filename="architecture.mmd" */>}}
+graph TD
+    A[客户端] --> B[服务端]
+{{</* /mermaid */>}}
+```
+
+参数说明
+: `wrapper` (`bool`) 可选。为当前 shortcode 实例覆盖 `params.mermaid.wrapper`。
+: `filename` (`string`) 可选。设置图表/代码下载动作使用的文件名。
 
 ### 配置 {#configuration}
 

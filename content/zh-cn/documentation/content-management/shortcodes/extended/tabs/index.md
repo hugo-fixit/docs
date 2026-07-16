@@ -3,9 +3,6 @@ title: 扩展 Shortcode - tabs
 shortTitle: Tabs
 linkTitle: Tabs Shortcode
 date: 2025-09-11T13:53:46+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: tabs shortcode 允许你创建具有各种样式和布局的标签页内容。
 resources:
   - name: featured-image
@@ -56,7 +53,7 @@ collections:
 {{% tab title="标签页 3" %}}下划线样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs placement="bottom" defaultTab=1 */>}}
 {{%/* tab title="标签页 1" */%}}下划线样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}下划线样式标签页 2 的内容，这个是**默认选中**的标签页{{%/* /tab */%}}
@@ -73,7 +70,7 @@ collections:
 {{% tab title="标签页 3" %}}胶囊样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs type="pill" placement="left" */>}}
 {{%/* tab title="标签页 1" */%}}胶囊样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}胶囊样式标签页 2 的内容{{%/* /tab */%}}
@@ -90,7 +87,7 @@ collections:
 {{% tab title="标签页 3" %}}卡片样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs type="card" placement="right" */>}}
 {{%/* tab title="标签页 1" */%}}卡片样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}卡片样式标签页 2 的内容{{%/* /tab */%}}
@@ -107,7 +104,7 @@ collections:
 {{% tab title="标签页 3" %}}分段样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="查看源码", data-open=false}
+```markdown {title="查看源码"}
 {{</* tabs type="segment" */>}}
 {{%/* tab title="标签页 1" */%}}分段样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}分段样式标签页 2 的内容{{%/* /tab */%}}
@@ -123,10 +120,10 @@ collections:
 {{< tabs type="segment" >}}
 {{% tab title="tabs shortcode" %}}
 
-| 参数         | 说明                                                       | 类型    | 可选值                                 | 默认值      |
-| :----------- | :--------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
-| `defaultTab` | 默认激活标签页的索引                                       | integer | `0` ~ `count - 1`                      | `0`         |
-| `type`       | 标签页的样式类型                                           | string  | `underline`、`pill`、`card`、`segment` | `underline` |
+| 参数         | 说明                                                      | 类型    | 可选值                                 | 默认值      |
+| :----------- | :-------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
+| `defaultTab` | 默认激活标签页的索引                                      | integer | `0` ~ `count - 1`                      | `0`         |
+| `type`       | 标签页的样式类型                                          | string  | `underline`、`pill`、`card`、`segment` | `underline` |
 | `placement`  | 标签页相对于内容的位置，对于 `segment` 类型的选项卡不生效 | string  | `top`、`bottom`、`left`、`right`       | `top`       |
 
 {{% /tab %}}

@@ -41,65 +41,39 @@ repost:
 
 ## 如何将使用 FixIt 主题的静态网站配置为 PWA? {#setup-in-fixit}
 
-### 配置 `site.webmanifest` {#site.webmanifest}
+### 配置 manifest {#site.webmanifest}
 
-你需要在 `/static/` 文件夹下创建名为 `site.webmanifest` 的文件，并在此文件提供有关你的 PWA 的信息。
+FixIt 通过 `manifest` 输出格式自动生成 Web App Manifest。你可以在 `hugo.toml` 的 `[params.app]` 下配置应用信息：
 
-以下是必填参数。
+```toml
+[params.app]
+pwa = true
+name = "你的应用名称"
+short_name = "应用简称"
 
-- **name** _[必须]_
+# Web App Manifest 图标
+[[params.app.icons]]
+src = "/apple-touch-icon.png"
+sizes = "180x180"
+type = "image/png"
+purpose = "any maskable"
 
-    你的 PWA 的名称。
+[[params.app.icons]]
+src = "/android-chrome-192x192.png"
+sizes = "192x192"
+type = "image/png"
 
-- **short_name** _[必须]_
-
-    你的 PWA 的简称。
-
-- **start_url** _[必须]_
-
-    你的 PWA 的起始地址。请默认填写`"/"`。
-
-- **icons** _[必须]_
-
-    你的 PWA 的图标。你可以将网站的 favicon 作为图标。
-
-你还可以在 `site.webmanifest` 中设置其他可选值，查看这篇 [文档][manifest] 来了解更多。
-
-这是一份示例 `site.webmanifest` 文件：
-
-```json
-{
-  "name": "FixIt Theme Documentation",
-  "short_name": "FixIt Docs",
-  "start_url": "/",
-  "description": "A Clean, Elegant but Advanced Hugo Theme",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "icons": [
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
+[[params.app.icons]]
+src = "/android-chrome-512x512.png"
+sizes = "512x512"
+type = "image/png"
 ```
 
-### 配置离线页面 {#offline-page}
+如果你希望手动控制，也可以在 `/static/` 文件夹下创建 `site.webmanifest` 文件。
 
-离线页面将在访客离线访问未缓存的页面时显示，你只需要添加 "offline" 到 `outputs.home` 配置中：
+### 配置输出格式 {#output-formats}
+
+你需要添加 `"offline"` 和 `"manifest"` 到 `outputs.home` 配置中：
 
 ```toml
 [outputs]
@@ -107,23 +81,19 @@ home = [
   "html",
   "rss",
   "archives",
+  "search",
   "offline",
-  "search"
+  "manifest"
 ]
 ```
 
-{{< admonition type=tip title="I18n" open=true >}}
-目前，离线页面支持 I18n 多语言，但只支持英文和中文。当然，你可以给主题 [贡献一种新的语言](https://github.com/hugo-fixit/FixIt/pulls)！
-{{< /admonition >}}
+### 开启 PWA 选项 {#enable-pwa}
 
-### 开启 `enablePWA` 选项 {#enable-pwa}
-
-前往 `hugo.toml`, 添加/修改 `[params]` 配置项下 `enablePWA` 选项的值为 `true`。
+前往 `hugo.toml`, 添加/修改 `[params.app]` 配置项下 `pwa` 选项的值为 `true`。
 
 ```toml
-[params]
-# ...
-enablePWA = true
+[params.app]
+pwa = true
 ```
 
 ## 安装并使用你的 PWA
@@ -137,7 +107,6 @@ enablePWA = true
 如果你在配置过程中有任何问题，你可以通过浏览器调试工具中的 `Console` 与 `Application` 面板来进行调试。你也可以用 [PWA Builder][pwabuilder] 来检查你的网站以获得更多信息。你可以创建一个 [discussion][discussions] 来获得社区帮助或者提交 [issue][issues] 来报告你遇到的任何 bug。
 
 [pwas]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
-[manifest]: https://developer.mozilla.org/en-US/docs/Web/Manifest
 [pwabuilder]: https://www.pwabuilder.com/
 [discussions]: https://github.com/hugo-fixit/FixIt/discussions
 [issues]: https://github.com/hugo-fixit/FixIt/issues

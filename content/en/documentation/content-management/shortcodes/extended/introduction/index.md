@@ -4,9 +4,6 @@ shortTitle: Overview
 date: 2023-02-24T22:11:39+08:00
 aliases:
   - /theme-documentation-extended-shortcodes/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: FixIt theme provides multiple shortcodes on top of built-in ones in Hugo.
 resources:
   - name: featured-image
@@ -28,7 +25,9 @@ lightgallery: true
 
 <!--more-->
 
-> [!TIP]
+Use these FixIt's embedded shortcodes as needed.
+
+> [!TIP]~
 >
 > - **FixIt's Embedded**:
 >
@@ -39,15 +38,12 @@ lightgallery: true
 >   To balance **simplicity** and **extensibility**, FixIt theme provides extra Hugo theme components for customization.\
 >   Visit [this page][components] to browse a collection of themes components created by the Hugo FixIt community..
 
-Use these FixIt's embedded shortcodes as needed.
-
 ## script
 
 `script` is a shortcode to insert custom **:(fa-brands fa-js fa-fw): Javascript** in your post.
 
-{{< admonition >}}
-The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
-{{< /admonition >}}
+> [!NOTE]
+> The script content can be guaranteed to be executed in order after all third-party libraries are loaded. So you are free to use third-party libraries.
 
 Example `script` input:
 
@@ -65,9 +61,7 @@ console.log('Hello FixIt!');
 
 ## style
 
-{{< admonition >}}
-Hugo **extended** version is necessary for `style` shortcode.
-{{< /admonition >}}
+> [!note] Hugo **extended** version is necessary for `style` shortcode.
 
 `style` is a shortcode to insert custom style in your post.
 
@@ -92,6 +86,22 @@ The rendered output looks like this:
 {{< style "text-align:right; strong{color:#00b1ff;}" >}}
 This is a **right-aligned** paragraph.
 {{< /style >}}
+
+## auto-dark
+
+{{< version 1.0.0 >}}
+
+`auto-dark` shortcode wraps content and adapts it for dark mode by inverting color/hue automatically.
+
+Example `auto-dark` input:
+
+```markdown
+{{</* auto-dark */>}}
+<img src="/images/logo.svg" alt="logo" />
+{{</* /auto-dark */>}}
+```
+
+You can paste the above snippet into your content to test the effect in your own site.
 
 ## link
 

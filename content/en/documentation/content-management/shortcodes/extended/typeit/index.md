@@ -5,9 +5,6 @@ linkTitle: Typeit Shortcode
 date: 2023-02-24T22:59:50+08:00
 aliases:
   - /extended-shortcode-typeit/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The typeit shortcode provides typing animation based on TypeIt library.
 resources:
   - name: featured-image

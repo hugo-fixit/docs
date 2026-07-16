@@ -3,9 +3,6 @@ title: Extended Shortcode - tabs
 shortTitle: Tabs
 linkTitle: Tabs Shortcode
 date: 2025-09-11T13:53:54+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The tabs shortcode allows you to create tabbed content with various styles and layouts.
 resources:
   - name: featured-image
@@ -56,7 +53,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Underline style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs placement="bottom" defaultTab=1 */>}}
 {{%/* tab title="Tab 1" */%}}Underline style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Underline style tab 2 content, this is the **default selected** tab{{%/* /tab */%}}
@@ -73,7 +70,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Pill style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs type="pill" placement="left" */>}}
 {{%/* tab title="Tab 1" */%}}Pill style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Pill style tab 2 content{{%/* /tab */%}}
@@ -90,7 +87,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Card style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs type="card" placement="right" */>}}
 {{%/* tab title="Tab 1" */%}}Card style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Card style tab 2 content{{%/* /tab */%}}
@@ -107,7 +104,7 @@ The rendered output looks like this:
 {{% tab title="Tab 3" %}}Segment style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
-```markdown {title="View Source Code", data-open=false}
+```markdown {title="View Source Code"}
 {{</* tabs type="segment" */>}}
 {{%/* tab title="Tab 1" */%}}Segment style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Segment style tab 2 content{{%/* /tab */%}}
@@ -123,11 +120,11 @@ The rendered output looks like this:
 {{< tabs type="segment" >}}
 {{% tab title="tabs shortcode" %}}
 
-| Parameter   | Description                                                                        | Type      | Options                             | Default     |
-| :---------- | :--------------------------------------------------------------------------------- | :-------- | :---------------------------------- | :---------- |
-| `defaultTab` | Default active tab index                                                          | integer   | `0` ~ `count - 1`                   | `0`         |
-| `type`       | Tab style type                                                                    | string    | `underline`, `pill`, `card`, `segment` | `underline` |
-| `placement`  | Tab placement position relative to content, not effective for `segment` type tabs | string    | `top`, `bottom`, `left`, `right`      | `top`       |
+| Parameter    | Description                                                                       | Type    | Options                                | Default     |
+| :----------- | :-------------------------------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
+| `defaultTab` | Default active tab index                                                          | integer | `0` ~ `count - 1`                      | `0`         |
+| `type`       | Tab style type                                                                    | string  | `underline`, `pill`, `card`, `segment` | `underline` |
+| `placement`  | Tab placement position relative to content, not effective for `segment` type tabs | string  | `top`, `bottom`, `left`, `right`       | `top`       |
 
 {{% /tab %}}
 {{% tab title="tab shortcode" %}}

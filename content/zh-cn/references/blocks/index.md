@@ -37,51 +37,49 @@ cp themes/FixIt/layouts/_partials/custom.html layouts/_partials/custom.html
 
 你可以通过 `define` 来实现这些块。
 
-| 块名称                        | 描述                 | 位置                                    |
-| :---------------------------- | :------------------- | :-------------------------------------- |
-| `custom-head`                 | 头部自定义块         | `layouts/baseof.html`                   |
-| `custom-menu:desktop`         | 桌面菜单自定义块     | `layouts/_partials/header.html`         |
-| `custom-menu:mobile`          | 移动菜单自定义块     | `layouts/_partials/header.html`         |
-| `custom-profile`              | 首页自定义块         | `layouts/_partials/home/profile.html`   |
-| `custom-aside`                | 侧栏自定义块         | `layouts/posts/single.html`             |
-| `custom-comment`              | 评论系统自定义块     | `layouts/_partials/single/comment.html` |
-| `custom-footer`               | 页脚自定义块         | `layouts/_partials/footer.html`         |
-| `custom-widgets`              | 小部件自定义块       | `layouts/_partials/widgets.html`        |
-| `custom-assets`               | 资源自定义块         | `layouts/_partials/assets.html`         |
-| `custom-post__toc:before`     | 文章页目录前自定义块 | `layouts/posts/single.html`             |
-| `custom-post__toc:after`      | 文章页目录后自定义块 | `layouts/posts/single.html`             |
-| `custom-post__content:before` | 文章页内容前自定义块 | `layouts/posts/single.html`             |
-| `custom-post__content:after`  | 文章页内容后自定义块 | `layouts/posts/single.html`             |
-| `custom-post__footer:before`  | 文章页脚前自定义块   | `layouts/posts/single.html`             |
-| `custom-post__footer:after`   | 文章页脚后自定义块   | `layouts/posts/single.html`             |
+| 块名称                        | 描述                 | 位置                                     |
+| :---------------------------- | :------------------- | :--------------------------------------- |
+| `custom-head`                 | 头部自定义块         | `layouts/baseof.html`                    |
+| `custom-menu:desktop`         | 桌面菜单自定义块     | `layouts/_partials/layouts/header.html`  |
+| `custom-menu:mobile`          | 移动菜单自定义块     | `layouts/_partials/layouts/header.html`  |
+| `custom-profile`              | 首页自定义块         | `layouts/_partials/home/profile.html`    |
+| `custom-aside`                | 侧栏自定义块         | `layouts/posts/single.html`              |
+| `custom-comment`              | 评论系统自定义块     | `layouts/_partials/layouts/comment.html` |
+| `custom-footer`               | 页脚自定义块         | `layouts/_partials/layouts/footer.html`  |
+| `custom-widgets`              | 小部件自定义块       | `layouts/_partials/layouts/widgets.html` |
+| `custom-assets`               | 资源自定义块         | `layouts/_partials/layouts/assets.html`  |
+| `custom-post__toc:before`     | 文章页目录前自定义块 | `layouts/posts/single.html`              |
+| `custom-post__toc:after`      | 文章页目录后自定义块 | `layouts/posts/single.html`              |
+| `custom-post__content:before` | 文章页内容前自定义块 | `layouts/posts/single.html`              |
+| `custom-post__content:after`  | 文章页内容后自定义块 | `layouts/posts/single.html`              |
+| `custom-post__footer:before`  | 文章页脚前自定义块   | `layouts/posts/single.html`              |
+| `custom-post__footer:after`   | 文章页脚后自定义块   | `layouts/posts/single.html`              |
 
 ## 主题配置 {#configuration}
 
 {{< version 0.3.12 >}}
 
-为了便于管理引入自定义模板，可以通过 `params.customPartials` 参数来指定自定义模板的路径。
+为了便于管理引入自定义模板，可以通过 `params.custom_partials` 参数来指定自定义模板的路径。
 
 自定义模板必须存放在 `/layouts/_partials/` 目录中。
 
 ```toml
-[params]
-
-[params.customPartials]
+[params.custom_partials]
 head = []
-menuDesktop = []
-menuMobile = []
+menu_desktop = []
+menu_mobile = []
 profile = []
 aside = []
 comment = []
 footer = []
 widgets = []
 assets = []
-postTocBefore = []
-postTocAfter = []
-postContentBefore = []
-postContentAfter = []
-postFooterBefore = []
-postFooterAfter = []
+post_toc_before = []
+post_toc_after = []
+post_content_before = []
+post_content_after = []
+post_footer_before = []
+post_footer_after = []
 ```
 
 ## 如何使用
@@ -92,16 +90,14 @@ postFooterAfter = []
 
 写入任意内容：
 
-```go-html-template
+```go-template
 The quick brown fox jumps over the lazy dog.
 ```
 
 然后，在配置文件中指定自定义模板的路径即可。
 
 ```toml
-[params]
-
-[params.customPartials]
+[params.custom_partials]
 profile = [ "custom/profile.html" ]
 ```
 

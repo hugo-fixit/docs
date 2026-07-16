@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
-# Related content Configuration | 相关内容配置
-# See: https://gohugo.io/content-management/related-content/
+# Related content Configuration
+# See: https://gohugo.io/configuration/related-content/
 # -------------------------------------------------------------------------------------
 
 includeNewer = false

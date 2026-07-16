@@ -4,9 +4,6 @@ shortTitle: 概述
 date: 2023-02-24T22:11:39+08:00
 aliases:
   - /zh-cn/theme-documentation-extended-shortcodes/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: FixIt 主题在 Hugo 内置的 shortcode 的基础上提供了更多的扩展 Shortcodes。
 resources:
   - name: featured-image
@@ -45,10 +42,8 @@ lightgallery: true
 
 `script` shortcode 用来在你的文章中插入 **:(fa-brands fa-js fa-fw): Javascript** 脚本。
 
-{{< admonition >}}
-脚本内容可以保证在所有的第三方库加载之后按顺序执行。
-所以你可以自由地使用第三方库。
-{{< /admonition >}}
+> [!NOTE]
+> 脚本内容可以保证在所有的第三方库加载之后按顺序执行，所以你可以自由地使用第三方库。
 
 一个 `script` 示例：
 
@@ -66,9 +61,7 @@ console.log('Hello FixIt!');
 
 ## style
 
-{{< admonition >}}
-Hugo **extended** 版本对于 `style` shortcode 是必需的。
-{{< /admonition >}}
+> [!note] Hugo **extended** 版本对于 `style` shortcode 是必需的。
 
 `style` shortcode 用来在你的文章中插入自定义样式。
 
@@ -93,6 +86,22 @@ This is a **right-aligned** paragraph.
 This is a **right-aligned** paragraph.
 {{< /style >}}
 
+## auto-dark
+
+{{< version 1.0.0 >}}
+
+`auto-dark` shortcode 会包裹内容，并在深色模式下自动进行颜色/色相反转，方便适配浅色素材。
+
+一个 `auto-dark` 示例：
+
+```markdown
+{{</* auto-dark */>}}
+<img src="/images/logo.svg" alt="logo" />
+{{</* /auto-dark */>}}
+```
+
+你可以将上面的示例粘贴到自己的站点内容中查看实际效果。
+
 ## link
 
 `link` shortcode 是 [Markdown 链接语法][md-link] 的替代。
@@ -100,7 +109,7 @@ This is a **right-aligned** paragraph.
 
 支持 [本地资源引用][contents-organization] 的完整用法。
 
-`link` shortcode 有以下命名参数：
+`link` shortcode 有以下具名参数：
 
 - **href** _[必需]_（**第一个**位置参数）
 
@@ -212,7 +221,7 @@ This is a **right-aligned** paragraph.
 
 支持 [本地资源引用][contents-organization] 的完整用法。
 
-`image` shortcode 有以下命名参数：
+`image` shortcode 有以下具名参数：
 
 - **src** _[必需]_（**第一个**位置参数）
 
@@ -282,7 +291,7 @@ This is a **right-aligned** paragraph.
 
 `details` shortcode 用来在你的文章中插入 **:(fa-brands fa-html5 fa-fw): HTML5 标签** `details` 和 `summary`。
 
-`details` shortcode 有以下命名参数：
+`details` shortcode 有以下具名参数：
 
 - **summary** _[可选]_ (**第一个**位置参数）
 
@@ -386,7 +395,7 @@ _All pages and graphics on this web site are the property of FixIt._
 
 {{< version 0.2.18 changed >}}
 
-`reward` shortcode 有以下命名参数：
+`reward` shortcode 有以下具名参数：
 
 - **wechatpay** _[可选]_（**第一个**位置参数）
 - **alipay** _[可选]_（**第二个**位置参数）

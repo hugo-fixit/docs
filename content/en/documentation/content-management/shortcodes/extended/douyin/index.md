@@ -3,9 +3,6 @@ title: Extended Shortcode - douyin
 shortTitle: Douyin
 linkTitle: douyin Shortcode
 date: 2024-05-20T11:06:24+08:00
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: The douyin shortcode embeds a responsive video player for douyin videos.
 resources:
   - name: featured-image

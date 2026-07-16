@@ -1286,7 +1286,7 @@ Supports getting data from files in Hugo [page-resources] or `assets`, and the f
 
 For example, the current page structure is as follows:
 
-{{< file-tree path="documentation/content-management/diagrams-support/echarts" level=2 highlightList="chart.js, chart.yaml, chart.json, chart.toml" />}}
+{{< file-tree path="documentation/content-management/diagrams-support/echarts" level=2 highlight_list="chart.js, chart.yaml, chart.json, chart.toml" />}}
 
 You can use the `file` parameter to get data from the file:
 

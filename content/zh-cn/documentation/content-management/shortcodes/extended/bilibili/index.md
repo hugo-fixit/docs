@@ -5,9 +5,6 @@ linkTitle: Bilibili Shortcode
 date: 2023-02-24T22:52:50+08:00
 aliases:
   - /zh-cn/extended-shortcode-bilibili/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: bilibili shortcode 提供了一个内嵌的用来播放 bilibili 视频的响应式播放器。
 resources:
   - name: featured-image
@@ -65,7 +62,7 @@ https://www.bilibili.com/video/BV1kt411k7Rq?p=3
 
 ## 详细参数
 
-`bilibili` shortcode 有以下命名参数：
+`bilibili` shortcode 有以下具名参数：
 
 - **id** _[必需]_（**第一个**位置参数）
 

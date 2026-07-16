@@ -4,9 +4,6 @@ shortTitle: Overview
 date: 2023-02-24T17:27:22+08:00
 aliases:
   - /theme-documentation-content/
-author:
-  name: Lruihao
-  link: https://lruihao.cn
 description: Find out how to create and organize your content quickly and intuitively in FixIt theme.
 resources:
   - name: featured-image
@@ -117,182 +114,7 @@ This is an additional theme component, please refer to [hugo-fixit/component-pro
 
 ## Front matter {#front-matter}
 
-**Hugo** allows you to add front matter in `yaml`, `toml` or `json` to your content files, see [Front matter][front-matter].
-
-{{< admonition >}}
-**Not all** of the below front matters need to be set in each of your posts.
-It is necessary only if the front matters and the `page` part in your [theme configuration]({{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}) are inconsistent.
-{{< /admonition >}}
-
-{{< admonition tip "" false >}}
-Some [archetypes](https://gohugo.io/content-management/archetypes/) are embedded in the **FixIt** theme, which will take effect when creating new content with the following commands, and the front matter will be automatically brought in.
-
-```bash
-hugo new posts/foo.md
-# Or
-hugo new --kind post-bundle posts/bar/
-```
-
-{{< /admonition >}}
-
-- **title**: the title for the content.
-- **subtitle**: the subtitle for the content.
-- **date**: the datetime assigned to this page, which is usually fetched from the `date` field in front matter, but this behaviour is configurabl in the [theme configuration][theme-config].
-- **lastmod**: the datetime at which the content was last modified.
-- **draft**: if `true`, the content will not be rendered unless the `--buildDrafts`/`-D` flag is passed to the `hugo` command.
-- **author**: {{< version 0.2.18 changed >}} the author config for the content, the same as the `params.author` part in the [theme configuration][theme-config].
-
-    ```yaml {data-open=false}
-    author:
-      name: '' # the author's name
-      link: '' # the link of the author
-      email: '' # the email of the author, used to set a Gravatar avatar, which takes precedence over `author.avatar`
-      avatar: '' # the local avatar of the author
-    ```
-
-- **authorAvatar**: {{< version 0.2.18 >}} whether to enable the author's avatar of the post.
-- **description**: the description for the content.
-- **keywords**: the keywords for the content.
-- **license**: the special lisence for this content.
-- **images**: page images for Open Graph and Twitter Cards.
-- **summary**: the summary for the content.
-- **summaryPlainify**: {{< version 0.3.13 >}} whether to show summary in plain text, default: `false`. The same as the `params.summaryPlainify` in the [theme configuration][theme-config].
-
-- **tags**: the tags for the content.
-- **categories**: the categories for the content.
-- **featuredImage**: the featured image for the content.
-- **featuredImagePreview**: the featured image for the content preview in the home page.
-
-- **hiddenFromHomePage**: if `true`, the content will not be shown in the home page.
-- **hiddenFromSearch**: if `true`, the content will not be shown in the search results.
-- **hiddenFromRelated**: {{< version 0.3.0 >}} if `true`, the content will not be shown in the related posts.
-- **hiddenFromFeed**: {{< version 0.3.10 >}} if `true`, the content will not be shown in the RSS, Atom and JSON feed.
-- **twemoji**: if `true`, the content will enable the twemoji.
-- **lightgallery**: {{< version 0.2.18 changed >}} the same as the `params.page.lightgallery` part in the [theme configuration][theme-config].
-- **ruby**: if `true`, the content will enable the [ruby extended syntax][extended-markdown-syntax].
-- **fraction**: if `true`, the content will enable the [fraction extended syntax][fraction-syntax].
-- **fontawesome**: if `true`, the content will enable the [Font Awesome extended syntax][fontawesome-syntax].
-- **linkToMarkdown**: if `true`, the footer of the content will be shown the link to the orignal Markdown file.
-- **linkToSource**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the source file.
-- **linkToEdit**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the edit page.
-- **linkToReport**: {{< version 0.3.0 >}} if `true`, the footer of the content will be shown the link to the report issue.
-- **linkToVscode**: {{< version 0.3.20 >}} if `true`, the footer of the content will be shown the link to the edit page in VSCode.
-- **pageStyle**: {{< version 0.2.13 >}} Detail see [Page Style][page-style].
-
-- **codeblock**: {{< version 0.4.0 >}} the same as the `params.codeblock` part in the [theme configuration][theme-config].
-- **toc**: the same as the `params.page.toc` part in the [theme configuration][theme-config].
-- **expirationReminder**: {{< version 0.2.13 >}} the same as the `params.page.expirationReminder` part in the [theme configuration][theme-config].
-- **heading**: {{< version 0.3.0 >}} the same as the `params.page.heading` part in the [theme configuration][theme-config].
-- **math**: the same as the `params.page.math` part in the [theme configuration][theme-config].
-- **mapbox**: the same as the `params.page.mapbox` part in the [theme configuration][theme-config].
-- **share**: the same as the `params.page.share` part in the [theme configuration][theme-config].
-- **comment**: the same as the `params.page.comment` part in the [theme configuration][theme-config].
-- **library**: the same as the `params.page.library` part in the [theme configuration][theme-config].
-- **seo**: the same as the `params.page.seo` part in the [theme configuration][theme-config].
-- **type**: the rendering template of page, see [templates](#templates) for details.
-- **menu**: see [Add content to Menu][content-to-menu].
-
-- **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Content Encryption](#content-encryption).
-- **message**: {{< version 0.2.15 >}} encryption prompt, see [Content Encryption](#content-encryption).
-
-- **repost**: {{< version 0.2.15 >}} the same as the `params.page.repost` part in the [theme configuration][theme-config].
-- **autoBookmark**: {{< version 0.2.17 >}} the same as the `params.page.autoBookmark` part in the [theme configuration][theme-config].
-- **showLastmod**: {{< version 0.4.0 >}} the same as the `params.page.showLastmod` part in the [theme configuration][theme-config].
-- **wordCount**: {{< version 0.2.17 >}} the same as the `params.page.wordCount` part in the [theme configuration][theme-config].
-- **readingTime**: {{< version 0.2.17 >}} the same as the `params.page.readingTime` part in the [theme configuration][theme-config].
-- **endFlag**: {{< version 0.2.17 >}} the same as the `params.page.endFlag` part in the [theme configuration][theme-config].
-- **reward**: {{< version 0.2.17 >}} the same as the `params.page.reward` part in the [theme configuration][theme-config].
-- **instantPage**: {{< version 0.2.18 >}} the same as the `params.page.instantPage` part in the [theme configuration][theme-config].
-- **feed**: {{< version 0.3.10 >}} the same as the `params.feed` part in the [theme configuration][theme-config].
-
-<!-- front matter for section only -->
-
-- **titleIcon**: {{< version 0.3.5 >}} the icon for the page title, only valid in `_index.md`.
-
----
-
-**featuredImage** and **featuredImagePreview** support the complete usage of [local resource references](#contents-organization).
-
-If the page resource with `name: featured-image` or `name: featured-image-preview` is set in the front matter,
-it is not necessary to set the parameter `featuredImage` or `featuredImagePreview`:
-
-```yaml
-resources:
-  - name: featured-image
-    src: featured-image.jpg
-  - name: featured-image-preview
-    src: featured-image-preview.jpg
-```
-
-Here is a front matter example:
-
-```yaml
----
-title: My First Post
-subtitle: ''
-date: 2020-03-04T15:58:26+08:00
-lastmod: 2020-03-04T15:58:26+08:00
-draft: true
-author: ''
-authorLink: ''
-authorEmail: ''
-description: ''
-keywords: ''
-license: ''
-images: []
-
-tags: []
-categories: []
-featuredImage: ''
-featuredImagePreview: ''
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-twemoji: false
-lightgallery: true
-ruby: true
-fraction: true
-fontawesome: true
-linkToMarkdown: true
-pageStyle: normal
-
-toc:
-  enable: true
-  auto: true
-expirationReminder:
-  enable: false
-  # ...
-edit:
-  enable: false
-  # ...
-math:
-  enable: true
-  # ...
-mapbox:
-  accessToken: ''
-  # ...
-share:
-  enable: true
-  # ...
-comment:
-  enable: true
-  # ...
-library:
-  css:
-  # someCSS = "some.css"
-  # located in "assets/"
-  # Or
-  # someCSS = "https://cdn.example.com/some.css"
-  js:
-  # someJS = "some.js"
-  # located in "assets/"
-  # Or
-  # someJS = "https://cdn.example.com/some.js"
-seo:
-  images: []
-  # ...
----
-```
+This part is shown in the [Front matter][front-matter] page.
 
 ## Content Summaries
 
@@ -312,11 +134,10 @@ If you are creating content in a [CJK]^(Chinese/Japanese/Korean) language and wa
 
 Alternatively, you may add the `<!--more-->` summary divider where you want to split the article.
 
-Content that comes before the summary divider will be used as that content’s summary.
+Content that comes before the summary divider will be used as that content's summary.
 
-{{< admonition >}}
-Be careful to enter `<!--more-->` exactly; i.e., all lowercase and with no whitespace.
-{{< /admonition >}}
+> [!NOTE]
+> Be careful to enter `<!--more-->` exactly; i.e., all lowercase and with no whitespace.
 
 ### Front Matter Summary
 
@@ -344,11 +165,11 @@ Each summary type has different characteristics:
 4. The text at the start of the article will be provided as per the automatic summary split method.
 
 > [!TIP]
-> If you want plain text summaries, you can set `params.summaryPlainify` or Front matter `summaryPlainify`.
+> If you want plain text summaries, you can set `params.summary_plainify` or Front matter `summary_plainify`.
 
 ## Markdown Syntax
 
-This part is shown in the [basic markdown syntax page][basic-markdown-syntax] and the [extended markdown syntax page][extended-markdown-syntax].
+This part is shown in the [basic Markdown syntax page][basic-markdown-syntax] and the [extended Markdown syntax page][extended-markdown-syntax].
 
 ## Shortcodes
 
@@ -404,8 +225,8 @@ defaultContentLanguage = "en"
 [languages.en]
 weight = 1
 title = "My Hugo FixIt Site"
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 
 [[languages.en.menu.main]]
 identifier = "posts"
@@ -438,8 +259,8 @@ weight = 3
 weight = 2
 title = "我的 Hugo FixIt 网站"
 # language code, CN only here
-languageCode = "zh-CN"
-languageName = "简体中文"
+locale = "zh-CN"
+label = "简体中文"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = true
 
@@ -473,8 +294,8 @@ weight = 3
 [languages.fr]
 weight = 3
 title = "Mon nouveau site Hugo FixIt"
-languageCode = "fr"
-languageName = "Français"
+locale = "fr"
+label = "Français"
 
 [[languages.fr.menu.main]]
 identifier = "posts"
@@ -512,9 +333,8 @@ Single file `my-page.md` is split in three files:
 - in Chinese: `my-page.zh-cn.md`
 - in French: `my-page.fr.md`
 
-{{< admonition tip >}}
-Use [Front Matter parameter](https://gohugo.io/content-management/multilingual#translate-your-content) to translate urls too.
-{{< /admonition >}}
+> [!NOTE]
+> Use [Front Matter parameter][multilingual-content] to translate urls too.
 
 ### Overwrite Translation Strings
 
@@ -539,20 +359,15 @@ With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automati
 [page-bundles]: https://gohugo.io/content-management/page-bundles/
 [coverview]: https://coverview.lruihao.cn/
 [coverview-repo]: https://github.com/Lruihao/CoverView
-[front-matter]: https://gohugo.io/content-management/front-matter/
+[front-matter]: {{< relref path="/documentation/content-management/front-matter" >}}
 [cse-support]: {{< relref path="/guides/cse-support" >}}
 [hugo-fixit/component-projects]: /ecosystem/hugo-fixit/component-projects/
-[theme-config]: {{< relref path="/documentation/getting-started/configuration#theme-configuration" >}}
-[content-to-menu]: {{< relref path="/documentation/getting-started/configuration#content-to-menu" >}}
-[ruby-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#ruby" >}}
-[fraction-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fraction" >}}
-[fontawesome-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended#fontawesome" >}}
-[page-style]: {{< relref path="/documentation/advanced#page-style" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [hugo-url-management]: https://gohugo.io/content-management/urls/
 [basic-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/basics" >}}
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
+[multilingual-content]: https://gohugo.io/content-management/multilingual#translate-your-content
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [hugo-fixit/cmpt-translate]: /ecosystem/hugo-fixit/cmpt-translate/

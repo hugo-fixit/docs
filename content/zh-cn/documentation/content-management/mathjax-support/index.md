@@ -60,35 +60,35 @@ inline = [
 
 [params.page]
 
-[params.page.math]
+[params.math]
 enable = true
 type = "mathjax"
 
 # MathJax server-side rendering (https://www.mathjax.org)
 # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
-[params.page.math.mathjax]
+[params.math.mathjax]
 cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 
-[params.page.math.mathjax.packages]
+[params.math.mathjax.packages]
 # '[+]' = ['configmacros']
 
 # custom macros map
 # syntax: <macro> = <definition>
-[params.page.math.mathjax.macros]
+[params.math.mathjax.macros]
 # "bold" = ["{\\bf #1}", 1] # usage: $\bold{math}$
 
-[params.page.math.mathjax.loader]
+[params.math.mathjax.loader]
 load = [ 'ui/safe' ]
 
-[params.page.math.mathjax.loader.paths]
+[params.math.mathjax.loader.paths]
 # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
 
 # more loader config e.g source, dependencies, provides etc.
 
-[params.page.math.mathjax.options]
-enableMenu = true
+[params.math.mathjax.options]
+enable_menu = true
 # HTML tags that won't be searched for math
-skipHtmlTags = [
+skip_html_tags = [
   "script",
   "noscript",
   "style",
@@ -101,10 +101,10 @@ skipHtmlTags = [
   "mjx-container"
 ]
 # class that marks tags not to search
-ignoreHtmlClass = "mathjax_ignore"
+ignore_html_class = "mathjax_ignore"
 
 # HTML tags that can appear within math
-[params.page.math.mathjax.options.includeHtmlTags]
+[params.math.mathjax.options.include_html_tags]
 # "#comment" = ""
 # br = "\n"
 # wbr = ""
@@ -227,7 +227,7 @@ $$C_p[\ce{H2O(l)}] = \pu{75.3 J // mol K}$$
 支持自定义 $\text{MathJax}$ CDN。可以在主题的配置文件中设置 $\text{MathJax}$ 的 CDN 地址。例如：
 
 ```toml
-[params.page.math.mathjax]
+[params.math.mathjax]
 cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ```
 
@@ -236,7 +236,7 @@ cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 $\text{MathJax}$ 支持自定义宏。可以在主题的配置文件中添加自定义宏。例如：
 
 ```toml
-[params.page.math.mathjax.macros]
+[params.math.mathjax.macros]
 KaTeX = "{K\\kern-.325em\\raise.21em{\\scriptstyle{A}}\\kern-.17em\\TeX}" # usage: $\KaTeX$
 bold = [
   "{\\bf #1}",
@@ -261,25 +261,25 @@ $\text{MathJax}$ 支持自定义扩展。可以在主题的配置文件中添加
 例如，添加 [`physics`][physics] 和 [`xypic`][xyjax] 扩展包：
 
 ```toml
-[params.page.math.mathjax.packages]
+[params.math.mathjax.packages]
 "[+]" = [
   "physics",
   "xypic"
 ]
 
-[params.page.math.mathjax.loader]
+[params.math.mathjax.loader]
 load = [
   "ui/safe",
   "[tex]/physics",
   "[custom]/xypic.js"
 ]
 
-[params.page.math.mathjax.loader.paths]
+[params.math.mathjax.loader.paths]
 custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
 
-[params.page.math.mathjax.tex]
+[params.math.mathjax.tex]
 
-[params.page.math.mathjax.tex.physics]
+[params.math.mathjax.tex.physics]
 italicdiff = false
 arrowdel = false
 ```
