@@ -5,7 +5,6 @@
 
 [post_chat]
 enable = false
-hot_words = false
 
 [post_summary]
 enable = false
@@ -22,6 +21,5 @@ c4u = true
 
 # Content adapters config for component projects
 # https://github.com/hugo-fixit/component-projects
-# [TODO] migrate to snake_case
-[projectsAdapters]
+[projects_adapters]
 enable = false

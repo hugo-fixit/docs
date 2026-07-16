@@ -2532,7 +2532,7 @@ fullscreen
 
 ### post_chat
 
-`map` PostChat AI configuration. Based on your posts to build a knowledge base, support AI summary, AI search, and AI Chatbot. See: [洪墨 AI](https://ai.zhheo.com/docs/). Get PostChat Key from my invitation link, thanks for your support! https://ai.zhheo.com/console/login?InviteID=85041330.
+`map` PostChat AI configuration. Based on your posts to build a knowledge base, support AI summary, AI search, and AI Chatbot. See: [HongMoAI](https://ai.zhheo.com/docs/). Get PostChat Key from my invitation link, thanks for your support! https://ai.zhheo.com/console/login?InviteID=85041330.
 
 ```toggle
 [params]

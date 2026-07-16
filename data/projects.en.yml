@@ -2,7 +2,6 @@
   totalStars: true
   repos:
     - hugo-fixit/FixIt
-    - hugo-fixit/fixit-bundle
 - title: 📄 Templates
   repos:
     - hugo-fixit/hugo-fixit-starter
@@ -18,8 +17,10 @@
   # Order of repos, optional values: ['asc', 'desc']
   order: desc
   repos:
+    - hugo-fixit/fixit-bundle
     - hugo-fixit/component-projects
     - hugo-fixit/hugo-atom-feed
+    - hugo-fixit/cmpt-markmap
     - hugo-fixit/cmpt-mdevtools
     - hugo-fixit/cmpt-flyfish
     - hugo-fixit/cmpt-translate
@@ -35,9 +36,10 @@
   categories:
     - FixIt Tools
   repos:
+    - hugo-fixit/skills
     - hugo-fixit/fixit-cli
-    - hugo-fixit/fixit-releaser
     - hugo-fixit/component-skeleton
+    - hugo-fixit/librarybot
     - hugo-fixit/action-component-list
     - hugo-fixit/hugo-shell
     - hugo-fixit/.tools

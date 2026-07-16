@@ -208,7 +208,7 @@ ignore_list = []
 highlight_list = []
 
 # Mermaid configuration.
-# See: [Mermaid](http://fixit.lruihao.cn/documentation/content-management/diagrams-support/mermaid/)
+# See: [Mermaid](https://fixit.lruihao.cn/docs/content-management/diagrams-support/mermaid/)
 [mermaid]
 # Whether to enable the Mermaid wrapper.
 # When enabled, Mermaid diagrams are wrapped with diagram tabs and actions:
@@ -293,7 +293,7 @@ h5 = "{h2}.{h3}.{h4}.{h5} {title}"
 h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
 
 # Mathematical formulas configuration.
-# See: [Formula](http://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula)
+# See: [Formula](https://fixit.lruihao.cn/docs/content-management/markdown-syntax/extended/#formula)
 [math]
 enable = true
 # Mathematical formulas rendering engines.
@@ -397,7 +397,7 @@ fullscreen = true
 
 # PostChat AI configuration.
 # Based on your posts to build a knowledge base, support AI summary, AI search, and AI Chatbot.
-# See: [洪墨 AI](https://ai.zhheo.com/docs/)
+# See: [HongMoAI](https://ai.zhheo.com/docs/)
 # Get PostChat Key from my invitation link, thanks for your support!
 # https://ai.zhheo.com/console/login?InviteID=85041330
 [post_chat]
@@ -1558,32 +1558,32 @@ c4u = false
 
 # Content adapters config for component projects
 # https://github.com/hugo-fixit/component-projects
-[projectsAdapters]
+[projects_adapters]
 enable = true
 # Whether to show only public repos
-onlyPublic = true
+only_public = true
 # Default categories and collections
 categories = [ "README" ]
 collections = []
 # Ignore repos in the ignore list
-ignoreList = [
+ignore_list = [
   "hugo-fixit/.tools",
   "hugo-fixit/component-skeleton",
 ]
 
-[projectsAdapters.params]
-hiddenFromHomePage = true
-hiddenFromFeed = true
+[projects_adapters.params]
+hidden_from_home_page = true
+hidden_from_feed = true
 
-[projectsAdapters.params.postChat]
-upLoadWeb = true
+[projects_adapters.params.post_chat]
+upload_web = true
 
-[projectsAdapters.params.postSummary]
+[projects_adapters.params.post_summary]
 enable = true
 
 # Auto translation configuration
 # See: https://github.com/xnx3/translate/
-[autoTranslate]
+[auto_translate]
 enable = true
 # The translation service provider, ['client.edge', 'translate.service']
 # See: https://translate.zvo.cn/43086.html
@@ -1605,22 +1605,22 @@ languages = [
   # 'arabic', # 阿拉伯语阅读顺序体验不佳
 ]
 # Element IDs that needs to be ignored for translation, e.g. ["comment", ...]
-ignoreID = []
+ignore_id = []
 # Class names that need to be ignored for translation, e.g. ["post-category", ...]
-ignoreClass = []
+ignore_class = []
 # Tag names that need to be ignored for translation, e.g. ["title", ...]
-ignoreTag = []
+ignore_tag = []
 # Selectors that need to be ignored for translation, e.g. ["[data-adapters='projects'] .single-subtitle", ...]
-ignoreSelector = []
+ignore_selector = []
 # Texts that need to be ignored for translation, e.g. ["FixIt", "Lruihao", ...]
-ignoreText = [
+ignore_text = [
   'https://github.com/hugo-fixit',
   'https://fixit.lruihao.cn',
   'CSE',
   'Cell+',
 ]
 # Whether to detect the local language
-detectLocalLanguage = true
+detect_local_language = true
 # translate.js CDN
 cdn = ""
 # Whether to enable Enterprise-level translation channel

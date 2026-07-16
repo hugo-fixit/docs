@@ -18,11 +18,11 @@ path = "github.com/hugo-fixit/cmpt-santa-hat"
 version = "latest"
 
 [[imports]]
-path = "github.com/hugo-fixit/cmpt-translate"
+path = "github.com/hugo-fixit/cmpt-translate/v2"
 version = "latest"
 
 [[imports]]
-path = "github.com/hugo-fixit/component-projects"
+path = "github.com/hugo-fixit/component-projects/v2"
 version = "latest"
 
 [[imports]]
@@ -34,7 +34,7 @@ path = "github.com/hugo-fixit/shortcode-caniuse"
 version = "latest"
 
 [[imports]]
-path = "github.com/hugo-fixit/shortcode-docs-bookmark"
+path = "github.com/hugo-fixit/shortcode-docs-bookmark/v2"
 version = "latest"
 
 [[imports]]
@@ -42,7 +42,7 @@ path = "github.com/hugo-fixit/shortcode-missing-translation"
 version = "latest"
 
 [[imports]]
-path = "github.com/hugo-fixit/shortcode-rewards"
+path = "github.com/hugo-fixit/shortcode-rewards/v2"
 version = "latest"
 
 [hugoVersion]
