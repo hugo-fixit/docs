@@ -81,8 +81,11 @@ main() {
   echo "Building the site..."
   hugo_args=()
   [[ "${VERCEL_ENV:-}" == "preview" ]] && hugo_args+=(--buildDrafts --baseURL "https://${VERCEL_URL}")
-
   pnpm build "${hugo_args[@]}"
+
+  # Post-process encrypted content and verify encryption output.
+  npx @hugo-fixit/post-encrypt
+  npx @hugo-fixit/post-encrypt --verify
 }
 
 main "$@"
