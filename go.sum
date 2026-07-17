@@ -1,7 +1,5 @@
-github.com/hugo-fixit/FixIt v0.4.6-0.20260717125013-5811b21f02a4 h1:2Q9ABRlGA+mXgpeU3XuWxblhdUNuPWaTQOL9CZr+b3A=
-github.com/hugo-fixit/FixIt v0.4.6-0.20260717125013-5811b21f02a4/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
-github.com/hugo-fixit/FixIt v0.4.6-0.20260717173156-3326ea4515fc h1:aVLPwwI4SzQx1jPQ2+iFAO/XUYLupeTncOk8K5DqsfY=
-github.com/hugo-fixit/FixIt v0.4.6-0.20260717173156-3326ea4515fc/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
+github.com/hugo-fixit/FixIt v0.4.6-0.20260717184817-b274b1b33b34 h1:AETd+ChnUWYGW2EJsTGDjbQWUFMxzi6RtBcrenthbic=
+github.com/hugo-fixit/FixIt v0.4.6-0.20260717184817-b274b1b33b34/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
 github.com/hugo-fixit/cmpt-santa-hat v1.1.0 h1:QNTwFFLLl5yu2vx04j+kjA0d8E14kjojwWbsNM+y0HA=
 github.com/hugo-fixit/cmpt-santa-hat v1.1.0/go.mod h1:h25a6xmOj1CFIIpSaKeJIWcTtoQyVR39Uu47NDiZLb0=
 github.com/hugo-fixit/cmpt-translate/v2 v2.0.0 h1:C8KsmFtdAVjQfN2LhaDTnJ0PQTpUDhK3kYxV5vRaCvo=
