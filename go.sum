@@ -1,11 +1,11 @@
-github.com/hugo-fixit/FixIt v0.4.6-0.20260716075125-54fb90388f9a h1:VMFfQ3YSoXPYy/PX4KTs52fsog0JZFxn2BRIiXe+vOs=
-github.com/hugo-fixit/FixIt v0.4.6-0.20260716075125-54fb90388f9a/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
+github.com/hugo-fixit/FixIt v0.4.6-0.20260717125013-5811b21f02a4 h1:2Q9ABRlGA+mXgpeU3XuWxblhdUNuPWaTQOL9CZr+b3A=
+github.com/hugo-fixit/FixIt v0.4.6-0.20260717125013-5811b21f02a4/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
 github.com/hugo-fixit/cmpt-santa-hat v1.1.0 h1:QNTwFFLLl5yu2vx04j+kjA0d8E14kjojwWbsNM+y0HA=
 github.com/hugo-fixit/cmpt-santa-hat v1.1.0/go.mod h1:h25a6xmOj1CFIIpSaKeJIWcTtoQyVR39Uu47NDiZLb0=
 github.com/hugo-fixit/cmpt-translate/v2 v2.0.0 h1:C8KsmFtdAVjQfN2LhaDTnJ0PQTpUDhK3kYxV5vRaCvo=
 github.com/hugo-fixit/cmpt-translate/v2 v2.0.0/go.mod h1:VOwEMO8XblbrwVF0qfGXMMRwRip3kuorPTzCImUik48=
-github.com/hugo-fixit/component-projects/v2 v2.1.0 h1:NmzjQIrvZmbqla4m2ECKwXU3WPfh3e643djo+DFeOi8=
-github.com/hugo-fixit/component-projects/v2 v2.1.0/go.mod h1:tqZ7Omn228h3r+wFF5Ko6fFUWuimhY1XRy+PBZQbT0w=
+github.com/hugo-fixit/component-projects/v2 v2.1.1 h1:etu4OOfz+lcNXzHrLbDfAeq7nqeU8dgDG1w+agOo4VU=
+github.com/hugo-fixit/component-projects/v2 v2.1.1/go.mod h1:tqZ7Omn228h3r+wFF5Ko6fFUWuimhY1XRy+PBZQbT0w=
 github.com/hugo-fixit/shortcode-asciinema v1.1.0 h1:nli2H/BeufC/LgT+Md35NFLfSYoNGs0z0yhCkH5cbvU=
 github.com/hugo-fixit/shortcode-asciinema v1.1.0/go.mod h1:xSMC2YHX8KCM8EPPmn7PA6Cwg6X9UGsV8gA7+1WBPTw=
 github.com/hugo-fixit/shortcode-caniuse v1.6.0 h1:h29uXKgFuMpnJnDwc7wn6jNkXUZWawi21fKs22LYJ2w=

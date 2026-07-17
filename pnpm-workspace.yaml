@@ -1,6 +1,9 @@
+minimumReleaseAgeExclude:
+  - markdownlint-cli2@0.23.1
 shellEmulator: true
 
 trustPolicy: no-downgrade
-
-onlyBuiltDependencies:
-  - simple-git-hooks
+trustPolicyIgnoreAfter: 43200 # 30 days in minutes
+allowBuilds:
+  core-js: false
+  simple-git-hooks: true

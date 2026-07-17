@@ -12,7 +12,7 @@
 - [Hugo](https://gohugo.io/installation/): >= 0.161.0 (extended version)
 - [Go](https://go.dev/dl/)
 - [Dart Sass](https://sass-lang.com/install/)
-- [Node.js](https://nodejs.org/): >= 22.0.0
+- [Node.js](https://nodejs.org/): >= 24.0.0
 
 ## Contributing
 
