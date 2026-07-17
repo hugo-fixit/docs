@@ -1568,6 +1568,7 @@ collections = []
 # Ignore repos in the ignore list
 ignore_list = [
   "hugo-fixit/.tools",
+  "hugo-fixit/skills",
   "hugo-fixit/component-skeleton",
 ]
 
