@@ -114,8 +114,8 @@ jobs:
                     --rawfile content /tmp/lang_content.txt \
                     --rawfile html_url /tmp/lang_html_url.txt \
                     '{ content: $content, html_url: ($html_url | gsub("\n"; "")) }' > /tmp/lang_readme.json || true
-                  jq -c --slurpfile lang /tmp/lang_readme.json --arg lang "$lang" \
-                    '. + {($lang): $lang[0]}' /tmp/readme.json > /tmp/readme_tmp.json && mv /tmp/readme_tmp.json /tmp/readme.json || true
+                  jq -c --slurpfile lang_data /tmp/lang_readme.json --arg lang "$lang" \
+                    '. + {($lang): $lang_data[0]}' /tmp/readme.json > /tmp/readme_tmp.json && mv /tmp/readme_tmp.json /tmp/readme.json || true
                   echo "  README.$lang.md found"
                 fi
               fi
