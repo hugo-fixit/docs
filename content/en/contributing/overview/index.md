@@ -7,7 +7,7 @@ categories:
 resources:
   - name: featured-image
     src: cover.webp
-pageStyle: wide
+page_style: wide
 related:
   enable: false
 reward:

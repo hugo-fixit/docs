@@ -7,7 +7,7 @@ subtitle: <https://github.com/hugo-fixit>
 sectionSlot: "如果你想开发自己的组件或者预览上面某些组件的效果，不妨看看下面的这些文章。"
 hidden_adapters: true
 layout: projects
-pageStyle: wide
+page_style: wide
 description: "Hugo FixIt 生态系统，包括：文档、主题组件、开发工具、第三方组件等。"
 keyword:
   - Hugo
@@ -16,8 +16,8 @@ keyword:
 resources:
   - name: featured-image
     src: images/components-cover.webp
-autoTranslate:
-  onlyLocalLang: false
+auto_translate:
+  only_local_lang: false
 cascade:
   params:
     type: posts

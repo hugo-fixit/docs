@@ -7,7 +7,7 @@ subtitle: <https://github.com/hugo-fixit>
 sectionSlot: If you want to develop your own components or preview the effects of some of the above components, you might as well take a look at the following articles.
 hidden_adapters: true
 layout: projects
-pageStyle: wide
+page_style: wide
 description: "The Hugo FixIt ecosystem includes: documentation, theme components, development tools, third-party components, etc."
 keyword:
   - Hugo
@@ -16,8 +16,8 @@ keyword:
 resources:
   - name: featured-image
     src: images/components-cover.webp
-autoTranslate:
-  onlyLocalLang: false
+auto_translate:
+  only_local_lang: false
 cascade:
   params:
     type: posts

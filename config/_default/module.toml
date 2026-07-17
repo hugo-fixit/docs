@@ -23,7 +23,7 @@ version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/component-projects/v2"
-# version = "latest"
+version = "latest"
 
 [[imports]]
 path = "github.com/hugo-fixit/shortcode-asciinema"
