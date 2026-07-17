@@ -38,17 +38,18 @@ Based on the API Keys obtained in the previous step, to configure the algolia se
 [params.search]
 enable = true
 type = "algolia"
-contentLength = 4000
+content_length = 4000
 placeholder = ""
-maxResultLength = 10
-snippetLength = 30
-highlightTag = "em"
-absoluteURL = false
+max_result_length = 10
+snippet_length = 30
+highlight_tag = "em"
+absolute_url = false
+anchorify = true
 
 [params.search.algolia]
 index = "index.en" # algolia index name
-appID = "" # algolia Application ID
-searchKey = "" # algolia Search-Only API Key
+app_id = "" # algolia Application ID
+search_key = "" # algolia Search-Only API Key
 ```
 
 In order to generate `search.json` for searching, add `search` output file type to the `home` of the `outputs` part in your site configuration.
@@ -94,9 +95,10 @@ npm install atomic-algolia
 
 Add the following content to the `package.json` file.
 
-```json
+```json {expand_depth=2}
 {
   "scripts": {
+    "build": "hugo --gc --minify --logLevel info",
     "algolia": "atomic-algolia"
   }
 }
@@ -122,15 +124,17 @@ One more thing, you can automate the process of uploading `search.json` to algol
 1. Add a `ALGOLIA_ADMIN_KEY` [secret](https://docs.github.com/en/actions/reference/encrypted-secrets) to your GitHub repository, the value is your algolia Admin API Key.
 2. Add a `.github/workflows/algolia-atomic.yml` file to your GitHub repository, the content is as follows.
 
-    ```yaml {title="algolia-atomic.yml"}
+    ```yaml {name="algolia-atomic.yml", downloadable=true}
     name: Update Algolia Search Index
 
     on:
       push:
         branches:
-          - master
+          - main
         paths:
-          - content
+          - 'config/**'
+          - 'content/**'
+          - 'data/**'
       workflow_dispatch:
 
     jobs:
@@ -138,23 +142,22 @@ One more thing, you can automate the process of uploading `search.json` to algol
         runs-on: ubuntu-latest
         steps:
           - name: Check out repository code
-            uses: actions/checkout@v4
+            uses: actions/checkout@v7
             with:
               submodules: recursive # Fetch Hugo themes (true OR recursive)
               fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-
           - name: Setup Hugo
-            uses: peaceiris/actions-hugo@v2
+            uses: peaceiris/actions-hugo@v3
             with:
               # use the environment variable HUGO_VERSION as the hugo version, if not set, use `latest`.
               hugo-version: ${{ vars.HUGO_VERSION || 'latest' }}
               extended: true
-
-          - name: Build
-            run: |
-              npm install
-              npm run build
-
+          - uses: dw-labs-org/dart-sass-gha@v1
+          - uses: actions/setup-node@v6
+          - name: Install dependencies
+            run: npm ci
+          - name: Build Site
+            run: npm run build
           - name: Update Algolia Index (en)
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY # algolia Application ID
@@ -163,7 +166,6 @@ One more thing, you can automate the process of uploading `search.json` to algol
               ALGOLIA_INDEX_FILE: ./public/search.json # local search.json file path
             run: |
               npm run algolia
-
           - name: Update Algolia Index (zh-cn)
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY
@@ -174,6 +176,6 @@ One more thing, you can automate the process of uploading `search.json` to algol
               npm run algolia
     ```
 
-3. When you push your site to the `master` branch of the GitHub repository, GitHub Actions will automatically execute the `hugo` command to generate the site, and upload the `search.json` to algolia.
+3. When you push your site to the `main` branch of the GitHub repository, GitHub Actions will automatically execute the `hugo` command to generate the site, and upload the `search.json` to algolia.
 
 🎉 Now, everything is ready!

@@ -38,17 +38,18 @@ description: 在 FixIt 主题中使用 algolia 的技巧。
 [params.search]
 enable = true
 type = "algolia"
-contentLength = 4000
+content_length = 4000
 placeholder = ""
-maxResultLength = 10
-snippetLength = 30
-highlightTag = "em"
-absoluteURL = false
+max_result_length = 10
+snippet_length = 30
+highlight_tag = "em"
+absolute_url = false
+anchorify = true
 
 [params.search.algolia]
 index = "index.zh-cn" # algolia 索引名称
-appID = "" # algolia Application ID
-searchKey = "" # algolia Search-Only API Key
+app_id = "" # algolia Application ID
+search_key = "" # algolia Search-Only API Key
 ```
 
 为了生成搜索功能所需要的 `search.json`, 请在你的站点配置中添加 `search` 输出文件类型到 `outputs` 部分的 `home` 字段中。
@@ -91,9 +92,10 @@ npm install atomic-algolia
 
 在 `package.json` 文件中添加以下内容。
 
-```json
+```json {expand_depth=2}
 {
   "scripts": {
+    "build": "hugo --gc --minify --logLevel info",
     "algolia": "atomic-algolia"
   }
 }
@@ -119,15 +121,17 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
 1. 在你的 GitHub 仓库中添加一个 `ALGOLIA_ADMIN_KEY` 的 [secret](https://docs.github.com/en/actions/reference/encrypted-secrets)，值为 algolia Admin API Key。
 2. 在你的 GitHub 仓库中添加一个 `.github/workflows/algolia-atomic.yml` 文件，内容如下。
 
-    ```yaml {title="algolia-atomic.yml"}
+    ```yaml {name="algolia-atomic.yml", downloadable=true}
     name: Update Algolia Search Index
 
     on:
       push:
         branches:
-          - master
+          - main
         paths:
-          - content
+          - 'config/**'
+          - 'content/**'
+          - 'data/**'
       workflow_dispatch:
 
     jobs:
@@ -135,23 +139,22 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
         runs-on: ubuntu-latest
         steps:
           - name: Check out repository code
-            uses: actions/checkout@v4
+            uses: actions/checkout@v7
             with:
               submodules: recursive # Fetch Hugo themes (true OR recursive)
               fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-
           - name: Setup Hugo
-            uses: peaceiris/actions-hugo@v2
+            uses: peaceiris/actions-hugo@v3
             with:
               # use the environment variable HUGO_VERSION as the hugo version, if not set, use `latest`.
               hugo-version: ${{ vars.HUGO_VERSION || 'latest' }}
               extended: true
-
-          - name: Build
-            run: |
-              npm install
-              npm run build
-
+          - uses: dw-labs-org/dart-sass-gha@v1
+          - uses: actions/setup-node@v6
+          - name: Install dependencies
+            run: npm ci
+          - name: Build Site
+            run: npm run build
           - name: Update Algolia Index (en)
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY # algolia Application ID
@@ -160,7 +163,6 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
               ALGOLIA_INDEX_FILE: ./public/search.json # local search.json file path
             run: |
               npm run algolia
-
           - name: Update Algolia Index (zh-cn)
             env:
               ALGOLIA_APP_ID: YKOxxxxLUY
@@ -171,6 +173,6 @@ One more thing，你可以使用 [GitHub Actions](https://github.com/features/ac
               npm run algolia
     ```
 
-3. 当你将你的站点推送到 GitHub 仓库的 `master` 分支时，GitHub Actions 将自动执行 `hugo` 命令生成站点，并将 `search.json` 上传到 algolia。
+3. 当你将你的站点推送到 GitHub 仓库的 `main` 分支时，GitHub Actions 将自动执行 `hugo` 命令生成站点，并将 `search.json` 上传到 algolia。
 
 🎉 现在，一切准备就绪了！
