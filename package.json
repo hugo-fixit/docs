@@ -21,7 +21,7 @@
     "hugo-blog"
   ],
   "engines": {
-    "node": ">=20.17"
+    "node": ">=24"
   },
   "scripts": {
     "algolia": "atomic-algolia",
