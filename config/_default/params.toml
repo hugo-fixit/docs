@@ -1179,7 +1179,6 @@ loop = false
 ban = "fa-solid fa-ban"
 sponsor = "fa-solid fa-hand-holding-usd"
 
-# ban = "fa-solid fa-ban"
 # Task lists custom configuration.
 # See: [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists).
 # syntax: `<sign> = <icon>`

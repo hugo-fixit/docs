@@ -1,7 +1,16 @@
-// ==============================
-// Custom style
-// 自定义样式
-// ==============================
+// ==========================================================================
+/// Custom Styles
+///
+/// Copy this file to your project's assets/scss/ directory
+/// and rename it to custom.scss to activate it.
+/// See: https://fixit.lruihao.cn/docs/advanced/#style-customization
+/// ==========================================================================
+@use "core/mixins" as *;
+
+// Custom Admonitions
+.admonition {
+  @include admonition(ban, #ff3d00, rgba(255, 61, 0, 0.1));
+}
 
 .home.posts {
   .fixit-docs-navigation {
