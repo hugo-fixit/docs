@@ -136,10 +136,10 @@
   url: https://songfei.org
   description: 软件开发工程师、业余无线电爱好者。
 
-# - nickname: 自游人
-#   avatar: https://17you.com/icons/web-app-manifest-512x512.png
-#   url: https://17you.com/
-#   description: 旅行和写作
+- nickname: 自游人
+  avatar: https://17you.com/icons/web-app-manifest-512x512.png
+  url: https://17you.com/
+  description: 旅行和写作
 
 - nickname: Yao Chaohao
   avatar: https://crisyao.github.io/me.jpg
