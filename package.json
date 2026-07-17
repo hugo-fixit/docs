@@ -28,7 +28,7 @@
     "lint": "eslint && autocorrect content --lint && markdownlint-cli2 \"content/**/*.md\"",
     "lint:fix": "eslint --fix && autocorrect content --fix && markdownlint-cli2 \"content/**/*.md\" --fix",
     "prepare": "simple-git-hooks",
-    "build": "hugo --gc --minify --logLevel info",
+    "build": "hugo --gc --minify --logLevel info --templateMetrics",
     "postbuild": "post-encrypt && post-encrypt --verify",
     "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory --noHTTPCache -O",
     "server:production": "npm run server -- -e production",
