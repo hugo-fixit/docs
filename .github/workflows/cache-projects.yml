@@ -26,18 +26,31 @@ jobs:
           echo "Data files found:"
           ls -la data/projects* 2>/dev/null || echo "  No data/projects* files"
           repos=""
+          langs=""
           for f in data/projects*.yml data/projects*.yaml; do
             [ -f "$f" ] || continue
             echo "Processing: $f"
-            # Use explicit array iteration for better compatibility
             extracted=$(yq '[.[].repos[]] | unique | .[]' "$f" 2>&1) || true
             echo "  Extracted: $extracted"
             repos="$repos"$'\n'"$extracted"
+            # Extract language code from filename: projects.{lang}.yml -> {lang}
+            basename="${f##*/}"
+            name="${basename%.*}"
+            lang="${name#projects}"
+            if [ -n "$lang" ] && [ "$lang" != "$name" ]; then
+              lang="${lang#.}"
+              echo "  Language: $lang"
+              langs="$langs"$'\n'"$lang"
+            fi
           done
           repos=$(echo "$repos" | sort -u | grep -v '^$' || true)
+          langs=$(echo "$langs" | sort -u | grep -v '^$' || true)
           echo "$repos" > /tmp/repos.txt
+          echo "$langs" > /tmp/langs.txt
           echo "Found repos:"
           cat /tmp/repos.txt
+          echo "Found languages:"
+          cat /tmp/langs.txt
           if [ -z "$repos" ]; then
             echo "No repos found, skipping cache update"
           fi
@@ -49,26 +62,19 @@ jobs:
           cache_file="data/caches/projects.json"
           mkdir -p data/caches
 
-          # Load existing cache if present
-          if [ -f "$cache_file" ]; then
-            existing=$(cat "$cache_file")
-          else
-            existing="{}"
-          fi
-
-          result="{}"
+          echo "{}" > /tmp/result.json
           cached_count=0
           while IFS= read -r repo; do
             [ -z "$repo" ] && continue
             echo "Fetching: $repo"
 
             # Get repo info
-            repo_json=$(gh api "repos/$repo" 2>/dev/null) || {
+            gh api "repos/$repo" > /tmp/repo.json 2>/dev/null || {
               echo "  Failed to fetch repo info, skipping"
               continue
             }
 
-            # Get README content
+            # Get default README content
             readme_content=""
             readme_html_url=""
             readme_json=$(gh api "repos/$repo/readme" 2>/dev/null) || true
@@ -82,49 +88,74 @@ jobs:
               continue
             fi
 
-            echo "  README length: ${#readme_content} chars"
+            echo "  Default README length: ${#readme_content} chars"
 
-            # Write readme content to temp file to avoid shell escaping issues
+            # Write default readme to temp file
             echo "$readme_content" > /tmp/readme_content.txt
             printf '%s' "$readme_html_url" > /tmp/readme_html_url.txt
 
-            # Merge repo info with readme
-            entry=$(echo "$repo_json" | jq -c \
-              --rawfile readme_content /tmp/readme_content.txt \
-              --rawfile readme_html_url /tmp/readme_html_url.txt \
-              '. + {
-                readme: {
-                  content: $readme_content,
-                  html_url: ($readme_html_url | gsub("\n"; ""))
-                }
-              }') || true
+            # Build readme object
+            jq -n \
+              --rawfile content /tmp/readme_content.txt \
+              --rawfile html_url /tmp/readme_html_url.txt \
+              '{ content: $content, html_url: ($html_url | gsub("\n"; "")) }' > /tmp/readme.json || true
+
+            # Fetch localized READMEs
+            while IFS= read -r lang; do
+              [ -z "$lang" ] && continue
+              lang_readme_json=$(gh api "repos/$repo/contents/README.$lang.md" 2>/dev/null) || true
+              if [ -n "$lang_readme_json" ]; then
+                lang_content=$(echo "$lang_readme_json" | jq -r '.content // empty' | base64 -d 2>/dev/null) || true
+                lang_html_url=$(echo "$lang_readme_json" | jq -r '.html_url // empty') || true
+                if [ -n "$lang_content" ]; then
+                  echo "$lang_content" > /tmp/lang_content.txt
+                  printf '%s' "$lang_html_url" > /tmp/lang_html_url.txt
+                  jq -n \
+                    --rawfile content /tmp/lang_content.txt \
+                    --rawfile html_url /tmp/lang_html_url.txt \
+                    '{ content: $content, html_url: ($html_url | gsub("\n"; "")) }' > /tmp/lang_readme.json || true
+                  jq -c --slurpfile lang /tmp/lang_readme.json --arg lang "$lang" \
+                    '. + {($lang): $lang[0]}' /tmp/readme.json > /tmp/readme_tmp.json && mv /tmp/readme_tmp.json /tmp/readme.json || true
+                  echo "  README.$lang.md found"
+                fi
+              fi
+            done < /tmp/langs.txt
+
+            # Extract only the fields used by templates, merge with readme
+            entry=$(jq -c \
+              --slurpfile readme /tmp/readme.json \
+              '{
+                created_at, updated_at, full_name, name, html_url, homepage,
+                description, default_branch, visibility, is_template, archived,
+                language, topics, stargazers_count, forks_count,
+                owner: { login: .owner.login, html_url: .owner.html_url, avatar_url: .owner.avatar_url },
+                readme: $readme[0]
+              } + (if .parent then { parent: { html_url: .parent.html_url, full_name: .parent.full_name } } else {} end)
+              ' /tmp/repo.json) 2>&1 || entry=""
 
             if [ -z "$entry" ] || [ "$entry" = "null" ]; then
-              echo "  Failed to build entry, skipping"
+              echo "  Failed to build entry: $entry"
               continue
             fi
 
             # Add to result, keyed by full_name
-            full_name=$(echo "$repo_json" | jq -r '.full_name') || true
-            # Write entry to temp file to avoid shell escaping
+            full_name=$(echo "$entry" | jq -r '.full_name')
             echo "$entry" > /tmp/entry.json
-            result=$(echo "$result" | jq -c --arg key "$full_name" --slurpfile val /tmp/entry.json '. + {($key): $val[0]}') || true
+            jq -c --arg key "$full_name" --slurpfile val /tmp/entry.json \
+              '. + {($key): $val[0]}' /tmp/result.json > /tmp/result_tmp.json && mv /tmp/result_tmp.json /tmp/result.json || true
             cached_count=$((cached_count + 1))
             echo "  Cached: $full_name"
           done < /tmp/repos.txt
 
           echo "Total repos cached: $cached_count"
-          echo "Result keys: $(echo "$result" | jq -r 'keys | length' 2>/dev/null || echo 0)"
+          final_keys=$(jq -r 'keys | length' /tmp/result.json 2>/dev/null || echo 0)
+          echo "Result keys: $final_keys"
 
-          # Merge with existing cache (keep entries not in current list)
-          echo "$result" > /tmp/fresh.json
-          echo "$existing" > /tmp/existing.json
-          merged=$(jq -n --slurpfile existing /tmp/existing.json --slurpfile fresh /tmp/fresh.json '$existing[0] * $fresh[0]') || true
-          if [ -n "$merged" ] && [ "$merged" != "null" ]; then
-            echo "$merged" | jq '.' > "$cache_file"
-            echo "Cache updated: $cache_file ($(echo "$merged" | jq 'keys | length') repos)"
+          if [ "$final_keys" -gt 0 ] 2>/dev/null; then
+            jq '.' /tmp/result.json > "$cache_file"
+            echo "Cache updated: $cache_file ($final_keys repos)"
           else
-            echo "Warning: merged result is empty, skipping write"
+            echo "No repos cached, skipping write"
           fi
 
       - name: Commit changes
