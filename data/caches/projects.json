@@ -171,7 +171,7 @@
   },
   "hugo-fixit/FixIt": {
     "created_at": "2021-12-16T03:35:27Z",
-    "updated_at": "2026-07-17T18:57:14Z",
+    "updated_at": "2026-07-17T19:26:38Z",
     "full_name": "hugo-fixit/FixIt",
     "name": "FixIt",
     "html_url": "https://github.com/hugo-fixit/FixIt",
@@ -193,7 +193,7 @@
       "pwa",
       "pwa-app"
     ],
-    "stargazers_count": 1114,
+    "stargazers_count": 1115,
     "forks_count": 134,
     "owner": {
       "login": "hugo-fixit",
@@ -473,7 +473,7 @@
   },
   "hugo-fixit/docs": {
     "created_at": "2022-07-23T12:17:06Z",
-    "updated_at": "2026-07-17T19:22:39Z",
+    "updated_at": "2026-07-17T19:23:48Z",
     "full_name": "hugo-fixit/docs",
     "name": "docs",
     "html_url": "https://github.com/hugo-fixit/docs",
