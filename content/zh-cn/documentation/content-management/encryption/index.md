@@ -34,7 +34,7 @@ collections:
 FixIt 主题提供两个层次的内容加密：
 
 - **模板处理**：基于 Hugo 模板语法的密码保护，内容以明文存储于构建产物中，不具备加密安全性。
-- **Post-encrypt (AES-256-GCM)**：构建后加密，使用 AES-256-GCM 和 PBKDF2 密钥派生（100,000 次迭代）。为敏感内容提供强加密安全性。
+- **fixit-encrypt (AES-256-GCM)**：构建后加密，使用 AES-256-GCM 和 PBKDF2 密钥派生（100,000 次迭代）。为敏感内容提供强加密安全性。
 
 > [!danger]~
 > “最简单的密码，就足以防住 90% 的人！”
@@ -127,14 +127,33 @@ Or
 {{% /fixit-encryptor %}}
 {{% /fixit-encryptor %}}
 
-## Post-encrypt 工具
+## fixit-encrypt 工具
 
 {{< version 1.0.0 >}}
 
 为了增强安全性，FixIt 提供了一个独立的加密工具，在 Hugo 构建后使用 AES-256-GCM 和 PBKDF2 密钥派生来加密内容。这比基于模板的方式提供了更强的加密安全性。
 
+推荐安装为开发依赖并配置 scripts：
+
 ```bash
-npx @hugo-fixit/post-encrypt
+npm install -D @hugo-fixit/encrypt
 ```
 
-详见 [post-encrypt 文档](https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt)。
+然后在 `package.json` 中配置：
+
+```json
+{
+  "scripts": {
+    "build": "hugo --gc --minify --logLevel info",
+    "postbuild": "fixit-encrypt && fixit-encrypt --verify"
+  }
+}
+```
+
+也可以直接通过 npx 运行：
+
+```bash
+npx @hugo-fixit/encrypt
+```
+
+详见 [fixit-encrypt 文档](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt)。

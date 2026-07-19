@@ -46,7 +46,7 @@ Go is required to:
 Node.js is required to:
 
 - Use the FixIt CLI
-- Use the [`@hugo-fixit/post-encrypt`][post-encrypt] script for content encryption
+- Use the [`@hugo-fixit/encrypt`][encrypt] script for content encryption
 - Some Automation Tools, e.g. [atomic-algolia]({{< relref path="/guides/algolia-atomic" >}})
 
 Please refer to the relevant documentation for installation instructions:
@@ -220,4 +220,4 @@ The supported template presets are:
 [fixit-cli]: https://github.com/hugo-fixit/fixit-cli
 [git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
-[post-encrypt]: https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt
+[encrypt]: https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt

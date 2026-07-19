@@ -34,7 +34,7 @@ Find out how to encrypt content in FixIt theme.
 FixIt theme provides two levels of content encryption:
 
 - **Template processing**: Password protection based on Hugo template syntax. Content is stored in plaintext in the build output, offering no real encryption security.
-- **Post-encrypt (AES-256-GCM)**: Build-time encryption using AES-256-GCM with PBKDF2 key derivation (100,000 iterations). Provides strong cryptographic security for sensitive content.
+- **fixit-encrypt (AES-256-GCM)**: Build-time encryption using AES-256-GCM with PBKDF2 key derivation (100,000 iterations). Provides strong cryptographic security for sensitive content.
 
 > [!danger]~
 > "The simplest password is enough to prevent 90% of people!"
@@ -127,14 +127,33 @@ The rendered output looks like this:
 {{% /fixit-encryptor %}}
 {{% /fixit-encryptor %}}
 
-## Post-encrypt Tool
+## fixit-encrypt Tool
 
 {{< version 1.0.0 >}}
 
-For enhanced security, FixIt provides a standalone [post-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt) tool that encrypts content at build time using AES-256-GCM with PBKDF2 key derivation. This provides significantly stronger encryption than the template-based approach.
+For enhanced security, FixIt provides a standalone [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) tool that encrypts content at build time using AES-256-GCM with PBKDF2 key derivation. This provides significantly stronger encryption than the template-based approach.
+
+Recommended: install as a dev dependency and configure scripts:
 
 ```bash
-npx @hugo-fixit/post-encrypt
+npm install -D @hugo-fixit/encrypt
 ```
 
-See the [post-encrypt documentation](https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt) for more details.
+Then in your `package.json`:
+
+```json
+{
+  "scripts": {
+    "build": "hugo --gc --minify --logLevel info",
+    "postbuild": "fixit-encrypt && fixit-encrypt --verify"
+  }
+}
+```
+
+You can also run it directly:
+
+```bash
+npx @hugo-fixit/encrypt
+```
+
+See the [fixit-encrypt documentation](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) for more details.

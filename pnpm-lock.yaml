@@ -11,9 +11,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^9.1.0
         version: 9.1.0(@typescript-eslint/typescript-estree@8.64.0(typescript@6.0.3))(@typescript-eslint/utils@8.64.0(eslint@10.7.0)(typescript@6.0.3))(@vue/compiler-sfc@3.5.40)(eslint@10.7.0)(typescript@6.0.3)
-      '@hugo-fixit/post-encrypt':
-        specifier: ^0.2.0
-        version: 0.2.0
+      '@hugo-fixit/encrypt':
+        specifier: ^0.3.0
+        version: 0.3.0
       atomic-algolia:
         specifier: ^0.3.19
         version: 0.3.19
@@ -706,8 +706,8 @@ packages:
     resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@hugo-fixit/post-encrypt@0.2.0':
-    resolution: {integrity: sha512-QkcTtb/12yJIUNBuQDnq8EPos6747hdlJ3xp7l3hHSx6GoxUUDgj5V5qZPcyWt8CxFHPUPVFX7VFameWou30yw==}
+  '@hugo-fixit/encrypt@0.3.0':
+    resolution: {integrity: sha512-FYKpcHOtCjh4xVIFnLRH7/w3HPYa069brW/WGRA8jeZhXJ8aV6GpkuYrynhJ7AkgwShsHLB8upQAbwl2S/3VTw==}
     hasBin: true
 
   '@humanfs/core@0.19.2':
@@ -3291,7 +3291,7 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@hugo-fixit/post-encrypt@0.2.0':
+  '@hugo-fixit/encrypt@0.3.0':
     dependencies:
       consola: 3.4.2
 

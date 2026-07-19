@@ -1,5 +1,6 @@
 minimumReleaseAgeExclude:
   - markdownlint-cli2@0.23.1
+  - '@hugo-fixit/encrypt@0.3.0'
 shellEmulator: true
 
 trustPolicy: no-downgrade

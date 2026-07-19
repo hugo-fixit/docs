@@ -84,8 +84,8 @@ main() {
   pnpm build "${hugo_args[@]}"
 
   # Post-process encrypted content and verify encryption output.
-  npx @hugo-fixit/post-encrypt
-  npx @hugo-fixit/post-encrypt --verify
+  npx @hugo-fixit/encrypt
+  npx @hugo-fixit/encrypt --verify
 }
 
 main "$@"

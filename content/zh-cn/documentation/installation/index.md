@@ -45,7 +45,7 @@ Go 用于：
 
 Node.js 用于：
 
-- 使用 [`@hugo-fixit/post-encrypt`][post-encrypt] 脚本进行内容加密
+- 使用 [`@hugo-fixit/encrypt`][encrypt] 脚本进行内容加密
 - 使用 FixIt CLI
 - 使用一些自动化工具，例如 [atomic-algolia]({{< relref path="/guides/algolia-atomic" >}})
 
@@ -220,4 +220,4 @@ FixIt 提供了一个[官方 CLI][fixit-cli]，用于快速搭建 Hugo FixIt 站
 [fixit-cli]: https://github.com/hugo-fixit/fixit-cli
 [git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [hugo-modules]: https://gohugo.io/hugo-modules/
-[post-encrypt]: https://github.com/hugo-fixit/FixIt/tree/main/packages/post-encrypt
+[encrypt]: https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt

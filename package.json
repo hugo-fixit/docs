@@ -29,7 +29,7 @@
     "lint:fix": "eslint --fix && autocorrect content --fix && markdownlint-cli2 \"content/**/*.md\" --fix",
     "prepare": "simple-git-hooks",
     "build": "hugo --gc --minify --logLevel info --templateMetrics",
-    "postbuild": "post-encrypt && post-encrypt --verify",
+    "postbuild": "fixit-encrypt && fixit-encrypt --verify",
     "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory --noHTTPCache -O",
     "server:production": "npm run server -- -e production",
     "server:development": "cross-env HUGO_MODULE_WORKSPACE=hugo.work npm run server -- --ignoreVendorPaths \"**\"",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.1.0",
-    "@hugo-fixit/post-encrypt": "^0.2.0",
+    "@hugo-fixit/encrypt": "^0.3.0",
     "atomic-algolia": "^0.3.19",
     "autocorrect-node": "^2.14.0",
     "cross-env": "^10.1.0",
