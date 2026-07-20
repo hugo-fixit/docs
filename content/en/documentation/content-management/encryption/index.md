@@ -145,7 +145,7 @@ Then in your `package.json`:
 {
   "scripts": {
     "build": "hugo --gc --minify --logLevel info",
-    "postbuild": "fixit-encrypt && fixit-encrypt --verify"
+    "postbuild": "fixit-encrypt"
   }
 }
 ```

@@ -29,7 +29,7 @@
     "lint:fix": "eslint --fix && autocorrect content --fix && markdownlint-cli2 \"content/**/*.md\" --fix",
     "prepare": "simple-git-hooks",
     "build": "hugo --gc --minify --logLevel info --templateMetrics",
-    "postbuild": "fixit-encrypt && fixit-encrypt --verify",
+    "postbuild": "fixit-encrypt",
     "server": "hugo server -D --disableFastRender --navigateToChanged --ignoreCache --renderToMemory --noHTTPCache -O",
     "server:production": "npm run server -- -e production",
     "server:development": "cross-env HUGO_MODULE_WORKSPACE=hugo.work npm run server -- --ignoreVendorPaths \"**\"",

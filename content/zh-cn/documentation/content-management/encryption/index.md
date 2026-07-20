@@ -145,7 +145,7 @@ npm install -D @hugo-fixit/encrypt
 {
   "scripts": {
     "build": "hugo --gc --minify --logLevel info",
-    "postbuild": "fixit-encrypt && fixit-encrypt --verify"
+    "postbuild": "fixit-encrypt"
   }
 }
 ```
