@@ -3,10 +3,6 @@ title: Hugo FixIt Configuration Overview
 linkTitle: Configuration Overview
 shortTitle: Overview
 date: 2024-03-07T15:37:59+08:00
-aliases:
-  - /theme-documentation-basics/
-  - /documentation/basics/
-  - /documentation/getting-started/configuration/
 description: Find out how to configure your Hugo FixIt site.
 resources:
   - name: featured-image

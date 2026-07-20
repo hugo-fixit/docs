@@ -2,8 +2,6 @@
 title: Markdown 基本语法
 shortTitle: 基本语法
 date: 2021-12-18T16:15:22+08:00
-aliases:
-  - /zh-cn/basic-markdown-syntax/
 description: 这篇文章展示了基本的 Markdown 语法和格式。
 resources:
   - name: featured-image

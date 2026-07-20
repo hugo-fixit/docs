@@ -1,8 +1,6 @@
 ---
 title: Content Encryption
 date: 2023-02-24T22:32:41+08:00
-aliases:
-  - /theme-documentation-content-encryption/
 description: Find out how to encrypt content in FixIt theme.
 keywords:
   - Hugo Encryption

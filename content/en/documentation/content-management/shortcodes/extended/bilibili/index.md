@@ -3,8 +3,6 @@ title: Extended Shortcode - bilibili
 shortTitle: Bilibili
 linkTitle: Bilibili Shortcode
 date: 2023-02-24T22:52:50+08:00
-aliases:
-  - /extended-shortcode-bilibili/
 description: The bilibili shortcode embeds a responsive video player for bilibili videos.
 resources:
   - name: featured-image

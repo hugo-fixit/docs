@@ -2,8 +2,6 @@
 title: Built-in Shortcodes
 shortTitle: Built-in
 date: 2023-02-24T22:11:22+08:00
-aliases:
-  - /theme-documentation-built-in-shortcodes/
 description: Shortcodes are simple snippets inside your content files calling built-in or custom templates.
 resources:
   - name: featured-image

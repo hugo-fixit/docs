@@ -3,8 +3,6 @@ title: Extended Shortcode - music
 shortTitle: Music
 linkTitle: Music Shortcode
 date: 2023-02-24T22:50:50+08:00
-aliases:
-  - /extended-shortcode-music/
 description: The music shortcode embeds a responsive music player based on APlayer and MetingJS library.
 resources:
   - name: featured-image

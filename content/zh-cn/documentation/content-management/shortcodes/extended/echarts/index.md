@@ -3,8 +3,6 @@ title: 扩展 Shortcode - echarts
 shortTitle: Echarts
 linkTitle: Echarts Shortcode
 date: 2023-02-24T22:40:40+08:00
-aliases:
-  - /zh-cn/extended-shortcode-echarts/
 description: echarts shortcode 使用 ECharts 库提供数据可视化的功能。
 resources:
   - name: featured-image

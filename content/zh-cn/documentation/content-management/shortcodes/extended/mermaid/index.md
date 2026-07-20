@@ -3,8 +3,6 @@ title: 扩展 Shortcode - mermaid
 shortTitle: Mermaid
 linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
-aliases:
-  - /zh-cn/extended-shortcode-mermaid/
 description: mermaid shortcode 使用 Mermaid 库提供绘制图表和流程图的功能。
 resources:
   - name: featured-image

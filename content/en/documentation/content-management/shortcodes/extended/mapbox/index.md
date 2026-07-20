@@ -3,8 +3,6 @@ title: Extended Shortcode - mapbox
 shortTitle: Mapbox
 linkTitle: Mapbox Shortcode
 date: 2023-02-24T22:45:45+08:00
-aliases:
-  - /extended-shortcode-mapbox/
 description: The mapbox shortcode supports interactive maps in Hugo with Mapbox GL JS
   library.
 resources:

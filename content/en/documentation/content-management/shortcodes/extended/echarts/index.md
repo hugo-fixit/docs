@@ -3,8 +3,6 @@ title: Extended Shortcode - echarts
 shortTitle: Echarts
 linkTitle: Echarts Shortcode
 date: 2023-02-24T22:40:40+08:00
-aliases:
-  - /extended-shortcode-echarts/
 description: The echarts shortcode supports data visualization in Hugo with ECharts library.
 resources:
   - name: featured-image

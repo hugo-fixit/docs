@@ -3,10 +3,6 @@ title: Hugo FixIt 配置总览
 linkTitle: 配置总览
 shortTitle: 总览
 date: 2024-03-07T15:37:59+08:00
-aliases:
-  - /zh-cn/theme-documentation-basics/
-  - /zh-cn/documentation/basics/
-  - /zh-cn/documentation/getting-started/configuration/
 description: 了解如何配置你的 Hugo FixIt 站点。
 resources:
   - name: featured-image

@@ -2,8 +2,6 @@
 title: PWA 支持
 date: 2022-01-26T11:10:56+08:00
 reward: false
-aliases:
-  - /pwa-support/
 description: 在 FixIt 中设置 PWA 的指南。
 tags:
   - PWA

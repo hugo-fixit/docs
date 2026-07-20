@@ -1,8 +1,6 @@
 ---
 title: Ecosystem
 titleIcon: fa-solid fa-circle-nodes
-aliases:
-  - /components/
 subtitle: <https://github.com/hugo-fixit>
 sectionSlot: If you want to develop your own components or preview the effects of some of the above components, you might as well take a look at the following articles.
 hidden_adapters: true

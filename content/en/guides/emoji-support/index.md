@@ -2,8 +2,6 @@
 title: Emoji Support
 date: 2019-10-01T17:55:28+08:00
 reward: false
-aliases:
-  - /emoji-support/
 author:
   name: Dillon
   link: https://dillonzq.com

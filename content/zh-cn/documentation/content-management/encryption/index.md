@@ -1,8 +1,6 @@
 ---
 title: 内容加密
 date: 2023-02-24T22:32:41+08:00
-aliases:
-  - /zh-cn/theme-documentation-content-encryption/
 description: 了解如何在 FixIt 主题中加密内容。
 keywords:
   - Hugo 加密

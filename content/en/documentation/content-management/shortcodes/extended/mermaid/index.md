@@ -3,8 +3,6 @@ title: Extended Shortcode - mermaid
 shortTitle: Mermaid
 linkTitle: Mermaid Shortcode
 date: 2023-02-24T22:11:45+08:00
-aliases:
-  - /extended-shortcode-mermaid/
 description: The mermaid shortcode supports diagrams in Hugo with Mermaid library.
 resources:
   - name: featured-image
