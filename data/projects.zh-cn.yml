@@ -36,7 +36,7 @@
   categories:
     - FixIt Tools
   repos:
-    - hugo-fixit/skills
+    # - hugo-fixit/skills
     - hugo-fixit/fixit-cli
     - hugo-fixit/component-skeleton
     - hugo-fixit/librarybot

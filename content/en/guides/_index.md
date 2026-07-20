@@ -15,7 +15,7 @@ menu:
     parent: documentation
     name: Guides
     title: Related Guides
-    weight: 2
+    weight: 3
     params:
       icon: fa-regular fa-compass
 ---

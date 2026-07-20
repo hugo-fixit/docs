@@ -15,7 +15,7 @@ menu:
     parent: documentation
     name: References
     title: All References
-    weight: 3
+    weight: 2
     params:
       icon: fa-solid fa-microchip
 ---

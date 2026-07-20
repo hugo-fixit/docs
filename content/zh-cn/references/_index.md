@@ -14,7 +14,7 @@ menu:
     identifier: references
     parent: documentation
     name: API 参考
-    weight: 3
+    weight: 2
     params:
       icon: fa-solid fa-microchip
 ---

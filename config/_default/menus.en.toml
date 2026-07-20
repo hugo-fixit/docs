@@ -13,47 +13,7 @@ weight = 5
 
 [main.params]
 icon = "fa-solid fa-code-branch"
-
-[[main]]
-identifier = "archives"
-parent = "documentation"
-name = "Archives"
-url = "archives/"
-weight = 20
-
-[main.params]
-icon = "fa-solid fa-archive"
 divided = true
-
-[[main]]
-identifier = "categories"
-parent = "documentation"
-name = "Categories"
-url = "categories/"
-weight = 21
-
-[main.params]
-icon = "fa-solid fa-folder-tree"
-
-[[main]]
-identifier = "collections"
-parent = "documentation"
-name = "Collections"
-url = "collections/"
-weight = 22
-
-[main.params]
-icon = "fa-solid fa-layer-group"
-
-[[main]]
-identifier = "tags"
-parent = "documentation"
-name = "Tags"
-url = "tags/"
-weight = 23
-
-[main.params]
-icon = "fa-solid fa-tags"
 
 [[main]]
 identifier = "showcase"
@@ -72,6 +32,52 @@ weight = 40
 
 [main.params]
 icon = "fa-regular fa-comments"
+
+[[main]]
+identifier = "more"
+name = "More"
+url = ""
+weight = 50
+
+[[main]]
+identifier = "archives"
+parent = "more"
+name = "Archives"
+url = "archives/"
+weight = 20
+
+[main.params]
+icon = "fa-solid fa-archive"
+
+[[main]]
+identifier = "categories"
+parent = "more"
+name = "Categories"
+url = "categories/"
+weight = 21
+
+[main.params]
+icon = "fa-solid fa-folder-tree"
+
+[[main]]
+identifier = "collections"
+parent = "more"
+name = "Collections"
+url = "collections/"
+weight = 22
+
+[main.params]
+icon = "fa-solid fa-layer-group"
+
+[[main]]
+identifier = "tags"
+parent = "more"
+name = "Tags"
+url = "tags/"
+weight = 23
+
+[main.params]
+icon = "fa-solid fa-tags"
 
 [[main]]
 identifier = "github"

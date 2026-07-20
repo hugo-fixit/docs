@@ -14,7 +14,7 @@ menu:
     identifier: guides
     parent: documentation
     name: 相关教程
-    weight: 2
+    weight: 3
     params:
       icon: fa-regular fa-compass
 ---

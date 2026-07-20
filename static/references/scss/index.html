@@ -1,0 +1,1113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>@hugo-fixit/core - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="@hugo-fixit/core - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Hugo FixIt core theme component source files</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://fixit.lruihao.cn">@hugo-fixit/core - v1.0.0</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="prefix" data-type="variable"><a href="#undefined-variable-prefix">prefix</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="rootPrefix" data-type="variable"><a href="#undefined-variable-rootPrefix">rootPrefix</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="header-height" data-type="variable"><a href="#undefined-variable-header-height">header-height</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="admonition-color-map" data-type="variable"><a href="#undefined-variable-admonition-color-map">admonition-color-map</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="alert-color-map" data-type="variable"><a href="#undefined-variable-alert-color-map">alert-color-map</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="alert-color-map-dark" data-type="variable"><a href="#undefined-variable-alert-color-map-dark">alert-color-map-dark</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="chroma-lexers" data-type="variable"><a href="#undefined-variable-chroma-lexers">chroma-lexers</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="theme-colors" data-type="variable"><a href="#undefined-variable-theme-colors">theme-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoints" data-type="variable"><a href="#undefined-variable-breakpoints">breakpoints</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="theme-switch-animation-duration" data-type="variable"><a href="#undefined-variable-theme-switch-animation-duration">theme-switch-animation-duration</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="theme-switch-animation-easing" data-type="variable"><a href="#undefined-variable-theme-switch-animation-easing">theme-switch-animation-easing</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="z-indexes" data-type="variable"><a href="#undefined-variable-z-indexes">z-indexes</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="rgba" data-type="function"><a href="#undefined-function-rgba">rgba</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="var" data-type="function"><a href="#undefined-function-var">var</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="admonition" data-type="mixin"><a href="#undefined-mixin-admonition">admonition</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="bold-dark" data-type="mixin"><a href="#undefined-mixin-bold-dark">bold-dark</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="border-radius" data-type="mixin"><a href="#undefined-mixin-border-radius">border-radius</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="box-shadow" data-type="mixin"><a href="#undefined-mixin-box-shadow">box-shadow</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="overflow-wrap" data-type="mixin"><a href="#undefined-mixin-overflow-wrap">overflow-wrap</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="scroll-state-query" data-type="mixin"><a href="#undefined-mixin-scroll-state-query">scroll-state-query</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="focus-visible-ring" data-type="mixin"><a href="#undefined-mixin-focus-visible-ring">focus-visible-ring</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="inline-code" data-type="mixin"><a href="#undefined-mixin-inline-code">inline-code</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="link-guard-content" data-type="mixin"><a href="#undefined-mixin-link-guard-content">link-guard-content</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="link" data-type="mixin"><a href="#undefined-mixin-link">link</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="loading" data-type="mixin"><a href="#undefined-mixin-loading">loading</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="media" data-type="mixin"><a href="#undefined-mixin-media">media</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="page-style" data-type="mixin"><a href="#undefined-mixin-page-style">page-style</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="scrollbar-width" data-type="mixin"><a href="#undefined-mixin-scrollbar-width">scrollbar-width</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sticky-top-offset" data-type="mixin"><a href="#undefined-mixin-sticky-top-offset">sticky-top-offset</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="task-icon" data-type="mixin"><a href="#undefined-mixin-task-icon">task-icon</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="task-text" data-type="mixin"><a href="#undefined-mixin-task-text">task-text</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="theme-switch-mode" data-type="mixin"><a href="#undefined-mixin-theme-switch-mode">theme-switch-mode</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="theme-switch-keyframes" data-type="mixin"><a href="#undefined-mixin-theme-switch-keyframes">theme-switch-keyframes</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="set-fi-var" data-type="mixin"><a href="#undefined-mixin-set-fi-var">set-fi-var</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="set-fi-vars" data-type="mixin"><a href="#undefined-mixin-set-fi-vars">set-fi-vars</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="light-mode" data-type="mixin"><a href="#undefined-mixin-light-mode">light-mode</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="dark-mode" data-type="mixin"><a href="#undefined-mixin-dark-mode">dark-mode</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="set-theme-colors" data-type="mixin"><a href="#undefined-mixin-set-theme-colors">set-theme-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="define-theme-vars" data-type="mixin"><a href="#undefined-mixin-define-theme-vars">define-theme-vars</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="z-index" data-type="mixin"><a href="#undefined-mixin-z-index">z-index</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-prefix"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-prefix">prefix</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$prefix: fi- !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>CSS variable prefix for all custom properties.</p></div><h3 class="item__sub-heading">Type</h3><p><code>String</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-theme-switch-mode"><code>theme-switch-mode</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-theme-switch-keyframes"><code>theme-switch-keyframes</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-rootPrefix"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-rootPrefix">rootPrefix</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$rootPrefix: --#{$prefix} !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Root prefix for CSS custom properties (derived from $prefix).</p></div><h3 class="item__sub-heading">Type</h3><p><code>String</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-var"><code>var</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-var"><code>var</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-var"><code>var</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-var"><code>set-fi-var</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-vars"><code>set-fi-vars</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-theme-colors"><code>set-theme-colors</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-define-theme-vars"><code>define-theme-vars</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-header-height"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-header-height">header-height</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$header-height: 3.5rem !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default header height.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Length</code></p></section><section class="main__item container item" id="undefined-variable-admonition-color-map"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-admonition-color-map">admonition-color-map</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$admonition-color-map: (
+  note: (
+    color: #448aff,
+    bg-color: rgba(68, 138, 255, 0.1),
+  ),
+  abstract: (
+    color: #00b0ff,
+    bg-color: rgba(0, 176, 255, 0.1),
+  ),
+  info: (
+    color: #00b8d4,
+    bg-color: rgba(0, 184, 212, 0.1),
+  ),
+  todo: (
+    color: #5e9aff,
+    bg-color: rgba(94, 154, 255, 0.1),
+  ),
+  tip: (
+    color: #00bfa5,
+    bg-color: rgba(0, 191, 165, 0.1),
+  ),
+  success: (
+    color: #00c853,
+    bg-color: rgba(0, 200, 83, 0.1),
+  ),
+  question: (
+    color: #ffbd67,
+    bg-color: rgba(255, 190, 0, 0.1),
+  ),
+  warning: (
+    color: #ff9100,
+    bg-color: rgba(255, 145, 0, 0.1),
+  ),
+  failure: (
+    color: #ff5252,
+    bg-color: rgba(255, 82, 82, 0.1),
+  ),
+  danger: (
+    color: #ff1744,
+    bg-color: rgba(255, 23, 68, 0.1),
+  ),
+  bug: (
+    color: #f50057,
+    bg-color: rgba(245, 0, 87, 0.1),
+  ),
+  example: (
+    color: #651fff,
+    bg-color: rgba(101, 31, 255, 0.1),
+  ),
+  quote: (
+    color: #9e9e9e,
+    bg-color: rgba(159, 159, 159, 0.1),
+  ),
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Color map of admonitions.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p></section><section class="main__item container item" id="undefined-variable-alert-color-map"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-alert-color-map">alert-color-map</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$alert-color-map: (
+  note: (
+    border-color: #0969da,
+    color: #0969da,
+  ),
+  tip: (
+    border-color: #1a7f37,
+    color: #1a7f37,
+  ),
+  important: (
+    border-color: #8250df,
+    color: #8250df,
+  ),
+  warning: (
+    border-color: #bf8700,
+    color: #9a6700,
+  ),
+  caution: (
+    border-color: #cf222e,
+    color: #d1242f,
+  ),
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Color map of GitHub-style alerts (light theme).</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p></section><section class="main__item container item" id="undefined-variable-alert-color-map-dark"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-alert-color-map-dark">alert-color-map-dark</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$alert-color-map-dark: (
+  note: (
+    border-color: #316dca,
+    color: #478be6,
+  ),
+  tip: (
+    border-color: #347d39,
+    color: #57ab5a,
+  ),
+  important: (
+    border-color: #8256d0,
+    color: #986ee2,
+  ),
+  warning: (
+    border-color: #966600,
+    color: #c69026,
+  ),
+  caution: (
+    border-color: #c93c37,
+    color: #e5534b,
+  ),
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Color map of GitHub-style alerts (dark theme).</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p></section><section class="main__item container item" id="undefined-variable-chroma-lexers"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-chroma-lexers">chroma-lexers</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$chroma-lexers: (
+  &quot;🔥&quot;: &quot;Mojo&quot;,
+  &quot;1s&quot;: &quot;OnesEnterprise&quot;,
+  &quot;1s&#92;&#92;:enterprise&quot;: &quot;OnesEnterprise&quot;,
+  &quot;abap&quot;: &quot;ABAP&quot;,
+  &quot;abl&quot;: &quot;OpenEdge ABL&quot;,
+  &quot;abnf&quot;: &quot;ABNF&quot;,
+  &quot;aconf&quot;: &quot;ApacheConf&quot;,
+  &quot;actionscript&quot;: &quot;ActionScript&quot;,
+  &quot;actionscript3&quot;: &quot;ActionScript 3&quot;,
+  &quot;ada&quot;: &quot;Ada&quot;,
+  &quot;ada2005&quot;: &quot;Ada&quot;,
+  &quot;ada95&quot;: &quot;Ada&quot;,
+  &quot;agda&quot;: &quot;Agda&quot;,
+  &quot;ahk&quot;: &quot;AutoHotkey&quot;,
+  &quot;al&quot;: &quot;AL&quot;,
+  &quot;alloy&quot;: &quot;Alloy&quot;,
+  &quot;ampl&quot;: &quot;AMPL&quot;,
+  &quot;ansible&quot;: &quot;YAML+Jinja&quot;,
+  &quot;antlr&quot;: &quot;ANTLR&quot;,
+  &quot;apache&quot;: &quot;ApacheConf&quot;,
+  &quot;apacheconf&quot;: &quot;ApacheConf&quot;,
+  &quot;apl&quot;: &quot;APL&quot;,
+  &quot;applescript&quot;: &quot;AppleScript&quot;,
+  &quot;aql&quot;: &quot;ArangoDB AQL&quot;,
+  &quot;arduino&quot;: &quot;Arduino&quot;,
+  &quot;arexx&quot;: &quot;Rexx&quot;,
+  &quot;armasm&quot;: &quot;ArmAsm&quot;,
+  &quot;art&quot;: &quot;Arturo&quot;,
+  &quot;arturo&quot;: &quot;Arturo&quot;,
+  &quot;as&quot;: &quot;ActionScript&quot;,
+  &quot;as3&quot;: &quot;ActionScript 3&quot;,
+  &quot;asm&quot;: &quot;GAS&quot;,
+  &quot;astro&quot;: &quot;Astro&quot;,
+  &quot;atl&quot;: &quot;ATL&quot;,
+  &quot;autohotkey&quot;: &quot;AutoHotkey&quot;,
+  &quot;autoit&quot;: &quot;AutoIt&quot;,
+  &quot;awk&quot;: &quot;Awk&quot;,
+  &quot;b3d&quot;: &quot;BlitzBasic&quot;,
+  &quot;ballerina&quot;: &quot;Ballerina&quot;,
+  &quot;bash&quot;: &quot;Bash&quot;,
+  &quot;bash-session&quot;: &quot;Bash Session&quot;,
+  &quot;basic&quot;: &quot;QBasic&quot;,
+  &quot;bat&quot;: &quot;Batchfile&quot;,
+  &quot;batch&quot;: &quot;Batchfile&quot;,
+  &quot;beef&quot;: &quot;Beef&quot;,
+  &quot;bf&quot;: &quot;Brainfuck&quot;,
+  &quot;bib&quot;: &quot;BibTeX&quot;,
+  &quot;bibtex&quot;: &quot;BibTeX&quot;,
+  &quot;bicep&quot;: &quot;Bicep&quot;,
+  &quot;bind&quot;: &quot;Dns&quot;,
+  &quot;blitzbasic&quot;: &quot;BlitzBasic&quot;,
+  &quot;bnf&quot;: &quot;BNF&quot;,
+  &quot;bplus&quot;: &quot;BlitzBasic&quot;,
+  &quot;bqn&quot;: &quot;BQN&quot;,
+  &quot;brainfuck&quot;: &quot;Brainfuck&quot;,
+  &quot;bsdmake&quot;: &quot;Makefile&quot;,
+  &quot;c&quot;: &quot;C&quot;,
+  &quot;c&#92;&#92;#&quot;: &quot;C#&quot;,
+  &quot;c&#92;&#92;+&#92;&#92;+&quot;: &quot;C++&quot;,
+  &quot;c3&quot;: &quot;C3&quot;,
+  &quot;caddy&quot;: &quot;Caddyfile&quot;,
+  &quot;caddy-d&quot;: &quot;Caddyfile Directives&quot;,
+  &quot;caddyfile&quot;: &quot;Caddyfile&quot;,
+  &quot;caddyfile-d&quot;: &quot;Caddyfile Directives&quot;,
+  &quot;caddyfile-directives&quot;: &quot;Caddyfile Directives&quot;,
+  &quot;capnp&quot;: &quot;Cap&#39;n Proto&quot;,
+  &quot;cassandra&quot;: &quot;Cassandra CQL&quot;,
+  &quot;cassette&quot;: &quot;VHS&quot;,
+  &quot;ceylon&quot;: &quot;Ceylon&quot;,
+  &quot;cf3&quot;: &quot;CFEngine3&quot;,
+  &quot;cfengine3&quot;: &quot;CFEngine3&quot;,
+  &quot;cfg&quot;: &quot;INI&quot;,
+  &quot;cfs&quot;: &quot;Cfstatement&quot;,
+  &quot;chai&quot;: &quot;ChaiScript&quot;,
+  &quot;chaiscript&quot;: &quot;ChaiScript&quot;,
+  &quot;chapel&quot;: &quot;Chapel&quot;,
+  &quot;cheetah&quot;: &quot;Cheetah&quot;,
+  &quot;chpl&quot;: &quot;Chapel&quot;,
+  &quot;cl&quot;: &quot;Common Lisp&quot;,
+  &quot;clj&quot;: &quot;Clojure&quot;,
+  &quot;clojure&quot;: &quot;Clojure&quot;,
+  &quot;cmake&quot;: &quot;CMake&quot;,
+  &quot;cobol&quot;: &quot;COBOL&quot;,
+  &quot;coffee&quot;: &quot;CoffeeScript&quot;,
+  &quot;coffee-script&quot;: &quot;CoffeeScript&quot;,
+  &quot;coffeescript&quot;: &quot;CoffeeScript&quot;,
+  &quot;common-lisp&quot;: &quot;Common Lisp&quot;,
+  &quot;console&quot;: &quot;Bash Session&quot;,
+  &quot;containerfile&quot;: &quot;Docker&quot;,
+  &quot;coq&quot;: &quot;Coq&quot;,
+  &quot;core&quot;: &quot;Core&quot;,
+  &quot;cpp&quot;: &quot;C++&quot;,
+  &quot;cql&quot;: &quot;Cassandra CQL&quot;,
+  &quot;cr&quot;: &quot;Crystal&quot;,
+  &quot;crystal&quot;: &quot;Crystal&quot;,
+  &quot;csh&quot;: &quot;Tcsh&quot;,
+  &quot;csharp&quot;: &quot;C#&quot;,
+  &quot;css&quot;: &quot;CSS&quot;,
+  &quot;csv&quot;: &quot;CSV&quot;,
+  &quot;cucumber&quot;: &quot;Gherkin&quot;,
+  &quot;cue&quot;: &quot;CUE&quot;,
+  &quot;cython&quot;: &quot;Cython&quot;,
+  &quot;d&quot;: &quot;D&quot;,
+  &quot;dart&quot;: &quot;Dart&quot;,
+  &quot;dax&quot;: &quot;Dax&quot;,
+  &quot;desktop&quot;: &quot;Desktop file&quot;,
+  &quot;desktop_entry&quot;: &quot;Desktop file&quot;,
+  &quot;devicetree&quot;: &quot;Devicetree&quot;,
+  &quot;diff&quot;: &quot;Diff&quot;,
+  &quot;django&quot;: &quot;Django/Jinja&quot;,
+  &quot;docker&quot;: &quot;Docker&quot;,
+  &quot;dockerfile&quot;: &quot;Docker&quot;,
+  &quot;dosbatch&quot;: &quot;Batchfile&quot;,
+  &quot;dosini&quot;: &quot;INI&quot;,
+  &quot;dtd&quot;: &quot;DTD&quot;,
+  &quot;dts&quot;: &quot;Devicetree&quot;,
+  &quot;duby&quot;: &quot;Ruby&quot;,
+  &quot;dylan&quot;: &quot;Dylan&quot;,
+  &quot;ebnf&quot;: &quot;EBNF&quot;,
+  &quot;edn&quot;: &quot;Clojure&quot;,
+  &quot;elisp&quot;: &quot;EmacsLisp&quot;,
+  &quot;elixir&quot;: &quot;Elixir&quot;,
+  &quot;elm&quot;: &quot;Elm&quot;,
+  &quot;emacs&quot;: &quot;EmacsLisp&quot;,
+  &quot;emacs-lisp&quot;: &quot;EmacsLisp&quot;,
+  &quot;erb&quot;: &quot;ERB&quot;,
+  &quot;erlang&quot;: &quot;Erlang&quot;,
+  &quot;ex&quot;: &quot;Elixir&quot;,
+  &quot;exs&quot;: &quot;Elixir&quot;,
+  &quot;f90&quot;: &quot;Fortran&quot;,
+  &quot;factor&quot;: &quot;Factor&quot;,
+  &quot;fennel&quot;: &quot;Fennel&quot;,
+  &quot;fish&quot;: &quot;Fish&quot;,
+  &quot;fishshell&quot;: &quot;Fish&quot;,
+  &quot;fnl&quot;: &quot;Fennel&quot;,
+  &quot;forth&quot;: &quot;Forth&quot;,
+  &quot;fortran&quot;: &quot;Fortran&quot;,
+  &quot;fortranfixed&quot;: &quot;FortranFixed&quot;,
+  &quot;fsharp&quot;: &quot;FSharp&quot;,
+  &quot;gas&quot;: &quot;GAS&quot;,
+  &quot;gawk&quot;: &quot;Awk&quot;,
+  &quot;gd&quot;: &quot;GDScript&quot;,
+  &quot;gd3&quot;: &quot;GDScript3&quot;,
+  &quot;gdscript&quot;: &quot;GDScript&quot;,
+  &quot;gdscript3&quot;: &quot;GDScript3&quot;,
+  &quot;gemfile-lock&quot;: &quot;Gemfile.lock&quot;,
+  &quot;gemfilelock&quot;: &quot;Gemfile.lock&quot;,
+  &quot;gemini&quot;: &quot;Gemtext&quot;,
+  &quot;gemtext&quot;: &quot;Gemtext&quot;,
+  &quot;genshi&quot;: &quot;Genshi&quot;,
+  &quot;genshitext&quot;: &quot;Genshi Text&quot;,
+  &quot;gherkin&quot;: &quot;Gherkin&quot;,
+  &quot;gleam&quot;: &quot;Gleam&quot;,
+  &quot;glsl&quot;: &quot;GLSL&quot;,
+  &quot;gmi&quot;: &quot;Gemtext&quot;,
+  &quot;gmni&quot;: &quot;Gemtext&quot;,
+  &quot;gnuplot&quot;: &quot;Gnuplot&quot;,
+  &quot;go&quot;: &quot;Go&quot;,
+  &quot;go-template&quot;: &quot;Go Template&quot;,
+  &quot;golang&quot;: &quot;Go&quot;,
+  &quot;gql&quot;: &quot;GraphQL&quot;,
+  &quot;graphql&quot;: &quot;GraphQL&quot;,
+  &quot;graphqls&quot;: &quot;GraphQL&quot;,
+  &quot;groff&quot;: &quot;Groff&quot;,
+  &quot;groovy&quot;: &quot;Groovy&quot;,
+  &quot;gsed&quot;: &quot;Sed&quot;,
+  &quot;handlebars&quot;: &quot;Handlebars&quot;,
+  &quot;hare&quot;: &quot;Hare&quot;,
+  &quot;haskell&quot;: &quot;Haskell&quot;,
+  &quot;haxe&quot;: &quot;Haxe&quot;,
+  &quot;hbs&quot;: &quot;Handlebars&quot;,
+  &quot;hcl&quot;: &quot;Terraform&quot;,
+  &quot;hexdump&quot;: &quot;Hexdump&quot;,
+  &quot;hlb&quot;: &quot;HLB&quot;,
+  &quot;hlsl&quot;: &quot;HLSL&quot;,
+  &quot;holyc&quot;: &quot;HolyC&quot;,
+  &quot;hs&quot;: &quot;Haskell&quot;,
+  &quot;html&quot;: &quot;HTML&quot;,
+  &quot;html&#92;&#92;+erb&quot;: &quot;ERB&quot;,
+  &quot;html&#92;&#92;+genshi&quot;: &quot;Genshi HTML&quot;,
+  &quot;html&#92;&#92;+kid&quot;: &quot;Genshi HTML&quot;,
+  &quot;html&#92;&#92;+ruby&quot;: &quot;ERB&quot;,
+  &quot;http&quot;: &quot;HTTP&quot;,
+  &quot;hurl&quot;: &quot;Hurl&quot;,
+  &quot;hx&quot;: &quot;Haxe&quot;,
+  &quot;hxsl&quot;: &quot;Haxe&quot;,
+  &quot;hylang&quot;: &quot;Hy&quot;,
+  &quot;hypr&quot;: &quot;Hyprlang&quot;,
+  &quot;hyprlang&quot;: &quot;Hyprlang&quot;,
+  &quot;idr&quot;: &quot;Idris&quot;,
+  &quot;idris&quot;: &quot;Idris&quot;,
+  &quot;igor&quot;: &quot;Igor&quot;,
+  &quot;igorpro&quot;: &quot;Igor&quot;,
+  &quot;ini&quot;: &quot;INI&quot;,
+  &quot;io&quot;: &quot;Io&quot;,
+  &quot;iscdhcpd&quot;: &quot;ISCdhcpd&quot;,
+  &quot;j&quot;: &quot;J&quot;,
+  &quot;janet&quot;: &quot;Janet&quot;,
+  &quot;java&quot;: &quot;Java&quot;,
+  &quot;java-properties&quot;: &quot;Properties&quot;,
+  &quot;javascript&quot;: &quot;JavaScript&quot;,
+  &quot;jinja&quot;: &quot;Django/Jinja&quot;,
+  &quot;jl&quot;: &quot;Julia&quot;,
+  &quot;jq&quot;: &quot;JQ&quot;,
+  &quot;js&quot;: &quot;JavaScript&quot;,
+  &quot;json&quot;: &quot;JSON&quot;,
+  &quot;jsonata&quot;: &quot;JSONata&quot;,
+  &quot;jsonl&quot;: &quot;JSON&quot;,
+  &quot;jsonnet&quot;: &quot;Jsonnet&quot;,
+  &quot;jsx&quot;: &quot;React&quot;,
+  &quot;julia&quot;: &quot;Julia&quot;,
+  &quot;jungle&quot;: &quot;Jungle&quot;,
+  &quot;kak&quot;: &quot;Kakoune&quot;,
+  &quot;kakoune&quot;: &quot;Kakoune&quot;,
+  &quot;kakrc&quot;: &quot;Kakoune&quot;,
+  &quot;kakscript&quot;: &quot;Kakoune&quot;,
+  &quot;kdl&quot;: &quot;KDL&quot;,
+  &quot;kid&quot;: &quot;Genshi&quot;,
+  &quot;kotlin&quot;: &quot;Kotlin&quot;,
+  &quot;ksh&quot;: &quot;Bash&quot;,
+  &quot;lateralus&quot;: &quot;Lateralus&quot;,
+  &quot;latex&quot;: &quot;TeX&quot;,
+  &quot;lean&quot;: &quot;Lean4&quot;,
+  &quot;lean4&quot;: &quot;Lean4&quot;,
+  &quot;lighttpd&quot;: &quot;Lighttpd configuration file&quot;,
+  &quot;lighty&quot;: &quot;Lighttpd configuration file&quot;,
+  &quot;lilypond&quot;: &quot;LilyPond&quot;,
+  &quot;lisp&quot;: &quot;Common Lisp&quot;,
+  &quot;llvm&quot;: &quot;LLVM&quot;,
+  &quot;ltl&quot;: &quot;Lateralus&quot;,
+  &quot;lua&quot;: &quot;Lua&quot;,
+  &quot;luau&quot;: &quot;Luau&quot;,
+  &quot;m2&quot;: &quot;Modula-2&quot;,
+  &quot;make&quot;: &quot;Makefile&quot;,
+  &quot;makefile&quot;: &quot;Makefile&quot;,
+  &quot;mako&quot;: &quot;Mako&quot;,
+  &quot;man&quot;: &quot;Groff&quot;,
+  &quot;mariadb&quot;: &quot;MySQL&quot;,
+  &quot;mason&quot;: &quot;Mason&quot;,
+  &quot;materialize&quot;: &quot;Materialize SQL dialect&quot;,
+  &quot;mathematica&quot;: &quot;Mathematica&quot;,
+  &quot;matlab&quot;: &quot;Matlab&quot;,
+  &quot;mawk&quot;: &quot;Awk&quot;,
+  &quot;mbt&quot;: &quot;MoonBit&quot;,
+  &quot;mcf&quot;: &quot;MCFunction&quot;,
+  &quot;mcfunction&quot;: &quot;MCFunction&quot;,
+  &quot;md&quot;: &quot;Markdown&quot;,
+  &quot;meson&quot;: &quot;Meson&quot;,
+  &quot;meson&#92;&#92;.build&quot;: &quot;Meson&quot;,
+  &quot;mess&quot;: &quot;Markless&quot;,
+  &quot;metal&quot;: &quot;Metal&quot;,
+  &quot;mf&quot;: &quot;Makefile&quot;,
+  &quot;minizinc&quot;: &quot;MiniZinc&quot;,
+  &quot;mkd&quot;: &quot;Markdown&quot;,
+  &quot;mlir&quot;: &quot;MLIR&quot;,
+  &quot;mma&quot;: &quot;Mathematica&quot;,
+  &quot;modelica&quot;: &quot;Modelica&quot;,
+  &quot;modula2&quot;: &quot;Modula-2&quot;,
+  &quot;mojo&quot;: &quot;Mojo&quot;,
+  &quot;monkeyc&quot;: &quot;MonkeyC&quot;,
+  &quot;moon&quot;: &quot;MoonScript&quot;,
+  &quot;moonbit&quot;: &quot;MoonBit&quot;,
+  &quot;moonscript&quot;: &quot;MoonScript&quot;,
+  &quot;morrowind&quot;: &quot;MorrowindScript&quot;,
+  &quot;mwscript&quot;: &quot;MorrowindScript&quot;,
+  &quot;myghty&quot;: &quot;Myghty&quot;,
+  &quot;mysql&quot;: &quot;MySQL&quot;,
+  &quot;mzn&quot;: &quot;MiniZinc&quot;,
+  &quot;mzsql&quot;: &quot;Materialize SQL dialect&quot;,
+  &quot;nasm&quot;: &quot;NASM&quot;,
+  &quot;natural&quot;: &quot;Natural&quot;,
+  &quot;nawk&quot;: &quot;Awk&quot;,
+  &quot;nb&quot;: &quot;Mathematica&quot;,
+  &quot;ndisasm&quot;: &quot;NDISASM&quot;,
+  &quot;newspeak&quot;: &quot;Newspeak&quot;,
+  &quot;ng2&quot;: &quot;Angular2&quot;,
+  &quot;nginx&quot;: &quot;Nginx configuration file&quot;,
+  &quot;nim&quot;: &quot;Nim&quot;,
+  &quot;nimrod&quot;: &quot;Nim&quot;,
+  &quot;nix&quot;: &quot;Nix&quot;,
+  &quot;nixos&quot;: &quot;Nix&quot;,
+  &quot;no-highlight&quot;: &quot;Plaintext&quot;,
+  &quot;nroff&quot;: &quot;Groff&quot;,
+  &quot;nsh&quot;: &quot;NSIS&quot;,
+  &quot;nsi&quot;: &quot;NSIS&quot;,
+  &quot;nsis&quot;: &quot;NSIS&quot;,
+  &quot;nu&quot;: &quot;Nu&quot;,
+  &quot;obj-c&quot;: &quot;Objective-C&quot;,
+  &quot;objc&quot;: &quot;Objective-C&quot;,
+  &quot;objective-c&quot;: &quot;Objective-C&quot;,
+  &quot;objectivec&quot;: &quot;Objective-C&quot;,
+  &quot;objectpascal&quot;: &quot;ObjectPascal&quot;,
+  &quot;ocaml&quot;: &quot;OCaml&quot;,
+  &quot;octave&quot;: &quot;Octave&quot;,
+  &quot;odin&quot;: &quot;Odin&quot;,
+  &quot;ones&quot;: &quot;OnesEnterprise&quot;,
+  &quot;onesenterprise&quot;: &quot;OnesEnterprise&quot;,
+  &quot;openedge&quot;: &quot;OpenEdge ABL&quot;,
+  &quot;openedgeabl&quot;: &quot;OpenEdge ABL&quot;,
+  &quot;openscad&quot;: &quot;OpenSCAD&quot;,
+  &quot;org&quot;: &quot;Org Mode&quot;,
+  &quot;orgmode&quot;: &quot;Org Mode&quot;,
+  &quot;pacmanconf&quot;: &quot;PacmanConf&quot;,
+  &quot;perl&quot;: &quot;Perl&quot;,
+  &quot;perl6&quot;: &quot;Raku&quot;,
+  &quot;php&quot;: &quot;PHP&quot;,
+  &quot;php3&quot;: &quot;PHP&quot;,
+  &quot;php4&quot;: &quot;PHP&quot;,
+  &quot;php5&quot;: &quot;PHP&quot;,
+  &quot;phtml&quot;: &quot;PHTML&quot;,
+  &quot;pig&quot;: &quot;Pig&quot;,
+  &quot;pkgconfig&quot;: &quot;PkgConfig&quot;,
+  &quot;pl&quot;: &quot;Perl&quot;,
+  &quot;pl6&quot;: &quot;Raku&quot;,
+  &quot;plain&quot;: &quot;Plaintext&quot;,
+  &quot;plc&quot;: &quot;Plutus Core&quot;,
+  &quot;plpgsql&quot;: &quot;PL/pgSQL&quot;,
+  &quot;plutus-core&quot;: &quot;Plutus Core&quot;,
+  &quot;po&quot;: &quot;Gettext&quot;,
+  &quot;pony&quot;: &quot;Pony&quot;,
+  &quot;posh&quot;: &quot;PowerShell&quot;,
+  &quot;postgres&quot;: &quot;PostgreSQL SQL dialect&quot;,
+  &quot;postgresql&quot;: &quot;PostgreSQL SQL dialect&quot;,
+  &quot;postscr&quot;: &quot;PostScript&quot;,
+  &quot;postscript&quot;: &quot;PostScript&quot;,
+  &quot;pot&quot;: &quot;Gettext&quot;,
+  &quot;pov&quot;: &quot;POVRay&quot;,
+  &quot;powerquery&quot;: &quot;PowerQuery&quot;,
+  &quot;powershell&quot;: &quot;PowerShell&quot;,
+  &quot;pq&quot;: &quot;PowerQuery&quot;,
+  &quot;progress&quot;: &quot;OpenEdge ABL&quot;,
+  &quot;prolog&quot;: &quot;Prolog&quot;,
+  &quot;promela&quot;: &quot;Promela&quot;,
+  &quot;promql&quot;: &quot;PromQL&quot;,
+  &quot;proto&quot;: &quot;Protocol Buffer&quot;,
+  &quot;protobuf&quot;: &quot;Protocol Buffer&quot;,
+  &quot;prql&quot;: &quot;PRQL&quot;,
+  &quot;ps1&quot;: &quot;PowerShell&quot;,
+  &quot;psd1&quot;: &quot;PowerShell&quot;,
+  &quot;psl&quot;: &quot;PSL&quot;,
+  &quot;psm1&quot;: &quot;PowerShell&quot;,
+  &quot;puppet&quot;: &quot;Puppet&quot;,
+  &quot;pwsh&quot;: &quot;PowerShell&quot;,
+  &quot;py&quot;: &quot;Python&quot;,
+  &quot;py2&quot;: &quot;Python 2&quot;,
+  &quot;py3&quot;: &quot;Python&quot;,
+  &quot;pyrex&quot;: &quot;Cython&quot;,
+  &quot;python&quot;: &quot;Python&quot;,
+  &quot;python2&quot;: &quot;Python 2&quot;,
+  &quot;python3&quot;: &quot;Python&quot;,
+  &quot;pyx&quot;: &quot;Cython&quot;,
+  &quot;qbasic&quot;: &quot;QBasic&quot;,
+  &quot;qbs&quot;: &quot;QML&quot;,
+  &quot;qml&quot;: &quot;QML&quot;,
+  &quot;r&quot;: &quot;R&quot;,
+  &quot;racket&quot;: &quot;Racket&quot;,
+  &quot;ragel&quot;: &quot;Ragel&quot;,
+  &quot;raku&quot;: &quot;Raku&quot;,
+  &quot;rb&quot;: &quot;Ruby&quot;,
+  &quot;react&quot;: &quot;React&quot;,
+  &quot;reason&quot;: &quot;ReasonML&quot;,
+  &quot;reasonml&quot;: &quot;ReasonML&quot;,
+  &quot;registry&quot;: &quot;Reg&quot;,
+  &quot;rego&quot;: &quot;Rego&quot;,
+  &quot;rest&quot;: &quot;ReStructuredText&quot;,
+  &quot;restructuredtext&quot;: &quot;ReStructuredText&quot;,
+  &quot;rexx&quot;: &quot;Rexx&quot;,
+  &quot;rgbasm&quot;: &quot;RGBDS Assembly&quot;,
+  &quot;rhtml&quot;: &quot;ERB&quot;,
+  &quot;ring&quot;: &quot;Ring&quot;,
+  &quot;rkt&quot;: &quot;Racket&quot;,
+  &quot;rs&quot;: &quot;Rust&quot;,
+  &quot;rst&quot;: &quot;ReStructuredText&quot;,
+  &quot;ruby&quot;: &quot;Ruby&quot;,
+  &quot;rust&quot;: &quot;Rust&quot;,
+  &quot;s&quot;: &quot;R&quot;,
+  &quot;sage&quot;: &quot;Python&quot;,
+  &quot;salt&quot;: &quot;YAML+Jinja&quot;,
+  &quot;sas&quot;: &quot;SAS&quot;,
+  &quot;sass&quot;: &quot;Sass&quot;,
+  &quot;scala&quot;: &quot;Scala&quot;,
+  &quot;scdoc&quot;: &quot;Scdoc&quot;,
+  &quot;scheme&quot;: &quot;Scheme&quot;,
+  &quot;scilab&quot;: &quot;Scilab&quot;,
+  &quot;scm&quot;: &quot;Scheme&quot;,
+  &quot;scss&quot;: &quot;SCSS&quot;,
+  &quot;sed&quot;: &quot;Sed&quot;,
+  &quot;sh&quot;: &quot;Bash&quot;,
+  &quot;shell&quot;: &quot;Bash&quot;,
+  &quot;shell-session&quot;: &quot;Bash Session&quot;,
+  &quot;sieve&quot;: &quot;Sieve&quot;,
+  &quot;sls&quot;: &quot;YAML+Jinja&quot;,
+  &quot;smali&quot;: &quot;Smali&quot;,
+  &quot;smalltalk&quot;: &quot;Smalltalk&quot;,
+  &quot;smarty&quot;: &quot;Smarty&quot;,
+  &quot;sml&quot;: &quot;Standard ML&quot;,
+  &quot;snbt&quot;: &quot;SNBT&quot;,
+  &quot;snobol&quot;: &quot;Snobol&quot;,
+  &quot;sol&quot;: &quot;Solidity&quot;,
+  &quot;solidity&quot;: &quot;Solidity&quot;,
+  &quot;sp&quot;: &quot;SourcePawn&quot;,
+  &quot;spade&quot;: &quot;Spade&quot;,
+  &quot;sparql&quot;: &quot;SPARQL&quot;,
+  &quot;spec&quot;: &quot;RPMSpec&quot;,
+  &quot;spitfire&quot;: &quot;Cheetah&quot;,
+  &quot;splus&quot;: &quot;R&quot;,
+  &quot;sql&quot;: &quot;SQL&quot;,
+  &quot;sqlrpgle&quot;: &quot;RPGLE&quot;,
+  &quot;squeak&quot;: &quot;Smalltalk&quot;,
+  &quot;squid&quot;: &quot;SquidConf&quot;,
+  &quot;squid&#92;&#92;.conf&quot;: &quot;SquidConf&quot;,
+  &quot;squidconf&quot;: &quot;SquidConf&quot;,
+  &quot;ssed&quot;: &quot;Sed&quot;,
+  &quot;st&quot;: &quot;Smalltalk&quot;,
+  &quot;starlark&quot;: &quot;Python&quot;,
+  &quot;stylus&quot;: &quot;Stylus&quot;,
+  &quot;sv&quot;: &quot;Systemverilog&quot;,
+  &quot;svelte&quot;: &quot;Svelte&quot;,
+  &quot;swift&quot;: &quot;Swift&quot;,
+  &quot;systemd&quot;: &quot;SYSTEMD&quot;,
+  &quot;systemverilog&quot;: &quot;Systemverilog&quot;,
+  &quot;t-sql&quot;: &quot;Transact-SQL&quot;,
+  &quot;tablegen&quot;: &quot;TableGen&quot;,
+  &quot;tal&quot;: &quot;Tal&quot;,
+  &quot;tape&quot;: &quot;VHS&quot;,
+  &quot;tasm&quot;: &quot;TASM&quot;,
+  &quot;tcl&quot;: &quot;Tcl&quot;,
+  &quot;tcsh&quot;: &quot;Tcsh&quot;,
+  &quot;templ&quot;: &quot;Templ&quot;,
+  &quot;termcap&quot;: &quot;Termcap&quot;,
+  &quot;terminfo&quot;: &quot;Terminfo&quot;,
+  &quot;terraform&quot;: &quot;Terraform&quot;,
+  &quot;tex&quot;: &quot;TeX&quot;,
+  &quot;text&quot;: &quot;Plaintext&quot;,
+  &quot;tf&quot;: &quot;Terraform&quot;,
+  &quot;thrift&quot;: &quot;Thrift&quot;,
+  &quot;toml&quot;: &quot;TOML&quot;,
+  &quot;tradingview&quot;: &quot;TradingView&quot;,
+  &quot;ts&quot;: &quot;TypeScript&quot;,
+  &quot;tsql&quot;: &quot;Transact-SQL&quot;,
+  &quot;tsx&quot;: &quot;TypeScript&quot;,
+  &quot;turing&quot;: &quot;Turing&quot;,
+  &quot;turtle&quot;: &quot;Turtle&quot;,
+  &quot;tv&quot;: &quot;TradingView&quot;,
+  &quot;twig&quot;: &quot;Twig&quot;,
+  &quot;txtpb&quot;: &quot;Protocol Buffer Text Format&quot;,
+  &quot;typescript&quot;: &quot;TypeScript&quot;,
+  &quot;typoscript&quot;: &quot;TypoScript&quot;,
+  &quot;typoscriptcssdata&quot;: &quot;TypoScriptCssData&quot;,
+  &quot;typoscripthtmldata&quot;: &quot;TypoScriptHtmlData&quot;,
+  &quot;typst&quot;: &quot;Typst&quot;,
+  &quot;udiff&quot;: &quot;Diff&quot;,
+  &quot;uxntal&quot;: &quot;Tal&quot;,
+  &quot;v&quot;: &quot;V&quot;,
+  &quot;vala&quot;: &quot;Vala&quot;,
+  &quot;vapi&quot;: &quot;Vala&quot;,
+  &quot;vb&#92;&#92;.net&quot;: &quot;VB.net&quot;,
+  &quot;vbnet&quot;: &quot;VB.net&quot;,
+  &quot;verilog&quot;: &quot;Verilog&quot;,
+  &quot;vhdl&quot;: &quot;VHDL&quot;,
+  &quot;vhs&quot;: &quot;VHS&quot;,
+  &quot;vim&quot;: &quot;VimL&quot;,
+  &quot;vlang&quot;: &quot;V&quot;,
+  &quot;vsh&quot;: &quot;V shell&quot;,
+  &quot;vshell&quot;: &quot;V shell&quot;,
+  &quot;vtt&quot;: &quot;WebVTT&quot;,
+  &quot;vue&quot;: &quot;Vue&quot;,
+  &quot;vuejs&quot;: &quot;Vue&quot;,
+  &quot;wast&quot;: &quot;WebAssembly Text Format&quot;,
+  &quot;wat&quot;: &quot;WebAssembly Text Format&quot;,
+  &quot;wgsl&quot;: &quot;WebGPU Shading Language&quot;,
+  &quot;whiley&quot;: &quot;Whiley&quot;,
+  &quot;winbatch&quot;: &quot;Batchfile&quot;,
+  &quot;xml&quot;: &quot;XML&quot;,
+  &quot;xml&#92;&#92;+genshi&quot;: &quot;Genshi&quot;,
+  &quot;xml&#92;&#92;+kid&quot;: &quot;Genshi&quot;,
+  &quot;xorg&#92;&#92;.conf&quot;: &quot;Xorg&quot;,
+  &quot;yaml&quot;: &quot;YAML&quot;,
+  &quot;yaml&#92;&#92;+jinja&quot;: &quot;YAML+Jinja&quot;,
+  &quot;yang&quot;: &quot;YANG&quot;,
+  &quot;z80&quot;: &quot;Z80 Assembly&quot;,
+  &quot;zed&quot;: &quot;Zed&quot;,
+  &quot;zig&quot;: &quot;Zig&quot;,
+  &quot;zone&quot;: &quot;Dns&quot;,
+  &quot;zsh&quot;: &quot;Bash&quot;,
+  &quot;µcad&quot;: &quot;Microcad&quot;,
+  // Custom code type
+  &quot;go-html-template&quot;: &quot;Go HTML Template&quot;,
+  &quot;markdown&quot;: &quot;Markdown&quot;,
+  &quot;yml&quot;: &quot;YAML&quot;
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Map of code identifiers/languages to Chroma supported languages. This file is auto-generated by <code>pnpm gen:lexers</code>, do not edit manually. See: <a href="https://github.com/hugo-fixit/FixIt/tree/main/packages/chroma-lexers">https://github.com/hugo-fixit/FixIt/tree/main/packages/chroma-lexers</a></p></div></section><section class="main__item container item" id="undefined-variable-theme-colors"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-theme-colors">theme-colors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$theme-colors: (
+  &#39;primary&#39;: #1677ff,
+  &#39;secondary&#39;: #8b949e,
+  &#39;success&#39;: #52c41a,
+  &#39;info&#39;: #13c2c2,
+  &#39;warning&#39;: #faad14,
+  &#39;danger&#39;: #ff4d4f
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Theme semantic color tokens.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-theme-colors"><code>set-theme-colors</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-breakpoints"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-breakpoints">breakpoints</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$breakpoints: (
+  &#39;xs&#39;: null,
+  &#39;sm&#39;: 680px,
+  &#39;md&#39;: 960px,
+  &#39;lg&#39;: 1200px,
+  &#39;xl&#39;: 1440px,
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Responsive breakpoints map for the <code>media</code> mixin.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-theme-switch-animation-duration"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-theme-switch-animation-duration">theme-switch-animation-duration</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$theme-switch-animation-duration: 0.5s !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Duration of the theme-switch icon animation.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Time</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-theme-switch-mode"><code>theme-switch-mode</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-theme-switch-animation-easing"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-theme-switch-animation-easing">theme-switch-animation-easing</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$theme-switch-animation-easing: cubic-bezier(0.22, 1, 0.36, 1) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Easing function for the theme-switch icon animation.</p></div><h3 class="item__sub-heading">Type</h3><p><code>String</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-theme-switch-mode"><code>theme-switch-mode</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-z-indexes"><h3 class="item__heading"><a class="item__name" href="#undefined-variable-z-indexes">z-indexes</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$z-indexes: (
+  &quot;hide&quot;: -1,
+  &quot;auto&quot;: auto,
+  &quot;base&quot;: 1,
+  &quot;loading&quot;: 10,
+  &quot;sticky&quot;: 100,
+  &quot;fixed&quot;: 200
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Z-index scale for consistent layering across the theme.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-z-index"><code>z-index</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-rgba"><h3 class="item__heading"><a class="item__name" href="#undefined-function-rgba">rgba</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function rgba($color, $alpha: 1) { 
+  @return string.unquote(&quot;rgb(from #{$color} r g b / #{$alpha})&quot;);
+ }" data-collapsed="@function rgba($color, $alpha: 1) { ... }"><code>@function rgba($color, $alpha: 1) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Build an rgba-like color from any source color expression.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Source color, supports CSS vars such as fi-var(secondary).</p></td><td data-label="type"><code>Color</code> or <code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$alpha</code></th><td data-label="desc"><p>Alpha channel value in range 0..1.</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>1</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>color: fi-rgba(fi-var(secondary), 0.2);</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-link-guard-content"><code>link-guard-content</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-link-guard-content"><code>link-guard-content</code></a></li></ul></section><section class="main__item container item" id="undefined-function-var"><h3 class="item__heading"><a class="item__name" href="#undefined-function-var">var</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function var($name, $fallback) { 
+  @if $fallback != null {
+    @if meta.type-of($fallback) == string {
+      @return string.unquote(&#39;var(#{$rootPrefix}#{$name}, &quot;#{$fallback}&quot;)&#39;);
+    }
+    @return string.unquote(&quot;var(#{$rootPrefix}#{$name}, #{$fallback})&quot;);
+  }
+
+  @return string.unquote(&quot;var(#{$rootPrefix}#{$name})&quot;);
+ }" data-collapsed="@function var($name, $fallback) { ... }"><code>@function var($name, $fallback) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Get CSS variable with prefix</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$name</code></th><td data-label="desc"><p>CSS variable name (without prefix)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$fallback</code></th><td data-label="desc"><p>Optional fallback value</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code> &mdash;<p>Complete CSS variable reference</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>color: fi-var(global-font-color);
+background: fi-var(custom-bg, #fff);</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-admonition"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-admonition">admonition</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin admonition($type, $color, $bg, $bg-collapsed: color.adjust($bg, $alpha: 0.15)) { 
+  $vars: (
+    admonition-color: $color,
+    admonition-bg-color: $bg,
+    admonition-bg-color-collapsed: $bg-collapsed,
+  );
+
+  @if $type == &#39;&#39; {
+    @include set-fi-vars($vars);
+  } @else {
+    &amp;.#{$type} {
+      @include set-fi-vars($vars);
+    }
+  }
+ }" data-collapsed="@mixin admonition($type, $color, $bg, $bg-collapsed: color.adjust($bg, $alpha: 0.15)) { ... }"><code>@mixin admonition($type, $color, $bg, $bg-collapsed: color.adjust($bg, $alpha: 0.15)) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Define an admonition type with CSS custom properties</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$type</code></th><td data-label="desc"><p>Admonition type name (empty string for default type)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Text/border color</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bg</code></th><td data-label="desc"><p>Background color</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$bg-collapsed</code></th><td data-label="desc"><p>Collapsed title background color</p></td><td data-label="type"><code>Color</code></td><td data-label="default"><code>color.adjust($bg, $alpha: 0.15)</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>// Define the default admonition type
+@include admonition(&#39;&#39;, #1677ff, rgba(22, 119, 255, 0.1));
+
+// Define a custom admonition type
+@include admonition(custom, #9b59b6, rgba(155, 89, 182, 0.1));
+
+// Define with explicit collapsed background color
+@include admonition(important, #e91e63, rgba(233, 30, 99, 0.1), rgba(233, 30, 99, 0.25));</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-vars"><code>set-fi-vars</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-vars"><code>set-fi-vars</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-bold-dark"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-bold-dark">bold-dark</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin bold-dark($color) { 
+  font-weight: bold;
+
+  @include dark-mode {
+    color: $color;
+  }
+ }" data-collapsed="@mixin bold-dark($color) { ... }"><code>@mixin bold-dark($color) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Make text bold and apply an extra text color in dark mode. The light theme keeps its original inherited color.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Bold text color used in dark mode</p></td><td data-label="type"><code>Color</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-border-radius"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-border-radius">border-radius</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin border-radius($value, $radius) { 
+  @if $value == full {
+    border-radius: calc(infinity * 1px);
+  } @else if $value == top {
+    border-radius: $radius $radius 0 0;
+  } @else if $value == bottom {
+    border-radius: 0 0 $radius $radius;
+  } @else if $value == left {
+    border-radius: $radius 0 0 $radius;
+  } @else if $value == right {
+    border-radius: 0 $radius $radius 0;
+  } @else {
+    border-radius: $value;
+  }
+ }" data-collapsed="@mixin border-radius($value, $radius) { ... }"><code>@mixin border-radius($value, $radius) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin to set border-radius</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>The value of the border-radius, position (top, bottom, left, right) or keyword (full)</p></td><td data-label="type"><code>String</code> or <code>Number</code> or <code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$radius</code></th><td data-label="desc"><p>The radius of the border (only for position)</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include border-radius;
+@include border-radius(full);
+@include border-radius(top);
+@include border-radius(top, 10px);
+@include border-radius(10px 20px 10px 20px);</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-inline-code"><code>inline-code</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-link-guard-content"><code>link-guard-content</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-link-guard-content"><code>link-guard-content</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-link-guard-content"><code>link-guard-content</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-box-shadow"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-box-shadow">box-shadow</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin box-shadow($when, $shadow) { 
+  @if $when == always {
+    box-shadow: $shadow;
+  } @else if $when == hover {
+    transition: box-shadow 0.3s fi-var(bezier);
+
+    &amp;:hover {
+      box-shadow: $shadow;
+    }
+  } @else if $when == never {
+    box-shadow: none;
+  } @else {
+    @warn &quot;box-shadow mixin: unknown $when value &#39;#{$when}&#39;. Expected always, hover, or never.&quot;;
+  }
+ }" data-collapsed="@mixin box-shadow($when, $shadow) { ... }"><code>@mixin box-shadow($when, $shadow) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin to apply box-shadow with timing control</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$when</code></th><td data-label="desc"><p>When to show shadow: always | hover | never (default: always)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$shadow</code></th><td data-label="desc"><p>The box-shadow value</p></td><td data-label="type"><code>List</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include box-shadow;
+@include box-shadow(hover);
+@include box-shadow(never);
+@include box-shadow(always, 0 4px 8px rgba(0, 0, 0, 0.15));</code></pre></div></section><section class="main__item container item" id="undefined-mixin-overflow-wrap"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-overflow-wrap">overflow-wrap</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin overflow-wrap($value) { 
+  word-wrap: $value;
+  overflow-wrap: $value;
+ }" data-collapsed="@mixin overflow-wrap($value) { ... }"><code>@mixin overflow-wrap($value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply word-wrap and overflow-wrap for cross-browser compatibility. TODO Superseded by <code>text-wrap: wrap;</code> in modern browsers.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>Wrap value (e.g. <code>break-word</code>)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-inline-code"><code>inline-code</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-scroll-state-query"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-scroll-state-query">scroll-state-query</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin scroll-state-query($container-name, $container-condition, $fallback-selector) { 
+  @supports (container-type: scroll-state) {
+    @if $container-name != null {
+      @container #{$container-name} (#{$container-condition}) {
+        @content;
+      }
+    } @else {
+      @container (#{$container-condition}) {
+        @content;
+      }
+    }
+  }
+
+  // Fallback for browsers that do not support scroll-state container queries, such as Safari and Firefox.
+  // https://caniuse.com/mdn-css_properties_container-type_scroll-state
+  @if $fallback-selector != null {
+    @supports not (container-type: scroll-state) {
+      #{$fallback-selector} {
+        @content;
+      }
+    }
+  }
+ }" data-collapsed="@mixin scroll-state-query($container-name, $container-condition, $fallback-selector) { ... }"><code>@mixin scroll-state-query($container-name, $container-condition, $fallback-selector) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply styles only when scroll-state container queries are supported. Unsupported browsers skip the container branch, and can optionally reuse the same styles through a fallback selector.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$container-name</code></th><td data-label="desc"><p>Optional container name</p></td><td data-label="type"><code>String</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$container-condition</code></th><td data-label="desc"><p>Container query condition (without outer parentheses)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$fallback-selector</code></th><td data-label="desc"><p>Optional selector used as a fallback</p></td><td data-label="type"><code>String</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include scroll-state-query(&#39;scroller&#39;, &#39;scroll-state(scrollable: top)&#39;) {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+@include scroll-state-query(&#39;scroller&#39;, &#39;scroll-state(scrollable: top)&#39;, &#39;&amp;&#39;) {
+  backdrop-filter: saturate(1.2) blur(10px);
+}</code></pre></div></section><section class="main__item container item" id="undefined-mixin-focus-visible-ring"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-focus-visible-ring">focus-visible-ring</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin focus-visible-ring($size: $size: 1.3em, $offset: $offset: 0.2rem) { 
+  &amp;:focus-visible {
+    outline: none;
+
+    &amp;::after {
+      content: &#39;&#39;;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $size;
+      height: $size;
+      translate: -50% -50%;
+      outline: -webkit-focus-ring-color auto 1px;
+      outline-offset: $offset;
+      pointer-events: none;
+    }
+  }
+ }" data-collapsed="@mixin focus-visible-ring($size: $size: 1.3em, $offset: $offset: 0.2rem) { ... }"><code>@mixin focus-visible-ring($size: $size: 1.3em, $offset: $offset: 0.2rem) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply a focus-visible ring outline using a pseudo-element.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$size</code></th><td data-label="desc"><p>Size of the focus ring</p></td><td data-label="type"><code>Length</code></td><td data-label="default"><code>$size: 1.3em</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$offset</code></th><td data-label="desc"><p>Offset from the element</p></td><td data-label="type"><code>Length</code></td><td data-label="default"><code>$offset: 0.2rem</code></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-inline-code"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-inline-code">inline-code</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin inline-code() { 
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: fi-var(code-font-size);
+  line-height: fi-var(code-font-size);
+  font-family: fi-var(code-font-family);
+  color: fi-var(code-color);
+  background-color: fi-var(code-inline-background-color);
+  text-decoration: inherit;
+  @include border-radius;
+  @include overflow-wrap(break-word);
+ }" data-collapsed="@mixin inline-code() { ... }"><code>@mixin inline-code() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Shared inline code styles using theme CSS variables.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-border-radius"><code>border-radius</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-overflow-wrap"><code>overflow-wrap</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-link-guard-content"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-link-guard-content">link-guard-content</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin link-guard-content() { 
+  padding: 1.5rem;
+  border: 1px solid fi-var(global-border-color-light);
+  background: light-dark(#fff, #1d2230);
+  box-shadow: 0 1rem 2rem light-dark(rgba(15, 23, 42, 0.18), rgba(0, 0, 0, 0.35));
+  @include border-radius(1rem);
+
+  .title {
+    margin-block: 0 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .message {
+    font-weight: 600;
+    margin-block: 0 0.75rem;
+  }
+
+  .target-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .target {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    background: light-dark(#f8fafc, #171b25);
+    border: 1px solid fi-var(global-border-color);
+    font-family: fi-var(code-font-family);
+    font-size: 0.875rem;
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: all;
+    @include border-radius;
+  }
+
+  .copy-icon-btn {
+    flex-shrink: 0;
+    background: light-dark(#f8fafc, #171b25);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .cancel-btn,
+  .confirm-btn {
+    padding: 0.5rem 0.875rem;
+    border: 1px solid fi-var(global-border-color-light);
+    background: light-dark(#f6f8fa, #2a313c);
+    color: fi-var(global-font-color);
+    user-select: none;
+    @include border-radius;
+  }
+
+  .confirm-btn {
+    color: #fff;
+    background-color: fi-var(primary);
+    border-color: fi-var(primary);
+  }
+
+  @include media(&#39;xs&#39;) {
+    padding: 1rem;
+
+    .cancel-btn,
+    .confirm-btn {
+      flex: 1 1 50%;
+    }
+  }
+ }" data-collapsed="@mixin link-guard-content() { ... }"><code>@mixin link-guard-content() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Shared styles for link guard content blocks. Keep this as the single source of truth for both link page card and guard dialog body.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-border-radius"><code>border-radius</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-border-radius"><code>border-radius</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-border-radius"><code>border-radius</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-rgba"><code>rgba</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-rgba"><code>rgba</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-link"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-link">link</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin link($light, $dark, $decoration) { 
+  $link-color-light: $single-link-color;
+  $link-color-dark: $single-link-color-dark;
+  $link-hover-color-light: $single-link-hover-color;
+  $link-hover-color-dark: $single-link-hover-color-dark;
+
+  @if $light {
+    $link-color-light: $global-link-color;
+    $link-hover-color-light: $global-link-hover-color;
+  }
+
+  @if $dark {
+    $link-color-dark: $global-link-color-dark;
+    $link-hover-color-dark: $global-link-hover-color-dark;
+  }
+
+  a,
+  a::before,
+  a::after {
+    text-decoration: $decoration;
+    color: light-dark($link-color-light, $link-color-dark);
+  }
+
+  a:active,
+  a:hover {
+    color: light-dark($link-hover-color-light, $link-hover-color-dark);
+  }
+ }" data-collapsed="@mixin link($light, $dark, $decoration) { ... }"><code>@mixin link($light, $dark, $decoration) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Link mixin</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$light</code></th><td data-label="desc"><p>use global link color</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$dark</code></th><td data-label="desc"><p>use global link color dark</p></td><td data-label="type"><code>Boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$decoration</code></th><td data-label="desc"><p>text-decoration, default none</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table></section><section class="main__item container item" id="undefined-mixin-loading"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-loading">loading</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin loading() { 
+  content: &#39;&#39;;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1rem);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: fi-var(loading-img);
+  background-size: 60px;
+  @include z-index(loading);
+ }" data-collapsed="@mixin loading() { ... }"><code>@mixin loading() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Loading pseudo-element styles for async content.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-z-index"><code>z-index</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-media"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-media">media</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin media($target, $direction) { 
+  @if $target == &#39;print&#39; {
+    @media only print {
+      @content;
+    }
+  } @else if $target == &#39;reduce-motion&#39; {
+    @media screen and (prefers-reduced-motion: reduce) {
+      @content;
+    }
+  } @else if map.has-key($breakpoints, $target) {
+    $min: map.get($breakpoints, $target);
+    $max: _bp-max($target);
+
+    @if $direction == &#39;only&#39; {
+      @if $min == null {
+        // xs: max-width only
+        @media only screen and (max-width: $max) {
+          @content;
+        }
+      } @else if $max == null {
+        // xl: min-width only, no upper bound
+        @media only screen and (min-width: $min) {
+          @content;
+        }
+      } @else {
+        @media only screen and (min-width: $min) and (max-width: $max) {
+          @content;
+        }
+      }
+    } @else if $direction == &#39;up&#39; {
+      @if $min == null {
+        // xs-up: always applies
+        @content;
+      } @else {
+        @media only screen and (min-width: $min) {
+          @content;
+        }
+      }
+    } @else if $direction == &#39;down&#39; {
+      @if $max == null {
+        // xl-down: always applies
+        @content;
+      } @else {
+        @media only screen and (max-width: $max) {
+          @content;
+        }
+      }
+    } @else {
+      @warn &quot;Unknown direction `#{$direction}`. Expected: only, up, down.&quot;;
+    }
+  } @else {
+    @warn &quot;Unknown media target `#{$target}`. Expected: xs, sm, md, lg, xl, print, reduce-motion.&quot;;
+  }
+ }" data-collapsed="@mixin media($target, $direction) { ... }"><code>@mixin media($target, $direction) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply styles within a named media target.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$target</code></th><td data-label="desc"><p>Target name: xs | sm | md | lg | xl | print | reduce-motion</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$direction</code></th><td data-label="desc"><p>Range direction: only | up | down [default: only]</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>// xs: &lt; 680px
+@include media(&#39;xs&#39;) { ... }
+// sm: 680px – 959.9px
+@include media(&#39;sm&#39;) { ... }
+// md and above: ≥ 960px
+@include media(&#39;md&#39;, &#39;up&#39;) { ... }
+// lg and below: ≤ 1199.9px
+@include media(&#39;lg&#39;, &#39;down&#39;) { ... }
+// print media
+@include media(&#39;print&#39;) { ... }
+// reduced motion
+@include media(&#39;reduce-motion&#39;) { ... }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-breakpoints"><code>breakpoints</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-link-guard-content"><code>link-guard-content</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-page-style"><code>page-style</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-page-style"><code>page-style</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-page-style"><code>page-style</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-page-style"><code>page-style</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-page-style"><code>page-style</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sticky-top-offset"><code>sticky-top-offset</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sticky-top-offset"><code>sticky-top-offset</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sticky-top-offset"><code>sticky-top-offset</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sticky-top-offset"><code>sticky-top-offset</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-page-style"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-page-style">page-style</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin page-style($variant) { 
+  $target: &#39;:is(main &gt; .page, .breadcrumb-container &gt; .breadcrumb, #comments &gt; .comment)&#39;;
+
+  @if $variant == null {
+    @at-root #{$target} {
+      @include media(&#39;xl&#39;) {
+        width: ROUND(60%, 2px);
+        max-width: 1200px;
+      }
+
+      @include media(&#39;lg&#39;) {
+        width: ROUND(56%, 2px);
+      }
+
+      @include media(&#39;md&#39;) {
+        width: ROUND(52%, 2px);
+      }
+
+      @include media(&#39;sm&#39;) {
+        width: ROUND(80%, 2px);
+      }
+
+      @include media(&#39;xs&#39;) {
+        width: 100%;
+      }
+    }
+  } @else {
+    @at-root [data-page-style=&#39;#{$variant}&#39;] #{$target} {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin page-style($variant) { ... }"><code>@mixin page-style($variant) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Page style helper for setting responsive content width.</p><p>This mixin has two modes: 1) Default mode (no arguments): emits the base page-style rules for all built-in targets. 2) Variant mode (pass $variant): emits rules under <code>[data-page-style=&#39;$variant&#39;]</code> for the same targets.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$variant</code></th><td data-label="desc"><p>Variant name (e.g. wide/narrow/custom). When null, emit defaults.</p></td><td data-label="type"><code>String</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>// Theme internal: emit default rules
+@include page-style;
+
+// Theme internal: emit a built-in variant
+@include page-style(&#39;wide&#39;) { ... }
+@include page-style(&#39;narrow&#39;) { ... }
+
+// User custom: add a custom variant without caring about internal selectors
+@include page-style(&#39;custom&#39;) {
+  @include media(&#39;xl&#39;) { width: ROUND(70%, 2px); }
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-scrollbar-width"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-scrollbar-width">scrollbar-width</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin scrollbar-width($width: $width: thin, $widthLegacy: $widthLegacy: 12px) { 
+  @include set-fi-vars((
+    scrollbar-width: $width,
+    scrollbar-width-legacy: $widthLegacy,
+  ));
+ }" data-collapsed="@mixin scrollbar-width($width: $width: thin, $widthLegacy: $widthLegacy: 12px) { ... }"><code>@mixin scrollbar-width($width: $width: thin, $widthLegacy: $widthLegacy: 12px) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set scrollbar width CSS custom properties.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>Scrollbar width value</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>$width: thin</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$widthLegacy</code></th><td data-label="desc"><p>Legacy scrollbar width</p></td><td data-label="type"><code>Length</code></td><td data-label="default"><code>$widthLegacy: 12px</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-vars"><code>set-fi-vars</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-sticky-top-offset"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-sticky-top-offset">sticky-top-offset</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sticky-top-offset($transition) { 
+  $sticky-top-bar-offset: calc(#{fi-var(header-height)} + #{fi-var(breadcrumb-height, 0px)});
+  $base-top-offset: fi-var(breadcrumb-height, 0px);
+
+  // Base offset reserved for the breadcrumb bar.
+  top: $base-top-offset;
+
+  @include media(&#39;sm&#39;, &#39;up&#39;) {
+    [data-header-desktop=&#39;sticky&#39;] &amp;,
+    [data-header-desktop=&#39;auto&#39;] &amp; {
+      // Sticky or auto desktop header uses the same combined header and breadcrumb offset.
+      top: $sticky-top-bar-offset;
+    }
+
+    [data-header-desktop=&#39;auto&#39;]:has(#header-desktop.header__fadeOutUp) &amp; {
+      // Once the auto header is hidden, remove the extra top offset.
+      top: $base-top-offset;
+    }
+  }
+
+  @include media(&#39;xs&#39;) {
+    [data-header-mobile=&#39;sticky&#39;] &amp;,
+    [data-header-mobile=&#39;auto&#39;] &amp; {
+      // Sticky or auto mobile header uses the same combined header and breadcrumb offset.
+      top: $sticky-top-bar-offset;
+    }
+
+    [data-header-mobile=&#39;auto&#39;]:has(#header-mobile.header__fadeOutUp) &amp; {
+      // Once the auto header is hidden, remove the extra top offset.
+      top: $base-top-offset;
+    }
+  }
+
+  [data-header-mobile=&#39;sticky&#39;] &amp; {
+    @include media(&#39;xs&#39;) {
+      // Sticky mobile header uses the same combined header and breadcrumb offset.
+      top: $sticky-top-bar-offset;
+    }
+  }
+
+  @if $transition {
+    transition: top 0.5s ease;
+    @include media(&#39;reduce-motion&#39;) {
+      transition: none;
+    }
+  }
+ }" data-collapsed="@mixin sticky-top-offset($transition) { ... }"><code>@mixin sticky-top-offset($transition) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Apply the shared sticky top offset used by TOC, collections, and code headers.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$transition</code></th><td data-label="desc"><p>Whether to include the transition for top changes (default: true).</p><p>Top offset rules:</p><ul><li>Base: keep space for the breadcrumb bar when no sticky header override applies.</li><li>Desktop auto: offset by header height while the header is visible.</li><li>Desktop auto hidden: reset to 0 when the auto header has faded out.</li><li>Desktop/mobile sticky: offset by header height plus breadcrumb height.</li></ul></td><td data-label="type"><code>Boolean</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-media"><code>media</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-task-icon"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-task-icon">task-icon</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin task-icon($color) { 
+  &gt; i {
+    // Set icon color (optional)
+    @if $color != null {
+      @include set-fi-var(task-icon-color, $color);
+    }
+    @content;
+  }
+ }" data-collapsed="@mixin task-icon($color) { ... }"><code>@mixin task-icon($color) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set task list icon color and allow custom styles via @content</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Icon color (optional) Usage: @include task-icon(fi-var(secondary)) { opacity: 0.8; }</p></td><td data-label="type"><code>Color</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-var"><code>set-fi-var</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-task-text"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-task-text">task-text</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin task-text($color) { 
+  &gt; span {
+    // Set text color (optional)
+    @if $color != null {
+      @include set-fi-var(task-text-color, $color);
+    }
+    @content;
+  }
+ }" data-collapsed="@mixin task-text($color) { ... }"><code>@mixin task-text($color) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set task list text color and allow custom styles via @content</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$color</code></th><td data-label="desc"><p>Text color (optional) Usage: @include task-text(fi-var(secondary)) { text-decoration: line-through fi-var(secondary); }</p></td><td data-label="type"><code>Color</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-set-fi-var"><code>set-fi-var</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-theme-switch-mode"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-theme-switch-mode">theme-switch-mode</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin theme-switch-mode($mode, $icon) { 
+  [data-theme-mode=&#39;#{$mode}&#39;] &amp; {
+    @if $icon != null {
+      --fa: &#39;#{$icon}&#39;;
+    }
+
+    animation: #{$prefix}theme-switch-#{$mode} $theme-switch-animation-duration $theme-switch-animation-easing;
+  }
+ }" data-collapsed="@mixin theme-switch-mode($mode, $icon) { ... }"><code>@mixin theme-switch-mode($mode, $icon) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Bind a theme mode selector to an icon glyph and its matching animation.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$mode</code></th><td data-label="desc"><p>Theme mode name: auto | light | dark</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$icon</code></th><td data-label="desc"><p>Optional Font Awesome glyph code assigned to --fa</p></td><td data-label="type"><code>String</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include theme-switch-mode(&#39;auto&#39;);
+@include theme-switch-mode(&#39;light&#39;, &#39;&#92;f185&#39;);</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-prefix"><code>prefix</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-theme-switch-animation-duration"><code>theme-switch-animation-duration</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-theme-switch-animation-easing"><code>theme-switch-animation-easing</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-theme-switch-keyframes"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-theme-switch-keyframes">theme-switch-keyframes</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin theme-switch-keyframes($name, $from-rotate, $from-scale, $from-opacity, $mid-step, $mid-rotate, $mid-scale) { 
+  @keyframes #{$prefix}theme-switch-#{$name} {
+    0% {
+      rotate: $from-rotate;
+      scale: $from-scale;
+      opacity: $from-opacity;
+    }
+
+    #{$mid-step} {
+      rotate: $mid-rotate;
+      scale: $mid-scale;
+      opacity: 1;
+    }
+
+    100% {
+      rotate: 225deg;
+      scale: 1;
+      opacity: 1;
+    }
+  }
+ }" data-collapsed="@mixin theme-switch-keyframes($name, $from-rotate, $from-scale, $from-opacity, $mid-step, $mid-rotate, $mid-scale) { ... }"><code>@mixin theme-switch-keyframes($name, $from-rotate, $from-scale, $from-opacity, $mid-step, $mid-rotate, $mid-scale) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Generate one theme-switch keyframes block from a compact parameter list. The final state is intentionally shared so all modes settle on the same resting pose.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$name</code></th><td data-label="desc"><p>Animation suffix used in the generated keyframes name</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$from-rotate</code></th><td data-label="desc"><p>Initial rotation angle</p></td><td data-label="type"><code>Angle</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$from-scale</code></th><td data-label="desc"><p>Initial icon scale</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$from-opacity</code></th><td data-label="desc"><p>Initial icon opacity</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$mid-step</code></th><td data-label="desc"><p>Intermediate keyframe percentage such as 55% or 60%</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$mid-rotate</code></th><td data-label="desc"><p>Intermediate rotation angle</p></td><td data-label="type"><code>Angle</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$mid-scale</code></th><td data-label="desc"><p>Intermediate icon scale</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-prefix"><code>prefix</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-set-fi-var"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-set-fi-var">set-fi-var</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin set-fi-var($name, $value) { 
+  #{$rootPrefix}#{$name}: $value;
+ }" data-collapsed="@mixin set-fi-var($name, $value) { ... }"><code>@mixin set-fi-var($name, $value) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Set a single CSS variable</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$name</code></th><td data-label="desc"><p>CSS variable name (without prefix)</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$value</code></th><td data-label="desc"><p>Variable value</p></td><td data-label="type"><code>Any</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include set-fi-var(custom-color, #ff0000);</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-task-icon"><code>task-icon</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-task-text"><code>task-text</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-set-fi-vars"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-set-fi-vars">set-fi-vars</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin set-fi-vars($vars) { 
+  @each $name, $value in $vars {
+    #{$rootPrefix}#{$name}: $value;
+  }
+ }" data-collapsed="@mixin set-fi-vars($vars) { ... }"><code>@mixin set-fi-vars($vars) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Batch set CSS variables</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$vars</code></th><td data-label="desc"><p>Variable map, key is CSS variable name (without prefix), value is variable value</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include set-fi-vars((
+  custom-color: #ff0000,
+  custom-bg: #00ff00,
+));</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-admonition"><code>admonition</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-admonition"><code>admonition</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-scrollbar-width"><code>scrollbar-width</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-light-mode"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-light-mode">light-mode</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin light-mode() { 
+  [data-theme-mode=&#39;light&#39;] &amp; {
+    @content;
+  }
+
+  @media (prefers-color-scheme: light) {
+    [data-theme-mode=&#39;auto&#39;] &amp; {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin light-mode() { ... }"><code>@mixin light-mode() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Light mode content wrapper</p><ul><li>Explicit light mode: [data-theme-mode=&#39;light&#39;]</li><li>Auto mode with system light preference: [data-theme-mode=&#39;auto&#39;] + prefers-color-scheme</li></ul></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-dark-mode"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-dark-mode">dark-mode</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin dark-mode() { 
+  [data-theme-mode=&#39;dark&#39;] &amp; {
+    @content;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-theme-mode=&#39;auto&#39;] &amp; {
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin dark-mode() { ... }"><code>@mixin dark-mode() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Dark mode content wrapper</p><ul><li>Explicit dark mode: [data-theme-mode=&#39;dark&#39;]</li><li>Auto mode with system dark preference: [data-theme-mode=&#39;auto&#39;] + prefers-color-scheme</li></ul></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-set-theme-colors"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-set-theme-colors">set-theme-colors</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin set-theme-colors() { 
+  // Light/Dark in one declaration (driven by color-scheme)
+  @at-root :root {
+    @each $name, $value in $theme-colors {
+      #{$rootPrefix}#{$name}: light-dark(#{$value}, #{color.adjust($value, $lightness: -5%)});
+    }
+  }
+ }" data-collapsed="@mixin set-theme-colors() { ... }"><code>@mixin set-theme-colors() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Batch set theme color variables using global $theme-colors Values are emitted via light-dark() and switched by CSS color-scheme.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-theme-colors"><code>theme-colors</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-define-theme-vars"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-define-theme-vars">define-theme-vars</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin define-theme-vars($vars) { 
+  // Light/Dark in one declaration (driven by color-scheme)
+  @at-root :root {
+    @each $name, $values in $vars {
+      #{$rootPrefix}#{$name}: light-dark(#{map.get($values, light)}, #{map.get($values, dark)});
+    }
+  }
+ }" data-collapsed="@mixin define-theme-vars($vars) { ... }"><code>@mixin define-theme-vars($vars) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Define dual-theme variables with light-dark()</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$vars</code></th><td data-label="desc"><p>Variable map, key is CSS variable name, value is Map(light: $light-val, dark: $dark-val)</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include define-theme-vars((
+  global-background-color: (light: $global-background-color, dark: $global-background-color-dark)
+));</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-rootPrefix"><code>rootPrefix</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-z-index"><h3 class="item__heading"><a class="item__name" href="#undefined-mixin-z-index">z-index</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin z-index($key, $diff) { 
+  $z-index: map.get($z-indexes, $key);
+
+  @if $z-index {
+    z-index: $z-index + $diff;
+  } @else {
+    @warn &quot;Unknown z-index key: `#{$key}`.&quot;;
+    z-index: $key + $diff;
+  }
+ }" data-collapsed="@mixin z-index($key, $diff) { ... }"><code>@mixin z-index($key, $diff) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin to set z-index</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$key</code></th><td data-label="desc"><p>The key of the z-index map or a raw number</p></td><td data-label="type"><code>String</code> or <code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$diff</code></th><td data-label="desc"><p>The difference to add to the z-index</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@include z-index(base);
+@include z-index(base, 1);</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-z-indexes"><code>z-indexes</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-loading"><code>loading</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <a class="project-info__name" href="https://fixit.lruihao.cn">@hugo-fixit/core</a><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
