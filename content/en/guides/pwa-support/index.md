@@ -17,9 +17,6 @@ resources:
 toc:
   auto: false
 lightgallery: true
-repost:
-  enable: true
-  url: https://hugodoit.com/pwa-support/
 ---
 
 Find out how to turn your FixIt site into a Progressive Web App.
@@ -39,7 +36,7 @@ Well, the straight answer to this questions is: "You don't need to turn your sit
 
 These features may be useful for some websites, such as this documentation site. But it does not make much sense to turn a personal blog into a PWA. In the end, it all depends on your choice, and the FixIt theme will provide this feature for you anyway.
 
-## How to turn your FixIt site into a PWA? {#setup-in-fixit}
+## Setup in FixIt {#setup-in-fixit}
 
 ### Configure manifest {#site.webmanifest}
 
@@ -98,10 +95,7 @@ You need to add `"offline"` and `"manifest"` to `outputs.home`:
 ```toml
 [outputs]
 home = [
-  "html",
-  "rss",
-  "archives",
-  "search",
+  # others
   "offline",
   "manifest"
 ]

@@ -108,9 +108,9 @@ reading_time = true
 # Whether to enable instant.page.
 instant_page = false
 # Whether to enable collection list at the sidebar.
-collection_list = false
+collection_list = true
 # Whether to enable collection navigation at the end of the post.
-collection_navigation = false
+collection_navigation = true
 # End of post flag.
 end_flag = ""
 

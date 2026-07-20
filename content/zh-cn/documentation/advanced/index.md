@@ -20,116 +20,172 @@ tags:
 
 ## 自定义样式
 
-- [ ] 主题适配
-- [ ] 页面样式
-- [ ] 响应式和媒体查询
-- [ ] Mixins
-
 > [!note] Hugo **extended** 版本对于自定义样式是必需的。
 
-通过定义自定义 `.scss` 样式文件，**FixIt** 主题支持可配置的样式。
+**FixIt** 主题提供了灵活的 SCSS 定制系统。在项目根目录创建 `assets/scss/custom.scss` 即可自定义样式。
 
-包含自定义 `.scss` 样式文件的目录相对于 **你的项目根目录** 的路径为 `assets/scss`。
+主题开放了 SCSS mixins、函数和 CSS 自定义属性供定制使用。完整 API 请参阅 [SCSS API 参考](/references/scss/)。
 
-在 `assets/scss/override.scss` 中，你可以覆盖 `themes/FixIt/assets/scss/_variables.scss` 中的变量以自定义样式。
+### 主题适配 {#theme-adaptation}
 
-在 `assets/scss/custom.scss` 中，你可以添加一些 CSS 样式代码以自定义样式。
+你可以通过 `hugo.toml` 中的 `[params.appearance]` 配置外观。这是自定义颜色、字体和尺寸的推荐方式。
+
+```toml
+[params.appearance]
+global_font_size = "16px"
+global_font_color = "#1f2328"
+global_link_color = "#161209"
+```
+
+所有外观变量定义在 [`scss-vars.html`](https://github.com/hugo-fixit/FixIt/blob/{{< param docs.fixit_version >}}/layouts/_partials/function/scss-vars.html)。
 
 ### 字体样式 {#font-style}
 
-以下字体样式均在 `assets/scss/override.scss` 中定义。
+自定义字体需要两步：导入字体 CSS，然后配置字体族。
 
-自定义全局字体，以开源字体 [霞鹜文楷][LxgwWenKai] 为例：
+**自定义全局字体**，以开源字体 [霞鹜文楷][LxgwWenKai] 为例：
 
-```scss
-@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
-$global-font-family: 'LXGW WenKai', $global-font-family;
-```
-
-自定义代码字体，以开源字体 [Fira Mono][Fira] 为例：
-
-```scss
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, $code-font-family;
-```
-
-如果你想自定义的字体没有公共 CDN，你可以手动分包或 [在线分包][online-split] 发布到 NPM，以 [沐目体][MMT] 为例：
-
-```scss
-@import url('https://cdn.jsdelivr.net/npm/mmt-webfont/dist/result.css');
-$global-font-family: 'MMT', $global-font-family;
-```
-
-### 页面宽度 {#page-style}
-
-{{< version 0.2.13 >}}
-
-FixIt 主题提供了页面宽度配置选项 `page_style` 并提供三种选项。
-
-- **narrow** 保留 `<v0.2.13` 页面目录宽度比
-- **normal** 新的默认页面目录宽度比
-- **wide** 较大的页面目录宽度比
-
-另外，你还可以在 `assets/scss/custom.scss` 中，自定义 `page_style` 值
-
-例如： `page_style="custom"`
+在 `assets/scss/custom.scss` 中导入字体，并通过 `[params.appearance]` 配置字体族：
 
 ```scss {name="assets/scss/custom.scss"}
-[data-page-style='custom'] {
-  %page-style {
-    @include media('xl') {
-      width: ROUND(70%, 2px);
-      max-width: 1600px;
-    }
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+```
 
-    @include media('lg') {
-      width: ROUND(60%, 2px);
-    }
+```toml
+[params.appearance]
+global_font_family = "LXGW WenKai, system-ui, sans-serif"
+```
 
-    @include media('md') {
-      width: ROUND(56%, 2px);
-    }
+**自定义代码字体**，以开源字体 [Fira Mono][Fira] 为例：
+
+```scss {name="assets/scss/custom.scss"}
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
+```
+
+```toml
+[params.appearance]
+code_font_family = "Fira Mono, Menlo, Consolas, monospace"
+```
+
+如果你想自定义的字体没有公共 CDN，你可以手动分包或 [在线分包][online-split] 发布到 NPM。以 [沐目体][MMT] 为例：
+
+```scss {name="assets/scss/custom.scss"}
+@import url('https://cdn.jsdelivr.net/npm/mmt-webfont/dist/result.css');
+```
+
+```toml
+[params.appearance]
+global_font_family = "MMT, system-ui, sans-serif"
+```
+
+### 页面样式 {#page-style}
+
+{{< version 0.3.10 changed >}}
+
+FixIt 主题通过 `page_style` 提供内置页面宽度选项：
+
+- **narrow** — 较窄的页面/目录宽度比
+- **normal** — 默认页面/目录宽度比
+- **wide** — 较大的页面/目录宽度比
+
+如需自定义页面宽度，在 `assets/scss/custom.scss` 中使用 `page-style` mixin：
+
+```scss {name="assets/scss/custom.scss"}
+@include page-style('custom') {
+  @include media('xl') {
+    width: ROUND(70%, 2px);
+    max-width: 1600px;
+  }
+  @include media('lg') {
+    width: ROUND(60%, 2px);
+  }
+  @include media('md') {
+    width: ROUND(56%, 2px);
+  }
+}
+```
+
+然后在站点配置中设置 `page_style = "custom"`。
+
+### 响应式和媒体查询 {#media-queries}
+
+FixIt 主题提供了 `media` mixin 用于响应式断点：
+
+| 目标 | 最小宽度 | 最大宽度 | 方向         |
+| ---- | -------- | -------- | ------------ |
+| `xs` | —        | 679.9px  | only         |
+| `sm` | 680px    | 959.9px  | only/up/down |
+| `md` | 960px    | 1199.9px | only/down    |
+| `lg` | 1200px   | 1439.9px | only/up      |
+| `xl` | 1440px   | —        | only         |
+
+在 `assets/scss/custom.scss` 中使用：
+
+```scss {name="assets/scss/custom.scss"}
+.my-element {
+  @include media('xl') {
+    width: 1200px;
+  }
+  @include media('sm') {
+    width: 100%;
   }
 }
 ```
 
 ### 打印样式 {#print-style}
 
-{{< version 0.2.13 >}}
+FixIt 主题通过 UnoCSS 提供了打印视图相关的工具类：
 
-在 FixIt 主题中，提供有三个打印视图相关的 CSS 类
-
-- `page-break-before` 在元素之前插入分页符
-- `page-break-after` 在元素之后插入分页符
-- `d-none-print` 在打印视图中隐藏元素
-
-下面是一个简单的例子：
+- `break-before-page` — 在元素之前插入分页符
+- `break-after-page` — 在元素之后插入分页符
+- `print:hidden` — 在打印视图中隐藏元素
 
 ```html
-<div class="page-break-before"></div>
-<div class="page-break-after"></div>
-<div class="d-none-print">
+<div class="break-before-page"></div>
+<div class="break-after-page"></div>
+<div class="print:hidden">
   你希望在打印视图中隐藏的某些内容写在此处。
 </div>
 ```
 
-如果设置 `goldmark.parser.attribute.block` 为 `true`，你也可以这样用：
+如果设置 `goldmark.parser.attribute.block` 为 `true`：
 
 ```markdown
-{.page-break-before}
-{.page-break-after}
+{.break-before-page}
+{.break-after-page}
 
 你希望在打印视图中隐藏的某些内容写在此处。
-{.d-none-print}
+{.print:hidden}
 ```
 
 ## 自定义脚本
 
-{{< version 0.2.16 >}}
+在项目根目录创建 `assets/js/custom.ts`（或 `custom.js`），它将在每个页面末尾执行。
 
-包含自定义脚本文件 `custom.js` 的目录相对于 **你的项目根目录** 的路径为 `assets/js`。
+通过 `window.fixit` 访问 FixIt 公共 API。完整 API 请参阅 [JavaScript API 参考](/references/javascript/)。
 
-如果脚本文件 `assets/js/custom.js` 存在，它将在每篇文章和页面的末尾执行。
+```typescript {name="assets/js/custom.ts"}
+const { fixit } = window as any
+
+class CustomScript {
+  constructor() {
+    this.init()
+  }
+
+  init() {
+    console.log('FixIt version:', fixit.version)
+
+    // 监听主题切换
+    fixit.eventBus.on('fixit:switch-theme', ({ detail }: any) => {
+      console.log('Theme switched:', detail.mode)
+    })
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  void new CustomScript()
+})
+```
 
 ## 自定义模板
 
@@ -139,45 +195,37 @@ Hugo 允许你通过覆盖主题模板来改造主题，例如：你可以创建
 
 {{< version 0.3.7 >}}
 
-为了避免升级冲突问题，基于这一特性，FixIt 主题开放了统一的自定义模板入口文件及配置，详见 [开放的自定义块][block]。
+为了避免升级冲突问题，基于这一特性，FixIt 主题开放了统一的自定义模板入口文件及配置，详见 [开放的自定义块]({{< relref "blocks" >}})。
 
 ## 自定义 Admonition {#custom-admonitions}
 
 {{< version 0.3.13 >}}
 
-你可以自定义 [Admonition][sc-admonition]，甚至可以覆盖默认 Admonition。
+你可以使用 `admonition` mixin 自定义 [Admonition][sc-admonition]。
 
-要自定义 Admonition，请在站点配置文件中更改 `params.admonition`。例如：
+首先，在 `hugo.toml` 中添加图标：
 
 ```toml
-[params]
-
 [params.admonition]
 ban = "fa-solid fa-ban"
 ```
 
-然后在项目目录 `assets/scss/override.scss` 中创建以下 SCSS 块：
+然后在 `assets/scss/custom.scss` 中添加样式：
 
-```scss {title="_override.scss"}
-// Custom admonitions style
-$custom-admonition-map: (
-  ban: (
-    color: #ff3d00,
-    bg-color: rgba(255, 61, 0, 0.1),
-  ),
-);
-
-$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
+```scss {name="assets/scss/custom.scss"}
+.admonition {
+  @include admonition(ban, #ff3d00, rgba(255, 61, 0, 0.1));
+}
 ```
 
-如果你需要修改自定义 Admonition 的默认标题，你可以在对应的语言文件中添加以下内容：
+如需修改自定义 Admonition 的默认标题，在对应的语言文件中添加：
 
 ```toml
 [admonition]
 ban = "禁止"
 ```
 
-之后，你可以在内容中使用自定义 Admonition：
+之后，在内容中使用自定义 Admonition：
 
 {{< admonition ban "" false >}}
 Shortcode 语法：
@@ -203,44 +251,42 @@ Alert Markdown 扩展语法：
 
 {{< version 0.3.14 >}}
 
-你可以自定义 [任务列表][task-list]，甚至可以覆盖默认任务列表。
+你可以使用 `task-icon` 和 `task-text` mixin 自定义 [任务列表][task-list]。
 
-要自定义任务列表，请在站点配置文件中更改 `params.taskList`。例如：
+首先，在 `hugo.toml` 中添加图标：
 
 ```toml
-[params]
-
 [params.taskList]
 tip = "fa-regular fa-lightbulb"
 ```
 
-如果你需要修改自定义任务列表的默认标题，你可以在对应的语言文件中添加以下内容：
+如需修改默认标题：
 
 ```toml
 [task-list]
 tip = "提示"
 ```
 
-之后，你可以在内容中使用自定义任务列表：
+之后，在内容中使用自定义任务列表：
 
 ```markdown
 - [tip] 这是一个带有提示图标的自定义任务列表类型。
 ```
 
-呈现的输出效果如下：
+呈现的输出效果：
 
 - [tip] 这是一个带有提示图标的自定义任务列表类型。
 
-如果你想修改任务列表默认样式，你可以在项目目录 `assets/scss/custom.scss` 中添加以下 SCSS 块：
+如需自定义样式，在 `assets/scss/custom.scss` 中添加：
 
 ```scss {name="assets/scss/custom.scss"}
 li[data-task='tip'] {
-  --fi-task-color: #9974F7;
-  --fi-checkbox-color: #EA9E36;
+  @include task-icon(#EA9E36);
+  @include task-text(#9974F7);
 }
 ```
 
-上面的例子将改变任务列表的颜色，如下所示：
+上面的例子将改变任务列表的颜色：
 
 - [tip] 这是一个带有提示图标的自定义任务列表类型。
 {style="--fi-task-color: #9974F7;--fi-checkbox-color: #EA9E36;"}
@@ -249,8 +295,6 @@ li[data-task='tip'] {
 > 这只是主题文档的一个示例，并不包含在主题中。
 
 ## 引入主题组件 {#import-theme-components}
-
-> 本章节不对主题组件的概念或者开发进行赘述，如果你对此感兴趣，可以查看 [贡献指南 - 开发组件][components]。
 
 > **为什么都是基于 FixIt 主题，别人博客的某些功能我却没有？**
 {.blockquote-center}
@@ -308,24 +352,14 @@ li[data-task='tip'] {
     [params]
 
     [params.custom_partials]
-    head = []
-    menu_desktop = []
-    menu_mobile = []
-    profile = []
-    aside = []
-    comment = []
-    footer = []
-    widgets = []
+    # ... other partials
     assets = [ "inject/component-projects.html" ]
-    post_toc_before = []
-    post_toc_after = []
-    post_content_before = []
-    post_content_after = []
-    post_footer_before = []
-    post_footer_after = []
+    # ... other partials
     ```
 
 3. **主题组件引入完成**，根据不同组件文档使用组件功能即可。
+
+> 本章节不对主题组件的概念或者开发进行赘述，如果你对此感兴趣，可以查看 [贡献指南 - 开发组件][components]。
 
 ## PWA 支持
 

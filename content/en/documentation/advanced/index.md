@@ -22,157 +22,210 @@ Discover advanced usage of the Hugo - **FixIt** theme.
 
 > [!note] Hugo **extended** version is necessary for the style customization.
 
-**FixIt** theme has been built to be as configurable as possible by defining custom `.scss` style files.
+**FixIt** theme provides a flexible SCSS customization system. Create `assets/scss/custom.scss` in your project root to customize styles.
 
-The directory including the custom `.scss` style files is `assets/scss` relative to **your project root directory**.
+The theme exposes SCSS mixins, functions, and CSS custom properties for customization. See the [SCSS API Reference](/references/scss/) for the full API.
 
-In `assets/scss/override.scss`, you can override the variables in `themes/FixIt/assets/scss/_variables.scss` to customize the style.
+### Theme Adaptation {#theme-adaptation}
 
-In `assets/scss/custom.scss`, you can add some css style code to customize the style.
+You can configure appearance via `[params.appearance]` in `hugo.toml`. This is the recommended way to customize colors, fonts, and sizes.
+
+```toml
+[params.appearance]
+global_font_size = "16px"
+global_font_color = "#1f2328"
+global_link_color = "#161209"
+```
+
+All appearance variables are defined in [`scss-vars.html`](https://github.com/hugo-fixit/FixIt/blob/{{< param docs.fixit_version >}}/layouts/_partials/function/scss-vars.html).
 
 ### Fonts Style {#font-style}
 
-The following font styles are defined in `assets/scss/override.scss`.
+Customizing fonts requires two steps: import the font CSS, then configure the font family.
 
 To customize the global font, take the open-source font [LXGW WenKai][LxgwWenKai] as an example:
 
-```scss
+Import the font in `assets/scss/custom.scss`, then configure the font family via `[params.appearance]`:
+
+```scss {name="assets/scss/custom.scss"}
 @import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
-$global-font-family: 'LXGW WenKai', $global-font-family;
+```
+
+```toml
+[params.appearance]
+global_font_family = "LXGW WenKai, system-ui, sans-serif"
 ```
 
 To customize the code font, take the open-source font [Fira Mono][Fira] as an example:
 
-```scss
+```scss {name="assets/scss/custom.scss"}
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700&display=swap&subset=latin-ext');
-$code-font-family: Fira Mono, $code-font-family;
+```
+
+```toml
+[params.appearance]
+code_font_family = "Fira Mono, Menlo, Consolas, monospace"
 ```
 
 If you want to customize a font that does not have a public CDN, you can manually or [online split][online-split] it and publish it to NPM. Take the [MMT][MMT] typeface as an example:
 
-```scss
+```scss {name="assets/scss/custom.scss"}
 @import url('https://cdn.jsdelivr.net/npm/mmt-webfont/dist/result.css');
-$global-font-family: 'MMT', $global-font-family;
+```
+
+```toml
+[params.appearance]
+global_font_family = "MMT, system-ui, sans-serif"
 ```
 
 ### Page Style {#page-style}
 
 {{< version 0.3.10 changed >}}
 
-The FixIt theme provides a page width configuration option `page_style` and three values.
+The FixIt theme provides built-in page width options via `page_style`:
 
-- **narrow** Keep `<v0.2.13` page/toc width ratio
-- **normal** New default page/toc width ratio
-- **wide** Larger page/toc width ratio
+- **narrow** — Narrow page/toc width ratio
+- **normal** — Default page/toc width ratio
+- **wide** — Larger page/toc width ratio
 
-In addition, you can also customize the `page_style` value in `assets/scss/custom.scss`
-
-For example: `page_style="custom"`
+For a custom page width, use the `page-style` mixin in `assets/scss/custom.scss`:
 
 ```scss {name="assets/scss/custom.scss"}
-[data-page-style='custom'] {
-  %page-style {
-    @include media('xl') {
-      width: ROUND(70%, 2px);
-      max-width: 1600px;
-    }
+@include page-style('custom') {
+  @include media('xl') {
+    width: ROUND(70%, 2px);
+    max-width: 1600px;
+  }
+  @include media('lg') {
+    width: ROUND(60%, 2px);
+  }
+  @include media('md') {
+    width: ROUND(56%, 2px);
+  }
+}
+```
 
-    @include media('lg') {
-      width: ROUND(60%, 2px);
-    }
+Then set `page_style = "custom"` in your site configuration.
 
-    @include media('md') {
-      width: ROUND(56%, 2px);
-    }
+### Responsive Media Queries {#media-queries}
+
+The FixIt theme provides a `media` mixin for responsive breakpoints:
+
+| Target | Min Width | Max Width | Direction    |
+| ------ | --------- | --------- | ------------ |
+| `xs`   | —         | 679.9px   | only         |
+| `sm`   | 680px     | 959.9px   | only/up/down |
+| `md`   | 960px     | 1199.9px  | only/down    |
+| `lg`   | 1200px    | 1439.9px  | only/up      |
+| `xl`   | 1440px    | —         | only         |
+
+Usage in `assets/scss/custom.scss`:
+
+```scss {name="assets/scss/custom.scss"}
+.my-element {
+  @include media('xl') {
+    width: 1200px;
+  }
+  @include media('sm') {
+    width: 100%;
   }
 }
 ```
 
 ### Print Style {#print-style}
 
-{{< version 0.2.13 >}}
+FixIt theme provides UnoCSS utility classes for print view:
 
-There are three css common class for print view in FixIt Theme.
-
-- `page-break-before` Insert page break before element
-- `page-break-after` Insert page break after element
-- `d-none-print` Hide elements in print view
-
-Here is a simple exmple:
+- `break-before-page` — Insert page break before element
+- `break-after-page` — Insert page break after element
+- `print:hidden` — Hide elements in print view
 
 ```html
-<div class="page-break-before"></div>
-<div class="page-break-after"></div>
-<div class="d-none-print">
+<div class="break-before-page"></div>
+<div class="break-after-page"></div>
+<div class="print:hidden">
   Something you want to hide in the print view is written here.
 </div>
 ```
 
-If you set `goldmark.parser.attribute.block` to `true`, you can also use:
+If `goldmark.parser.attribute.block` is set to `true`:
 
 ```markdown
-{.page-break-before}
-{.page-break-after}
+{.break-before-page}
+{.break-after-page}
 
 Something you want to hide in the print view is written here.
-{.d-none-print}
+{.print:hidden}
 ```
 
 ## Script Customization
 
-{{< version 0.2.16 >}}
+Create `assets/js/custom.ts` (or `custom.js`) in your project root. It will be executed at the end of each page.
 
-The directory including the custom script file named `custom.js` is `assets/js` relative to **your project root directory**.
+Access the FixIt public API via `window.fixit`. See the [JavaScript API Reference](/references/javascript/) for the full API.
 
-If the script file `assets/js/custom.js` exists, it will be executed at the end of each post and page.
+```typescript {name="assets/js/custom.ts"}
+const { fixit } = window as any
+
+class CustomScript {
+  constructor() {
+    this.init()
+  }
+
+  init() {
+    console.log('FixIt version:', fixit.version)
+
+    // Listen to theme changes
+    fixit.eventBus.on('fixit:switch-theme', ({ detail }: any) => {
+      console.log('Theme switched:', detail.mode)
+    })
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  void new CustomScript()
+})
+```
 
 ## Templates Customization
 
-Hugo allows you to modify the theme by overriding the theme templates, for example: you can create `layouts/404.html` file to override `themes/FixIt/layouts/404.html`, so as to meet the needs of custom 404 page template of FixIt theme.
+Hugo allows you to modify the theme by overriding theme templates, for example: you can create `layouts/404.html` to override `themes/FixIt/layouts/404.html`.
 
-However, for most of the templates, FixIt theme generally doesn't recommend you do this, as it may make theme upgrades difficult in the future.
+However, for most templates, FixIt theme generally doesn't recommend this, as it may make theme upgrades difficult.
 
 {{< version 0.3.7 >}}
 
-In order to avoid upgrade conflicts, based on this feature, the FixIt theme opens a unified custom template entry file and configuration, see [Open Custom Blocks][block].
+To avoid upgrade conflicts, FixIt theme opens a unified custom template entry file and configuration. See [Open Custom Blocks]({{< relref "blocks" >}}).
 
 ## Custom Admonitions {#custom-admonitions}
 
 {{< version 0.3.13 >}}
 
-You can define custom [admonitions][sc-admonition], or even overwrite the default admonitions.
+You can define custom [admonitions][sc-admonition] using the `admonition` mixin.
 
-To define a custom admonition, change `params.admonition` in your site configuration file. For example:
+First, add the icon in `hugo.toml`:
 
 ```toml
-[params]
-
 [params.admonition]
 ban = "fa-solid fa-ban"
 ```
 
-Then create the following SCSS block in your project directory `assets/scss/override.scss`:
+Then add the style in `assets/scss/custom.scss`:
 
-```scss {title="_override.scss"}
-// Custom admonition style
-$custom-admonition-map: (
-  ban: (
-    color: #ff3d00,
-    bg-color: rgba(255, 61, 0, 0.1),
-  ),
-);
-
-$admonition-color-map: map-merge($admonition-color-map, $custom-admonition-map);
+```scss {name="assets/scss/custom.scss"}
+.admonition {
+  @include admonition(ban, #ff3d00, rgba(255, 61, 0, 0.1));
+}
 ```
 
-If you need to change the default title of a custom admonition, you can add the following content to the corresponding language file:
+To customize the default title, add to the language file:
 
 ```toml
 [admonition]
 ban = "Forbidden"
 ```
 
-After that, you can use the custom admonition in your content:
+Then use it in content:
 
 {{< admonition ban "" false >}}
 Shortcode syntax:
@@ -194,48 +247,46 @@ Alerts Markdown extension syntax:
 > This is just an example of the theme documentation and is not included in the theme.
 {{< /admonition >}}
 
-## Custom Task lists {#custom-task-lists}
+## Custom Task Lists {#custom-task-lists}
 
 {{< version 0.3.14 >}}
 
-You can define custom [task lists][task-list], or even overwrite the default task lists.
+You can define custom [task lists][task-list] using the `task-icon` and `task-text` mixins.
 
-To define a custom task list, change `params.taskList` in your site configuration file. For example:
+First, add the icon in `hugo.toml`:
 
 ```toml
-[params]
-
 [params.taskList]
 tip = "fa-regular fa-lightbulb"
 ```
 
-If you need to change the default title of a custom task list, you can add the following content to the corresponding language file:
+To customize the default title:
 
 ```toml
 [task-list]
 tip = "Tip"
 ```
 
-After that, you can use the custom task list in your content:
+Then use it in content:
 
 ```markdown
 - [tip] This is a custom task list type with a tip icon.
 ```
 
-The rendered output looks like this:
+The rendered output:
 
 - [tip] This is a custom task list type with a tip icon.
 
-If you want to change the default task list style, you can add the following SCSS block in your project directory `assets/scss/custom.scss`:
+To customize the style, add in `assets/scss/custom.scss`:
 
 ```scss {name="assets/scss/custom.scss"}
 li[data-task='tip'] {
-  --fi-task-color: #9974F7;
-  --fi-checkbox-color: #EA9E36;
+  @include task-icon(#EA9E36);
+  @include task-text(#9974F7);
 }
 ```
 
-Above example will change the color of the task list, like this:
+Above example will change the color of the task list:
 
 - [tip] This is a custom task list type with a tip icon.
 {style="--fi-task-color: #9974F7;--fi-checkbox-color: #EA9E36;"}
@@ -244,8 +295,6 @@ Above example will change the color of the task list, like this:
 > This is just an example of the theme documentation and is not included in the theme.
 
 ## Import Theme Components {#import-theme-components}
-
-> This section does not elaborate on the concept or development of theme components. If you are interested, you can check the [Contributing - Develop Theme Components][components].
 
 > **Why do others have certain features on their blogs based on the FixIt theme, but I don't?**
 {.blockquote-center}
@@ -303,24 +352,14 @@ Next, taking the [component-projects] component as an example, we will introduce
     [params]
 
     [params.custom_partials]
-    head = []
-    menu_desktop = []
-    menu_mobile = []
-    profile = []
-    aside = []
-    comment = []
-    footer = []
-    widgets = []
+    # ... other partials
     assets = [ "inject/component-projects.html" ]
-    post_toc_before = []
-    post_toc_after = []
-    post_content_before = []
-    post_content_after = []
-    post_footer_before = []
-    post_footer_after = []
+    # ... other partials
     ```
 
 3. **Theme component import completed**, use the component features according to different component documents.
+
+> This section does not elaborate on the concept or development of theme components. If you are interested, you can check [Contributing - Develop Theme Components][components].
 
 ## PWA Support
 

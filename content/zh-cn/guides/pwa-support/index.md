@@ -17,9 +17,6 @@ resources:
 toc:
   auto: false
 lightgallery: true
-repost:
-  enable: true
-  url: https://hugodoit.com/zh-cn/pwa-support/
 ---
 
 了解如何在 FixIt 主题中配置渐进式网络应用程序 (PWA)。
@@ -39,7 +36,7 @@ repost:
 
 这些功能可能对某些网站（例如此文档站点）很有用，但是将个人博客配置为 PWA 就没有多少意义。当然一切都取决于你的选择，无论如何 FixIt 主题都将为你提供开启此功能的选项。
 
-## 如何将使用 FixIt 主题的静态网站配置为 PWA? {#setup-in-fixit}
+## 在 FixIt 中配置 PWA {#setup-in-fixit}
 
 ### 配置 manifest {#site.webmanifest}
 
@@ -78,10 +75,7 @@ type = "image/png"
 ```toml
 [outputs]
 home = [
-  "html",
-  "rss",
-  "archives",
-  "search",
+  # others
   "offline",
   "manifest"
 ]

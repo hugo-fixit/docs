@@ -1,6 +1,6 @@
 ---
-title: 内容管理概述
-shortTitle: 概述
+title: 内容管理总览
+shortTitle: 总览
 date: 2023-02-24T17:27:22+08:00
 aliases:
   - /zh-cn/theme-documentation-content/
@@ -64,7 +64,7 @@ lightgallery: true
 
 ```markdown
 ---
-title: 内容管理概述
+title: 内容管理总览
 date: 2024-04-06T12:57:26+08:00
 type: posts
 ---

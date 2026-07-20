@@ -1,7 +1,7 @@
 ---
-title: Hugo FixIt 配置概述
-linkTitle: 配置概述
-shortTitle: 概述
+title: Hugo FixIt 配置总览
+linkTitle: 配置总览
+shortTitle: 总览
 date: 2024-03-07T15:37:59+08:00
 aliases:
   - /zh-cn/theme-documentation-basics/

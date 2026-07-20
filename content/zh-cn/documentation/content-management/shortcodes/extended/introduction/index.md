@@ -1,6 +1,6 @@
 ---
-title: 扩展 Shortcodes 概述
-shortTitle: 概述
+title: 扩展 Shortcodes 总览
+shortTitle: 总览
 date: 2023-02-24T22:11:39+08:00
 aliases:
   - /zh-cn/theme-documentation-extended-shortcodes/
