@@ -5,7 +5,7 @@
 -}}
 
 {{- if in $follows $author.name | and (.Store.Get "showToc") -}}
-  <div class="follow-container">
+  <div class="follow-container{{ with .Params.password }} encrypted-hidden{{ end }}">
     <a href="{{ $author.link }}" class="author-link" target="_blank">
       <img src="{{ $author.avatar }}" alt="{{ $author.name }}" class="author-avatar"> {{ $author.name }}
     </a>
@@ -13,5 +13,5 @@
       <i class="fa-brands fa-github fa-fw fa-beat" aria-hidden="true"></i> {{ T "follow.btn" }}
     </a>
   </div>
-  <hr class="hr-edge-weak">
+  <hr class="hr-edge-weak{{ with .Params.password }} encrypted-hidden{{ end }}">
 {{- end -}}

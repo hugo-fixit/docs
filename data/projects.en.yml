@@ -38,6 +38,7 @@
   repos:
     # - hugo-fixit/skills
     - hugo-fixit/fixit-cli
+    - hugo-fixit/fixit-encrypt.go
     - hugo-fixit/component-skeleton
     - hugo-fixit/librarybot
     - hugo-fixit/action-component-list
