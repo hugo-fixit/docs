@@ -9,7 +9,7 @@
   "alias": ["fixit.lruihao.cn", "hugofixit"],
   "headers": [
     {
-      "source": "/service-worker.min.js",
+      "source": "/sw.min.js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -39,13 +39,13 @@
   ],
   "redirects": [
     {
-      "source": "/documentation/:path",
-      "destination": "/docs/:path",
+      "source": "/documentation/(.*)",
+      "destination": "/docs/$1",
       "statusCode": 301
     },
     {
-      "source": "/zh-cn/documentation/:path",
-      "destination": "/zh-cn/docs/:path",
+      "source": "/zh-cn/documentation/(.*)",
+      "destination": "/zh-cn/docs/$1",
       "statusCode": 301
     }
   ]
