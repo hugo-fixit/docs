@@ -401,7 +401,7 @@ fullscreen = true
 # Get PostChat Key from my invitation link, thanks for your support!
 # https://ai.zhheo.com/console/login?InviteID=85041330
 [post_chat]
-enable = true
+enable = false
 key = "P-2J0JXDUZY4EALD3P"
 # How users initiate chats.
 # available values: ["iframe", "magic"]
@@ -434,7 +434,7 @@ hot_words = true
 # Summary AI configuration.
 # See: [PostSummary](https://ai.zhheo.com/docs/summary.html)
 [post_summary]
-enable = true
+enable = false
 # If you set `params.post_chat.key`, you don't need to set `params.post_summary.key`.
 key = ""
 title = ""
