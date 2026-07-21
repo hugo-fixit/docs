@@ -37,6 +37,8 @@ keywords = [
 
 **FixIt** 主题提供的所有配置项都记录在本页中。你也可以在主题的 [hugo.toml](https://github.com/hugo-fixit/FixIt/blob/{{< param docs.fixit_version >}}/hugo.toml) 文件中查看完整的配置预览。
 
+<!-- Prompt: 根据英文版主题配置文档的更改和中文翻译规则帮我更新中文版 -->
+
 <!--
 翻译规则：
 
@@ -134,7 +136,7 @@ issue_tpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%
 ```
 
 repo
-: `string` 示例："https://github.com/hugo-fixit/docs"。默认：`""`。
+: `string` 示例：`"https://github.com/hugo-fixit/docs"`。默认：`""`。
 
 branch
 : `string` 默认：`"main"`。
@@ -3232,9 +3234,9 @@ giscus
 ```
 
 css
-: `map` 从本地 assets 加载 CSS。示例：someCSS = "css/some.css"。从远程 CDN 加载 CSS。示例：someCSS = "https://cdn.example.com/some.css"。
+: `map` 从本地 assets 加载 CSS。示例：`someCSS = "css/some.css"`。从远程 CDN 加载 CSS。示例：`someCSS = "https://cdn.example.com/some.css"`。
 
 js
-: `map`
+: `map` 从本地 assets 加载 JS。示例：`someJS = "js/some.js"`。从远程 CDN 加载 JS。示例：`someJS = "https://cdn.example.com/some.js"`。
 
 <!-- HUGO_FIXIT_PARAMS:END -->

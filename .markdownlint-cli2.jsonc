@@ -9,6 +9,6 @@
     ".github",
     "**/conflicting/**",
     "**/orphaned/**",
-    "**/references/api/*.md"
+    "**/references/partials/*.md"
   ]
 }

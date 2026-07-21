@@ -1,7 +1,7 @@
 ---
-title: References Introduction
-shortTitle: Introduction
-date: 2026-07-20T15:07:58+08:00
+title: References Overview
+shortTitle: Overview
+date: 2024-05-08T02:56:39+08:00
 description: Overview of FixIt theme's open API references.
 collections:
   - References
@@ -34,6 +34,6 @@ The FixIt theme opens custom template blocks that you can use to extend the them
 
 ## Hugo Partials
 
-> Coming soon.
+Reference for FixIt's Hugo partials (`layouts/_partials/`), covering parameters, return values, and usage examples for template functions, plugins, and layout components.
 
-Auto-generated documentation for FixIt's Hugo partials (`layouts/_partials/`), covering template functions, variables, and extension points.
+[View Hugo Partials Reference]({{< relref "partials" >}})

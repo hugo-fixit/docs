@@ -114,7 +114,7 @@ issue_tpl = "title=[BUG]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%
 ```
 
 repo
-: `string` Example: "https://github.com/hugo-fixit/docs". Default is `""`.
+: `string` Example: `"https://github.com/hugo-fixit/docs"`. Default is `""`.
 
 branch
 : `string` Default is `"main"`.
@@ -3212,10 +3212,10 @@ giscus
 ```
 
 css
-: `map` Load some CSS from local assets. Example: someCSS = "css/some.css". Load some CSS from remote CDN. Example: someCSS = "https://cdn.example.com/some.css".
+: `map` Load some CSS from local assets. Example: `someCSS = "css/some.css"`. Load some CSS from remote CDN. Example: `someCSS = "https://cdn.example.com/some.css"`.
 
 js
-: `map`
+: `map` Load some JS from local assets. Example: `someJS = "js/some.js"`. Load some JS from remote CDN. Example: `someJS = "https://cdn.example.com/some.js"`.
 <!-- HUGO_FIXIT_PARAMS:END -->
 
 <!-- link reference definition -->
