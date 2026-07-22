@@ -13,6 +13,8 @@ tags:
   - Basics
 categories:
   - Documentation
+collections:
+  - Configuration
 lightgallery: true
 heading:
   capitalize: false

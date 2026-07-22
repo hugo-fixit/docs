@@ -7,6 +7,8 @@ categories:
   - Documentation
 tags:
   - Configuration
+collections:
+  - Configuration
 lightgallery: true
 heading:
   capitalize: false

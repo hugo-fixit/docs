@@ -7,12 +7,14 @@ description: 了解如何配置你的 Hugo FixIt 站点。
 resources:
   - name: featured-image
     src: cover.webp
+categories:
+  - Documentation
 tags:
   - Configuration
   - Installation
   - Basics
-categories:
-  - Documentation
+collections:
+  - Configuration
 lightgallery: true
 heading:
   capitalize: false

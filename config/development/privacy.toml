@@ -1,0 +1,16 @@
+# -------------------------------------------------------------------------------------
+# Privacy Configuration
+# See: https://gohugo.io/configuration/privacy/
+# -------------------------------------------------------------------------------------
+
+[instagram]
+disable = true
+
+[vimeo]
+disable = true
+
+[x]
+disable = true
+
+[youtube]
+disable = true
