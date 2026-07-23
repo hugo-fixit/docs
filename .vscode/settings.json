@@ -1,10 +1,5 @@
 {
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "tsconfig.json": "tsconfig.*.json, env.d.ts",
-    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig"
-  },
-  // Disable the default formatter, use eslint instead
+  // Disable the default formatter, use ESLint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
 
