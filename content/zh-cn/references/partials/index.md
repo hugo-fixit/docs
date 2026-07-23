@@ -106,27 +106,68 @@ FixIt 主题提供 **92** 个 Hugo partials，分布在 **13** 个分组中。
 
 ### base/breadcrumb.html
 
-*暂无文档。*
+渲染当前页面的面包屑导航。
+
+显示从站点根目录到当前页面的层级路径。支持可配置的分隔符、粘性模式、首页可见性和标题大写。
+
+调用自：layouts/baseof.html。
 
 ### base/comment.html
 
-*暂无文档。*
+评论系统集成 partial。
+
+渲染评论容器并注入特定提供者的 CSS/JS 资源。支持的提供者：Artalk、Disqus、Gitalk、Valine、Waline、Facebook、Telegram、Commento、Utterances、Twikoo、Giscus 和自定义评论系统。
+
+调用自：layouts/baseof.html。
 
 ### base/footer.html
 
-*暂无文档。*
+站点页脚 partial。
+
+渲染带可配置部分的页面页脚：
+
+- Powered by（Hugo 和 FixIt 主题链接）
+- 版权信息（年份、作者、许可证）
+- 站点运行时间计数器
+- 访客统计（不蒜子）
+- 备案信息（gov/ICP）
+
+调用自：layouts/baseof.html。
 
 ### base/header.html
 
-*暂无文档。*
+桌面端和移动端站点头部及导航。
+
+渲染两种头部变体：
+
+- 桌面端：完整导航菜单，含子菜单、搜索触发器、主题切换和语言切换器。
+- 移动端：紧凑头部，含汉堡菜单、搜索、主题切换和语言选择。
+
+两者均支持 TypeIt 动画标题/副标题、GitHub corner 集成和自定义菜单项。
+
+调用自：layouts/baseof.html。
 
 ### base/paginator.html
 
-*暂无文档。*
+带省略号的分页组件。
+
+渲染分页页面列表，对大量页面使用省略号。显示当前页附近的页码，远处范围显示省略号标记。
 
 ### base/widgets.html
 
-*暂无文档。*
+全局小组件层 partial。
+
+在所有页面上渲染浮动 UI 元素：
+
+- 固定操作按钮（返回顶部、目录抽屉、查看评论）
+- GitHub corner 链接
+- 搜索对话框
+- 阅读进度条
+- 链接守卫确认对话框
+- Service Worker 更新通知
+- Noscript 警告
+
+调用自：layouts/baseof.html。
 
 ## base/head/
 
@@ -142,7 +183,16 @@ CSS partial —— 基础和页面特定的 CSS 加载。
 
 ### base/head/index.html
 
-*暂无文档。*
+Head partial —— 综合 head 区域模板。
+
+整合所有 head 相关内容，包括：
+
+- META：SEO、Open Graph、Twitter Cards 和应用元数据的 meta 标签
+- LINK：Favicon、canonical 链接、RSS feed 和 CSS 样式表加载
+- SEO：页面和首页的 Schema.org 结构化数据
+- SCRIPT：提前加载的脚本（例如主题配色方案检测）
+
+调用自：base/baseof.html。
 
 ### base/head/twitter-cards.html
 
@@ -161,7 +211,9 @@ CSS partial —— 基础和页面特定的 CSS 加载。
 
 ### feed/rss.html
 
-*暂无文档。*
+RSS feed 生成 partial。
+
+为当前 section 或首页渲染 RSS 2.0 XML feed。支持全文或摘要模式，过滤密码保护和隐藏页面，并包含封面图片、作者信息和 follow challenge 标签。
 
 ## function/
 
@@ -249,7 +301,20 @@ Output: slice (dict "userName" "John") (dict "userAge" 30)
 
 ### function/content.html
 
-*暂无文档。*
+内容处理管道 partial。
+
+应用一系列内容转换：Ruby 注音、分数、Font Awesome 图标、任务列表、标记文本、颜色预览和 HTML 转义。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.Content` | `String` | 原始 HTML 内容 |
+| `[.Ruby]` | `Boolean` | 是否处理 Ruby 注音 |
+| `[.Fraction]` | `Boolean` | 是否处理分数语法 |
+| `[.Fontawesome]` | `Boolean` | 是否处理 Font Awesome 短代码 |
+
+**返回值：** `String` - 处理后的内容
 
 ### function/dos2unix.html
 
@@ -371,7 +436,16 @@ Font Awesome.
 
 ### function/get-remote-json.html
 
-*暂无文档。*
+获取并解析远程 JSON，带每日缓存。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.URL` | `String` | 远程 JSON URL（必填） |
+| `[.OPTIONS]` | `Object` | resources.GetRemote 的额外选项 |
+
+**返回值：** `Object` - 解析后的 JSON 响应，失败时返回空 dict
 
 ### function/get-taxonomy-icon.html
 
@@ -392,11 +466,21 @@ ID。
 
 ### function/is-cjk.html
 
-*暂无文档。*
+检查当前页面语言是否为 CJK（中文、日文或韩文）。
+
+**返回值：** `Boolean` - 如果页面语言为 CJK 则返回 true
 
 ### function/is-url-remote.html
 
-*暂无文档。*
+检查解析后的 URL 是否为远程地址（同时具有 scheme 和 host）。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Object` | 解析后的 URL 对象（来自 urls.Parse） |
+
+**返回值：** `Boolean` - 如果 URL 具有非空 scheme 和 host 则返回 true
 
 ### function/js-build.html
 
@@ -449,7 +533,18 @@ https://discourse.gohugo.io/t/how-decode-urls-in-hugo/7549/4
 
 ### function/resource.html
 
-*暂无文档。*
+按路径解析 Hugo 资源。
+
+先从页面资源中查找，再从全局资源中查找。如果未找到资源则返回 0。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.Path` | `String` | 资源路径（页面资源或全局资源） |
+| `[.Resources]` | `Object` | 页面资源集合 |
+
+**返回值：** `resource.Resource|Number` - 解析到的资源，未找到则返回 0
 
 ### function/ruby.html
 
@@ -500,7 +595,21 @@ Ruby 注音。
 
 ### function/xml-content.html
 
-*暂无文档。*
+为 XML 输出处理内容（用于 RSS feed）。
+
+应用内容转换（Ruby、分数、Font Awesome）并前置封面图片，然后进行 XML 转义。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.Content` | `String` | 原始 HTML 内容 |
+| `[.Ruby]` | `Boolean` | 是否处理 Ruby 注音 |
+| `[.Fraction]` | `Boolean` | 是否处理分数语法 |
+| `[.Fontawesome]` | `Boolean` | 是否处理 Font Awesome 短代码 |
+| `[.FeaturedImage]` | `String` | 要前置的封面图片 URL |
+
+**返回值：** `String` - XML 转义后的处理内容
 
 ## gen/
 
@@ -538,7 +647,11 @@ Mermaid 引导脚本生成器。返回 store/script.html 使用的内联模块 J
 
 ### home/profile.html
 
-*暂无文档。*
+首页个人资料区域 partial。
+
+渲染首页 hero 区域，包含头像、标题、副标题（支持 TypeIt 动画）、社交链接和免责声明。
+
+调用自：layouts/index.html。
 
 ## init/
 
@@ -548,7 +661,9 @@ Mermaid 引导脚本生成器。返回 store/script.html 使用的内联模块 J
 
 ### init/compatibility.html
 
-*暂无文档。*
+浏览器兼容性 polyfills partial。
+
+根据站点兼容性配置，条件加载 polyfill.io 和 object-fit-images 以支持旧版浏览器。
 
 ### init/detection-deprecated.html
 
@@ -556,7 +671,9 @@ Mermaid 引导脚本生成器。返回 store/script.html 使用的内联模块 J
 
 ### init/detection-encryption.html
 
-*暂无文档。*
+加密页面检测 partial。
+
+扫描所有常规页面中的密码保护内容，并在构建时发出警告，列出加密页面的标题和永久链接。
 
 ### init/detection-env.html
 
@@ -564,19 +681,29 @@ FixIt 主题环境检测。
 
 ### init/detection-pagefind.html
 
-*暂无文档。*
+Pagefind 搜索索引检测 partial。
+
+如果启用了 Pagefind 搜索但 public/ 目录中缺少索引文件，则在构建时发出警告。
 
 ### init/detection-version.html
 
-*暂无文档。*
+版本检测和更新检查 partial。
+
+验证 Hugo 最低版本、检查 Hugo Extended 版本、检测 FixIt 主题版本参数、警告开发版本，并可选地通过 GitHub API 检查新版本。
 
 ### init/global.html
 
-*暂无文档。*
+全局初始化 partial。
+
+合并翻译、解析主 section 页面并存储供其他 partial 访问，同时从 HUGO_PARAMS_GHTOKEN 环境变量设置 GitHub API token 头。
 
 ### init/index.html
 
-*暂无文档。*
+主题初始化入口 partial。
+
+设置主题版本并编排所有初始化子 partial：环境检测、版本检查、已弃用参数检测、Pagefind 索引检查、加密警告、全局设置和浏览器兼容性。
+
+调用自：layouts/baseof.html。
 
 ## plugin/
 
@@ -586,7 +713,19 @@ FixIt 主题环境检测。
 
 ### plugin/admonition.html
 
-*暂无文档。*
+告警框渲染 partial。
+
+扩展语法兼容 Obsidian 和 FixIt admonition shortcode。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.Text` | `String` | 告警框的内容 |
+| `[.Type]` | `String` | 告警框的类型 |
+| `[.Title]` | `String` | 告警框的标题 |
+| `[.Open]` | `Boolean` | 告警框是否展开，默认为 true |
+| `[.Foldable]` | `Boolean` | 告警框是否可折叠，默认为 true 自定义告警详见 https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/admonition/#customize-admonitions
 
 ### plugin/alert.html
 
@@ -805,7 +944,9 @@ Mermaid 渲染 partial，用于代码围栏扩展语法和 shortcode 用法。
 
 ### plugin/pagefind-metadata.html
 
-*暂无文档。*
+Pagefind 搜索元数据注入 partial。
+
+输出用于 Pagefind 索引的 meta 标签：hidden/encrypted 过滤器、date/title 排序字段和 tag/category/collection 元数据。仅在启用 Pagefind 搜索且当前上下文为页面时激活。
 
 ### plugin/post-chat-ai.html
 
@@ -955,7 +1096,9 @@ Script 标签渲染器。
 
 ### single/expiration-reminder.html
 
-*暂无文档。*
+内容过期提醒 partial。
+
+当页面最后修改日期超过可配置的天数阈值时（默认：90 天显示提示，180 天显示警告），显示提示或警告告警框。密码保护页面跳过此检查。
 
 ### single/footer.html
 
@@ -963,11 +1106,15 @@ Git 信息。
 
 ### single/post-author.html
 
-*暂无文档。*
+文章作者显示 partial。
+
+渲染作者名称，支持可选头像和链接。将解析后的作者 map 存储在页面 store 中供其他 partial 使用。
 
 ### single/post-included-in.html
 
-*暂无文档。*
+文章分类和集合显示 partial。
+
+渲染当前页面的分类和集合链接（带图标）。根据存在情况仅显示分类、仅显示集合或两者都显示。
 
 ### single/related-aside.html
 
@@ -979,7 +1126,9 @@ Git 信息。
 
 ### single/reward.html
 
-*暂无文档。*
+文章打赏/捐赠面板 partial。
+
+从 front matter 和站点默认值读取打赏配置，然后委托 plugin/reward.html 进行渲染。
 
 ## store/
 
@@ -989,11 +1138,15 @@ Git 信息。
 
 ### store/script.html
 
-*暂无文档。*
+脚本累积存储 partial。
+
+将脚本资源条目追加到页面的累积脚本列表中。供其他 partial 注册 JS 资源，这些资源会在页面末尾通过 base/assets.html 统一渲染。
 
 ### store/style.html
 
-*暂无文档。*
+样式累积存储 partial。
+
+将样式资源条目追加到页面的累积样式列表中。供其他 partial 注册 CSS 资源，这些资源会在 head 区域通过 base/assets.html 统一渲染。
 
 ## (root)
 
@@ -1001,6 +1154,8 @@ Git 信息。
 
 ### custom.html
 
-*暂无文档。*
+自定义 partial 块定义。
+
+定义命名模板块（custom-head、custom-menu、custom-profile、custom-aside、custom-comment、custom-footer、custom-widgets、custom-assets、custom-post__toc、custom-post__content、custom-post__footer），用户可通过 custom_partials 配置进行扩展。
 
 <!-- HUGO_FIXIT_PARTIALS:END -->

@@ -84,27 +84,68 @@ Called from: layouts/baseof.html.
 
 ### base/breadcrumb.html
 
-_No documentation._
+Render breadcrumb navigation for the current page.
+
+Displays a hierarchical path from the site root to the current page. Supports configurable separator, sticky mode, home visibility, and title capitalization.
+
+Called from: layouts/baseof.html.
 
 ### base/comment.html
 
-_No documentation._
+Comment system integration partial.
+
+Renders the comment container and injects provider-specific CSS/JS assets. Supported providers: Artalk, Disqus, Gitalk, Valine, Waline, Facebook, Telegram, Commento, Utterances, Twikoo, Giscus, and custom comment systems.
+
+Called from: layouts/baseof.html.
 
 ### base/footer.html
 
-_No documentation._
+Site footer partial.
+
+Renders the page footer with configurable sections:
+
+- Powered by (Hugo and FixIt theme links)
+- Copyright (year, author, license)
+- Site running time counter
+- Visitor statistics (busuanzi)
+- Gov/ICP filing information (beian)
+
+Called from: layouts/baseof.html.
 
 ### base/header.html
 
-_No documentation._
+Desktop and mobile site header with navigation.
+
+Renders two header variants:
+
+- Desktop: full navigation menu with submenus, search trigger, theme switch, and language switcher.
+- Mobile: compact header with hamburger menu, search, theme switch, and language select.
+
+Both support TypeIt animation for title/subtitle, GitHub corner integration, and custom menu items.
+
+Called from: layouts/baseof.html.
 
 ### base/paginator.html
 
-_No documentation._
+Pagination component with ellipsis.
+
+Renders a paginated page list with ellipsis for large page counts. Shows page numbers near the current page and ellipsis markers for distant ranges.
 
 ### base/widgets.html
 
-_No documentation._
+Global widget layer partial.
+
+Renders floating UI elements across all pages:
+
+- Fixed action buttons (back-to-top, TOC drawer, view comments)
+- GitHub corner link
+- Search dialog modal
+- Reading progress bar
+- Link guard confirmation dialog
+- Service worker update notification
+- Noscript warning
+
+Called from: layouts/baseof.html.
 
 ## base/head/
 
@@ -120,7 +161,16 @@ Called from: `base/head/index.html`.
 
 ### base/head/index.html
 
-_No documentation._
+Head Partial - Comprehensive head section template.
+
+This partial consolidates all head-related content including:
+
+- META: Meta tags for SEO, Open Graph, Twitter Cards, and app metadata
+- LINK: Favicon, canonical links, RSS feeds, and CSS stylesheet loading
+- SEO: Schema.org structured data for pages and homepage
+- SCRIPT: Early-loaded scripts (e.g., theme color scheme detection)
+
+Called from: base/baseof.html.
 
 ### base/head/twitter-cards.html
 
@@ -139,7 +189,9 @@ Key differences:
 
 ### feed/rss.html
 
-_No documentation._
+RSS feed generation partial.
+
+Renders an RSS 2.0 XML feed for the current section or home page. Supports full-text or summary mode, filters out password-protected and hidden pages, and includes cover images, author info, and follow challenge tags.
 
 ## function/
 
@@ -227,7 +279,20 @@ But excludes: `` `#0969DA` `` -> renders as normal code (syntax example) `test #
 
 ### function/content.html
 
-_No documentation._
+Content processing pipeline partial.
+
+Applies a chain of content transformations: ruby annotations, fractions, Font Awesome icons, task lists, marked text, color preview, and HTML escaping.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `.Content` | `String` | The raw HTML content |
+| `[.Ruby]` | `Boolean` | Whether to process ruby annotations |
+| `[.Fraction]` | `Boolean` | Whether to process fraction syntax |
+| `[.Fontawesome]` | `Boolean` | Whether to process Font Awesome shortcodes |
+
+**Returns:** `String` - The processed content
 
 ### function/dos2unix.html
 
@@ -349,7 +414,16 @@ Cache remote image locally.
 
 ### function/get-remote-json.html
 
-_No documentation._
+Fetch and parse remote JSON with daily caching.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `.URL` | `String` | The remote JSON URL (required) |
+| `[.OPTIONS]` | `Object` | Additional options for resources.GetRemote |
+
+**Returns:** `Object` - The parsed JSON response, or empty dict on failure
 
 ### function/get-taxonomy-icon.html
 
@@ -370,11 +444,21 @@ ID.
 
 ### function/is-cjk.html
 
-_No documentation._
+Check if the current page language is CJK (Chinese, Japanese, or Korean).
+
+**Returns:** `Boolean` - True if the page language is CJK
 
 ### function/is-url-remote.html
 
-_No documentation._
+Check if a parsed URL is remote (has both scheme and host).
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `.` | `Object` | A parsed URL object (from urls.Parse) |
+
+**Returns:** `Boolean` - True if the URL has a non-empty scheme and host
 
 ### function/js-build.html
 
@@ -427,7 +511,18 @@ https://discourse.gohugo.io/t/how-decode-urls-in-hugo/7549/4.
 
 ### function/resource.html
 
-_No documentation._
+Resolve a Hugo resource by path.
+
+Attempts to find the resource from page resources first, then global resources. Returns 0 if the resource is not found.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `.Path` | `String` | The resource path (page resource or global resource) |
+| `[.Resources]` | `Object` | Page resources collection |
+
+**Returns:** `resource.Resource|Number` - The resolved resource, or 0 if not found
 
 ### function/ruby.html
 
@@ -478,7 +573,21 @@ Trim whitespace from the beginning and end of a string.
 
 ### function/xml-content.html
 
-_No documentation._
+Process content for XML output (used in RSS feeds).
+
+Applies content transformations (ruby, fraction, Font Awesome) and prepends the featured image, then XML-escapes the result.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `.Content` | `String` | The raw HTML content |
+| `[.Ruby]` | `Boolean` | Whether to process ruby annotations |
+| `[.Fraction]` | `Boolean` | Whether to process fraction syntax |
+| `[.Fontawesome]` | `Boolean` | Whether to process Font Awesome shortcodes |
+| `[.FeaturedImage]` | `String` | Featured image URL to prepend |
+
+**Returns:** `String` - The XML-escaped processed content
 
 ## gen/
 
@@ -516,7 +625,11 @@ Mermaid bootstrap script generator. Returns inline module JS source used by stor
 
 ### home/profile.html
 
-_No documentation._
+Homepage profile section partial.
+
+Renders the homepage hero area with avatar, title, subtitle (with optional TypeIt animation), social links, and disclaimer text.
+
+Called from: layouts/index.html.
 
 ## init/
 
@@ -526,7 +639,9 @@ _No documentation._
 
 ### init/compatibility.html
 
-_No documentation._
+Browser compatibility polyfills partial.
+
+Conditionally loads polyfill.io and object-fit-images for older browsers based on site compatibility configuration.
 
 ### init/detection-deprecated.html
 
@@ -534,7 +649,9 @@ Deprecated parameter detection.
 
 ### init/detection-encryption.html
 
-_No documentation._
+Encrypted pages detection partial.
+
+Scans all regular pages for password-protected content and emits a build-time warning listing encrypted pages with their titles and permalinks.
 
 ### init/detection-env.html
 
@@ -542,19 +659,29 @@ FixIt theme environment detection.
 
 ### init/detection-pagefind.html
 
-_No documentation._
+Pagefind search index detection partial.
+
+Warns at build time if Pagefind search is enabled but the index file is missing from the public/ directory.
 
 ### init/detection-version.html
 
-_No documentation._
+Version detection and update checking partial.
+
+Validates Hugo minimum version, checks Hugo Extended edition, detects the FixIt theme version from params, warns about dev versions, and optionally checks for newer releases via the GitHub API.
 
 ### init/global.html
 
-_No documentation._
+Global initialization partial.
+
+Merges translations, resolves main section pages, stores them for cross-partial access, and sets up the GitHub API token header from the HUGO_PARAMS_GHTOKEN environment variable.
 
 ### init/index.html
 
-_No documentation._
+Theme initialization entry point partial.
+
+Sets the theme version and orchestrates all init sub-partials: environment detection, version checking, deprecated param detection, Pagefind index check, encryption warnings, global setup, and browser compatibility.
+
+Called from: layouts/baseof.html.
 
 ## plugin/
 
@@ -564,7 +691,19 @@ _No documentation._
 
 ### plugin/admonition.html
 
-_No documentation._
+Admonition box rendering partial.
+
+The extended syntax of alert is compatible with Obsidian and FixIt admonition shortcode.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `.Text` | `String` | The content of the admonition box |
+| `[.Type]` | `String` | The type of the admonition box |
+| `[.Title]` | `String` | The title of the admonition box |
+| `[.Open]` | `Boolean` | Whether the admonition box is open, default is true |
+| `[.Foldable]` | `Boolean` | Whether the admonition box is foldable, default is true For custom admonitions, see https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/admonition/#customize-admonitions |
 
 ### plugin/alert.html
 
@@ -783,7 +922,9 @@ Mermaid rendering partial for code fences extended syntax and shortcode usage.
 
 ### plugin/pagefind-metadata.html
 
-_No documentation._
+Pagefind search metadata injection partial.
+
+Outputs meta tags for Pagefind indexing: hidden/encrypted filters, date/title sorting fields, and tag/category/collection metadata. Only active when Pagefind search is enabled and the current context is a page.
 
 ### plugin/post-chat-ai.html
 
@@ -933,7 +1074,9 @@ Collection Navigation.
 
 ### single/expiration-reminder.html
 
-_No documentation._
+Content expiration reminder partial.
+
+Displays a note or warning admonition when the page's last modification date exceeds configurable day thresholds (default: 90 days for note, 180 days for warning). Skipped for password-protected pages.
 
 ### single/footer.html
 
@@ -941,11 +1084,15 @@ Git info.
 
 ### single/post-author.html
 
-_No documentation._
+Post author display partial.
+
+Renders the author name with optional avatar and link. Stores the resolved author map in the page store for use by other partials.
 
 ### single/post-included-in.html
 
-_No documentation._
+Post categories and collections display partial.
+
+Renders category and collection links with icons for the current page. Displays categories only, collections only, or both depending on which are present.
 
 ### single/related-aside.html
 
@@ -957,7 +1104,9 @@ Related Content.
 
 ### single/reward.html
 
-_No documentation._
+Post reward/donation panel partial.
+
+Reads the reward config from front matter and site defaults, then delegates rendering to plugin/reward.html.
 
 ## store/
 
@@ -967,11 +1116,15 @@ _No documentation._
 
 ### store/script.html
 
-_No documentation._
+Script accumulation store partial.
+
+Appends a script resource entry to the page's accumulated script list. Used by other partials to register JS assets that are rendered together at the end of the page via base/assets.html.
 
 ### store/style.html
 
-_No documentation._
+Style accumulation store partial.
+
+Appends a style resource entry to the page's accumulated style list. Used by other partials to register CSS assets that are rendered together in the head section via base/assets.html.
 
 ## (root)
 
@@ -979,6 +1132,8 @@ _No documentation._
 
 ### custom.html
 
-_No documentation._
+Custom partial block definitions.
+
+Defines named template blocks (custom-head, custom-menu, custom-profile, custom-aside, custom-comment, custom-footer, custom-widgets, custom-assets, custom-post__toc, custom-post__content, custom-post__footer) that users can extend via the custom_partials configuration.
 
 <!-- HUGO_FIXIT_PARTIALS:END -->
