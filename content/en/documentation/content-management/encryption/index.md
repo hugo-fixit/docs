@@ -129,7 +129,7 @@ The rendered output looks like this:
 
 {{< version 1.0.0 >}}
 
-For enhanced security, FixIt provides a standalone [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) tool that encrypts content at build time using AES-256-GCM with PBKDF2 key derivation. This provides significantly stronger encryption than the template-based approach.
+For enhanced security, FixIt provides standalone encryption tools that encrypt content at build time using AES-256-GCM with PBKDF2 key derivation. This provides significantly stronger encryption than the template-based approach.
 
 Recommended: install as a dev dependency and configure scripts:
 
@@ -148,10 +148,14 @@ Then in your `package.json`:
 }
 ```
 
-You can also run it directly:
+Or use the Go version [fixit-encrypt.go](https://github.com/hugo-fixit/fixit-encrypt.go) — no Node.js required. Installation:
 
 ```bash
-npx @hugo-fixit/encrypt
+# Install via Go
+go install github.com/hugo-fixit/fixit-encrypt@latest
+
+# Or download pre-built binaries from GitHub Releases
+# https://github.com/hugo-fixit/fixit-encrypt.go/releases
 ```
 
-See the [fixit-encrypt documentation](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) for more details.
+See the [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) documentation for more details.

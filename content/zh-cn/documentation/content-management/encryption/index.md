@@ -129,7 +129,7 @@ Or
 
 {{< version 1.0.0 >}}
 
-为了增强安全性，FixIt 提供了一个独立的加密工具，在 Hugo 构建后使用 AES-256-GCM 和 PBKDF2 密钥派生来加密内容。这比基于模板的方式提供了更强的加密安全性。
+为了增强安全性，FixIt 提供了独立的加密工具，在 Hugo 构建后使用 AES-256-GCM 和 PBKDF2 密钥派生来加密内容。这比基于模板的方式提供了更强的加密安全性。
 
 推荐安装为开发依赖并配置 scripts：
 
@@ -148,10 +148,14 @@ npm install -D @hugo-fixit/encrypt
 }
 ```
 
-也可以直接通过 npx 运行：
+也可以使用 Go 版本 [fixit-encrypt.go](https://github.com/hugo-fixit/fixit-encrypt.go)，无需 Node.js 环境。
 
 ```bash
-npx @hugo-fixit/encrypt
+# 通过 Go 安装
+go install github.com/hugo-fixit/fixit-encrypt@latest
+
+# 或从 GitHub Releases 下载预编译二进制文件
+# https://github.com/hugo-fixit/fixit-encrypt.go/releases
 ```
 
-详见 [fixit-encrypt 文档](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt)。
+完整用法详见 [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) 文档。
