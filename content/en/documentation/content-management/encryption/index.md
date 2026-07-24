@@ -148,14 +148,14 @@ Then in your `package.json`:
 }
 ```
 
-Or use the Go version [fixit-encrypt.go](https://github.com/hugo-fixit/fixit-encrypt.go) — no Node.js required. Installation:
+Or use the Go version [fixit-encrypt.go](https://github.com/hugo-fixit/fixit-encrypt) — no Node.js required.
 
 ```bash
 # Install via Go
 go install github.com/hugo-fixit/fixit-encrypt@latest
 
 # Or download pre-built binaries from GitHub Releases
-# https://github.com/hugo-fixit/fixit-encrypt.go/releases
+# https://github.com/hugo-fixit/fixit-encrypt/releases
 ```
 
 See the [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) documentation for more details.

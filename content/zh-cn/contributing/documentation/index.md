@@ -35,9 +35,10 @@ menu:
 给文档做贡献，你需要：
 
 - 安装 [Hugo][hugo] 扩展版本
+- 安装 [Dart Sass][sass]
 - 安装 [Go][go]
 - 安装 [Git][git]
-- 安装 [Node.js][node] 版本大于 18.0.0
+- 安装 [Node.js][node] 版本大于 24.0.0
 
 ## 指南
 
@@ -52,7 +53,7 @@ git clone https://github.com/hugo-fixit/docs.git fixit-docs && cd fixit-docs
 接着，安装开发依赖。
 
 ```bash
-npm install
+pnpm install
 ```
 
 最后，你就可以开始了！
@@ -61,11 +62,11 @@ npm install
 
 ```bash
 # 运行带有监听文件变化的本地调试服务器
-npm run server
+pnpm server
 # 运行带有监听文件变化的本地调试服务器（生产环境）
-npm run server:production
+pnpm server:production
 # 查看编辑主题部分
-npm run server:development
+pnpm server:development
 ```
 
 ## 编辑主题
@@ -81,6 +82,7 @@ HUGO_MODULE_WORKSPACE=hugo.work hugo server --ignoreVendorPaths "**"
 <!-- link reference definition -->
 [docs]: https://github.com/hugo-fixit/docs
 [hugo]: https://gohugo.io/installation/
+[sass]: https://gohugo.io/hugo-pipes/scss-sass/#dart-sass
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/

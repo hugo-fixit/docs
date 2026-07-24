@@ -39,9 +39,10 @@ For a complete guide to contributing to FixIt, see the [Contribution Guide][cont
 To contribute to the development of the FixIt theme, you need to:
 
 - Install [Hugo][hugo] with the extended version
+- Install [Dart Sass][sass]
 - Install [Go][go]
 - Install [Git][git]
-- Install [Node.js][node] above version 18.0.0
+- Install [Node.js][node] above version 22.0.0
 
 ## References
 <!-- markdownlint-disable-file reference-links-images -->
@@ -53,6 +54,7 @@ Head to the [References][references] page for more information.
 [features]: https://github.com/hugo-fixit/FixIt/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement
 [contribution-guide]: https://github.com/hugo-fixit/FixIt/blob/main/CONTRIBUTING.md
 [hugo]: https://gohugo.io/installation/
+[sass]: https://gohugo.io/hugo-pipes/scss-sass/#dart-sass
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/

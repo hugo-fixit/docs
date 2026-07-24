@@ -39,9 +39,10 @@ menu:
 给 FixIt 主题的开发做出贡献，你需要：
 
 - 安装 [Hugo][hugo] 的扩展版本
+- 安装 [Dart Sass][sass]
 - 安装 [Go][go]
 - 安装 [Git][git]
-- 安装 [Node.js][node] 版本大于 18.0.0
+- 安装 [Node.js][node] 版本大于 22.0.0
 
 ## API 参考
 <!-- markdownlint-disable-file reference-links-images -->
@@ -53,6 +54,7 @@ menu:
 [features]: https://github.com/hugo-fixit/FixIt/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement
 [contribution-guide]: https://github.com/hugo-fixit/FixIt/blob/master/CONTRIBUTING.md
 [hugo]: https://gohugo.io/installation/
+[sass]: https://gohugo.io/hugo-pipes/scss-sass/#dart-sass
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/

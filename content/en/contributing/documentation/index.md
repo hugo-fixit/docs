@@ -35,9 +35,10 @@ You can also:
 To contribute to the documentation, you need to:
 
 - Install [Hugo][hugo] with the extended version
+- Install [Dart Sass][sass]
 - Install [Go][go]
 - Install [Git][git]
-- Install [Node.js][node] above version 18.0.0
+- Install [Node.js][node] above version 24.0.0
 
 ## Guidelines
 
@@ -52,7 +53,7 @@ git clone https://github.com/hugo-fixit/docs.git fixit-docs && cd fixit-docs
 Then, install the dev dependencies.
 
 ```bash
-npm install
+pnpm install
 ```
 
 And now you are ready to go!
@@ -61,11 +62,11 @@ Here are some useful commands.
 
 ```bash
 # run a local debugging server with watch
-npm run server
+pnpm server
 # run a local debugging server with watch in production environment
-npm run server:production
+pnpm server:production
 # see Edit the theme section
-npm run server:development
+pnpm server:development
 ```
 
 ## Edit the theme
@@ -81,6 +82,7 @@ Finally, create a new pull request at <https://github.com/hugo-fixit/docs/pulls>
 <!-- link reference definition -->
 [docs]: https://github.com/hugo-fixit/docs
 [hugo]: https://gohugo.io/installation/
+[sass]: https://gohugo.io/hugo-pipes/scss-sass/#dart-sass
 [go]: https://go.dev/doc/install
 [git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [node]: https://nodejs.org/en/download/

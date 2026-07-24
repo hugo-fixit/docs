@@ -537,7 +537,7 @@ This content is only rendered in the production environment.
 
 ## fixit-encryptor
 
-{{< version 0.2.15 >}}
+{{< version 1.0.0 changed >}}
 
 你可以使用 `fixit-encryptor` shortcode 来加密部分内容。
 

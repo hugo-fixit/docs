@@ -542,7 +542,7 @@ The full documentation is provided in [Extended Shortcode - timeline][sc-timelin
 
 ## fixit-encryptor
 
-{{< version 0.2.15 >}}
+{{< version 1.0.0 changed >}}
 
 You can use `fixit-encryptor` shortcode to encrypt partial content.
 

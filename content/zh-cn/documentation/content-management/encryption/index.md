@@ -148,14 +148,14 @@ npm install -D @hugo-fixit/encrypt
 }
 ```
 
-也可以使用 Go 版本 [fixit-encrypt.go](https://github.com/hugo-fixit/fixit-encrypt.go)，无需 Node.js 环境。
+也可以使用 Go 版本 [fixit-encrypt.go](https://github.com/hugo-fixit/fixit-encrypt)，无需 Node.js 环境。
 
 ```bash
 # 通过 Go 安装
 go install github.com/hugo-fixit/fixit-encrypt@latest
 
 # 或从 GitHub Releases 下载预编译二进制文件
-# https://github.com/hugo-fixit/fixit-encrypt.go/releases
+# https://github.com/hugo-fixit/fixit-encrypt/releases
 ```
 
 完整用法详见 [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) 文档。
