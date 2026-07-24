@@ -158,4 +158,17 @@ go install github.com/hugo-fixit/fixit-encrypt@latest
 # https://github.com/hugo-fixit/fixit-encrypt/releases
 ```
 
+In GitHub Actions, use [action-fixit-encrypt](https://github.com/hugo-fixit/action-fixit-encrypt) for quick setup:
+
+```yaml
+- name: Setup fixit-encrypt
+  uses: hugo-fixit/action-fixit-encrypt@v1
+
+- name: Build Hugo site
+  run: hugo --gc --minify
+
+- name: Encrypt content
+  run: fixit-encrypt --input public
+```
+
 See the [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) documentation for more details.

@@ -158,4 +158,17 @@ go install github.com/hugo-fixit/fixit-encrypt@latest
 # https://github.com/hugo-fixit/fixit-encrypt/releases
 ```
 
+在 GitHub Actions 中，可以使用 [action-fixit-encrypt](https://github.com/hugo-fixit/action-fixit-encrypt) 快速安装：
+
+```yaml
+- name: Setup fixit-encrypt
+  uses: hugo-fixit/action-fixit-encrypt@v1
+
+- name: Build Hugo site
+  run: hugo --gc --minify
+
+- name: Encrypt content
+  run: fixit-encrypt --input public
+```
+
 完整用法详见 [fixit-encrypt](https://github.com/hugo-fixit/FixIt/tree/main/packages/encrypt) 文档。
