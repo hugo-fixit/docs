@@ -39,6 +39,9 @@ name = "更多"
 url = ""
 weight = 50
 
+[main.params]
+icon = "fa-solid fa-compass"
+
 [[main]]
 identifier = "archives"
 parent = "more"

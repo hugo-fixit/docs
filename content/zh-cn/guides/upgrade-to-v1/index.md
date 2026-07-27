@@ -9,6 +9,10 @@ tags:
   - Upgrade
   - FixIt v1
   - Breaking Changes
+comment:
+  giscus:
+    mapping: number
+    term: "723"
 ---
 
 本指南将引导你从 FixIt v0.x 升级到 v1.0。v1 版本引入了重大的破坏性更新，涉及配置结构、自定义资源等方面。请仔细阅读以确保顺利升级。

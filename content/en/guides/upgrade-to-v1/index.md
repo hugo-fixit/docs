@@ -9,6 +9,10 @@ tags:
   - Upgrade
   - FixIt v1
   - Breaking Changes
+comment:
+  giscus:
+    mapping: number
+    term: "723"
 ---
 
 This guide walks you through upgrading from FixIt v0.x to v1.0. The v1 release introduces significant breaking changes to configuration structure, custom assets, and more. Read on to ensure a smooth upgrade.
