@@ -472,41 +472,6 @@
       }
     }
   },
-  "hugo-fixit/docs": {
-    "created_at": "2022-07-23T12:17:06Z",
-    "updated_at": "2026-07-26T03:33:05Z",
-    "full_name": "hugo-fixit/docs",
-    "name": "docs",
-    "html_url": "https://github.com/hugo-fixit/docs",
-    "homepage": "https://fixit.lruihao.cn",
-    "description": "📄 The open-source repo for fixit.lruihao.cn",
-    "default_branch": "main",
-    "visibility": "public",
-    "is_template": true,
-    "archived": false,
-    "language": "Markdown",
-    "topics": [
-      "documentation",
-      "hugo",
-      "hugo-blog",
-      "hugo-fixit"
-    ],
-    "stargazers_count": 64,
-    "forks_count": 25,
-    "owner": {
-      "login": "hugo-fixit",
-      "html_url": "https://github.com/hugo-fixit",
-      "avatar_url": "https://avatars.githubusercontent.com/u/110414864?v=4"
-    },
-    "readme": {
-      "content": "# FixIt 主题文档\n\n[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Vercel&logo=vercel)](https://fixit.lruihao.cn/)\n[![Hugo](https://img.shields.io/badge/Hugo-%5E0.161.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)\n\n👉 中文 | [English](README.en.md)\n\n[FixIt](https://github.com/hugo-fixit/FixIt) 主题文档主要分为：[文档](https://fixit.lruihao.cn/zh-cn/docs/)、[教程](https://fixit.lruihao.cn/zh-cn/guides/) 两大板块，欢迎大家发起 PR 完善主题文档。\n\n## 系统依赖\n\n- [Hugo](https://gohugo.io/installation/): >= 0.161.0 (extended version)\n- [Go](https://go.dev/dl/)\n- [Dart Sass](https://sass-lang.com/install/)\n- [Node.js](https://nodejs.org/): >= 24.0.0\n\n## 贡献文档\n\n首先，点击 fork 按钮 fork 本仓库。\n\n然后，克隆你 fork 的仓库。\n\n```bash\ngit clone https://github.com/hugo-fixit/docs.git fixit-docs && cd fixit-docs\n```\n\n接着，安装开发依赖。\n\n```bash\npnpm install\n```\n\n最后，你就可以开始了！\n\n这里有一些有用的命令。\n\n```bash\n# 运行带有监听文件变化的本地调试服务器\npnpm run server\n# 运行带有监听文件变化的本地调试服务器（生产环境）\npnpm run server:production\n# 查看编辑主题部分\npnpm run server:development\n```\n\n## 参与翻译\n\n包含 `missing-translation` shortcode 的文档表示该部分尚未翻译，点击查看 [缺失翻译的文档](https://github.com/search?q=repo%3Ahugo-fixit%2Fdocs+missing-translation+path%3A%2F%5Econtent%5C%2F%2F&type=code)。\n\n## 编辑主题\n\n如果你想做与文档相关的主题更改，最简单的方法是将 `fixit-docs` 和 `FixIt` 克隆为兄弟目录，然后运行：\n\n```bash\nHUGO_MODULE_WORKSPACE=hugo.work hugo server --ignoreVendorPaths \"**\"\n```\n\n最后，在 <https://github.com/hugo-fixit/docs/pulls> 创建一个新的 pull request 来提交你的贡献 🎉\n\n## 感谢赞助\n\n[translate.js](https://github.com/xnx3/translate) 赞助企业级翻译通道。\n",
-      "html_url": "https://github.com/hugo-fixit/docs/blob/main/README.md",
-      "en": {
-        "content": "# FixIt Theme Documentation\n\n[![Production environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Vercel&logo=vercel)](https://fixit.lruihao.cn/)\n[![Hugo](https://img.shields.io/badge/Hugo-%5E0.161.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)\n\n👉 [中文](README.md) | English\n\n[FixIt](https://github.com/hugo-fixit/FixIt) theme documentation is mainly divided into: [Documentation](https://fixit.lruihao.cn/docs/), [Guides](https://fixit.lruihao.cn/guides/) two major sections, welcome everyone to initiate a PR to improve the theme documentation.\n\n## System requirements\n\n- [Hugo](https://gohugo.io/installation/): >= 0.161.0 (extended version)\n- [Go](https://go.dev/dl/)\n- [Dart Sass](https://sass-lang.com/install/)\n- [Node.js](https://nodejs.org/): >= 24.0.0\n\n## Contributing\n\nFirst, fork this repository by clicking the fork button.\n\nNext, clone your forked repo.\n\n```bash\ngit clone https://github.com/hugo-fixit/docs.git fixit-docs && cd fixit-docs\n```\n\nThen, install the dev dependencies.\n\n```bash\npnpm install\n```\n\nAnd now you are ready to go!\n\nHere are some useful commands.\n\n```bash\n# run a local debugging server with watch\npnpm run server\n# run a local debugging server with watch in production environment\npnpm run server:production\n# see Edit the theme section\npnpm run server:development\n```\n\n## Participate in translation\n\nDocuments containing the `missing-translation` shortcode indicate that this part has not been translated yet. Click to view [documents with missing translations](https://github.com/search?q=repo%3Ahugo-fixit%2Fdocs+missing-translation+path%3A%2F%5Econtent%5C%2F%2F&type=code).\n\n## Edit the theme\n\nIf you want to do docs-related theme changes, the simplest way is to have both `fixit-docs` and `FixIt` cloned as sibling directories, and then run:\n\n```bash\nHUGO_MODULE_WORKSPACE=hugo.work hugo server --ignoreVendorPaths \"**\"\n```\n\nFinally, create a new pull request at <https://github.com/hugo-fixit/docs/pulls> to submit your contribution 🎉\n\n## Thanks for sponsoring\n\n[translate.js](https://github.com/xnx3/translate) sponsors enterprise translation channel.\n",
-        "html_url": "https://github.com/hugo-fixit/docs/blob/main/README.en.md"
-      }
-    }
-  },
   "hugo-fixit/fixit-bundle": {
     "created_at": "2024-10-09T03:44:33Z",
     "updated_at": "2026-04-12T01:55:20Z",
