@@ -6,7 +6,7 @@ description: >
   a FixIt site, adding features, or troubleshooting theme settings.
 metadata:
   author: hugo-fixit
-  version: 2026.8.4
+  version: 2026.8.5
   source: Generated from https://github.com/hugo-fixit/FixIt and https://github.com/hugo-fixit/fixit-docs
 ---
 
@@ -66,10 +66,9 @@ _merge = "shallow"
 
 ```toml
 baseURL = "https://example.com/"
-languageCode = "en"
 defaultContentLanguage = "en"
 title = "My FixIt Site"
-theme = ["FixIt"]
+theme = [ "FixIt" ]
 
 [params]
 version = "1.0.X"
@@ -86,6 +85,7 @@ link = "https://example.com"
 desktop_mode = "sticky"
 
 [params.home]
+
 [params.home.posts]
 enable = true
 paginate = 6
