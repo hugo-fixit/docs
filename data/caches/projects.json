@@ -242,7 +242,7 @@
   },
   "hugo-fixit/cmpt-markmap": {
     "created_at": "2026-04-02T13:05:04Z",
-    "updated_at": "2026-08-09T14:55:33Z",
+    "updated_at": "2026-08-13T18:27:49Z",
     "full_name": "hugo-fixit/cmpt-markmap",
     "name": "cmpt-markmap",
     "html_url": "https://github.com/hugo-fixit/cmpt-markmap",
@@ -808,7 +808,7 @@
   },
   "hugo-fixit/shortcode-docs-bookmark": {
     "created_at": "2024-07-14T07:39:56Z",
-    "updated_at": "2026-07-14T08:49:19Z",
+    "updated_at": "2026-08-13T03:25:46Z",
     "full_name": "hugo-fixit/shortcode-docs-bookmark",
     "name": "shortcode-docs-bookmark",
     "html_url": "https://github.com/hugo-fixit/shortcode-docs-bookmark",
@@ -826,7 +826,7 @@
       "shortcodes",
       "theme-component"
     ],
-    "stargazers_count": 3,
+    "stargazers_count": 2,
     "forks_count": 0,
     "owner": {
       "login": "hugo-fixit",
