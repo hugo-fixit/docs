@@ -1420,7 +1420,7 @@ object_fit
 
 ### github_corner
 
-`map` GitHub banner in the top-right or top-left corner.
+`map` GitHub banner in the header corner.
 
 ```toggle
 [params]
@@ -1429,7 +1429,7 @@ object_fit
 enable = false
 permalink = "https://github.com/hugo-fixit/FixIt"
 title = "View source on GitHub"
-position = "right"
+position = "end"
 ```
 
 enable
@@ -1442,7 +1442,7 @@ title
 : `string` Default is `"View source on GitHub"`.
 
 position
-: `string` Available values: ["left", "right"]. Default is `"right"`.
+: `string` Available values: ["start", "end"]. Default is `"end"`.
 
 ### gravatar
 
@@ -1493,7 +1493,7 @@ scrollpercent
 
 [params.reading_progress]
 enable = false
-start = "left"
+start = "start"
 position = "top"
 reversed = false
 light = ""
@@ -1505,7 +1505,7 @@ enable
 : `bool` Default is `false`.
 
 start
-: `string` Available values: ["left", "right"]. Default is `"left"`.
+: `string` Available values: ["start", "end"]. Default is `"start"`.
 
 position
 : `string` Available values: ["top", "bottom"]. Default is `"top"`.
@@ -2345,7 +2345,7 @@ layout
 enable = true
 keep_static = false
 auto = true
-position = "right"
+position = "end"
 ordered = false
 start_level = 2
 end_level = 6
@@ -2362,7 +2362,7 @@ auto
 : `bool` Whether to make the table of the contents in the sidebar automatically collapsed. Default is `true`.
 
 position
-: `string` Position of TOC. Available values: ["left", "right"]. Default is `"right"`.
+: `string` Position of TOC. Available values: ["start", "end"]. Default is `"end"`.
 
 ordered
 : `bool` Supersede `markup.tableOfContents` settings. Default is `false`.
@@ -3198,6 +3198,20 @@ giscus
 - light_theme: `string` Default is `"light"`.
 - dark_theme: `string` Default is `"dark"`.
 - lazy_load: `bool` Default is `true`.
+
+### robots
+
+`map` Custom rules appended to robots.txt (optional). [[params.robots.rules]]. Example: `user_agent = "SomeBot"`. Example: `disallow = "/"`. [[params.robots.rules]]. Example: `user_agent = "GoodBot"`. Example: `allow = "/"`.
+
+```toggle
+[params]
+
+[params.robots]
+allow_crawlers = false
+```
+
+allow_crawlers
+: `bool` Allow AI crawlers (unblock GPTBot/ClaudeBot etc.) + Content-Signal comment + AI hidden hint. Default is `false`.
 
 ### library
 

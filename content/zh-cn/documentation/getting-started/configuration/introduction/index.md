@@ -112,7 +112,8 @@ weight = 1
 [menus.main.params]
 # 添加 CSS 类到菜单项
 class = ""
-# 是否为草稿菜单，类似草稿页面
+# 是否为草稿菜单，默认隐藏。
+# 通过环境变量显示：HUGO_PARAMS_MENU_DRAFT=true hugo server
 draft = false
 # 添加 fontawesome 图标到菜单项
 icon = ""

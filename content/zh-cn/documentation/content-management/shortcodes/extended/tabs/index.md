@@ -64,14 +64,14 @@ collections:
 {{% /tab %}}
 {{% tab title="胶囊样式" %}}
 
-{{< tabs type="pill" placement="left" >}}
+{{< tabs type="pill" placement="start" >}}
 {{% tab title="标签页 1" %}}胶囊样式标签页 1 的内容{{% /tab %}}
 {{% tab title="标签页 2" %}}胶囊样式标签页 2 的内容{{% /tab %}}
 {{% tab title="标签页 3" %}}胶囊样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
 ```markdown {title="查看源码"}
-{{</* tabs type="pill" placement="left" */>}}
+{{</* tabs type="pill" placement="start" */>}}
 {{%/* tab title="标签页 1" */%}}胶囊样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}胶囊样式标签页 2 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 3" */%}}胶囊样式标签页 3 的内容{{%/* /tab */%}}
@@ -81,14 +81,14 @@ collections:
 {{% /tab %}}
 {{% tab title="卡片样式" %}}
 
-{{< tabs type="card" placement="right" >}}
+{{< tabs type="card" placement="end" >}}
 {{% tab title="标签页 1" %}}卡片样式标签页 1 的内容{{% /tab %}}
 {{% tab title="标签页 2" %}}卡片样式标签页 2 的内容{{% /tab %}}
 {{% tab title="标签页 3" %}}卡片样式标签页 3 的内容{{% /tab %}}
 {{< /tabs >}}
 
 ```markdown {title="查看源码"}
-{{</* tabs type="card" placement="right" */>}}
+{{</* tabs type="card" placement="end" */>}}
 {{%/* tab title="标签页 1" */%}}卡片样式标签页 1 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 2" */%}}卡片样式标签页 2 的内容{{%/* /tab */%}}
 {{%/* tab title="标签页 3" */%}}卡片样式标签页 3 的内容{{%/* /tab */%}}
@@ -124,7 +124,7 @@ collections:
 | :----------- | :-------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
 | `defaultTab` | 默认激活标签页的索引                                      | integer | `0` ~ `count - 1`                      | `0`         |
 | `type`       | 标签页的样式类型                                          | string  | `underline`、`pill`、`card`、`segment` | `underline` |
-| `placement`  | 标签页相对于内容的位置，对于 `segment` 类型的选项卡不生效 | string  | `top`、`bottom`、`left`、`right`       | `top`       |
+| `placement`  | 标签页相对于内容的位置，对于 `segment` 类型的选项卡不生效 | string  | `top`、`bottom`、`start`、`end`        | `top`       |
 
 {{% /tab %}}
 

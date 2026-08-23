@@ -1339,7 +1339,7 @@ enable
 : `bool` 默认：`false`。
 
 google
-: `map`Google Analytics.
+: `map` Google Analytics.
 
 - id: `string` 默认：`""`。
 - anonymize_ip: `bool` 是否匿名化 IP。默认：`true`。
@@ -1442,7 +1442,7 @@ object_fit
 
 ### github_corner
 
-`map` 右上角或左上角的 GitHub 横幅。
+`map` 头部角落的 GitHub 横幅。
 
 ```toggle
 [params]
@@ -1451,7 +1451,7 @@ object_fit
 enable = false
 permalink = "https://github.com/hugo-fixit/FixIt"
 title = "View source on GitHub"
-position = "right"
+position = "end"
 ```
 
 enable
@@ -1464,7 +1464,7 @@ title
 : `string` 默认：`"View source on GitHub"`。
 
 position
-: `string` 可选值：["left", "right"]。默认：`"right"`。
+: `string` 可选值：["start", "end"]。默认：`"end"`。
 
 ### gravatar
 
@@ -1515,7 +1515,7 @@ scrollpercent
 
 [params.reading_progress]
 enable = false
-start = "left"
+start = "start"
 position = "top"
 reversed = false
 light = ""
@@ -1527,7 +1527,7 @@ enable
 : `bool` 默认：`false`。
 
 start
-: `string` 可选值：["left", "right"]。默认：`"left"`。
+: `string` 可选值：["start", "end"]。默认：`"start"`。
 
 position
 : `string` 可选值：["top", "bottom"]。默认：`"top"`。
@@ -2270,19 +2270,19 @@ boxed = true
 ```
 
 enable
-: 默认：`true`。
+: `bool` 默认：`true`。
 
 expand_depth
-: 默认：`1`。
+: `int` 默认：`1`。
 
 copyable
-: 默认：`true`。
+: `bool` 默认：`true`。
 
 sort
-: 默认：`false`。
+: `bool` 默认：`false`。
 
 boxed
-: 默认：`true`。
+: `bool` 默认：`true`。
 
 ### filetree
 
@@ -2330,7 +2330,7 @@ layout = "dagre"
 ```
 
 wrapper
-: `bool` 是否启用 Mermaid 包装器。启用后，Mermaid 图表将被图表标签页和操作包装：平移/缩放（拖拽 + Ctrl+ 滚轮）、重置视图、下载为 SVG。默认：：`true`。
+: `bool` 是否启用 Mermaid 包装器。启用后，Mermaid 图表将被图表标签页和操作包装：平移/缩放（拖拽 + Ctrl+ 滚轮）、重置视图、下载为 SVG。默认：`true`。
 
 cdn
 : `string` Mermaid ESM 模块 CDN 源。默认：`"https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"`。
@@ -2367,7 +2367,7 @@ layout
 enable = true
 keep_static = false
 auto = true
-position = "right"
+position = "end"
 ordered = false
 start_level = 2
 end_level = 6
@@ -2384,16 +2384,16 @@ auto
 : `bool` 是否使侧边栏中的目录自动折叠。默认：`true`。
 
 position
-: `string` 目录位置。可选值：["left", "right"]。默认：`"right"`。
+: `string` 目录位置。可选值：["start", "end"]。默认：`"end"`。
 
 ordered
 : `bool` 覆盖 `markup.tableOfContents` 设置。默认：`false`。
 
 start_level
-: 默认：`2`。
+: `int` 默认：`2`。
 
 end_level
-: 默认：`6`。
+: `int` 默认：`6`。
 
 decrease_h1
 : `bool` 是否降低内容中 H1 标题的级别。默认：`false`。
@@ -2413,7 +2413,7 @@ close_comment = false
 ```
 
 enable
-: 默认：`false`。
+: `bool` 默认：`false`。
 
 reminder
 : `int` 如果最后修改时间超过 90 天，则显示提醒。默认：`90`。
@@ -2503,14 +2503,14 @@ katex
 : `map` KaTeX 服务端渲染。详见 [KaTeX](https://katex.org) 和 [transform.ToMath Options](https://gohugo.io/functions/transform/tomath/#options)。
 
 - copy_tex: `bool` KaTeX 扩展 copy-tex。默认：`true`。
-- throw_on_error: 默认：`false`。
-- error_color: 默认：`"#ff4949"`。
+- throw_on_error: `bool` 默认：`false`。
+- error_color: `string` 默认：`"#ff4949"`。
 - macros: `map` 自定义宏映射。语法：`<macro> = <definition>`。示例：`"\\f" = "#1f(#2)" # 用法：$\f{a}{b}$`。
 
 mathjax
 : `map` MathJax 服务端渲染。详见 [MathJax](https://www.mathjax.org) 和 [MathJax Options](https://docs.mathjax.org/en/latest/options/index.html)。
 
-- cdn: 默认：`"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"`。
+- cdn: `string` 默认：`"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"`。
 - packages: `map` MathJax 包配置。示例：`"[+]" = ["configmacros"]`。
 - macros: `map` 自定义宏映射。语法：`<macro> = <definition>`。示例：`bold = ["{\\bf #1}", 1] # 用法：$\bold{math}$`。
 - loader: `map` MathJax 加载器配置。支持更多加载器配置，如 source、dependencies、provides 等。
@@ -3220,6 +3220,20 @@ giscus
 - light_theme: `string` 默认：`"light"`。
 - dark_theme: `string` 默认：`"dark"`。
 - lazy_load: `bool` 默认：`true`。
+
+### robots
+
+`map` 追加到 robots.txt 的自定义规则（可选）。[[params.robots.rules]]。示例：`user_agent = "SomeBot"`。示例：`disallow = "/"`。[[params.robots.rules]]。示例：`user_agent = "GoodBot"`。示例：`allow = "/"`。
+
+```toggle
+[params]
+
+[params.robots]
+allow_crawlers = false
+```
+
+allow_crawlers
+: `bool` 是否允许 AI 爬虫（解除 GPTBot/ClaudeBot 等的封锁）+ Content-Signal 注释 + AI 隐藏提示。默认：`false`。
 
 ### library
 

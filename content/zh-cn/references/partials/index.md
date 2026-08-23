@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **92** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **93** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,7 +47,7 @@ FixIt 主题提供 **92** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 3 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 35 个 partials
+- [function/](#function) — 36 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
@@ -496,6 +496,20 @@ ID。
 | `[.Fingerprint]` | `String` | 指纹算法（例如 "sha256"） |
 
 **返回值：** `resource.Resource`
+
+### function/logical-direction.html
+
+将方向值规范化为 CSS 逻辑方向。
+
+将旧版 "left"/"right" 值转换为 "start"/"end"。有效值（"start"/"end"）原样返回。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `value` | `String` | 要规范化的方向值（"left"、"right"、"start"、"end"） |
+
+**返回值：** `String` - 规范化后的逻辑方向（"start" 或 "end"），未知值默认为 "start"
 
 ### function/marked-text.html
 

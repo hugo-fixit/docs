@@ -207,6 +207,9 @@ This part is shown in the [content encryption page][content-encryption].
 | Hindi                | `hi`      | `hi`                  | :(fa-regular fa-square fa-fw):       |
 | Japanese             | `ja`      | `ja`                  | :(fa-regular fa-square fa-fw):       |
 | Korean               | `ko`      | `ko`                  | :(fa-regular fa-square fa-fw):       |
+| Arabic               | `ar`      | `ar`                  | :(fa-regular fa-square fa-fw):       |
+| Persian              | `fa`      | `fa`                  | :(fa-regular fa-square fa-fw):       |
+| Urdu                 | `ur`      | `ur`                  | :(fa-regular fa-square fa-fw):       |
 
 ### Basic Configuration
 
@@ -333,6 +336,22 @@ Single file `my-page.md` is split in three files:
 
 > [!NOTE]
 > Use [Front Matter parameter][multilingual-content] to translate urls too.
+
+#### RTL Language Support
+
+For RTL (Right-to-Left) languages such as Arabic and Persian, you need to set the `direction` parameter to `"rtl"` in the language configuration. The theme will automatically apply the correct text direction via the HTML `dir` attribute.
+
+```toml
+[languages.ar]
+weight = 4
+title = "موقعي Hugo FixIt"
+locale = "ar"
+label = "العربية"
+direction = "rtl"
+```
+
+> [!NOTE]
+> LTR languages do not need to set the `direction` parameter, as `"ltr"` is the default value.
 
 ### Overwrite Translation Strings
 

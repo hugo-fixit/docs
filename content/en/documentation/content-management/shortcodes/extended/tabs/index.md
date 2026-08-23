@@ -64,14 +64,14 @@ The rendered output looks like this:
 {{% /tab %}}
 {{% tab title="Pill Style" %}}
 
-{{< tabs type="pill" placement="left" >}}
+{{< tabs type="pill" placement="start" >}}
 {{% tab title="Tab 1" %}}Pill style tab 1 content{{% /tab %}}
 {{% tab title="Tab 2" %}}Pill style tab 2 content{{% /tab %}}
 {{% tab title="Tab 3" %}}Pill style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
 ```markdown {title="View Source Code"}
-{{</* tabs type="pill" placement="left" */>}}
+{{</* tabs type="pill" placement="start" */>}}
 {{%/* tab title="Tab 1" */%}}Pill style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Pill style tab 2 content{{%/* /tab */%}}
 {{%/* tab title="Tab 3" */%}}Pill style tab 3 content{{%/* /tab */%}}
@@ -81,14 +81,14 @@ The rendered output looks like this:
 {{% /tab %}}
 {{% tab title="Card Style" %}}
 
-{{< tabs type="card" placement="right" >}}
+{{< tabs type="card" placement="end" >}}
 {{% tab title="Tab 1" %}}Card style tab 1 content{{% /tab %}}
 {{% tab title="Tab 2" %}}Card style tab 2 content{{% /tab %}}
 {{% tab title="Tab 3" %}}Card style tab 3 content{{% /tab %}}
 {{< /tabs >}}
 
 ```markdown {title="View Source Code"}
-{{</* tabs type="card" placement="right" */>}}
+{{</* tabs type="card" placement="end" */>}}
 {{%/* tab title="Tab 1" */%}}Card style tab 1 content{{%/* /tab */%}}
 {{%/* tab title="Tab 2" */%}}Card style tab 2 content{{%/* /tab */%}}
 {{%/* tab title="Tab 3" */%}}Card style tab 3 content{{%/* /tab */%}}
@@ -124,7 +124,7 @@ The rendered output looks like this:
 | :----------- | :-------------------------------------------------------------------------------- | :------ | :------------------------------------- | :---------- |
 | `defaultTab` | Default active tab index                                                          | integer | `0` ~ `count - 1`                      | `0`         |
 | `type`       | Tab style type                                                                    | string  | `underline`, `pill`, `card`, `segment` | `underline` |
-| `placement`  | Tab placement position relative to content, not effective for `segment` type tabs | string  | `top`, `bottom`, `left`, `right`       | `top`       |
+| `placement`  | Tab placement position relative to content, not effective for `segment` type tabs | string  | `top`, `bottom`, `start`, `end`        | `top`       |
 
 {{% /tab %}}
 {{% tab title="tab shortcode" %}}

@@ -208,6 +208,9 @@ type: posts
 | 印地语       | `hi`      | `hi`             | :(fa-regular fa-square fa-fw):       |
 | 日语         | `ja`      | `ja`             | :(fa-regular fa-square fa-fw):       |
 | 韩语         | `ko`      | `ko`             | :(fa-regular fa-square fa-fw):       |
+| 阿拉伯语     | `ar`      | `ar`             | :(fa-regular fa-square fa-fw):       |
+| 波斯语       | `fa`      | `fa`             | :(fa-regular fa-square fa-fw):       |
+| 乌尔都语     | `ur`      | `ur`             | :(fa-regular fa-square fa-fw):       |
 
 ### 基本配置
 
@@ -332,6 +335,25 @@ weight = 3
 - 中文：`my-page.zh-cn.md`
 - 法语：`my-page.fr.md`
 
+> [!NOTE]
+> 使用 [Front Matter 参数][multilingual-content] 也可以翻译 URL。
+
+#### RTL 语言支持
+
+对于阿拉伯语、波斯语等 RTL（从右到左）语言，需要在语言配置中将 `direction` 参数设置为 `"rtl"`。主题会通过 HTML `dir` 属性自动应用正确的文本方向。
+
+```toml
+[languages.ar]
+weight = 4
+title = "موقعي Hugo FixIt"
+locale = "ar"
+label = "العربية"
+direction = "rtl"
+```
+
+> [!NOTE]
+> LTR 语言无需设置 `direction` 参数，默认值即为 `"ltr"`。
+
 #### 修改默认的翻译字符串
 
 翻译字符串用于在主题中使用的常见默认值。
@@ -365,5 +387,6 @@ weight = 3
 [extended-markdown-syntax]: {{< relref path="/documentation/content-management/markdown-syntax/extended" >}}
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
+[multilingual-content]: https://gohugo.io/content-management/multilingual#translate-your-content
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [hugo-fixit/cmpt-translate]: /zh-cn/ecosystem/hugo-fixit/cmpt-translate/
