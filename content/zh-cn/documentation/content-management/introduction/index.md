@@ -338,7 +338,7 @@ weight = 3
 > [!NOTE]
 > 使用 [Front Matter 参数][multilingual-content] 也可以翻译 URL。
 
-#### RTL 语言支持
+### RTL 语言支持
 
 对于阿拉伯语、波斯语等 RTL（从右到左）语言，需要在语言配置中将 `direction` 参数设置为 `"rtl"`。主题会通过 HTML `dir` 属性自动应用正确的文本方向。
 
@@ -356,7 +356,7 @@ direction = "rtl"
 >
 > 在线演示请参见 RTL 测试的 [英文版][rtl-test] 和 [阿拉伯语版][rtl-test-ar] 进行对比。
 
-#### 修改默认的翻译字符串
+### 修改默认的翻译字符串
 
 翻译字符串用于在主题中使用的常见默认值。
 目前提供 [一些语言](#language-compatibility) 的翻译，但你可能自定义其他语言或覆盖默认值。

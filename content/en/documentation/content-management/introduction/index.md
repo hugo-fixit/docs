@@ -337,7 +337,7 @@ Single file `my-page.md` is split in three files:
 > [!NOTE]
 > Use [Front Matter parameter][multilingual-content] to translate urls too.
 
-#### RTL Language Support
+### RTL Language Support
 
 For RTL (Right-to-Left) languages such as Arabic and Persian, you need to set the `direction` parameter to `"rtl"` in the language configuration. The theme will automatically apply the correct text direction via the HTML `dir` attribute.
 
