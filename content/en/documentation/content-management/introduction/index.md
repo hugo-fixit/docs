@@ -352,6 +352,8 @@ direction = "rtl"
 
 > [!NOTE]
 > LTR languages do not need to set the `direction` parameter, as `"ltr"` is the default value.
+>
+> For a live demo, see the [English version][rtl-test] and [Arabic version][rtl-test-ar] of the RTL test for comparison.
 
 ### Overwrite Translation Strings
 
@@ -386,5 +388,7 @@ With the [Auto Translate][hugo-fixit/cmpt-translate] component, you can automati
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
 [multilingual-content]: https://gohugo.io/content-management/multilingual#translate-your-content
+[rtl-test]: https://demo.fixit.lruihao.cn/test/units/rtl-test/
+[rtl-test-ar]: https://demo.fixit.lruihao.cn/test/ar/units/rtl-test/
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [hugo-fixit/cmpt-translate]: /ecosystem/hugo-fixit/cmpt-translate/

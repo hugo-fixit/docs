@@ -353,6 +353,8 @@ direction = "rtl"
 
 > [!NOTE]
 > LTR 语言无需设置 `direction` 参数，默认值即为 `"ltr"`。
+>
+> 在线演示请参见 RTL 测试的 [英文版][rtl-test] 和 [阿拉伯语版][rtl-test-ar] 进行对比。
 
 #### 修改默认的翻译字符串
 
@@ -388,5 +390,7 @@ direction = "rtl"
 [shortcodes]: {{< relref path="/documentation/content-management/shortcodes" >}}
 [multilingual]: https://gohugo.io/content-management/multilingual
 [multilingual-content]: https://gohugo.io/content-management/multilingual#translate-your-content
+[rtl-test]: https://demo.fixit.lruihao.cn/test/units/rtl-test/
+[rtl-test-ar]: https://demo.fixit.lruihao.cn/test/ar/units/rtl-test/
 [pulls]: https://github.com/hugo-fixit/FixIt/pulls
 [hugo-fixit/cmpt-translate]: /zh-cn/ecosystem/hugo-fixit/cmpt-translate/
