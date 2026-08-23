@@ -14,11 +14,15 @@
 set -euo pipefail
 
 build_temp_dir=""
+fixit_temp_dir=""
 
 # Perform cleanup
 cleanup() {
   if [[ -n "${build_temp_dir:-}" && -d "${build_temp_dir}" ]]; then
     rm -rf "${build_temp_dir}"
+  fi
+  if [[ -n "${fixit_temp_dir:-}" && -d "${fixit_temp_dir}" ]]; then
+    rm -rf "${fixit_temp_dir}"
   fi
 }
 
@@ -76,6 +80,22 @@ main() {
   if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
     git fetch --unshallow
   fi
+
+  # Generate API references from FixIt source
+  echo "Generating API references..."
+  docs_root=$(pwd)
+  fixit_temp_dir=$(mktemp -d)
+  git clone --depth 1 https://github.com/hugo-fixit/FixIt.git "${fixit_temp_dir}"
+  pushd "${fixit_temp_dir}" > /dev/null
+  pnpm install
+
+  # sassdoc → public/references/scss
+  npx sassdoc@2.7.2 assets/scss/ --dest "${docs_root}/public/references/scss" --config .sassdocrc
+
+  # typedoc → public/references/javascript
+  npx typedoc --out "${docs_root}/public/references/javascript"
+
+  popd > /dev/null
 
   # Build the site
   echo "Building the site..."
