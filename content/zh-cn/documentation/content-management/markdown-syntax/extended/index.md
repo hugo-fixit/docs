@@ -1107,17 +1107,26 @@ sort = true
 
 ### 单表覆盖
 
-使用 Markdown 属性禁用特定表格的编号或排序：
+使用 Markdown 属性按需启用或禁用特定表格的编号和排序。
+
+禁用编号和排序：
 
 ```markdown
 | 姓名  | 年龄 |
-| :---- | --: |
-| Alice |  25 |
-{number=false, sort=false}
+| :---- | ---: |
+| Alice | 25   |
+{number=true, sort=false}
 ```
 
+呈现的输出效果如下：
+
+| 姓名  | 年龄 |
+| :---- | ---: |
+| Alice | 25   |
+{number=true, sort=false}
+
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD052 MD059 MD024 -->
+<!-- markdownlint-disable-file MD052 MD059 MD024 MD055 MD056 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts

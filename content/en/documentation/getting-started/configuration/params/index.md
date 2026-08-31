@@ -2378,7 +2378,7 @@ decrease_h1
 
 ### disclaimer
 
-`map` Post disclaimer/declaration.
+`map` {{< version 1.0.0 >}} Post disclaimer/declaration.
 
 ```toggle
 [params]

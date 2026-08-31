@@ -1107,17 +1107,26 @@ The caption will be displayed above the table with numbering (if enabled) separa
 
 ### Per-table Override
 
-Disable numbering or sorting for specific tables using Markdown attributes:
+Enable or disable numbering and sorting for specific tables using Markdown attributes.
+
+Disable numbering and sorting:
 
 ```markdown
 | Name  | Age |
 | :---- | --: |
-| Alice |  25 |
-{number=false, sort=false}
+| Alice | 25  |
+{number=true, sort=false}
 ```
 
+The rendered output looks like this:
+
+| Name  | Age |
+| :---- | --: |
+| Alice | 25  |
+{number=true, sort=false}
+
 <!-- link reference definition -->
-<!-- markdownlint-disable-file MD052 MD059 MD024 -->
+<!-- markdownlint-disable-file MD052 MD059 MD024 MD055 MD056 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
 [obsidian-callouts]: https://help.obsidian.md/Editing+and+formatting/Callouts
 [typora-alert]: https://support.typora.io/Markdown-Reference/#callouts--github-style-alerts

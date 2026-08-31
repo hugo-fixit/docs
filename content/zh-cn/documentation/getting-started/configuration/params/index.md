@@ -2398,6 +2398,28 @@ end_level
 decrease_h1
 : `bool` 是否降低内容中 H1 标题的级别。默认：`false`。
 
+### disclaimer
+
+`map` {{< version 1.0.0 >}} 文章免责声明/声明。
+
+```toggle
+[params]
+
+[params.disclaimer]
+enable = false
+type = "ai"
+content = ""
+```
+
+enable
+: `bool` 是否启用免责声明。默认：`false`。
+
+type
+: `string` 免责声明类型。可选值：["ai", "repost", "original", "custom"]。默认：`"ai"`。
+
+content
+: `string` 自定义免责声明内容（可选，为空时使用 I18n 默认值）。默认：`""`。
+
 ### expiration_reminder
 
 `map` 在文章开头显示一条消息，提醒读者其内容可能已过期。
@@ -2437,14 +2459,6 @@ capitalize = false
 [params.heading.number]
 enable = false
 only_main_section = true
-
-[params.heading.number.format]
-h1 = "{title}"
-h2 = "{h2} {title}"
-h3 = "{h2}.{h3} {title}"
-h4 = "{h2}.{h3}.{h4} {title}"
-h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
 ```
 
 capitalize
@@ -2455,7 +2469,6 @@ number
 
 - enable: `bool` 是否启用自动标题编号。默认：`false`。
 - only_main_section: `bool` 仅在主分区页面（默认为文章）中启用。默认：`true`。
-- format: `map`
 
 ### table
 
