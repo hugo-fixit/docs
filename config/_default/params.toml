@@ -284,14 +284,6 @@ enable = true
 # Only enable in main section pages (default is posts).
 only_main_section = true
 
-[heading.number.format]
-h1 = "{title}"
-h2 = "{h2} {title}"
-h3 = "{h2}.{h3} {title}"
-h4 = "{h2}.{h3}.{h4} {title}"
-h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
-
 # Mathematical formulas configuration.
 # See: [Formula](https://fixit.lruihao.cn/docs/content-management/markdown-syntax/extended/#formula)
 [math]
@@ -376,6 +368,14 @@ ignore_html_class = "mathjax_ignore"
 [math.mathjax.tex.physics]
 italicdiff = false
 arrowdel = false
+
+# {{< version 1.0.0 >}} Table configuration.
+# See: [Table Extended](https://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#table-extended)
+[table]
+# Whether to enable auto table numbering.
+number = false
+# Whether to enable table sorting.
+sort = true
 
 # Mapbox GL JS configuration.
 # See: [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js)
