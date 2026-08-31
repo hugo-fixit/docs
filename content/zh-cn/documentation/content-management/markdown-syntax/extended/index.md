@@ -1063,6 +1063,59 @@ print('Hello, world!')
 console.log('Hello, world!')
 ```
 
+## 表格扩展语法 {#table-extended}
+
+{{< version 1.0.0 >}}
+
+**FixIt** 主题扩展了标准 Markdown 表格，支持自动编号、客户端排序和标题。
+
+### 自动编号
+
+在 [主题配置][theme-config] 中启用自动表格编号：
+
+```toml
+[params.table]
+number = true
+```
+
+表格将自动编号为 "表 1"、"表 2" 等。
+
+### 排序
+
+在 [主题配置][theme-config] 中启用表格排序：
+
+```toml
+[params.table]
+sort = true
+```
+
+启用后，所有表格支持通过点击列标题进行客户端排序。点击一次升序，再次点击降序，第三次点击重置。
+
+### 标题
+
+使用 [Markdown 属性][markdown-attributes] 为表格添加标题：
+
+```markdown
+| 姓名  | 年龄 | 分数 |
+| :---- | --: | ----: |
+| Alice |  25 |    90 |
+| Bob   |  30 |    85 |
+{caption="用户数据"}
+```
+
+标题将显示在表格上方，与编号（如果启用）用破折号分隔。
+
+### 单表覆盖
+
+使用 Markdown 属性禁用特定表格的编号或排序：
+
+```markdown
+| 姓名  | 年龄 |
+| :---- | --: |
+| Alice |  25 |
+{number=false, sort=false}
+```
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 MD059 MD024 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts

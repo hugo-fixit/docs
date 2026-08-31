@@ -1063,6 +1063,59 @@ print('Hello, world!')
 console.log('Hello, world!')
 ```
 
+## Table Extended
+
+{{< version 1.0.0 >}}
+
+**FixIt** theme extends standard Markdown tables with auto-numbering, client-side sorting, and caption support.
+
+### Auto Numbering
+
+Enable auto table numbering in your [theme configuration][theme-config]:
+
+```toml
+[params.table]
+number = true
+```
+
+Tables will be automatically numbered as "Table 1", "Table 2", etc.
+
+### Sorting
+
+Enable table sorting in your [theme configuration][theme-config]:
+
+```toml
+[params.table]
+sort = true
+```
+
+When enabled, all tables support client-side sorting by clicking on column headers. Click once for ascending, again for descending, and a third time to reset.
+
+### Caption
+
+Add a caption to any table using [Markdown attributes][markdown-attributes]:
+
+```markdown
+| Name  | Age | Score |
+| :---- | --: | ----: |
+| Alice |  25 |    90 |
+| Bob   |  30 |    85 |
+{caption="User Data"}
+```
+
+The caption will be displayed above the table with numbering (if enabled) separated by a dash.
+
+### Per-table Override
+
+Disable numbering or sorting for specific tables using Markdown attributes:
+
+```markdown
+| Name  | Age |
+| :---- | --: |
+| Alice |  25 |
+{number=false, sort=false}
+```
+
 <!-- link reference definition -->
 <!-- markdownlint-disable-file MD052 MD059 MD024 -->
 [github-alert]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
