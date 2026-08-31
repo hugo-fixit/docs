@@ -2376,6 +2376,28 @@ end_level
 decrease_h1
 : `bool` Whether to decrease the H1 heading level in content. Default is `false`.
 
+### disclaimer
+
+`map` Post disclaimer/declaration.
+
+```toggle
+[params]
+
+[params.disclaimer]
+enable = false
+type = "ai"
+content = ""
+```
+
+enable
+: `bool` Whether to enable the disclaimer. Default is `false`.
+
+type
+: `string` Disclaimer type. Available values: ["ai", "repost", "original", "custom"]. Default is `"ai"`.
+
+content
+: `string` Custom disclaimer content (optional, uses I18n default if empty). Default is `""`.
+
 ### expiration_reminder
 
 `map` Display a message at the beginning of an article to warn the reader that its content might be expired.
@@ -2415,14 +2437,6 @@ capitalize = false
 [params.heading.number]
 enable = false
 only_main_section = true
-
-[params.heading.number.format]
-h1 = "{title}"
-h2 = "{h2} {title}"
-h3 = "{h2}.{h3} {title}"
-h4 = "{h2}.{h3}.{h4} {title}"
-h5 = "{h2}.{h3}.{h4}.{h5} {title}"
-h6 = "{h2}.{h3}.{h4}.{h5}.{h6} {title}"
 ```
 
 capitalize
@@ -2433,7 +2447,24 @@ number
 
 - enable: `bool` Whether to enable auto heading numbering. Default is `false`.
 - only_main_section: `bool` Only enable in main section pages (default is posts). Default is `true`.
-- format: `map`
+
+### table
+
+`map` {{< version 1.0.0 >}} Table configuration.
+
+```toggle
+[params]
+
+[params.table]
+number = false
+sort = true
+```
+
+number
+: `bool` Whether to enable auto table numbering. Default is `false`.
+
+sort
+: `bool` Whether to enable table sorting. Default is `true`.
 
 ### math
 

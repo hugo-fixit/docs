@@ -2457,6 +2457,24 @@ number
 - only_main_section: `bool` 仅在主分区页面（默认为文章）中启用。默认：`true`。
 - format: `map`
 
+### table
+
+`map` {{< version 1.0.0 >}} 表格配置。
+
+```toggle
+[params]
+
+[params.table]
+number = false
+sort = true
+```
+
+number
+: `bool` 是否启用自动表格编号。默认：`false`。
+
+sort
+: `bool` 是否启用表格排序。默认：`true`。
+
 ### math
 
 `map` 数学公式配置。详见 [Formula](https://fixit.lruihao.cn/documentation/content-management/markdown-syntax/extended/#formula)。
