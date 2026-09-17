@@ -678,11 +678,6 @@ colorful = true
 dislikes = false
 outlined = false
 
-# Commento comment configuration.
-# See: [Commento](https://commento.io)
-[comment.commento]
-enable = false
-
 # Utterances comment configuration.
 # See: [Utterances](https://utteranc.es)
 [comment.utterances]
@@ -1302,16 +1297,6 @@ src = ""
 # Cloudflare Analytics.
 [analytics.cloudflare]
 token = ""
-
-# Splitbee Analytics.
-[analytics.splitbee]
-enable = false
-# No cookie mode.
-no_cookie = true
-# Respect the do not track setting of the browser.
-do_not_track = true
-# Token (optional), more info on https://splitbee.io/docs/embed-the-script.
-data_token = ""
 
 # Cookie consent configuration.
 [cookieconsent]

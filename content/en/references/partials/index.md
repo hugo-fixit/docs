@@ -94,7 +94,7 @@ Called from: layouts/baseof.html.
 
 Comment system integration partial.
 
-Renders the comment container and injects provider-specific CSS/JS assets. Supported providers: Artalk, Disqus, Gitalk, Valine, Waline, Facebook, Telegram, Commento, Utterances, Twikoo, Giscus, and custom comment systems.
+Renders the comment container and injects provider-specific CSS/JS assets. Supported providers: Artalk, Disqus, Gitalk, Valine, Waline, Facebook, Telegram, Utterances, Twikoo, Giscus, and custom comment systems.
 
 Called from: layouts/baseof.html.
 

@@ -1305,12 +1305,6 @@ src = ""
 
 [params.analytics.cloudflare]
 token = ""
-
-[params.analytics.splitbee]
-enable = false
-no_cookie = true
-do_not_track = true
-data_token = ""
 ```
 
 enable
@@ -1351,14 +1345,6 @@ cloudflare
 : `map` Cloudflare Analytics.
 
 - token: `string` Default is `""`.
-
-splitbee
-: `map` Splitbee Analytics.
-
-- enable: `bool` Default is `false`.
-- no_cookie: `bool` No cookie mode. Default is `true`.
-- do_not_track: `bool` Respect the do not track setting of the browser. Default is `true`.
-- data_token: `string` Token (optional), more info on https://splitbee.io/docs/embed-the-script. Default is `""`.
 
 ### cookieconsent
 
@@ -3030,9 +3016,6 @@ colorful = true
 dislikes = false
 outlined = false
 
-[params.comment.commento]
-enable = false
-
 [params.comment.utterances]
 enable = false
 repo = ""
@@ -3181,11 +3164,6 @@ telegram
 - colorful: `bool` Default is `true`.
 - dislikes: `bool` Default is `false`.
 - outlined: `bool` Default is `false`.
-
-commento
-: `map` Commento comment configuration. See: [Commento](https://commento.io).
-
-- enable: `bool` Default is `false`.
 
 utterances
 : `map` Utterances comment configuration. See: [Utterances](https://utteranc.es).

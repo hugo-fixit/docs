@@ -116,7 +116,7 @@ FixIt 主题提供 **93** 个 Hugo partials，分布在 **13** 个分组中。
 
 评论系统集成 partial。
 
-渲染评论容器并注入特定提供者的 CSS/JS 资源。支持的提供者：Artalk、Disqus、Gitalk、Valine、Waline、Facebook、Telegram、Commento、Utterances、Twikoo、Giscus 和自定义评论系统。
+渲染评论容器并注入特定提供者的 CSS/JS 资源。支持的提供者：Artalk、Disqus、Gitalk、Valine、Waline、Facebook、Telegram、Utterances、Twikoo、Giscus 和自定义评论系统。
 
 调用自：layouts/baseof.html。
 

@@ -1327,12 +1327,6 @@ src = ""
 
 [params.analytics.cloudflare]
 token = ""
-
-[params.analytics.splitbee]
-enable = false
-no_cookie = true
-do_not_track = true
-data_token = ""
 ```
 
 enable
@@ -1373,14 +1367,6 @@ cloudflare
 : `map` Cloudflare Analytics.
 
 - token: `string` 默认：`""`。
-
-splitbee
-: `map` Splitbee Analytics.
-
-- enable: `bool` 默认：`false`。
-- no_cookie: `bool` 无 Cookie 模式。默认：`true`。
-- do_not_track: `bool` 是否尊重浏览器的 Do Not Track 设置。默认：`true`。
-- data_token: `string` 令牌（可选），更多信息参见 https://splitbee.io/docs/embed-the-script。默认：`""`。
 
 ### cookieconsent
 
@@ -3052,9 +3038,6 @@ colorful = true
 dislikes = false
 outlined = false
 
-[params.comment.commento]
-enable = false
-
 [params.comment.utterances]
 enable = false
 repo = ""
@@ -3203,11 +3186,6 @@ telegram
 - colorful: `bool` 默认：`true`。
 - dislikes: `bool` 默认：`false`。
 - outlined: `bool` 默认：`false`。
-
-commento
-: `map` Commento 评论配置。详见 [Commento](https://commento.io)。
-
-- enable: `bool` 默认：`false`。
 
 utterances
 : `map` Utterances 评论配置。详见 [Utterances](https://utteranc.es)。
