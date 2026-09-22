@@ -27,7 +27,7 @@ menu:
 
 你也可以：
 <!-- markdownlint-disable-file reference-links-images -->
-- 通过编辑 `data/friends.yml` 文件提交 [案例展示][showcase]
+- 通过编辑 `data/friends.yml` 文件（多语言站点为 `data/friends.lang.yml`）提交 [案例展示][showcase]
 - 通过编辑 `data/projects.lang.yml` 文件提交 [主题组件][components]
 
 ## 先决条件

@@ -23,7 +23,7 @@ comment:
 ---
 
 {{< admonition tip "添加你的 FixIt 网站" >}}
-你可以通过 [创建 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/pulls) 或 [编辑数据 :(fa-regular fa-pen-to-square fa-fw):](https://github.com/hugo-fixit/docs/edit/main/data/friends.yml) 按 **nickname** 以字典顺序将你的 FixIt 网站添加到此页面，格式如下：
+你可以通过 [创建 PR :(fa-solid fa-code-branch fa-fw):](https://github.com/hugo-fixit/docs/pulls) 或 [编辑数据 :(fa-regular fa-pen-to-square fa-fw):](https://github.com/hugo-fixit/docs/edit/main/data/friends.yml) 将你的 FixIt 网站添加到此页面，格式如下：
 
 ```yml
 - nickname: <your nickname>
@@ -32,5 +32,5 @@ comment:
   description: <description of your site>
 ```
 
-> :(fa-solid fa-exclamation-triangle): _网站失效、停止维护、不当内容都可能被取消链接！_
+> :(fa-solid fa-exclamation-triangle): _网站失效、停止维护、不当内容都可能被取消链接！死链会被自动检测并标记 nofollow。_
 {{< /admonition >}}

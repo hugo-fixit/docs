@@ -83,7 +83,9 @@ date: 2024-04-06T12:57:26+08:00
 
 {{< version 0.2.12 >}}
 
-Set `layout: friends` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows:
+Set `layout: friends` in the front matter and create data file named `friends.yml` in the `yourSite/data/` directory, whose content format is as follows.
+
+If your site is multilingual, create `friends.en.yml` for English and `friends.zh-cn.yml` for Chinese (a language-suffixed file replaces the fallback `friends.yml` entirely for that language).
 
 ```yml
 # Friend/Site info of one
@@ -91,7 +93,18 @@ Set `layout: friends` in the front matter and create data file named `friends.ym
   avatar: friend's avatar
   url: site link
   description: description of friend/site
+  weight: 100 # optional, higher = earlier in list, default 0
 ```
+
+Front matter parameters for the friends page:
+
+| Parameter           | Type    | Default     | Description                                                                                 |
+| ------------------- | ------- | ----------- | ------------------------------------------------------------------------------------------- |
+| `friend_scheme`     | string  | `"mahjong"` | Card layout: `mahjong` (vertical), `domino` (horizontal), `note` (text-focused)             |
+| `friend_sort`       | string  | `"weight"`  | Sort field: `weight` (descending) or `nickname` (weight desc first, then alphabetical)      |
+| `friend_link_check` | boolean | `false`     | **[Experimental]** Enable dead link detection in development mode via `resources.GetRemote` |
+
+Dead links are automatically detected and marked with `rel="nofollow"` and a visual indicator.
 
 > [!TIP]-
 > You can use the following command to quickly create a friends page:

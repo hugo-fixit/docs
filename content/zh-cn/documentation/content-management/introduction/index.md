@@ -84,7 +84,9 @@ type: posts
 
 {{< version 0.2.12 >}}
 
-在 Front matter 中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下：
+在 Front matter 中设置 `layout: friends`，并在 `yourSite/data/` 目录下创建 `friends.yml`，其内容格式如下。
+
+如果站点是多语言的，可以为英语创建一个 `friends.en.yml` 文件，为中文创建一个 `friends.zh-cn.yml` 文件（带语言后缀的文件会整体替代该语言下的回退文件 `friends.yml`）。
 
 ```yml
 # 朋友/站点信息例子
@@ -92,7 +94,18 @@ type: posts
   avatar: 朋友头像
   url: 站点链接
   description: 对朋友或其站点的说明
+  weight: 100 # 可选，越大越靠前，默认 0
 ```
+
+友情链接页面的 Front matter 参数：
+
+| 参数                | 类型    | 默认值      | 说明                                                                    |
+| ------------------- | ------- | ----------- | ----------------------------------------------------------------------- |
+| `friend_scheme`     | string  | `"mahjong"` | 卡片布局：`mahjong`（纵向）、`domino`（横向骨牌）、`note`（文本风格）   |
+| `friend_sort`       | string  | `"weight"`  | 排序字段：`weight`（降序）或 `nickname`（权重降序优先，同权重按字母序） |
+| `friend_link_check` | boolean | `false`     | **[实验性]** 是否在开发模式下启用死链检测（通过 `resources.GetRemote`） |
+
+死链会被自动检测并标记 `rel="nofollow"` 及视觉提示。
 
 > [!TIP]-
 > 你可以使用以下命令快速创建友情链接页面：

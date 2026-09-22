@@ -27,7 +27,7 @@ For corrections and improvements to the current documentation, please submit iss
 
 You can also:
 <!-- markdownlint-disable-file reference-links-images -->
-- Submit [showcase][showcase] by editing the `data/friends.yml` file
+- Submit [showcase][showcase] by editing the `data/friends.yml` file (or `data/friends.lang.yml` in a multilingual site)
 - Submit [theme components][components] by editing the `data/projects.lang.yml` file
 
 ## Prerequisites
