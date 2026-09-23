@@ -1,7 +1,7 @@
 # FixIt 主题文档
 
 [![Production environment](https://img.shields.io/github/deployments/hugo-fixit/docs/Production?style=flat&label=Vercel&logo=vercel)](https://fixit.lruihao.cn/)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.161.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.166.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
 
 👉 中文 | [English](README.en.md)
 
@@ -9,7 +9,7 @@
 
 ## 系统依赖
 
-- [Hugo](https://gohugo.io/installation/): >= 0.161.0 (extended version)
+- [Hugo](https://gohugo.io/installation/): >= 0.166.0 (extended version)
 - [Go](https://go.dev/dl/)
 - [Dart Sass](https://sass-lang.com/install/)
 - [Node.js](https://nodejs.org/): >= 24.0.0

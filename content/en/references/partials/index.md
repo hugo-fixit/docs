@@ -174,6 +174,14 @@ This partial consolidates all head-related content including:
 
 Called from: base/baseof.html.
 
+### base/head/pagefind-metadata.html
+
+Pagefind search metadata injection partial.
+
+Outputs meta tags for Pagefind indexing: hidden/encrypted filters, date/title sorting fields, and tag/category/collection metadata. Only active when Pagefind search is enabled and the current context is a page.
+
+Called from: `base/head/index.html`.
+
 ### base/head/twitter-cards.html
 
 Extends Hugo's embedded twitter_cards partial: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_partials/twitter_cards.html.
@@ -935,12 +943,6 @@ Mermaid rendering partial for code fences extended syntax and shortcode usage.
 | `[.Options.filename]` | `String` | Filename used by diagram/code actions |
 | `[.Inner]` | `String` | Inline Mermaid source content |
 | `[.Page]` | `Object` | Current page context |
-
-### plugin/pagefind-metadata.html
-
-Pagefind search metadata injection partial.
-
-Outputs meta tags for Pagefind indexing: hidden/encrypted filters, date/title sorting fields, and tag/category/collection metadata. Only active when Pagefind search is enabled and the current context is a page.
 
 ### plugin/post-chat-ai.html
 

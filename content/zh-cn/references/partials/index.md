@@ -194,6 +194,14 @@ Head partial —— 综合 head 区域模板。
 
 调用自：base/baseof.html。
 
+### base/head/pagefind-metadata.html
+
+Pagefind 搜索元数据注入 partial。
+
+输出用于 Pagefind 索引的 meta 标签：hidden/encrypted 过滤器、date/title 排序字段和 tag/category/collection 元数据。仅在启用 Pagefind 搜索且当前上下文为页面时激活。
+
+调用自：`base/head/index.html`。
+
 ### base/head/twitter-cards.html
 
 扩展 Hugo 内置的 twitter_cards partial：https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_partials/twitter_cards.html。
@@ -955,12 +963,6 @@ Mermaid 渲染 partial，用于代码围栏扩展语法和 shortcode 用法。
 | `[.Options.filename]` | `String` | 图表/代码操作使用的文件名 |
 | `[.Inner]` | `String` | 内联 Mermaid 源内容 |
 | `[.Page]` | `Object` | 当前页面上下文 |
-
-### plugin/pagefind-metadata.html
-
-Pagefind 搜索元数据注入 partial。
-
-输出用于 Pagefind 索引的 meta 标签：hidden/encrypted 过滤器、date/title 排序字段和 tag/category/collection 元数据。仅在启用 Pagefind 搜索且当前上下文为页面时激活。
 
 ### plugin/post-chat-ai.html
 

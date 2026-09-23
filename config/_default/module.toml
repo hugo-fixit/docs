@@ -52,4 +52,4 @@ path = "github.com/hugo-fixit/shortcode-rewards/v2"
 version = "latest"
 
 [hugoVersion]
-min = "0.161.0"
+min = "0.166.0"
