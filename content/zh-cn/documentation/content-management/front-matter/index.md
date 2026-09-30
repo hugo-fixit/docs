@@ -75,6 +75,19 @@ resources:
 
 - **collections**: {{< version 0.3.0 >}} 文章的集合，类似 `tags` 和 `categories`，但为 FixIt 特有。
 
+### 作者
+
+- **authors**: {{< version 1.0.0 >}} 文章的作者注册表键名列表（多作者），例如 `authors: [Alice, Bob]`
+- **author**: 旧版单作者字段，可为名称字符串，或包含 `name` / `link` / `email` / `avatar` 的 map
+
+当设置了 `authors` 时优先于 `author`。作者资料存放在 `data/authors/<Key>.toml`（可选 `[zh-cn]` 等语言子表）；缺失的注册表键回退为 `{name: key}`，且不会继承 `params.author`。结合 `authors` 分类，每个键还会生成 `/authors/<key>/` 归档页。详见 [主题配置 - author][theme-config-author]。
+
+```yaml
+authors:
+  - Alice
+  - Bob
+```
+
 ### 内容加密
 
 - **password**: {{< version 0.2.15 >}} 加密页面内容的密码，详见 [内容加密][content-encryption]
@@ -94,6 +107,8 @@ resources:
 title: 我的第一篇文章
 date: 2020-03-04T15:58:26+08:00
 draft: true
+authors:
+  - Alice
 categories:
   - Documentation
 tags:
@@ -123,6 +138,7 @@ math:
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration/params" >}}
 [theme-config-page]: {{< relref path="/documentation/getting-started/configuration/params#页面级参数" >}}
+[theme-config-author]: {{< relref path="/documentation/getting-started/configuration/params#author" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration/introduction#menu-configuration" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [archetypes]: https://gohugo.io/content-management/archetypes/

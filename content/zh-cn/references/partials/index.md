@@ -39,21 +39,21 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **93** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **109** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
 - [_debug/](#_debug) — 2 个 partials
 - [base/](#base) — 7 个 partials
-- [base/head/](#basehead) — 3 个 partials
+- [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 36 个 partials
+- [function/](#function) — 43 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
 - [plugin/](#plugin) — 20 个 partials
-- [section/](#section) — 1 个 partial
-- [single/](#single) — 9 个 partials
+- [section/](#section) — 5 个 partials
+- [single/](#single) — 13 个 partials
 - [store/](#store) — 2 个 partials
 - [(root)](#root) — 1 个 partial
 
@@ -287,6 +287,20 @@ Output: slice (dict "userName" "John") (dict "userAge" 30)
 {{- partial "function/camel-case.html" "max_shown_lines" -}}
 ```
 
+### function/check-link.html
+
+使用 resources.GetRemote 检查 URL 是否可达。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Object` | 选项 |
+| `.url` | `String` | 要检查的 URL |
+| `[.timeout]` | `String` | 请求超时时间（默认："3s"） |
+
+**返回值：** `String` - 状态："ok"、"broken" 或 "unknown"
+
 ### function/code-copy-btn.html
 
 非经典模式代码块的复制按钮。
@@ -364,6 +378,46 @@ Font Awesome.
 
 ```go-template
 {{- $author := partial "function/get-author-map.html" .Params.author -}}
+```
+
+### function/get-author.html
+
+按注册表键解析单个作者。
+
+查找 hugo.Data.authors[key]，应用语言子表覆盖；当该作者为站点所有者时，继承 site.Params.author 中的空字段；若启用 Gravatar 则应用 Gravatar。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `String\|Map` | 注册表键名，或包含 "Key" 与可选 "Size"（Gravatar 尺寸，默认 200）的 map |
+
+**示例：**
+
+```go-template
+{{- $author := partial "function/get-author.html" "Alice" -}}
+```
+
+```go-template
+{{- $author := partial "function/get-author.html" (dict "Key" "Alice" "Size" "32") -}}
+```
+
+### function/get-authors.html
+
+以 map 列表形式获取作者（多作者走 data/authors 注册表，旧的单作者路径回退到 get-author-map）。
+
+多作者条目为注册表键名（字符串），经 get-author 解析。当 `.Params.authors` 为空时，委托 get-author-map 处理 `.Params.author`（单作者语义不变）。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Page` | 页面上下文 |
+
+**示例：**
+
+```go-template
+{{- $authors := partial "function/get-authors.html" . -}}
 ```
 
 ### function/get-cover.html
@@ -523,6 +577,24 @@ ID。
 
 标记文本渲染。这是标记文本的实验性语法高亮。嵌入类型：default、primary、secondary、success、warning、danger。
 
+### function/pages-by-author.html
+
+按作者获取文章列表，并返回作者档案（名称/注册表键）。单次遍历：同时从这些文章补全缺失的档案字段。
+
+收集解析到指定作者（注册表键 / 名称 / 旧版 `author` 回退）的页面，并从这些页面解析出的作者补全缺失的档案字段（link/email/avatar）。同时通过 get-author 继承站点作者字段。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Name" (String) — 作者名 / 注册表键（通常为 .Data.Term），可选 "Pages"，可选 "Size"（Gravatar 尺寸，默认 240） |
+
+**示例：**
+
+```go-template
+{{- $term := partial "function/pages-by-author.html" (dict "Name" "Alice") -}}
+```
+
 ### function/param.html
 
 获取页面级 section 参数，支持简写并合并站点默认值。
@@ -549,6 +621,16 @@ ID。
 {{- $config := dict "Page" . "Key" "math" "ToCamel" true | partial "function/param.html" -}}
 ```
 
+### function/parse-author-names.html
+
+从内容文件的 front matter 解析作者名。支持 YAML 或 TOML front matter 中的标量/map `author` 与 list/标量 `authors`。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `String` | 文件路径 |
+
 ### function/path.html
 
 https://discourse.gohugo.io/t/how-decode-urls-in-hugo/7549/4
@@ -571,6 +653,16 @@ https://discourse.gohugo.io/t/how-decode-urls-in-hugo/7549/4
 ### function/ruby.html
 
 Ruby 注音。
+
+### function/scan-author-names.html
+
+递归收集目录下内容文件中的作者名。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `String` | 相对于项目根目录的目录路径（例如 "content"） |
 
 ### function/scss-vars.html
 
@@ -610,6 +702,18 @@ Ruby 注音。
 | `[.Fingerprint]` | `String` | 指纹算法（例如 "sha256"） |
 
 **返回值：** `resource.Resource`
+
+### function/total-word-count.html
+
+计算页面集合的总字数。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Object` | 页面集合（例如 .Pages） |
+
+**返回值：** `Number` - 所有页面 WordCount 之和
 
 ### function/trim.html
 
@@ -983,6 +1087,18 @@ PostChat AI 服务。PostChat：https://ai.zhheo.com/docs/addCode.html PostSumma
 | `.Id` | `String` | 打赏切换的唯一 input id |
 | `[.Author]` | `String` | 可选的作者名称，用于图片 alt 文本 |
 
+### plugin/rss-link.html
+
+列表页的 RSS 订阅链接。
+
+- 当页面没有 RSS 输出格式时不渲染任何内容。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Object` | 提供 RSS 输出格式的页面上下文 |
+
 ### plugin/script.html
 
 Script 标签渲染器。
@@ -1090,7 +1206,47 @@ Script 标签渲染器。
 
 > Section 级 partials。
 
-> 1 个 partial
+> 5 个 partials
+
+### section/archive-header.html
+
+通用归档页头：图标 + 计数 + 标题。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Pages"、"Title"、可选 "Icon" |
+
+### section/archive-list.html
+
+按日期分组的归档列表 + 分页器。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Page"（上下文）和 "Pages"（页面集合），可选 "DateFormat"（默认 "01-02"） |
+
+### section/archive-meta.html
+
+归档元信息区块：总字数 + RSS 链接。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Page"（上下文）和 "Pages"（页面集合） |
+
+### section/author-header.html
+
+作者归档页头：头像、姓名，然后是链接/邮件图标。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Page"、"Pages"、"Author"（来自 function/get-author.html） |
 
 ### section/recently-updated.html
 
@@ -1100,7 +1256,15 @@ Script 标签渲染器。
 
 > 单篇文章页面 partials。
 
-> 9 个 partials
+> 13 个 partials
+
+### single/aside-collection.html
+
+侧边栏合集。
+
+### single/aside-toc.html
+
+侧边栏目录。
 
 ### single/collection-list.html
 
@@ -1116,15 +1280,25 @@ Script 标签渲染器。
 
 当页面最后修改日期超过可配置的天数阈值时（默认：90 天显示提示，180 天显示警告），显示提示或警告告警框。密码保护页面跳过此检查。
 
+### single/disclaimer.html
+
+文章免责声明/声明 partial。
+
+在文章开头显示轻量免责声明提示。支持多种类型：ai、ai-assisted、ai-translated、repost、original、custom。"custom" 类型需要指定 content，否则不显示。
+
 ### single/footer.html
 
 Git 信息。
+
+### single/nav-dialog.html
+
+导航对话框 — 移动端目录与合集抽屉。
 
 ### single/post-author.html
 
 文章作者显示 partial。
 
-渲染作者名称，支持可选头像和链接。将解析后的作者 map 存储在页面 store 中供其他 partial 使用。
+渲染一个或多个作者名称，支持可选头像和链接。将解析出的主作者（第一个）map 以 "author"、完整列表以 "authors" 存入页面 store，供其他 partial 使用。
 
 ### single/post-included-in.html
 

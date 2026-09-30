@@ -75,6 +75,19 @@ resources:
 
 - **collections**: {{< version 0.3.0 >}} the collections for the content, similar to `tags` and `categories` but specific to FixIt.
 
+### Authors
+
+- **authors**: {{< version 1.0.0 >}} a list of author registry keys for the content (multi-author), e.g. `authors: [Alice, Bob]`.
+- **author**: the legacy single author field, either a name string or a map with `name` / `link` / `email` / `avatar`.
+
+When `authors` is set it takes precedence over `author`. Author profiles live in `data/authors/<Key>.toml` (optional i18n sub-tables such as `[zh-cn]`); missing registry keys fall back to `{name: key}` and do not inherit from `params.author`. Combined with the `authors` taxonomy, each key also gets an archive page at `/authors/<key>/`. See [Theme Configuration - author][theme-config-author].
+
+```yaml
+authors:
+  - Alice
+  - Bob
+```
+
 ### Content Encryption
 
 - **password**: {{< version 0.2.15 >}} password of encrypted page content, see [Content Encryption][content-encryption].
@@ -94,6 +107,8 @@ Front matter fields only valid in special pages (`_index.md`).
 title: My First Post
 date: 2020-03-04T15:58:26+08:00
 draft: true
+authors:
+  - Alice
 categories:
   - Documentation
 tags:
@@ -123,6 +138,7 @@ math:
 [front-matter]: https://gohugo.io/content-management/front-matter/
 [theme-config]: {{< relref path="/documentation/getting-started/configuration/params" >}}
 [theme-config-page]: {{< relref path="/documentation/getting-started/configuration/params#page-level" >}}
+[theme-config-author]: {{< relref path="/documentation/getting-started/configuration/params#author" >}}
 [content-to-menu]: {{< relref path="/documentation/getting-started/configuration/introduction#menu-configuration" >}}
 [content-encryption]: {{< relref path="/documentation/content-management/encryption" >}}
 [archetypes]: https://gohugo.io/content-management/archetypes/

@@ -710,7 +710,18 @@ posts
 
 ### social
 
-`map` 自定义社交链接，如下所示。[params.social.twitter]。示例：`id = "lruihao"`。示例：`weight = 3`。示例：`prefix = "https://x.com/"`。示例：`title = "X"`。[params.social.twitter.icon]。示例：`class = "fa-brands fa-x-twitter"`。
+`map` 关于作者的社交配置。自定义社交链接，如下所示。
+
+```toml
+[params.social.twitter]
+id = "lruihao"
+weight = 3
+prefix = "https://x.com/"
+title = "X"
+
+[params.social.twitter.icon]
+class = "fa-brands fa-x-twitter"
+```
 
 ```toggle
 [params]
@@ -1106,11 +1117,25 @@ loop
 
 ### admonition
 
-`map` 告诫自定义配置。详见 [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions)。语法：`<type> = <icon>`。示例：`ban = "fa-solid fa-ban"`。
+`map` 告诫自定义配置。详见 [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions)。语法：`<type> = <icon>`。
+
+示例：
+
+```toml
+[params.admonition]
+ban = "fa-solid fa-ban"
+```
 
 ### task_list
 
-`map` 任务列表自定义配置。详见 [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists)。语法：`<sign> = <icon>`。示例：`tip = "fa-regular fa-lightbulb"`。
+`map` 任务列表自定义配置。详见 [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists)。语法：`<sign> = <icon>`。
+
+示例：
+
+```toml
+[params.task_list]
+tip = "fa-regular fa-lightbulb"
+```
 
 ### repo_version
 
@@ -1582,7 +1607,7 @@ follow
 
 ### taxonomy_icons
 
-`map` 分类图标配置。配合 `taxonomies` 使用。需先配置 `taxonomies`，否则分类图标不会生效。语法：`<taxonomy> = [<title icon>, <card icon>, <term title icon>]`。示例：`topic = [` `"fa-solid fa-book-bookmark",` `"fa-solid fa-book",` `"fa-solid fa-book-open"` `]`。
+`map` 分类图标配置。配合 `taxonomies` 使用。需先配置 `taxonomies`，否则分类图标不会生效。语法：`<taxonomy> = [<title icon>, <card icon>, <term title icon>]` 示例：`topic = ["fa-solid fa-book-bookmark", "fa-solid fa-book", "fa-solid fa-book-open"]`。
 
 ### print
 
@@ -2114,7 +2139,21 @@ c4u
 
 ### author
 
-`map` 作者配置。
+`map` 作者配置（站点默认作者——单作者文章、页脚、首页个人资料等）。多作者支持（可选）：
+
+1. 为每位作者创建一个注册文件，例如 `data/authors/Alice.toml`：
+
+    ```toml
+    name = "Alice"
+    link = "https://alice.example.com"
+    email = "alice@example.com"
+    avatar = "/images/authors/alice.png"
+    [zh-cn]            # 可选的多语言覆盖，键为语言代码
+    name = "爱丽丝"
+    ```
+
+2. 在文章 Front matter 中设置：`authors: [Alice, Bob]`（注册文件的键名）。
+   设置 `authors` 时优先于 `author`。缺失的注册键将回退为 `{name: key}`（不会继承 params.author）。若注册了 `author = "authors"` 分类法，还将通过通用分类法模板生成 `/authors/<key>/` 归档页面。
 
 ```toggle
 [params]
@@ -2188,7 +2227,7 @@ black_list
 
 ### codeblock
 
-`map` 代码块包装器配置。你可以通过 Markdown 属性覆盖全局配置，例如：```lang {mode="mac", max_shown_lines=5}。代码在这里。```。
+`map` 代码块包装器配置。你可以通过 Markdown 属性覆盖全局配置。示例：代码围栏的 info string `lang {mode="mac", max_shown_lines=5}`。
 
 ```toggle
 [params]
@@ -2316,7 +2355,7 @@ layout = "dagre"
 ```
 
 wrapper
-: `bool` 是否启用 Mermaid 包装器。启用后，Mermaid 图表将被图表标签页和操作包装：平移/缩放（拖拽 + Ctrl+ 滚轮）、重置视图、下载为 SVG。默认：`true`。
+: `bool` 是否启用 Mermaid 包装器。启用后，Mermaid 图表将被图表标签页和操作（平移/缩放、重置视图、下载为 SVG）包装。默认：`true`。
 
 cdn
 : `string` Mermaid ESM 模块 CDN 源。默认：`"https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"`。
@@ -2522,14 +2561,37 @@ katex
 - copy_tex: `bool` KaTeX 扩展 copy-tex。默认：`true`。
 - throw_on_error: `bool` 默认：`false`。
 - error_color: `string` 默认：`"#ff4949"`。
-- macros: `map` 自定义宏映射。语法：`<macro> = <definition>`。示例：`"\\f" = "#1f(#2)" # 用法：$\f{a}{b}$`。
+- macros: `map` 自定义宏映射。语法：`<macro> = <definition>`。
+
+示例：
+
+```toml
+[params.math.katex.macros]
+"\\f" = "#1f(#2)" # 用法：$\f{a}{b}$
+```
 
 mathjax
 : `map` MathJax 服务端渲染。详见 [MathJax](https://www.mathjax.org) 和 [MathJax Options](https://docs.mathjax.org/en/latest/options/index.html)。
 
 - cdn: `string` 默认：`"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"`。
-- packages: `map` MathJax 包配置。示例：`"[+]" = ["configmacros"]`。
-- macros: `map` 自定义宏映射。语法：`<macro> = <definition>`。示例：`bold = ["{\\bf #1}", 1] # 用法：$\bold{math}$`。
+- packages: `map` MathJax 包配置。
+
+示例：
+
+```toml
+[params.math.mathjax.packages]
+"[+]" = ["configmacros"]
+```
+
+- macros: `map` 自定义宏映射。语法：`<macro> = <definition>`。
+
+示例：
+
+```toml
+[params.math.mathjax.macros]
+bold = ["{\\bf #1}", 1] # 用法：$\bold{math}$
+```
+
 - loader: `map` MathJax 加载器配置。支持更多加载器配置，如 source、dependencies、provides 等。
 - options: `map`
 
@@ -2766,6 +2828,7 @@ position
 enable = false
 animation = false
 position = "after"
+comment = "Buy me a coffee"
 mode = "static"
 
 [params.reward.ways]
@@ -2780,11 +2843,24 @@ animation
 position
 : `string` 相对于文章页脚的位置。可选值：["before", "after"]。默认：`"after"`。
 
+comment
+: `string` 显示在打赏触发器附近的文案（支持 HTML 格式）。默认：`"Buy me a coffee"`。
+
 mode
-: `string` 示例：`comment = "Buy me a coffee"`。二维码图片的显示方式。可选值：["static", "fixed"]。默认：`"static"`。
+: `string` 二维码图片的显示方式。可选值：["static", "fixed"]。默认：`"static"`。
 
 ways
-: `map` 打赏（赞助）方式。示例：`wechatpay = "/images/wechatpay.png"`。示例：`alipay = "/images/alipay.png"`。示例：`paypal = "/images/paypal.png"`。示例：`bitcoin = "/images/bitcoin.png"`。
+: `map` 打赏（赞助）方式。
+
+示例：
+
+```toml
+[params.reward.ways]
+wechatpay = "/images/wechatpay.png"
+alipay = "/images/alipay.png"
+paypal = "/images/paypal.png"
+bitcoin = "/images/bitcoin.png"
+```
 
 ### post_link
 
@@ -3232,7 +3308,16 @@ giscus
 
 ### robots
 
-`map` 追加到 robots.txt 的自定义规则（可选）。[[params.robots.rules]]。示例：`user_agent = "SomeBot"`。示例：`disallow = "/"`。[[params.robots.rules]]。示例：`user_agent = "GoodBot"`。示例：`allow = "/"`。
+`map` Robots.txt 配置（需要 enableRobotsTXT = true）。追加到 robots.txt 的自定义规则（可选）。
+
+```toml
+[[params.robots.rules]]
+user_agent = "SomeBot"
+disallow = "/"
+[[params.robots.rules]]
+user_agent = "GoodBot"
+allow = "/"
+```
 
 ```toggle
 [params]

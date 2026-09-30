@@ -688,7 +688,18 @@ posts
 
 ### social
 
-`map` Custom social links like the following. [params.social.twitter]. Example: `id = "lruihao"`. Example: `weight = 3`. Example: `prefix = "https://x.com/"`. Example: `title = "X"`. [params.social.twitter.icon]. Example: `class = "fa-brands fa-x-twitter"`.
+`map` Social configuration about the author. Custom social links like the following.
+
+```toml
+[params.social.twitter]
+id = "lruihao"
+weight = 3
+prefix = "https://x.com/"
+title = "X"
+
+[params.social.twitter.icon]
+class = "fa-brands fa-x-twitter"
+```
 
 ```toggle
 [params]
@@ -1084,11 +1095,25 @@ loop
 
 ### admonition
 
-`map` Admonitions custom configuration. See: [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions). Syntax: `<type> = <icon>`. Example: `ban = "fa-solid fa-ban"`.
+`map` Admonitions custom configuration. See: [Custom Admonitions](https://fixit.lruihao.cn/docs/advanced/#custom-admonitions). Syntax: `<type> = <icon>`.
+
+Example:
+
+```toml
+[params.admonition]
+ban = "fa-solid fa-ban"
+```
 
 ### task_list
 
-`map` Task lists custom configuration. See: [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists). Syntax: `<sign> = <icon>`. Example: `tip = "fa-regular fa-lightbulb"`.
+`map` Task lists custom configuration. See: [Custom Task Lists](https://fixit.lruihao.cn/docs/advanced/#custom-task-lists). Syntax: `<sign> = <icon>`.
+
+Example:
+
+```toml
+[params.task_list]
+tip = "fa-regular fa-lightbulb"
+```
 
 ### repo_version
 
@@ -1525,10 +1550,10 @@ enable
 : `bool` Default is `false`.
 
 color
-: `string` All available colors:. ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]. Default is `"blue"`.
+: `string` All available colors: ["black", "blue", "green", "orange", "pink", "purple", "red", "silver", "white", "yellow"]. Default is `"blue"`.
 
 theme
-: `string` All available themes:. ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple",. "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]. Default is `"minimal"`.
+: `string` All available themes: ["barber-shop", "big-counter", "bounce", "center-atom", "center-circle", "center-radar", "center-simple", "corner-indicator", "fill-left", "flash", "flat-top", "loading-bar", "mac-osx", "material", "minimal"]. Default is `"minimal"`.
 
 ### feed
 
@@ -1560,7 +1585,7 @@ follow
 
 ### taxonomy_icons
 
-`map` Taxonomy icons configuration. Works with `taxonomies`. Configure `taxonomies` first, otherwise taxonomy icons will not take effect. Syntax: `<taxonomy> = [<title icon>, <card icon>, <term title icon>]`. Example:. Example: `topic = [`. "fa-solid fa-book-bookmark",. "fa-solid fa-book",. "fa-solid fa-book-open". ].
+`map` Taxonomy icons configuration. Works with `taxonomies`. Configure `taxonomies` first, otherwise taxonomy icons will not take effect. Syntax: `<taxonomy> = [<title icon>, <card icon>, <term title icon>]` Example: `topic = ["fa-solid fa-book-bookmark", "fa-solid fa-book", "fa-solid fa-book-open"]`.
 
 ### print
 
@@ -1982,7 +2007,7 @@ github_corner_fill_dark
 
 ### dev
 
-`map` Developer options. Select the scope named `public_repo` to generate personal access token,. Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, See: https://gohugo.io/functions/os/getenv/#examples.
+`map` Developer options. Select the scope named `public_repo` to generate personal access token, Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, See: https://gohugo.io/functions/os/getenv/#examples.
 
 ```toggle
 [params]
@@ -2092,7 +2117,21 @@ These can be overridden on a per-page basis via front matter.
 
 ### author
 
-`map` Author configuration.
+`map` Author configuration (site default author — single-author pages, footer, home profile, etc.). Multi-author support (optional):
+
+1. Create a registry file per author, e.g. `data/authors/Alice.toml`:
+
+    ```toml
+    name = "Alice"
+    link = "https://alice.example.com"
+    email = "alice@example.com"
+    avatar = "/images/authors/alice.png"
+    [zh-cn]            # optional I18n override, key = language key
+    name = "爱丽丝"
+    ```
+
+2. In page front matter: `authors: [Alice, Bob]` (registry keys).
+   When `authors` is set it takes precedence over `author`. Missing registry keys fall back to `{name: key}` (no inheritance from params.author). With the `author = "authors"` taxonomy registered, this also creates `/authors/<key>/` archive pages via the generic taxonomy templates.
 
 ```toggle
 [params]
@@ -2166,7 +2205,7 @@ black_list
 
 ### codeblock
 
-`map` Code block wrapper configuration. You can override the global config via Markdown attributes, for example:. ```lang {mode="mac", max_shown_lines=5}. Code here. ```.
+`map` Code block wrapper configuration. You can override the global config via Markdown attributes. Example: info string `lang {mode="mac", max_shown_lines=5}` on the code fence.
 
 ```toggle
 [params]
@@ -2294,7 +2333,7 @@ layout = "dagre"
 ```
 
 wrapper
-: `bool` Whether to enable the Mermaid wrapper. When enabled, Mermaid diagrams are wrapped with diagram tabs and actions:. - pan/zoom (drag & ctrl+wheel). - reset view. - download as SVG. Default is `true`.
+: `bool` Whether to enable the Mermaid wrapper. When enabled, Mermaid diagrams are wrapped with diagram tabs and actions (pan/zoom, reset view, download as SVG). Default is `true`.
 
 cdn
 : `string` Mermaid ESM module CDN source. Default is `"https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs"`.
@@ -2500,14 +2539,37 @@ katex
 - copy_tex: `bool` KaTeX extension copy-tex. Default is `true`.
 - throw_on_error: `bool` Default is `false`.
 - error_color: `string` Default is `"#ff4949"`.
-- macros: `map` Custom macros map. Syntax: `<macro> = <definition>`. Example: `"\\f" = "#1f(#2)" # usage: $\f{a}{b}$`.
+- macros: `map` Custom macros map. Syntax: `<macro> = <definition>`.
+
+Example:
+
+```toml
+[params.math.katex.macros]
+"\\f" = "#1f(#2)" # usage: $\f{a}{b}$
+```
 
 mathjax
 : `map` MathJax server-side rendering. See: [MathJax](https://www.mathjax.org) and [MathJax Options](https://docs.mathjax.org/en/latest/options/index.html).
 
 - cdn: `string` Default is `"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"`.
-- packages: `map` MathJax packages config. Example: `"[+]" = ["configmacros"]`.
-- macros: `map` Custom macros map. Syntax: `<macro> = <definition>`. Example: `bold = ["{\\bf #1}", 1] # usage: $\bold{math}$`.
+- packages: `map` MathJax packages config.
+
+Example:
+
+```toml
+[params.math.mathjax.packages]
+"[+]" = ["configmacros"]
+```
+
+- macros: `map` Custom macros map. Syntax: `<macro> = <definition>`.
+
+Example:
+
+```toml
+[params.math.mathjax.macros]
+bold = ["{\\bf #1}", 1] # usage: $\bold{math}$
+```
+
 - loader: `map` MathJax loader configuration. More loader config e.g source, dependencies, provides etc support.
 - options: `map`
 
@@ -2744,6 +2806,7 @@ position
 enable = false
 animation = false
 position = "after"
+comment = "Buy me a coffee"
 mode = "static"
 
 [params.reward.ways]
@@ -2758,11 +2821,24 @@ animation
 position
 : `string` Position relative to post footer. Available values: ["before", "after"]. Default is `"after"`.
 
+comment
+: `string` Comment text shown near the reward trigger (HTML format is supported). Default is `"Buy me a coffee"`.
+
 mode
-: `string` Example: `comment = "Buy me a coffee"`. Display mode of QR code images. Available values: ["static", "fixed"]. Default is `"static"`.
+: `string` Display mode of QR code images. Available values: ["static", "fixed"]. Default is `"static"`.
 
 ways
-: `map` Ways to donate (sponsor). Example: `wechatpay = "/images/wechatpay.png"`. Example: `alipay = "/images/alipay.png"`. Example: `paypal = "/images/paypal.png"`. Example: `bitcoin = "/images/bitcoin.png"`.
+: `map` Ways to donate (sponsor).
+
+Example:
+
+```toml
+[params.reward.ways]
+wechatpay = "/images/wechatpay.png"
+alipay = "/images/alipay.png"
+paypal = "/images/paypal.png"
+bitcoin = "/images/bitcoin.png"
+```
 
 ### post_link
 
@@ -3120,7 +3196,7 @@ valine
 - highlight: `bool` Default is `true`.
 - enable_qq: `bool` Default is `false`.
 - server_urls: `string` Default is `""`.
-- emoji: `string` Emoji data file name, default is "google.yml". Available values: ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]. Located in "themes/FixIt/assets/lib/valine/emoji/" directory. You can store your own data files in the same path under your project:. "assets/lib/valine/emoji/". Default is `""`.
+- emoji: `string` Emoji data file name, default is "google.yml". Available values: ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]. Located in "themes/FixIt/assets/lib/valine/emoji/" directory. You can store your own data files in the same path under your project: "assets/lib/valine/emoji/". Default is `""`.
 - comment_count: `bool` Default is `true`.
 
 waline
@@ -3210,7 +3286,16 @@ giscus
 
 ### robots
 
-`map` Custom rules appended to robots.txt (optional). [[params.robots.rules]]. Example: `user_agent = "SomeBot"`. Example: `disallow = "/"`. [[params.robots.rules]]. Example: `user_agent = "GoodBot"`. Example: `allow = "/"`.
+`map` Robots.txt configuration (requires enableRobotsTXT = true). Custom rules appended to robots.txt (optional).
+
+```toml
+[[params.robots.rules]]
+user_agent = "SomeBot"
+disallow = "/"
+[[params.robots.rules]]
+user_agent = "GoodBot"
+allow = "/"
+```
 
 ```toggle
 [params]
