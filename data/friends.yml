@@ -3,214 +3,148 @@
   avatar: /images/hugo-fixit.webp
   url: https://fixit.lruihao.cn
   description: FixIt Theme Official Documentation
+  weight: 100
 - nickname: Lruihao
   avatar: https://lruihao.cn/images/avatar.jpg
   url: https://lruihao.cn
   description: Hugo FixIt 作者，喜欢瞎折腾、造轮子、写东西，分享一些前端开发中的所见、所闻、所思。
-# -------------------------------------------------------------------------------------
-# Single Friend Link Information
-# 单个友情链接信息
-# -------------------------------------------------------------------------------------
-# - nickname: friend's name 朋友名字
-#   avatar: friend's avatar 朋友头像
-#   url: site link 站点链接
-#   description: description of friend/site 对朋友或其站点的说明
-# -------------------------------------------------------------------------------------
-# -------------------------------------------------------------------------------------
-# Add your FixIt site to the list in `nickname` lexicographical order
-# 按 `nickname` 以字典顺序将您的 FixIt 网站添加到列表中
-# -------------------------------------------------------------------------------------
-
+  weight: 99
 - nickname: AriaNote
   avatar: https://arianote.top/avatar.webp
   description: 温故而知新，可以为师矣。
   url: https://arianote.top
-
-- nickname: Ayang
-  avatar: https://ayang.ink/images/avatar.jpg
-  url: https://ayang.ink
-  description: Ayang's blog
-
 - nickname: 毕少侠
   avatar: https://geekswg.js.cool/images/avatar.png
   url: https://geekswg.js.cool
   description: 毕少侠也在江湖。
-
 - nickname: forDece
   avatar: https://www.fordece.cn/images/avatar.jpg
   url: https://www.fordece.cn
   description: 某人的小栈
-
 - nickname: 飞污熊
   avatar: https://www.xiongneng.me/images/avatar.png
   url: https://www.xiongneng.me
   description: 飞污熊小站
-
-- nickname: hiifong
-  avatar: https://www.gravatar.com/avatar/ba22db80ba3c392985cff46ec8c80332?s=240&d=mp
-  url: https://hiif.ong
-  description: Hi 👋, I'm hiifong!
-
 - nickname: Leehow
   avatar: https://www.haoyep.com/Github.jpg
   description: 色相事一刹那，光阴里无尽藏
   url: https://www.haoyep.com
-
 - nickname: mailcow
   avatar: https://mailcow.email/images/cow_mailcow.svg
   url: https://mailcow.email
   description: The official blog of excellent open-source project mailcow-dockerized.
-
 - nickname: Niku
   avatar: https://www.nikunokoya.com/images/avatar.jpg
   url: https://www.nikunokoya.com
   description: Niku's blog
-
 - nickname: roderick's blog
   avatar: https://www.roderickchan.cn/images/avatar.png
   description: 纸上得来终觉浅，绝知此事要躬行！
   url: https://www.roderickchan.cn/zh-cn/
-
 - nickname: SHUFly
   avatar: https://shuosc.github.io/fly/shufly.webp
   url: https://shuosc.github.io/fly/
   description: 上海大学开源社区出品的上海大学溯源手册。
-
 - nickname: TravisBikkle
   avatar: https://github.com/travisbikkle.png?size=200
   description: 分享我的学习笔记、经验与有趣的小玩意。
   url: https://travisbikkle.pages.dev
-
-- nickname: 吐司气泡
-  avatar: https://blog.toastbubble.top/avatar.webp
-  url: https://blog.toastbubble.top
-  description: 🍞这有多的吐司速来品鉴
-
-# - nickname: Vespeng
-#   avatar: https://vespeng.com/avatar.jpg
-#   url: https://vespeng.com
-#   description: 生命不息，折腾不止！
-
+# - nickname: 吐司气泡
+#   avatar: https://blog.toastbubble.top/avatar.webp
+#   url: https://blog.toastbubble.top
+#   description: 🍞这有多的吐司速来品鉴
 - nickname: wlanxww
   avatar: https://wlanxww.com/images/avatar.jpeg
   url: https://wlanxww.com
   description: wlanxww's blog
-
 - nickname: XIDCN
   avatar: https://xidcn.com/images/avatar.webp
   url: https://xidcn.com
   description: XIDCN's blog
-
 - nickname: 针草堂
   avatar: https://acuherb.xyz/images/avatar.jpg
   url: https://acuherb.xyz
   description: 针通经络，草养气血。
-
-# - nickname: 字节飞鸿
-#   avatar: https://benelin.site/images/avatar.png
-#   url: https://benelin.site
-#   description: 知易行难恒愈难
-
+- nickname: 字节飞鸿
+  avatar: https://benelin.site/images/avatar.png
+  url: https://benelin.site
+  description: 知易行难恒愈难
 - nickname: 指月小筑
   avatar: https://img.lixueduan.com/about/avatar.png
   url: https://www.lixueduan.com
   description: 意琦行的个人博客
-
 - nickname: 逐水寻源
   avatar: https://www.zair.top/img/logo.png
   url: https://www.zair.top
   description: 分享我的学习笔记、经验与有趣的小玩意。
-
 - nickname: KAYOON
   avatar: https://iamky.cn/android-chrome-192x192.png
   url: https://iamky.cn
   description: 分享学习过程中整理出来的知识以及踩过的坑。
-
 - nickname: Adilhyz
   avatar: https://github.com/adilhyz.png
   url: https://adilhyz.github.io/
   description: GNU/Linux enthusiast & Software Engineer. Loves Exploring Computing, fall into Cybersecurity, Enjoying Music, Watching Films, and Reading.
-
 - nickname: 宋飞
   avatar: https://songfei.org/images/songfei.png
   url: https://songfei.org
   description: 软件开发工程师、业余无线电爱好者。
-
-- nickname: 自游人
-  avatar: https://17you.com/icons/web-app-manifest-512x512.png
-  url: https://17you.com/
-  description: 旅行和写作
-
 - nickname: Yao Chaohao
   avatar: https://crisyao.github.io/me.jpg
   url: https://crisyao.github.io/
   description:
-
 - nickname: Heng-Mei Blog
   avatar: https://heng-mei.github.io/avatar.jpg
   url: https://heng-mei.github.io/
   description: 横眉冷对千夫指，俯首甘为孺子牛。
-
 - nickname: Buray's Blog
   avatar: https://burayimg.heisenw.com/blog/img/a6c9b1f7-6da1-4978-bedf-29b03325cace.webp
   url: https://www.buray.top/
   description:
-
 - nickname: Huxley's Notes
   avatar: https://huxinme.top/images/avatar.svg
   url: https://huxinme.top/
   description: 自定义优化做的很不错！
-
 - nickname: Deequoique
   avatar: https://deequoique.github.io/logo.png
   url: https://deequoique.github.io/
   description: Deequoique's 赛博小屋
-
 - nickname: Dylan's Blog
   avatar: https://github.com/du33169.png
   url: https://du33169.tech/
   description:
-
 - nickname: Z3n1th Blog
   avatar: https://z3n1th1.com/images/avatar.jpg
   url: https://z3n1th1.com/
   description:
-
 - nickname: Artexxx
   avatar: https://github.com/artexxx.png
   url: https://artexxx.github.io/
   description: 开发了一些 FixIt 相关的实用组件
-
 - nickname: AT1ng's Blog
   avatar: https://t1ng-t1ng.github.io/images/avater.jpg
   url: https://t1ng-t1ng.github.io/
   description:
-
 - nickname: 石墨烯积木
   avatar: https://img.san3.cn/logo.webp
   url: https://www.san3.cn/
   description:
-
 - nickname: 采石场
   avatar: https://ych817.github.io/clebsch.svg
   url: https://ych817.github.io/
   description:
-
 - nickname: scottstuff.net
   avatar: https://scottstuff.net/images/picture.jpg
   url: https://scottstuff.net/
   description: Scott Laird's writing on technology and nerdery.
-
 - nickname: inchan.dev
   avatar: https://inchan.dev/images/avatar.png
   url: https://inchan.dev/
   description: 'Coding Projects: From Ideas to Execution'
-
 - nickname: Samir's Blog
   avatar: https://avatars.githubusercontent.com/u/77569653
   url: https://samir.pages.dev/
   description: "Samir's little hypertext garden."
-
 - nickname: MonkeyKe’s Blog
   avatar: https://cravatar.cn/avatar/dee014ecea51d0dc08dbb1aaec046b47
   url: https://monkeyke.com

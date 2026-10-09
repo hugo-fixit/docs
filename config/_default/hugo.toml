@@ -55,4 +55,5 @@ ignoreLogs = [
   "shortcode-x-getremote",
   "warning-remote-image",
   "warning-encryption",
+  "warning-dev-env",
 ]

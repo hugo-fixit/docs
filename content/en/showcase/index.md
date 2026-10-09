@@ -6,6 +6,8 @@ description: Friends template demo of FixIt theme
 keywords:
   - Hugo
   - friends template
+friend_sort: nickname
+friend_link_check: true
 comment:
   giscus:
     mapping: number

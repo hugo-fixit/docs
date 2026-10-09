@@ -6,6 +6,8 @@ description: FixIt 主题的友链模板 Demo
 keywords:
   - Hugo
   - 友情链接
+friend_sort: nickname
+friend_link_check: true
 comment:
   giscus:
     mapping: number

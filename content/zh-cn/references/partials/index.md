@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **109** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **110** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,7 +47,7 @@ FixIt 主题提供 **109** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 43 个 partials
+- [function/](#function) — 44 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
@@ -171,7 +171,7 @@ FixIt 主题提供 **109** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## base/head/
 
-> 3 个 partials
+> 4 个 partials
 
 ### base/head/css.html
 
@@ -227,7 +227,19 @@ RSS feed 生成 partial。
 
 > 可复用的工具函数 partials。
 
-> 35 个 partials
+> 44 个 partials
+
+### function/author-terms.html
+
+从页面作者信息（注册表键 / 名称 / 旧版 `author` 回退）收集作者术语卡片，独立于 `authors` 分类法映射。供 authors 分类法头部计数和卡片列表共同使用。
+
+@returns {Slice} 已排序的 map 列表：Term、Pages、Count。
+
+**示例：**
+
+```go-template
+{{- $terms := partial "function/author-terms.html" . -}}
+```
 
 ### function/camel-case-keys.html
 
@@ -587,7 +599,7 @@ ID。
 
 | 名称 | 类型 | 描述 |
 |------|------|------|
-| `.` | `Map` | dict "Name" (String) — 作者名 / 注册表键（通常为 .Data.Term），可选 "Pages"，可选 "Size"（Gravatar 尺寸，默认 240） |
+| `.` | `Map` | dict "Name" (String) — 作者名 / 注册表键（通常为术语页面标题），可选 "Pages"，可选 "Size"（Gravatar 尺寸，默认 96） |
 
 **示例：**
 
