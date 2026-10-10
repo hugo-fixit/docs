@@ -119,6 +119,10 @@ keywords = [
 
 `bool` 是否为具有 title 属性的元素启用工具提示替换，例如脚注引用。默认：`true`。
 
+### author_archive
+
+`bool` 是否生成作者归档页面 `/authors/<name>/`。重要提示：需与下方 [taxonomies] 中的 `author = "authors"` 保持同步——请同时启用或禁用两者，否则构建将失败。默认：`true`。
+
 ### disable_theme_inject
 
 `bool` FixIt 默认仅在主页的 HTML head 中注入主题元标签。你可以关闭它，但我们非常希望你不要这样做，因为这是观察 FixIt 流行度上升的好方法。默认：`false`。

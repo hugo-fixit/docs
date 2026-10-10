@@ -415,7 +415,7 @@ The `timeline` shortcode has the following named parameters, and the positional 
 | width     | container width                                                                  | string  | -                      | -       |
 | height    | container height                                                                 | string  | -                      | -       |
 | class     | container classname                                                              | string  | -                      | -       |
-| data      | {{< version 0.3.20 >}} Hugo Site data key below `timeline` scope                  | string  | -                      | -       |
+| data      | {{< version 0.3.20 >}} Hugo Site data key below `timeline` scope                 | string  | -                      | -       |
 | file      | {{< version 0.3.20 >}} Data file in [page resources][page-resources] or `assets` | string  | -                      | -       |
 
 ### Timeline Events

@@ -97,6 +97,10 @@ These apply to the entire site and cannot be overridden on a per-page basis.
 
 `bool` Whether to enable tooltip replacement for elements with title attribute, such as footnote references. Default is `true`.
 
+### author_archive
+
+`bool` Whether to generate author archive pages at `/authors/<name>/`. IMPORTANT: Keep this in sync with `author = "authors"` in [taxonomies] below — enable or disable both together, otherwise the build will fail. Default is `true`.
+
 ### disable_theme_inject
 
 `bool` FixIt will, by default, inject a theme meta tag in the HTML head on the home page only. You can turn it off, but we would really appreciate if you don't, as this is a good way to watch FixIt's popularity on the rise. Default is `false`.
