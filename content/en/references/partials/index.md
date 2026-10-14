@@ -213,6 +213,8 @@ Renders an RSS 2.0 XML feed for the current section or home page. Supports full-
 
 Collect author term cards from page authorship (registry key / name / legacy `author` fallbacks), independent of the `authors` taxonomy map. Used by both the authors taxonomy header count and the card list.
 
+Scans mainSectionPages (same as archives) so non-post pages are excluded.
+
 @returns {Slice} Sorted list of maps: Term, Pages, Count.
 
 **Example:**
@@ -574,6 +576,8 @@ Marked texts rendering This is an experimental syntax highlighting for the marke
 Get pages by author, plus the author profile (name/registry key). Single pass: also fills missing profile fields from those pages.
 
 Collects pages that resolve to the given author (registry key / name / legacy `author` fallbacks) and fills missing profile fields (link/email/avatar) from those pages' resolved authors. Also inherits site author fields via get-author.
+
+Scope defaults to mainSectionPages (same as archives) so non-post pages are excluded unless the caller passes an explicit "Pages" collection.
 
 **Parameters:**
 

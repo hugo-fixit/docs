@@ -233,6 +233,8 @@ RSS feed 生成 partial。
 
 从页面作者信息（注册表键 / 名称 / 旧版 `author` 回退）收集作者术语卡片，独立于 `authors` 分类法映射。供 authors 分类法头部计数和卡片列表共同使用。
 
+扫描 mainSectionPages（与归档页一致），排除非 posts 页面。
+
 @returns {Slice} 已排序的 map 列表：Term、Pages、Count。
 
 **示例：**
@@ -594,6 +596,8 @@ ID。
 按作者获取文章列表，并返回作者档案（名称/注册表键）。单次遍历：同时从这些文章补全缺失的档案字段。
 
 收集解析到指定作者（注册表键 / 名称 / 旧版 `author` 回退）的页面，并从这些页面解析出的作者补全缺失的档案字段（link/email/avatar）。同时通过 get-author 继承站点作者字段。
+
+默认范围为 mainSectionPages（与归档页一致），除非调用方显式传入 "Pages" 集合，否则排除非 posts 页面。
 
 **参数：**
 
