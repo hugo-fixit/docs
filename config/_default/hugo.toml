@@ -35,12 +35,11 @@ capitalizeListTitles = false
 # if set, the MainSections method on the Site object returns the given sections,
 # otherwise it returns the section with the most pages.
 mainSections = [
-  "contributing",
   "documentation",
-  "ecosystem",
-  "guides",
   "references",
   "guides",
+  "contributing",
+  "ecosystem",
 ]
 # the editor to use when creating new content
 newContentEditor = "code"

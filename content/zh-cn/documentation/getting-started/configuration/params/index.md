@@ -438,12 +438,8 @@ capitalize
 [params]
 
 [params.navigation]
-in_section = false
 reverse = false
 ```
-
-in_section
-: `bool` 是否在章节页面范围内显示文章导航。默认：`false`。
 
 reverse
 : `bool` 是否反转上/下篇文章导航顺序。默认：`false`。
@@ -1742,6 +1738,7 @@ header_background_color = ""
 header_background_color_dark = ""
 header_title_font_size = ""
 header_title_font_family = ""
+menu_font_size = ""
 menu_active_color = ""
 menu_active_color_dark = ""
 menu_border_color = ""
@@ -1870,6 +1867,9 @@ header_title_font_size
 : `string` 默认：`""`。
 
 header_title_font_family
+: `string` 默认：`""`。
+
+menu_font_size
 : `string` 默认：`""`。
 
 menu_active_color

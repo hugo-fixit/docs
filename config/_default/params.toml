@@ -909,8 +909,6 @@ capitalize = true
 
 # Post navigation configuration.
 [navigation]
-# Whether to show the post navigation in section pages scope.
-in_section = false
 # Whether to reverse the next/previous post navigation order.
 reverse = false
 
@@ -923,8 +921,6 @@ copyright = true
 author = true
 # Site creation year.
 since = "2021"
-# TODO whether to show total word count of site content
-word_count = true
 # Public network security only in China (HTML format is supported).
 gov = ""
 # ICP info only in China (HTML format is supported).

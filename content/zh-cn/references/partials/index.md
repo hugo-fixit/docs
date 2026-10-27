@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **110** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **111** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,7 +47,7 @@ FixIt 主题提供 **110** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 44 个 partials
+- [function/](#function) — 45 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
@@ -227,7 +227,7 @@ RSS feed 生成 partial。
 
 > 可复用的工具函数 partials。
 
-> 44 个 partials
+> 45 个 partials
 
 ### function/author-terms.html
 
@@ -609,6 +609,24 @@ ID。
 
 ```go-template
 {{- $term := partial "function/pages-by-author.html" (dict "Name" "Alice") -}}
+```
+
+### function/pages-tree.html
+
+按深度优先的 section 树顺序返回某个 section 的常规页面。
+
+页面和嵌套子 section 按日期升序遍历，因此某个子 section 的最后一个页面（最新）之后紧接下一个同级子 section 的第一个页面（最旧）。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Page` | 要遍历的 section 页面。 |
+
+**示例：**
+
+```go-template
+{{- $pages := partial "function/pages-tree.html" site.GetPage "posts" -}}
 ```
 
 ### function/param.html
@@ -1290,17 +1308,17 @@ Script 标签渲染器。
 
 集合导航。
 
-### single/expiration-reminder.html
-
-内容过期提醒 partial。
-
-当页面最后修改日期超过可配置的天数阈值时（默认：90 天显示提示，180 天显示警告），显示提示或警告告警框。密码保护页面跳过此检查。
-
 ### single/disclaimer.html
 
 文章免责声明/声明 partial。
 
 在文章开头显示轻量免责声明提示。支持多种类型：ai、ai-assisted、ai-translated、repost、original、custom。"custom" 类型需要指定 content，否则不显示。
+
+### single/expiration-reminder.html
+
+内容过期提醒 partial。
+
+当页面最后修改日期超过可配置的天数阈值时（默认：90 天显示提示，180 天显示警告），显示提示或警告告警框。密码保护页面跳过此检查。
 
 ### single/footer.html
 

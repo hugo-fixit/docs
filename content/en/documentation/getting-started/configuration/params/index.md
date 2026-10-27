@@ -416,12 +416,8 @@ capitalize
 [params]
 
 [params.navigation]
-in_section = false
 reverse = false
 ```
-
-in_section
-: `bool` Whether to show the post navigation in section pages scope. Default is `false`.
 
 reverse
 : `bool` Whether to reverse the next/previous post navigation order. Default is `false`.
@@ -1720,6 +1716,7 @@ header_background_color = ""
 header_background_color_dark = ""
 header_title_font_size = ""
 header_title_font_family = ""
+menu_font_size = ""
 menu_active_color = ""
 menu_active_color_dark = ""
 menu_border_color = ""
@@ -1848,6 +1845,9 @@ header_title_font_size
 : `string` Default is `""`.
 
 header_title_font_family
+: `string` Default is `""`.
+
+menu_font_size
 : `string` Default is `""`.
 
 menu_active_color

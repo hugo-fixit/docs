@@ -121,12 +121,15 @@ search_key = "xxx"
 | `[params.home.profile]`         | `avatarUrl`, `gravatarEmail`, `avatarMenu`, `onlyFirstPage` | `avatar_url`, `gravatar_email`, `avatar_menu`, `only_first_page` |
 | `[params.home.posts]`           | `imagePreview`                                              | `image_preview`                                                  |
 | `[params.breadcrumb]`           | `showHome`                                                  | `show_home`                                                      |
-| `[params.navigation]`           | `inSection`                                                 | `in_section`                                                     |
+| `[params.navigation]`           | `inSection`                                                 | **已移除**                                                       |
 | `[params.watermark]`            | `rowSpacing`, `colSpacing`, `fontSize`, `fontFamily`        | `row_spacing`, `col_spacing`, `font_size`, `font_family`         |
 | `[params.busuanzi]`             | `siteViews`, `pageViews`                                    | `site_views`, `page_views`                                       |
 | `[params.mermaid]`              | `securityLevel`, `fontFamily`, `layoutLoaders`              | `security_level`, `font_family`, `layout_loaders`                |
 | `[params.math.katex]`           | `copyTex`, `throwOnError`, `errorColor`                     | `copy_tex`, `throw_on_error`, `error_color`                      |
 | `[params.math.mathjax.options]` | `enableMenu`, `skipHtmlTags`, `ignoreHtmlClass`             | `enable_menu`, `skip_html_tags`, `ignore_html_class`             |
+
+> [!note]
+> `[params.navigation]` `inSection` 在 v1.0.0 中已移除；文章导航现在始终按 section 树顺序排列。
 
 ## 配置结构：`[params.page]` 已移除
 
