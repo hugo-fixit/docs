@@ -269,6 +269,10 @@ This is a **right-aligned** paragraph.
 
     图片是否需要被优化，覆盖全局配置。
 
+- **watermark** _[可选]_ {{< version 1.0.0 >}}
+
+    图片是否需要添加水印，或指定水印类型：`text`、`image`。覆盖全局配置。需要先配置 `params.image.watermark`。
+
 - **cacheRemote** _[可选]_ {{< version 0.3.17 >}}
 
     是否缓存远程图片，覆盖全局配置。
@@ -282,6 +286,34 @@ This is a **right-aligned** paragraph.
 呈现的输出效果如下：
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
+
+水印示例。文档站在 `params.image.watermark` 中同时配置了文字水印和图片水印；`enable = false` 表示默认不给图片加水印，需要短代码显式指定：
+
+```toml
+[params.image.watermark]
+enable = false
+text = "Hugo FixIt"
+image = "images/hugo-fixit.webp"
+position = "bottom-left"
+```
+
+通过 `watermark="text"` 或 `watermark="image"` 为单张图片选择水印类型，使用 `watermark=false` 关闭水印：
+
+```markdown
+{{</* image src="/images/lighthouse.jpg" caption="文字水印" watermark="text" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="图片水印" watermark="image" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="关闭水印" watermark=false */>}}
+```
+
+呈现的输出效果如下：
+
+{{< image src="/images/lighthouse.jpg" caption="文字水印" watermark="text" >}}
+
+{{< image src="/images/lighthouse.jpg" caption="图片水印" watermark="image" >}}
+
+{{< image src="/images/lighthouse.jpg" caption="关闭水印" watermark=false >}}
+
+`watermark` 参数支持 `true`、`false`、`"text"`、`"image"`，并会覆盖 `params.image.watermark.enable`。`watermark=true` 时，同时配置 `text` 和 `image` 会优先使用图片水印。`opacity` 和 `scale` 只对图片水印生效。中文文字水印还需要将 `font` 设置为 `assets` 下支持中文的 TTF 或 OTF 字体。
 
 ## details
 

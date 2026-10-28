@@ -269,6 +269,10 @@ The `image` shortcode has the following named parameters:
 
     Whether to optimise the image, override the site configuration.
 
+- **watermark** _[optional]_ {{< version 1.0.0 >}}
+
+    Whether to add a watermark, or the watermark type: `text` or `image`. Overrides the site configuration. Requires `params.image.watermark` to be configured.
+
 - **cacheRemote** _[optional]_ {{< version 0.3.17 >}}
 
     Whether to cache the remote image, override the site configuration.
@@ -282,6 +286,34 @@ Example `image` input:
 The rendered output looks like this:
 
 {{< image src="/images/lighthouse.jpg" caption="Lighthouse (`image`)" >}}
+
+Watermark example. The docs site configures both a text and an image watermark in `params.image.watermark`; `enable = false` keeps images unwatermarked unless the shortcode asks for it:
+
+```toml
+[params.image.watermark]
+enable = false
+text = "Hugo FixIt"
+image = "images/hugo-fixit.webp"
+position = "bottom-left"
+```
+
+Select the watermark type per image with `watermark="text"` or `watermark="image"`, or opt out with `watermark=false`:
+
+```markdown
+{{</* image src="/images/lighthouse.jpg" caption="Text watermark" watermark="text" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="Image watermark" watermark="image" */>}}
+{{</* image src="/images/lighthouse.jpg" caption="Watermark disabled" watermark=false */>}}
+```
+
+The rendered output looks like this:
+
+{{< image src="/images/lighthouse.jpg" caption="Text watermark" watermark="text" >}}
+
+{{< image src="/images/lighthouse.jpg" caption="Image watermark" watermark="image" >}}
+
+{{< image src="/images/lighthouse.jpg" caption="Watermark disabled" watermark=false >}}
+
+The `watermark` parameter accepts `true`, `false`, `"text"`, or `"image"`, and overrides `params.image.watermark.enable`. With `watermark=true`, the image watermark takes precedence when both are configured. `opacity` and `scale` only apply to image watermarks. For Chinese text, set `font` to a CJK-capable TTF or OTF file in `assets`.
 
 ## details
 

@@ -113,6 +113,10 @@ collection_list = true
 collection_navigation = true
 # End of post flag.
 end_flag = ""
+# Whether to generate author archive pages at `/authors/<name>/`.
+# IMPORTANT: Keep this in sync with `author = "authors"` in [taxonomies] —
+# enable or disable both together, otherwise the build will fail.
+author_archive = true
 
 # Author configuration.
 [author]
@@ -147,6 +151,36 @@ optimise = true
 # A list of image file names or patterns to exclude from optimisation.
 # Example: `["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]`
 black_list = []
+
+# Image watermark configuration.
+# Applied to content images and featured images. Enabling the watermark
+# triggers image processing even when `optimise = false`.
+[image.watermark]
+# Whether to add a watermark to images.
+enable = false
+# Watermark image path relative to `assets`, takes precedence over `text`
+# unless the image shortcode passes `watermark="text"`.
+# A transparent PNG is recommended.
+image = "images/hugo-fixit.webp"
+# Text watermark. Used when `image` is empty, or when `watermark="text"` is passed.
+text = "Hugo FixIt"
+# Font path relative to `assets`, required for non-ASCII text such as Chinese.
+# The font must be a TTF or OTF file; font family names are not supported.
+font = ""
+# Position: top-left, top, top-right, left, center, right, bottom-left, bottom, bottom-right.
+position = "bottom-left"
+# Horizontal offset from the image edge in pixels.
+offset_x = 16
+# Vertical offset from the image edge in pixels.
+offset_y = 16
+# Text size in pixels. 0 or negative = auto, about 3% of the image width.
+size = 0
+# Text color in 3- or 6-digit hexadecimal notation.
+color = "#ffffff"
+# Opacity of the image watermark, between 0.0 and 1.0.
+opacity = 0.8
+# Width of the image watermark as a fraction of the image width. 0 = original size.
+scale = 0.15
 
 # Code block wrapper configuration.
 # You can override the global config via Markdown attributes, for example:
@@ -1258,6 +1292,11 @@ images = []
 name = "Lruihao"
 logo_url = "/images/avatar.png"
 
+# Robots configuration.
+[robots]
+# Allow AI crawlers (unblock GPTBot/ClaudeBot etc.) + Content-Signal comment + AI hidden hint.
+allow_crawlers = false
+
 # Analytics configuration.
 [analytics]
 enable = false
@@ -1472,6 +1511,7 @@ header_background_color = ""
 header_background_color_dark = ""
 header_title_font_size = ""
 header_title_font_family = ""
+menu_font_size = ""
 menu_active_color = ""
 menu_active_color_dark = ""
 menu_border_color = ""

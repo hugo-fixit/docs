@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **111** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **112** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,7 +47,7 @@ FixIt 主题提供 **111** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 45 个 partials
+- [function/](#function) — 46 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
@@ -227,7 +227,7 @@ RSS feed 生成 partial。
 
 > 可复用的工具函数 partials。
 
-> 45 个 partials
+> 46 个 partials
 
 ### function/author-terms.html
 
@@ -752,6 +752,30 @@ Ruby 注音。
 ### function/trim.html
 
 去除字符串首尾的空白字符。
+
+### function/watermark.html
+
+给图片资源添加水印。
+
+水印通过 `params.image.watermark` 配置。当同时设置 `image` 和 `text` 时，图片水印优先。将 `.Mode` 设置为 "text" 或 "image" 可强制指定水印类型。
+
+水印在缩放之后应用，因此在生成的 srcset 变体中保持固定的像素大小。使用 `scale` 控制图片水印大小，使用 `size` 控制文字水印大小，以实现等比缩放。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.Image` | `Resource` | 需要添加水印的图片资源（必填） |
+| `.Config` | `Map` | 水印配置，键名为 camelCase（必填） |
+| `[.Mode]` | `String` | 强制指定水印类型："text" 或 "image" |
+
+**返回值：** `Resource` - 添加水印后的图片资源；失败时返回原始资源
+
+**示例：**
+
+```go-template
+{{- $image = dict "Image" $image "Config" $config.watermark | partial "function/watermark.html" -}}
+```
 
 ### function/xml-content.html
 

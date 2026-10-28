@@ -2196,6 +2196,19 @@ guard
 cache_remote = false
 optimise = false
 black_list = []
+
+[params.image.watermark]
+enable = false
+image = ""
+text = ""
+font = ""
+position = "bottom-right"
+offset_x = 16
+offset_y = 16
+size = 0
+color = "#ffffff"
+opacity = 0.8
+scale = 0.15
 ```
 
 cache_remote
@@ -2206,6 +2219,21 @@ optimise
 
 black_list
 : `string array` A list of image file names or patterns to exclude from optimisation. Example: `["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]`. Default is `[]`.
+
+watermark
+: `map` Image watermark configuration. Applied to content images and featured images. Enabling the watermark triggers image processing even when `optimise = false`.
+
+- enable: `bool` Whether to add a watermark to images. Default is `false`.
+- image: `string` Watermark image path relative to `assets`, takes precedence over `text` unless the image shortcode passes `watermark="text"`. A transparent PNG is recommended. Default is `""`.
+- text: `string` Text watermark. Used when `image` is empty, or when an image is rendered with `watermark="text"` in the `image` shortcode. Default is `""`.
+- font: `string` Font path relative to `assets`, required for non-ASCII text such as Chinese. The font must be a TTF or OTF file; font family names are not supported. Default is `""`.
+- position: `string` Position: top-left, top, top-right, left, center, right, bottom-left, bottom, bottom-right. Default is `"bottom-right"`.
+- offset_x: `int` Horizontal offset from the image edge in pixels. Default is `16`.
+- offset_y: `int` Vertical offset from the image edge in pixels. Default is `16`.
+- size: `int` Text size in pixels. 0 or negative = auto, about 3% of the image width. Default is `0`.
+- color: `string` Text color in 3- or 6-digit hexadecimal notation. Default is `"#ffffff"`.
+- opacity: `float` Opacity of the image watermark, between 0.0 and 1.0. Default is `0.8`.
+- scale: `float` Width of the image watermark as a fraction of the image width. 0 = original size. Default is `0.15`.
 
 ### codeblock
 

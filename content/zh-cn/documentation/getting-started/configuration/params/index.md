@@ -2218,6 +2218,19 @@ guard
 cache_remote = false
 optimise = false
 black_list = []
+
+[params.image.watermark]
+enable = false
+image = ""
+text = ""
+font = ""
+position = "bottom-right"
+offset_x = 16
+offset_y = 16
+size = 0
+color = "#ffffff"
+opacity = 0.8
+scale = 0.15
 ```
 
 cache_remote
@@ -2228,6 +2241,21 @@ optimise
 
 black_list
 : `string array` 排除优化的图片文件名或模式列表。示例：`["no-optimize.jpg", "*.tiff", "images/exclude-*.webp"]`。默认：`[]`。
+
+watermark
+: `map` 图片水印配置。适用于内容图片和特色图片。即使 `optimise = false`，启用水印也会触发图片处理。
+
+- enable: `bool` 是否给图片添加水印。默认：`false`。
+- image: `string` 水印图片路径（相对于 `assets`），优先于 `text`，除非 `image` 短代码传入 `watermark="text"`。推荐使用透明 PNG。默认：`""`。
+- text: `string` 文字水印。当 `image` 为空，或 `image` 短代码使用 `watermark="text"` 渲染时使用。默认：`""`。
+- font: `string` 字体路径（相对于 `assets`），非 ASCII 文本（如中文）需要。字体必须是 TTF 或 OTF 文件，不支持字体名称。默认：`""`。
+- position: `string` 水印位置：top-left、top、top-right、left、center、right、bottom-left、bottom、bottom-right。默认：`"bottom-right"`。
+- offset_x: `int` 水印距图片边缘的水平偏移量（像素）。默认：`16`。
+- offset_y: `int` 水印距图片边缘的垂直偏移量（像素）。默认：`16`。
+- size: `int` 文字大小（像素）。0 或负数表示自动，约为图片宽度的 3%。默认：`0`。
+- color: `string` 文字颜色，3 位或 6 位十六进制格式。默认：`"#ffffff"`。
+- opacity: `float` 图片水印的不透明度，范围 0.0 到 1.0。默认：`0.8`。
+- scale: `float` 图片水印宽度占图片宽度的比例。0 表示原始大小。默认：`0.15`。
 
 ### codeblock
 
