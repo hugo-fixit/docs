@@ -685,6 +685,7 @@ disclaimer = ""
 enable = true
 paginate = 6
 image_preview = true
+columns = 1
 ```
 
 profile
@@ -707,6 +708,7 @@ posts
 - enable: `bool` 默认：`true`。
 - paginate: `int` 每个首页文章页面的特殊文章数量。默认：`6`。
 - image_preview: `bool` 是否在首页文章列表中显示特色图片预览。默认：`true`。
+- columns: `int` 首页文章列表的列数。可选值：[1, 2]，`2` 会在超大屏幕（>= 1440px）上启用横向双列卡片布局。默认：`1`。
 
 ### social
 

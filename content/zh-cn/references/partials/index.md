@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **112** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **114** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,7 +47,7 @@ FixIt 主题提供 **112** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 46 个 partials
+- [function/](#function) — 48 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
@@ -227,7 +227,7 @@ RSS feed 生成 partial。
 
 > 可复用的工具函数 partials。
 
-> 46 个 partials
+> 48 个 partials
 
 ### function/author-terms.html
 
@@ -434,6 +434,22 @@ Font Awesome.
 {{- $authors := partial "function/get-authors.html" . -}}
 ```
 
+### function/get-cover-backdrop.html
+
+解析首页文章卡片的模糊背景图。
+
+本地封面通过 get-cover 解析并在本地调整尺寸。远程封面直接使用远程 URL，除非启用了 `params.image.cache_remote`；此时通过 function/get-remote-image.html 获取并在本地调整尺寸。
+
+仅可处理的栅格本地封面会被调整尺寸；内联、SVG、GIF、AVIF 及其他不受支持的本地封面返回空字符串，位于 `params.image.black_list` 中的封面以及启用了图片水印的封面同样返回空字符串。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | 包含 "Cover"（function/get-cover.html 的结果）和 "Src" 的 dict |
+
+**返回值：** `String` - 背景图 URL，或空字符串
+
 ### function/get-cover.html
 
 获取页面的封面图片。
@@ -535,6 +551,18 @@ Font Awesome.
 | `.Slot` | `String` | 图标 slot："title"、"card"、"term" |
 
 **返回值：** `String` - 图标 class
+
+### function/home-columns.html
+
+解析并校验首页文章列表的列数。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Page` | 页面上下文 |
+
+**返回值：** `String` - 规范化后的列数："1"（默认）或 "2"
 
 ### function/id.html
 
