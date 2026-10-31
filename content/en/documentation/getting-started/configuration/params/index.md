@@ -663,6 +663,7 @@ disclaimer = ""
 enable = true
 paginate = 6
 image_preview = true
+columns = 1
 ```
 
 profile
@@ -685,6 +686,7 @@ posts
 - enable: `bool` Default is `true`.
 - paginate: `int` Special amount of posts in each home posts page. Default is `6`.
 - image_preview: `bool` Whether to show featured image preview in home page post list. Default is `true`.
+- columns: `int` Number of columns for the home post list. Available values: [1, 2] 2 enables the horizontal two-column card layout on extra-large screens (>= 1440px). Default is `1`.
 
 ### social
 
