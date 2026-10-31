@@ -73,61 +73,6 @@
   }
 }
 
-.hr-edge-weak {
-  border: 0;
-  padding-top: 1px;
-  background: linear-gradient(to right, transparent, var(--hr-color, #d0d0d5), transparent);
-}
-
-#toc-auto {
-  .follow-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding-inline: 10px;
-
-    .author-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 500;
-
-      .author-avatar {
-        width: 34px;
-        border-radius: 50%;
-        border: 1px solid fi-var(global-border-color);
-      }
-    }
-    .follow-btn {
-      border: 1px solid var(--follow-btn-border-color, light-dark(#d1d9e0, #3d444d));
-      background-color: var(--follow-btn-bg-color, light-dark(#f6f8fa, #2a313c));
-      color: var(--follow-btn-color, light-dark(#25292e, #d1d7e0));
-      border-radius: 6px;
-      padding: 4px 10px;
-      flex-shrink: 0;
-      font-size: 14px;
-      line-height: 20px;
-
-      &:active,
-      &:hover {
-        --follow-btn-border-color: light-dark(#d1d9e0, #3d444d);
-        --follow-btn-bg-color: light-dark(#eff2f5, #2f3742);
-        --fa-animation-iteration-count: 0;
-        transition-duration: .1s;
-
-        i {
-          --fa: "\2b";
-        }
-      }
-    }
-  }
-  // 临时修复高度计算错误的问题
-  .toc-content {
-    max-height: calc(100vh - 13rem);
-  }
-}
-
 // .single {
 //   // Content adapter generated posts style
 //   &[data-adapters='projects'] {

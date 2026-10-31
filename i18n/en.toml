@@ -1,7 +1,3 @@
 # Translations for English
 # For translations of pages, you can set `translationKey` in Front Matter
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
-
-[follow]
-btn = "Follow"
-title = "Follow me on GitHub!"

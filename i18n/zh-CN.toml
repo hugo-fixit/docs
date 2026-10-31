@@ -7,7 +7,3 @@
 [admonition]
 ban = "禁止"
 # === shortcodes/admonition.html ===
-
-[follow]
-btn = "关注"
-title = "关注我的 GitHub！"

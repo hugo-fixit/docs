@@ -35,6 +35,9 @@ title_delimiter = "|"
 # Whether to add site subtitle to the title of index page.
 # Remember to set up your site subtitle by `params.header.subtitle.name`.
 index_with_subtitle = true
+# Follow me widget in the post TOC sidebar and mobile drawer.
+# Set to a `params.social` platform key (e.g. "github"), empty to disable.
+follow = "github"
 # Whether to enable merging missing translations from other languages.
 # When set to true, missing translations from other languages will be merged and displayed.
 # Default is false for better performance, especially for single-language sites.
@@ -1474,7 +1477,7 @@ assets = [
   "inject/santa-hat.fixit.html",
   "inject/shortcode-caniuse.html",
 ]
-post_toc_before = [ "custom/follow-me.html" ]
+post_toc_before = []
 post_toc_after = []
 post_content_before = []
 post_content_after = []
