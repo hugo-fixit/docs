@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **116** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **117** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,7 +47,7 @@ FixIt 主题提供 **116** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 49 个 partials
+- [function/](#function) — 50 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
@@ -128,6 +128,8 @@ FixIt 主题提供 **116** 个 Hugo partials，分布在 **13** 个分组中。
 
 - 主行：品牌（Logo/头像和标题）和社交链接
 - 底栏：Powered by、版权信息、站点运行时间、访客统计、备案信息
+
+版权作者在存在作者归档页时会链接到归档页，否则回退到 `author.link`，最后回退到站点首页。
 
 调用自：layouts/baseof.html。
 
@@ -224,7 +226,7 @@ RSS feed 生成 partial。
 
 > 可复用的工具函数 partials。
 
-> 49 个 partials
+> 50 个 partials
 
 ### function/author-terms.html
 
@@ -374,6 +376,26 @@ Font Awesome.
 ### function/fraction.html
 
 分数。
+
+### function/get-author-link.html
+
+解析作者的显示目标链接。
+
+优先使用作者的 `/authors/<key>/` 归档页（存在时），其次使用作者的外部 `link`，最后使用可选的回退值。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Author"（包含 key/name/link 的 map），可选 "Fallback"（String） |
+
+**返回值：** `String` - 链接目标；均不可用时为 ""
+
+**示例：**
+
+```go-template
+{{- $link := partial "function/get-author-link.html" (dict "Author" $author) -}}
+```
 
 ### function/get-author-map.html
 
@@ -1391,7 +1413,7 @@ Script 标签渲染器。
 
 文章 TOC 侧边栏和移动导航抽屉的关注我组件。
 
-显示站点所有者（`params.author`）以及由 `follow` 配置的平台关注按钮（例如 `follow = "github"`），从 `params.social` 和 `data/social.yml` 解析目标和图标。
+显示站点所有者（`params.author`）以及由 `follow` 配置的平台关注按钮（例如 `follow = "github"`），从 `params.social` 和 `data/social.yml` 解析目标和图标。作者名称在存在作者归档页时会链接到归档页，否则回退到 `author.link`。
 
 调用自：layouts/_partials/single/aside-toc.html 和 single/nav-dialog.html。
 
@@ -1407,7 +1429,7 @@ Git 信息。
 
 文章作者显示 partial。
 
-渲染一个或多个作者名称，支持可选头像和链接。将解析出的主作者（第一个）map 以 "author"、完整列表以 "authors" 存入页面 store，供其他 partial 使用。
+渲染一个或多个作者名称，支持可选头像和链接。每个链接优先使用作者归档页（`/authors/<key>/`），回退到作者的外部 `link`。将解析出的主作者（第一个）map 以 "author"、完整列表以 "authors" 存入页面 store，供其他 partial 使用。
 
 ### single/post-included-in.html
 
