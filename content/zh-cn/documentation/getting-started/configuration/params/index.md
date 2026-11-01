@@ -453,6 +453,8 @@ reverse
 
 [params.footer]
 enable = true
+brand = false
+social = false
 copyright = true
 author = true
 since = ""
@@ -471,17 +473,16 @@ animate = true
 icon = "fa-solid fa-heartbeat"
 pre = ""
 value = ""
-
-[params.footer.order]
-powered = 0
-copyright = 0
-statistics = 0
-visitor = 0
-beian = 0
 ```
 
 enable
 : `bool` 默认：`true`。
+
+brand
+: `bool` 是否显示站点品牌（Logo/头像和标题）。默认：`false`。
+
+social
+: `bool` 是否显示社交链接。默认：`false`。
 
 copyright
 : `bool` 是否显示版权信息。默认：`true`。
@@ -516,15 +517,6 @@ site_time
 - icon: `string` 默认：`"fa-solid fa-heartbeat"`。
 - pre: `string` 默认：`""`。
 - value: `string` 示例："2021-12-18T16:15:22+08:00"。默认：`""`。
-
-order
-: `map` 页脚行排序。可选值：["first", 0-5, "last"]。
-
-- powered: `int` 默认：`0`。
-- copyright: `int` 默认：`0`。
-- statistics: `int` 默认：`0`。
-- visitor: `int` 默认：`0`。
-- beian: `int` 默认：`0`。
 
 ### archives
 
@@ -2138,6 +2130,10 @@ c4u
 ### collection_navigation
 
 `bool` 是否在文章末尾启用集合导航。默认：`false`。
+
+### follow
+
+`string` 文章 TOC 侧边栏和移动抽屉中的关注我组件。设置为 `params.social` 中的平台键即可启用（例如 `"github"`）；留空则禁用。默认：`""`。
 
 ### end_flag
 

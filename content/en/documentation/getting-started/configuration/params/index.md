@@ -431,6 +431,8 @@ reverse
 
 [params.footer]
 enable = true
+brand = false
+social = false
 copyright = true
 author = true
 since = ""
@@ -449,17 +451,16 @@ animate = true
 icon = "fa-solid fa-heartbeat"
 pre = ""
 value = ""
-
-[params.footer.order]
-powered = 0
-copyright = 0
-statistics = 0
-visitor = 0
-beian = 0
 ```
 
 enable
 : `bool` Default is `true`.
+
+brand
+: `bool` Whether to show the site brand (logo/avatar and title). Default is `false`.
+
+social
+: `bool` Whether to show social links in the footer. Default is `false`.
 
 copyright
 : `bool` Whether to show copyright info. Default is `true`.
@@ -494,15 +495,6 @@ site_time
 - icon: `string` Default is `"fa-solid fa-heartbeat"`.
 - pre: `string` Default is `""`.
 - value: `string` Example: "2021-12-18T16:15:22+08:00". Default is `""`.
-
-order
-: `map` Footer lines order. Available values: ["first", 0-5, "last"].
-
-- powered: `int` Default is `0`.
-- copyright: `int` Default is `0`.
-- statistics: `int` Default is `0`.
-- visitor: `int` Default is `0`.
-- beian: `int` Default is `0`.
 
 ### archives
 
@@ -2116,6 +2108,10 @@ These can be overridden on a per-page basis via front matter.
 ### collection_navigation
 
 `bool` Whether to enable collection navigation at the end of the post. Default is `false`.
+
+### follow
+
+`string` Follow me widget in the post TOC sidebar and mobile drawer. Set to a `params.social` platform key to enable (e.g. "github"); empty disables it. Default is `""`.
 
 ### end_flag
 

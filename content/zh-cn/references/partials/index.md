@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **114** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **116** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -47,13 +47,13 @@ FixIt 主题提供 **114** 个 Hugo partials，分布在 **13** 个分组中。
 - [base/](#base) — 7 个 partials
 - [base/head/](#basehead) — 4 个 partials
 - [feed/](#feed) — 1 个 partial
-- [function/](#function) — 48 个 partials
+- [function/](#function) — 49 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
 - [plugin/](#plugin) — 20 个 partials
 - [section/](#section) — 5 个 partials
-- [single/](#single) — 13 个 partials
+- [single/](#single) — 14 个 partials
 - [store/](#store) — 2 个 partials
 - [(root)](#root) — 1 个 partial
 
@@ -124,13 +124,10 @@ FixIt 主题提供 **114** 个 Hugo partials，分布在 **13** 个分组中。
 
 站点页脚 partial。
 
-渲染带可配置部分的页面页脚：
+以两个紧凑部分渲染站点页脚：
 
-- Powered by（Hugo 和 FixIt 主题链接）
-- 版权信息（年份、作者、许可证）
-- 站点运行时间计数器
-- 访客统计（不蒜子）
-- 备案信息（gov/ICP）
+- 主行：品牌（Logo/头像和标题）和社交链接
+- 底栏：Powered by、版权信息、站点运行时间、访客统计、备案信息
 
 调用自：layouts/baseof.html。
 
@@ -227,7 +224,7 @@ RSS feed 生成 partial。
 
 > 可复用的工具函数 partials。
 
-> 48 个 partials
+> 49 个 partials
 
 ### function/author-terms.html
 
@@ -538,6 +535,24 @@ Font Awesome.
 | `[.OPTIONS]` | `Object` | resources.GetRemote 的额外选项 |
 
 **返回值：** `Object` - 解析后的 JSON 响应，失败时返回空 dict
+
+### function/get-social-entry.html
+
+获取指定平台键的规范化社交条目。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `String` | 平台键（不区分大小写），例如 "github" |
+
+**返回值：** `Map` - 合并后的社交条目，当平台未配置或禁用时为空 map
+
+**示例：**
+
+```go-template
+{{- $social := partial "function/get-social-entry.html" "github" -}}
+```
 
 ### function/get-taxonomy-icon.html
 
@@ -1342,7 +1357,7 @@ Script 标签渲染器。
 
 > 单篇文章页面 partials。
 
-> 13 个 partials
+> 14 个 partials
 
 ### single/aside-collection.html
 
@@ -1371,6 +1386,14 @@ Script 标签渲染器。
 内容过期提醒 partial。
 
 当页面最后修改日期超过可配置的天数阈值时（默认：90 天显示提示，180 天显示警告），显示提示或警告告警框。密码保护页面跳过此检查。
+
+### single/follow.html
+
+文章 TOC 侧边栏和移动导航抽屉的关注我组件。
+
+显示站点所有者（`params.author`）以及由 `follow` 配置的平台关注按钮（例如 `follow = "github"`），从 `params.social` 和 `data/social.yml` 解析目标和图标。
+
+调用自：layouts/_partials/single/aside-toc.html 和 single/nav-dialog.html。
 
 ### single/footer.html
 
