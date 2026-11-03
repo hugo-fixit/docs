@@ -952,6 +952,10 @@ reverse = false
 # Footer configuration.
 [footer]
 enable = true
+# Whether to show the site brand (logo/avatar and title).
+brand = true
+# Whether to show social links in the footer.
+social = true
 # Whether to show copyright info.
 copyright = true
 # Whether to show the author.
@@ -968,8 +972,8 @@ license = '<a rel="license external nofollow noopener noreferrer" href="https://
 # Whether to show Hugo and theme info.
 [footer.powered]
 enable = true
-hugo_logo = true
-theme_logo = true
+hugo_logo = false
+theme_logo = false
 
 # Site creation time.
 [footer.site_time]
@@ -979,15 +983,6 @@ icon = "fa-solid fa-heartbeat"
 pre = ""
 # Example: "2021-12-18T16:15:22+08:00".
 value = "2021-12-18T16:15:22+08:00"
-
-# Footer lines order.
-# available values: ["first", 0-5, "last"]
-[footer.order]
-powered = 0
-copyright = 0
-statistics = 0
-visitor = 0
-beian = 0
 
 # Archives page configuration (all pages of posts type).
 [archives]
@@ -1667,8 +1662,8 @@ enterprise = true
 
 # FixIt Docs config
 [docs]
-fixit_version = "v1.0.0-alpha"
-min_hugo_version = "0.161.0"
+fixit_version = "v1.0.0-rc"
+min_hugo_version = "0.166.0"
 
 [planet]
 invite = "https://t.zsxq.com/BQcpe" # 正常加入链接：https://t.zsxq.com/CE3GF
