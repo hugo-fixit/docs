@@ -14,56 +14,7 @@
 
 .home.posts {
   .fixit-docs-navigation {
-    margin: 0;
-  }
-}
-
-.quick-start-container {
-  text-align: center;
-  padding-block: 2rem;
-
-  .banner-start-commands {
-    width: 230px;
-    text-align: left;
-    margin: 0 auto !important;
-    padding-inline: 1rem !important;
-
-    // command line
-    span {
-      display: block;
-      &::before {
-        content: "$";
-        opacity: 0.5;
-        padding-right: 0.5rem;
-      }
-    }
-  }
-
-  .quick-start-btn {
-    display: inline-block;
-    width: 230px;
-    border-radius: 8px;
-    transition: background-color 0.5s, color 0.5s;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 8px 1rem;
-    margin-block: 1rem;
-    letter-spacing: 4px;
-    background-color: #42b883;
-    color: #fff !important;
-
-    i {
-      transition: transform 0.2s;
-    }
-
-    &:hover {
-      background-color: light-dark(#33a06f, #42d392);
-      transition-duration: 0.2s;
-
-      i {
-        transform: translate(2px);
-      }
-    }
+    margin-block: 0 4em;
   }
 }
 

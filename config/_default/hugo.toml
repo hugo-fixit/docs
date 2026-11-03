@@ -55,4 +55,5 @@ ignoreLogs = [
   "warning-remote-image",
   "warning-encryption",
   "warning-dev-env",
+  "warning-link-check",
 ]
