@@ -1,5 +1,5 @@
-github.com/hugo-fixit/FixIt v1.0.0-rc h1:Ukxiil+02EBPEAiftMd5rjoZpNQWOAF7ZSSUf0nekGA=
-github.com/hugo-fixit/FixIt v1.0.0-rc/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
+github.com/hugo-fixit/FixIt v1.0.0-rc.0.20261105091421-b275ffe1bd5c h1:yGb3bviHMe0fawDj5TLYzkSBKJGTzPS7j1c3RMNYUxk=
+github.com/hugo-fixit/FixIt v1.0.0-rc.0.20261105091421-b275ffe1bd5c/go.mod h1:D2RkJMpHc5FMFhlqDLljt5jopjiFOapRWG6PaKbjHuE=
 github.com/hugo-fixit/cmpt-santa-hat v1.1.0 h1:QNTwFFLLl5yu2vx04j+kjA0d8E14kjojwWbsNM+y0HA=
 github.com/hugo-fixit/cmpt-santa-hat v1.1.0/go.mod h1:h25a6xmOj1CFIIpSaKeJIWcTtoQyVR39Uu47NDiZLb0=
 github.com/hugo-fixit/cmpt-translate/v2 v2.0.1 h1:+NMPb7Pitr/Hcpqe5eDz6Iz/vK3ayvomZWEvQFqXwCU=
