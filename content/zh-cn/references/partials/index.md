@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **117** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **118** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -52,7 +52,7 @@ FixIt 主题提供 **117** 个 Hugo partials，分布在 **13** 个分组中。
 - [home/](#home) — 1 个 partial
 - [init/](#init) — 8 个 partials
 - [plugin/](#plugin) — 20 个 partials
-- [section/](#section) — 5 个 partials
+- [section/](#section) — 6 个 partials
 - [single/](#single) — 14 个 partials
 - [store/](#store) — 2 个 partials
 - [(root)](#root) — 1 个 partial
@@ -1329,7 +1329,7 @@ Script 标签渲染器。
 
 > Section 级 partials。
 
-> 5 个 partials
+> 6 个 partials
 
 ### section/archive-header.html
 
@@ -1370,6 +1370,22 @@ Script 标签渲染器。
 | 名称 | 类型 | 描述 |
 |------|------|------|
 | `.` | `Map` | dict "Page"、"Pages"、"Author"（来自 function/get-author.html） |
+
+### section/contribution-graph.html
+
+贡献热力图：按年份渲染的日历网格，使用年份下拉框切换。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|------|
+| `.` | `Map` | dict "Page"（上下文）、"Pages"（页面集合） |
+
+**示例：**
+
+```go-template
+{{- partial "section/contribution-graph.html" (dict "Page" . "Pages" $pages) -}}
+```
 
 ### section/recently-updated.html
 

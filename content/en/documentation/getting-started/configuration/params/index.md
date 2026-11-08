@@ -600,6 +600,32 @@ days
 max_count
 : `int` Default is `10`.
 
+### contribution
+
+`map` Contribution heatmap configuration for the home page and author archive pages.
+
+```toggle
+[params]
+
+[params.contribution]
+enable = true
+first_day_of_week = "sunday"
+stats = true
+max_years = 0
+```
+
+enable
+: `bool` Whether to show the contribution heatmap. Default is `true`.
+
+first_day_of_week
+: `string` First day of the week. Available values: ["monday", "sunday"]. Default is `"sunday"`.
+
+stats
+: `bool` Whether to show contribution statistics (longest/current streak). Default is `true`.
+
+max_years
+: `int` Maximum number of years to display, newest first. 0 means all years with posts. Default is `0`.
+
 ### tag_cloud
 
 `map` TagCloud configuration for tags page.
@@ -650,6 +676,7 @@ subtitle = ""
 typeit = true
 social = true
 disclaimer = ""
+contribution = true
 
 [params.home.posts]
 enable = true
@@ -671,6 +698,7 @@ profile
 - typeit: `bool` Whether to use typeit animation for subtitle. Default is `true`.
 - social: `bool` Whether to show social links. Default is `true`.
 - disclaimer: `string` Disclaimer (HTML format is supported). Default is `""`.
+- contribution: `bool` Whether to show the contribution heatmap inside the home profile. Default is `true`.
 
 posts
 : `map` Home page posts.
@@ -1731,6 +1759,8 @@ single_link_color = ""
 single_link_color_dark = ""
 single_link_hover_color = ""
 single_link_hover_color_dark = ""
+contribution_color = ""
+contribution_color_dark = ""
 table_background_color = ""
 table_background_color_dark = ""
 table_thead_color = ""
@@ -1903,6 +1933,12 @@ single_link_hover_color
 
 single_link_hover_color_dark
 : `string` Default is `""`.
+
+contribution_color
+: `string` Theme color of contribution heatmap cells. Defaults to `single_link_color`. Default is `""`.
+
+contribution_color_dark
+: `string` Theme color of contribution heatmap cells in dark mode. Defaults to `single_link_color_dark`. Default is `""`.
 
 table_background_color
 : `string` Default is `""`.

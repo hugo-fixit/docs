@@ -622,6 +622,32 @@ days
 max_count
 : `int` 默认：`10`。
 
+### contribution
+
+`map` 首页和作者归档页的贡献热力图配置。
+
+```toggle
+[params]
+
+[params.contribution]
+enable = true
+first_day_of_week = "sunday"
+stats = true
+max_years = 0
+```
+
+enable
+: `bool` 是否显示贡献热力图。默认：`true`。
+
+first_day_of_week
+: `string` 每周的第一天。可选值：["monday", "sunday"]。默认：`"sunday"`。
+
+stats
+: `bool` 是否显示贡献统计（最长/最近连续贡献）。默认：`true`。
+
+max_years
+: `int` 最多显示的年数（从新到旧）。0 表示显示所有有文章的年份。默认：`0`。
+
 ### tag_cloud
 
 `map` 标签页面的标签云配置。
@@ -672,6 +698,7 @@ subtitle = ""
 typeit = true
 social = true
 disclaimer = ""
+contribution = true
 
 [params.home.posts]
 enable = true
@@ -693,6 +720,7 @@ profile
 - typeit: `bool` 是否为副标题使用 TypeIt 打字动画。默认：`true`。
 - social: `bool` 是否显示社交链接。默认：`true`。
 - disclaimer: `string` 免责声明（支持 HTML 格式）。默认：`""`。
+- contribution: `bool` 是否在首页 profile 内显示贡献热力图。默认：`true`。
 
 posts
 : `map` 首页文章。
@@ -1753,6 +1781,8 @@ single_link_color = ""
 single_link_color_dark = ""
 single_link_hover_color = ""
 single_link_hover_color_dark = ""
+contribution_color = ""
+contribution_color_dark = ""
 table_background_color = ""
 table_background_color_dark = ""
 table_thead_color = ""
@@ -1925,6 +1955,12 @@ single_link_hover_color
 
 single_link_hover_color_dark
 : `string` 默认：`""`。
+
+contribution_color
+: `string` 贡献热力图单元格的主题色。默认使用 `single_link_color`。默认：`""`。
+
+contribution_color_dark
+: `string` 深色模式下贡献热力图单元格的主题色。默认使用 `single_link_color_dark`。默认：`""`。
 
 table_background_color
 : `string` 默认：`""`。
