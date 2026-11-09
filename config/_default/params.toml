@@ -1094,7 +1094,7 @@ image_preview = true
 # Number of columns for the home post list.
 # Available values: [1, 2]
 # 2 enables the horizontal two-column card layout on extra-large screens (>= 1440px).
-columns = 1
+columns = 2
 
 # Social configuration about the author.
 [social]
