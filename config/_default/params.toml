@@ -1088,7 +1088,7 @@ contribution = true
 [home.posts]
 enable = true
 # Special amount of posts in each home posts page.
-paginate = 6
+paginate = 10
 # Whether to show featured image preview in home page post list.
 image_preview = true
 # Number of columns for the home post list.
