@@ -12,12 +12,6 @@
   @include admonition(ban, #ff3d00, rgba(255, 61, 0, 0.1));
 }
 
-.home.posts {
-  .fixit-docs-navigation {
-    margin-block: 0 4em;
-  }
-}
-
 .aside-custom {
   &:not(:first-child) {
     margin-top: 1rem;
