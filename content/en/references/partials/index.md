@@ -1357,6 +1357,12 @@ Author archive header: avatar, name, then link/email icons.
 
 Contribution heatmap: per-year calendar grid with a year dropdown.
 
+Intensity is controlled by `params.contribution.metric`:
+
+- `count` (default): posts per day, using fixed thresholds 1 / 2 / 3-4 / 5+.
+- `words`: total words per day, bucketed by the p50/p75/p90 of days with posts.
+- `score`: posts + words / 1500, bucketed by the p50/p75/p90 of days with posts.
+
 **Parameters:**
 
 | Name | Type | Description |

@@ -633,6 +633,7 @@ max_count
 enable = true
 first_day_of_week = "sunday"
 stats = true
+metric = "count"
 max_years = 0
 ```
 
@@ -644,6 +645,13 @@ first_day_of_week
 
 stats
 : `bool` 是否显示贡献统计（最长/最近连续贡献）。默认：`true`。
+
+metric
+: `string` 贡献强度计算指标。可选值：["count", "words", "score"]。默认：`"count"`。
+
+- count：每天的文章数，使用固定阈值 1 / 2 / 3-4 / 5+。
+- words：每天的总字数，按有文章的日期的 p50/p75/p90 分档。
+- score：文章数 + 字数 / 1500，按有文章的日期的 p50/p75/p90 分档。
 
 max_years
 : `int` 最多显示的年数（从新到旧）。0 表示显示所有有文章的年份。默认：`0`。
@@ -1957,10 +1965,10 @@ single_link_hover_color_dark
 : `string` 默认：`""`。
 
 contribution_color
-: `string` 贡献热力图单元格的主题色。默认使用 `single_link_color`。默认：`""`。
+: `string` 默认：`""`。
 
 contribution_color_dark
-: `string` 深色模式下贡献热力图单元格的主题色。默认使用 `single_link_color_dark`。默认：`""`。
+: `string` 默认：`""`。
 
 table_background_color
 : `string` 默认：`""`。

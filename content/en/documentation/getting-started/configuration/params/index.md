@@ -611,6 +611,7 @@ max_count
 enable = true
 first_day_of_week = "sunday"
 stats = true
+metric = "count"
 max_years = 0
 ```
 
@@ -622,6 +623,15 @@ first_day_of_week
 
 stats
 : `bool` Whether to show contribution statistics (longest/current streak). Default is `true`.
+
+metric
+: `string` Metric used to calculate contribution intensity. Available values: ["count", "words", "score"].
+
+- count: number of posts per day, using fixed thresholds 1 / 2 / 3-4 / 5+.
+
+- words: total words per day, bucketed by the p50/p75/p90 of days with posts.
+
+- score: posts + words / 1500, bucketed by the p50/p75/p90 of days with posts. Default is `"count"`.
 
 max_years
 : `int` Maximum number of years to display, newest first. 0 means all years with posts. Default is `0`.
@@ -1935,10 +1945,10 @@ single_link_hover_color_dark
 : `string` Default is `""`.
 
 contribution_color
-: `string` Theme color of contribution heatmap cells. Defaults to `single_link_color`. Default is `""`.
+: `string` Default is `""`.
 
 contribution_color_dark
-: `string` Theme color of contribution heatmap cells in dark mode. Defaults to `single_link_color_dark`. Default is `""`.
+: `string` Default is `""`.
 
 table_background_color
 : `string` Default is `""`.
