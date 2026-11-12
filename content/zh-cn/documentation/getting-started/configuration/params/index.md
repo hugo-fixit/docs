@@ -2517,7 +2517,7 @@ type
 : `string` 免责声明类型。可选值：["ai", "repost", "original", "custom"]。默认：`"ai"`。
 
 content
-: `string` 自定义免责声明内容（可选，为空时使用 I18n 默认值）。默认：`""`。
+: `string` 自定义免责声明内容，支持 Markdown 格式（可选，为空时使用 I18n 默认值）。默认：`""`。
 
 ### expiration_reminder
 

@@ -2497,7 +2497,7 @@ type
 : `string` Disclaimer type. Available values: ["ai", "repost", "original", "custom"]. Default is `"ai"`.
 
 content
-: `string` Custom disclaimer content (optional, uses I18n default if empty). Default is `""`.
+: `string` Custom disclaimer content in Markdown format (optional, uses I18n default if empty). Default is `""`.
 
 ### expiration_reminder
 

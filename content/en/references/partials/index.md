@@ -954,7 +954,8 @@ The extended syntax of alert is compatible with Obsidian and FixIt admonition sh
 | `[.Type]` | `String` | The type of the admonition box |
 | `[.Title]` | `String` | The title of the admonition box |
 | `[.Open]` | `Boolean` | Whether the admonition box is open, default is true |
-| `[.Foldable]` | `Boolean` | Whether the admonition box is foldable, default is true For custom admonitions, see https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/admonition/#customize-admonitions |
+| `[.Foldable]` | `Boolean` | Whether the admonition box is foldable, default is true |
+| `[.Class]` | `String` | Additional CSS classes for the admonition box For custom admonitions, see https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/admonition/#customize-admonitions |
 
 ### plugin/alert.html
 
@@ -1405,7 +1406,7 @@ Collection Navigation.
 
 Post disclaimer/declaration partial.
 
-Displays a lightweight disclaimer notice at the beginning of an article. Supports multiple types: ai, ai-assisted, ai-translated, repost, original, custom. The "custom" type requires content to be specified, otherwise it will not be displayed.
+Displays a lightweight disclaimer notice at the beginning of an article. Supports multiple types: ai, ai-assisted, ai-translated, repost, original, custom. The "custom" type requires content to be specified, otherwise it will not be displayed. The disclaimer content is rendered as Markdown.
 
 ### single/expiration-reminder.html
 

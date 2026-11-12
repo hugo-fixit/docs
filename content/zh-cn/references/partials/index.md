@@ -974,7 +974,8 @@ Pagefind 搜索索引检测 partial。
 | `[.Type]` | `String` | 告警框的类型 |
 | `[.Title]` | `String` | 告警框的标题 |
 | `[.Open]` | `Boolean` | 告警框是否展开，默认为 true |
-| `[.Foldable]` | `Boolean` | 告警框是否可折叠，默认为 true 自定义告警详见 https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/admonition/#customize-admonitions
+| `[.Foldable]` | `Boolean` | 告警框是否可折叠，默认为 true |
+| `[.Class]` | `String` | 附加 CSS 类名 自定义告警详见 https://fixit.lruihao.cn/docs/content-management/shortcodes/extended/admonition/#customize-admonitions |
 
 ### plugin/alert.html
 
@@ -1423,7 +1424,7 @@ Script 标签渲染器。
 
 文章免责声明/声明 partial。
 
-在文章开头显示轻量免责声明提示。支持多种类型：ai、ai-assisted、ai-translated、repost、original、custom。"custom" 类型需要指定 content，否则不显示。
+在文章开头显示轻量免责声明提示。支持多种类型：ai、ai-assisted、ai-translated、repost、original、custom。"custom" 类型需要指定 content，否则不显示。免责声明内容按 Markdown 格式渲染。
 
 ### single/expiration-reminder.html
 
