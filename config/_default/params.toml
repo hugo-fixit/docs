@@ -22,7 +22,7 @@ keywords = [
 default_theme = "auto"
 # Which hash function used for SRI, when empty, no SRI is used.
 # available values: ["sha256", "sha384", "sha512", "md5"]
-fingerprint = ""
+fingerprint = "sha256"
 # Date format.
 date_format = "2006-01-02"
 # Website images for Open Graph and Twitter Cards.
