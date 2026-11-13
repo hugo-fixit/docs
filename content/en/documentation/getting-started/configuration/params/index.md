@@ -687,6 +687,7 @@ typeit = true
 social = true
 disclaimer = ""
 contribution = true
+fullscreen = true
 
 [params.home.posts]
 enable = true
@@ -709,6 +710,7 @@ profile
 - social: `bool` Whether to show social links. Default is `true`.
 - disclaimer: `string` Disclaimer (HTML format is supported). Default is `""`.
 - contribution: `bool` Whether to show the contribution heatmap inside the home profile. Default is `true`.
+- fullscreen: `bool` Whether the home profile fills the first screen height. Default is `true`.
 
 posts
 : `map` Home page posts.

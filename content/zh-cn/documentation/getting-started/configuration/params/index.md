@@ -707,6 +707,7 @@ typeit = true
 social = true
 disclaimer = ""
 contribution = true
+fullscreen = true
 
 [params.home.posts]
 enable = true
@@ -729,6 +730,7 @@ profile
 - social: `bool` 是否显示社交链接。默认：`true`。
 - disclaimer: `string` 免责声明（支持 HTML 格式）。默认：`""`。
 - contribution: `bool` 是否在首页 profile 内显示贡献热力图。默认：`true`。
+- fullscreen: `bool` 是否让首页个人资料占满首屏高度。默认：`true`。
 
 posts
 : `map` 首页文章。
