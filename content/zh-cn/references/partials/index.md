@@ -39,7 +39,7 @@ collections:
 
 <!-- HUGO_FIXIT_PARTIALS:START -->
 
-FixIt 主题提供 **118** 个 Hugo partials，分布在 **13** 个分组中。
+FixIt 主题提供 **120** 个 Hugo partials，分布在 **13** 个分组中。
 
 ## 分组
 
@@ -50,7 +50,7 @@ FixIt 主题提供 **118** 个 Hugo partials，分布在 **13** 个分组中。
 - [function/](#function) — 50 个 partials
 - [gen/](#gen) — 2 个 partials
 - [home/](#home) — 1 个 partial
-- [init/](#init) — 8 个 partials
+- [init/](#init) — 10 个 partials
 - [plugin/](#plugin) — 20 个 partials
 - [section/](#section) — 6 个 partials
 - [single/](#single) — 14 个 partials
@@ -514,7 +514,8 @@ Font Awesome.
 |------|------|------|
 | `root` | `String` | 要扫描的根路径（相对于项目根目录或 contentDir） |
 | `[path]` | `String` | 递归调用的目录路径 |
-| `[level=10]` | `Int` | 仅向下遍历指定层数 |
+| `[max_depth=10]` | `Int` | 最大向下遍历的目录层数（根目录为 0） |
+| `[level]` | `Int` | `max_depth` 的已弃用别名 |
 | `[deep=0]` | `Int` | 递归调用的当前深度 |
 | `[ignore_list]` | `Array` | 要忽略的文件或文件夹名称列表 |
 | `[is_recursive=false]` | `Boolean` | 递归调用的内部标志 |
@@ -906,7 +907,7 @@ Mermaid 引导脚本生成器。返回 store/script.html 使用的内联模块 J
 
 > 主题初始化 partials（版本、环境检测、兼容性、全局设置）。
 
-> 8 个 partials
+> 10 个 partials
 
 ### init/compatibility.html
 
@@ -944,7 +945,7 @@ Pagefind 搜索索引检测 partial。
 
 全局初始化 partial。
 
-合并翻译、解析主 section 页面并存储供其他 partial 访问，同时从 HUGO_PARAMS_GHTOKEN 环境变量设置 GitHub API token 头。
+将站点级页面集合与作者索引复制到 `.Site.Store`；数据本身由 `init/site-data.html` 按语言计算一次。
 
 ### init/index.html
 
@@ -953,6 +954,22 @@ Pagefind 搜索索引检测 partial。
 设置主题版本并编排所有初始化子 partial：环境检测、版本检查、已弃用参数检测、Pagefind 索引检查、加密警告、全局设置和浏览器兼容性。
 
 调用自：layouts/baseof.html。
+
+### init/site-data.html
+
+站点级页面集合与作者索引。
+
+通过 partialCached 按语言缓存：每个页面只把结果复制到 `.Site.Store`，O(N) 的集合与索引构建只执行一次。
+
+**返回值：** `Map` - mainSectionPages, authorPageIndex, authorTermsIndex, githubTokenHeader
+
+### init/site-env.html
+
+站点级环境数据（CDN 映射、fingerprint、analytics、开发选项）。
+
+通过 partialCached 按语言缓存，避免并发页面重复解析 CDN YAML；调用方将值复制到 `.Site.Store`。
+
+**返回值：** `Map` - cdn, fingerprint, analytics, devOpts
 
 ## plugin/
 
@@ -1067,7 +1084,8 @@ ECharts 渲染 partial，用于代码围栏扩展语法和 shortcode 用法。
 | 名称 | 类型 | 描述 |
 |------|------|------|
 | `items` | `Array` | 树项目数组 |
-| `level` | `Int` | 树的展开级别（全部展开：-1，全部折叠：0） |
+| `[expand_level=1]` | `Int` | 树的展开级别（全部展开：-1，全部折叠：0） |
+| `[level]` | `Int` | `expand_level` 的已弃用别名 |
 | `[depth=0]` | `Int` | 当前深度 |
 | `[folder_slash=false]` | `Boolean` | 是否在文件夹名称后追加 "/" |
 | `[ignore_list]` | `Array` | 要忽略的文件或文件夹名称列表 |
@@ -1364,7 +1382,7 @@ Script 标签渲染器。
 
 ### section/author-header.html
 
-作者归档页头：头像、姓名，然后是链接/邮件图标。
+作者归档页头：头像、姓名，然后是链接/邮件联系方式。
 
 **参数：**
 

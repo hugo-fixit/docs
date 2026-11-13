@@ -230,6 +230,7 @@ enable = true
 - `params.externalIcon` 已移至 `[params.link]` `external_icon`（现在默认为 `true`）
 - `[params.link]` 现在是页面级节（可通过 front matter 在每篇文章中覆盖）
 - `[params.image]`、`[params.codeblock]`、`[params.json_viewer]`、`[params.filetree]` 现在是页面级节
+- `params.filetree.level` 已弃用，请使用 `params.filetree.expand_level`；`params.filetree.max_depth` 用于限制 file-tree shortcode 的文件系统扫描深度
 
 ## 自定义样式和脚本
 

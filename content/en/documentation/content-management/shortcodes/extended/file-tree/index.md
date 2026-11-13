@@ -40,7 +40,7 @@ The `file-tree` shortcode provides a visual representation of directory structur
 To use the `file-tree` shortcode, include it in your content as follows:
 
 ```markdown
-{{</* file-tree [path] [level] [folder_slash] [file="filename"] [data="datafilename"] [ignore_list="item1,item2"] */>}}
+{{</* file-tree [path] [expand_level] [folder_slash] [file="filename"] [data="datafilename"] [ignore_list="item1,item2"] */>}}
 <!-- Your tree data here (optional) -->
 {{</* /file-tree */>}}
 ```
@@ -52,13 +52,18 @@ The `file-tree` shortcode has the following named parameters, and the positional
 | Parameter        | Type    | Default | Description                                                                   |
 | :--------------- | :------ | :------ | :---------------------------------------------------------------------------- |
 | `path`           | string  | `"/"`   | ==1== The path to scan in filesystem (relative to project root or contentDir) |
-| `level`          | int     | `1`     | ==2== The expand level of the tree (expand all: -1, collapse all: 0)          |
+| `expand_level`   | int     | `1`     | ==2== The expand level of the tree (expand all: -1, collapse all: 0)          |
+| `max_depth`      | int     | `10`    | Maximum filesystem scan depth (root = 0; filesystem mode only)                |
 | `folder_slash`   | boolean | `false` | ==3== Whether to append "/" to folder names                                   |
 | `file`           | string  | -       | Path to data file in page resources or assets (JSON/YAML/TOML)                |
 | `data`           | string  | -       | Name of data file in `data/filetree/` directory                               |
 | `ignore_list`    | string  | -       | Comma-separated list of files/folders to ignore                               |
 | `highlight_list` | string  | -       | Comma-separated list of files/folders to highlight                            |
 | `name`           | string  | -       | Name for the root node (if set to `{path}`, uses the full root path)          |
+
+{{< admonition note >}}
+`level` is a deprecated alias of `expand_level` and will be removed in a future release. `max_depth` is a named-only parameter.
+{{< /admonition >}}
 
 ### Configuration
 
@@ -68,7 +73,8 @@ You can configure default behavior in your site configuration or page front matt
 [params]
 
 [params.filetree]
-level = 1
+expand_level = 1
+max_depth = 10
 folder_slash = false
 ignore_list = []
 ```
@@ -187,7 +193,7 @@ Supports getting data from files in Hugo [page-resources] or `assets`, and the f
 
 For example, the current page structure is as follows:
 
-{{< file-tree path="documentation/content-management/shortcodes/extended/file-tree" level=-1 highlight_list="tree.yml" />}}
+{{< file-tree path="documentation/content-management/shortcodes/extended/file-tree" expand_level=-1 highlight_list="tree.yml" />}}
 
 You can use the `file` parameter to get data from the file:
 
@@ -205,7 +211,7 @@ Support obtaining data from Hugo [site data][hugo-data], with data files defined
 
 For example, the data structure is as follows:
 
-```file-tree {highlight_list="example.yml" level=-1}
+```file-tree {highlight_list="example.yml" expand_level=-1}
 - name: fixit-docs
   type: dir
   children:
@@ -252,22 +258,32 @@ The rendered output looks like this:
 Use `ignore_list` parameter to exclude specific files or folders:
 
 ```markdown
-{{</* file-tree level=0 ignore_list=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" /*/>}}
+{{</* file-tree expand_level=0 ignore_list=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" /*/>}}
 ```
 
 The rendered output looks like this:
 
-{{< file-tree level=0 ignore_list=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" />}}
+{{< file-tree expand_level=0 ignore_list=".autocorrectignore,.autocorrectrc,.frontmatter,.vscode" name="{path}" />}}
 
 Use `path` parameter to scan a specific directory, e.g., `documentation` under the `content` directory:
 
 ```markdown
-{{</* file-tree path="documentation" level=2 folder_slash=true name="{path}" /*/>}}
+{{</* file-tree path="documentation" expand_level=2 folder_slash=true name="{path}" /*/>}}
 ```
 
 The rendered output looks like this:
 
-{{< file-tree path="documentation" level=2 folder_slash=true name="{path}" />}}
+{{< file-tree path="documentation" expand_level=2 folder_slash=true name="{path}" />}}
+
+Use `max_depth` to limit how many directory levels are scanned (root = 0):
+
+```markdown
+{{</* file-tree path="documentation" expand_level=-1 max_depth=2 name="{path}" /*/>}}
+```
+
+The rendered output looks like this:
+
+{{< file-tree path="documentation" expand_level=-1 max_depth=2 name="{path}" />}}
 
 <!-- link reference definition -->
 [page-resources]: https://gohugo.io/content-management/page-resources/

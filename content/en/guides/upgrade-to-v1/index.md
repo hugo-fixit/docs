@@ -230,6 +230,7 @@ enable = true
 - `params.externalIcon` has moved to `[params.link]` `external_icon` (now defaults to `true`)
 - `[params.link]` is now a page-level section (can be overridden per-page via front matter)
 - `[params.image]`, `[params.codeblock]`, `[params.json_viewer]`, `[params.filetree]` are now page-level sections
+- `params.filetree.level` is deprecated, use `params.filetree.expand_level`; `params.filetree.max_depth` limits the filesystem scan depth of the file-tree shortcode
 
 ## Custom Styles and Scripts
 

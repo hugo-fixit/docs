@@ -2373,14 +2373,18 @@ boxed
 [params]
 
 [params.filetree]
-level = 1
+expand_level = 1
+max_depth = 10
 folder_slash = false
 ignore_list = []
 highlight_list = []
 ```
 
-level
-: `int` The expand level of the tree (expand all: -1, collapse all: 0). Default is `1`.
+expand_level
+: `int` The expand level of the tree (expand all: -1, collapse all: 0). `level` is a deprecated alias of `expand_level`. Default is `1`.
+
+max_depth
+: `int` The maximum filesystem scan depth for the file-tree shortcode (root = 0). Default is `10`.
 
 folder_slash
 : `bool` Whether to append a trailing `/` to folder names. Default is `false`.

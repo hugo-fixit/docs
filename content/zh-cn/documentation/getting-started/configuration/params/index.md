@@ -2393,14 +2393,18 @@ boxed
 [params]
 
 [params.filetree]
-level = 1
+expand_level = 1
+max_depth = 10
 folder_slash = false
 ignore_list = []
 highlight_list = []
 ```
 
-level
-: `int` 树的展开层级（展开全部：-1，折叠全部：0）。默认：`1`。
+expand_level
+: `int` 树的展开层级（展开全部：-1，折叠全部：0）。`level` 是其已弃用的别名。默认：`1`。
+
+max_depth
+: `int` file-tree shortcode 的文件系统最大扫描深度（根目录为 0）。默认：`10`。
 
 folder_slash
 : `bool` 是否在文件夹名称后追加 `/`。默认：`false`。
